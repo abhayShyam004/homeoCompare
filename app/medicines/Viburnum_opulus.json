@@ -1,54 +1,57 @@
 {
-  "name": "Viburnum opulus", 
-  "Relationship": "Compare: VIBURNUM PRUNIFOLIUM - Black Haw - (habitual miscarriage; AFTER-PAINS; cancer of the tongue; obstinate hiccough; supposed to be a uterine tonic. Morning sickness; menstrual irregularities of sterile females with uterine displacements.) CIMICIF.; CAULOP.; SEP.; XANTHOX.", 
+  "name": "Viburnum opulus",
+  "Relationship": "Compare: VIBURNUM PRUNIFOLIUM - Black Haw - (habitual miscarriage; AFTER-PAINS; cancer of the tongue; obstinate hiccough; supposed to be a uterine tonic. Morning sickness; menstrual irregularities of sterile females with uterine displacements.) CIMICIF.; CAULOP.; SEP.; XANTHOX.",
   "Modalities": [
-    "Worse: lying on affected side", 
-    "Worse: in warm room", 
-    "Worse: evening and night", 
+    "Worse: lying on affected side",
+    "Worse: in warm room",
+    "Worse: evening and night",
     "Better: in open air and resting"
-  ], 
-  "Common names": "High Cranberry", 
+  ],
+  "Common names": "High Cranberry",
   "symptoms": {
     "Head": [
-      "Sore feeling in eyeballs", 
-      "Severe pain in temporal region", 
-      "Vertigo; feels as if falling forward", 
+      "Sore feeling in eyeballs",
+      "Severe pain in temporal region",
+      "Vertigo",
+      "feels as if falling forward",
       "Irritable"
-    ], 
+    ],
     "Stomach": [
-      "Constant nausea; relieved by eating", 
+      "Constant nausea",
+      "relieved by eating",
       "No appetite"
-    ], 
+    ],
     "Rectum": [
       "Stools large and hard, with cutting in rectum and soreness of anus"
-    ], 
+    ],
     "Urine": [
-      "Copious, pale, light-colored urine", 
-      "Cannot hold water on coughing or walking", 
+      "Copious, pale, light-colored urine",
+      "Cannot hold water on coughing or walking",
       "Frequent urging"
-    ], 
+    ],
     "Abdomen": [
-      "Tender to pressure about umbilicus", 
+      "Tender to pressure about umbilicus",
       "Sudden cramps and colic pains"
-    ], 
+    ],
     "Female": [
-      "Bearing-down pains before", 
-      "Leucorrhoea, excoriating", 
-      "Pains from back to loins and womb worse early morning", 
-      "Faint on attempting to sit up", 
-      "Menses too late, scanty, lasting a few hours, offensive in odor, with crampy pains, cramps extend down thighs", 
-      "Ovarian region feels heavy and congested", 
-      "Smarting and itching of genitals", 
-      "Aching in sacrum and pubes, with pain in anterior muscles of thighs ; spasmodic and membranous dysmenorrhea", 
+      "Bearing-down pains before",
+      "Leucorrhoea, excoriating",
+      "Pains from back to loins and womb worse early morning",
+      "Faint on attempting to sit up",
+      "Menses too late, scanty, lasting a few hours, offensive in odor, with crampy pains, cramps extend down thighs",
+      "Ovarian region feels heavy and congested",
+      "Smarting and itching of genitals",
+      "Aching in sacrum and pubes, with pain in anterior muscles of thighs",
+      "spasmodic and membranous dysmenorrhea",
       "Frequent and very early miscarriage, causing seeming sterility"
-    ], 
+    ],
     "Extremities": [
-      "Lower extremities weak and heavy", 
-      "Stiff, sore feeling in nape of neck", 
-      "Sacral backache", 
+      "Lower extremities weak and heavy",
+      "Stiff, sore feeling in nape of neck",
+      "Sacral backache",
       "Feels as if back would break"
     ]
-  }, 
-  "details": "A general remedy for cramps. Colicky pains in pelvic organs. Superconscious of internal sexual organs. Female symptoms most important. OFTEN PREVENTS MISCARRIAGE. False labor-pains. Spasmodic and congestive affections, dependent upon ovarian or uterine origin.", 
+  },
+  "details": "A general remedy for cramps. Colicky pains in pelvic organs. Superconscious of internal sexual organs. Female symptoms most important. OFTEN PREVENTS MISCARRIAGE. False labor-pains. Spasmodic and congestive affections, dependent upon ovarian or uterine origin.",
   "dosage": "Tincture, and lower potencies."
 }

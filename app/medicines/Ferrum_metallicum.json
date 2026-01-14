@@ -1,103 +1,119 @@
 {
-  "name": "Ferrum metallicum", 
-  "Relationship": "Antidotes: ARS.; HEP. Complementary: CHIN.; ALUM.; HAMAMEL. Compare: RUMEX (similar in respiratory and digestive sphere and contains organic iron.) FERRUM ACETICUM (alkaline urine in acute diseases. Pain in right deltoid. Epistaxis; especially adapted to thin, pale, weak children who grow rapidly and are easily exhausted; VARICES OF THE FEET; copious expectoration of greenish pus; asthma; worse, sitting still and lying; phthisis, constant cough, vomiting of food after eating, hemoptysis). FERRUM ARSENICUM (enlarged liver and spleen, with fever; undigested stool; albuminuria.) Simple and pernicious anaemia and chlorosis. Skin dry. Eczema, psoriasis, impetigo. Use 3x trituration.) FERRUM BROMATUM (sticky, excoriating leucorrhoea; uterus heavy and prolapsed, scalp feels numb). FERRUM CYANATUM (neuroses with irritable weakness and hypersensitiveness, especially of a periodical character; EPILEPSY; cardialgia, with nausea, flatulence, constipation, alternating with diarrhoea; chorea). FERRUM MAGNETICUM (small warts on hands). FERRUM MURIATICUM. (Arrested menstruation; tendency to seminal emissions or copious urination at puberty; very dark, watery stools; diphtheria; phlegmonous erysipelas; pyelitis; hemoptysis of dark, clotted blood; dyspareunia; pain in RIGHT SHOULDER, right elbow, and marked tendency to cramps and round red spots on cheeks; bright crystals in urine. Anaemia, 3x after meals. Tincture 1-5 drops 3 times daily for chronic interstitial nephritis.) FERRUM SULPHURICUM. (Watery and painless stools; menorrhagia, pressing, throbbing between periods with rush of blood to head. Basedow's disease. Erethism. (Pain in gall-bladder; toothache; acidity; eructation of food in mouthfuls); FERRUM PERNITRICUM (cough, with florid complexion); FERRUM TARTARICUM (cardialgia; heat at cardiac orifice of stomach). FERRUM PROTOXALATUM (Anaemia). Use 1x trit. Compare also: GRAPH.; MANGAN.; CUPR.", 
+  "name": "Ferrum metallicum",
+  "Relationship": "Antidotes: ARS.; HEP. Complementary: CHIN.; ALUM.; HAMAMEL. Compare: RUMEX (similar in respiratory and digestive sphere and contains organic iron.) FERRUM ACETICUM (alkaline urine in acute diseases. Pain in right deltoid. Epistaxis; especially adapted to thin, pale, weak children who grow rapidly and are easily exhausted; VARICES OF THE FEET; copious expectoration of greenish pus; asthma; worse, sitting still and lying; phthisis, constant cough, vomiting of food after eating, hemoptysis). FERRUM ARSENICUM (enlarged liver and spleen, with fever; undigested stool; albuminuria.) Simple and pernicious anaemia and chlorosis. Skin dry. Eczema, psoriasis, impetigo. Use 3x trituration.) FERRUM BROMATUM (sticky, excoriating leucorrhoea; uterus heavy and prolapsed, scalp feels numb). FERRUM CYANATUM (neuroses with irritable weakness and hypersensitiveness, especially of a periodical character; EPILEPSY; cardialgia, with nausea, flatulence, constipation, alternating with diarrhoea; chorea). FERRUM MAGNETICUM (small warts on hands). FERRUM MURIATICUM. (Arrested menstruation; tendency to seminal emissions or copious urination at puberty; very dark, watery stools; diphtheria; phlegmonous erysipelas; pyelitis; hemoptysis of dark, clotted blood; dyspareunia; pain in RIGHT SHOULDER, right elbow, and marked tendency to cramps and round red spots on cheeks; bright crystals in urine. Anaemia, 3x after meals. Tincture 1-5 drops 3 times daily for chronic interstitial nephritis.) FERRUM SULPHURICUM. (Watery and painless stools; menorrhagia, pressing, throbbing between periods with rush of blood to head. Basedow's disease. Erethism. (Pain in gall-bladder; toothache; acidity; eructation of food in mouthfuls); FERRUM PERNITRICUM (cough, with florid complexion); FERRUM TARTARICUM (cardialgia; heat at cardiac orifice of stomach). FERRUM PROTOXALATUM (Anaemia). Use 1x trit. Compare also: GRAPH.; MANGAN.; CUPR.",
   "Modalities": [
-    "Better: walking slowly about", 
+    "Better: walking slowly about",
     "Worse: while sweating; while sitting still"
-  ], 
-  "Common names": "Iron", 
+  ],
+  "Common names": "Iron",
   "symptoms": {
     "Heart": [
-      "Heart suddenly bleeds into the blood vessels, and as suddenly draws a reflux, leaving pallor of surface", 
-      "Sense of oppression", 
-      "Pulse full, but soft and yielding; also, small and weak", 
-      "Anaemic murmur", 
-      "Palpitation; worse, movement"
-    ], 
+      "Heart suddenly bleeds into the blood vessels, and as suddenly draws a reflux, leaving pallor of surface",
+      "Sense of oppression",
+      "Pulse full, but soft and yielding",
+      "also, small and weak",
+      "Anaemic murmur",
+      "Palpitation",
+      "worse, movement"
+    ],
     "Eyes": [
-      "Watery, dull red; photophobia; letters run together"
-    ], 
+      "Watery, dull red",
+      "photophobia",
+      "letters run together"
+    ],
     "Respiratory": [
-      "Cough dry, spasmodic", 
-      "Chest oppressed; breathing difficult", 
-      "With the cough pain in occiput", 
-      "Hemoptysis", 
-      "Hoarseness", 
+      "Cough dry, spasmodic",
+      "Chest oppressed",
+      "breathing difficult",
+      "With the cough pain in occiput",
+      "Hemoptysis",
+      "Hoarseness",
       "Surging of blood to chest"
-    ], 
+    ],
     "Stomach": [
-      "Flatulent dyspepsia", 
-      "Distention and pressure in the stomach after eating", 
-      "Loathing of sour things", 
-      "Spits up food by the mouthful", 
-      "Voracious appetite, or absolute loss of appetite", 
-      "Intolerance of eggs", 
-      "Soreness of abdominal walls", 
-      "Heat and burning in stomach", 
-      "Vomiting immediately after eating", 
-      "Attempts to eat bring on diarrhoea", 
-      "Vomiting after midnight", 
-      "Eructations of food after eating, without nausea", 
+      "Flatulent dyspepsia",
+      "Distention and pressure in the stomach after eating",
+      "Loathing of sour things",
+      "Spits up food by the mouthful",
+      "Voracious appetite, or absolute loss of appetite",
+      "Intolerance of eggs",
+      "Soreness of abdominal walls",
+      "Heat and burning in stomach",
+      "Vomiting immediately after eating",
+      "Attempts to eat bring on diarrhoea",
+      "Vomiting after midnight",
+      "Eructations of food after eating, without nausea",
       "Nausea and vomiting after eating"
-    ], 
+    ],
     "Urine": [
-      "Involuntary; worse daytime", 
+      "Involuntary",
+      "worse daytime",
       "Tickling in urethra extending to bladder"
-    ], 
+    ],
     "Mind": [
-      "Irritability", 
-      "Sanguine temperament", 
-      "Slight noises unbearable", 
+      "Irritability",
+      "Sanguine temperament",
+      "Slight noises unbearable",
       "Excited from slightest opposition"
-    ], 
+    ],
     "Stool": [
-      "Undigested, at night, while eating or drinking, painless", 
-      "Ineffectual urging; stool hard, followed by backache or cramping pain in rectum; prolapsus recti; itching of anus, especially young children"
-    ], 
+      "Undigested, at night, while eating or drinking, painless",
+      "Ineffectual urging",
+      "stool hard, followed by backache or cramping pain in rectum",
+      "prolapsus recti",
+      "itching of anus, especially young children"
+    ],
     "Head": [
-      "Vertigo on seeing flowing water", 
-      "Pain in back of head, with roaring in neck", 
-      "Hammering, pulsating, congestive headache; pain extends to teeth, with cold extremities", 
-      "Stinging headache", 
-      "Scalp painful", 
-      "Ringing in ears before menses", 
+      "Vertigo on seeing flowing water",
+      "Pain in back of head, with roaring in neck",
+      "Hammering, pulsating, congestive headache",
+      "pain extends to teeth, with cold extremities",
+      "Stinging headache",
+      "Scalp painful",
+      "Ringing in ears before menses",
       "Must take down the hair"
-    ], 
+    ],
     "Face": [
-      "Red parts become white, bloodless and puffy", 
+      "Red parts become white, bloodless and puffy",
       "Fiery-red and flushed from least pain, emotion, or exertion"
-    ], 
+    ],
     "Fever": [
-      "Profuse, debilitating sweat", 
-      "General coldness of extremities; head and face hot", 
+      "Profuse, debilitating sweat",
+      "General coldness of extremities",
+      "head and face hot",
       "Chill at four am heat in palms and soles"
-    ], 
+    ],
     "Mouth": [
-      "Earthy, paste taste, like rotten eggs", 
-      "Pain in teeth; relieved by icy-cold water"
-    ], 
+      "Earthy, paste taste, like rotten eggs",
+      "Pain in teeth",
+      "relieved by icy-cold water"
+    ],
     "Nose": [
       "Mucous membranes relaxed, boggy, anaemic, pale"
-    ], 
+    ],
     "Female": [
-      "Menses too early, too profuse, last too long; pale, watery", 
-      "Menses remit a day or two, and then return", 
-      "Women who are weak, delicate, chlorotic, yet have a fiery-red face", 
-      "Tendency to abortion", 
-      "Sensitive vagina", 
-      "Discharge of long pieces from uterus", 
+      "Menses too early, too profuse, last too long",
+      "pale, watery",
+      "Menses remit a day or two, and then return",
+      "Women who are weak, delicate, chlorotic, yet have a fiery-red face",
+      "Tendency to abortion",
+      "Sensitive vagina",
+      "Discharge of long pieces from uterus",
       "Prolapse of vagina"
-    ], 
+    ],
     "Skin": [
-      "Pale; flushes rapidly; pits on pressure"
-    ], 
+      "Pale",
+      "flushes rapidly",
+      "pits on pressure"
+    ],
     "Extremities": [
-      "Lumbago; better, slow walking", 
-      "Dropsy after loss of vital fluids", 
-      "Pain in hip-joint, tibia, soles, and heel", 
+      "Lumbago",
+      "better, slow walking",
+      "Dropsy after loss of vital fluids",
+      "Pain in hip-joint, tibia, soles, and heel",
       "Rheumatism of the shoulder"
     ]
-  }, 
-  "details": "Best adapted to young weakly persons, anaemic and chlorotic, with pseudo-plethora, who flush easily; cold extremities; OVER-SENSITIVENESS; worse after any active effort. WEAKNESS from mere speaking or walking though LOOKING strong. PALLOR of skin, mucous membranes, face, alternating with flushes. Orgasms of blood to face, chest, head, lungs, etc. Irregular distribution of blood. Pseudo-plethora. Muscles flabby and relaxed.", 
+  },
+  "details": "Best adapted to young weakly persons, anaemic and chlorotic, with pseudo-plethora, who flush easily; cold extremities; OVER-SENSITIVENESS; worse after any active effort. WEAKNESS from mere speaking or walking though LOOKING strong. PALLOR of skin, mucous membranes, face, alternating with flushes. Orgasms of blood to face, chest, head, lungs, etc. Irregular distribution of blood. Pseudo-plethora. Muscles flabby and relaxed.",
   "dosage": "States of debility where the blood is poor in hematin require material doses; plethoric, hemorrhagic conditions call for small doses, from the second to the sixth potency."
 }

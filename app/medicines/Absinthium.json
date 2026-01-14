@@ -1,55 +1,62 @@
 {
-  "name": "Absinthium", 
-  "Relationship": "Compare: Alcohol; Artemisia; Hydr-ac.; Cina; Cicuta.", 
-  "Common names": "Common Wormwood", 
+  "name": "Absinthium",
+  "Relationship": "Compare: Alcohol; Artemisia; Hydr-ac.; Cina; Cicuta.",
+  "Common names": "Common Wormwood",
   "symptoms": {
     "Head": [
-      "Wants head low", 
-      "Face blue", 
-      "General confusion", 
-      "Spasmatic facial twitching", 
-      "Pupils dilated unequally", 
-      "Vertigo, with tendency to fall backward", 
+      "Wants head low",
+      "Face blue",
+      "General confusion",
+      "Spasmatic facial twitching",
+      "Pupils dilated unequally",
+      "Vertigo, with tendency to fall backward",
       "Dull occipital headache"
-    ], 
+    ],
     "Stomach": [
-      "Wind colic", 
-      "Bloated around waist and abdomen", 
-      "Nausea; retching; eructation"
-    ], 
+      "Wind colic",
+      "Bloated around waist and abdomen",
+      "Nausea",
+      "retching",
+      "eructation"
+    ],
     "Urine": [
-      "Very strong odor; deep yellow color", 
+      "Very strong odor",
+      "deep yellow color",
       "Constant desire"
-    ], 
+    ],
     "Sexual organs": [
-      "Premature menopause", 
-      "Spermatorrhea, with relaxed, enfeebled parts", 
+      "Premature menopause",
+      "Spermatorrhea, with relaxed, enfeebled parts",
       "Darting pain in right ovary"
-    ], 
+    ],
     "Mind": [
-      "Wants nothing to do with anybody", 
-      "Brutal", 
-      "Frightful visions", 
-      "Forgets what has recently happened", 
-      "Hallucinations", 
-      "Kleptomania", 
+      "Wants nothing to do with anybody",
+      "Brutal",
+      "Frightful visions",
+      "Forgets what has recently happened",
+      "Hallucinations",
+      "Kleptomania",
       "Loss of memory"
-    ], 
+    ],
     "Chest": [
-      "Irregular, tumultuous action of heart can be heard in back", 
+      "Irregular, tumultuous action of heart can be heard in back",
       "Sensation of weight on chest"
-    ], 
+    ],
     "Mouth": [
-      "Throat", 
-      "Jaws fixed", 
-      "Scalded sensation; as of a lump", 
-      "Bites tongue; trembles; feels as if swollen and too large; protruding"
-    ], 
+      "Throat",
+      "Jaws fixed",
+      "Scalded sensation",
+      "as of a lump",
+      "Bites tongue",
+      "trembles",
+      "feels as if swollen and too large",
+      "protruding"
+    ],
     "Extremities": [
-      "Paralytic symptoms", 
+      "Paralytic symptoms",
       "Pain in limbs"
     ]
-  }, 
-  "details": "A perfect picture of epileptiform seizure is produced by this drug. Nervous tremors precede attack. Sudden and severe giddiness, delirium with hallucinations and loss of consciousness. Nervous excitement and sleeplessness. Cerebral irritation, hysterical and infantile spasms come within range of this remedy. Poisoning by mushrooms. Chorea. TREMOR. Nervousness, excitement, and sleeplessness in children.", 
+  },
+  "details": "A perfect picture of epileptiform seizure is produced by this drug. Nervous tremors precede attack. Sudden and severe giddiness, delirium with hallucinations and loss of consciousness. Nervous excitement and sleeplessness. Cerebral irritation, hysterical and infantile spasms come within range of this remedy. Poisoning by mushrooms. Chorea. TREMOR. Nervousness, excitement, and sleeplessness in children.",
   "dosage": "First to sixth potency."
 }

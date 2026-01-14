@@ -1,45 +1,52 @@
 {
-  "name": "Thlaspi bursa pastoris", 
-  "Relationship": "Compare: URTICA; CROC.; TRILL.; MILLEFOL.", 
-  "Common names": "Capsella Shepherd's Purse", 
+  "name": "Thlaspi bursa pastoris",
+  "Relationship": "Compare: URTICA; CROC.; TRILL.; MILLEFOL.",
+  "Common names": "Capsella Shepherd's Purse",
   "symptoms": {
     "Head": [
-      "Frequent epistaxis", 
-      "Sharp pain over right eye drawing eye upwards", 
-      "Vertigo; worse, rising", 
-      "Tongue white, coated", 
-      "Eyes and face puffy", 
-      "Frontal pain; worse toward evening", 
-      "Mouth and lips cracked", 
+      "Frequent epistaxis",
+      "Sharp pain over right eye drawing eye upwards",
+      "Vertigo",
+      "worse, rising",
+      "Tongue white, coated",
+      "Eyes and face puffy",
+      "Frontal pain",
+      "worse toward evening",
+      "Mouth and lips cracked",
       "Scaly eruption behind ears"
-    ], 
+    ],
     "Urine": [
-      "Often replaces the use of the catheter", 
-      "Frequent desire; urine heavy, phosphatic", 
-      "Dysuria and spasmodic retention", 
-      "Renal colic", 
-      "Urethritis; urine runs away in little jets", 
-      "Chronic cystitis", 
-      "Brick-dust sediment", 
-      "Hematuria", 
+      "Often replaces the use of the catheter",
+      "Frequent desire",
+      "urine heavy, phosphatic",
+      "Dysuria and spasmodic retention",
+      "Renal colic",
+      "Urethritis",
+      "urine runs away in little jets",
+      "Chronic cystitis",
+      "Brick-dust sediment",
+      "Hematuria",
       "Accumulation of gravel"
-    ], 
+    ],
     "Nose": [
-      "Bleeding in nasal operations", 
+      "Bleeding in nasal operations",
       "Especially passive hemorrhage"
-    ], 
+    ],
     "Female": [
-      "Hemorrhage, with violent uterine colic", 
-      "Leucorrhoea before and after menses; bloody, dark, offensive; stains indelibly", 
-      "Every alternate period very profuse", 
-      "Scarcely recovers from one period before another begins", 
-      "Sore pain in womb on rising", 
-      "Metrorrhagia; too frequent and copious menses"
-    ], 
+      "Hemorrhage, with violent uterine colic",
+      "Leucorrhoea before and after menses",
+      "bloody, dark, offensive",
+      "stains indelibly",
+      "Every alternate period very profuse",
+      "Scarcely recovers from one period before another begins",
+      "Sore pain in womb on rising",
+      "Metrorrhagia",
+      "too frequent and copious menses"
+    ],
     "Male": [
       "Spermatic cord sensitive to concussion of walking or riding"
     ]
-  }, 
-  "details": "Is an anti-hemorrhagic and anti-uric acid remedy. Albuminuria during gestation. Chronic neuralgia. Renal and vesical irritation. Hemorrhage from uterine fibroid with aching in back or general bruised soreness. Aching between scapulae. Uterine hemorrhage, with cramps and expulsion of clots. Craves buttermilk. Effects of suppressed uterine disease. (Burnett.)", 
+  },
+  "details": "Is an anti-hemorrhagic and anti-uric acid remedy. Albuminuria during gestation. Chronic neuralgia. Renal and vesical irritation. Hemorrhage from uterine fibroid with aching in back or general bruised soreness. Aching between scapulae. Uterine hemorrhage, with cramps and expulsion of clots. Craves buttermilk. Effects of suppressed uterine disease. (Burnett.)",
   "dosage": "Tincture, to sixth potency."
 }

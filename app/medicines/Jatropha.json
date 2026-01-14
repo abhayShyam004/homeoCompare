@@ -1,35 +1,37 @@
 {
-  "name": "Jatropha", 
-  "Relationship": "Compare: CAMPH.; VERAT.; GAMBOGE.; CROTON.; JATROPHA URENS - Sponge-nettle - (oedema and cardiac paresis).", 
+  "name": "Jatropha",
+  "Relationship": "Compare: CAMPH.; VERAT.; GAMBOGE.; CROTON.; JATROPHA URENS - Sponge-nettle - (oedema and cardiac paresis).",
   "Modalities": [
     "Better: by placing hands in cold water"
-  ], 
-  "Common names": "Purging Nut", 
+  ],
+  "Common names": "Purging Nut",
   "symptoms": {
     "Stomach": [
-      "Hiccough, followed by copious vomiting", 
-      "Heat and burning in stomach, with crampy, constrictive pain in epigastrium", 
-      "Very easy vomiting", 
-      "Nausea and vomiting, brought on by drinking, with acrid feeling from throat", 
+      "Hiccough, followed by copious vomiting",
+      "Heat and burning in stomach, with crampy, constrictive pain in epigastrium",
+      "Very easy vomiting",
+      "Nausea and vomiting, brought on by drinking, with acrid feeling from throat",
       "Great thirst"
-    ], 
+    ],
     "Stool": [
-      "Diarrhoea; forced discharge; loud noise in abdomen like gurgling of water coming out of a bung-hole, associated with coldness, cramps, nausea, and vomiting", 
+      "Diarrhoea",
+      "forced discharge",
+      "loud noise in abdomen like gurgling of water coming out of a bung-hole, associated with coldness, cramps, nausea, and vomiting",
       "Sudden, profuse, watery, like rice-water"
-    ], 
+    ],
     "Abdomen": [
-      "Pain in region of liver and under right scapula to shoulder", 
-      "Distended, with gurgling noises", 
-      "Violent urging to urinate", 
+      "Pain in region of liver and under right scapula to shoulder",
+      "Distended, with gurgling noises",
+      "Violent urging to urinate",
       "Pain in hypochondria"
-    ], 
+    ],
     "Extremities": [
-      "Cramps in muscles, especially calves, legs, and feet", 
-      "Heels sensitive", 
-      "Pain in ankles, feet and toes", 
+      "Cramps in muscles, especially calves, legs, and feet",
+      "Heels sensitive",
+      "Pain in ankles, feet and toes",
       "Coldness of whole body"
     ]
-  }, 
-  "details": "Of value in cholera and diarrhoea. The abdominal symptoms are mot important. Suppressed measles (H. Farrington).", 
+  },
+  "details": "Of value in cholera and diarrhoea. The abdominal symptoms are mot important. Suppressed measles (H. Farrington).",
   "dosage": "Third to thirtieth potency."
 }

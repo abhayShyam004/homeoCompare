@@ -1,88 +1,99 @@
 {
-  "name": "Xerophyllum", 
-  "Relationship": "Compare: RHUS; ANACARD.; GRINDELIA.", 
+  "name": "Xerophyllum",
+  "Relationship": "Compare: RHUS; ANACARD.; GRINDELIA.",
   "Modalities": [
-    "Worse: application of cold water", 
-    "Worse: in afternoon and evening", 
-    "Better: application of hot water", 
-    "Better: in morning", 
+    "Worse: application of cold water",
+    "Worse: in afternoon and evening",
+    "Better: application of hot water",
+    "Better: in morning",
     "Better: moving affected part"
-  ], 
-  "Common names": "Tamalpais Lily. Basket Grass Flower", 
+  ],
+  "Common names": "Tamalpais Lily. Basket Grass Flower",
   "symptoms": {
     "Mind": [
-      "Dull, cannot concentrate mind for study; forgets names; writes last letters of words first; misspells common words"
-    ], 
+      "Dull, cannot concentrate mind for study",
+      "forgets names",
+      "writes last letters of words first",
+      "misspells common words"
+    ],
     "Eyes": [
-      "Eyes feel sore, burn", 
-      "Painful, as of sand, smarting; difficult to focus for close work"
-    ], 
+      "Eyes feel sore, burn",
+      "Painful, as of sand, smarting",
+      "difficult to focus for close work"
+    ],
     "Stomach": [
-      "Eructations sour; offensive, an hour after luncheons and dinner", 
-      "Vomiting at two pm", 
+      "Eructations sour",
+      "offensive, an hour after luncheons and dinner",
+      "Vomiting at two pm",
       "Feels full and heavy"
-    ], 
+    ],
     "Abdomen": [
-      "In morning rumbling in bowels, with desire for stool", 
+      "In morning rumbling in bowels, with desire for stool",
       "Intestinal flatulence"
-    ], 
+    ],
     "Rectum": [
-      "Constipation, stools hard, small lumps", 
-      "Much flatus", 
-      "Bearing-down pain in rectum", 
+      "Constipation, stools hard, small lumps",
+      "Much flatus",
+      "Bearing-down pain in rectum",
       "Difficult, soft stools, with much straining"
-    ], 
+    ],
     "Respiratory": [
-      "Sneezing", 
-      "Trachea sore; lumps feel constricted", 
-      "Posterior nares raw; discharge thick, yellow mucus"
-    ], 
+      "Sneezing",
+      "Trachea sore",
+      "lumps feel constricted",
+      "Posterior nares raw",
+      "discharge thick, yellow mucus"
+    ],
     "Head": [
-      "Pulsating headache", 
-      "Bewildered", 
-      "Feels full, stuffed up, pain across forehead and above eyes", 
-      "Loss of consciousness", 
+      "Pulsating headache",
+      "Bewildered",
+      "Feels full, stuffed up, pain across forehead and above eyes",
+      "Loss of consciousness",
       "Great pressure at root of nose"
-    ], 
+    ],
     "Face": [
-      "Bloated in morning", 
+      "Bloated in morning",
       "Puffy under eyes"
-    ], 
+    ],
     "Nose": [
-      "Stuffed; tightness at bridge of nose; acute nasal catarrh"
-    ], 
+      "Stuffed",
+      "tightness at bridge of nose",
+      "acute nasal catarrh"
+    ],
     "Urine": [
-      "Difficulty of retaining; dribbling when walking", 
+      "Difficulty of retaining",
+      "dribbling when walking",
       "Frequent urination at night"
-    ], 
+    ],
     "Back": [
-      "Backache, extending down legs", 
-      "Pain over kidneys", 
-      "Heat deep in spine", 
+      "Backache, extending down legs",
+      "Pain over kidneys",
+      "Heat deep in spine",
       "Feels hot from sacrum to scapulae"
-    ], 
+    ],
     "Female": [
-      "Increased sexual desire, with ovarian and uterine pains and leucorrhoea", 
-      "Bearing-down sensation", 
+      "Increased sexual desire, with ovarian and uterine pains and leucorrhoea",
+      "Bearing-down sensation",
       "Vulva inflamed, with furious itching"
-    ], 
+    ],
     "Skin": [
-      "Inguinal glands and behind knees swollen", 
-      "Skin rough and cracked; feels like leather", 
-      "Dermatitis, especially around knees", 
-      "Erythema, with vesication and intense itching, stinging, and burning", 
-      "Inflammation resembling poison-oak", 
+      "Inguinal glands and behind knees swollen",
+      "Skin rough and cracked",
+      "feels like leather",
+      "Dermatitis, especially around knees",
+      "Erythema, with vesication and intense itching, stinging, and burning",
+      "Inflammation resembling poison-oak",
       "Blisters, little lumps"
-    ], 
+    ],
     "Throat": [
       "Stitching pain upon swallowing"
-    ], 
+    ],
     "Extremities": [
-      "Pain in knees", 
-      "Muscular lameness, trembling", 
+      "Pain in knees",
+      "Muscular lameness, trembling",
       "Limbs feel stiff"
     ]
-  }, 
-  "details": "Should prove curative in eczematous conditions, poison-oak, early typhoid states, etc. Dysmenorrhoea and skin symptoms.", 
+  },
+  "details": "Should prove curative in eczematous conditions, poison-oak, early typhoid states, etc. Dysmenorrhoea and skin symptoms.",
   "dosage": "Sixth potency or higher."
 }

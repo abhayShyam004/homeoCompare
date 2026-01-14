@@ -5,11 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compare homeopathy medicines and remedies easily with Homeo Compare (Homeocompare). Find the right remedy by symptoms using trusted Materia Medica sources.">
-    <title>ALLEN'S KEYNOTES | HomeoCompare</title>
+    <meta name="description" content="Compare homeopathy medicines and remedies easily with Homeo Compare. Find the right remedy by symptoms using Allen's Keynotes.">
+    <title>Allen's Keynotes | HomeoCompare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8576247474633181"
-        crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8576247474633181" crossorigin="anonymous"></script>
     <script>
         (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "2Y3GWvOFW-d-ysXVvcJyI"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
     </script>
@@ -17,23 +19,58 @@
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
     <style>
         :root {
-            --primary-color: #4a89dc;
-            --secondary-color: #3b7dd8;
-            --accent-color: #e74c3c;
-            --light-color: #2c3e50;
-            --dark-color: #ecf0f1;
-            --success-color: #2ecc71;
-            --warning-color: #f39c12;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-            --bg-color: #121a24;
-            --text-color: #e0e6ed;
-            --card-bg: #1e2a3a;
-            --symptom-text-color: #ffffff;
-            --border-color: #2d3e50;
-            --header-bg: #0d1520;
-            --input-bg: #1a2634;
+            --sidebar-width: 320px;
+            --header-height: 70px;
+            
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #0891b2;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            
+            --bg-dark: #0f172a;
+            --bg-sidebar: #1e293b;
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --bg-hover: #334155;
+            
+            --text-white: #ffffff;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --border: #334155;
+            --border-light: #475569;
+            
+            --radius: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4);
+        }
+
+        [data-theme="light"] {
+            --bg-dark: #f1f5f9;
+            --bg-sidebar: #ffffff;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-input: #f1f5f9;
+            --bg-hover: #e2e8f0;
+            
+            --text-white: #0f172a;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            
+            --border: #e2e8f0;
+            --border-light: #cbd5e1;
+            
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.15);
         }
 
         * {
@@ -42,774 +79,1472 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            padding: 0;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            background-color: var(--header-bg);
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-            box-shadow: var(--box-shadow);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .header-content {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
             display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
+            overflow: hidden;
         }
 
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+        /* === SIDEBAR === */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-white);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Quick Search in Sidebar */
+        .sidebar-search {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-search-input {
+            width: 100%;
+            height: 44px;
+            padding: 0 1rem 0 2.75rem;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-family: inherit;
+            color: var(--text-primary);
+            transition: all 0.15s ease;
+        }
+
+        .sidebar-search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .sidebar-search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--bg-hover);
+        }
+
+        .search-wrapper {
+            position: relative;
+        }
+
+        .search-wrapper i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .sidebar-search-results {
+            margin-top: 0.5rem;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 0.6rem 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            border-radius: var(--radius);
+            transition: all 0.1s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .search-result-item:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .search-result-item i {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .search-result-item:hover i {
+            color: white;
+        }
+
+        .sidebar-content {
             flex: 1;
+            overflow-y: auto;
+            padding: 0.5rem 0;
+        }
+
+        /* Sidebar Sections */
+        .sidebar-section {
+            padding: 0.75rem 1.25rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .section-action {
+            font-size: 0.7rem;
+            color: var(--primary-light);
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .section-action:hover {
+            text-decoration: underline;
+        }
+
+        /* Recent Remedies */
+        .recent-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.65rem 0.75rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.1s ease;
+        }
+
+        .recent-item:hover {
+            background: var(--bg-hover);
+        }
+
+        .recent-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--bg-input);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-light);
+            font-size: 0.8rem;
+        }
+
+        .recent-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .recent-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .recent-time {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        /* Popular Categories */
+        .category-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .category-chip {
+            padding: 6px 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .category-chip:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .category-chip.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Alphabet Browser */
+        .alphabet-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .alpha-btn {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.1s ease;
+        }
+
+        .alpha-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .alpha-btn.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        /* Remedy List (shown when letter clicked) */
+        .remedy-browser {
+            margin-top: 0.75rem;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .remedy-browser.visible {
+            display: block;
+        }
+
+        .browser-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .browser-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .browser-close {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        .browser-close:hover {
+            color: var(--danger);
+        }
+
+        .browser-item {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-radius: var(--radius);
+            transition: all 0.1s ease;
+        }
+
+        .browser-item:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.7rem 0.75rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: left;
+        }
+
+        .action-btn:hover {
+            background: var(--bg-hover);
+            border-color: var(--border-light);
+            color: var(--text-primary);
+        }
+
+        .action-btn i {
+            width: 18px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .action-btn:hover i {
+            color: var(--primary-light);
+        }
+
+        /* Sidebar Footer */
+        .sidebar-footer {
+            padding: 1rem 1.25rem;
+            border-top: 1px solid var(--border);
         }
 
         .theme-toggle {
-            position: absolute;
-            right: -3rem;
-            top: -15%;
-            transform: translateY(-50%);
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        /* Responsive tweak for small screens */
-        @media (max-width: 600px) {
-            .theme-toggle {
-                right: 0.2rem !important;
-                top: -1rem !important;
-                transform: none;
-                /* font-size: 1.2rem; */
-                font-size: 0.9rem;
-                /* smaller font */
-                padding: 0.3rem 0.5rem;
-                /* less padding */
-            }
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.15s ease;
         }
 
         .theme-toggle:hover {
-            background: var(--accent-color);
+            background: var(--bg-hover);
+            border-color: var(--border-light);
         }
 
-        .home-button {
-            position: absolute;
-            left: -3rem;
-            top: -15%;
-            transform: translateY(-50%);
-            color: var(--text-color);
-            font-size: 1.5rem;
+        /* === MAIN CONTENT === */
+        .main-wrapper {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            height: 100vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topbar {
+            height: var(--header-height);
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .topbar-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-white);
+        }
+
+        .topbar-badge {
+            padding: 4px 10px;
+            background: var(--success);
+            border-radius: 100px;
+            font-size: 0.7rem;
             font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        @media (max-width: 600px) {
-            .home-button {
-                left: 0.5rem;
-                top: -1rem;
-                transform: none;
-                font-size: 1.2rem;
-            }
-        }
-
-        .home-button:hover {
-            color: var(--accent-color);
-        }
-
-        [data-theme="light"] .home-button {
-            color: var(--text-color);
-        }
-
-        [data-theme="light"] .home-button:hover {
-            color: var(--accent-color);
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            color: #a0d2ff;
-            opacity: 0.95;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-            font-weight: 350;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .form-group {
-            position: relative;
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--dark-color);
-        }
-
-        select {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            font-size: 1rem;
-            transition: var(--transition);
-            appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 1rem center;
-            background-size: 1em;
-            background-color: var(--input-bg);
-            color: var(--text-color);
-        }
-
-        select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
             color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
+            text-transform: uppercase;
         }
 
-        .btn:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .results-container {
-            margin-top: 2rem;
-        }
-
-        .results-title {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-            text-align: center;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .topbar-stats {
+            display: flex;
+            align-items: center;
             gap: 1.5rem;
         }
 
-        .remedy-card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            overflow: hidden;
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-        }
-
-        .remedy-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .remedy-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .remedy-body {
-            padding: 1.5rem;
-        }
-
-        .symptom-title {
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
+        .stat-item {
             display: flex;
             align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
         }
 
-        .symptom-title i {
-            margin-right: 0.5rem;
-            color: var(--primary-color);
+        .stat-item i {
+            color: var(--primary-light);
         }
 
-        .symptom-content {
-            line-height: 1.7;
-            color: var(--symptom-text-color);
+        .stat-item strong {
+            color: var(--text-primary);
         }
 
-        .no-data {
-            color: #999;
-            font-style: italic;
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
+        .main-content {
+            flex: 1;
             padding: 2rem;
         }
 
-        .loading-spinner {
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            border-top: 4px solid var(--primary-color);
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
+        /* === SEARCH SECTION === */
+        .search-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
         }
 
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
+        .search-header {
+            margin-bottom: 1.5rem;
         }
 
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: #777;
+        .search-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 0.25rem;
+        }
+
+        .search-desc {
             font-size: 0.9rem;
-            margin-top: 2rem;
-            border-top: 1px solid #eee;
+            color: var(--text-muted);
+        }
+
+        .search-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 1400px) {
+            .search-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 900px) {
+            .search-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .search-grid { grid-template-columns: 1fr; }
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .input-label .req {
+            color: var(--danger);
+        }
+
+        .input-field {
+            width: 100%;
+            height: 56px;
+            padding: 0 1.25rem;
+            background: var(--bg-input);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .input-field::placeholder {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--bg-hover);
+        }
+
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-field {
+            width: 100%;
+            height: 56px;
+            padding: 0 3rem 0 1.25rem;
+            background: var(--bg-input);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 500;
+            color: var(--text-primary);
+            cursor: pointer;
+            appearance: none;
+            transition: all 0.2s ease;
+        }
+
+        .select-field:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--bg-hover);
+        }
+
+        .select-arrow {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: var(--text-muted);
         }
 
         .suggestions {
             position: absolute;
-            width: 100%;
-            max-height: 200px;
+            top: calc(100% + 4px);
+            left: 0;
+            right: 0;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-height: 280px;
             overflow-y: auto;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            z-index: 1000;
-            margin-top: 0.2rem;
+            z-index: 100;
             display: none;
-            /* Hidden by default */
         }
 
         .suggestion-item {
-            padding: 0.8rem 1rem;
+            padding: 1rem 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-primary);
             cursor: pointer;
-            color: var(--text-color);
-            transition: var(--transition);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.1s ease;
         }
 
-        .suggestion-item:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .card {
-                padding: 1.5rem;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .header-content {
-                padding: 1rem 3rem;
-            }
-
-            .theme-toggle {
-                padding: 0.5rem;
-                position: absolute;
-                right: 2rem;
-                top: 55%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .toggle-text {
-                display: none;
-            }
-
-            .theme-toggle {
-                width: 2.5rem;
-                justify-content: center;
-            }
-        }
-
-        [data-theme="light"] {
-            --primary-color: #2c3e50;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --bg-color: #f5f7fa;
-            --text-color: #333;
-            --card-bg: white;
-            --symptom-text-color: #000000;
-            --border-color: #ddd;
-            --header-bg: #2c3e50;
-            --input-bg: white;
-        }
-
-        [data-theme="light"] header {
-            background-color: var(--header-bg);
+        .suggestion-item:last-child {
             border-bottom: none;
         }
 
-        [data-theme="light"] select {
-            background-color: var(--input-bg);
-            border-color: var(--border-color);
-            color: var(--text-color);
+        .suggestion-item:hover {
+            background: var(--primary);
+            color: white;
         }
 
-        [data-theme="light"] .card,
-        [data-theme="light"] .remedy-card {
+        .btn-search {
+            height: 56px;
+            padding: 0 2rem;
+            background: var(--primary);
             border: none;
-        }
-
-        [data-theme="light"] .remedy-header {
-            background-color: var(--primary-color);
-        }
-
-        [data-theme="light"] .loading-spinner {
-            border-color: rgba(0, 0, 0, 0.1);
-            border-top-color: var(--primary-color);
-        }
-
-        [data-theme="light"] .subtitle {
-            color: var(--light-color);
-            opacity: 0.9;
-            text-shadow: none;
-            font-weight: 300;
-        }
-
-        [data-theme="light"] .suggestions {
-            background-color: white;
-            border-color: #ddd;
-        }
-
-        [data-theme="light"] .suggestion-item:hover {
-            background-color: #2c3e50;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            background-color: var(--input-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
+            border-radius: var(--radius-lg);
+            color: white;
             font-size: 1rem;
-            transition: var(--transition);
-            color: var(--text-color);
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.2s ease;
         }
 
-        .search-input:focus {
-            outline: none;
-            border-color: var(--border-color);
-            /* Keep the original border color */
-            box-shadow: none;
-            /* Remove the shadow */
+        .btn-search:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        /* === LOADING === */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* === RESULTS === */
+        .results-section {
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .results-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-white);
+        }
+
+        .results-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .results-meta i {
+            color: var(--success);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 500px) {
+            .results-grid { grid-template-columns: 1fr; }
+        }
+
+        /* === REMEDY CARDS === */
+        .remedy-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .remedy-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.2);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .card-info h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .card-info span {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .category-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .symptom-content {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .symptom-content ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        .symptom-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .symptom-content li::marker {
+            color: var(--primary-light);
+        }
+
+        .no-data {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .sidebar { transform: translateX(-100%); }
+            .main-wrapper { margin-left: 0; }
+            .sidebar.open { transform: translateX(0); }
+        }
+
+        /* Validation Tooltip */
+        .validation-tooltip {
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ef4444;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+            animation: tooltipFadeIn 0.2s ease;
+        }
+
+        .validation-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: #ef4444;
+        }
+
+        @keyframes tooltipFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .input-group.has-error .select-field,
+        .input-group.has-error .input-field {
+            border-color: #ef4444 !important;
+            animation: shake 0.3s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="{% url 'home' %}" class="home-button">Hc</a>
-                <h1>Allen’s Keynotes</h1>
-                <button id="themeToggle" class="theme-toggle">
-                    <i class="fas fa-moon"></i> <span class="toggle-text">Dark Mode</span>
-                </button>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="{% url 'home' %}" class="logo">
+                <div class="logo-icon">Hc</div>
+                <div class="logo-text">
+                    <h1>HomeoCompare</h1>
+                    <span>Allen's Keynotes Edition</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Quick Search -->
+        <div class="sidebar-search">
+            <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="Quick search remedies...">
             </div>
-            <p class="subtitle">Compare Homeopathic Drugs by Symptoms</p>
-        </div>
-    </header>
-
-    <main class="container">
-        <div class="card">
-            <form id="compareForm" action="{% url 'allen_compare' %}" method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="remedy1">First Drug <span class="required">*</span></label>
-                    <input type="text" id="search1" class="search-input" placeholder="Search drugs..."
-                        autocomplete="off" value="{{ remedy1 }}">
-                    <input type="hidden" id="remedy1" name="remedy1" required value="{{ remedy1 }}">
-
-                    <div id="suggestions1" class="suggestions"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="remedy2">Second Drug <span class="required">*</span></label>
-                    <input type="text" id="search2" class="search-input" placeholder="Search drugs..."
-                        autocomplete="off" value="{{ remedy2 }}">
-                    <input type="hidden" id="remedy2" name="remedy2" required value="{{ remedy2 }}">
-                    <div id="suggestions2" class="suggestions"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="remedy3">Third Drug (Optional)</label>
-                    <input type="text" id="search3" class="search-input" placeholder="Search drugs..."
-                        autocomplete="off" value="{{ remedy3 }}">
-                    <input type="hidden" id="remedy3" name="remedy3" value="{{ remedy3 }}">
-                    <div id="suggestions3" class="suggestions"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="remedy4">Fourth Drug (Optional) </label>
-                    <input type="text" id="search4" class="search-input" placeholder="Search drugs..."
-                        autocomplete="off" value="{{ remedy4 }}">
-                    <input type="hidden" id="remedy4" name="remedy4" value="{{ remedy4 }}">
-                    <div id="suggestions4" class="suggestions"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="symptom">Symptom Category <span class="required">*</span></label>
-                    <select id="symptom" name="symptom" required>
-                        <option value="" {% if selected_symptom == '' %}selected{% endif %}>-- Select a symptom category --</option>
-                        <option value="Constitution" {% if selected_symptom == 'constitution' %}selected{% endif %}>Constitution</option>
-                        <option value="Mental Generals" {% if selected_symptom == 'mental_generals' %}selected{% endif %}>Mental Generals</option>
-                        <option value="Physical Generals" {% if selected_symptom == 'physical_generals' %}selected{% endif %}>Physical Generals</option>
-                        <option value="Head" {% if selected_symptom == 'head' %}selected{% endif %}>Head</option>
-                        <option value="Eyes" {% if selected_symptom == 'eyes' %}selected{% endif %}>Eyes</option>
-                        <option value="Vision" {% if selected_symptom == 'vision' %}selected{% endif %}>Vision</option>
-                        <option value="Ears" {% if selected_symptom == 'ears' %}selected{% endif %}>Ears</option>
-                        <option value="Hearing" {% if selected_symptom == 'hearing' %}selected{% endif %}>Hearing</option>
-                        <option value="Nose" {% if selected_symptom == 'nose' %}selected{% endif %}>Nose</option>
-                        <option value="Face" {% if selected_symptom == 'face' %}selected{% endif %}>Face</option>
-                        <option value="Mouth" {% if selected_symptom == 'mouth' %}selected{% endif %}>Mouth</option>
-                        <option value="Teeth" {% if selected_symptom == 'teeth' %}selected{% endif %}>Teeth</option>
-                        <option value="Throat" {% if selected_symptom == 'throat' %}selected{% endif %}>Throat</option>
-                        <option value="Appetite" {% if selected_symptom == 'appetite' %}selected{% endif %}>Appetite</option>
-                        <option value="Stomach" {% if selected_symptom == 'stomach' %}selected{% endif %}>Stomach</option>
-                        <option value="Stool" {% if selected_symptom == 'stool' %}selected{% endif %}>Stool</option>
-                        <option value="Abdomen" {% if selected_symptom == 'abdomen' %}selected{% endif %}>Abdomen</option>
-                        <option value="Urinary System" {% if selected_symptom == 'urinary_system' %}selected{% endif %}>Urinary System</option>
-                        <option value="gastro intestinal system" {% if selected_symptom == 'gastro_intestinal_system' %}selected{% endif %}>Gastro intestinal system</option>
-                        <option value="Upper Limbs" {% if selected_symptom == 'upper_limbs' %}selected{% endif %}>Upper Limbs</option>
-                        <option value="Lower Limbs" {% if selected_symptom == 'lower_limbs' %}selected{% endif %}>Lower Limbs</option>
-                        <option value="Limbs in General" {% if selected_symptom == 'limbs_in_general' %}selected{% endif %}>Limbs in General</option>
-                        <option value="Sleep" {% if selected_symptom == 'sleep' %}selected{% endif %}>Sleep</option>
-                        <option value="Injuries" {% if selected_symptom == 'injuries' %}selected{% endif %}>Injuries</option>
-                        <option value="Female Reproductive System" {% if selected_symptom == 'female_reproductive_system' %}selected{% endif %}>Female Reproductive System</option>
-                        <option value="Male Reproductive System" {% if selected_symptom == 'male_reproductive_system' %}selected{% endif %}>Male Reproductive System</option>
-                        <option value="Respiratory System" {% if selected_symptom == 'respiratory_system' %}selected{% endif %}>Respiratory System</option>
-                        <option value="cardio vascular system" {% if selected_symptom == 'cardio_vascular_system' %}selected{% endif %}>Cardio vascular system</option>
-                        <option value="Neck" {% if selected_symptom == 'neck' %}selected{% endif %}>Neck</option>
-                        <option value="Back" {% if selected_symptom == 'back' %}selected{% endif %}>Back</option>
-                        <option value="Extremities" {% if selected_symptom == 'extremities' %}selected{% endif %}>Extremities</option>
-                        <option value="Nervous System" {% if selected_symptom == 'nervous_system' %}selected{% endif %}>Nervous System</option>
-                        <option value="Skin" {% if selected_symptom == 'skin' %}selected{% endif %}>Skin</option>
-                        <option value="Fever" {% if selected_symptom == 'fever' %}selected{% endif %}>Fever</option>
-                        <option value="Modalities" {% if selected_symptom == 'modalities' %}selected{% endif %}>Modalities</option>
-                        <option value="Relation" {% if selected_symptom == 'relation' %}selected{% endif %}>Relation</option>
-                    </select>
-                </div>
-
-
-                <button type="submit" class="btn">
-                    <i class="fas fa-search"></i> Compare Drugs
-                </button>
-            </form>
+            <div class="sidebar-search-results" id="sidebarSearchResults"></div>
         </div>
 
-        <div class="loading" id="loading">
-            <div class="loading-spinner"></div>
-            <p>Loading comparison results...</p>
-        </div>
-
-        <div class="results-container">
-            {% if selected_remedies %}
-            <h2 class="results-title">Comparison Results</h2>
-            <div class="results-grid">
-                {% for remedy in selected_remedies %}
-                <div class="remedy-card">
-                    <div class="remedy-header">
-                        <h3>{{ remedy }}</h3>
+        <div class="sidebar-content">
+            <!-- Recent Searches -->
+            <div class="sidebar-section">
+                <div class="section-header">
+                    <span class="section-title">Recent Searches</span>
+                    <span class="section-action" id="clearRecent">Clear</span>
+                </div>
+                <div id="recentList">
+                    <div class="recent-item" style="color: var(--text-muted); font-size: 0.8rem; padding: 0.5rem 0;">
+                        <i class="fas fa-clock" style="margin-right: 8px;"></i>
+                        No recent searches yet
                     </div>
-                    <div class="remedy-body">
-                        <div class="symptom-title">
-                            <i class="fas fa-notes-medical"></i>
-                            {{ selected_symptom|title }}
+                </div>
+            </div>
+
+            <!-- Popular Categories -->
+            <div class="sidebar-section">
+                <div class="section-header">
+                    <span class="section-title">Popular Categories</span>
+                </div>
+                <div class="category-chips" id="categoryChips">
+                    <span class="category-chip" data-cat="mental generals">Mental</span>
+                    <span class="category-chip" data-cat="head">Head</span>
+                    <span class="category-chip" data-cat="stomach">Stomach</span>
+                    <span class="category-chip" data-cat="respiratory system">Respiratory</span>
+                    <span class="category-chip" data-cat="skin">Skin</span>
+                    <span class="category-chip" data-cat="fever">Fever</span>
+                    <span class="category-chip" data-cat="nervous system">Nervous</span>
+                    <span class="category-chip" data-cat="modalities">Modalities</span>
+                </div>
+            </div>
+
+            <!-- Remedy Browser -->
+            <div class="sidebar-section">
+                <div class="section-header">
+                    <span class="section-title">Browse by Letter</span>
+                </div>
+                <div class="alphabet-grid" id="alphabetGrid"></div>
+                <div class="remedy-browser" id="remedyBrowser">
+                    <div class="browser-header">
+                        <span class="browser-title" id="browserTitle">Remedies</span>
+                        <span class="browser-close" id="closeBrowser"><i class="fas fa-times"></i></span>
+                    </div>
+                    <div id="browserList"></div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="sidebar-section">
+                <div class="section-header">
+                    <span class="section-title">Quick Actions</span>
+                </div>
+                <div class="quick-actions">
+                    <button class="action-btn" id="clearFormBtn">
+                        <i class="fas fa-eraser"></i>
+                        Clear Form
+                    </button>
+                    <a href="{% url 'remedy_compare' %}" class="action-btn">
+                        <i class="fas fa-exchange-alt"></i>
+                        Switch to Boericke's
+                    </a>
+                    <a href="{% url 'home' %}" class="action-btn">
+                        <i class="fas fa-home"></i>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <button id="themeToggle" class="theme-toggle">
+                <span><i class="fas fa-moon"></i> Dark Mode</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="topbar-left">
+                <h2 class="topbar-title">Remedy Comparison</h2>
+                <span class="topbar-badge">Allen's Keynotes</span>
+            </div>
+            <div class="topbar-stats">
+                <div class="stat-item">
+                    <i class="fas fa-flask"></i>
+                    <span><strong id="totalRemedies">184</strong> Remedies</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-th-list"></i>
+                    <span><strong>36</strong> Categories</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="search-section">
+                <div class="search-header">
+                    <h3 class="search-title">Compare Remedies Side by Side</h3>
+                    <p class="search-desc">Select remedies from the sidebar or type below. Choose a symptom category to compare.</p>
+                </div>
+
+                <form id="compareForm" onsubmit="return handleCompare(event)">
+                    {% csrf_token %}
+                    <div class="search-grid">
+                        <div class="input-group">
+                            <label class="input-label">Remedy 1 <span class="req">*</span></label>
+                            <input type="text" id="search1" class="input-field" placeholder="Type or use sidebar..." autocomplete="off">
+                            <input type="hidden" id="remedy1" name="remedy1">
+                            <div id="suggestions1" class="suggestions"></div>
                         </div>
-                        {% with remedy_symptoms=symptoms|get_item:remedy %}
-                        {% if remedy_symptoms|get_item:selected_symptom %}
-                        <p class="symptom-content">{{ remedy_symptoms|get_item:selected_symptom }}</p>
-                        {% else %}
-                        <p class="no-data">No data available for {{ selected_symptom|title }}.</p>
-                        {% endif %}
-                        {% endwith %}
+
+                        <div class="input-group">
+                            <label class="input-label">Remedy 2 <span class="req">*</span></label>
+                            <input type="text" id="search2" class="input-field" placeholder="Type or use sidebar..." autocomplete="off">
+                            <input type="hidden" id="remedy2" name="remedy2">
+                            <div id="suggestions2" class="suggestions"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="input-label">Remedy 3</label>
+                            <input type="text" id="search3" class="input-field" placeholder="Optional..." autocomplete="off">
+                            <input type="hidden" id="remedy3" name="remedy3">
+                            <div id="suggestions3" class="suggestions"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="input-label">Remedy 4</label>
+                            <input type="text" id="search4" class="input-field" placeholder="Optional..." autocomplete="off">
+                            <input type="hidden" id="remedy4" name="remedy4">
+                            <div id="suggestions4" class="suggestions"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="input-label">Category <span class="req">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="symptom" name="symptom" class="select-field">
+                                    <option value="">Select category...</option>
+                                    <option value="constitution">Constitution</option>
+                                    <option value="mental generals">Mental Generals</option>
+                                    <option value="physical generals">Physical Generals</option>
+                                    <option value="head">Head</option>
+                                    <option value="eyes">Eyes</option>
+                                    <option value="vision">Vision</option>
+                                    <option value="ears">Ears</option>
+                                    <option value="hearing">Hearing</option>
+                                    <option value="nose">Nose</option>
+                                    <option value="face">Face</option>
+                                    <option value="mouth">Mouth</option>
+                                    <option value="teeth">Teeth</option>
+                                    <option value="throat">Throat</option>
+                                    <option value="appetite">Appetite</option>
+                                    <option value="stomach">Stomach</option>
+                                    <option value="stool">Stool</option>
+                                    <option value="abdomen">Abdomen</option>
+                                    <option value="urinary system">Urinary System</option>
+                                    <option value="gastro-intestinal system">Gastro-intestinal System</option>
+                                    <option value="upper limbs">Upper Limbs</option>
+                                    <option value="lower limbs">Lower Limbs</option>
+                                    <option value="limbs in general">Limbs in General</option>
+                                    <option value="sleep">Sleep</option>
+                                    <option value="injuries">Injuries</option>
+                                    <option value="female reproductive system">Female Reproductive System</option>
+                                    <option value="male reproductive system">Male Reproductive System</option>
+                                    <option value="respiratory system">Respiratory System</option>
+                                    <option value="cardio-vascular system">Cardio-vascular System</option>
+                                    <option value="neck">Neck</option>
+                                    <option value="back">Back</option>
+                                    <option value="extremities">Extremities</option>
+                                    <option value="nervous system">Nervous System</option>
+                                    <option value="skin">Skin</option>
+                                    <option value="fever">Fever</option>
+                                    <option value="modalities">Modalities</option>
+                                    <option value="relation">Relation</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-search">
+                        <i class="fas fa-balance-scale"></i>
+                        Compare Remedies
+                    </button>
+                </form>
+            </section>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p style="color: var(--text-secondary);">Analyzing remedies...</p>
+            </div>
+
+            <section class="results-section" id="resultsContainer" style="display: none;">
+                <div class="results-header">
+                    <h3 class="results-title">Comparison Results</h3>
+                    <div class="results-meta">
+                        <i class="fas fa-check-circle"></i>
+                        <span id="resultsCount"></span>
                     </div>
                 </div>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 HomeoCompare. All rights reserved.</p>
-            <p>HomeoCompare © {% now "Y" %} | Built with <i class="fas fa-heart" style="color: #fffb00;"></i></p>
-            <p>Made Using ALLEN'S KEYNOTES OF THE MATERIA MEDICA</p>
-        </div>
-    </footer>
+                <div class="results-grid" id="resultsGrid"></div>
+            </section>
+        </main>
+    </div>
 
     <script>
-        const remedyData = {{ remedy_data| safe }};
-        const remedyNames = {{ remedy_names| safe }};
+        const remedyData = {{ remedy_data|safe }};
+        const remedyNames = {{ remedy_names|safe }};
 
-        const remedySelects = [
-            document.getElementById('remedy1'),
-            document.getElementById('remedy2'),
-            document.getElementById('remedy3'),
-            document.getElementById('remedy4')
-        ];
+        // Update stats
+        document.getElementById('totalRemedies').textContent = remedyNames.length;
 
-        remedySelects.forEach(select => {
-            remedyNames.forEach(remedy => {
-                const option = document.createElement('option');
-                option.value = remedy;
-                option.textContent = remedy;
-                select.appendChild(option);
+        // === THEME ===
+        const themeToggle = document.getElementById('themeToggle');
+        function initTheme() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeBtn(theme);
+        }
+        function updateThemeBtn(theme) {
+            themeToggle.innerHTML = theme === 'dark'
+                ? '<span><i class="fas fa-sun"></i> Light Mode</span><i class="fas fa-chevron-right"></i>'
+                : '<span><i class="fas fa-moon"></i> Dark Mode</span><i class="fas fa-chevron-right"></i>';
+        }
+        themeToggle.addEventListener('click', () => {
+            const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeBtn(next);
+        });
+        initTheme();
+
+        // === VALIDATION TOOLTIP ===
+        function showValidationTooltip(inputId, message) {
+            // Remove any existing tooltip
+            const existing = document.querySelector('.validation-tooltip');
+            if (existing) existing.remove();
+
+            // Find the input group
+            const input = document.getElementById(inputId);
+            const inputGroup = input.closest('.input-group');
+            
+            // Add error class for red border + shake
+            inputGroup.classList.add('has-error');
+            
+            // Create tooltip
+            const tooltip = document.createElement('div');
+            tooltip.className = 'validation-tooltip';
+            tooltip.innerHTML = `<i class="fas fa-exclamation-circle" style="margin-right: 6px;"></i>${message}`;
+            
+            // Position relative to input group
+            inputGroup.style.position = 'relative';
+            inputGroup.appendChild(tooltip);
+            
+            // Scroll to make visible
+            input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            input.focus();
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                tooltip.remove();
+                inputGroup.classList.remove('has-error');
+            }, 3000);
+            
+            // Remove on click anywhere
+            document.addEventListener('click', function removeTooltip() {
+                tooltip.remove();
+                inputGroup.classList.remove('has-error');
+                document.removeEventListener('click', removeTooltip);
+            }, { once: true });
+        }
+
+        // === SIDEBAR SEARCH ===
+        const sidebarSearch = document.getElementById('sidebarSearch');
+        const sidebarResults = document.getElementById('sidebarSearchResults');
+
+        sidebarSearch.addEventListener('input', function() {
+            const val = this.value.toLowerCase();
+            sidebarResults.innerHTML = '';
+            if (!val) {
+                sidebarResults.style.display = 'none';
+                return;
+            }
+            const matches = remedyNames.filter(r => r.toLowerCase().includes(val)).slice(0, 8);
+            if (matches.length) {
+                matches.forEach(m => {
+                    const div = document.createElement('div');
+                    div.className = 'search-result-item';
+                    div.innerHTML = `<i class="fas fa-leaf"></i> ${m}`;
+                    div.onclick = () => addRemedyToForm(m);
+                    sidebarResults.appendChild(div);
+                });
+                sidebarResults.style.display = 'block';
+            } else {
+                sidebarResults.style.display = 'none';
+            }
+        });
+
+        function addRemedyToForm(remedy) {
+            const inputs = ['search1', 'search2', 'search3', 'search4'];
+            const hiddens = ['remedy1', 'remedy2', 'remedy3', 'remedy4'];
+            for (let i = 0; i < inputs.length; i++) {
+                if (!document.getElementById(hiddens[i]).value) {
+                    document.getElementById(inputs[i]).value = remedy;
+                    document.getElementById(hiddens[i]).value = remedy;
+                    break;
+                }
+            }
+            sidebarSearch.value = '';
+            sidebarResults.style.display = 'none';
+            addToRecent(remedy);
+        }
+
+        // === RECENT SEARCHES ===
+        function getRecent() {
+            return JSON.parse(localStorage.getItem('recentRemedies') || '[]');
+        }
+        function saveRecent(list) {
+            localStorage.setItem('recentRemedies', JSON.stringify(list.slice(0, 5)));
+        }
+        function addToRecent(remedy) {
+            let recent = getRecent().filter(r => r !== remedy);
+            recent.unshift(remedy);
+            saveRecent(recent);
+            renderRecent();
+        }
+        function renderRecent() {
+            const list = document.getElementById('recentList');
+            const recent = getRecent();
+            if (!recent.length) {
+                list.innerHTML = `<div style="color: var(--text-muted); font-size: 0.8rem; padding: 0.5rem 0;"><i class="fas fa-clock" style="margin-right: 8px;"></i>No recent searches yet</div>`;
+                return;
+            }
+            list.innerHTML = recent.map(r => `
+                <div class="recent-item" onclick="addRemedyToForm('${r}')">
+                    <div class="recent-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="recent-info">
+                        <div class="recent-name">${r}</div>
+                        <div class="recent-time">Click to add</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        document.getElementById('clearRecent').addEventListener('click', () => {
+            localStorage.removeItem('recentRemedies');
+            renderRecent();
+        });
+        renderRecent();
+
+        // === CATEGORY CHIPS ===
+        document.querySelectorAll('.category-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                // Remove active from all chips
+                document.querySelectorAll('.category-chip').forEach(c => c.classList.remove('active'));
+                // Add active to clicked chip
+                chip.classList.add('active');
+                // Set dropdown value
+                document.getElementById('symptom').value = chip.dataset.cat;
             });
         });
 
-        const themeToggle = document.getElementById('themeToggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        // Sync chip highlight when dropdown changes
+        document.getElementById('symptom').addEventListener('change', function() {
+            document.querySelectorAll('.category-chip').forEach(c => {
+                if (c.dataset.cat === this.value) {
+                    c.classList.add('active');
+                } else {
+                    c.classList.remove('active');
+                }
+            });
+        });
 
-        function initTheme() {
-            const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            themeToggle.innerHTML = currentTheme === 'dark'
-                ? '<i class="fas fa-sun"></i> <span class="toggle-text">Light Mode</span>'
-                : '<i class="fas fa-moon"></i> <span class="toggle-text">Dark Mode</span>';
+        // === ALPHABET BROWSER ===
+        const alphabetGrid = document.getElementById('alphabetGrid');
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        const remedyByLetter = {};
+        remedyNames.forEach(r => {
+            const first = r[0].toUpperCase();
+            if (!remedyByLetter[first]) remedyByLetter[first] = [];
+            remedyByLetter[first].push(r);
+        });
+
+        letters.forEach(letter => {
+            const btn = document.createElement('div');
+            btn.className = 'alpha-btn' + (remedyByLetter[letter] ? '' : ' disabled');
+            btn.textContent = letter;
+            if (remedyByLetter[letter]) {
+                btn.onclick = () => showBrowser(letter);
+            }
+            alphabetGrid.appendChild(btn);
+        });
+
+        function showBrowser(letter) {
+            const browser = document.getElementById('remedyBrowser');
+            const list = document.getElementById('browserList');
+            document.getElementById('browserTitle').textContent = `Remedies: ${letter}`;
+            list.innerHTML = remedyByLetter[letter].map(r => `
+                <div class="browser-item" onclick="addRemedyToForm('${r}')">${r}</div>
+            `).join('');
+            browser.classList.add('visible');
         }
 
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.documentElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            themeToggle.innerHTML = currentTheme === 'dark'
-                ? '<i class="fas fa-sun"></i> <span class="toggle-text">Light Mode</span>'
-                : '<i class="fas fa-moon"></i> <span class="toggle-text">Dark Mode</span>';
-            localStorage.setItem('theme', currentTheme);
-            setTimeout(() => {
-                document.documentElement.style.transition = '';
-            }, 300);
+        document.getElementById('closeBrowser').addEventListener('click', () => {
+            document.getElementById('remedyBrowser').classList.remove('visible');
         });
-        initTheme(); // Call the function to initialize the theme on page load
 
+        // === CLEAR FORM ===
+        document.getElementById('clearFormBtn').addEventListener('click', () => {
+            ['search1', 'search2', 'search3', 'search4'].forEach(id => document.getElementById(id).value = '');
+            ['remedy1', 'remedy2', 'remedy3', 'remedy4'].forEach(id => document.getElementById(id).value = '');
+            document.getElementById('symptom').value = '';
+        });
+
+        // === FORM HANDLING ===
         function handleCompare(event) {
             event.preventDefault();
+            
+            // Hide previous results immediately
+            document.getElementById('resultsContainer').style.display = 'none';
+            
             const remedy1 = document.getElementById('remedy1').value;
             const remedy2 = document.getElementById('remedy2').value;
             const remedy3 = document.getElementById('remedy3').value;
             const remedy4 = document.getElementById('remedy4').value;
             const symptom = document.getElementById('symptom').value;
 
-            const selectedRemedies = [remedy1, remedy2, remedy3, remedy4].filter(val => val !== '');
-            const uniqueSelected = new Set(selectedRemedies);
-
-            if (selectedRemedies.length !== uniqueSelected.size) {
-                alert('Please select different remedies for comparison.');
+            const selected = [remedy1, remedy2, remedy3, remedy4].filter(v => v);
+            if (new Set(selected).size !== selected.length) {
+                showValidationTooltip('remedy1', 'Please select different remedies');
                 return false;
-            } else if (!remedy1 || !remedy2) {
-                alert('Please select at least the first two remedies.');
+            }
+            if (!remedy1) {
+                showValidationTooltip('remedy1', 'Please select at least two remedies');
                 return false;
-            } else if (!symptom) {
-                alert('Please select a symptom category.');
+            }
+            if (!remedy2) {
+                showValidationTooltip('remedy2', 'Please select at least two remedies');
+                return false;
+            }
+            if (!symptom) {
+                showValidationTooltip('symptom', 'Please select a symptom category');
                 return false;
             }
 
+            // Track search for analytics
+            fetch('/api/track-search/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    remedies: selected,
+                    category: symptom,
+                    source: 'allen'
+                })
+            }).catch(() => {});
+
+            // Add to recent
+            selected.forEach(r => addToRecent(r));
+
             document.getElementById('loading').style.display = 'block';
+            document.getElementById('resultsContainer').style.display = 'none';
+
             setTimeout(() => {
                 document.getElementById('loading').style.display = 'none';
-                displayResults(selectedRemedies, symptom);
-            }, 500);
+                displayResults(selected, symptom);
+            }, 400);
             return false;
         }
 
-        function displayResults(remedies, symptomCategory) {
-            const resultsGrid = document.getElementById('resultsGrid');
-            resultsGrid.innerHTML = '';
+        function displayResults(remedies, category) {
+            const grid = document.getElementById('resultsGrid');
+            grid.innerHTML = '';
+            document.getElementById('resultsCount').textContent = `${remedies.length} remedies · ${category}`;
 
             remedies.forEach(remedy => {
-                const remedyInfo = remedyData[remedy];
-                const symptomContent = findSymptomData(remedyInfo, symptomCategory);
+                const info = remedyData[remedy];
+                const content = findSymptomData(info, category);
 
-                console.log(`=== DISPLAY DEBUG ===`);
-                console.log(`Remedy: ${remedy}`);
-                console.log(`Symptom Category: ${symptomCategory}`);
-                console.log(`Raw symptom content:`, symptomContent);
-                console.log(`Type of content:`, typeof symptomContent);
-                console.log(`Content is null/undefined:`, symptomContent === null || symptomContent === undefined);
-                console.log(`Content is empty string:`, symptomContent === '');
-
-                // Determine display content
-                let displayContent;
-                if (symptomContent === null || symptomContent === undefined) {
-                    displayContent = 'No data available for this category.';
-                } else if (symptomContent === '') {
-                    displayContent = 'No specific symptoms recorded for this category.';
-                } else if (typeof symptomContent === 'string') {
-                    displayContent = symptomContent;
-                } else if (typeof symptomContent === 'object') {
-                    displayContent = JSON.stringify(symptomContent, null, 2);
+                let html;
+                if (!content) {
+                    html = '<span class="no-data">No data available for this category.</span>';
+                } else if (Array.isArray(content)) {
+                    html = `<ul>${content.map(s => `<li>${s}</li>`).join('')}</ul>`;
                 } else {
-                    displayContent = String(symptomContent);
+                    html = content;
                 }
 
-                console.log(`Final display content:`, displayContent);
-
-                const remedyCard = document.createElement('div');
-                remedyCard.className = 'remedy-card';
-                remedyCard.innerHTML = `
-            <div class="remedy-header">
-                <h3>${remedy}</h3>
-            </div>
-            <div class="remedy-body">
-                <div class="symptom-title">
-                    <i class="fas fa-notes-medical"></i>
-                    ${symptomCategory}
-                </div>
-                <p class="${displayContent.includes('No data') || displayContent.includes('No specific') ? 'no-data' : 'symptom-content'}">
-                    ${displayContent}
-                </p>
-            </div>
-        `;
-                resultsGrid.appendChild(remedyCard);
+                const card = document.createElement('div');
+                card.className = 'remedy-card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-mortar-pestle"></i></div>
+                        <div class="card-info">
+                            <h3>${remedy}</h3>
+                            <span>Allen's Keynotes</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="category-tag"><i class="fas fa-tag"></i> ${category}</div>
+                        <div class="symptom-content">${html}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
             });
 
             document.getElementById('resultsContainer').style.display = 'block';
+            // Smooth scroll to results within the main content area
+            const resultsEl = document.getElementById('resultsContainer');
+            const mainWrapper = document.querySelector('.main-wrapper');
+            const topbarHeight = 70; // var(--header-height)
+            const targetPosition = resultsEl.offsetTop - topbarHeight - 20;
+            mainWrapper.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
 
-        function findSymptomData(remedyInfo, symptomCategory) {
-            console.log("== FIND SYMPTOM DATA ==");
-            console.log("Looking for:", symptomCategory);
-
-            const keys = Object.keys(remedyInfo);
-            console.log("Remedy keys:", keys);
-
-            for (const k of keys) {
-                if (k.toLowerCase().trim() === symptomCategory.toLowerCase().trim()) {
-                    console.log("Perfect match found:", k);
-                    return remedyInfo[k];
+        function findSymptomData(info, category) {
+            if (!info) return null;
+            for (const k of Object.keys(info)) {
+                if (k.toLowerCase().trim() === category.toLowerCase().trim()) {
+                    return info[k];
                 }
             }
-
-            console.log("No exact match found.");
             return null;
         }
 
-        function setupAutocomplete(searchId, hiddenId, suggestionId) {
-            const searchInput = document.getElementById(searchId);
-            const hiddenInput = document.getElementById(hiddenId);
-            const suggestionBox = document.getElementById(suggestionId);
+        // === MAIN AUTOCOMPLETE ===
+        function setupAutocomplete(searchId, hiddenId, suggestionsId) {
+            const input = document.getElementById(searchId);
+            const hidden = document.getElementById(hiddenId);
+            const box = document.getElementById(suggestionsId);
 
-            searchInput.addEventListener("input", function () {
+            input.addEventListener('input', function() {
                 const val = this.value.toLowerCase();
-                suggestionBox.innerHTML = "";
-                suggestionBox.style.display = "none"; // Hide if no suggestions
-
-                if (!val || !remedyNames || remedyNames.length === 0) {
-                    console.log("No remedyNames data or input is empty:", remedyNames);
-                    return;
-                }
+                box.innerHTML = '';
+                box.style.display = 'none';
+                if (!val) return;
 
                 const matches = remedyNames.filter(r => r.toLowerCase().includes(val)).slice(0, 10);
-                console.log("Suggestions for", val, ":", matches); // Debug log
-
-                if (matches.length > 0) {
-                    matches.forEach(match => {
-                        const div = document.createElement("div");
-                        div.classList.add("suggestion-item");
-                        div.textContent = match;
+                if (matches.length) {
+                    matches.forEach(m => {
+                        const div = document.createElement('div');
+                        div.className = 'suggestion-item';
+                        div.textContent = m;
                         div.onclick = () => {
-                            searchInput.value = match;
-                            hiddenInput.value = match;
-                            suggestionBox.innerHTML = "";
-                            suggestionBox.style.display = "none";
+                            input.value = m;
+                            hidden.value = m;
+                            box.style.display = 'none';
                         };
-                        suggestionBox.appendChild(div);
+                        box.appendChild(div);
                     });
-                    suggestionBox.style.display = "block"; // Show if there are suggestions
+                    box.style.display = 'block';
                 }
             });
 
-            document.addEventListener("click", function (e) {
-                if (!suggestionBox.contains(e.target) && e.target !== searchInput) {
-                    suggestionBox.innerHTML = "";
-                    suggestionBox.style.display = "none";
+            document.addEventListener('click', e => {
+                if (!box.contains(e.target) && e.target !== input) {
+                    box.style.display = 'none';
                 }
             });
         }
-        setupAutocomplete("search1", "remedy1", "suggestions1");
-        setupAutocomplete("search2", "remedy2", "suggestions2");
-        setupAutocomplete("search3", "remedy3", "suggestions3");
-        setupAutocomplete("search4", "remedy4", "suggestions4");
 
-
-
-
-
-
+        setupAutocomplete('search1', 'remedy1', 'suggestions1');
+        setupAutocomplete('search2', 'remedy2', 'suggestions2');
+        setupAutocomplete('search3', 'remedy3', 'suggestions3');
+        setupAutocomplete('search4', 'remedy4', 'suggestions4');
     </script>
 </body>
 

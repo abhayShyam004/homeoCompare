@@ -1,75 +1,82 @@
 {
-  "name": "Bufo", 
-  "Relationship": "Compare: Baryt. carb.; Asterias; Salamand. (Epilepsy and softening of brain) Antidotes: Laches.; Seneg. Complementary: Salamandra.", 
+  "name": "Bufo",
+  "Relationship": "Compare: Baryt. carb.; Asterias; Salamand. (Epilepsy and softening of brain) Antidotes: Laches.; Seneg. Complementary: Salamandra.",
   "Modalities": [
-    "Worse: in warm room", 
-    "Worse: on awakening", 
+    "Worse: in warm room",
+    "Worse: on awakening",
     "Better: from bathing or cold air; from putting feet in hot water"
-  ], 
-  "Common names": "Poison of the Toad", 
+  ],
+  "Common names": "Poison of the Toad",
   "symptoms": {
     "Heart": [
-      "Palpitation", 
-      "Feels too large", 
-      "Constriction about heart", 
+      "Palpitation",
+      "Feels too large",
+      "Constriction about heart",
       "Sensation of heart swimming in water"
-    ], 
+    ],
     "Eyes": [
-      "Cannot bear sight of brilliant objects", 
+      "Cannot bear sight of brilliant objects",
       "Little blisters form on eye"
-    ], 
+    ],
     "Mind": [
-      "Howling; impatient; nervous; imbecile", 
-      "Anxious about health", 
-      "Propensity to bite", 
-      "Desire for solitude", 
-      "Sad, restless", 
+      "Howling",
+      "impatient",
+      "nervous",
+      "imbecile",
+      "Anxious about health",
+      "Propensity to bite",
+      "Desire for solitude",
+      "Sad, restless",
       "Feeble-minded"
-    ], 
+    ],
     "Head": [
-      "Face bathed in sweat", 
-      "Sensation as if hot vapor rose to top of head", 
-      "Epistaxis with flushed face and pain in forehead, better, nosebleed", 
+      "Face bathed in sweat",
+      "Sensation as if hot vapor rose to top of head",
+      "Epistaxis with flushed face and pain in forehead, better, nosebleed",
       "Numbness of brain"
-    ], 
+    ],
     "Female": [
-      "Tumors and polypi of womb", 
-      "Veins swollen", 
-      "Induration in mammary glands", 
-      "Excitement, with epileptic attacks", 
-      "Ulceration of cervix", 
-      "Palliative in cancer of the mammae burning in ovaries and uterus", 
-      "Bloody milk", 
-      "Milk-leg", 
-      "Menses too early and too copious, clots and bloody discharge at other times; watery leucorrhoea", 
-      "Offensive bloody discharge", 
-      "Epilepsy at time of menses", 
+      "Tumors and polypi of womb",
+      "Veins swollen",
+      "Induration in mammary glands",
+      "Excitement, with epileptic attacks",
+      "Ulceration of cervix",
+      "Palliative in cancer of the mammae burning in ovaries and uterus",
+      "Bloody milk",
+      "Milk-leg",
+      "Menses too early and too copious, clots and bloody discharge at other times",
+      "watery leucorrhoea",
+      "Offensive bloody discharge",
+      "Epilepsy at time of menses",
       "Pains run into legs"
-    ], 
+    ],
     "Skin": [
-      "Patches of skin lose sensation", 
-      "Itching and burning", 
-      "Pustules, suppuration, from every slight injury", 
-      "Carbuncle", 
-      "Pemphigus", 
-      "Panaritium; pain runs up arm", 
-      "Bullae which open and leave a raw surface, exuding and ichorous fluid", 
+      "Patches of skin lose sensation",
+      "Itching and burning",
+      "Pustules, suppuration, from every slight injury",
+      "Carbuncle",
+      "Pemphigus",
+      "Panaritium",
+      "pain runs up arm",
+      "Bullae which open and leave a raw surface, exuding and ichorous fluid",
       "Blisters on palms and soles"
-    ], 
+    ],
     "Extremities": [
-      "Pains in loins, numbness of limbs, cramps, staggering gait, feeling as if a peg were driven in joints; swelling of bones"
-    ], 
+      "Pains in loins, numbness of limbs, cramps, staggering gait, feeling as if a peg were driven in joints",
+      "swelling of bones"
+    ],
     "Male": [
-      "Buboes", 
-      "Disposition to handle organs", 
-      "Involuntary emissions; impotence, discharge too quick, spasms during coition", 
+      "Buboes",
+      "Disposition to handle organs",
+      "Involuntary emissions",
+      "impotence, discharge too quick, spasms during coition",
       "Effects of onanism"
-    ], 
+    ],
     "Ears": [
-      "Music is unbearable", 
+      "Music is unbearable",
       "Every little noise distresses"
     ]
-  }, 
-  "details": "Acts on the nervous system and skin. Uterine symptoms marked. Lymphangitis of septic origin. Symptoms of paralysis agitans. Striking rheumatic symptoms. Arouses the lowest passions. Causes a desire for intoxicating drink, and produces impotence. Of use in feeble-minded children. Prematurely senile. Epileptic symptoms. Convulsive seizures occur during sleep at night. More or less connected with derangements of the sexual sphere, seem to come within the range of this remedy. Injuries to fingers; pain runs in streaks up the arms.", 
+  },
+  "details": "Acts on the nervous system and skin. Uterine symptoms marked. Lymphangitis of septic origin. Symptoms of paralysis agitans. Striking rheumatic symptoms. Arouses the lowest passions. Causes a desire for intoxicating drink, and produces impotence. Of use in feeble-minded children. Prematurely senile. Epileptic symptoms. Convulsive seizures occur during sleep at night. More or less connected with derangements of the sexual sphere, seem to come within the range of this remedy. Injuries to fingers; pain runs in streaks up the arms.",
   "dosage": "Sixth potency and higher."
 }

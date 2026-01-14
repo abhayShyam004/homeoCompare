@@ -1,24 +1,25 @@
 {
   "symptoms": {
     "Extremities": [
-      "Excessive exhaustion and muscular debility", 
-      "Rheumatism of shoulders", 
+      "Excessive exhaustion and muscular debility",
+      "Rheumatism of shoulders",
       "Skin hot and dry"
-    ], 
+    ],
     "Respiratory": [
-      "Loss of voice", 
-      "Uvula covered with white mucus", 
-      "Scraping and burning in throat and oesophagus", 
-      "Burning rawness in throat", 
-      "Pain in oesophagus on breathing deeply", 
-      "Spasm of the glottis with suffocation; patient gasps for breath", 
-      "Accumulation of mucus with incessant coughing", 
-      "Difficult respiration", 
+      "Loss of voice",
+      "Uvula covered with white mucus",
+      "Scraping and burning in throat and oesophagus",
+      "Burning rawness in throat",
+      "Pain in oesophagus on breathing deeply",
+      "Spasm of the glottis with suffocation",
+      "patient gasps for breath",
+      "Accumulation of mucus with incessant coughing",
+      "Difficult respiration",
       "Nasal diphtheria, with burning excoriating discharge"
     ]
-  }, 
-  "details": "This is a powerful cardiac stimulant. As such in SYNCOPE, thrombosis, hemorrhage, snake-bites, chloroform narcosis, may be given by inhalation. The oedema and ulceration of mucous membranes produced by this powerful drug have been utilized as guiding symptoms for its use; hence in membranous croup with burning in oesophagus. Aphonia. See CAUSTICUM.", 
-  "Common names": "Hydrate of Ammonia - Ammonia Water", 
-  "name": "Ammonium causticum", 
+  },
+  "details": "This is a powerful cardiac stimulant. As such in SYNCOPE, thrombosis, hemorrhage, snake-bites, chloroform narcosis, may be given by inhalation. The oedema and ulceration of mucous membranes produced by this powerful drug have been utilized as guiding symptoms for its use; hence in membranous croup with burning in oesophagus. Aphonia. See CAUSTICUM.",
+  "Common names": "Hydrate of Ammonia - Ammonia Water",
+  "name": "Ammonium causticum",
   "dosage": "First to third potency; also five to ten minims, well diluted with water."
 }

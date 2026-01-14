@@ -1,66 +1,74 @@
 {
-  "name": "Myrica", 
-  "Relationship": "Compare: PTEL.; CORNUS.; CHELID.; LEPT.; FAGOP. Antidote: DIGIT. (JAUNDICE).", 
-  "Common names": "Bayberry", 
+  "name": "Myrica",
+  "Relationship": "Compare: PTEL.; CORNUS.; CHELID.; LEPT.; FAGOP. Antidote: DIGIT. (JAUNDICE).",
+  "Common names": "Bayberry",
   "symptoms": {
     "Head": [
-      "Scalp feels tight", 
-      "Pain and stiffness in nape of neck", 
-      "Headache, with drowsiness; yellow sclerotica; aching in eyeballs", 
-      "Pressure in vertex and forehead", 
+      "Scalp feels tight",
+      "Pain and stiffness in nape of neck",
+      "Headache, with drowsiness",
+      "yellow sclerotica",
+      "aching in eyeballs",
+      "Pressure in vertex and forehead",
       "Dull, heavy aching in temples and forehead on waking in the morning"
-    ], 
+    ],
     "Stomach": [
-      "Weak, sinking feeling in the epigastrium, approaching nausea; increased after eating; relieved by rapid walking", 
-      "Complete loss of appetite, but with a feeling of fullness in the stomach after a hearty meal", 
-      "Taste bitter and nauseous, with offensive breath", 
+      "Weak, sinking feeling in the epigastrium, approaching nausea",
+      "increased after eating",
+      "relieved by rapid walking",
+      "Complete loss of appetite, but with a feeling of fullness in the stomach after a hearty meal",
+      "Taste bitter and nauseous, with offensive breath",
       "Strong desire for acids"
-    ], 
+    ],
     "Urine": [
       "Dark, frothy, scanty, high-colored, biliary"
-    ], 
+    ],
     "Mind": [
-      "Despondent, irritable, indifferent", 
+      "Despondent, irritable, indifferent",
       "Gloomy"
-    ], 
+    ],
     "Stool": [
-      "Constant discharge of flatus when walking", 
-      "Urging to stool, with no other results than the expulsion of a great amount of flatus", 
-      "Loose, light-colored stool; ash-colored and destitute of bile"
-    ], 
+      "Constant discharge of flatus when walking",
+      "Urging to stool, with no other results than the expulsion of a great amount of flatus",
+      "Loose, light-colored stool",
+      "ash-colored and destitute of bile"
+    ],
     "Abdomen": [
-      "Fullness in the stomach and abdomen", 
-      "Complete jaundice, with bronze-yellow skin; loss of appetite", 
-      "Scanty, yellow, frothy urine", 
+      "Fullness in the stomach and abdomen",
+      "Complete jaundice, with bronze-yellow skin",
+      "loss of appetite",
+      "Scanty, yellow, frothy urine",
       "Dull pain in the region of the liver"
-    ], 
+    ],
     "Face": [
-      "Itching and stinging", 
-      "Yellow", 
+      "Itching and stinging",
+      "Yellow",
       "Creeping sensation"
-    ], 
+    ],
     "Sleep": [
-      "Disturbed, bad dreams and frequent waking; insomnia"
-    ], 
+      "Disturbed, bad dreams and frequent waking",
+      "insomnia"
+    ],
     "Skin": [
-      "Jaundice", 
-      "Yellow and itching", 
+      "Jaundice",
+      "Yellow and itching",
       "Creeping sensation, as of insects"
-    ], 
+    ],
     "Throat": [
-      "Constricted and rough feeling, with a constant desire to swallow", 
-      "Stringy mucus; detached with difficulty"
-    ], 
+      "Constricted and rough feeling, with a constant desire to swallow",
+      "Stringy mucus",
+      "detached with difficulty"
+    ],
     "Mouth": [
-      "Tenacious, thick, nauseous secretion", 
-      "Tongue furred, with bad taste in mouth, and nausea", 
+      "Tenacious, thick, nauseous secretion",
+      "Tongue furred, with bad taste in mouth, and nausea",
       "Tender, spongy, and bleeding gums"
-    ], 
+    ],
     "Extremities": [
-      "Staggering gait", 
+      "Staggering gait",
       "Pain under shoulder-blades and back of neck, in all muscles, in hollow of right foot"
     ]
-  }, 
-  "details": "Marked action on the liver, with jaundice and mucous membranes. Persistent sleeplessness. JAUNDICE.", 
+  },
+  "details": "Marked action on the liver, with jaundice and mucous membranes. Persistent sleeplessness. JAUNDICE.",
   "dosage": "Tincture, to third potency."
 }

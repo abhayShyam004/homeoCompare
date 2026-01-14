@@ -1,40 +1,45 @@
 {
-  "name": "Murex", 
-  "Relationship": "Compare: PLAT.; LIL.; SEP. (the latter lacks sexual erethism of MUREX.)", 
+  "name": "Murex",
+  "Relationship": "Compare: PLAT.; LIL.; SEP. (the latter lacks sexual erethism of MUREX.)",
   "Modalities": [
     "Worse: least touch"
-  ], 
-  "Common names": "Purple Fish", 
+  ],
+  "Common names": "Purple Fish",
   "symptoms": {
     "Stomach": [
-      "Sinking, all-gone sensation in stomach", 
+      "Sinking, all-gone sensation in stomach",
       "Hungry, must eat"
-    ], 
+    ],
     "Urine": [
-      "Urine frequent at night; smells like valerian; constant urging"
-    ], 
+      "Urine frequent at night",
+      "smells like valerian",
+      "constant urging"
+    ],
     "Mind": [
       "Great sadness, anxiety, and dread"
-    ], 
+    ],
     "Female": [
-      "Dysmenorrhoea and chronic endometritis, with displacement", 
-      "Benign tumors in breasts", 
-      "Conscious of a womb", 
-      "Leucorrhoea green or bloody, alternate with mental symptoms and aching in sacrum", 
-      "Sore pain in uterus", 
-      "Desire easily excited", 
-      "Menses irregular, profuse, frequent, large clots", 
-      "Pain in them during menstrual period", 
-      "Must keep legs tightly crossed", 
-      "Nymphomania", 
-      "Feeling of protrusion", 
-      "Prolapse; enlargement of uterus, with pelvic tenesmus and sharp pains, extending toward breasts; aggravated lying down", 
-      "Feeling as if something was pressing on a sore spot in the pelvis; worse sitting", 
-      "Least contact of parts causes violent sexual excitement", 
-      "Pain from right side of womb to right or left breast", 
+      "Dysmenorrhoea and chronic endometritis, with displacement",
+      "Benign tumors in breasts",
+      "Conscious of a womb",
+      "Leucorrhoea green or bloody, alternate with mental symptoms and aching in sacrum",
+      "Sore pain in uterus",
+      "Desire easily excited",
+      "Menses irregular, profuse, frequent, large clots",
+      "Pain in them during menstrual period",
+      "Must keep legs tightly crossed",
+      "Nymphomania",
+      "Feeling of protrusion",
+      "Prolapse",
+      "enlargement of uterus, with pelvic tenesmus and sharp pains, extending toward breasts",
+      "aggravated lying down",
+      "Feeling as if something was pressing on a sore spot in the pelvis",
+      "worse sitting",
+      "Least contact of parts causes violent sexual excitement",
+      "Pain from right side of womb to right or left breast",
       "Pulsation in neck of womb"
     ]
-  }, 
-  "details": "The symptoms of the female sexual organs are most prominent, and have been clinically verified. Especially adapted to nervous, lively, affectionate women. Patient weak and run down.", 
+  },
+  "details": "The symptoms of the female sexual organs are most prominent, and have been clinically verified. Especially adapted to nervous, lively, affectionate women. Patient weak and run down.",
   "dosage": "Third to thirtieth potency."
 }

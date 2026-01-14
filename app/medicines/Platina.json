@@ -1,80 +1,88 @@
 {
-  "name": "Platina", 
-  "Relationship": "Compare: RHODIUM; STANN.; VALER.; SEP. Compare, also: PLATINUM MURIATICUM (this remedy has achieved beneficial results after Iodine of Potash failed to cure in syphilitic affection; violent occipital headaches, dysphagia, and syphilitic throat and bone affections; caries of bones of feet); PLAT. MUR. NAT. (polyuria and salivation); SEDUM ACRE (sexual irritability, relieves irritation of nerve centers and gives rest). Antidote: PULS. Platina antidotes the bad effects of lead.", 
+  "name": "Platina",
+  "Relationship": "Compare: RHODIUM; STANN.; VALER.; SEP. Compare, also: PLATINUM MURIATICUM (this remedy has achieved beneficial results after Iodine of Potash failed to cure in syphilitic affection; violent occipital headaches, dysphagia, and syphilitic throat and bone affections; caries of bones of feet); PLAT. MUR. NAT. (polyuria and salivation); SEDUM ACRE (sexual irritability, relieves irritation of nerve centers and gives rest). Antidote: PULS. Platina antidotes the bad effects of lead.",
   "Modalities": [
-    "Worse: sitting and standing; evening", 
+    "Worse: sitting and standing; evening",
     "Better: walking"
-  ], 
-  "Common names": "The Metal", 
+  ],
+  "Common names": "The Metal",
   "symptoms": {
     "Eyes": [
-      "Eyes feel cold", 
-      "Objects look smaller than they are", 
-      "Twitching of lids", 
+      "Eyes feel cold",
+      "Objects look smaller than they are",
+      "Twitching of lids",
       "Cramp-like pain in orbits"
-    ], 
+    ],
     "Stomach": [
-      "Fermentation, much flatulence; constriction; ravenous hunger; persistent nausea, with anxiety and weakness"
-    ], 
+      "Fermentation, much flatulence",
+      "constriction",
+      "ravenous hunger",
+      "persistent nausea, with anxiety and weakness"
+    ],
     "Head": [
-      "Cramp-like, squeezing pain", 
-      "Tense, pressing pain, confined to a small spot", 
-      "Constriction about forehead and right temples", 
+      "Cramp-like, squeezing pain",
+      "Tense, pressing pain, confined to a small spot",
+      "Constriction about forehead and right temples",
       "Numbness, with headache"
-    ], 
+    ],
     "Mind": [
-      "Everything seems changed", 
-      "Self-exaltation; contempt for others", 
-      "Weary of everything", 
-      "Arrogant, proud", 
-      "Irresistible impulse to kill", 
-      "Physical symptoms disappear as mental symptoms develop", 
+      "Everything seems changed",
+      "Self-exaltation",
+      "contempt for others",
+      "Weary of everything",
+      "Arrogant, proud",
+      "Irresistible impulse to kill",
+      "Physical symptoms disappear as mental symptoms develop",
       "Mental troubles, associated with suppressed menses"
-    ], 
+    ],
     "Stool": [
-      "Stool as if burnt", 
-      "Adheres to rectum, like soft clay", 
-      "Retarded; faeces scanty; evacuated with difficulty", 
-      "Sticky stool", 
+      "Stool as if burnt",
+      "Adheres to rectum, like soft clay",
+      "Retarded",
+      "faeces scanty",
+      "evacuated with difficulty",
+      "Sticky stool",
       "Constipation of travelers, who are constantly changing food and water"
-    ], 
+    ],
     "Abdomen": [
-      "Pressing and bearing down in abdomen, extending into pelvis", 
-      "Pain in umbilical region; extending through to back", 
+      "Pressing and bearing down in abdomen, extending into pelvis",
+      "Pain in umbilical region",
+      "extending through to back",
       "Painter's colic"
-    ], 
+    ],
     "Face": [
-      "Prosopalgia, with numb feeling in malar bones, as if the parts were between screws", 
-      "Coldness, creeping, and numbness, in whole right side of face", 
-      "Pains increase and decrease gradually", 
+      "Prosopalgia, with numb feeling in malar bones, as if the parts were between screws",
+      "Coldness, creeping, and numbness, in whole right side of face",
+      "Pains increase and decrease gradually",
       "Pain at root of nose, as if squeezed in a vise"
-    ], 
+    ],
     "Female": [
-      "Tingling internally and externally", 
-      "Excessive sexual development; vaginismus", 
-      "Ovaries sensitive and burn", 
-      "Menses too early, too profuse, dark-clotted, with spasms and painful bearing-down, chilliness, and sensitiveness of parts", 
-      "Vaginismus", 
-      "Nymphomania", 
-      "Pruritus vulvae", 
-      "Parts hypersensitive", 
-      "Ovaritis with sterility", 
+      "Tingling internally and externally",
+      "Excessive sexual development",
+      "vaginismus",
+      "Ovaries sensitive and burn",
+      "Menses too early, too profuse, dark-clotted, with spasms and painful bearing-down, chilliness, and sensitiveness of parts",
+      "Vaginismus",
+      "Nymphomania",
+      "Pruritus vulvae",
+      "Parts hypersensitive",
+      "Ovaritis with sterility",
       "Abnormal sexual appetite and melancholia"
-    ], 
+    ],
     "Sleep": [
       "Sleeps with legs far apart"
-    ], 
+    ],
     "Extremities": [
-      "Tightness of thighs, as if too tightly wrapped", 
-      "Feel paralyzed", 
+      "Tightness of thighs, as if too tightly wrapped",
+      "Feel paralyzed",
       "Numb and weary sensation"
-    ], 
+    ],
     "Ears": [
-      "Feels numb", 
-      "Cramp-like twinges", 
+      "Feels numb",
+      "Cramp-like twinges",
       "Roaring and rumbling"
     ]
-  }, 
-  "details": "Is pre-eminently a woman's remedy. Strong tendency to paralysis, anaesthesia, localized NUMBNESS AND COLDNESS are shown. Hysterical spasms; pains increase and decrease gradually. (STANNUM.) Tremulousness.", 
+  },
+  "details": "Is pre-eminently a woman's remedy. Strong tendency to paralysis, anaesthesia, localized NUMBNESS AND COLDNESS are shown. Hysterical spasms; pains increase and decrease gradually. (STANNUM.) Tremulousness.",
   "dosage": "Sixth trituration to thirtieth potency."
 }

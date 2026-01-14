@@ -1,59 +1,64 @@
 {
-  "name": "Asterias rubens", 
-  "Relationship": "Antidotes: Plumb.; Zinc. Compare: Conium; Carbo; Ars.; Condurango. Incompatible: Nux; Coffea.", 
+  "name": "Asterias rubens",
+  "Relationship": "Antidotes: Plumb.; Zinc. Compare: Conium; Carbo; Ars.; Condurango. Incompatible: Nux; Coffea.",
   "Modalities": [
-    "Worse: coffee", 
-    "Worse: night; cold damp weather", 
+    "Worse: coffee",
+    "Worse: night; cold damp weather",
     "Worse: left side"
-  ], 
-  "Common names": "Red Starfish", 
+  ],
+  "Common names": "Red Starfish",
   "symptoms": {
     "Head": [
-      "Shocks in brain; throbbing; heat in head, as if surrounded by hot air", 
+      "Shocks in brain",
+      "throbbing",
+      "heat in head, as if surrounded by hot air",
       "Cannot bear contradiction"
-    ], 
+    ],
     "Stool": [
-      "Stool like olives", 
-      "Ineffectual desire", 
-      "Constipation", 
+      "Stool like olives",
+      "Ineffectual desire",
+      "Constipation",
       "Diarrhoea, watery brown, gushing out in jet"
-    ], 
+    ],
     "Chest": [
-      "Left breast feels as if pulled inward, and pain extends over inner arm to end of little finger", 
-      "Numbness of hand and fingers of left side", 
-      "Cancer mammae even in ulcerative stage", 
-      "Pain under sternum and in muscles of precordial region", 
-      "Breasts swollen, indurated", 
-      "Neuralgia of left breast and arm", 
-      "Acute, lancinating pain", 
+      "Left breast feels as if pulled inward, and pain extends over inner arm to end of little finger",
+      "Numbness of hand and fingers of left side",
+      "Cancer mammae even in ulcerative stage",
+      "Pain under sternum and in muscles of precordial region",
+      "Breasts swollen, indurated",
+      "Neuralgia of left breast and arm",
+      "Acute, lancinating pain",
       "Axillary glands swollen hard and knotted"
-    ], 
+    ],
     "Face": [
-      "Disposition to pimples at adolescence", 
-      "Red", 
+      "Disposition to pimples at adolescence",
+      "Red",
       "Pimples on side of nose, chin and mouth"
-    ], 
+    ],
     "Female": [
-      "Excitement of sexual instinct with nervous agitation", 
-      "Pains down left arm to fingers, worse motion", 
-      "Ulceration with sharp pains, piercing to scapulae", 
-      "Breasts swell and pain in breasts; worse left", 
-      "Colic and other sufferings cease with appearance of flow", 
+      "Excitement of sexual instinct with nervous agitation",
+      "Pains down left arm to fingers, worse motion",
+      "Ulceration with sharp pains, piercing to scapulae",
+      "Breasts swell and pain in breasts",
+      "worse left",
+      "Colic and other sufferings cease with appearance of flow",
       "Nodes and induration of mammary gland, dull aching, neuralgic pain in this region"
-    ], 
+    ],
     "Skin": [
-      "Itching spots", 
-      "Enlarged auxiliary glands, worse, at night and in damp weather", 
-      "Acne", 
-      "Destitute of pliability and elasticity", 
-      "Ulcers, with fetid ichor", 
+      "Itching spots",
+      "Enlarged auxiliary glands, worse, at night and in damp weather",
+      "Acne",
+      "Destitute of pliability and elasticity",
+      "Ulcers, with fetid ichor",
       "Psoriasis and herpes zoster worse left arm and chest"
-    ], 
+    ],
     "Nervous System": [
-      "Gait unsteady; muscles refuse to obey the will", 
-      "Epilepsy; preceded by twitching over whole body"
+      "Gait unsteady",
+      "muscles refuse to obey the will",
+      "Epilepsy",
+      "preceded by twitching over whole body"
     ]
-  }, 
-  "details": "A remedy for the sycotic diathesis; flabby, lymphatic constitution, flabby with RED face. Lancinating pains. Nervous disturbances, neuralgias, chorea, and hysteria come within the range of this remedy. Has been used for cancer of the breast, and has an unquestioned influence over cancer disease. Excitement in both sexes.", 
+  },
+  "details": "A remedy for the sycotic diathesis; flabby, lymphatic constitution, flabby with RED face. Lancinating pains. Nervous disturbances, neuralgias, chorea, and hysteria come within the range of this remedy. Has been used for cancer of the breast, and has an unquestioned influence over cancer disease. Excitement in both sexes.",
   "dosage": "Sixth potency."
 }

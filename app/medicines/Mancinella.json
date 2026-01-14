@@ -1,49 +1,51 @@
 {
-  "name": "Mancinella", 
-  "Relationship": "Compare: CROTON; JATROPHA; CANTH.; ANACARD.", 
-  "Common names": "Hippomane - Manganeel Apple", 
+  "name": "Mancinella",
+  "Relationship": "Compare: CROTON; JATROPHA; CANTH.; ANACARD.",
+  "Common names": "Hippomane - Manganeel Apple",
   "symptoms": {
     "Head": [
-      "Vertigo; head feels light, empty", 
-      "Hair falls out after acute sickness", 
+      "Vertigo",
+      "head feels light, empty",
+      "Hair falls out after acute sickness",
       "Scalp itches"
-    ], 
+    ],
     "Stomach": [
-      "Burning pains and black vomit", 
-      "Vomiting of ingesta, followed by griping and copious stools", 
+      "Burning pains and black vomit",
+      "Vomiting of ingesta, followed by griping and copious stools",
       "Continual choking sensation rising from stomach"
-    ], 
+    ],
     "Mind": [
-      "Silent mood, sadness", 
-      "Fear of becoming insane", 
-      "Wandering thoughts", 
-      "Bashful", 
+      "Silent mood, sadness",
+      "Fear of becoming insane",
+      "Wandering thoughts",
+      "Bashful",
       "Sudden vanishing of thought"
-    ], 
+    ],
     "Mouth": [
-      "Dysphagia from constriction of throat and oesophagus", 
-      "Copious, offensive saliva", 
-      "Feels peppery", 
-      "Burning of fauces", 
+      "Dysphagia from constriction of throat and oesophagus",
+      "Copious, offensive saliva",
+      "Feels peppery",
+      "Burning of fauces",
       "Taste of blood"
-    ], 
+    ],
     "Nose": [
-      "Illusions of smell; of gunpowder, dung, etc. pressure at root of nose"
-    ], 
+      "Illusions of smell",
+      "of gunpowder, dung, etc. pressure at root of nose"
+    ],
     "Skin": [
-      "Erysipelas", 
-      "Fungoid growths", 
-      "Heavy, brown crusts and scabs", 
-      "Pemphigus", 
-      "Large blisters, as from scalds", 
-      "Intense erythema", 
+      "Erysipelas",
+      "Fungoid growths",
+      "Heavy, brown crusts and scabs",
+      "Pemphigus",
+      "Large blisters, as from scalds",
+      "Intense erythema",
       "Vesicles"
-    ], 
+    ],
     "Extremities": [
-      "Icy coldness of hands and feet", 
+      "Icy coldness of hands and feet",
       "Pain in thumb"
     ]
-  }, 
-  "details": "Skin symptoms most marked. Dermatitis, with excessive vesiculation, oozing of sticky serum and formation of crusts. To be remembered in mental depressed states at puberty and at climacteric, with exalted sexuality. (HERING.) LOSS OF VISION. Pain in the THUMB.", 
+  },
+  "details": "Skin symptoms most marked. Dermatitis, with excessive vesiculation, oozing of sticky serum and formation of crusts. To be remembered in mental depressed states at puberty and at climacteric, with exalted sexuality. (HERING.) LOSS OF VISION. Pain in the THUMB.",
   "dosage": "Sixth, to thirtieth potency."
 }

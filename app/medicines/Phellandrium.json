@@ -1,22 +1,26 @@
 {
   "symptoms": {
     "Eyes": [
-      "Cannot bear light", 
-      "Headache; involving nerves going to eye", 
-      "Ciliary neuralgia; worse any attempt to use eyes: burning in eyes", 
+      "Cannot bear light",
+      "Headache",
+      "involving nerves going to eye",
+      "Ciliary neuralgia",
+      "worse any attempt to use eyes: burning in eyes",
       "Lachrymation"
-    ], 
+    ],
     "Head": [
-      "Crushing feeling in vertex", 
-      "Weight on vertex; aching and burning in temples and above eyes", 
+      "Crushing feeling in vertex",
+      "Weight on vertex",
+      "aching and burning in temples and above eyes",
       "Vertigo, dizzy when lying down"
-    ], 
+    ],
     "Female": [
-      "Pain in milk ducts; intolerable between nursing", 
+      "Pain in milk ducts",
+      "intolerable between nursing",
       "Pain in nipples"
     ]
-  }, 
-  "Common names": "Water Drop wort", 
-  "name": "Phellandrium", 
+  },
+  "Common names": "Water Drop wort",
+  "name": "Phellandrium",
   "details": "The respiratory symptoms are most important, and have been frequently verified clinically. A very good remedy for the OFFENSIVE EXPECTORATION AND COUGH IN PHTHISIS, bronchitis, and emphysema. Tuberculosis, affecting generally the middle lobes. EVERYTHING TASTES SWEET. Hemoptysis, hectic and colliquative diarrhoea."
 }

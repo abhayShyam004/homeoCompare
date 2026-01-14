@@ -1,25 +1,26 @@
 {
-  "name": "Jalapa", 
-  "Relationship": "Antidotes: ELATER.; CANN. SAT. Compare: CAMPH.; COLCY.", 
-  "Common names": "Exogonium Purga Jalap", 
+  "name": "Jalapa",
+  "Relationship": "Antidotes: ELATER.; CANN. SAT. Compare: CAMPH.; COLCY.",
+  "Common names": "Exogonium Purga Jalap",
   "symptoms": {
     "Stomach": [
-      "Tongue, smooth, glazed, dry, smarting", 
-      "Flatulence and nausea", 
-      "Anus sore", 
-      "Watery diarrhoea; thin, muddy stools", 
-      "Face cold and blue", 
-      "Pain in right hypochondrium", 
-      "Pinching and griping", 
+      "Tongue, smooth, glazed, dry, smarting",
+      "Flatulence and nausea",
+      "Anus sore",
+      "Watery diarrhoea",
+      "thin, muddy stools",
+      "Face cold and blue",
+      "Pain in right hypochondrium",
+      "Pinching and griping",
       "Abdomen distended"
-    ], 
+    ],
     "Extremities": [
-      "Burning of soles", 
-      "Aching in arms and legs", 
-      "Pain in large joint of great toe", 
+      "Burning of soles",
+      "Aching in arms and legs",
+      "Pain in large joint of great toe",
       "Smarting at root of nail"
     ]
-  }, 
-  "details": "Causes and cures colic and diarrhoea. The child is good all day, but screams and is restless and troublesome at night.", 
+  },
+  "details": "Causes and cures colic and diarrhoea. The child is good all day, but screams and is restless and troublesome at night.",
   "dosage": "Third to twelfth potency."
 }

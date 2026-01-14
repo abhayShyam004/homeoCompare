@@ -1,36 +1,40 @@
 {
-  "name": "Viola tricolor", 
-  "Relationship": "Compare: RHUS; CALC.; SEPIA.", 
-  "Common names": "Pansy", 
+  "name": "Viola tricolor",
+  "Relationship": "Compare: RHUS; CALC.; SEPIA.",
+  "Common names": "Pansy",
   "symptoms": {
     "Head": [
-      "Heavy, pressing-outward pain", 
-      "Face hot and sweating after eating", 
+      "Heavy, pressing-outward pain",
+      "Face hot and sweating after eating",
       "Eczema of scalp, with swollen glands"
-    ], 
+    ],
     "Urine": [
-      "Copious; disagreeable, cat-like odor"
-    ], 
+      "Copious",
+      "disagreeable, cat-like odor"
+    ],
     "Skin": [
-      "Impetigo", 
-      "Worse, winter; eleven am compare: lycop", 
-      "Thick scabs, which crack and exude a tenacious yellow pus", 
-      "Intolerable itching", 
-      "Eruptions, particularly over face and head, with burning, itching; worse at night", 
-      "Sycosis", 
-      "Modalities", 
+      "Impetigo",
+      "Worse, winter",
+      "eleven am compare: lycop",
+      "Thick scabs, which crack and exude a tenacious yellow pus",
+      "Intolerable itching",
+      "Eruptions, particularly over face and head, with burning, itching",
+      "worse at night",
+      "Sycosis",
+      "Modalities",
       "Eczema impetigenoides of the face"
-    ], 
+    ],
     "Throat": [
-      "Swallowing difficult", 
-      "Much phlegm, causing hawking; worse in the air"
-    ], 
+      "Swallowing difficult",
+      "Much phlegm, causing hawking",
+      "worse in the air"
+    ],
     "Male": [
-      "Itching", 
-      "Swelling of prepuce, burning in glans", 
+      "Itching",
+      "Swelling of prepuce, burning in glans",
       "Involuntary, seminal emissions at stool"
     ]
-  }, 
-  "details": "The principal uses of this remedy are for eczema in childhood and nocturnal emission accompanied by very vivid dreams.", 
+  },
+  "details": "The principal uses of this remedy are for eczema in childhood and nocturnal emission accompanied by very vivid dreams.",
   "dosage": "Lower potencies."
 }

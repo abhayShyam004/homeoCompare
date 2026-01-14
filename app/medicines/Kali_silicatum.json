@@ -1,35 +1,36 @@
 {
-  "name": "Kali silicatum", 
+  "name": "Kali silicatum",
   "Modalities": [
-    "Worse: open air", 
-    "Worse: drafts", 
-    "Worse: cold", 
-    "Worse: exertion", 
-    "Worse: motion uncovering", 
+    "Worse: open air",
+    "Worse: drafts",
+    "Worse: cold",
+    "Worse: exertion",
+    "Worse: motion uncovering",
     "Worse: bathing"
-  ], 
-  "Common names": "Silicate of Potash", 
+  ],
+  "Common names": "Silicate of Potash",
   "symptoms": {
     "Gastric": [
-      "Weight in stomach after eating, nausea, pain, flatulence", 
-      "Pain in liver region", 
-      "Constipation", 
+      "Weight in stomach after eating, nausea, pain, flatulence",
+      "Pain in liver region",
+      "Constipation",
       "Construction of anus during stool"
-    ], 
+    ],
     "Head": [
-      "Head congested, blood surges from body to head", 
-      "Feeble will power", 
-      "Absent-minded, anxious, indolent, timid", 
-      "Vertigo, coldness of head; photophobia", 
+      "Head congested, blood surges from body to head",
+      "Feeble will power",
+      "Absent-minded, anxious, indolent, timid",
+      "Vertigo, coldness of head",
+      "photophobia",
       "Nasal catarrh, discharge bloody, excoriating, offensive nose, swollen, ulcerated"
-    ], 
+    ],
     "Extremities": [
-      "Weak and weary", 
-      "Stiffness over body and limbs", 
-      "Twitching of muscles", 
+      "Weak and weary",
+      "Stiffness over body and limbs",
+      "Twitching of muscles",
       "Creeping sensation over limbs"
     ]
-  }, 
-  "details": "A deep-acting remedy. Lassitude is very marked. Desire to lie down all the time. Emaciation. Gouty nodosities", 
+  },
+  "details": "A deep-acting remedy. Lassitude is very marked. Desire to lie down all the time. Emaciation. Gouty nodosities",
   "dosage": "Higher potencies."
 }

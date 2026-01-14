@@ -1,46 +1,53 @@
 {
-  "name": "Natrum arsenicum", 
-  "Relationship": "Compare: ARS.; KALI-CARB.; APIS.", 
-  "Common names": "Arseniate of Sodium", 
+  "name": "Natrum arsenicum",
+  "Relationship": "Compare: ARS.; KALI-CARB.; APIS.",
+  "Common names": "Arseniate of Sodium",
   "symptoms": {
     "Head": [
-      "Floating sensation on turning head quickly; aching in frontal region and root of nose, over orbits", 
-      "Headache; worse, pressure and tobacco smoke"
-    ], 
+      "Floating sensation on turning head quickly",
+      "aching in frontal region and root of nose, over orbits",
+      "Headache",
+      "worse, pressure and tobacco smoke"
+    ],
     "Respiratory": [
-      "Oppression of chest and about heart, and also larynx", 
-      "Miner's asthma", 
-      "Lungs feel as though smoke had been inhaled", 
+      "Oppression of chest and about heart, and also larynx",
+      "Miner's asthma",
+      "Lungs feel as though smoke had been inhaled",
       "Racking cough, with profuse greenish expectoration"
-    ], 
+    ],
     "Eyes": [
-      "Feel heavy and droop", 
-      "Eyes feel weak, stiffness of balls and tendency of lids to close", 
-      "Catarrhal conjunctivitis and blepharitis marginalis", 
-      "Supraorbital pain", 
-      "Oedema of orbital region", 
-      "Dry, painful, burning; soon tire", 
-      "Lachrymation in wind", 
+      "Feel heavy and droop",
+      "Eyes feel weak, stiffness of balls and tendency of lids to close",
+      "Catarrhal conjunctivitis and blepharitis marginalis",
+      "Supraorbital pain",
+      "Oedema of orbital region",
+      "Dry, painful, burning",
+      "soon tire",
+      "Lachrymation in wind",
       "Agglutination in morning"
-    ], 
+    ],
     "Nose": [
-      "Post-nasal dropping of thick, bland, yellowish mucus", 
-      "Crusts in nose", 
-      "Dry crusts, on removal, leave mucous membrane raw", 
-      "Watery discharge; drops into throat", 
-      "Feels stopped; pain at root"
-    ], 
+      "Post-nasal dropping of thick, bland, yellowish mucus",
+      "Crusts in nose",
+      "Dry crusts, on removal, leave mucous membrane raw",
+      "Watery discharge",
+      "drops into throat",
+      "Feels stopped",
+      "pain at root"
+    ],
     "Throat": [
-      "Dark, purplish, swollen, edematous; red and glassy"
-    ], 
+      "Dark, purplish, swollen, edematous",
+      "red and glassy"
+    ],
     "Extremities": [
-      "Pain in anterior crural nerves", 
-      "Knee-joints crack", 
-      "Joints stiff", 
-      "Feels tired all over", 
-      "Aching in arms; worse in shoulder"
+      "Pain in anterior crural nerves",
+      "Knee-joints crack",
+      "Joints stiff",
+      "Feels tired all over",
+      "Aching in arms",
+      "worse in shoulder"
     ]
-  }, 
-  "details": "A remedy for nasal catarrh, with headache, pain at root of nose, dry and painful eyes. Psoriasis. (ARS.; CHRYSOPH-AC.; THYROID.) Bronchitis of children over seven years. Facilitates the termination of the cold and conserves strength and appetite. (Cartier.) Sleeping sickness; commencing optic atrophy.", 
+  },
+  "details": "A remedy for nasal catarrh, with headache, pain at root of nose, dry and painful eyes. Psoriasis. (ARS.; CHRYSOPH-AC.; THYROID.) Bronchitis of children over seven years. Facilitates the termination of the cold and conserves strength and appetite. (Cartier.) Sleeping sickness; commencing optic atrophy.",
   "dosage": "Third to thirtieth potency."
 }

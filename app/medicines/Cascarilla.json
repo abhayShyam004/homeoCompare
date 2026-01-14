@@ -1,21 +1,22 @@
 {
   "symptoms": {
     "Rectum": [
-      "Gnawing pain high up in rectum", 
-      "Bright blood with stool", 
-      "Constipation; stools hard, covered with mucus", 
+      "Gnawing pain high up in rectum",
+      "Bright blood with stool",
+      "Constipation",
+      "stools hard, covered with mucus",
       "Diarrhoea alternating with hard, lumpy stool, with backache and lassitude, preceded by griping"
-    ], 
+    ],
     "Stomach": [
-      "Nausea and vomiting", 
-      "Desire for hot drinks", 
-      "Pressing colic", 
-      "Hunger after meals", 
+      "Nausea and vomiting",
+      "Desire for hot drinks",
+      "Pressing colic",
+      "Hunger after meals",
       "Pain in stomach as from a shock"
     ]
-  }, 
-  "details": "Acts on the digestive tract; constipation. Aversion to smell of tobacco. INCLINATION TO VOMIT very marked.", 
-  "Common names": "Sweet Bark", 
-  "name": "Cascarilla", 
+  },
+  "details": "Acts on the digestive tract; constipation. Aversion to smell of tobacco. INCLINATION TO VOMIT very marked.",
+  "Common names": "Sweet Bark",
+  "name": "Cascarilla",
   "dosage": "First to third potency."
 }

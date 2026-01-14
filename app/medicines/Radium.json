@@ -1,100 +1,103 @@
 {
-  "name": "Radium", 
-  "Relationship": "Compare: ANACARDIUM (the ulceration produced by it is like RADIUM. It may appear elsewhere than on place of contact and appear late). Compare: X-RAY; RHUS; SEPIA; URANIUM; ARS.; PULSAT.; CAUSTIC. Antidotes: RHUS VEN.; TELLUR.", 
+  "name": "Radium",
+  "Relationship": "Compare: ANACARDIUM (the ulceration produced by it is like RADIUM. It may appear elsewhere than on place of contact and appear late). Compare: X-RAY; RHUS; SEPIA; URANIUM; ARS.; PULSAT.; CAUSTIC. Antidotes: RHUS VEN.; TELLUR.",
   "Modalities": [
-    "Worse: getting up", 
-    "Better: open air", 
-    "Better: continued motion", 
-    "Better: hot bath", 
-    "Better: lying down", 
+    "Worse: getting up",
+    "Better: open air",
+    "Better: continued motion",
+    "Better: hot bath",
+    "Better: lying down",
     "Better: pressure"
-  ], 
-  "Common names": "Radium Bromide", 
+  ],
+  "Common names": "Radium Bromide",
   "symptoms": {
     "Head": [
-      "Both eyes ache", 
-      "Itching and dryness of nasal cavities, better in open air", 
-      "Aching pain of right lower jaw", 
-      "Violent trifacial neuralgia", 
-      "Frontal headache", 
-      "Head feels heavy", 
-      "Vertigo, with pain in back of head, left when in bed", 
-      "Severe pain over right eye, spreading back to occiput and to vertex, better in open air", 
+      "Both eyes ache",
+      "Itching and dryness of nasal cavities, better in open air",
+      "Aching pain of right lower jaw",
+      "Violent trifacial neuralgia",
+      "Frontal headache",
+      "Head feels heavy",
+      "Vertigo, with pain in back of head, left when in bed",
+      "Severe pain over right eye, spreading back to occiput and to vertex, better in open air",
       "Occipital and vertex pain, accompanying severe lumbar aching"
-    ], 
+    ],
     "Respiratory": [
-      "Throat dry, sore, chest constricted", 
-      "Dry, spasmodic cough", 
+      "Throat dry, sore, chest constricted",
+      "Dry, spasmodic cough",
       "Persistent cough with tickling in suprasternal fossa"
-    ], 
+    ],
     "Stomach": [
-      "Warm sensation in stomach", 
-      "Empty feeling in stomach", 
-      "Nausea and sinking sensation, belching of gas", 
+      "Warm sensation in stomach",
+      "Empty feeling in stomach",
+      "Nausea and sinking sensation, belching of gas",
       "Aversion to sweets, ice-cream"
-    ], 
+    ],
     "Urine": [
-      "Enuresis", 
-      "Nephritis with rheumatic symptoms", 
-      "Increased elimination of solids, particularly of chlorides", 
+      "Enuresis",
+      "Nephritis with rheumatic symptoms",
+      "Increased elimination of solids, particularly of chlorides",
       "Renal irritation, albuminuria, granular and hyaline casts"
-    ], 
+    ],
     "Mind": [
-      "Apprehensive, depressed; fear of being alone in the dark; great desire to be with people", 
+      "Apprehensive, depressed",
+      "fear of being alone in the dark",
+      "great desire to be with people",
       "Tired and irritable"
-    ], 
+    ],
     "Back": [
-      "Aching in back of neck", 
-      "Lumbar and sacral backache, pain appears to be in bone, continued motion relieves", 
-      "Backache between shoulders and lumbar-sacral region, better after walking", 
+      "Aching in back of neck",
+      "Lumbar and sacral backache, pain appears to be in bone, continued motion relieves",
+      "Backache between shoulders and lumbar-sacral region, better after walking",
       "Pain and lameness in cervical vertebrae, worse dropping head forward, better standing, or sitting erect"
-    ], 
+    ],
     "Fever": [
-      "Internal chilliness followed by heat of the skin, associated with bowel movements and flatulence", 
+      "Internal chilliness followed by heat of the skin, associated with bowel movements and flatulence",
       "Cold sensation internally, with chattering of teeth until noon"
-    ], 
+    ],
     "Sleep": [
-      "Dreams vivid, busy", 
-      "Dreams of fire", 
-      "Restless", 
+      "Dreams vivid, busy",
+      "Dreams of fire",
+      "Restless",
       "Sleepiness with lethargy"
-    ], 
+    ],
     "Female": [
-      "Pruritus vulvae", 
-      "Delayed and irregular menstruation and backache", 
-      "Aching pains in abdomen over pubes when flow comes on", 
+      "Pruritus vulvae",
+      "Delayed and irregular menstruation and backache",
+      "Aching pains in abdomen over pubes when flow comes on",
       "Right breast sore, relieved by hard rubbing"
-    ], 
+    ],
     "Skin": [
-      "Epithelioma", 
-      "Small pimples", 
-      "Itching all over body, burning of skin, as if afire", 
-      "Erythema and dermatitis, with itching, burning, swelling and redness", 
+      "Epithelioma",
+      "Small pimples",
+      "Itching all over body, burning of skin, as if afire",
+      "Erythema and dermatitis, with itching, burning, swelling and redness",
       "Necrosis and ulceration"
-    ], 
+    ],
     "Abdomen": [
-      "Pruritus ani and piles", 
-      "Alternating constipation and loose movements", 
-      "Much flatulence", 
-      "Pain, violent cramps, rumbling, full of gas; pain over mcburney's point, and at location of sigmoid flexure"
-    ], 
+      "Pruritus ani and piles",
+      "Alternating constipation and loose movements",
+      "Much flatulence",
+      "Pain, violent cramps, rumbling, full of gas",
+      "pain over mcburney's point, and at location of sigmoid flexure"
+    ],
     "Extremities": [
-      "Arthritis, aching pains, worse at night", 
-      "Pain in toes, calves, hip-joint, popliteal spaces", 
-      "Muscles of legs and hips sore", 
-      "Arms feel heavy", 
-      "Dermatitis of the fingers", 
-      "Legs, arms and neck feel hard and brittle, as though they would break on moving", 
-      "Severe pain in all the limbs, joints, especially in knee and ankles, sharp pains in shoulders, arms, hands and fingers", 
-      "Cracking in shoulder", 
+      "Arthritis, aching pains, worse at night",
+      "Pain in toes, calves, hip-joint, popliteal spaces",
+      "Muscles of legs and hips sore",
+      "Arms feel heavy",
+      "Dermatitis of the fingers",
+      "Legs, arms and neck feel hard and brittle, as though they would break on moving",
+      "Severe pain in all the limbs, joints, especially in knee and ankles, sharp pains in shoulders, arms, hands and fingers",
+      "Cracking in shoulder",
       "Trophic changes in the finger nails"
-    ], 
+    ],
     "Mouth": [
-      "Dryness of mouth", 
-      "Prickling sensation on end of tongue", 
+      "Dryness of mouth",
+      "Prickling sensation on end of tongue",
       "Metallic taste"
     ]
-  }, 
-  "details": "An important addition to the Materia Medica, especially since the provings by Diffenbach have precisionized its use. Radium brom. of 1, 800, 000 radio-activity was employed. Found effective in the treatment of rheumatism and gout, in skin affections generally, acne rosacea, naevi, moles, ulcers and cancers. Lowered blood pressure. SEVERE ACHING PAINS ALL OVER, with restlessness, better moving about. Chronic rheumatic arthritis. Lateness in appearance of symptoms. Ulcers due to Radium burns, take a long time to heal. Marked increase in the polymorphonuclear neurophiles. Great weakness.", 
+  },
+  "details": "An important addition to the Materia Medica, especially since the provings by Diffenbach have precisionized its use. Radium brom. of 1, 800, 000 radio-activity was employed. Found effective in the treatment of rheumatism and gout, in skin affections generally, acne rosacea, naevi, moles, ulcers and cancers. Lowered blood pressure. SEVERE ACHING PAINS ALL OVER, with restlessness, better moving about. Chronic rheumatic arthritis. Lateness in appearance of symptoms. Ulcers due to Radium burns, take a long time to heal. Marked increase in the polymorphonuclear neurophiles. Great weakness.",
   "dosage": "Thirtieth and twelfth trituration."
 }

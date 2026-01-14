@@ -1,26 +1,27 @@
 {
-  "name": "Juglans regia", 
-  "Relationship": "Compare: JUGLANS CINEREA.", 
-  "Common names": "Walnut", 
+  "name": "Juglans regia",
+  "Relationship": "Compare: JUGLANS CINEREA.",
+  "Common names": "Walnut",
   "symptoms": {
     "Head": [
-      "Styes", 
-      "Occipital sharp pain", 
-      "Confused; feels as if head were floating in air"
-    ], 
+      "Styes",
+      "Occipital sharp pain",
+      "Confused",
+      "feels as if head were floating in air"
+    ],
     "Female": [
-      "Menses early, black, pitch-like coagula", 
+      "Menses early, black, pitch-like coagula",
       "Abdomen distended"
-    ], 
+    ],
     "Skin": [
-      "Itching and eruptions of small red pustules", 
-      "Scalp red, and itches violently at night", 
-      "Axillary glands suppurate", 
-      "Comedones and acne of the face", 
-      "Chancre-like ulcer", 
+      "Itching and eruptions of small red pustules",
+      "Scalp red, and itches violently at night",
+      "Axillary glands suppurate",
+      "Comedones and acne of the face",
+      "Chancre-like ulcer",
       "Crusta lactea, with soreness around ears"
     ]
-  }, 
-  "details": "Skin eruptions are prominent.", 
+  },
+  "details": "Skin eruptions are prominent.",
   "dosage": "Tincture, and lower potencies."
 }

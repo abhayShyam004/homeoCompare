@@ -1,37 +1,47 @@
 {
   "symptoms": {
     "Mouth": [
-      "Aphthae", 
-      "Tongue feels stiff at base, and pains on moving", 
-      "Scalded feeling on tongue", 
-      "Gums swollen; toothache; glands swollen", 
+      "Aphthae",
+      "Tongue feels stiff at base, and pains on moving",
+      "Scalded feeling on tongue",
+      "Gums swollen",
+      "toothache",
+      "glands swollen",
       "Profuse saliva"
-    ], 
+    ],
     "Nose": [
-      "Coryza and dull hearing; right side of nose hot", 
-      "Hawks mucus from posterior nares", 
-      "Boggy mucous membrane of nose and throat; closure of eustachian tube, opening with a pop", 
+      "Coryza and dull hearing",
+      "right side of nose hot",
+      "Hawks mucus from posterior nares",
+      "Boggy mucous membrane of nose and throat",
+      "closure of eustachian tube, opening with a pop",
       "Turbinated bones swollen"
-    ], 
+    ],
     "Skin": [
-      "Small fissures and cracks; hard papules; hunterian chancre; syphilitic ulcers", 
-      "Bubo", 
+      "Small fissures and cracks",
+      "hard papules",
+      "hunterian chancre",
+      "syphilitic ulcers",
+      "Bubo",
       "Sarcocele"
-    ], 
+    ],
     "Throat": [
-      "Parenchymatous tonsillitis", 
-      "Cough from elongated uvula, with sore throat", 
-      "Laryngeal troubles with aphonia", 
-      "Will often abort peritonsillitis if given frequently", 
-      "Fauces dark red; swallowing painful", 
-      "Stiffness of muscles of throat and neck", 
-      "Disposition to hawk, with sensation of a lump in throat", 
-      "Diphtheria; submaxillary glands painfully engorged, fauces dark red; worse on left tonsil", 
+      "Parenchymatous tonsillitis",
+      "Cough from elongated uvula, with sore throat",
+      "Laryngeal troubles with aphonia",
+      "Will often abort peritonsillitis if given frequently",
+      "Fauces dark red",
+      "swallowing painful",
+      "Stiffness of muscles of throat and neck",
+      "Disposition to hawk, with sensation of a lump in throat",
+      "Diphtheria",
+      "submaxillary glands painfully engorged, fauces dark red",
+      "worse on left tonsil",
       "Phlegm in nose and throat"
     ]
-  }, 
-  "details": "Diphtheria and ulcerated sore throats, especially on left side, with much glandular swelling. Chronic suppurating buboes. Hard chancres. Old cases of syphilis in scrofulous patients. Early stages of cold, especially in children.", 
-  "Common names": "Bin-iodide of Mercury", 
-  "name": "Mercurius iodatus ruber", 
+  },
+  "details": "Diphtheria and ulcerated sore throats, especially on left side, with much glandular swelling. Chronic suppurating buboes. Hard chancres. Old cases of syphilis in scrofulous patients. Early stages of cold, especially in children.",
+  "Common names": "Bin-iodide of Mercury",
+  "name": "Mercurius iodatus ruber",
   "dosage": "Third trituration. Mercuric iodide is far more active as a bactericide than the other mercurials, including the chloride."
 }

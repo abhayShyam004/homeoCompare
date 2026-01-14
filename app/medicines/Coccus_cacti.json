@@ -1,54 +1,64 @@
 {
-  "name": "Coccus cacti", 
-  "Relationship": "Compare: CANTH.; CACT.; SARS.", 
+  "name": "Coccus cacti",
+  "Relationship": "Compare: CANTH.; CACT.; SARS.",
   "Modalities": [
-    "Worse: left side", 
-    "Worse: after sleep", 
-    "Worse: touch", 
-    "Worse: pressure of clothing", 
-    "Worse: brushing teeth", 
-    "Worse: slightest exertion", 
+    "Worse: left side",
+    "Worse: after sleep",
+    "Worse: touch",
+    "Worse: pressure of clothing",
+    "Worse: brushing teeth",
+    "Worse: slightest exertion",
     "Better: walking"
-  ], 
-  "Common names": "Cochineal", 
+  ],
+  "Common names": "Cochineal",
   "symptoms": {
     "Heart": [
       "Sensation as if everything were pressed toward the heart"
-    ], 
+    ],
     "Head": [
-      "Headache, worse from lying on back, better with the head high", 
-      "Dull pain over right eye in morning", 
-      "Suboccipital soreness; worse after sleep and exertion", 
-      "Distress from cinders lodged in eye", 
+      "Headache, worse from lying on back, better with the head high",
+      "Dull pain over right eye in morning",
+      "Suboccipital soreness",
+      "worse after sleep and exertion",
+      "Distress from cinders lodged in eye",
       "Sensation of a foreign body between upper lid and eyeball"
-    ], 
+    ],
     "Respiratory": [
-      "Spasmodic morning cough", 
-      "Suffocative cough; worse, first waking, with tough, white mucus, which strangles", 
-      "Sensation of a crumb behind larynx, must swallow continually; brushing teeth causes cough", 
-      "Walking against wind takes breath away", 
-      "Constant hawking from enlarged uvula; coryza, with inflamed fauces; accumulation of thick viscid mucus, which is expectorated with great difficulty", 
-      "Fauces very sensitive", 
-      "Tickling in larynx", 
-      "Whooping cough attacks end with vomiting of this tough mucus", 
-      "Chronic bronchitis complicated with gravel; large quantities of albuminous, tenacious mucus, are expectorated"
-    ], 
+      "Spasmodic morning cough",
+      "Suffocative cough",
+      "worse, first waking, with tough, white mucus, which strangles",
+      "Sensation of a crumb behind larynx, must swallow continually",
+      "brushing teeth causes cough",
+      "Walking against wind takes breath away",
+      "Constant hawking from enlarged uvula",
+      "coryza, with inflamed fauces",
+      "accumulation of thick viscid mucus, which is expectorated with great difficulty",
+      "Fauces very sensitive",
+      "Tickling in larynx",
+      "Whooping cough attacks end with vomiting of this tough mucus",
+      "Chronic bronchitis complicated with gravel",
+      "large quantities of albuminous, tenacious mucus, are expectorated"
+    ],
     "Urine": [
-      "Urinary calculi, hematuria, urates, and uric acid; lancinating pains from kidney to bladder", 
-      "Dysuria", 
-      "Urging to urinate; brick-red sediment", 
+      "Urinary calculi, hematuria, urates, and uric acid",
+      "lancinating pains from kidney to bladder",
+      "Dysuria",
+      "Urging to urinate",
+      "brick-red sediment",
       "Deep-colored, thick urine"
-    ], 
+    ],
     "Mind": [
       "Early morning or afternoon, sadness"
-    ], 
+    ],
     "Female": [
-      "Labia inflamed", 
-      "Menses too early, profuse, black and thick; dark clots, with dysuria", 
-      "Large clots escape when passing water", 
-      "Intermittent menstruation; flow only in evening and at night"
+      "Labia inflamed",
+      "Menses too early, profuse, black and thick",
+      "dark clots, with dysuria",
+      "Large clots escape when passing water",
+      "Intermittent menstruation",
+      "flow only in evening and at night"
     ]
-  }, 
-  "details": "The clinical application of the symptoms of this remedy, place it among the medicines for spasmodic and whooping coughs, and catarrhal conditions of the bladder; spasmodic pains in kidneys, with visceral tenesmus. Anuria, anasarca, ascites.", 
+  },
+  "details": "The clinical application of the symptoms of this remedy, place it among the medicines for spasmodic and whooping coughs, and catarrhal conditions of the bladder; spasmodic pains in kidneys, with visceral tenesmus. Anuria, anasarca, ascites.",
   "dosage": "Lower triturations."
 }

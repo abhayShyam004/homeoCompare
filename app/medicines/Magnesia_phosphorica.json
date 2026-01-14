@@ -1,96 +1,107 @@
 {
-  "name": "Magnesia phosphorica", 
-  "Relationship": "Compare: KALI-PHOS.; COLOCY.; SILICA; ZINC.; DIOS. Antidotes: BELL.; GELS.; LACH.", 
+  "name": "Magnesia phosphorica",
+  "Relationship": "Compare: KALI-PHOS.; COLOCY.; SILICA; ZINC.; DIOS. Antidotes: BELL.; GELS.; LACH.",
   "Modalities": [
-    "Worse: right side", 
-    "Worse: cold", 
-    "Worse: touch", 
-    "Worse: night", 
-    "Better: warmth", 
-    "Better: bending double", 
-    "Better: pressure", 
+    "Worse: right side",
+    "Worse: cold",
+    "Worse: touch",
+    "Worse: night",
+    "Better: warmth",
+    "Better: bending double",
+    "Better: pressure",
     "Better: friction"
-  ], 
-  "Common names": "Phosphate of Magnesia", 
+  ],
+  "Common names": "Phosphate of Magnesia",
   "symptoms": {
     "Heart": [
-      "Constricting pains around heart", 
-      "Nervous spasmodic palpitation", 
+      "Constricting pains around heart",
+      "Nervous spasmodic palpitation",
       "Angina pectoris"
-    ], 
+    ],
     "Eyes": [
-      "Increased lachrymation", 
-      "Eyes hot, tired, vision blurred, colored lights before eyes", 
-      "Nystagmus, strabismus, ptosis", 
-      "Supraorbital pains; worse, right side; relieved by warmth applied externally", 
+      "Increased lachrymation",
+      "Eyes hot, tired, vision blurred, colored lights before eyes",
+      "Nystagmus, strabismus, ptosis",
+      "Supraorbital pains",
+      "worse, right side",
+      "relieved by warmth applied externally",
       "Twitching of lids"
-    ], 
+    ],
     "Fever": [
-      "Chilliness after dinner, in evening", 
+      "Chilliness after dinner, in evening",
       "Chills run up and down the back, with shivering, followed by a suffocating sensation"
-    ], 
+    ],
     "Stomach": [
-      "Hiccough, with retching day and night", 
+      "Hiccough, with retching day and night",
       "Thirst for very cold drinks"
-    ], 
+    ],
     "Head": [
-      "Vertigo on moving, falls forward on closing eyes, better walking in open air", 
-      "Sensation as if contents were liquid, as if parts of brain were changing places, as of a cap on head", 
-      "Aches after mental labor, with chilliness; always better warmth"
-    ], 
+      "Vertigo on moving, falls forward on closing eyes, better walking in open air",
+      "Sensation as if contents were liquid, as if parts of brain were changing places, as of a cap on head",
+      "Aches after mental labor, with chilliness",
+      "always better warmth"
+    ],
     "Mind": [
-      "Laments all the time about the pain", 
-      "Inability to think clearly", 
+      "Laments all the time about the pain",
+      "Inability to think clearly",
       "Sleepless on account of indigestion"
-    ], 
+    ],
     "Abdomen": [
-      "Constipation in rheumatic subjects due to flatulence and indigestion", 
-      "Enteralgia, relieved by pressure", 
-      "Bloated, full sensation in abdomen; must loosen clothing, walk about, and constantly pass flatus", 
-      "Flatulent colic, forcing patient to bend double; relieved by rubbing, warmth, pressure; accompanied with belching of gas, which gives no relief"
-    ], 
+      "Constipation in rheumatic subjects due to flatulence and indigestion",
+      "Enteralgia, relieved by pressure",
+      "Bloated, full sensation in abdomen",
+      "must loosen clothing, walk about, and constantly pass flatus",
+      "Flatulent colic, forcing patient to bend double",
+      "relieved by rubbing, warmth, pressure",
+      "accompanied with belching of gas, which gives no relief"
+    ],
     "Respiratory": [
-      "Asthmatic oppression of chest", 
-      "Dry, tickling cough", 
-      "Voice harsh, larynx sore and raw", 
-      "Intercostal neuralgia", 
-      "Spasmodic cough, with difficulty in lying down", 
+      "Asthmatic oppression of chest",
+      "Dry, tickling cough",
+      "Voice harsh, larynx sore and raw",
+      "Intercostal neuralgia",
+      "Spasmodic cough, with difficulty in lying down",
       "Whooping-cough"
-    ], 
+    ],
     "Female": [
-      "Ovarian neuralgia", 
-      "Vaginismus", 
-      "Membranous dysmenorrhoea", 
-      "Menstrual colic", 
-      "Swelling of external parts", 
+      "Ovarian neuralgia",
+      "Vaginismus",
+      "Membranous dysmenorrhoea",
+      "Menstrual colic",
+      "Swelling of external parts",
       "Menses too early, dark, stringy"
-    ], 
+    ],
     "Throat": [
-      "Soreness and stiffness, especially right side; parts seem puffy, with chilliness, and aching all over"
-    ], 
+      "Soreness and stiffness, especially right side",
+      "parts seem puffy, with chilliness, and aching all over"
+    ],
     "Mouth": [
-      "Spasms without febrile symptoms", 
-      "Complaints of teething children", 
-      "Ulceration of teeth, with swelling of glands of face, throat and neck, and swelling of tongue", 
-      "Toothache; better by heat and hot liquids"
-    ], 
+      "Spasms without febrile symptoms",
+      "Complaints of teething children",
+      "Ulceration of teeth, with swelling of glands of face, throat and neck, and swelling of tongue",
+      "Toothache",
+      "better by heat and hot liquids"
+    ],
     "Extremities": [
-      "Chores", 
-      "Sciatica; feet very tender", 
-      "Involuntary shaking of hands", 
-      "Cramps in calves", 
-      "Twitchings", 
-      "Writers' and players' cramp", 
-      "General muscular weakness", 
-      "Darting pains", 
-      "Paralysis agitans", 
-      "Weakness in arms and hands, finger-tips stiff and numb", 
+      "Chores",
+      "Sciatica",
+      "feet very tender",
+      "Involuntary shaking of hands",
+      "Cramps in calves",
+      "Twitchings",
+      "Writers' and players' cramp",
+      "General muscular weakness",
+      "Darting pains",
+      "Paralysis agitans",
+      "Weakness in arms and hands, finger-tips stiff and numb",
       "Tetanic spasms"
-    ], 
+    ],
     "Ears": [
-      "Severe neuralgic pain; worse behind right ear; worse, by going into cold air, and washing face and neck with cold water"
+      "Severe neuralgic pain",
+      "worse behind right ear",
+      "worse, by going into cold air, and washing face and neck with cold water"
     ]
-  }, 
-  "details": "The great anti-spasmodic remedy. Cramping of muscles with radiating pains. Neuralgic pains RELIEVED BY WARMTH. Especially suited to tired, languid, exhausted subjects. Indisposition for mental exertion. Goitre.", 
+  },
+  "details": "The great anti-spasmodic remedy. Cramping of muscles with radiating pains. Neuralgic pains RELIEVED BY WARMTH. Especially suited to tired, languid, exhausted subjects. Indisposition for mental exertion. Goitre.",
   "dosage": "First to twelfth potency. Sometimes the highest potencies are preferable. Acts especially well, given in hot water."
 }

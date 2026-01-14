@@ -1,57 +1,67 @@
 {
-  "name": "Xanthoxylum", 
-  "Relationship": "Compare: GNAPH.; CIMICIF.; STAPH.; MEZER.; PISCIDIA - White dogwood - (a nerve sedative. INSOMNIA DUE to worry, nervous excitement, spasmodic coughs; pains of irregular menstruation; regulates the flow. Neuralgic and spasmodic affections. Use tincture in rather material doses.)", 
-  "Common names": "Prickly Ash", 
+  "name": "Xanthoxylum",
+  "Relationship": "Compare: GNAPH.; CIMICIF.; STAPH.; MEZER.; PISCIDIA - White dogwood - (a nerve sedative. INSOMNIA DUE to worry, nervous excitement, spasmodic coughs; pains of irregular menstruation; regulates the flow. Neuralgic and spasmodic affections. Use tincture in rather material doses.)",
+  "Common names": "Prickly Ash",
   "symptoms": {
     "Head": [
-      "Pain over eyes, throbbing pressure over nose, pressure in forehead; head seems divided; ringing in ears", 
-      "Weight and pain on vertex", 
-      "Feels full", 
-      "Sick headache with dizziness and flatulence", 
+      "Pain over eyes, throbbing pressure over nose, pressure in forehead",
+      "head seems divided",
+      "ringing in ears",
+      "Weight and pain on vertex",
+      "Feels full",
+      "Sick headache with dizziness and flatulence",
       "Occipital headache"
-    ], 
+    ],
     "Respiratory": [
-      "Constant desire to take a long breath; oppression of chest", 
-      "Aphonia", 
+      "Constant desire to take a long breath",
+      "oppression of chest",
+      "Aphonia",
       "Dry cough, day and night"
-    ], 
+    ],
     "Mind": [
-      "Mental depression", 
+      "Mental depression",
       "Nervous, frightened"
-    ], 
+    ],
     "Abdomen": [
-      "Griping and diarrhoea", 
-      "Dysentery, with tympanites, tenesmus; in-odorous discharges"
-    ], 
+      "Griping and diarrhoea",
+      "Dysentery, with tympanites, tenesmus",
+      "in-odorous discharges"
+    ],
     "Face": [
-      "Pharyngitis", 
-      "Dryness of mouth and fauces", 
+      "Pharyngitis",
+      "Dryness of mouth and fauces",
       "Neuralgia of lower jaw"
-    ], 
+    ],
     "Sleep": [
-      "Hard and unrefreshing; dreams of flying", 
+      "Hard and unrefreshing",
+      "dreams of flying",
       "Sleeplessness in neurasthenics"
-    ], 
+    ],
     "Female": [
-      "Menses thick, almost black", 
-      "Ovarian neuralgia, with pain in loins and lower abdomen; worse, left side, extending down the thigh, along genitocrural nerves", 
-      "After-pains", 
-      "Neuralgic dysmenorrhoea, with neuralgic headaches; pain in back and down legs", 
-      "Menses too early and painful", 
-      "Leucorrhoea at time of menses", 
-      "Neurasthenic patients who are thin, emaciated; poor assimilation with insomnia and occipital headache"
-    ], 
+      "Menses thick, almost black",
+      "Ovarian neuralgia, with pain in loins and lower abdomen",
+      "worse, left side, extending down the thigh, along genitocrural nerves",
+      "After-pains",
+      "Neuralgic dysmenorrhoea, with neuralgic headaches",
+      "pain in back and down legs",
+      "Menses too early and painful",
+      "Leucorrhoea at time of menses",
+      "Neurasthenic patients who are thin, emaciated",
+      "poor assimilation with insomnia and occipital headache"
+    ],
     "Extremities": [
-      "Left arm numb", 
-      "Anterior, crural neuralgia", 
-      "Hemiplegia", 
-      "Numbness of left side; impairment of nerve of motion", 
-      "Pain in nape, extending down back", 
-      "Sciatica; worse, hot weather", 
-      "Paralysis of left side following spinal disorders", 
+      "Left arm numb",
+      "Anterior, crural neuralgia",
+      "Hemiplegia",
+      "Numbness of left side",
+      "impairment of nerve of motion",
+      "Pain in nape, extending down back",
+      "Sciatica",
+      "worse, hot weather",
+      "Paralysis of left side following spinal disorders",
       "Neuralgic shooting pain, as from electricity, all over limbs"
     ]
-  }, 
-  "details": "Its specific action is on the nervous system and mucous membranes. Paralysis, especially HEMIPLEGIA. Painful hemorrhages, after-pains, NEURALGIC DYSMENORRHOEA, and rheumatic affections, offer a therapeutic field for this remedy, especially in patients of spare habit and nervous, delicate organization. Indigestion from over-eating or from too much fluid. Sluggish capillary circulation. Neurasthenia, poor assimilation, insomnia, occipital headache. Increases mucous secretion of mouth and stimulates the secretion from all glands with ducts opening in the mouth.", 
+  },
+  "details": "Its specific action is on the nervous system and mucous membranes. Paralysis, especially HEMIPLEGIA. Painful hemorrhages, after-pains, NEURALGIC DYSMENORRHOEA, and rheumatic affections, offer a therapeutic field for this remedy, especially in patients of spare habit and nervous, delicate organization. Indigestion from over-eating or from too much fluid. Sluggish capillary circulation. Neurasthenia, poor assimilation, insomnia, occipital headache. Increases mucous secretion of mouth and stimulates the secretion from all glands with ducts opening in the mouth.",
   "dosage": "First to sixth potency."
 }

@@ -1,46 +1,53 @@
 {
-  "name": "Squilla maritima", 
-  "Relationship": "Compare: DIGIT.; STROPHANT.; APOCYN. CAN.; BRY.; KALI-CARB. Squilla follows DIGITALIS, if this fails to relieve water-logged cases.", 
+  "name": "Squilla maritima",
+  "Relationship": "Compare: DIGIT.; STROPHANT.; APOCYN. CAN.; BRY.; KALI-CARB. Squilla follows DIGITALIS, if this fails to relieve water-logged cases.",
   "Modalities": [
-    "Better: rest; worse", 
+    "Better: rest; worse",
     "Better: motion"
-  ], 
-  "Common names": "Sea-onion", 
+  ],
+  "Common names": "Sea-onion",
   "symptoms": {
     "Heart": [
       "A cardiac stimulant affecting the peripheral vessels and coronary arteries"
-    ], 
+    ],
     "Eyes": [
-      "Sensation as if swimming in cold water", 
-      "Feel irritable; child bores into them with fists"
-    ], 
+      "Sensation as if swimming in cold water",
+      "Feel irritable",
+      "child bores into them with fists"
+    ],
     "Respiratory": [
-      "Child rubs face with fist during cough", 
-      "Cough provoked by taking a deep breath or cold drinks, from exertion, change from warm to cold air", 
-      "Frequent calls to urinate at night, passing large quantities", 
-      "Violent, furious, exhausting cough, with much mucus; profuse, salty, slimy expectoration, and with involuntary spurting of urine and sneezing", 
-      "Dyspnoea and stitches in chest, and painful contraction of abdominal muscles", 
-      "Cough of measles", 
-      "Fluent coryza; margins of nostrils feel sore", 
-      "Sneezing with coughing", 
-      "Sneezing; throat irritated; short, dry cough; must take a deep breath"
-    ], 
+      "Child rubs face with fist during cough",
+      "Cough provoked by taking a deep breath or cold drinks, from exertion, change from warm to cold air",
+      "Frequent calls to urinate at night, passing large quantities",
+      "Violent, furious, exhausting cough, with much mucus",
+      "profuse, salty, slimy expectoration, and with involuntary spurting of urine and sneezing",
+      "Dyspnoea and stitches in chest, and painful contraction of abdominal muscles",
+      "Cough of measles",
+      "Fluent coryza",
+      "margins of nostrils feel sore",
+      "Sneezing with coughing",
+      "Sneezing",
+      "throat irritated",
+      "short, dry cough",
+      "must take a deep breath"
+    ],
     "Stomach": [
       "Pressure like a stone"
-    ], 
+    ],
     "Urine": [
-      "Involuntary spurting of urine when coughing", 
-      "Great urging; much watery urine"
-    ], 
+      "Involuntary spurting of urine when coughing",
+      "Great urging",
+      "much watery urine"
+    ],
     "Skin": [
       "Small, red spots over body, with prickling pain"
-    ], 
+    ],
     "Extremities": [
-      "Icy cold hands and feet, with warmth of the rest of the body", 
-      "Tender feet with shop girls", 
+      "Icy cold hands and feet, with warmth of the rest of the body",
+      "Tender feet with shop girls",
       "Feet get sore from standing"
     ]
-  }, 
-  "details": "A slow acting remedy. Corresponds to ailments requiring several days to reach their maximum. Persistent, dull, rheumatic pains permeate the body. A spleen medicine; stitches under left free ribs. Important heart and kidney medicine. BRONCHOPNEUMONIA. Acts especially on mucous membranes of the respiratory and digestive tracts, and also upon the kidneys. Valuable in chronic bronchitis of old people with mucous rales, dyspnoea, and scanty urine.", 
+  },
+  "details": "A slow acting remedy. Corresponds to ailments requiring several days to reach their maximum. Persistent, dull, rheumatic pains permeate the body. A spleen medicine; stitches under left free ribs. Important heart and kidney medicine. BRONCHOPNEUMONIA. Acts especially on mucous membranes of the respiratory and digestive tracts, and also upon the kidneys. Valuable in chronic bronchitis of old people with mucous rales, dyspnoea, and scanty urine.",
   "dosage": "First to third potency."
 }

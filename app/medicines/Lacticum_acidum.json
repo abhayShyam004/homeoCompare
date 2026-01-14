@@ -1,35 +1,37 @@
 {
-  "name": "Lacticum acidum", 
-  "Relationship": "Compare: SARCOLACTIC ACID Q.V. LITHIA; PHOS-AC.", 
-  "Common names": "Lactic Acid", 
+  "name": "Lacticum acidum",
+  "Relationship": "Compare: SARCOLACTIC ACID Q.V. LITHIA; PHOS-AC.",
+  "Common names": "Lactic Acid",
   "symptoms": {
     "Stomach": [
-      "Burning, hot gas from stomach to throat, causing profuse secretion of tenacious mucus, worse smoking", 
-      "Nausea; morning sickness, especially in pale anaemic women", 
-      "Hot, acrid eructation", 
-      "Thirst; voracious hunger", 
-      "Tongue dry, parched", 
-      "Canker, copious salivation and water-brash", 
+      "Burning, hot gas from stomach to throat, causing profuse secretion of tenacious mucus, worse smoking",
+      "Nausea",
+      "morning sickness, especially in pale anaemic women",
+      "Hot, acrid eructation",
+      "Thirst",
+      "voracious hunger",
+      "Tongue dry, parched",
+      "Canker, copious salivation and water-brash",
       "Nausea, better, eating"
-    ], 
+    ],
     "Urine": [
-      "Large quantities passed, frequently", 
+      "Large quantities passed, frequently",
       "Saccharine"
-    ], 
+    ],
     "Chest": [
       "Pain in breasts, with enlargement of axillary glands, and pain extends into hand"
-    ], 
+    ],
     "Throat": [
-      "Keeps swallowing", 
-      "Fullness or lump like a puff ball", 
+      "Keeps swallowing",
+      "Fullness or lump like a puff ball",
       "Constricted low down"
-    ], 
+    ],
     "Extremities": [
-      "Limbs feel chilly", 
-      "Rheumatic pain in joints and shoulders, wrists, knees, with much weakness", 
+      "Limbs feel chilly",
+      "Rheumatic pain in joints and shoulders, wrists, knees, with much weakness",
       "Trembling of whole body while walking"
     ]
-  }, 
-  "details": "Morning sickness, DIABETES, and rheumatism offer a field for this remedy. TROUBLES IN THE BREASTS. Locally, in the tuberculous ulceration of vocal cords.", 
+  },
+  "details": "Morning sickness, DIABETES, and rheumatism offer a field for this remedy. TROUBLES IN THE BREASTS. Locally, in the tuberculous ulceration of vocal cords.",
   "dosage": "Third to thirtieth potency. Six to ten drops in a small glass of water in acute gastroenteritis (Cartier.)."
 }

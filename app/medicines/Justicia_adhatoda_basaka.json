@@ -1,27 +1,32 @@
 {
-  "name": "Justicia adhatoda basaka", 
-  "Relationship": "Seems to come between CEPA and EUPHRASIA, which compare.", 
-  "Common names": "An Indian Shrub, Singhee", 
+  "name": "Justicia adhatoda basaka",
+  "Relationship": "Seems to come between CEPA and EUPHRASIA, which compare.",
+  "Common names": "An Indian Shrub, Singhee",
   "symptoms": {
     "Head": [
-      "Irritable, sensitive to external impressions; hot, full and heavy head; lachrymation, with coryza, profuse, fluent, with constant sneezing; loss of smell and taste; coryza with cough"
-    ], 
+      "Irritable, sensitive to external impressions",
+      "hot, full and heavy head",
+      "lachrymation, with coryza, profuse, fluent, with constant sneezing",
+      "loss of smell and taste",
+      "coryza with cough"
+    ],
     "Respiratory": [
-      "Bronchial catarrh, coryza, hoarseness; oversensitive", 
-      "Dry cough from sternal region all over chest", 
-      "Tightness across chest", 
-      "Cough with sneezing", 
-      "Hoarseness, larynx painful", 
-      "Severe dyspnoea with cough", 
-      "Asthmatic attacks, cannot endure a close, warm room", 
-      "Paroxysmal cough, with suffocative obstruction of respiration", 
+      "Bronchial catarrh, coryza, hoarseness",
+      "oversensitive",
+      "Dry cough from sternal region all over chest",
+      "Tightness across chest",
+      "Cough with sneezing",
+      "Hoarseness, larynx painful",
+      "Severe dyspnoea with cough",
+      "Asthmatic attacks, cannot endure a close, warm room",
+      "Paroxysmal cough, with suffocative obstruction of respiration",
       "Whooping-cough"
-    ], 
+    ],
     "Throat": [
-      "Dry, pain during empty swallowing, tenacious mucus", 
+      "Dry, pain during empty swallowing, tenacious mucus",
       "Mouth dry"
     ]
-  }, 
-  "details": "Highly efficacious medicine for acute catarrhal conditions of the respiratory tract (used in the beginning).", 
+  },
+  "details": "Highly efficacious medicine for acute catarrhal conditions of the respiratory tract (used in the beginning).",
   "dosage": "Third potency and higher. Severe aggravation have been noticed from lower potencies."
 }

@@ -1,69 +1,76 @@
 {
-  "name": "Senecio aureus", 
-  "Relationship": "Compare: SENECIO JACOBAEA (cerebrospinal irritation, rigid muscles, chiefly of neck and shoulders; also, in cancer); ALETRIS; CAULOP.; SEP.", 
-  "Common names": "Golden Rag wort", 
+  "name": "Senecio aureus",
+  "Relationship": "Compare: SENECIO JACOBAEA (cerebrospinal irritation, rigid muscles, chiefly of neck and shoulders; also, in cancer); ALETRIS; CAULOP.; SEP.",
+  "Common names": "Golden Rag wort",
   "symptoms": {
     "Head": [
-      "Dull, stupefying headache", 
-      "Fullness of nasal passages; burning; sneezing; profuse flow", 
-      "Wavelike dizziness from occiput to sinciput", 
+      "Dull, stupefying headache",
+      "Fullness of nasal passages",
+      "burning",
+      "sneezing",
+      "profuse flow",
+      "Wavelike dizziness from occiput to sinciput",
       "Sharp pains over left eye, and through left temple"
-    ], 
+    ],
     "Respiratory": [
-      "Dyspnoea on ascending", 
-      "Cough loose, with labored inspiration", 
-      "Acute inflammatory conditions of upper respiratory tract", 
-      "Chest sore and raw", 
-      "Hoarseness", 
+      "Dyspnoea on ascending",
+      "Cough loose, with labored inspiration",
+      "Acute inflammatory conditions of upper respiratory tract",
+      "Chest sore and raw",
+      "Hoarseness",
       "Dry teasing cough, stitching chest pains"
-    ], 
+    ],
     "Stomach": [
-      "Sour eructations; nausea"
-    ], 
+      "Sour eructations",
+      "nausea"
+    ],
     "Urine": [
-      "Nephritis", 
-      "Great heat and constant urging", 
-      "Irritable bladder of children, with headache", 
-      "Scanty, high-colored, bloody, with much mucus and tenesmus", 
+      "Nephritis",
+      "Great heat and constant urging",
+      "Irritable bladder of children, with headache",
+      "Scanty, high-colored, bloody, with much mucus and tenesmus",
       "Renal colic"
-    ], 
+    ],
     "Mind": [
-      "Inability to fix mind upon any one subject", 
-      "Nervous and irritable", 
+      "Inability to fix mind upon any one subject",
+      "Nervous and irritable",
       "Despondent"
-    ], 
+    ],
     "Abdomen": [
-      "Pain around umbilicus; spreads all over abdomen; better, stool", 
-      "Straining at stool; thin, dark, bloody, with tenesmus", 
+      "Pain around umbilicus",
+      "spreads all over abdomen",
+      "better, stool",
+      "Straining at stool",
+      "thin, dark, bloody, with tenesmus",
       "Thin, watery stool, intermingled with hard lumps of feces"
-    ], 
+    ],
     "Face": [
-      "Sharp, cutting pain left side", 
-      "Teeth very sensitive", 
+      "Sharp, cutting pain left side",
+      "Teeth very sensitive",
       "Dryness of fauces, throat and mouth"
-    ], 
+    ],
     "Sleep": [
-      "Nervousness and sleeplessness", 
+      "Nervousness and sleeplessness",
       "Great drowsiness, with unpleasant dreams"
-    ], 
+    ],
     "Female": [
-      "Functional amenorrhoea of young girls with backache", 
-      "Anaemic dysmenorrhoea with urinary disturbances", 
-      "Menses retarded, suppressed", 
-      "After menstruation commences, these improve", 
-      "Before menses, inflammatory conditions of throat, chest, and bladder", 
+      "Functional amenorrhoea of young girls with backache",
+      "Anaemic dysmenorrhoea with urinary disturbances",
+      "Menses retarded, suppressed",
+      "After menstruation commences, these improve",
+      "Before menses, inflammatory conditions of throat, chest, and bladder",
       "Premature and too profuse menses"
-    ], 
+    ],
     "Throat": [
-      "Burning in pharynx, raw feeling in nasopharynx, must swallow, though painful", 
+      "Burning in pharynx, raw feeling in nasopharynx, must swallow, though painful",
       "Dry mouth, throat and fauces"
-    ], 
+    ],
     "Male": [
-      "Lascivious dreams, with involuntary emissions", 
-      "Dull, heavy pain in spermatic cord, extending to testicles", 
+      "Lascivious dreams, with involuntary emissions",
+      "Dull, heavy pain in spermatic cord, extending to testicles",
       "Prostate enlarged"
     ]
-  }, 
-  "details": "Its action on the female organism has been clinically verified. Urinary organs also affected in a marked degree. Backaches of congested kidneys. Early cirrhosis of liver.", 
+  },
+  "details": "Its action on the female organism has been clinically verified. Urinary organs also affected in a marked degree. Backaches of congested kidneys. Early cirrhosis of liver.",
   "dosage": "Tincture, to third potency. SENECIN., first trituration."
 }

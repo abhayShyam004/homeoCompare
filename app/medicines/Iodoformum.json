@@ -1,39 +1,43 @@
 {
   "symptoms": {
     "Head": [
-      "Head feels heavy, as if it could not be lifted from pillow", 
-      "Sharp, neuralgic pain", 
-      "Very drowsy", 
-      "Itching of occiput meningitis", 
+      "Head feels heavy, as if it could not be lifted from pillow",
+      "Sharp, neuralgic pain",
+      "Very drowsy",
+      "Itching of occiput meningitis",
       "Sleep interrupted by sighing and cries"
-    ], 
+    ],
     "Abdomen": [
-      "Cholera infantum", 
-      "Scaphoid abdomen", 
-      "Abdomen distended; mesenteric glands enlarged", 
-      "Chronic diarrhoea with suspected tuberculosis", 
-      "Chronic diarrhoea; stools greenish, watery, undigested, with irritable temper"
-    ], 
+      "Cholera infantum",
+      "Scaphoid abdomen",
+      "Abdomen distended",
+      "mesenteric glands enlarged",
+      "Chronic diarrhoea with suspected tuberculosis",
+      "Chronic diarrhoea",
+      "stools greenish, watery, undigested, with irritable temper"
+    ],
     "Eyes": [
-      "Pupils, dilated; contract unequally, react poorly", 
-      "Failing sight due to retrobulbar neuritis, central scotoma - partial atrophy of optic disc", 
+      "Pupils, dilated",
+      "contract unequally, react poorly",
+      "Failing sight due to retrobulbar neuritis, central scotoma - partial atrophy of optic disc",
       "Diplopia"
-    ], 
+    ],
     "Chest": [
-      "Sore pain in apex of right lung", 
-      "Hemoptysis", 
-      "Pain in left breast, like a hand grasping at the base of the heart", 
-      "Feeling of a weight on chest, as if smothering", 
-      "Asthmatic breathing", 
+      "Sore pain in apex of right lung",
+      "Hemoptysis",
+      "Pain in left breast, like a hand grasping at the base of the heart",
+      "Feeling of a weight on chest, as if smothering",
+      "Asthmatic breathing",
       "Cough and wheezing on going to bed"
-    ], 
+    ],
     "Extremities": [
-      "Legs weak; cannot stand and walk with eyes closed", 
+      "Legs weak",
+      "cannot stand and walk with eyes closed",
       "Weakness of knees when going upstairs"
     ]
-  }, 
-  "details": "Should not be forgotten in the treatment of tubercular meningitis, both as a local application to the head and internally. (BACIL.) TUBERCULOUS CONDITIONS. Subacute and chronic diarrhoea of children.", 
-  "Common names": "Iodoform", 
-  "name": "Iodoformum", 
+  },
+  "details": "Should not be forgotten in the treatment of tubercular meningitis, both as a local application to the head and internally. (BACIL.) TUBERCULOUS CONDITIONS. Subacute and chronic diarrhoea of children.",
+  "Common names": "Iodoform",
+  "name": "Iodoformum",
   "dosage": "Second trituration. Three grains on the back of the tongue will relieve attack of asthmatic breathing."
 }

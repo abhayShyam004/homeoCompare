@@ -1,42 +1,44 @@
 {
   "symptoms": {
     "Head": [
-      "Bald spots", 
-      "Corrosive itching of scalp", 
-      "Whirling vertigo, with flickering before eyes", 
-      "Plica polonica", 
-      "Spots on scalp, oozing moisture, matting hair together", 
-      "Tearing pain in vertex, ringing and whistling in ears", 
+      "Bald spots",
+      "Corrosive itching of scalp",
+      "Whirling vertigo, with flickering before eyes",
+      "Plica polonica",
+      "Spots on scalp, oozing moisture, matting hair together",
+      "Tearing pain in vertex, ringing and whistling in ears",
       "Irresistible desire to scratch"
-    ], 
+    ],
     "Nose": [
-      "Tip gets red easily", 
-      "Sores in nose", 
-      "Seborrhoea upper lip and base of nose", 
-      "Stoppage of one nostril", 
+      "Tip gets red easily",
+      "Sores in nose",
+      "Seborrhoea upper lip and base of nose",
+      "Stoppage of one nostril",
       "Moist eruption on septum"
-    ], 
+    ],
     "Female": [
-      "Menorrhagia; continuous flow, particularly at climacteric", 
-      "Excessive menstruation with great weakness", 
-      "Hemorrhages from fibroids", 
+      "Menorrhagia",
+      "continuous flow, particularly at climacteric",
+      "Excessive menstruation with great weakness",
+      "Hemorrhages from fibroids",
       "Passive uterine hemorrhages"
-    ], 
+    ],
     "Skin": [
-      "Hair matted together", 
-      "Eczema of head and face; pustules, itching, burning, and offensive odor", 
-      "Corrosive itching", 
+      "Hair matted together",
+      "Eczema of head and face",
+      "pustules, itching, burning, and offensive odor",
+      "Corrosive itching",
       "Great sensitiveness of skin, with redness and soreness from slight rubbing"
-    ], 
+    ],
     "Throat": [
-      "Diphtheria", 
-      "Difficult swallowing", 
-      "Ulcers", 
+      "Diphtheria",
+      "Difficult swallowing",
+      "Ulcers",
       "Frequent hawking"
     ]
-  }, 
-  "Common names": "Lesser Periwinkle", 
-  "name": "Vinca minor", 
-  "Relationship": "Compare: OLEAND.; STAPH.", 
+  },
+  "Common names": "Lesser Periwinkle",
+  "name": "Vinca minor",
+  "Relationship": "Compare: OLEAND.; STAPH.",
   "details": "A remedy for skin affections, eczema, and especially plica polonica; also for hemorrhages and diphtheria."
 }

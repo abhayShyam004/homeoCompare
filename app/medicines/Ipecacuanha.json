@@ -1,95 +1,107 @@
 {
-  "name": "Ipecacuanha", 
-  "Relationship": "Compare: EMETINE - principal alkaloid of Ipecac. (A powerful amebicide, but is not a bactericide. Specific for amebiasis; of remarkable value in treatment of amebic dysentery; also as a remedy in pyorrhoea, 1/2 gr. daily for three days, then less. Emetin, 1/2 gr. hypodermically, in Psoriasis. Emetin hydroch. 2X, diarrhoea with colicky, abdominal pains and nausea. Emetin for endameba dysentery. In physiological doses must be carefully watched. May produce hepatization of lungs, rapid heart action, tendency for the head to fall forward and lobar pneumonia. In hematemesis and other hemorrhages, compare: GELATIN (which has a marked effect on the coagulability of the blood. Hypodermically; or if by mouth, a 10 per cent. Jelly, about 4 oz., three times a day). ARSENIC; CHAM.; PULS.; TART. EM.; SQUILL CONVOLVULUS (colic and diarrhoea.) TYPHA LATIFOLIA - Cat-tail flag (dysentery, diarrhoea) and summer complaint. EUPHORBIA HYPERICIFOLIA - Garden Spurge - (Very similar to Ipecac. Irritation of the respiratory and gastrointestinal tracts and female organs). LIPPIA MEXICANA - (Persistent dry, hard, bronchial cough - asthma and chronic bronchitis). In Asthma, compare: BLATTA ORIENTALIS. Antidotes: ARSENIC; CHINA; TAB AC. Complementary: CUPRUM; ARN.", 
+  "name": "Ipecacuanha",
+  "Relationship": "Compare: EMETINE - principal alkaloid of Ipecac. (A powerful amebicide, but is not a bactericide. Specific for amebiasis; of remarkable value in treatment of amebic dysentery; also as a remedy in pyorrhoea, 1/2 gr. daily for three days, then less. Emetin, 1/2 gr. hypodermically, in Psoriasis. Emetin hydroch. 2X, diarrhoea with colicky, abdominal pains and nausea. Emetin for endameba dysentery. In physiological doses must be carefully watched. May produce hepatization of lungs, rapid heart action, tendency for the head to fall forward and lobar pneumonia. In hematemesis and other hemorrhages, compare: GELATIN (which has a marked effect on the coagulability of the blood. Hypodermically; or if by mouth, a 10 per cent. Jelly, about 4 oz., three times a day). ARSENIC; CHAM.; PULS.; TART. EM.; SQUILL CONVOLVULUS (colic and diarrhoea.) TYPHA LATIFOLIA - Cat-tail flag (dysentery, diarrhoea) and summer complaint. EUPHORBIA HYPERICIFOLIA - Garden Spurge - (Very similar to Ipecac. Irritation of the respiratory and gastrointestinal tracts and female organs). LIPPIA MEXICANA - (Persistent dry, hard, bronchial cough - asthma and chronic bronchitis). In Asthma, compare: BLATTA ORIENTALIS. Antidotes: ARSENIC; CHINA; TAB AC. Complementary: CUPRUM; ARN.",
   "Modalities": [
-    "Worse: periodically; from veal", 
-    "Worse: moist warm wind", 
+    "Worse: periodically; from veal",
+    "Worse: moist warm wind",
     "Worse: lying down"
-  ], 
-  "Common names": "Ipecac-root", 
+  ],
+  "Common names": "Ipecac-root",
   "symptoms": {
     "Eyes": [
-      "Pain through eyeballs", 
-      "State of vision constantly changing", 
-      "Cornea dim", 
-      "Profuse lachrymation", 
-      "Spasm of accommodation from irritable weakness of the ciliary muscle", 
-      "Eyes tire from near vision", 
-      "Inflamed, red", 
+      "Pain through eyeballs",
+      "State of vision constantly changing",
+      "Cornea dim",
+      "Profuse lachrymation",
+      "Spasm of accommodation from irritable weakness of the ciliary muscle",
+      "Eyes tire from near vision",
+      "Inflamed, red",
       "Nausea from looking on moving objects"
-    ], 
+    ],
     "Respiratory": [
-      "Whooping-cough, with nosebleed, and from mouth", 
-      "Asthma", 
-      "Suffocative cough; child becomes stiff, and blue in the face", 
-      "Bleeding from lungs, with nausea; feeling of constriction; rattling cough", 
-      "Chest seems full of phlegm, but does not yield to coughing", 
-      "Yearly attacks of difficult shortness of breathing", 
-      "Hoarseness, especially at end of a cold", 
-      "Bubbling rales", 
-      "Cough incessant and violent, with every breath", 
-      "Croup", 
-      "Dyspnoea; constant constriction in chest", 
-      "Hemoptysis from slightest exertion", 
-      "Complete aphonia", 
-      "Continued sneezing; coryza; wheezing cough"
-    ], 
+      "Whooping-cough, with nosebleed, and from mouth",
+      "Asthma",
+      "Suffocative cough",
+      "child becomes stiff, and blue in the face",
+      "Bleeding from lungs, with nausea",
+      "feeling of constriction",
+      "rattling cough",
+      "Chest seems full of phlegm, but does not yield to coughing",
+      "Yearly attacks of difficult shortness of breathing",
+      "Hoarseness, especially at end of a cold",
+      "Bubbling rales",
+      "Cough incessant and violent, with every breath",
+      "Croup",
+      "Dyspnoea",
+      "constant constriction in chest",
+      "Hemoptysis from slightest exertion",
+      "Complete aphonia",
+      "Continued sneezing",
+      "coryza",
+      "wheezing cough"
+    ],
     "Stomach": [
-      "Hiccough", 
-      "Vomits food, bile, blood, mucus", 
-      "Constant nausea and vomiting, with pale, twitching of face", 
-      "Tongue usually clean", 
-      "Mouth, moist; much saliva", 
+      "Hiccough",
+      "Vomits food, bile, blood, mucus",
+      "Constant nausea and vomiting, with pale, twitching of face",
+      "Tongue usually clean",
+      "Mouth, moist",
+      "much saliva",
       "Stomach feels relaxed, as if hanging down"
-    ], 
+    ],
     "Head": [
-      "Pain extends to teeth and root of tongue", 
+      "Pain extends to teeth and root of tongue",
       "Bones of skull feel crushed or bruised"
-    ], 
+    ],
     "Mind": [
-      "Irritable; holds everything in contempt", 
+      "Irritable",
+      "holds everything in contempt",
       "Full of desires, for what they know not"
-    ], 
+    ],
     "Abdomen": [
-      "Body rigid; stretched out stiff", 
-      "Dysenteric, slimy", 
-      "Pitch-like, green as grass, like frothy molasses, with griping at navel", 
-      "Stools", 
-      "Cutting, clutching; worse, around the navel", 
-      "Amoebic dysentery with tenesmus; while straining pain so great that it nauseates; little thirst"
-    ], 
+      "Body rigid",
+      "stretched out stiff",
+      "Dysenteric, slimy",
+      "Pitch-like, green as grass, like frothy molasses, with griping at navel",
+      "Stools",
+      "Cutting, clutching",
+      "worse, around the navel",
+      "Amoebic dysentery with tenesmus",
+      "while straining pain so great that it nauseates",
+      "little thirst"
+    ],
     "Face": [
-      "Periodical orbital neuralgia, with lachrymation, photophobia, and smarting eyelids", 
+      "Periodical orbital neuralgia, with lachrymation, photophobia, and smarting eyelids",
       "Blue rings around eyes"
-    ], 
+    ],
     "Fever": [
-      "Slightest chill with much heat, nausea, vomiting, and dyspnoea", 
-      "Relapses with improper diet", 
+      "Slightest chill with much heat, nausea, vomiting, and dyspnoea",
+      "Relapses with improper diet",
       "Intermittent fever, irregular cases, after quinine"
-    ], 
+    ],
     "Sleep": [
-      "Shocks in all limbs on going to sleep", 
+      "Shocks in all limbs on going to sleep",
       "With eyes half wide open"
-    ], 
+    ],
     "Nose": [
-      "Epistaxis", 
+      "Epistaxis",
       "Coryza, with stoppage of nose and nausea"
-    ], 
+    ],
     "Female": [
-      "Uterine hemorrhage, profuse, bright, gushing, with nausea", 
-      "Pain from navel to uterus", 
-      "Vomiting during pregnancy", 
+      "Uterine hemorrhage, profuse, bright, gushing, with nausea",
+      "Pain from navel to uterus",
+      "Vomiting during pregnancy",
       "Menses too early and too profuse"
-    ], 
+    ],
     "Skin": [
-      "Pale, lax", 
-      "Blue around eyes", 
+      "Pale, lax",
+      "Blue around eyes",
       "Miliary rash"
-    ], 
+    ],
     "Extremities": [
       "Body stretched stiff, followed by spasmodic jerking of arms towards each other"
     ]
-  }, 
-  "details": "The chief action is on the ramifications of the pneumogastric nerve, producing spasmodic irritation in chest and stomach. Morphia habit. The principal feature of Ipecacuanha is its PERSISTENT NAUSEA and vomiting, which form the chief guiding symptoms. Indicated after indigestible food, raisins, cakes, etc. Especially indicated in fat children and adults, who are feeble and catch cold in relaxing atmosphere; warm, moist weather. Spasmodic affections. Hemorrhages BRIGHT-RED and PROFUSE.", 
+  },
+  "details": "The chief action is on the ramifications of the pneumogastric nerve, producing spasmodic irritation in chest and stomach. Morphia habit. The principal feature of Ipecacuanha is its PERSISTENT NAUSEA and vomiting, which form the chief guiding symptoms. Indicated after indigestible food, raisins, cakes, etc. Especially indicated in fat children and adults, who are feeble and catch cold in relaxing atmosphere; warm, moist weather. Spasmodic affections. Hemorrhages BRIGHT-RED and PROFUSE.",
   "dosage": "Third to 200th potency."
 }

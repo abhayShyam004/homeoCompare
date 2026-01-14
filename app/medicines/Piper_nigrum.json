@@ -1,43 +1,48 @@
 {
   "symptoms": {
     "Head": [
-      "Eyes inflamed and burning", 
-      "Nose itches; sneezing; nosebleed", 
-      "Lips dry and cracked", 
-      "Heavy headache, as if temples were pressed in; pressure in nasal and facial bones", 
-      "Bursting aching in eyeballs", 
+      "Eyes inflamed and burning",
+      "Nose itches",
+      "sneezing",
+      "nosebleed",
+      "Lips dry and cracked",
+      "Heavy headache, as if temples were pressed in",
+      "pressure in nasal and facial bones",
+      "Bursting aching in eyeballs",
       "Red burning face"
-    ], 
+    ],
     "Stomach": [
-      "Great thirst", 
-      "Colic and cramps", 
-      "Flatulence", 
-      "Tympanites", 
-      "Full feeling", 
+      "Great thirst",
+      "Colic and cramps",
+      "Flatulence",
+      "Tympanites",
+      "Full feeling",
       "Gastric discomfort"
-    ], 
+    ],
     "Urine": [
-      "Priapism", 
-      "Burning in bladder and urethra", 
-      "Difficult micturition", 
-      "Bladder feels full, swollen; frequent inclination without success"
-    ], 
+      "Priapism",
+      "Burning in bladder and urethra",
+      "Difficult micturition",
+      "Bladder feels full, swollen",
+      "frequent inclination without success"
+    ],
     "Mind": [
-      "Sad, apprehensive", 
-      "Unable to concentrate; starts at any noise"
-    ], 
+      "Sad, apprehensive",
+      "Unable to concentrate",
+      "starts at any noise"
+    ],
     "Chest": [
-      "Dyspnoea, cough with pain in chest in spots, feels as if spitting blood", 
-      "Palpitation, cardiac pain, slow intermittent pulse", 
+      "Dyspnoea, cough with pain in chest in spots, feels as if spitting blood",
+      "Palpitation, cardiac pain, slow intermittent pulse",
       "Great flow of milk"
-    ], 
+    ],
     "Throat": [
-      "Sore, feels raw, burns", 
+      "Sore, feels raw, burns",
       "Burning pain in tonsils"
     ]
-  }, 
-  "details": "Sensation of burning and pressure everywhere.", 
-  "Common names": "Black Pepper", 
-  "name": "Piper nigrum", 
+  },
+  "details": "Sensation of burning and pressure everywhere.",
+  "Common names": "Black Pepper",
+  "name": "Piper nigrum",
   "dosage": "Low attenuations."
 }

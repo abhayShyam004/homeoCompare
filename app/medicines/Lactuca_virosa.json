@@ -1,43 +1,47 @@
 {
-  "name": "Lactuca virosa", 
-  "Relationship": "Antidotes: ACET-AC.; COFF. Compare: NABALUS - Prenanthes Serpentaria - Rattlesnake root - White Lettuce, similar to Lactuca, (chronic diarrhoea, worse after eating, nights and towards morning. Pain in abdomen and rectum; emaciation. Constipation and somnolence; susceptible to aura of others. Dyspepsia, with acid burning eructation. CRAVING FOR ACID FOOD. Leucorrhoea with throbbing in uterus); LACH.; KALI-CARB.; SPIRANTHES (galactagogue).", 
-  "Common names": "Acrid Lettuce", 
+  "name": "Lactuca virosa",
+  "Relationship": "Antidotes: ACET-AC.; COFF. Compare: NABALUS - Prenanthes Serpentaria - Rattlesnake root - White Lettuce, similar to Lactuca, (chronic diarrhoea, worse after eating, nights and towards morning. Pain in abdomen and rectum; emaciation. Constipation and somnolence; susceptible to aura of others. Dyspepsia, with acid burning eructation. CRAVING FOR ACID FOOD. Leucorrhoea with throbbing in uterus); LACH.; KALI-CARB.; SPIRANTHES (galactagogue).",
+  "Common names": "Acrid Lettuce",
   "symptoms": {
     "Head": [
-      "Heat of face and headache, with general coldness", 
-      "Headache, with affections of respiratory organs", 
+      "Heat of face and headache, with general coldness",
+      "Headache, with affections of respiratory organs",
       "Dull, heavy, confused, dizzy"
-    ], 
+    ],
     "Mind": [
-      "Stupefaction of sense", 
+      "Stupefaction of sense",
       "Great restlessness"
-    ], 
+    ],
     "Abdomen": [
-      "Sensation of weight, of fullness; borborygmi; abundant emission of wind", 
+      "Sensation of weight, of fullness",
+      "borborygmi",
+      "abundant emission of wind",
       "Colic in early morning, abdomen tense, relieved somewhat by evacuation and passing of wind"
-    ], 
+    ],
     "Chest": [
-      "Incessant, spasmodic cough, as if chest would fly to pieces", 
-      "Squeezing sensation in lower chest", 
-      "Constant tickling cough", 
-      "Difficult breathing", 
+      "Incessant, spasmodic cough, as if chest would fly to pieces",
+      "Squeezing sensation in lower chest",
+      "Constant tickling cough",
+      "Difficult breathing",
       "Suffocative breathing from dropsy of the chest"
-    ], 
+    ],
     "Sleep": [
-      "Restless; impossible to get to sleep", 
+      "Restless",
+      "impossible to get to sleep",
       "Deep, comatose sleep"
-    ], 
+    ],
     "Female": [
-      "Promotes catamenia", 
+      "Promotes catamenia",
       "Increase of milk in breasts"
-    ], 
+    ],
     "Extremities": [
-      "Tremor of hands and arms", 
-      "Coldness and numbness of feet and legs", 
-      "Lame hip down left side; worse walking", 
+      "Tremor of hands and arms",
+      "Coldness and numbness of feet and legs",
+      "Lame hip down left side",
+      "worse walking",
       "Cramps in shin bones, extending to toes and side of leg involving calves"
     ]
-  }, 
-  "details": "This remedy acts principally upon the brain and circulatory system. Delirium tremens with sleeplessness, coldness, and tremor. Hydrothorax and ascites. Impotence. Sense of lightness and TIGHTNESS affecting whole body, especially chest. Seems to be a TRUE GALACTOGOGUE. Marked action on extremities.", 
+  },
+  "details": "This remedy acts principally upon the brain and circulatory system. Delirium tremens with sleeplessness, coldness, and tremor. Hydrothorax and ascites. Impotence. Sense of lightness and TIGHTNESS affecting whole body, especially chest. Seems to be a TRUE GALACTOGOGUE. Marked action on extremities.",
   "dosage": "Tincture."
 }

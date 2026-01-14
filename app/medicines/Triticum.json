@@ -1,21 +1,23 @@
 {
-  "name": "Triticum", 
-  "Relationship": "Compare: TRADESCANTIA; (Hemorrhage from ear and upper air passages; painful urination, urethral discharge; scrotum inflamed). CHIMAPH.; SENECIO; POPULUS TREM.; BUCHU; UVA. POLYTRICHUM JUNIPERINUM - Ground Moss - (Painful urination of old people; dropsy, urinary obstruction and suppression).", 
-  "Common names": "Agropyron Repens Couch-Grass", 
+  "name": "Triticum",
+  "Relationship": "Compare: TRADESCANTIA; (Hemorrhage from ear and upper air passages; painful urination, urethral discharge; scrotum inflamed). CHIMAPH.; SENECIO; POPULUS TREM.; BUCHU; UVA. POLYTRICHUM JUNIPERINUM - Ground Moss - (Painful urination of old people; dropsy, urinary obstruction and suppression).",
+  "Common names": "Agropyron Repens Couch-Grass",
   "symptoms": {
     "Urine": [
-      "Strangury, pyelitis; enlarged prostate", 
-      "Catarrhal and purulent discharges", 
-      "Incontinence; constant desire", 
-      "Chronic cystic irritability", 
-      "Frequent, difficult, and painful urination", 
-      "Urine is dense and causes irritation of the mucous surfaces", 
+      "Strangury, pyelitis",
+      "enlarged prostate",
+      "Catarrhal and purulent discharges",
+      "Incontinence",
+      "constant desire",
+      "Chronic cystic irritability",
+      "Frequent, difficult, and painful urination",
+      "Urine is dense and causes irritation of the mucous surfaces",
       "Gravelly deposits"
-    ], 
+    ],
     "Nose": [
       "Always blowing nose"
     ]
-  }, 
-  "details": "An excellent remedy in excessive irritability of the bladder, dysuria, cystitis, gonorrhea.", 
+  },
+  "details": "An excellent remedy in excessive irritability of the bladder, dysuria, cystitis, gonorrhea.",
   "dosage": "Tincture or infusion by boiling two ounces in a quart of water until it is reduce to a pint. To be taken in four doses in 24 hours."
 }

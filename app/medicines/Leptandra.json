@@ -1,26 +1,27 @@
 {
-  "name": "Leptandra", 
-  "Relationship": "Compare: PODO.; IRIS; BRY.; MERC.; PTEL.; MYRICA.", 
-  "Common names": "Culver's Root", 
+  "name": "Leptandra",
+  "Relationship": "Compare: PODO.; IRIS; BRY.; MERC.; PTEL.; MYRICA.",
+  "Common names": "Culver's Root",
   "symptoms": {
     "Head": [
-      "Smarting and aching in eyes", 
-      "Dull frontal pain; vertigo, drowsiness, and depression"
-    ], 
+      "Smarting and aching in eyes",
+      "Dull frontal pain",
+      "vertigo, drowsiness, and depression"
+    ],
     "Stomach": [
-      "Aching in region of liver extending to spine, which feels chilly", 
-      "Great distress in stomach and intestines, with desire for stool", 
+      "Aching in region of liver extending to spine, which feels chilly",
+      "Great distress in stomach and intestines, with desire for stool",
       "Tongue coated yellow"
-    ], 
+    ],
     "Stool": [
-      "Clay-colored stools with jaundice", 
-      "Bleeding piles", 
-      "Typhoid stools turn black and look like tar", 
-      "Rectal hemorrhage", 
-      "Profuse, black, fetid stools, with pain at umbilicus", 
+      "Clay-colored stools with jaundice",
+      "Bleeding piles",
+      "Typhoid stools turn black and look like tar",
+      "Rectal hemorrhage",
+      "Profuse, black, fetid stools, with pain at umbilicus",
       "Prolapse of rectum with hemorrhoids"
     ]
-  }, 
-  "details": "A liver remedy, with jaundice and BLACK, TARRY STOOLS. Bilious states. Enfeebled portal circulation. Malarial conditions.", 
+  },
+  "details": "A liver remedy, with jaundice and BLACK, TARRY STOOLS. Bilious states. Enfeebled portal circulation. Malarial conditions.",
   "dosage": "Tincture, to third potency."
 }

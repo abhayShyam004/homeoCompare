@@ -1,46 +1,50 @@
 {
-  "name": "Taraxacum", 
-  "Relationship": "Compare: CHOLINE, a constituent of Taraxacum root, has given encouraging results in the treatment of cancer. Choline is closely related to NEURIN, it is the \"Cancronie\" of Prof. Adamkiewicz (E. Schlegel.) BRY.; HYDRAST.; NUX. TELA ARANEA (nervous asthma and sleeplessness).", 
+  "name": "Taraxacum",
+  "Relationship": "Compare: CHOLINE, a constituent of Taraxacum root, has given encouraging results in the treatment of cancer. Choline is closely related to NEURIN, it is the \"Cancronie\" of Prof. Adamkiewicz (E. Schlegel.) BRY.; HYDRAST.; NUX. TELA ARANEA (nervous asthma and sleeplessness).",
   "Modalities": [
-    "Worse: resting", 
-    "Worse: lying down", 
-    "Worse: sitting", 
+    "Worse: resting",
+    "Worse: lying down",
+    "Worse: sitting",
     "Better: touch"
-  ], 
-  "Common names": "Dandelion For gastric headaches, bilious attacks, with characteristically mapped tongue and jaundiced skin. Cancer of bladder. Flatulence. HYSTERICAL TYMPANITES.", 
+  ],
+  "Common names": "Dandelion For gastric headaches, bilious attacks, with characteristically mapped tongue and jaundiced skin. Cancer of bladder. Flatulence. HYSTERICAL TYMPANITES.",
   "symptoms": {
     "Head": [
-      "Sternomastoid muscle very painful to touch", 
+      "Sternomastoid muscle very painful to touch",
       "Sensation of great heat on top of head"
-    ], 
+    ],
     "Fever": [
-      "Sweat on falling asleep", 
-      "Heat without thirst, in face, in toes", 
-      "Chilliness after eating, worse drinking; finger tips cold", 
+      "Sweat on falling asleep",
+      "Heat without thirst, in face, in toes",
+      "Chilliness after eating, worse drinking",
+      "finger tips cold",
       "Bitter taste"
-    ], 
+    ],
     "Abdomen": [
-      "Evacuation difficult", 
-      "Sensation of bubbles bursting in bowels", 
-      "Sharp stitches in left side", 
-      "Tympanitis", 
+      "Evacuation difficult",
+      "Sensation of bubbles bursting in bowels",
+      "Sharp stitches in left side",
+      "Tympanitis",
       "Liver enlarged and indurated"
-    ], 
+    ],
     "Skin": [
       "Profuse night-sweats"
-    ], 
+    ],
     "Mouth": [
-      "Tongue covered with a white film; feels raw; comes off in patches, leaving red, sensitive spots", 
-      "Loss of appetite", 
-      "Salivation", 
-      "Mapped tongue", 
+      "Tongue covered with a white film",
+      "feels raw",
+      "comes off in patches, leaving red, sensitive spots",
+      "Loss of appetite",
+      "Salivation",
+      "Mapped tongue",
       "Bitter taste and eructations"
-    ], 
+    ],
     "Extremities": [
-      "Neuralgia of knee; better, pressur", 
-      "Very restless limbs", 
+      "Neuralgia of knee",
+      "better, pressur",
+      "Very restless limbs",
       "Limbs painful to touch"
     ]
-  }, 
+  },
   "dosage": "Tincture, to third potency. In cancer 1-2 drams fluid extract."
 }

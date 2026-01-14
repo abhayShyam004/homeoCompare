@@ -1,23 +1,24 @@
 {
   "symptoms": {
     "Head": [
-      "Tongue feels thick and numb", 
-      "Cold-sores on lips", 
-      "Discusses her symptoms with everyone", 
-      "Hot head with cold extremities", 
+      "Tongue feels thick and numb",
+      "Cold-sores on lips",
+      "Discusses her symptoms with everyone",
+      "Hot head with cold extremities",
       "Burning irritation of eyes, nose, mouth, throat, and air passages"
-    ], 
+    ],
     "Respiratory": [
-      "Sits bent forward with dry cough", 
-      "Acute hoarseness", 
-      "Pharynx and larynx feel dry, and the voice weak and toneless", 
-      "Throat and nostrils burn", 
-      "Cough of children caused by naso-pharyngeal catarrh; mucus drops from posterior nares", 
+      "Sits bent forward with dry cough",
+      "Acute hoarseness",
+      "Pharynx and larynx feel dry, and the voice weak and toneless",
+      "Throat and nostrils burn",
+      "Cough of children caused by naso-pharyngeal catarrh",
+      "mucus drops from posterior nares",
       "Rawness and soreness of chest and throat"
     ]
-  }, 
-  "details": "Seems to have a remarkable power over acute colds, especially when accompanied by a deep, hoarse voice, or even aphonia. General insensibility of surface (worse, back and abdomen); rubbing and pounding borne without pain, and is grateful on account of warmth produced. Finger-ends thickened, horny; insensible to pinching and prickling. Instantaneous voice-producer. (COCA.)", 
-  "Common names": "Balm of Gilead", 
-  "name": "Populus candicans", 
+  },
+  "details": "Seems to have a remarkable power over acute colds, especially when accompanied by a deep, hoarse voice, or even aphonia. General insensibility of surface (worse, back and abdomen); rubbing and pounding borne without pain, and is grateful on account of warmth produced. Finger-ends thickened, horny; insensible to pinching and prickling. Instantaneous voice-producer. (COCA.)",
+  "Common names": "Balm of Gilead",
+  "name": "Populus candicans",
   "dosage": "Tincture."
 }

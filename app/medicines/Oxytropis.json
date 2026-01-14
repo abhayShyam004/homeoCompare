@@ -1,60 +1,62 @@
 {
-  "name": "Oxytropis", 
-  "Relationship": "Compare: ASTRAG.; LATHYR.; OXAL-AC.; BARYTA (Loco plant is rich in Baryta). LOLIUM.", 
+  "name": "Oxytropis",
+  "Relationship": "Compare: ASTRAG.; LATHYR.; OXAL-AC.; BARYTA (Loco plant is rich in Baryta). LOLIUM.",
   "Modalities": [
-    "Worse: thinking of symptoms", 
-    "Worse: every other day", 
+    "Worse: thinking of symptoms",
+    "Worse: every other day",
     "Better: after sleep"
-  ], 
-  "Common names": "Loco-weed", 
+  ],
+  "Common names": "Loco-weed",
   "symptoms": {
     "Eyes": [
-      "Paralysis of nerves and muscles of eyes", 
-      "Sight obscured; pupils contracted; do not respond to light"
-    ], 
+      "Paralysis of nerves and muscles of eyes",
+      "Sight obscured",
+      "pupils contracted",
+      "do not respond to light"
+    ],
     "Stomach": [
-      "Epigastrium tender", 
+      "Epigastrium tender",
       "Eructations with colicky pains"
-    ], 
+    ],
     "Rectum": [
-      "Sphincter seems relaxed", 
+      "Sphincter seems relaxed",
       "Stools slip from anus, like lumps of jelly, mushy"
-    ], 
+    ],
     "Urine": [
-      "Urging to urinate when thinking of it", 
-      "Pain in kidneys", 
+      "Urging to urinate when thinking of it",
+      "Pain in kidneys",
       "Profuse flow"
-    ], 
+    ],
     "Mind": [
-      "Disinclined to work or talk", 
-      "Desires to be alone", 
-      "Vertigo", 
-      "Mental depression", 
+      "Disinclined to work or talk",
+      "Desires to be alone",
+      "Vertigo",
+      "Mental depression",
       "Worse, thinking of symptoms"
-    ], 
+    ],
     "Head": [
-      "Feeling of intoxication, with loss of vision", 
-      "Full, warm feeling about head", 
-      "Vertigo", 
-      "Mouth and nose dry", 
+      "Feeling of intoxication, with loss of vision",
+      "Full, warm feeling about head",
+      "Vertigo",
+      "Mouth and nose dry",
       "Pain in maxillary bones and masseter muscles"
-    ], 
+    ],
     "Sleep": [
       "Restless, dreams of quarrel"
-    ], 
+    ],
     "Extremities": [
-      "Pain along ulnar nerve", 
-      "Loss of coordination", 
-      "Numb feeling about spine", 
-      "Patellar tendon reflex lost", 
-      "Pains come and go quickly, but muscles remain sore and stiff", 
+      "Pain along ulnar nerve",
+      "Loss of coordination",
+      "Numb feeling about spine",
+      "Patellar tendon reflex lost",
+      "Pains come and go quickly, but muscles remain sore and stiff",
       "Staggering gait"
-    ], 
+    ],
     "Male": [
-      "No desire or ability", 
+      "No desire or ability",
       "Pain in testicles and along spermatic cord and down thighs"
     ]
-  }, 
-  "details": "Marked action on nervous system. Trembling, sensation of emptiness. Walks backwards. Congestion of spine and paralysis. Pains come and go quickly. Sphincters relaxed. Staggering gait. Reflexes lost.", 
+  },
+  "details": "Marked action on nervous system. Trembling, sensation of emptiness. Walks backwards. Congestion of spine and paralysis. Pains come and go quickly. Sphincters relaxed. Staggering gait. Reflexes lost.",
   "dosage": "Third potency and higher."
 }

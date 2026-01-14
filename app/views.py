@@ -113,6 +113,24 @@ def remedy_compare(request):
                         'dose': data[name].get('dosage', '')
                     }
             context['symptoms'] = symptoms
+            
+            # Track search
+            from .models import SearchQuery
+            try:
+                SearchQuery.objects.create(
+                    remedies=selected_remedies,
+                    category=selected_symptom,
+                    source='boericke'
+                )
+            except: pass
+
+        # Track page view
+        from .models import PageView
+        try:
+            x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+            ip = x_forwarded_for.split(',')[0] if x_forwarded_for else request.META.get('REMOTE_ADDR')
+            PageView.objects.create(page='boericke', ip_address=ip, user_agent=request.META.get('HTTP_USER_AGENT', '')[:500])
+        except: pass
 
         return render(request, 'app/base.html', context)
 
@@ -250,10 +268,25 @@ def allen_compare(request):
                 }
         context['symptoms'] = symptoms
 
+    # Track page view
+    from .models import PageView
+    try:
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        ip = x_forwarded_for.split(',')[0] if x_forwarded_for else request.META.get('REMOTE_ADDR')
+        PageView.objects.create(page='allen', ip_address=ip, user_agent=request.META.get('HTTP_USER_AGENT', '')[:500])
+    except: pass
+
     return render(request, 'app/allen.html', context)
 
 
 def home(request):
+    # Track page view
+    from .models import PageView
+    try:
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        ip = x_forwarded_for.split(',')[0] if x_forwarded_for else request.META.get('REMOTE_ADDR')
+        PageView.objects.create(page='home', ip_address=ip, user_agent=request.META.get('HTTP_USER_AGENT', '')[:500])
+    except: pass
     return render(request, 'landing.html')
 
 
@@ -271,3 +304,175 @@ def thanks(request):
 
 def privacy(request):
     return render(request, 'app/privacy.html')
+
+
+# === ADMIN PANEL ===
+
+from django.db.models import Count
+from django.db.models.functions import TruncDate
+from django.utils import timezone
+from datetime import timedelta
+from .models import PageView, SearchQuery
+
+ADMIN_PASSWORD = 'admin@homeocompare'
+
+
+def track_page_view(request, page_name):
+    """Track a page view"""
+    try:
+        # Get client IP
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+        
+        PageView.objects.create(
+            page=page_name,
+            ip_address=ip,
+            user_agent=request.META.get('HTTP_USER_AGENT', '')[:500]
+        )
+    except Exception as e:
+        print(f"Error tracking page view: {e}")
+
+
+def track_search(remedies, category, source='boericke'):
+    """Track a search query"""
+    try:
+        SearchQuery.objects.create(
+            remedies=remedies,
+            category=category,
+            source=source
+        )
+    except Exception as e:
+        print(f"Error tracking search: {e}")
+
+
+def admin_panel(request):
+    """Admin panel with login and analytics dashboard"""
+    error = None
+    
+    # Check if already logged in
+    is_authenticated = request.session.get('admin_authenticated', False)
+    
+    # Handle login
+    if request.method == 'POST' and not is_authenticated:
+        password = request.POST.get('password', '')
+        if password == ADMIN_PASSWORD:
+            request.session['admin_authenticated'] = True
+            is_authenticated = True
+        else:
+            error = 'Invalid password'
+    
+    # If not authenticated, show login form
+    if not is_authenticated:
+        return render(request, 'app/admin_panel.html', {'authenticated': False, 'error': error})
+    
+    import json
+    from collections import Counter
+    
+    # Get time periods
+    now = timezone.now()
+    today = now.date()
+    week_ago = today - timedelta(days=7)
+    month_ago = today - timedelta(days=30)
+    ninety_days_ago = today - timedelta(days=90)
+    year_start = today.replace(month=1, day=1)
+    
+    # Visitor stats (total page views, not individual pages)
+    visits_today = PageView.objects.filter(timestamp__date=today).count()
+    visits_week = PageView.objects.filter(timestamp__date__gte=week_ago).count()
+    visits_month = PageView.objects.filter(timestamp__date__gte=month_ago).count()
+    visits_90days = PageView.objects.filter(timestamp__date__gte=ninety_days_ago).count()
+    visits_year = PageView.objects.filter(timestamp__date__gte=year_start).count()
+    
+    # Popular remedies
+    all_remedies = []
+    for sq in SearchQuery.objects.all()[:1000]:
+        all_remedies.extend(sq.remedies)
+    popular_remedies = Counter(all_remedies).most_common(10)
+    
+    # Popular categories
+    popular_categories = SearchQuery.objects.values('category').annotate(
+        count=Count('id')
+    ).order_by('-count')[:10]
+    
+    # Chart data for 7 days
+    def get_chart_data(days):
+        start_date = today - timedelta(days=days-1)
+        daily = PageView.objects.filter(
+            timestamp__date__gte=start_date
+        ).annotate(
+            date=TruncDate('timestamp')
+        ).values('date').annotate(
+            count=Count('id')
+        ).order_by('date')
+        
+        # Create dict for easy lookup
+        daily_dict = {d['date']: d['count'] for d in daily}
+        
+        # Fill in all days
+        labels = []
+        values = []
+        for i in range(days):
+            d = start_date + timedelta(days=i)
+            labels.append(d.strftime('%b %d'))
+            values.append(daily_dict.get(d, 0))
+        
+        return labels, values
+    
+    labels_7, values_7 = get_chart_data(7)
+    labels_30, values_30 = get_chart_data(30)
+    labels_90, values_90 = get_chart_data(90)
+    
+    context = {
+        'authenticated': True,
+        'visits_today': visits_today,
+        'visits_week': visits_week,
+        'visits_month': visits_month,
+        'visits_90days': visits_90days,
+        'visits_year': visits_year,
+        'popular_remedies': popular_remedies,
+        'popular_categories': popular_categories,
+        'chart_labels_7': json.dumps(labels_7),
+        'chart_values_7': json.dumps(values_7),
+        'chart_labels_30': json.dumps(labels_30),
+        'chart_values_30': json.dumps(values_30),
+        'chart_labels_90': json.dumps(labels_90),
+        'chart_values_90': json.dumps(values_90),
+    }
+    
+    return render(request, 'app/admin_panel.html', context)
+
+
+def admin_logout(request):
+    """Logout from admin panel"""
+    request.session['admin_authenticated'] = False
+    from django.shortcuts import redirect
+    return redirect('admin_panel')
+
+
+def track_search_api(request):
+    """API endpoint for tracking searches from JavaScript"""
+    from django.http import JsonResponse
+    from django.views.decorators.csrf import csrf_exempt
+    import json
+    
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            remedies = data.get('remedies', [])
+            category = data.get('category', '')
+            source = data.get('source', 'allen')
+            
+            if remedies and category:
+                SearchQuery.objects.create(
+                    remedies=remedies,
+                    category=category,
+                    source=source
+                )
+                return JsonResponse({'status': 'ok'})
+        except Exception as e:
+            print(f"Track search error: {e}")
+    
+    return JsonResponse({'status': 'error'}, status=400)

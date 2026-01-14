@@ -1,63 +1,68 @@
 {
-  "name": "Sambucus nigra", 
+  "name": "Sambucus nigra",
   "Modalities": [
-    "Worse: sleep", 
-    "Worse: during rest", 
-    "Worse: after eating fruit", 
-    "Better: sitting up in bed", 
+    "Worse: sleep",
+    "Worse: during rest",
+    "Worse: after eating fruit",
+    "Better: sitting up in bed",
     "Better: motion"
-  ], 
-  "Common names": "Elder", 
+  ],
+  "Common names": "Elder",
   "symptoms": {
     "Respiratory": [
-      "Child awakes suddenly, nearly suffocating, sits up, turns blue", 
-      "Paroxysmal, suffocative cough, coming on about midnight, with crying and dyspnoea", 
-      "Loose choking cough", 
-      "Spasmodic croup", 
-      "Hoarseness with tenacious mucus in larynx", 
-      "Miller's asthma", 
-      "When nursing child must let go of nipple, nose blocked up, cannot breathe", 
-      "Dry coryza", 
-      "Cannot expire", 
-      "Chest oppressed with pressure in stomach, and nausea", 
-      "Sniffles of infants; nose dry and obstructed"
-    ], 
+      "Child awakes suddenly, nearly suffocating, sits up, turns blue",
+      "Paroxysmal, suffocative cough, coming on about midnight, with crying and dyspnoea",
+      "Loose choking cough",
+      "Spasmodic croup",
+      "Hoarseness with tenacious mucus in larynx",
+      "Miller's asthma",
+      "When nursing child must let go of nipple, nose blocked up, cannot breathe",
+      "Dry coryza",
+      "Cannot expire",
+      "Chest oppressed with pressure in stomach, and nausea",
+      "Sniffles of infants",
+      "nose dry and obstructed"
+    ],
     "Urine": [
-      "Acute nephritis; dropsical symptoms, with vomiting", 
-      "Profuse urine with dry heat of skin", 
+      "Acute nephritis",
+      "dropsical symptoms, with vomiting",
+      "Profuse urine with dry heat of skin",
       "Frequent micturition, with scanty urine"
-    ], 
+    ],
     "Mind": [
-      "Very easily frightened", 
-      "Sees images when shutting eyes", 
-      "Constant fretfulness", 
+      "Very easily frightened",
+      "Sees images when shutting eyes",
+      "Constant fretfulness",
       "Fright followed by suffocative attacks"
-    ], 
+    ],
     "Abdomen": [
-      "Colic, with nausea and flatulence; frequent watery, slimy stools"
-    ], 
+      "Colic, with nausea and flatulence",
+      "frequent watery, slimy stools"
+    ],
     "Fever": [
-      "Dreads uncovering", 
-      "Dry, deep cough precedes the fever paroxysm", 
-      "Dry heat while sleeping", 
+      "Dreads uncovering",
+      "Dry, deep cough precedes the fever paroxysm",
+      "Dry heat while sleeping",
       "Profuse sweat over entire body during waking hours"
-    ], 
+    ],
     "Skin": [
-      "Bloated and swollen; general dropsy; profuse sweat on waking", 
+      "Bloated and swollen",
+      "general dropsy",
+      "profuse sweat on waking",
       "Dry heat of skin during sleep"
-    ], 
+    ],
     "Extremities": [
-      "Edematous swelling in legs, insteps, and feet", 
-      "Feet icy cold", 
-      "Hands turn blue", 
+      "Edematous swelling in legs, insteps, and feet",
+      "Feet icy cold",
+      "Hands turn blue",
       "Debilitating night-sweats"
-    ], 
+    ],
     "Face": [
-      "Heat and perspiration of face", 
-      "Red, burning spots on cheeks", 
+      "Heat and perspiration of face",
+      "Red, burning spots on cheeks",
       "Turns blue with cough"
     ]
-  }, 
-  "details": "Acts especially on the respiratory organs. Dry coryza of infants, snuffles, edematous swellings. PROFUSE SWEAT accompanies many affections.", 
+  },
+  "details": "Acts especially on the respiratory organs. Dry coryza of infants, snuffles, edematous swellings. PROFUSE SWEAT accompanies many affections.",
   "dosage": "Tincture, to sixth potency."
 }

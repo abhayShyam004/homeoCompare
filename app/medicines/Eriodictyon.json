@@ -1,27 +1,30 @@
 {
-  "name": "Eriodictyon", 
-  "Relationship": "Compare: GRIND.; ARAL.; EUCALYPT.; IPEC.", 
-  "Common names": "Yerba Santa", 
+  "name": "Eriodictyon",
+  "Relationship": "Compare: GRIND.; ARAL.; EUCALYPT.; IPEC.",
+  "Common names": "Yerba Santa",
   "symptoms": {
     "Head": [
-      "Pain in ears", 
-      "Coryza with dizziness and sneezing", 
-      "Burning in throat", 
-      "Coryza", 
-      "Dizzy, feels intoxicated", 
-      "Foul mouth in morning", 
-      "Pressure outwards; worse, occiput"
-    ], 
+      "Pain in ears",
+      "Coryza with dizziness and sneezing",
+      "Burning in throat",
+      "Coryza",
+      "Dizzy, feels intoxicated",
+      "Foul mouth in morning",
+      "Pressure outwards",
+      "worse, occiput"
+    ],
     "Respiratory": [
-      "Burning in fauces", 
-      "Chronic bronchitis, bronchial tuberculosis, with profuse, easily raised bronchial secretion, giving relief", 
-      "Wheezing; asthma, with coryza and mucous secretions", 
+      "Burning in fauces",
+      "Chronic bronchitis, bronchial tuberculosis, with profuse, easily raised bronchial secretion, giving relief",
+      "Wheezing",
+      "asthma, with coryza and mucous secretions",
       "Dull pain in right lung"
-    ], 
+    ],
     "Male": [
-      "Sore, dragging in testicle, could not bear any pressure; better gentle support"
+      "Sore, dragging in testicle, could not bear any pressure",
+      "better gentle support"
     ]
-  }, 
-  "details": "A remedy for asthmatic and bronchial affections. Bronchial phthisis, with night-sweats and emaciation. Asthma relieved by expectoration. COUGH AFTER INFLUENZA. Furthers absorption of effusion in plural cavity. Appetite poor and impaired digestion. Whooping cough.", 
+  },
+  "details": "A remedy for asthmatic and bronchial affections. Bronchial phthisis, with night-sweats and emaciation. Asthma relieved by expectoration. COUGH AFTER INFLUENZA. Furthers absorption of effusion in plural cavity. Appetite poor and impaired digestion. Whooping cough.",
   "dosage": "Tincture in doses of 2 to 20 drops and attenuations."
 }

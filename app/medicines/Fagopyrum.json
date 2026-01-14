@@ -1,70 +1,74 @@
 {
-  "name": "Fagopyrum", 
-  "Relationship": "Compare: DOLICHOS; BOVISTA; URTICA.", 
+  "name": "Fagopyrum",
+  "Relationship": "Compare: DOLICHOS; BOVISTA; URTICA.",
   "Modalities": [
-    "Better: cold water", 
-    "Better: coffee; worse", 
-    "Better: in afternoon; from sunlight", 
+    "Better: cold water",
+    "Better: coffee; worse",
+    "Better: in afternoon; from sunlight",
     "Better: scratching"
-  ], 
-  "Common names": "Buckwheat", 
+  ],
+  "Common names": "Buckwheat",
   "symptoms": {
     "Heart": [
-      "Pain around heart, better lying on back, extending to left shoulder and arm", 
-      "Pulse irregular, intermittent, rapid", 
-      "Light feeling in chest", 
-      "Palpitation with oppression", 
+      "Pain around heart, better lying on back, extending to left shoulder and arm",
+      "Pulse irregular, intermittent, rapid",
+      "Light feeling in chest",
+      "Palpitation with oppression",
       "Throbbing in all arteries after retiring"
-    ], 
+    ],
     "Eyes": [
       "Itching and smarting, swelling, heat and soreness"
-    ], 
+    ],
     "Stomach": [
-      "Persistent, morning nausea", 
-      "Eructations of scalding, hot, acid, watery substance; better, coffee", 
-      "Drooling", 
+      "Persistent, morning nausea",
+      "Eructations of scalding, hot, acid, watery substance",
+      "better, coffee",
+      "Drooling",
       "Bad taste in the morning"
-    ], 
+    ],
     "Head": [
-      "Inability to study or remember", 
-      "Head hot, better bending backward, with tired neck", 
-      "Itching in and around eyes and ears", 
-      "Cerebral hyperaemia", 
-      "Itching of eyes and ears", 
-      "Depressed and irritable", 
-      "Bursting pains", 
-      "Pains deep in head, with upward pressure", 
+      "Inability to study or remember",
+      "Head hot, better bending backward, with tired neck",
+      "Itching in and around eyes and ears",
+      "Cerebral hyperaemia",
+      "Itching of eyes and ears",
+      "Depressed and irritable",
+      "Bursting pains",
+      "Pains deep in head, with upward pressure",
       "Occipital headache"
-    ], 
+    ],
     "Nose": [
-      "Fluent coryza, with sneezing, followed by dryness and crust formation", 
+      "Fluent coryza, with sneezing, followed by dryness and crust formation",
       "Sore, red, inflamed"
-    ], 
+    ],
     "Female": [
-      "Pruritus vulvae, with yellow leucorrhoea, worse, rest", 
+      "Pruritus vulvae, with yellow leucorrhoea, worse, rest",
       "Burning in right ovary"
-    ], 
+    ],
     "Skin": [
-      "Skin, hot, swollen", 
-      "Sore red blotches", 
-      "Itching of hands, deep in", 
-      "Itching of knees and elbows and hairy portions", 
-      "Itching; better by bathing in cold water; worse scratching, touch and retiring", 
-      "Vesicular, pustular, phlegmonous dermatitis", 
+      "Skin, hot, swollen",
+      "Sore red blotches",
+      "Itching of hands, deep in",
+      "Itching of knees and elbows and hairy portions",
+      "Itching",
+      "better by bathing in cold water",
+      "worse scratching, touch and retiring",
+      "Vesicular, pustular, phlegmonous dermatitis",
       "Blind boils"
-    ], 
+    ],
     "Throat": [
-      "Uvula elongated, tonsils swollen", 
+      "Uvula elongated, tonsils swollen",
       "Soreness and feeling of excoriation, deep down pharynx"
-    ], 
+    ],
     "Extremities": [
-      "Pain in shoulder, with pain along fingers", 
-      "Stiffness and bruised sensation in the muscles of the neck, with sensation as if nape of neck could not support head", 
-      "Feet numb and pricking", 
-      "Vehement itching in arms and legs; worse towards evening", 
+      "Pain in shoulder, with pain along fingers",
+      "Stiffness and bruised sensation in the muscles of the neck, with sensation as if nape of neck could not support head",
+      "Feet numb and pricking",
+      "Vehement itching in arms and legs",
+      "worse towards evening",
       "Streaking pains in arms and legs"
     ]
-  }, 
-  "details": "Its action on the skin, producing pruritus, is very marked. Visible pulsation of arteries. Fluent coryza. Offensive excretions. Itching erythema. PRURITUS SENILIS. Post-nasal catarrh; dry crusts, granular appearance of posterior nares with itching.", 
+  },
+  "details": "Its action on the skin, producing pruritus, is very marked. Visible pulsation of arteries. Fluent coryza. Offensive excretions. Itching erythema. PRURITUS SENILIS. Post-nasal catarrh; dry crusts, granular appearance of posterior nares with itching.",
   "dosage": "Third potency and 12X."
 }

@@ -1,97 +1,108 @@
 {
-  "name": "Stramonium", 
-  "Relationship": "Compare especially: HYOSCY. and BELL. It has less fever than BELL., but more than HYOS. It causes more functional excitement of the brain, but never approaches the true inflammatory condition of BELL. Antidotes: BELL.; TABAC.; NUX.", 
+  "name": "Stramonium",
+  "Relationship": "Compare especially: HYOSCY. and BELL. It has less fever than BELL., but more than HYOS. It causes more functional excitement of the brain, but never approaches the true inflammatory condition of BELL. Antidotes: BELL.; TABAC.; NUX.",
   "Modalities": [
-    "Worse: in dark room", 
-    "Worse: when alone", 
-    "Worse: looking at bright or shining objects", 
-    "Worse: after sleep", 
-    "Worse: on swallowing", 
-    "Better: from bright light", 
-    "Better: company", 
+    "Worse: in dark room",
+    "Worse: when alone",
+    "Worse: looking at bright or shining objects",
+    "Worse: after sleep",
+    "Worse: on swallowing",
+    "Better: from bright light",
+    "Better: company",
     "Better: warmth"
-  ], 
-  "Common names": "Thorn-apple", 
+  ],
+  "Common names": "Thorn-apple",
   "symptoms": {
     "Eyes": [
-      "Parts of the body seem enormously swollen", 
-      "Seem prominent, staring wide open; pupils dilated", 
-      "Loss of vision; complains that it is dark, and calls for light", 
-      "All objects look black", 
-      "Small objects look large", 
+      "Parts of the body seem enormously swollen",
+      "Seem prominent, staring wide open",
+      "pupils dilated",
+      "Loss of vision",
+      "complains that it is dark, and calls for light",
+      "All objects look black",
+      "Small objects look large",
       "Strabismus"
-    ], 
+    ],
     "Fever": [
-      "Violent fever", 
+      "Violent fever",
       "Profuse sweat, which does not relieve"
-    ], 
+    ],
     "Stomach": [
-      "Violent thirst", 
-      "Food tastes like straw", 
+      "Violent thirst",
+      "Food tastes like straw",
       "Vomiting of mucus and green bile"
-    ], 
+    ],
     "Urine": [
       "Suppression, bladder empty"
-    ], 
+    ],
     "Mind": [
-      "Rapid changes from joy to sadness", 
-      "Delusions about his identity; thinks himself tall, double, a part missing", 
-      "Cannot bear solitude or darkness; must have light and company", 
-      "Loquacious, garrulous, laughing, singing, swearing, praying, rhyming", 
-      "Delirium, with desire to escape", 
-      "Sees ghosts, hears voices, talks with spirits", 
-      "Violent and lewd", 
-      "Religious mania", 
-      "Devout, earnest, beseeching and ceaseless talking", 
+      "Rapid changes from joy to sadness",
+      "Delusions about his identity",
+      "thinks himself tall, double, a part missing",
+      "Cannot bear solitude or darkness",
+      "must have light and company",
+      "Loquacious, garrulous, laughing, singing, swearing, praying, rhyming",
+      "Delirium, with desire to escape",
+      "Sees ghosts, hears voices, talks with spirits",
+      "Violent and lewd",
+      "Religious mania",
+      "Devout, earnest, beseeching and ceaseless talking",
       "Sight of water or anything glittering brings on spasms"
-    ], 
+    ],
     "Head": [
-      "Auditory hallucinations", 
-      "Boring pain, preceded by obscure vision", 
-      "Raises head frequently from the pillow", 
-      "Pain in forehead and over eyebrows, beginning at nine am; worse until noon", 
-      "Rush of blood to head; staggers, with tendency to fall forward and to the left"
-    ], 
+      "Auditory hallucinations",
+      "Boring pain, preceded by obscure vision",
+      "Raises head frequently from the pillow",
+      "Pain in forehead and over eyebrows, beginning at nine am",
+      "worse until noon",
+      "Rush of blood to head",
+      "staggers, with tendency to fall forward and to the left"
+    ],
     "Face": [
-      "Pale", 
-      "Expression of terror", 
-      "Blood rushes to face; distorted", 
-      "Hot, red; circumscribed redness of cheeks"
-    ], 
+      "Pale",
+      "Expression of terror",
+      "Blood rushes to face",
+      "distorted",
+      "Hot, red",
+      "circumscribed redness of cheeks"
+    ],
     "Female": [
-      "Puerperal mania, with characteristic mental symptoms and profuse sweatings", 
-      "Convulsions after labor", 
+      "Puerperal mania, with characteristic mental symptoms and profuse sweatings",
+      "Convulsions after labor",
       "Metrorrhagia, with loquacity, singing, praying"
-    ], 
+    ],
     "Skin": [
-      "Shining red flash", 
+      "Shining red flash",
       "Effects of suppressed eruption in scarlatina, with delirium, etc."
-    ], 
+    ],
     "Mouth": [
-      "Cannot swallow on account of spasm", 
-      "Stammering", 
-      "Chewing motion", 
-      "Dry; dribbling of viscid saliva", 
-      "Risus sardonicus", 
+      "Cannot swallow on account of spasm",
+      "Stammering",
+      "Chewing motion",
+      "Dry",
+      "dribbling of viscid saliva",
+      "Risus sardonicus",
       "Aversion to water"
-    ], 
+    ],
     "Extremities": [
-      "Chorea; spasms partial, constantly changing", 
-      "Graceful, rhythmic motions", 
-      "Trembling, twitching of tendons, staggering gait", 
-      "Violent pain in left hip", 
+      "Chorea",
+      "spasms partial, constantly changing",
+      "Graceful, rhythmic motions",
+      "Trembling, twitching of tendons, staggering gait",
+      "Violent pain in left hip",
       "Convulsions of upper extremities and of isolated groups of muscles"
-    ], 
+    ],
     "Male": [
-      "Hands constantly kept on genitals", 
+      "Hands constantly kept on genitals",
       "Sexual erethism, with indecent speech and action"
-    ], 
+    ],
     "Sleep": [
-      "Deep snoring sleep", 
-      "Awakens terrified; screams with fright", 
+      "Deep snoring sleep",
+      "Awakens terrified",
+      "screams with fright",
       "Sleepy, but cannot sleep"
     ]
-  }, 
-  "details": "The entire force of this drug seems to be expended on the brain, though the skin and throat show some disturbance. Suppressed secretions and excretions. Sensation as if limbs were separated from body. Delirium tremens. Absence of pain and muscular mobility especially of muscles of expression and of locomotion. Gyratory and graceful motions. Parkinsonism.", 
+  },
+  "details": "The entire force of this drug seems to be expended on the brain, though the skin and throat show some disturbance. Suppressed secretions and excretions. Sensation as if limbs were separated from body. Delirium tremens. Absence of pain and muscular mobility especially of muscles of expression and of locomotion. Gyratory and graceful motions. Parkinsonism.",
   "dosage": "Thirtieth potency and lower."
 }

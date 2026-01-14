@@ -1,34 +1,35 @@
 {
-  "name": "Millefolium", 
-  "Relationship": "Compare: FICUS VENOSA (PAKUR.) Hemorrhage from bowels and lungs. ACALYPHA and HELIX TOSTA - Snail (in hemoptysis, diseases of chest, consumption); also, SECALE; IPEC.; ERECH.; GERAN.; HAMAM.", 
-  "Common names": "Yarrow", 
+  "name": "Millefolium",
+  "Relationship": "Compare: FICUS VENOSA (PAKUR.) Hemorrhage from bowels and lungs. ACALYPHA and HELIX TOSTA - Snail (in hemoptysis, diseases of chest, consumption); also, SECALE; IPEC.; ERECH.; GERAN.; HAMAM.",
+  "Common names": "Yarrow",
   "symptoms": {
     "Head": [
-      "Sensation as if he had forgotten something", 
-      "Vertigo when moving slowly", 
-      "The head seems full of blood", 
-      "Piercing thrusts of pain", 
+      "Sensation as if he had forgotten something",
+      "Vertigo when moving slowly",
+      "The head seems full of blood",
+      "Piercing thrusts of pain",
       "Convulsions and epilepsy from suppressed menses"
-    ], 
+    ],
     "Respiratory": [
-      "Cough, with bloody expectoration, in suppressed menses or hemorrhoids", 
-      "Violent palpitations", 
+      "Cough, with bloody expectoration, in suppressed menses or hemorrhoids",
+      "Violent palpitations",
       "Hemoptysis in incipient phthisis"
-    ], 
+    ],
     "Stool": [
-      "Hemorrhage from bowels", 
-      "Bleeding hemorrhoids", 
+      "Hemorrhage from bowels",
+      "Bleeding hemorrhoids",
       "Urine bloody"
-    ], 
+    ],
     "Nose": [
       "Nosebleed  piercing pain from eyes to root of nose"
-    ], 
+    ],
     "Female": [
-      "Painful varices during pregnancy", 
-      "Hemorrhage from uterus; bright red, fluid", 
+      "Painful varices during pregnancy",
+      "Hemorrhage from uterus",
+      "bright red, fluid",
       "Menses early, profuse, protracted"
     ]
-  }, 
-  "details": "An invaluable remedy for various types of hemorrhages; blood bright red. Incarcerated hernia; small-pox, with great pain in pit of stomach. After operations for stone. Bad effects from fall from a height; over-lifting. CONTINUED HIGH TEMPERATURE. Hemoptysis.", 
+  },
+  "details": "An invaluable remedy for various types of hemorrhages; blood bright red. Incarcerated hernia; small-pox, with great pain in pit of stomach. After operations for stone. Bad effects from fall from a height; over-lifting. CONTINUED HIGH TEMPERATURE. Hemoptysis.",
   "dosage": "Tincture, to third potency."
 }

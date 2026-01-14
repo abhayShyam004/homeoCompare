@@ -1,30 +1,32 @@
 {
-  "name": "Gambogia", 
-  "Relationship": "Compare: CROTON; ALOES; POD.", 
+  "name": "Gambogia",
+  "Relationship": "Compare: CROTON; ALOES; POD.",
   "Modalities": [
     "Worse: towards evening and at night"
-  ], 
-  "Common names": "Garcinia Morella Gummi Gutti", 
+  ],
+  "Common names": "Garcinia Morella Gummi Gutti",
   "symptoms": {
     "Head": [
-      "Itching and burning in eyes; lids stick together, with sneezing", 
+      "Itching and burning in eyes",
+      "lids stick together, with sneezing",
       "Heavy, with inertia, and drowsiness"
-    ], 
+    ],
     "Stomach": [
-      "Diarrhoea, with sudden and forcible ejection of bilious stools", 
-      "Tenderness in epigastrium", 
-      "Pain in coccyx", 
-      "Tenesmus after, with burning at anus", 
-      "Pain and distention of abdomen from flatulence, after stool", 
-      "Great irritability of the stomach; burning, smarting, and dryness of the tongue and throat", 
-      "Pain in the stomach after food", 
-      "Feeling of coldness at edge of teeth", 
-      "Ileocecal region sensitive to pressure", 
-      "Profuse, watery diarrhoea in hot weather, particularly old people", 
-      "Dysentery, with retained scybala, with pain in sacral region", 
+      "Diarrhoea, with sudden and forcible ejection of bilious stools",
+      "Tenderness in epigastrium",
+      "Pain in coccyx",
+      "Tenesmus after, with burning at anus",
+      "Pain and distention of abdomen from flatulence, after stool",
+      "Great irritability of the stomach",
+      "burning, smarting, and dryness of the tongue and throat",
+      "Pain in the stomach after food",
+      "Feeling of coldness at edge of teeth",
+      "Ileocecal region sensitive to pressure",
+      "Profuse, watery diarrhoea in hot weather, particularly old people",
+      "Dysentery, with retained scybala, with pain in sacral region",
       "Rumbling and rolling"
     ]
-  }, 
-  "details": "The use of this drug in Homeopathy has been confined to its action on the alimentary tract. It produces a diarrhoea very similar to Croton. From its pathogenesis, it is very evident that it has very intense and definite action especially on the gastroenteric tract.", 
+  },
+  "details": "The use of this drug in Homeopathy has been confined to its action on the alimentary tract. It produces a diarrhoea very similar to Croton. From its pathogenesis, it is very evident that it has very intense and definite action especially on the gastroenteric tract.",
   "dosage": "Third to thirtieth potency. Gamboge painted on the chest in lung tuberculosis is considered by Abrams specific and incipient cases are symptomatically cured in several weeks."
 }

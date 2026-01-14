@@ -1,30 +1,32 @@
 {
-  "name": "Vipera", 
-  "Relationship": "PELIUS BERUS - Adder. (Prostration and fainting, faltering pulse, skin yellow, PAIN ABOUT NAVEL. Swelling of arm, tongue, right eye; giddiness, nervousness, faintness, sickness, compression of chest, could not breathe properly or take a deep breath; aching and stiffness of limbs, joints stiff, collapsed feeling, great thirst.) EEL SERUM (heart and kidney diseases. Failure of compensation and impending asystole).", 
-  "Common names": "The German Viper", 
+  "name": "Vipera",
+  "Relationship": "PELIUS BERUS - Adder. (Prostration and fainting, faltering pulse, skin yellow, PAIN ABOUT NAVEL. Swelling of arm, tongue, right eye; giddiness, nervousness, faintness, sickness, compression of chest, could not breathe properly or take a deep breath; aching and stiffness of limbs, joints stiff, collapsed feeling, great thirst.) EEL SERUM (heart and kidney diseases. Failure of compensation and impending asystole).",
+  "Common names": "The German Viper",
   "symptoms": {
     "Abdomen": [
-      "Violent pain in enlarged liver, with jaundice and fever; extends to shoulder and hip"
-    ], 
+      "Violent pain in enlarged liver, with jaundice and fever",
+      "extends to shoulder and hip"
+    ],
     "Skin": [
-      "Lymphangioma, boils, carbuncles, with bursting sensation, relieved by elevating parts", 
-      "Skin peels in large plates", 
+      "Lymphangioma, boils, carbuncles, with bursting sensation, relieved by elevating parts",
+      "Skin peels in large plates",
       "Livid"
-    ], 
+    ],
     "Extremities": [
-      "Varicose veins and acute phlebitis", 
-      "Veins swollen, sensitive; bursting pain", 
-      "When they are allowed to hand down, it seems as if they would burst, and the pain is unbearable", 
-      "Patient is obliged to keep the extremities elevated", 
+      "Varicose veins and acute phlebitis",
+      "Veins swollen, sensitive",
+      "bursting pain",
+      "When they are allowed to hand down, it seems as if they would burst, and the pain is unbearable",
+      "Patient is obliged to keep the extremities elevated",
       "Severe cramps in lower extremities"
-    ], 
+    ],
     "Face": [
-      "Lips and tongue swollen, livid, protruding", 
-      "Tongue dry, brown, black", 
-      "Excessively swollen", 
+      "Lips and tongue swollen, livid, protruding",
+      "Tongue dry, brown, black",
+      "Excessively swollen",
       "Speech difficult"
     ]
-  }, 
-  "details": "Viper poisoning causes a temporary increase in reflexes, paresis supervenes, a paraplegia of the lower extremities extending upwards. Resembles acute ascending paralysis of Landry. (Wells). Has special action on kidneys and induces hematuria. Cardiac dropsy. Indicated in inflammation of veins with great swelling; BURSTING SENSATION. ENLARGEMENT OF LIVER. Ailments of menopause. Oedema of glottis. Poly-neuritis, polio-myelitis. Adder. Prostration and fainting, faltering pulse, skin yellow, PAIN ABOUT NAVEL. Swelling of arm, tongue, right eye; giddiness, nervousness, faintness, sickness, compression of chest, could not breathe properly or take a deep breath; aching and stiffness of limbs, joints stiff, collapsed feeling, great thirst.", 
+  },
+  "details": "Viper poisoning causes a temporary increase in reflexes, paresis supervenes, a paraplegia of the lower extremities extending upwards. Resembles acute ascending paralysis of Landry. (Wells). Has special action on kidneys and induces hematuria. Cardiac dropsy. Indicated in inflammation of veins with great swelling; BURSTING SENSATION. ENLARGEMENT OF LIVER. Ailments of menopause. Oedema of glottis. Poly-neuritis, polio-myelitis. Adder. Prostration and fainting, faltering pulse, skin yellow, PAIN ABOUT NAVEL. Swelling of arm, tongue, right eye; giddiness, nervousness, faintness, sickness, compression of chest, could not breathe properly or take a deep breath; aching and stiffness of limbs, joints stiff, collapsed feeling, great thirst.",
   "dosage": "Twelfth potency."
 }

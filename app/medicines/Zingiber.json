@@ -1,57 +1,64 @@
 {
   "symptoms": {
     "Head": [
-      "Pain over eyebrows", 
-      "Hemicrania; sudden glimmering before eyes; feels confused and empty"
-    ], 
+      "Pain over eyebrows",
+      "Hemicrania",
+      "sudden glimmering before eyes",
+      "feels confused and empty"
+    ],
     "Respiratory": [
-      "Hoarseness", 
-      "Asthma, without anxiety, worse toward morning", 
-      "Smarting below larynx; breathing difficult", 
-      "Scratching sensation in throat; stitches in chest", 
-      "Cough dry, hacking; copious morning sputa"
-    ], 
+      "Hoarseness",
+      "Asthma, without anxiety, worse toward morning",
+      "Smarting below larynx",
+      "breathing difficult",
+      "Scratching sensation in throat",
+      "stitches in chest",
+      "Cough dry, hacking",
+      "copious morning sputa"
+    ],
     "Stomach": [
-      "Acidity", 
-      "Heaviness in stomach on awakening with wind and rumbling, great thirst and emptiness", 
-      "Feels heavy, like from a stone", 
-      "Complaints from eating melons and drinking impure water", 
-      "Taste of food remains long, especially of bread and toast", 
+      "Acidity",
+      "Heaviness in stomach on awakening with wind and rumbling, great thirst and emptiness",
+      "Feels heavy, like from a stone",
+      "Complaints from eating melons and drinking impure water",
+      "Taste of food remains long, especially of bread and toast",
       "Pain from pit to under sternum, worse eating"
-    ], 
+    ],
     "Urine": [
-      "After urinating, continues to ooze in drops", 
-      "Urine thick, turbid, of strong odor, suppressed", 
-      "Stinging, burning in orifice", 
-      "Complete suppression after typhoid", 
-      "Yellow discharge from urethra", 
+      "After urinating, continues to ooze in drops",
+      "Urine thick, turbid, of strong odor, suppressed",
+      "Stinging, burning in orifice",
+      "Complete suppression after typhoid",
+      "Yellow discharge from urethra",
       "Frequent desire to urinate"
-    ], 
+    ],
     "Abdomen": [
-      "Hemorrhoids hot, painful, sore", 
-      "Colic, diarrhoea, extremely loose bowels", 
-      "Hot, sore, painful anus during pregnancy", 
-      "Anus red and inflamed", 
-      "Chronic intestinal catarrh", 
+      "Hemorrhoids hot, painful, sore",
+      "Colic, diarrhoea, extremely loose bowels",
+      "Hot, sore, painful anus during pregnancy",
+      "Anus red and inflamed",
+      "Chronic intestinal catarrh",
       "Diarrhoea from drinking bad water, with much flatulence, cutting pain, relaxation of sphincter"
-    ], 
+    ],
     "Nose": [
-      "Feels obstructed and dry", 
-      "Intolerable itching; red pimples"
-    ], 
+      "Feels obstructed and dry",
+      "Intolerable itching",
+      "red pimples"
+    ],
     "Extremities": [
-      "Very weak in all joints", 
-      "Back lame", 
+      "Very weak in all joints",
+      "Back lame",
       "Cramps in soles and palms"
-    ], 
+    ],
     "Male": [
-      "Itching of prepuce", 
-      "Sexual desire excited; painful erections", 
+      "Itching of prepuce",
+      "Sexual desire excited",
+      "painful erections",
       "Emissions"
     ]
-  }, 
-  "Common names": "Ginger", 
-  "name": "Zingiber", 
-  "Relationship": "Compare: CALAD.", 
+  },
+  "Common names": "Ginger",
+  "name": "Zingiber",
+  "Relationship": "Compare: CALAD.",
   "details": "States of debility in the digestive tract, and sexual system and respiratory troubles, call for this remedy. Complete cessation of function of kidneys."
 }

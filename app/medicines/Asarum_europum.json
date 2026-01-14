@@ -1,66 +1,71 @@
 {
-  "name": "Asarum europum", 
-  "Relationship": "Asarum Canadensa - Wild Ginger. (Colds, followed by amenorrhoea and gastroenteritis. Suppressed colds.) Compare: Ipecac., especially in diarrhoea; Silica; Nux; China.", 
+  "name": "Asarum europum",
+  "Relationship": "Asarum Canadensa - Wild Ginger. (Colds, followed by amenorrhoea and gastroenteritis. Suppressed colds.) Compare: Ipecac., especially in diarrhoea; Silica; Nux; China.",
   "Modalities": [
-    "Worse: in cold dry weather; penetrating sounds", 
+    "Worse: in cold dry weather; penetrating sounds",
     "Better: from washing; in damp and wet weather"
-  ], 
-  "Common names": "European Snake-root", 
+  ],
+  "Common names": "European Snake-root",
   "symptoms": {
     "Eyes": [
-      "Asthenopia", 
-      "Better, in cold air or water; worse, sunlight and wind", 
-      "Feel stiff; burn; feel cold", 
+      "Asthenopia",
+      "Better, in cold air or water",
+      "worse, sunlight and wind",
+      "Feel stiff",
+      "burn",
+      "feel cold",
       "Darting pains in eyes after operations"
-    ], 
+    ],
     "Fever": [
-      "Chilliness, single parts get icy cold", 
+      "Chilliness, single parts get icy cold",
       "Easily excited perspiration"
-    ], 
+    ],
     "Stomach": [
-      "Clean tongue", 
-      "Smoking tobacco tastes bitter", 
-      "Accumulation of cold, watery saliva", 
-      "Nausea; worse after eating", 
-      "Great faintness", 
-      "Loss of appetite, flatulence, eructation, and vomiting", 
+      "Clean tongue",
+      "Smoking tobacco tastes bitter",
+      "Accumulation of cold, watery saliva",
+      "Nausea",
+      "worse after eating",
+      "Great faintness",
+      "Loss of appetite, flatulence, eructation, and vomiting",
       "Desire for alcoholic drinks"
-    ], 
+    ],
     "Head": [
-      "Coryza, with sneezing", 
-      "Tension of scalp; hair painful", 
+      "Coryza, with sneezing",
+      "Tension of scalp",
+      "hair painful",
       "Compressive pain"
-    ], 
+    ],
     "Mind": [
-      "Sensibility increased, even from mere imagination", 
+      "Sensibility increased, even from mere imagination",
       "Thoughts vanish, with drawing pressure in forehead"
-    ], 
+    ],
     "Back": [
-      "Paralytic pain in muscles of nape of neck", 
+      "Paralytic pain in muscles of nape of neck",
       "Weakness, with staggering"
-    ], 
+    ],
     "Respiratory": [
-      "Short respiration", 
+      "Short respiration",
       "Nervous, hacking cough"
-    ], 
+    ],
     "Female": [
-      "Violent pain in small of back", 
-      "Tenacious, yellow leucorrhoea", 
+      "Violent pain in small of back",
+      "Tenacious, yellow leucorrhoea",
       "Menses too early, long lasting, black"
-    ], 
+    ],
     "Rectum": [
-      "Prolapse", 
-      "Strings of odorless, yellow mucus pass from bowels", 
-      "Undigested stools", 
+      "Prolapse",
+      "Strings of odorless, yellow mucus pass from bowels",
+      "Undigested stools",
       "Diarrhoea of tough mucus"
-    ], 
+    ],
     "Ears": [
-      "Sensation as if plugged up", 
-      "Catarrh with deafness", 
-      "Heat of external ear", 
+      "Sensation as if plugged up",
+      "Catarrh with deafness",
+      "Heat of external ear",
       "Noises"
     ]
-  }, 
-  "details": "A remedy for nervous affections, loss of energy, with excessive ERETHISM. SCRATCHING ON SILK OR LINEN OR PAPER UNBEARABLE. Pains and spasmodic muscular actions. Nervous deafness and asthenopia. Cold shivers from any emotion. Feels as if parts were pressed together. Tension and contractive sensations. ALWAYS FEELS COLD.", 
+  },
+  "details": "A remedy for nervous affections, loss of energy, with excessive ERETHISM. SCRATCHING ON SILK OR LINEN OR PAPER UNBEARABLE. Pains and spasmodic muscular actions. Nervous deafness and asthenopia. Cold shivers from any emotion. Feels as if parts were pressed together. Tension and contractive sensations. ALWAYS FEELS COLD.",
   "dosage": "Third to sixth potency."
 }

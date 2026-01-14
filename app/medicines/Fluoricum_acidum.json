@@ -1,102 +1,108 @@
 {
-  "name": "Fluoricum acidum", 
-  "Relationship": "Compare: THIOSINAMINUM (action on cicatricial tissues; adhesions, strictures, tumors); CALC. FLUOR.; SILICA. Complementary: SILICA.", 
+  "name": "Fluoricum acidum",
+  "Relationship": "Compare: THIOSINAMINUM (action on cicatricial tissues; adhesions, strictures, tumors); CALC. FLUOR.; SILICA. Complementary: SILICA.",
   "Modalities": [
-    "Worse: warmth", 
-    "Worse: morning", 
-    "Worse: warm drinks", 
-    "Better: cold", 
+    "Worse: warmth",
+    "Worse: morning",
+    "Worse: warm drinks",
+    "Better: cold",
     "Better: while walking"
-  ], 
-  "Common names": "Hydrofluoric Acid", 
+  ],
+  "Common names": "Hydrofluoric Acid",
   "symptoms": {
     "Eyes": [
-      "Violent itching of inner canthus", 
-      "Sensation as of wind blowing through eyes", 
+      "Violent itching of inner canthus",
+      "Sensation as of wind blowing through eyes",
       "Lachrymal fistula"
-    ], 
+    ],
     "Respiratory": [
-      "Hydrothorax", 
+      "Hydrothorax",
       "Oppression of chest, difficult breathing, great dyspnoea"
-    ], 
+    ],
     "Stomach": [
-      "Desire for highly seasoned food", 
-      "Warm drinks produce diarrhoea", 
-      "Heat in stomach before meals", 
-      "Stomach symptoms relieved by tight clothes", 
-      "Sour eructations", 
-      "Craves cold water, hungry", 
-      "Heaviness and weight in stomach", 
+      "Desire for highly seasoned food",
+      "Warm drinks produce diarrhoea",
+      "Heat in stomach before meals",
+      "Stomach symptoms relieved by tight clothes",
+      "Sour eructations",
+      "Craves cold water, hungry",
+      "Heaviness and weight in stomach",
       "Averse to coffee, wants fancy dishes"
-    ], 
+    ],
     "Urine": [
-      "Scanty, dark", 
+      "Scanty, dark",
       "In dropsy, produces frequent and free discharge, with great relief"
-    ], 
+    ],
     "Head": [
-      "Alopecia", 
-      "Caries of skin", 
-      "Exostosis", 
-      "Pressure on sides of head from within outward", 
-      "Caries of ossicles and mastoid, with copious discharge; worse warmth"
-    ], 
+      "Alopecia",
+      "Caries of skin",
+      "Exostosis",
+      "Pressure on sides of head from within outward",
+      "Caries of ossicles and mastoid, with copious discharge",
+      "worse warmth"
+    ],
     "Mind": [
-      "Mentally elated and gay", 
-      "Indifference towards those loved bets; inability to realize responsibility; buoyancy"
-    ], 
+      "Mentally elated and gay",
+      "Indifference towards those loved bets",
+      "inability to realize responsibility",
+      "buoyancy"
+    ],
     "Stool": [
       "Bilious diarrhoea, with aversion to coffee"
-    ], 
+    ],
     "Abdomen": [
-      "Flatus and eructations", 
+      "Flatus and eructations",
       "Soreness over liver"
-    ], 
+    ],
     "Nose": [
-      "Chronic nasal catarrh with ulceration of the septum; nose obstructed and dull heavy pain in forehead"
-    ], 
+      "Chronic nasal catarrh with ulceration of the septum",
+      "nose obstructed and dull heavy pain in forehead"
+    ],
     "Female": [
-      "Nymphomania", 
-      "Ulceration of uterus and os", 
-      "Copious and excoriating leucorrhoea", 
+      "Nymphomania",
+      "Ulceration of uterus and os",
+      "Copious and excoriating leucorrhoea",
       "Menses copious, frequent, too long"
-    ], 
+    ],
     "Skin": [
-      "Varicose veins", 
-      "Naevi", 
-      "Dropsy of limbs in old, feeble constitutions", 
-      "Syphilitic tubercles", 
-      "Atony of capillary and venous system", 
-      "Decubitus; worse, warmth", 
-      "Feels as if burning vapor were emitted from pores", 
-      "Periosteal abscess", 
-      "Syphilitic rupia", 
-      "Itching of cicatrices", 
-      "Profuse, sour, offensive perspiration", 
-      "Ulcers; red edges and vesicles", 
-      "Nails grow rapidly", 
-      "Tissues bloated", 
+      "Varicose veins",
+      "Naevi",
+      "Dropsy of limbs in old, feeble constitutions",
+      "Syphilitic tubercles",
+      "Atony of capillary and venous system",
+      "Decubitus",
+      "worse, warmth",
+      "Feels as if burning vapor were emitted from pores",
+      "Periosteal abscess",
+      "Syphilitic rupia",
+      "Itching of cicatrices",
+      "Profuse, sour, offensive perspiration",
+      "Ulcers",
+      "red edges and vesicles",
+      "Nails grow rapidly",
+      "Tissues bloated",
       "Itching especially of the orifices, and in spots, worse warmth"
-    ], 
+    ],
     "Mouth": [
-      "Dental fistula, with persistent, bloody, salty discharge", 
-      "Affects teeth and bones of upper jaw", 
-      "Teeth feel warm", 
+      "Dental fistula, with persistent, bloody, salty discharge",
+      "Affects teeth and bones of upper jaw",
+      "Teeth feel warm",
       "Syphilitic ulceration of throat, which is very sensitive to cold"
-    ], 
+    ],
     "Extremities": [
-      "Feeling as of a splinter under nail", 
-      "Ulcer over tibia", 
-      "Caries and necrosis, especially of long bones", 
-      "Nails crumble", 
-      "Inflammation of joints of fingers", 
+      "Feeling as of a splinter under nail",
+      "Ulcer over tibia",
+      "Caries and necrosis, especially of long bones",
+      "Nails crumble",
+      "Inflammation of joints of fingers",
       "Coccygodynia"
-    ], 
+    ],
     "Male": [
-      "Swollen scrotum", 
-      "Burning in urethra", 
+      "Swollen scrotum",
+      "Burning in urethra",
       "Sexual passion and desire increased, with erections at night, during sleep"
     ]
-  }, 
-  "details": "Especially adapted to chronic diseases with syphilitic and mercurial history. GLABELLA REGION BLOATED. Acts especially upon lower tissues, and indicated in deep, destructive processes, bedsores, ulcerations, varicose veins, and ulcers. Patient is compelled to move about energetically. Complaints of old age, or the prematurely aged, with weak, distended blood vessels. Hobnailed liver of alcoholics. GOITRE (Dr. Woakes) (Kali-fluoride produced bronchocele in dogs). Early decay of teeth. Old cases of nightly fevers, coming on periodically.", 
+  },
+  "details": "Especially adapted to chronic diseases with syphilitic and mercurial history. GLABELLA REGION BLOATED. Acts especially upon lower tissues, and indicated in deep, destructive processes, bedsores, ulcerations, varicose veins, and ulcers. Patient is compelled to move about energetically. Complaints of old age, or the prematurely aged, with weak, distended blood vessels. Hobnailed liver of alcoholics. GOITRE (Dr. Woakes) (Kali-fluoride produced bronchocele in dogs). Early decay of teeth. Old cases of nightly fevers, coming on periodically.",
   "dosage": "Sixth to thirtieth potency."
 }

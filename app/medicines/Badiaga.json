@@ -1,56 +1,62 @@
 {
-  "name": "Badiaga", 
-  "Relationship": "Compare: Merc. similar but opposite modalities. Spongia; Kali-hyd.; Phytol.; Conium. Complementary: Sulph.; Merc.; Iod.", 
+  "name": "Badiaga",
+  "Relationship": "Compare: Merc. similar but opposite modalities. Spongia; Kali-hyd.; Phytol.; Conium. Complementary: Sulph.; Merc.; Iod.",
   "Modalities": [
     "Better: by heat"
-  ], 
-  "Common names": "Fresh-Water Sponge", 
+  ],
+  "Common names": "Fresh-Water Sponge",
   "symptoms": {
     "Heart": [
       "Indescribable bad feeling about the heart with soreness and pain, flying stitches all over"
-    ], 
+    ],
     "Eyes": [
-      "Twitching of left upper lid; eyeballs tender; aching in eyeballs", 
+      "Twitching of left upper lid",
+      "eyeballs tender",
+      "aching in eyeballs",
       "Intermittent sore pain in eyeball, coming on at three pm"
-    ], 
+    ],
     "Respiratory": [
-      "Hay-fever, with asthmatic breathing", 
-      "Whooping-cough, with thick yellow expectoration; flies out", 
-      "Cough; worse in afternoon, better in warm room", 
-      "The mucus flies out of mouth and nostrils", 
+      "Hay-fever, with asthmatic breathing",
+      "Whooping-cough, with thick yellow expectoration",
+      "flies out",
+      "Cough",
+      "worse in afternoon, better in warm room",
+      "The mucus flies out of mouth and nostrils",
       "Pleuritic stitches in chest, neck, and back"
-    ], 
+    ],
     "Stomach": [
-      "Mouth hot", 
-      "Much thirst", 
+      "Mouth hot",
+      "Much thirst",
       "Lancinating pain in pit of stomach extending to vertebra and scapula"
-    ], 
+    ],
     "Head": [
-      "Slight sounds are greatly accentuated", 
-      "Dull, dizzy feeling in head", 
-      "Sensation of enlargement and fullness", 
-      "Pain in forehead and temple, extending to eyeballs, worse in afternoon", 
-      "Blueness under eyes", 
-      "Influenza", 
-      "Dandruff; scale sore, dry, tetter-like", 
+      "Slight sounds are greatly accentuated",
+      "Dull, dizzy feeling in head",
+      "Sensation of enlargement and fullness",
+      "Pain in forehead and temple, extending to eyeballs, worse in afternoon",
+      "Blueness under eyes",
+      "Influenza",
+      "Dandruff",
+      "scale sore, dry, tetter-like",
       "Coryza, sneezing, watery discharge, with asthmatic breathing and suffocative cough"
-    ], 
+    ],
     "Back": [
-      "Very stiff neck", 
-      "Stitches in nape, scapulae", 
-      "Muscles and skin sore, as if beaten", 
+      "Very stiff neck",
+      "Stitches in nape, scapulae",
+      "Muscles and skin sore, as if beaten",
       "Pain in small of back, hips and lower limbs"
-    ], 
+    ],
     "Female": [
-      "Metrorrhagia; worse at night, with feeling of enlargement of head", 
+      "Metrorrhagia",
+      "worse at night, with feeling of enlargement of head",
       "Cancer of breast"
-    ], 
+    ],
     "Skin": [
-      "Freckles", 
-      "Sore to touch", 
+      "Freckles",
+      "Sore to touch",
       "Rhagades"
     ]
-  }, 
-  "details": "Soreness of muscles and integuments; worse motion and friction of clothes, with sensitiveness to cold. Glands swollen. General paresis. Basedow's disease. Lues, bubo, roseola.", 
+  },
+  "details": "Soreness of muscles and integuments; worse motion and friction of clothes, with sensitiveness to cold. Glands swollen. General paresis. Basedow's disease. Lues, bubo, roseola.",
   "dosage": "First to sixth attenuation."
 }

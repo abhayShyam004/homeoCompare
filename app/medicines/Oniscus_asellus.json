@@ -1,25 +1,27 @@
 {
-  "name": "Oniscus asellus", 
-  "Relationship": "Compare: POTHOS. CANTH.", 
-  "Common names": "Millepede Wood-louse", 
+  "name": "Oniscus asellus",
+  "Relationship": "Compare: POTHOS. CANTH.",
+  "Common names": "Millepede Wood-louse",
   "symptoms": {
     "Head": [
-      "Painful pressure above the root of nose", 
-      "Violent pulsation of arteries", 
+      "Painful pressure above the root of nose",
+      "Violent pulsation of arteries",
       "Boring pain behind right ear in mastoid process"
-    ], 
+    ],
     "Stomach": [
-      "Persistent pressure in cardiac orifice", 
+      "Persistent pressure in cardiac orifice",
       "Vomiting"
-    ], 
+    ],
     "Urine": [
-      "Tenesmus of bladder and rectum, with absence of stool and urine", 
+      "Tenesmus of bladder and rectum, with absence of stool and urine",
       "Cutting, burning in urethra"
-    ], 
+    ],
     "Abdomen": [
-      "Distended; meteorism; very severe colic"
+      "Distended",
+      "meteorism",
+      "very severe colic"
     ]
-  }, 
-  "details": "Has distinct diuretic properties; hence its use in dropsies. Asthmatic conditions, with bronchial catarrh.", 
+  },
+  "details": "Has distinct diuretic properties; hence its use in dropsies. Asthmatic conditions, with bronchial catarrh.",
   "dosage": "Sixth potency."
 }

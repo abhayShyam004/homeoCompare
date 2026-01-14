@@ -1,48 +1,56 @@
 {
-  "name": "Cinnabaris mercurius sulphuratus ruber", 
-  "Relationship": "Compare: HEPAR; NIT-AC.; THUJA; SEP. Antidotes: HEPAR; SULPH.", 
+  "name": "Cinnabaris mercurius sulphuratus ruber",
+  "Relationship": "Compare: HEPAR; NIT-AC.; THUJA; SEP. Antidotes: HEPAR; SULPH.",
   "Modalities": [
     "Worse: lying on right side"
-  ], 
-  "Common names": "Mercuric Sulphide", 
+  ],
+  "Common names": "Mercuric Sulphide",
   "symptoms": {
     "Eyes": [
-      "Lids granulated; canthi and lids red", 
-      "Severe shooting pain in bones of orbit, especially running from inner to outer canthus in the bone", 
-      "Pains from lachrymal duct around eye to temple, from inner canthus across brows to ear", 
+      "Lids granulated",
+      "canthi and lids red",
+      "Severe shooting pain in bones of orbit, especially running from inner to outer canthus in the bone",
+      "Pains from lachrymal duct around eye to temple, from inner canthus across brows to ear",
       "Redness of whole eye"
-    ], 
+    ],
     "Head": [
-      "Congestion to head; face purple red"
-    ], 
+      "Congestion to head",
+      "face purple red"
+    ],
     "Nose": [
-      "Pressive sensation, as from heavy spectacles", 
+      "Pressive sensation, as from heavy spectacles",
       "Pain about root, extending into bones on each side"
-    ], 
+    ],
     "Female": [
-      "Leucorrhoea", 
+      "Leucorrhoea",
       "Feeling of pressure in vagina"
-    ], 
+    ],
     "Skin": [
-      "Buboes", 
-      "Nodes on shin-bones", 
-      "Very fiery-red looking ulcers", 
+      "Buboes",
+      "Nodes on shin-bones",
+      "Very fiery-red looking ulcers",
       "Condyloma, easily bleeding"
-    ], 
+    ],
     "Throat": [
-      "Fiery-looking ulcers in mouth and throat", 
-      "Dryness of mouth and throat; must rinse the mouth", 
+      "Fiery-looking ulcers in mouth and throat",
+      "Dryness of mouth and throat",
+      "must rinse the mouth",
       "Stringy mucus passed through posterior nares into throat"
-    ], 
+    ],
     "Extremities": [
-      "Pain in long bones when barometer lowers; coldness of joints", 
+      "Pain in long bones when barometer lowers",
+      "coldness of joints",
       "Pain in forearm from elbow down, including hands"
-    ], 
+    ],
     "Male": [
-      "Prepuce swollen; warts on it which bleed easily; testicles enlarged; buboes; angry-looking chancres", 
+      "Prepuce swollen",
+      "warts on it which bleed easily",
+      "testicles enlarged",
+      "buboes",
+      "angry-looking chancres",
       "Syphilides, squamous and vesicular"
     ]
-  }, 
-  "details": "For certain forms of ciliary neuralgia and ulceration upon a syphilitic base, this remedy is most effective. Sleepless during night.", 
+  },
+  "details": "For certain forms of ciliary neuralgia and ulceration upon a syphilitic base, this remedy is most effective. Sleepless during night.",
   "dosage": "First to third trituration."
 }

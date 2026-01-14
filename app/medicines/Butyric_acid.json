@@ -1,39 +1,43 @@
 {
   "Modalities": [
-    "Worse: at night", 
-    "Worse: fast walking", 
+    "Worse: at night",
+    "Worse: fast walking",
     "Worse: going upstairs"
-  ], 
+  ],
   "symptoms": {
     "Head": [
-      "Worries over trifles; impulsive thoughts of suicide; constant state of fear and nervousness", 
-      "Dull, hazy ache of head", 
-      "Headache makes him apprehensive about trifles; worse going upstairs or rapid motion"
-    ], 
+      "Worries over trifles",
+      "impulsive thoughts of suicide",
+      "constant state of fear and nervousness",
+      "Dull, hazy ache of head",
+      "Headache makes him apprehensive about trifles",
+      "worse going upstairs or rapid motion"
+    ],
     "Stomach": [
-      "Cramps in pit of stomach, worse at night", 
-      "Cramp in abdomen below umbilicus", 
-      "Poor appetite", 
-      "Much gas in stomach and bowels", 
-      "Stomach feels heavy and overloaded", 
-      "Stool accompanied by pain and straining", 
+      "Cramps in pit of stomach, worse at night",
+      "Cramp in abdomen below umbilicus",
+      "Poor appetite",
+      "Much gas in stomach and bowels",
+      "Stomach feels heavy and overloaded",
+      "Stool accompanied by pain and straining",
       "Bowels irregular"
-    ], 
+    ],
     "Back": [
-      "Pain low down in back and extremities", 
-      "Tired feeling and dull pain in small of back, worse walking", 
+      "Pain low down in back and extremities",
+      "Tired feeling and dull pain in small of back, worse walking",
       "Pain in ankles and up back of leg"
-    ], 
+    ],
     "Sleep": [
-      "Pronounced sleeplessness; dreams of serious nature while asleep"
-    ], 
+      "Pronounced sleeplessness",
+      "dreams of serious nature while asleep"
+    ],
     "Skin": [
-      "Crumbling away of finger-nails", 
-      "Profuse, offensive sweat of feet", 
+      "Crumbling away of finger-nails",
+      "Profuse, offensive sweat of feet",
       "Perspiration on slight exertion"
     ]
-  }, 
-  "Common names": "A volatile acid obtained chiefly from butter", 
-  "name": "Butyric acid", 
+  },
+  "Common names": "A volatile acid obtained chiefly from butter",
+  "name": "Butyric acid",
   "dosage": "Third attenuation."
 }

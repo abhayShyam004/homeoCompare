@@ -1,63 +1,70 @@
 {
-  "name": "Wyethia", 
-  "Relationship": "Compare: ARUM; SANG.; LACH.", 
-  "Common names": "Poison-weed", 
+  "name": "Wyethia",
+  "Relationship": "Compare: ARUM; SANG.; LACH.",
+  "Common names": "Poison-weed",
   "symptoms": {
     "Head": [
-      "Dizzy", 
-      "Nervous, uneasy, depressed", 
-      "Sharp pain in forehead", 
+      "Dizzy",
+      "Nervous, uneasy, depressed",
+      "Sharp pain in forehead",
       "Rush of blood to head"
-    ], 
+    ],
     "Respiratory": [
-      "Tendency to get hoarse talking or singing; throat hot, dry", 
-      "Dry, hacking cough, caused by tickling of the epiglottis", 
-      "Burning sensation in the bronchial tubes", 
+      "Tendency to get hoarse talking or singing",
+      "throat hot, dry",
+      "Dry, hacking cough, caused by tickling of the epiglottis",
+      "Burning sensation in the bronchial tubes",
       "Dry asthma"
-    ], 
+    ],
     "Stomach": [
-      "Sense of weight", 
-      "Nausea and vomiting", 
+      "Sense of weight",
+      "Nausea and vomiting",
       "Belching of wind alternating with hiccough"
-    ], 
+    ],
     "Stool": [
-      "Constipation, with hemorrhoids; not bleeding", 
-      "Loose, dark, at night", 
+      "Constipation, with hemorrhoids",
+      "not bleeding",
+      "Loose, dark, at night",
       "Itching of anus"
-    ], 
+    ],
     "Back": [
-      "Pain in back; extends to end of spine"
-    ], 
+      "Pain in back",
+      "extends to end of spine"
+    ],
     "Abdomen": [
       "Pain below ribs of right side"
-    ], 
+    ],
     "Fever": [
-      "Terrific headache during sweat", 
-      "Chill at eleven am thirst for ice-water during chill", 
-      "No thirst with heat", 
+      "Terrific headache during sweat",
+      "Chill at eleven am thirst for ice-water during chill",
+      "No thirst with heat",
       "Profuse sweat all night"
-    ], 
+    ],
     "Mouth": [
-      "Itching of the palate", 
-      "Feels as if scalded; sensation of heat down oesophagus"
-    ], 
+      "Itching of the palate",
+      "Feels as if scalded",
+      "sensation of heat down oesophagus"
+    ],
     "Female": [
-      "Pain in uterus; could outline its contour", 
+      "Pain in uterus",
+      "could outline its contour",
       "Pain in left ovary, shooting down to knee"
-    ], 
+    ],
     "Throat": [
-      "Difficult swallowing", 
-      "Constant desire to swallow saliva", 
-      "Uvula feels elongated", 
-      "Constant clearing and hemming", 
-      "Dry, posterior nares; no relief from clearing", 
-      "Throat feels swollen; epiglottis dry and burning"
-    ], 
+      "Difficult swallowing",
+      "Constant desire to swallow saliva",
+      "Uvula feels elongated",
+      "Constant clearing and hemming",
+      "Dry, posterior nares",
+      "no relief from clearing",
+      "Throat feels swollen",
+      "epiglottis dry and burning"
+    ],
     "Extremities": [
-      "Pain right arm, stiffness of wrist and hand", 
+      "Pain right arm, stiffness of wrist and hand",
       "Aching pains all over"
     ]
-  }, 
-  "details": "Has marked effects on the throat, and has proven an excellent remedy in PHARYNGITIS, especially the follicular form. Irritable throats of singers and public speakers. Useful also in hemorrhoids. Hay-fever symptoms; ITCHING IN POSTERIOR NARES.", 
+  },
+  "details": "Has marked effects on the throat, and has proven an excellent remedy in PHARYNGITIS, especially the follicular form. Irritable throats of singers and public speakers. Useful also in hemorrhoids. Hay-fever symptoms; ITCHING IN POSTERIOR NARES.",
   "dosage": "First to sixth potency."
 }

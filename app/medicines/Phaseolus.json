@@ -1,30 +1,31 @@
 {
-  "name": "Phaseolus", 
-  "Relationship": "Compare: CRATAEG; LACH.", 
-  "Common names": "Dwarf-bean", 
+  "name": "Phaseolus",
+  "Relationship": "Compare: CRATAEG; LACH.",
+  "Common names": "Dwarf-bean",
   "symptoms": {
     "Heart": [
       "Fearful palpitation and feeling that death is approaching"
-    ], 
+    ],
     "Head": [
-      "Aches chiefly in forehead or orbits from fullness of brain; worse any movement or mental exertion"
-    ], 
+      "Aches chiefly in forehead or orbits from fullness of brain",
+      "worse any movement or mental exertion"
+    ],
     "Urine": [
       "Diabetic urine"
-    ], 
+    ],
     "Eyes": [
-      "Pupils dilated, insensible to light", 
+      "Pupils dilated, insensible to light",
       "Eyeballs painful to touch"
-    ], 
+    ],
     "Chest": [
-      "Breathing slow and sighing", 
-      "Dropsical effusion into pleura or pericardium", 
-      "Palpitation", 
-      "Pulse rapid", 
-      "Sick feeling about heart, with weak pulse", 
+      "Breathing slow and sighing",
+      "Dropsical effusion into pleura or pericardium",
+      "Palpitation",
+      "Pulse rapid",
+      "Sick feeling about heart, with weak pulse",
       "Right ribs sore"
     ]
-  }, 
-  "details": "Heart symptoms quite pronounced. Diabetes.", 
+  },
+  "details": "Heart symptoms quite pronounced. Diabetes.",
   "dosage": "Sixth and higher. A decoction of the shells as a drink for diabetes, but look out for severe headache."
 }

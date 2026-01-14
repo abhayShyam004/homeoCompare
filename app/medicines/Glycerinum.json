@@ -1,40 +1,41 @@
 {
-  "name": "Glycerinum", 
-  "Relationship": "Compare: LACTIC ACID; GELSEMIUM; CALC.", 
-  "Common names": "Glycerine", 
+  "name": "Glycerinum",
+  "Relationship": "Compare: LACTIC ACID; GELSEMIUM; CALC.",
+  "Common names": "Glycerine",
   "symptoms": {
     "Head": [
-      "Severe headache two days before menstruation", 
-      "Feels full, throbs; mentally confused", 
+      "Severe headache two days before menstruation",
+      "Feels full, throbs",
+      "mentally confused",
       "Occiput feels full"
-    ], 
+    ],
     "Stomach": [
       "Fermentation, burning in stomach and oesophagus"
-    ], 
+    ],
     "Urine": [
-      "Profuse and frequent urination", 
-      "Increased specific gravity and sugar", 
+      "Profuse and frequent urination",
+      "Increased specific gravity and sugar",
       "Diabetes"
-    ], 
+    ],
     "Chest": [
-      "Hacking cough with sense of weakness", 
-      "Chest seems full", 
+      "Hacking cough with sense of weakness",
+      "Chest seems full",
       "Influenza pneumonia"
-    ], 
+    ],
     "Nose": [
-      "Post-nasal dripping", 
-      "Sensation of crawling on mucous membrane", 
+      "Post-nasal dripping",
+      "Sensation of crawling on mucous membrane",
       "Stopped up, sneezing, irritating coryza"
-    ], 
+    ],
     "Female": [
-      "General sense of exhaustion", 
+      "General sense of exhaustion",
       "Profuse, long-lasting flow with bearing down heaviness in uterus"
-    ], 
+    ],
     "Extremities": [
-      "Rheumatic pains of a remittent type", 
+      "Rheumatic pains of a remittent type",
       "Feet painful and hot, feel enlarged"
     ]
-  }, 
-  "details": "Used homeopathically, dynamited Glycerine seems to act deeply and long, building up tissue, hence of great use in marasmus, debility, mental and physical, diabetes, etc. It disturbs nutrition in its primary action, and, secondarily, seems to improve the general state of nutrition. (Dr. W. B. Griggs.)", 
+  },
+  "details": "Used homeopathically, dynamited Glycerine seems to act deeply and long, building up tissue, hence of great use in marasmus, debility, mental and physical, diabetes, etc. It disturbs nutrition in its primary action, and, secondarily, seems to improve the general state of nutrition. (Dr. W. B. Griggs.)",
   "dosage": "Thirtieth and higher potencies. Pure Glycerine in teaspoonful doses, t.i.d., with lemon juice for pernicious anaemia."
 }

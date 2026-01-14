@@ -1,81 +1,85 @@
 {
-  "name": "Veratrum viride", 
-  "Relationship": "Compare: GELS.; BAPT.; BELL.; ACON.; FERR. PHOS. Antidotes STRYCHNINE - fluid extract, 20-40 drops.", 
-  "Common names": "White American Hellebore", 
+  "name": "Veratrum viride",
+  "Relationship": "Compare: GELS.; BAPT.; BELL.; ACON.; FERR. PHOS. Antidotes STRYCHNINE - fluid extract, 20-40 drops.",
+  "Common names": "White American Hellebore",
   "symptoms": {
     "Heart": [
-      "Pulse slow, soft, weak, irregular, intermittent", 
-      "Fever", 
-      "Valvular disease", 
-      "Beating of pulses throughout body, especially in right thigh", 
-      "Aching pain in back of neck and shoulders", 
-      "Severe pain in joints and muscles", 
-      "Rapid pulse, low tension", 
-      "Convulsive twitchings", 
-      "Violent electric-like shocks in limbs", 
-      "Acute rheumatism", 
+      "Pulse slow, soft, weak, irregular, intermittent",
+      "Fever",
+      "Valvular disease",
+      "Beating of pulses throughout body, especially in right thigh",
+      "Aching pain in back of neck and shoulders",
+      "Severe pain in joints and muscles",
+      "Rapid pulse, low tension",
+      "Convulsive twitchings",
+      "Violent electric-like shocks in limbs",
+      "Acute rheumatism",
       "Constant, dull, burning pain in region of heart"
-    ], 
+    ],
     "Head": [
-      "Hot head, bloodshot eyes", 
-      "Meningitis", 
-      "Convulsive twitching of facial muscles", 
-      "Congestion intense, almost apoplectic", 
-      "Pain from nape of neck; cannot hold head up", 
-      "Hippocratic face", 
-      "Bloated, livid face", 
-      "Head retracted, pupils dilated, double vision", 
-      "Vertigo with nausea", 
-      "Face flushed", 
-      "Sunstroke; head full, throbbing arteries"
-    ], 
+      "Hot head, bloodshot eyes",
+      "Meningitis",
+      "Convulsive twitching of facial muscles",
+      "Congestion intense, almost apoplectic",
+      "Pain from nape of neck",
+      "cannot hold head up",
+      "Hippocratic face",
+      "Bloated, livid face",
+      "Head retracted, pupils dilated, double vision",
+      "Vertigo with nausea",
+      "Face flushed",
+      "Sunstroke",
+      "head full, throbbing arteries"
+    ],
     "Respiratory": [
-      "Difficult breathing", 
-      "Sensation of a heavy load on chest", 
-      "Congestion of lungs", 
-      "Pneumonia, with faint feeling in stomach and violent congestion", 
-      "Croup", 
+      "Difficult breathing",
+      "Sensation of a heavy load on chest",
+      "Congestion of lungs",
+      "Pneumonia, with faint feeling in stomach and violent congestion",
+      "Croup",
       "Menstrual colic before the appearance of the discharge with strangury"
-    ], 
+    ],
     "Stomach": [
-      "Thirsty", 
-      "Burning in stomach and oesophagus", 
-      "Smallest quantity of food or drink immediately rejected", 
-      "Hiccough; excessive and painful, with spasms of esophagus", 
-      "Nausea and vomiting", 
-      "Constrictive pain; increased by warm drinks"
-    ], 
+      "Thirsty",
+      "Burning in stomach and oesophagus",
+      "Smallest quantity of food or drink immediately rejected",
+      "Hiccough",
+      "excessive and painful, with spasms of esophagus",
+      "Nausea and vomiting",
+      "Constrictive pain",
+      "increased by warm drinks"
+    ],
     "Urine": [
       "Scanty with cloudy sediment"
-    ], 
+    ],
     "Mind": [
       "Quarrelsome and delirious"
-    ], 
+    ],
     "Abdomen": [
       "Pain above pelvis, with soreness"
-    ], 
+    ],
     "Fever": [
-      "Hyperthermia in the evening and hyperthermia in the morning", 
+      "Hyperthermia in the evening and hyperthermia in the morning",
       "Suppurative fevers with great variation of temperature"
-    ], 
+    ],
     "Mouth": [
-      "Tongue white or yellow, with red streak down the middle", 
-      "Feels scalded", 
+      "Tongue white or yellow, with red streak down the middle",
+      "Feels scalded",
       "Increased saliva"
-    ], 
+    ],
     "Female": [
-      "Rigid os", 
-      "Puerperal fever", 
-      "Menstrual colic before the appearance of the discharge with strangury", 
+      "Rigid os",
+      "Puerperal fever",
+      "Menstrual colic before the appearance of the discharge with strangury",
       "Suppressed menstruation, with congestion to head"
-    ], 
+    ],
     "Skin": [
-      "Hot sweating", 
-      "Erythema", 
-      "Itching in various parts", 
+      "Hot sweating",
+      "Erythema",
+      "Itching in various parts",
       "Erysipelas, with cerebral symptoms"
     ]
-  }, 
-  "details": "Paroxysms of auricular fibrillation. Induces fall of both systolic and diastolic blood pressure. Congestions, especially to lungs, base of brain, with nausea and vomiting. Twitchings and convulsions. Especially adapted to full-blooded, plethoric persons. Great prostration. Rheumatism of heart. BLOATED, LIVID FACE. Furious delirium. Effects of sunstroke. ESOPHAGITIS. (Farrington.) VERAT. VIR, will raise the opsonic index against the DIPLOCCUS PNEUMONIA, 70 to 109 per cent. Congestive stage and early manifestations of hepatization in pneumonia. Zigzag temperature. Clinically, it is known that such diseases as Tiegel's contracture, Thompson's Disease, athetosis and pseudo-hypertrophic muscular paralysis present a symptomatology quite like that produced by Veratrum VIR upon muscular tissue. (A. E. Hinsdale, M.D.)", 
+  },
+  "details": "Paroxysms of auricular fibrillation. Induces fall of both systolic and diastolic blood pressure. Congestions, especially to lungs, base of brain, with nausea and vomiting. Twitchings and convulsions. Especially adapted to full-blooded, plethoric persons. Great prostration. Rheumatism of heart. BLOATED, LIVID FACE. Furious delirium. Effects of sunstroke. ESOPHAGITIS. (Farrington.) VERAT. VIR, will raise the opsonic index against the DIPLOCCUS PNEUMONIA, 70 to 109 per cent. Congestive stage and early manifestations of hepatization in pneumonia. Zigzag temperature. Clinically, it is known that such diseases as Tiegel's contracture, Thompson's Disease, athetosis and pseudo-hypertrophic muscular paralysis present a symptomatology quite like that produced by Veratrum VIR upon muscular tissue. (A. E. Hinsdale, M.D.)",
   "dosage": "Fifth to sixth potency."
 }

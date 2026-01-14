@@ -1,30 +1,31 @@
 {
-  "name": "Haematoxylon", 
-  "Relationship": "Compare: CACTUS; COLOCY.; NAJA.", 
-  "Common names": "Log wood", 
+  "name": "Haematoxylon",
+  "Relationship": "Compare: CACTUS; COLOCY.; NAJA.",
+  "Common names": "Log wood",
   "symptoms": {
     "Head": [
-      "Feels constricted; heavy, hot", 
+      "Feels constricted",
+      "heavy, hot",
       "Eyelids heavy"
-    ], 
+    ],
     "Stomach": [
-      "Borborygmi and diarrhoea", 
-      "Swollen, painful", 
-      "Painful digging from abdomen to throat, causing pain in region of heart with oppression", 
+      "Borborygmi and diarrhoea",
+      "Swollen, painful",
+      "Painful digging from abdomen to throat, causing pain in region of heart with oppression",
       "Colic, tympanitis"
-    ], 
+    ],
     "Chest": [
-      "Great soreness in region of heart", 
-      "Constriction, extending to epigastrium", 
-      "Sensation of a bar across chest", 
-      "Palpitation", 
+      "Great soreness in region of heart",
+      "Constriction, extending to epigastrium",
+      "Sensation of a bar across chest",
+      "Palpitation",
       "Convulsive pain in heart region with oppression"
-    ], 
+    ],
     "Female": [
-      "Pain in hypogastrium, attended with slimy, whitish leucorrhoea", 
+      "Pain in hypogastrium, attended with slimy, whitish leucorrhoea",
       "Weak feeling, with painful bearing down sensation at menstrual period"
     ]
-  }, 
-  "details": "Sense of constriction is characteristic. SENSATION AS IF A BAR LAY ACROSS CHEST. Angina pectoris.", 
+  },
+  "details": "Sense of constriction is characteristic. SENSATION AS IF A BAR LAY ACROSS CHEST. Angina pectoris.",
   "dosage": "Third potency."
 }

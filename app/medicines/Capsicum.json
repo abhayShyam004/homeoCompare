@@ -1,103 +1,113 @@
 {
-  "name": "Capsicum", 
-  "Relationship": "Antidote: Cina; Calad. Compare: Pulsat.; Lycop.; Bell.; Centaurea (surging of blood; homesickness; intermittent fever).", 
+  "name": "Capsicum",
+  "Relationship": "Antidote: Cina; Calad. Compare: Pulsat.; Lycop.; Bell.; Centaurea (surging of blood; homesickness; intermittent fever).",
   "Modalities": [
-    "Worse: open air", 
-    "Worse: uncovering", 
-    "Worse: drafts", 
-    "Better: while eating", 
+    "Worse: open air",
+    "Worse: uncovering",
+    "Worse: drafts",
+    "Better: while eating",
     "Better: from heat"
-  ], 
-  "Common names": "Cayenne Pepper", 
+  ],
+  "Common names": "Cayenne Pepper",
   "symptoms": {
     "Head": [
-      "Bursting headache; worse, coughing", 
-      "Hot face", 
-      "Face red, though cold", 
+      "Bursting headache",
+      "worse, coughing",
+      "Hot face",
+      "Face red, though cold",
       "Red cheeks"
-    ], 
+    ],
     "Fever": [
-      "Thirst before chill", 
-      "Shivering after drinking", 
-      "Coldness, with ill-humor", 
-      "Must have something hot to back", 
-      "Chill begins in back; better, heat"
-    ], 
+      "Thirst before chill",
+      "Shivering after drinking",
+      "Coldness, with ill-humor",
+      "Must have something hot to back",
+      "Chill begins in back",
+      "better, heat"
+    ],
     "Stomach": [
-      "Much flatulence, especially in debilitated subjects", 
-      "Atonic dyspepsia", 
-      "Vomiting, sinking at pit of stomach", 
-      "Intense craving for stimulants", 
-      "Much thirst; but drinking causes shuddering", 
+      "Much flatulence, especially in debilitated subjects",
+      "Atonic dyspepsia",
+      "Vomiting, sinking at pit of stomach",
+      "Intense craving for stimulants",
+      "Much thirst",
+      "but drinking causes shuddering",
       "Burning in tip of tongue"
-    ], 
+    ],
     "Urine": [
-      "Ectropion of meatus", 
-      "Comes first in drops, then in spurts; neck of bladder spasmodically contracted", 
-      "Burning in orifice", 
+      "Ectropion of meatus",
+      "Comes first in drops, then in spurts",
+      "neck of bladder spasmodically contracted",
+      "Burning in orifice",
       "Strangury, frequent, almost ineffectual urging"
-    ], 
+    ],
     "Mind": [
-      "Wants to be let alone", 
-      "Peppery disposition", 
-      "Delirium tremens", 
-      "Excessive peevishness", 
+      "Wants to be let alone",
+      "Peppery disposition",
+      "Delirium tremens",
+      "Excessive peevishness",
       "Homesickness, with sleeplessness and disposition to suicide"
-    ], 
+    ],
     "Stool": [
-      "Thirsty after stool, with shivering", 
-      "Bleeding piles, with soreness of anus", 
-      "Stinging pain during stool", 
-      "Bloody mucus, with burning and tenesmus; drawing pain in back after stool"
-    ], 
+      "Thirsty after stool, with shivering",
+      "Bleeding piles, with soreness of anus",
+      "Stinging pain during stool",
+      "Bloody mucus, with burning and tenesmus",
+      "drawing pain in back after stool"
+    ],
     "Respiratory": [
-      "Constriction of chest; arrests breathing", 
-      "Dry, hacking cough, expelling an offensive breath from lungs", 
-      "Dyspnoea", 
-      "Threatening gangrene of lung", 
-      "Hoarseness", 
-      "Explosive cough", 
-      "Pain at apex of heart or in rib region, worse touch", 
-      "Feels as if chest and head would fly to pieces", 
+      "Constriction of chest",
+      "arrests breathing",
+      "Dry, hacking cough, expelling an offensive breath from lungs",
+      "Dyspnoea",
+      "Threatening gangrene of lung",
+      "Hoarseness",
+      "Explosive cough",
+      "Pain at apex of heart or in rib region, worse touch",
+      "Feels as if chest and head would fly to pieces",
       "Pain in distant parts on coughing - bladder, legs, ears, etc."
-    ], 
+    ],
     "Mouth": [
-      "Herpes labialis", 
-      "Fetid odor from mouth", 
-      "Stomatitis", 
+      "Herpes labialis",
+      "Fetid odor from mouth",
+      "Stomatitis",
       "Disagreeable smell from mouth"
-    ], 
+    ],
     "Female": [
-      "Climacteric disturbances with burning of tip of tongue", 
-      "Sticking sensation in left ovarian region", 
+      "Climacteric disturbances with burning of tip of tongue",
+      "Sticking sensation in left ovarian region",
       "Uterine hemorrhage near the menopause, with nausea"
-    ], 
+    ],
     "Throat": [
-      "Smarting in; constriction", 
-      "Pain and dryness in throat extending to the ears", 
-      "Inflamed uvula and palate; swollen and relaxed", 
-      "Subacute inflammation of eustachian tube with great pain", 
-      "Sore throat of smokers and drinkers", 
-      "Burning constriction worse between acts of deglutition", 
+      "Smarting in",
+      "constriction",
+      "Pain and dryness in throat extending to the ears",
+      "Inflamed uvula and palate",
+      "swollen and relaxed",
+      "Subacute inflammation of eustachian tube with great pain",
+      "Sore throat of smokers and drinkers",
+      "Burning constriction worse between acts of deglutition",
       "Hot feeling in fauces"
-    ], 
+    ],
     "Extremities": [
-      "Pain from hips to feet", 
-      "Tensive pain in the knee", 
-      "Sciatica, worse bending backward; worse, coughing"
-    ], 
+      "Pain from hips to feet",
+      "Tensive pain in the knee",
+      "Sciatica, worse bending backward",
+      "worse, coughing"
+    ],
     "Male": [
-      "Coldness of scrotum, with impotency, atrophied testicles, loss of sensibility in testicles, with softening and dwindling", 
+      "Coldness of scrotum, with impotency, atrophied testicles, loss of sensibility in testicles, with softening and dwindling",
       "Gonorrhea, with chordee, excessive burning, pain in prostate"
-    ], 
+    ],
     "Ears": [
-      "Swelling and pain behind ears", 
-      "Inflammation of mastoid", 
-      "Tenderness over the petrous bone; extremely sore and tender to touch", 
-      "Otorrhoea and mastoid disease before suppuration", 
+      "Swelling and pain behind ears",
+      "Inflammation of mastoid",
+      "Tenderness over the petrous bone",
+      "extremely sore and tender to touch",
+      "Otorrhoea and mastoid disease before suppuration",
       "Burning and stinging in ears"
     ]
-  }, 
-  "details": "Seems to suit especially persons of lax fiber, weak; diminished vital heat. A relaxed plethoric sluggish, cold remedy. Not much reactive force. Such persons are fat, indolent, opposed to physical exertion, averse to go outside of their routine, get homesick easily. GENERAL UNCLEANLINESS OF BODY. Abstainers from accustomed alcoholics. It affects the mucous membranes, producing a sensation of CONSTRICTION. Inflammation of petrous bone. Burning pains and general chilliness. Older people who have exhausted their vitality, especially by mental work, and poor living; blear-eyed appearance; who do not react. Fear of slightest draft. Marked tendency to suppuration in every inflammatory process. Prostration and feeble digestion of alcoholics. Myalgia, aching and jerking of muscles.", 
+  },
+  "details": "Seems to suit especially persons of lax fiber, weak; diminished vital heat. A relaxed plethoric sluggish, cold remedy. Not much reactive force. Such persons are fat, indolent, opposed to physical exertion, averse to go outside of their routine, get homesick easily. GENERAL UNCLEANLINESS OF BODY. Abstainers from accustomed alcoholics. It affects the mucous membranes, producing a sensation of CONSTRICTION. Inflammation of petrous bone. Burning pains and general chilliness. Older people who have exhausted their vitality, especially by mental work, and poor living; blear-eyed appearance; who do not react. Fear of slightest draft. Marked tendency to suppuration in every inflammatory process. Prostration and feeble digestion of alcoholics. Myalgia, aching and jerking of muscles.",
   "dosage": "Third to sixth attenuation. In delirium tremens, dram doses of tincture in milk or tincture of orange peel."
 }

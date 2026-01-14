@@ -1,60 +1,64 @@
 {
-  "name": "Iris versicolor", 
-  "Relationship": "Antidote: NUX. Compare: IRIS FLORENTINA - Oris-root - (delirium, convulsions, and paralysis); IRIS FACTISSIMA (headache and hernia); IRIS GERMANICA - Blue Garden Iris - (dropsy and freckles); IRIS TENAX - I. MINOR (dry mouth; deathly sensation at point of stomach, PAIN IN ILEO-CAECAL REGION; appendicitis. Pains from adhesions after). PANCREATINUM - a combination of several enzymes - (Indicated in intestinal indigestion; pain an hour or more after eating. Lienteric diarrhoea. Dose - 3-5 grains, better not given during the active period of stomachic digestion). PEPSINUM - (Imperfect digestion with pain in gastric region. Marasmus of children who are fed on artificial foods. Diarrhoea due to indigestion. Dose - 3-4 grains). (Diseases of pancreas, gout, diabetes); IPEC.; PODOPHY.; SANGUIN.; ARS.; ANT. CR.", 
+  "name": "Iris versicolor",
+  "Relationship": "Antidote: NUX. Compare: IRIS FLORENTINA - Oris-root - (delirium, convulsions, and paralysis); IRIS FACTISSIMA (headache and hernia); IRIS GERMANICA - Blue Garden Iris - (dropsy and freckles); IRIS TENAX - I. MINOR (dry mouth; deathly sensation at point of stomach, PAIN IN ILEO-CAECAL REGION; appendicitis. Pains from adhesions after). PANCREATINUM - a combination of several enzymes - (Indicated in intestinal indigestion; pain an hour or more after eating. Lienteric diarrhoea. Dose - 3-5 grains, better not given during the active period of stomachic digestion). PEPSINUM - (Imperfect digestion with pain in gastric region. Marasmus of children who are fed on artificial foods. Diarrhoea due to indigestion. Dose - 3-4 grains). (Diseases of pancreas, gout, diabetes); IPEC.; PODOPHY.; SANGUIN.; ARS.; ANT. CR.",
   "Modalities": [
-    "Worse: in evening and at night", 
-    "Worse: from rest", 
+    "Worse: in evening and at night",
+    "Worse: from rest",
     "Better: from continued motion"
-  ], 
-  "Common names": "Blue Flag", 
+  ],
+  "Common names": "Blue Flag",
   "symptoms": {
     "Head": [
-      "Scalp feels constricted", 
-      "Right temples especially affected", 
-      "Sick headache, worse rest; begins with a blur before eyes, after relaxing from a mental strain", 
-      "Frontal headache, with nausea", 
+      "Scalp feels constricted",
+      "Right temples especially affected",
+      "Sick headache, worse rest",
+      "begins with a blur before eyes, after relaxing from a mental strain",
+      "Frontal headache, with nausea",
       "Pustular eruption on scalp"
-    ], 
+    ],
     "Stomach": [
-      "Deficient appetite", 
-      "Profuse flow of saliva", 
-      "Vomiting, sour, bloody, biliary", 
-      "Burning of whole alimentary canal", 
+      "Deficient appetite",
+      "Profuse flow of saliva",
+      "Vomiting, sour, bloody, biliary",
+      "Burning of whole alimentary canal",
       "Nausea"
-    ], 
+    ],
     "Abdomen": [
-      "Diarrhoea; stools watery, with burning at anus and through intestinal canal", 
-      "Constipation", 
-      "Cutting pain", 
-      "Periodical night diarrhoea, with pain and green discharges", 
-      "Liver sore", 
+      "Diarrhoea",
+      "stools watery, with burning at anus and through intestinal canal",
+      "Constipation",
+      "Cutting pain",
+      "Periodical night diarrhoea, with pain and green discharges",
+      "Liver sore",
       "Flatulent colic"
-    ], 
+    ],
     "Face": [
-      "Goitre", 
-      "Profuse flow of saliva; ropy", 
-      "Burning", 
-      "Neuralgia after breakfast, beginning in infra-orbital nerve, and involving whole face", 
-      "Heat and smarting in throat", 
+      "Goitre",
+      "Profuse flow of saliva",
+      "ropy",
+      "Burning",
+      "Neuralgia after breakfast, beginning in infra-orbital nerve, and involving whole face",
+      "Heat and smarting in throat",
       "Mouth and tongue feel scalded"
-    ], 
+    ],
     "Skin": [
-      "Herpes zoster, associated with gastric derangements", 
-      "Eczema, with nightly itching", 
-      "Pustular eruptions", 
-      "Psoriasis; irregular patches with shining scales"
-    ], 
+      "Herpes zoster, associated with gastric derangements",
+      "Eczema, with nightly itching",
+      "Pustular eruptions",
+      "Psoriasis",
+      "irregular patches with shining scales"
+    ],
     "Extremities": [
-      "Sciatica, as if left hip-joint were wrenched", 
-      "Shifting pains", 
-      "Pain extends to popliteal space", 
+      "Sciatica, as if left hip-joint were wrenched",
+      "Shifting pains",
+      "Pain extends to popliteal space",
       "Gonorrheal rheumatism"
-    ], 
+    ],
     "Ears": [
-      "Roaring, buzzing, ringing in ears, with deafness", 
+      "Roaring, buzzing, ringing in ears, with deafness",
       "Aural vertigo, with intense noises in ears"
     ]
-  }, 
-  "details": "Thyroid, PANCREAS, salivary, intestinal glands, and gastrointestinal mucous membrane, are especially affected. Increases the flow of bile. Sick headaches and cholera morbus are a special therapeutic field for its action.", 
+  },
+  "details": "Thyroid, PANCREAS, salivary, intestinal glands, and gastrointestinal mucous membrane, are especially affected. Increases the flow of bile. Sick headaches and cholera morbus are a special therapeutic field for its action.",
   "dosage": "Tincture to thirtieth potency. Favorable reports from the very highest potencies."
 }

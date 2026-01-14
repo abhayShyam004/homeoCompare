@@ -1,72 +1,83 @@
 {
-  "name": "Podophyllum", 
-  "Relationship": "Compare: MANDRAGORA - also called mandrake - (must not be confounded with PODOPH. Great desire for sleep; exaggeration of sounds and enlarged vision. Bowels inactive; stools large, white and hard). ALOE; CHELID.; MERC.; NUX; SULPH. PRUNELLA - Self-heal - (Colitis).", 
+  "name": "Podophyllum",
+  "Relationship": "Compare: MANDRAGORA - also called mandrake - (must not be confounded with PODOPH. Great desire for sleep; exaggeration of sounds and enlarged vision. Bowels inactive; stools large, white and hard). ALOE; CHELID.; MERC.; NUX; SULPH. PRUNELLA - Self-heal - (Colitis).",
   "Modalities": [
-    "Worse: in early morning", 
-    "Worse: in hot weather", 
+    "Worse: in early morning",
+    "Worse: in hot weather",
     "Worse: during dentition"
-  ], 
-  "Common names": "May-apple", 
+  ],
+  "Common names": "May-apple",
   "symptoms": {
     "Head": [
-      "Child perspires on head during sleep", 
-      "Headache, dull pressure, worse morning, with heated face and bitter taste; alternating with diarrhoea", 
-      "Vertigo, with tendency to fall forward", 
+      "Child perspires on head during sleep",
+      "Headache, dull pressure, worse morning, with heated face and bitter taste",
+      "alternating with diarrhoea",
+      "Vertigo, with tendency to fall forward",
       "Rolling of head from side to side, with moaning and vomiting and eyelids half closed"
-    ], 
+    ],
     "Fever": [
-      "Profuse sweat", 
-      "Chills at seven am, with pain in hypochondria, and knees, ankles, wrists", 
+      "Profuse sweat",
+      "Chills at seven am, with pain in hypochondria, and knees, ankles, wrists",
       "Great loquacity during fever"
-    ], 
+    ],
     "Stomach": [
-      "Heartburn; gagging or empty retching", 
-      "Vomiting of hot, frothy mucus", 
-      "Thirst for large quantities of cold water", 
-      "Vomiting of milk", 
-      "Hot, sour belching; nausea and vomiting"
-    ], 
+      "Heartburn",
+      "gagging or empty retching",
+      "Vomiting of hot, frothy mucus",
+      "Thirst for large quantities of cold water",
+      "Vomiting of milk",
+      "Hot, sour belching",
+      "nausea and vomiting"
+    ],
     "Rectum": [
-      "Prolapse of rectum before or with stool", 
-      "Constipation alternating with diarrhoea", 
-      "Diarrhoea of long standing; early in morning; during teething, with hot, glowing cheeks while being bathed or washed; in hot weather after acid fruits", 
-      "Internal and external piles", 
-      "Green, water, fetid, profuse, gushing", 
-      "Cholera infantum and morbus", 
-      "Constipation; clay-colored, hard, dry, difficult", 
+      "Prolapse of rectum before or with stool",
+      "Constipation alternating with diarrhoea",
+      "Diarrhoea of long standing",
+      "early in morning",
+      "during teething, with hot, glowing cheeks while being bathed or washed",
+      "in hot weather after acid fruits",
+      "Internal and external piles",
+      "Green, water, fetid, profuse, gushing",
+      "Cholera infantum and morbus",
+      "Constipation",
+      "clay-colored, hard, dry, difficult",
       "Morning, painless diarrhoea when not due to venous stasis or intestinal ulceration"
-    ], 
+    ],
     "Mind": [
-      "Loquacity and delirium from eating acid fruits", 
+      "Loquacity and delirium from eating acid fruits",
       "Depression of spirits"
-    ], 
+    ],
     "Abdomen": [
-      "Liver region painful, better rubbing part", 
-      "Can lie comfortably only on stomach", 
-      "Sensation of weakness or sinking", 
-      "Rumbling and shifting of flatus in ascending colon", 
-      "Distended; heat and emptiness"
-    ], 
+      "Liver region painful, better rubbing part",
+      "Can lie comfortably only on stomach",
+      "Sensation of weakness or sinking",
+      "Rumbling and shifting of flatus in ascending colon",
+      "Distended",
+      "heat and emptiness"
+    ],
     "Mouth": [
-      "Burning sensation of tongue", 
-      "Tongue broad, large, moist", 
-      "Grinding the teeth at night; intense desire to press the gums together", 
-      "Difficult dentition", 
+      "Burning sensation of tongue",
+      "Tongue broad, large, moist",
+      "Grinding the teeth at night",
+      "intense desire to press the gums together",
+      "Difficult dentition",
       "Foul, putrid taste"
-    ], 
+    ],
     "Female": [
-      "Pain in uterus and right ovary, with shifting noises along ascending colon", 
-      "Suppressed menses, with pelvic tenesmus", 
-      "Prolapsus from over-lifting or straining; during pregnancy", 
-      "Hemorrhoids, with prolapsus ani during pregnancy", 
+      "Pain in uterus and right ovary, with shifting noises along ascending colon",
+      "Suppressed menses, with pelvic tenesmus",
+      "Prolapsus from over-lifting or straining",
+      "during pregnancy",
+      "Hemorrhoids, with prolapsus ani during pregnancy",
       "Prolapsed uteri, especially after parturition"
-    ], 
+    ],
     "Extremities": [
-      "Paralytic weakness on left side", 
-      "Pain between shoulders, under right scapula, in loins and lumbar region", 
-      "Pain in right inguinal region; shoots down inner thigh to knees"
+      "Paralytic weakness on left side",
+      "Pain between shoulders, under right scapula, in loins and lumbar region",
+      "Pain in right inguinal region",
+      "shoots down inner thigh to knees"
     ]
-  }, 
-  "details": "Is especially adapted to persons of bilious temperament. It affects chiefly the DUODENUM, small intestines, liver, and RECTUM. The Podophyllum disease is a gastroenteritis with colicky pain and bilious vomiting. Stool is watery with jelly-like mucus, painless, PROFUSE. Gushing and offensive. Many troubles during pregnancy; pendulous abdomen after confinement; prolapsus uteri; painless cholera morbus. Torpidity of the liver; portal engorgement with a tendency to hemorrhoids, hypo-gastric pain, fullness of superficial veins, jaundice.", 
+  },
+  "details": "Is especially adapted to persons of bilious temperament. It affects chiefly the DUODENUM, small intestines, liver, and RECTUM. The Podophyllum disease is a gastroenteritis with colicky pain and bilious vomiting. Stool is watery with jelly-like mucus, painless, PROFUSE. Gushing and offensive. Many troubles during pregnancy; pendulous abdomen after confinement; prolapsus uteri; painless cholera morbus. Torpidity of the liver; portal engorgement with a tendency to hemorrhoids, hypo-gastric pain, fullness of superficial veins, jaundice.",
   "dosage": "Tincture to sixth potency. The 200th and 1000th seem to do good work in cholera infantum, when indicated."
 }

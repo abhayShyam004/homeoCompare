@@ -1,54 +1,55 @@
 {
-  "name": "Adonis vernalis", 
-  "Relationship": "ADONIDIN is a cardiac tonic and diuretic. Quarter grain daily, or two to five grains of first decimal trit. increases arterial pressure and prolongs the diastole, favoring emptying engorged veins. Is an excellent substitute for Digitalis and is not cumulative in action. Compare: Digit.; Crataegus.; Conval.; Strophanthus.", 
-  "Common names": "Pheasant's Eye", 
+  "name": "Adonis vernalis",
+  "Relationship": "ADONIDIN is a cardiac tonic and diuretic. Quarter grain daily, or two to five grains of first decimal trit. increases arterial pressure and prolongs the diastole, favoring emptying engorged veins. Is an excellent substitute for Digitalis and is not cumulative in action. Compare: Digit.; Crataegus.; Conval.; Strophanthus.",
+  "Common names": "Pheasant's Eye",
   "symptoms": {
     "Heart": [
-      "Cardiac asthma", 
-      "Marked venous engorgement", 
-      "Mitral and aortic regurgitation", 
-      "Chronic aortitis", 
-      "Fatty heart", 
-      "Rheumatic endocarditis", 
-      "Pulse rapid, irregular", 
-      "Myocarditis, irregular cardiac action, constriction and vertigo", 
-      "Fatty heart pericarditis", 
+      "Cardiac asthma",
+      "Marked venous engorgement",
+      "Mitral and aortic regurgitation",
+      "Chronic aortitis",
+      "Fatty heart",
+      "Rheumatic endocarditis",
+      "Pulse rapid, irregular",
+      "Myocarditis, irregular cardiac action, constriction and vertigo",
+      "Fatty heart pericarditis",
       "Precordial pain, palpation, and dyspnea"
-    ], 
+    ],
     "Head": [
-      "Vertigo on rising, turning head quickly or lying down", 
-      "Feels light; aches across font, from occiput around temples to eyes", 
-      "Eyes dilated", 
-      "Tinnitus", 
+      "Vertigo on rising, turning head quickly or lying down",
+      "Feels light",
+      "aches across font, from occiput around temples to eyes",
+      "Eyes dilated",
+      "Tinnitus",
       "Scalp feels tight"
-    ], 
+    ],
     "Respiratory": [
-      "Frequent desire to take a long breath", 
+      "Frequent desire to take a long breath",
       "Feeling of weight on chest"
-    ], 
+    ],
     "Stomach": [
-      "Gnawing hunger", 
-      "Better out of doors", 
-      "Faint feeling in epigastrium", 
+      "Gnawing hunger",
+      "Better out of doors",
+      "Faint feeling in epigastrium",
       "Heavy weight"
-    ], 
+    ],
     "Urine": [
-      "Scanty, albuminous", 
+      "Scanty, albuminous",
       "Oily pellicle on urine"
-    ], 
+    ],
     "Mouth": [
-      "Tongue dirty yellow, sore, feels scalded", 
+      "Tongue dirty yellow, sore, feels scalded",
       "Slimy"
-    ], 
+    ],
     "Sleep": [
       "Restless, with horrible dreams"
-    ], 
+    ],
     "Extremities": [
-      "Spine stiff and aching", 
-      "Aching in nape", 
+      "Spine stiff and aching",
+      "Aching in nape",
       "Oedema"
     ]
-  }, 
-  "details": "A heart medicine, after rheumatism or influenza, or Bright's disease, where the muscles of the heart are in stage of fatty degeneration, regulating the pulse and increasing the power of contractions of heart, with increased urinary secretions. Most valuable in cardiac dropsy. Low vitality, with weak heart and slow, weak pulse. Feeble heart action due only to functional disturbance. Hydrothorax, ascites. Anasarca.", 
+  },
+  "details": "A heart medicine, after rheumatism or influenza, or Bright's disease, where the muscles of the heart are in stage of fatty degeneration, regulating the pulse and increasing the power of contractions of heart, with increased urinary secretions. Most valuable in cardiac dropsy. Low vitality, with weak heart and slow, weak pulse. Feeble heart action due only to functional disturbance. Hydrothorax, ascites. Anasarca.",
   "dosage": "Five to ten drops of the tincture."
 }

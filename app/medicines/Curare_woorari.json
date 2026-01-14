@@ -1,75 +1,82 @@
 {
-  "name": "Curare woorari", 
-  "Relationship": "Compare: CYSTISIN (motor paralysis); CONIUM; CAUSTICUM; CROTALUS; NUX. Curare antidotes STRYCHNIN.", 
+  "name": "Curare woorari",
+  "Relationship": "Compare: CYSTISIN (motor paralysis); CONIUM; CAUSTICUM; CROTALUS; NUX. Curare antidotes STRYCHNIN.",
   "Modalities": [
-    "Worse: dampness", 
-    "Worse: cold weather", 
+    "Worse: dampness",
+    "Worse: cold weather",
     "Worse: cold wind; two am; right side"
-  ], 
-  "Common names": "Arrow-poison", 
+  ],
+  "Common names": "Arrow-poison",
   "symptoms": {
     "Eyes": [
-      "Black spots before vision", 
-      "Ptosis of right side", 
+      "Black spots before vision",
+      "Ptosis of right side",
       "Sharp, stitching pains over right eye"
-    ], 
+    ],
     "Respiratory": [
-      "Short breath", 
-      "Chest sore to pressure", 
-      "Short dry cough; provokes vomiting, followed by fainting", 
-      "Threatened paralysis of respiration on falling asleep", 
+      "Short breath",
+      "Chest sore to pressure",
+      "Short dry cough",
+      "provokes vomiting, followed by fainting",
+      "Threatened paralysis of respiration on falling asleep",
       "Very distressing dyspnoea"
-    ], 
+    ],
     "Mind": [
-      "Indecision; no longer wishes to think, or act for herself"
-    ], 
+      "Indecision",
+      "no longer wishes to think, or act for herself"
+    ],
     "Head": [
-      "Head drawn backward", 
-      "Lancinating pains all over head", 
-      "Brain feels full of fluid", 
+      "Head drawn backward",
+      "Lancinating pains all over head",
+      "Brain feels full of fluid",
       "Falling out of hair"
-    ], 
+    ],
     "Face": [
-      "Tongue and mouth drawn to right", 
-      "Tongue and mouth drawn", 
-      "Red", 
+      "Tongue and mouth drawn to right",
+      "Tongue and mouth drawn",
+      "Red",
       "Facial and buccal paralysis"
-    ], 
+    ],
     "Nose": [
-      "Ozaena", 
-      "Tubercles on nose; fetid lumps of pus"
-    ], 
+      "Ozaena",
+      "Tubercles on nose",
+      "fetid lumps of pus"
+    ],
     "Female": [
-      "Leucorrhoea, thick, purulent, offensive", 
-      "Menses too early, during menses, colic, headache, kidney pain", 
+      "Leucorrhoea, thick, purulent, offensive",
+      "Menses too early, during menses, colic, headache, kidney pain",
       "Dysmenorrhoea"
-    ], 
+    ],
     "Skin": [
-      "Blood oozes through", 
-      "Dirty-looking skin", 
-      "Tubercles on nose", 
-      "Itching", 
-      "Liver spots", 
-      "Leprosy", 
+      "Blood oozes through",
+      "Dirty-looking skin",
+      "Tubercles on nose",
+      "Itching",
+      "Liver spots",
+      "Leprosy",
       "Boils"
-    ], 
+    ],
     "Extremities": [
-      "Cannot lift the fingers", 
-      "Weakness of hands and fingers in pianists", 
-      "Tired pain up and down spine", 
-      "Legs tremble; give way in walking", 
-      "Arms weak, heavy", 
-      "Favors development of corns", 
-      "Debility; paralysis", 
-      "Catalepsy", 
+      "Cannot lift the fingers",
+      "Weakness of hands and fingers in pianists",
+      "Tired pain up and down spine",
+      "Legs tremble",
+      "give way in walking",
+      "Arms weak, heavy",
+      "Favors development of corns",
+      "Debility",
+      "paralysis",
+      "Catalepsy",
       "Reflexes lessened or abolished"
-    ], 
+    ],
     "Ears": [
-      "Lancinating pains start from ears; extending down to legs", 
-      "Noises; unbearable earache", 
+      "Lancinating pains start from ears",
+      "extending down to legs",
+      "Noises",
+      "unbearable earache",
       "Swelling of lobes of ear"
     ]
-  }, 
-  "details": "Muscular paralysis without impairing sensation and consciousness. Paralysis of respiratory muscles. REFLEX ACTION DIMINISHED. Debility of the aged (BARYTA) and from loss of fluids. Catalepsy. Nervous debility. Trismus. Glycosuria with motor paralysis. Curare decreases the output of adrenaline. Vomiting of bile in cirrhosis of liver. Diabetes mellitus, 4th dilution (Dr. Bark hard).", 
+  },
+  "details": "Muscular paralysis without impairing sensation and consciousness. Paralysis of respiratory muscles. REFLEX ACTION DIMINISHED. Debility of the aged (BARYTA) and from loss of fluids. Catalepsy. Nervous debility. Trismus. Glycosuria with motor paralysis. Curare decreases the output of adrenaline. Vomiting of bile in cirrhosis of liver. Diabetes mellitus, 4th dilution (Dr. Bark hard).",
   "dosage": "Sixth to thirtieth potency."
 }

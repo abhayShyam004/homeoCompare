@@ -1,97 +1,111 @@
 {
-  "name": "Colchicum", 
-  "Relationship": "Antidotes: THUJA; CAMPH.; COCCUL.; NUX; PULS. Compare: COLCHICINE (intestinal catarrh with shreddy membranes; convulsive jerkings of right hand; rheumatic fever, gout, endo and pericarditis, pleurisy, arthritis, deform in early stages; INTENSE PAIN OF RHEUMATISM 3x trit.). Also, CARBO; ARNICA; LILIUM; ARSEN.; VERAT.", 
+  "name": "Colchicum",
+  "Relationship": "Antidotes: THUJA; CAMPH.; COCCUL.; NUX; PULS. Compare: COLCHICINE (intestinal catarrh with shreddy membranes; convulsive jerkings of right hand; rheumatic fever, gout, endo and pericarditis, pleurisy, arthritis, deform in early stages; INTENSE PAIN OF RHEUMATISM 3x trit.). Also, CARBO; ARNICA; LILIUM; ARSEN.; VERAT.",
   "Modalities": [
-    "Worse: sundown to sunrise; motion", 
-    "Worse: loss of sleep", 
-    "Worse: smell of food in evening", 
-    "Worse: mental exertion", 
+    "Worse: sundown to sunrise; motion",
+    "Worse: loss of sleep",
+    "Worse: smell of food in evening",
+    "Worse: mental exertion",
     "Better: stooping"
-  ], 
-  "Common names": "Meadow Saffron", 
+  ],
+  "Common names": "Meadow Saffron",
   "symptoms": {
     "Heart": [
-      "Anxiety in region of heart", 
-      "Impulse not felt", 
-      "Pericarditis, with severe pain, oppression and dyspnoea, pulse threadlike", 
+      "Anxiety in region of heart",
+      "Impulse not felt",
+      "Pericarditis, with severe pain, oppression and dyspnoea, pulse threadlike",
       "Sound of heart becomes weaker, pulse of low tension"
-    ], 
+    ],
     "Eyes": [
-      "Dim vision after reading", 
-      "Spots before eyes", 
-      "Lachrymation worse in open air; violent tearing pain in eyes", 
-      "Pupils unequal; left pupil contracted", 
+      "Dim vision after reading",
+      "Spots before eyes",
+      "Lachrymation worse in open air",
+      "violent tearing pain in eyes",
+      "Pupils unequal",
+      "left pupil contracted",
       "Variations in visual acuity"
-    ], 
+    ],
     "Stomach": [
-      "Thirst for effervescent, alcoholic beverages", 
-      "Profuse salivary secretion", 
-      "The smell of food causes nausea even to fainting, especially fish", 
-      "Gouty gastralgia", 
-      "Vomiting of mucus, bile and food; worse, any motion; great coldness in stomach", 
-      "Craving for various things, but is averse to them when smelling them, seized then with nausea", 
-      "Dry mouth, tongue burns, gums and teeth pain", 
-      "Burning or icy coldness in stomach and abdomen", 
-      "Pain in transverse colon", 
-      "Thirst; pain in stomach and flatulence"
-    ], 
+      "Thirst for effervescent, alcoholic beverages",
+      "Profuse salivary secretion",
+      "The smell of food causes nausea even to fainting, especially fish",
+      "Gouty gastralgia",
+      "Vomiting of mucus, bile and food",
+      "worse, any motion",
+      "great coldness in stomach",
+      "Craving for various things, but is averse to them when smelling them, seized then with nausea",
+      "Dry mouth, tongue burns, gums and teeth pain",
+      "Burning or icy coldness in stomach and abdomen",
+      "Pain in transverse colon",
+      "Thirst",
+      "pain in stomach and flatulence"
+    ],
     "Head": [
       "Headache chiefly frontal and temporal, but also occipital and in nape of neck, worse afternoon and evening"
-    ], 
+    ],
     "Urine": [
-      "Dark, scanty or suppressed; bloody, brown, black, inky; contains clots of putrid decomposed blood, albumin, sugar"
-    ], 
+      "Dark, scanty or suppressed",
+      "bloody, brown, black, inky",
+      "contains clots of putrid decomposed blood, albumin, sugar"
+    ],
     "Stool": [
-      "Ineffectual pressing; feels faeces in rectum, but cannot expel them", 
-      "Autumnal dysentery; stools contain white shreddy particles in large quantities", 
-      "Painful, scanty, transparent, jelly-like mucus; pain, as if anus were torn open, with prolapse"
-    ], 
+      "Ineffectual pressing",
+      "feels faeces in rectum, but cannot expel them",
+      "Autumnal dysentery",
+      "stools contain white shreddy particles in large quantities",
+      "Painful, scanty, transparent, jelly-like mucus",
+      "pain, as if anus were torn open, with prolapse"
+    ],
     "Back": [
-      "Dull pain across loins", 
-      "Backache, better, rest and pressure", 
+      "Dull pain across loins",
+      "Backache, better, rest and pressure",
       "Aching in lumbar and lumbosacral region"
-    ], 
+    ],
     "Face": [
-      "Tingling and oedematous swelling; cheeks red, hot, sweaty", 
-      "Very irritable with the pains  pain behind angle of right lower jaw", 
+      "Tingling and oedematous swelling",
+      "cheeks red, hot, sweaty",
+      "Very irritable with the pains  pain behind angle of right lower jaw",
       "Pain in facial muscles, moving about"
-    ], 
+    ],
     "Female": [
-      "Sensation of swelling in vulva and clitoris", 
-      "Pruritis of genitals", 
+      "Sensation of swelling in vulva and clitoris",
+      "Pruritis of genitals",
       "Cold feeling in thigh after period"
-    ], 
+    ],
     "Skin": [
-      "Pink spots on back, chest and abdomen", 
-      "Urticaria", 
+      "Pink spots on back, chest and abdomen",
+      "Urticaria",
       "Blotchy papular rash on face"
-    ], 
+    ],
     "Abdomen": [
-      "Caecum and ascending colon much distended", 
-      "Distention of abdomen, with gas, inability to stretch out legs", 
-      "Ascites", 
-      "Pain over liver", 
-      "Borborygmi", 
+      "Caecum and ascending colon much distended",
+      "Distention of abdomen, with gas, inability to stretch out legs",
+      "Ascites",
+      "Pain over liver",
+      "Borborygmi",
       "Fullness and continuous rumbling"
-    ], 
+    ],
     "Extremities": [
-      "Sharp pain down left arm", 
-      "Limbs, lame, weak, tingling", 
-      "Knees strike together, can hardly walk", 
-      "Pins and needles in hands and wrists, fingertips numb", 
-      "Inflammation of great toe, gout in heel, cannot bear to have it touched or moved", 
-      "Right plantar reflex abolished", 
-      "Tearing in limbs during warm weather, stinging during cold", 
-      "Tingling in the finger nails", 
-      "Joints stiff and feverish; shifting rheumatism; pains worse at night", 
-      "Pain in front of thigh", 
-      "Oedematous swelling and coldness of legs and feet", 
+      "Sharp pain down left arm",
+      "Limbs, lame, weak, tingling",
+      "Knees strike together, can hardly walk",
+      "Pins and needles in hands and wrists, fingertips numb",
+      "Inflammation of great toe, gout in heel, cannot bear to have it touched or moved",
+      "Right plantar reflex abolished",
+      "Tearing in limbs during warm weather, stinging during cold",
+      "Tingling in the finger nails",
+      "Joints stiff and feverish",
+      "shifting rheumatism",
+      "pains worse at night",
+      "Pain in front of thigh",
+      "Oedematous swelling and coldness of legs and feet",
       "Pain worse in evening and warm weather"
-    ], 
+    ],
     "Ears": [
-      "Itching in ears; sharp, shooting pains below right tragus"
+      "Itching in ears",
+      "sharp, shooting pains below right tragus"
     ]
-  }, 
-  "details": "Affects markedly the muscular tissues, periosteum, and synovial membranes of joints. Has specific power of relieving the gouty paroxysms. It seems to be more beneficial in chronic affections of these parts. The parts are red, hot, swollen. Tearing pains; worse, in the evening and at night and from touch; stubbing the toes hurts exceedingly. THERE IS ALWAYS GREAT PROSTRATION, internal COLDNESS, and tendency to collapse. Effects of night watching and hard study. Shocks as from electricity through one half of body. Bad effects from suppressed sweat. Dreams of mice.", 
+  },
+  "details": "Affects markedly the muscular tissues, periosteum, and synovial membranes of joints. Has specific power of relieving the gouty paroxysms. It seems to be more beneficial in chronic affections of these parts. The parts are red, hot, swollen. Tearing pains; worse, in the evening and at night and from touch; stubbing the toes hurts exceedingly. THERE IS ALWAYS GREAT PROSTRATION, internal COLDNESS, and tendency to collapse. Effects of night watching and hard study. Shocks as from electricity through one half of body. Bad effects from suppressed sweat. Dreams of mice.",
   "dosage": "Third to thirtieth attenuation."
 }

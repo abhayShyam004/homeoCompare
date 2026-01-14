@@ -1,52 +1,57 @@
 {
-  "name": "Verbascum", 
-  "Relationship": "Compare: RHUS AROM.; CAUST.; PLATIN.; SPHINGURUS (pain in zygoma).", 
+  "name": "Verbascum",
+  "Relationship": "Compare: RHUS AROM.; CAUST.; PLATIN.; SPHINGURUS (pain in zygoma).",
   "Modalities": [
-    "Worse: change of temperature", 
-    "Worse: talking", 
-    "Worse: sneezing", 
+    "Worse: change of temperature",
+    "Worse: talking",
+    "Worse: sneezing",
     "Worse: biting hard ; from nine am to four pm"
-  ], 
-  "Common names": "Mullein", 
+  ],
+  "Common names": "Mullein",
   "symptoms": {
     "Respiratory": [
-      "Cough; worse at night", 
-      "Asthma", 
-      "Hoarse; voice deep, harsh; sounds like a trumpet; basso profundo", 
+      "Cough",
+      "worse at night",
+      "Asthma",
+      "Hoarse",
+      "voice deep, harsh",
+      "sounds like a trumpet",
+      "basso profundo",
       "Soreness in pharynx, cough during sleep"
-    ], 
+    ],
     "Rectum": [
-      "Inflamed and painful piles", 
-      "Hemorrhoids, with obstructed, hardened stool", 
+      "Inflamed and painful piles",
+      "Hemorrhoids, with obstructed, hardened stool",
       "Many movements a day, with twisting about navel"
-    ], 
+    ],
     "Urine": [
-      "Increase with pressure in bladder", 
-      "Burning urination", 
-      "Enuresis", 
+      "Increase with pressure in bladder",
+      "Burning urination",
+      "Enuresis",
       "Constant dribbling"
-    ], 
+    ],
     "Abdomen": [
       "Pain extends deep down, causing contraction of sphincter ani"
-    ], 
+    ],
     "Face": [
-      "Neuralgia affecting zygoma, temporomaxillary joint, and ear , particularly of left side, with lachrymation, coryza, and sensation as if parts were crushed with tongs", 
-      "Pains seem to come in flashes, excited by least movement, occurring periodically at same hour in morning and afternoon each day", 
-      "Talking, sneezing, and change of temperature aggravate the pains; also, pressing teeth together"
-    ], 
+      "Neuralgia affecting zygoma, temporomaxillary joint, and ear , particularly of left side, with lachrymation, coryza, and sensation as if parts were crushed with tongs",
+      "Pains seem to come in flashes, excited by least movement, occurring periodically at same hour in morning and afternoon each day",
+      "Talking, sneezing, and change of temperature aggravate the pains",
+      "also, pressing teeth together"
+    ],
     "Extremities": [
-      "Cramp-like pain in soles, right foot, and knee", 
-      "Lower extremities feel heavy", 
-      "Stiffness and soreness of joints of lower extremities", 
-      "Neuralgic pain in left ankle", 
+      "Cramp-like pain in soles, right foot, and knee",
+      "Lower extremities feel heavy",
+      "Stiffness and soreness of joints of lower extremities",
+      "Neuralgic pain in left ankle",
       "Thumb feels numb"
-    ], 
+    ],
     "Ears": [
-      "Otalgia, with a sense of obstruction", 
-      "Dry, scaly condition of meatus", 
+      "Otalgia, with a sense of obstruction",
+      "Dry, scaly condition of meatus",
       "Deafness"
     ]
-  }, 
-  "details": "Has a pronounced action on the inferior maxillary branch of the fifth pair of the cranial nerves; on the ear; and respiratory tract and bladder. CATARRHS, and colds, WITH PERIODICAL PROSOPALGIA. Quiets nervous, and bronchial, and urinary irritation, and cough.", 
+  },
+  "details": "Has a pronounced action on the inferior maxillary branch of the fifth pair of the cranial nerves; on the ear; and respiratory tract and bladder. CATARRHS, and colds, WITH PERIODICAL PROSOPALGIA. Quiets nervous, and bronchial, and urinary irritation, and cough.",
   "dosage": "MULLEIN OIL, (locally, for earache and dry, scaly condition of meatus. Also for teasing cough at night or lying down. Internally, tincture and lower potencies. ENURESIS, five-drop doses night and morning."
 }

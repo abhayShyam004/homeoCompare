@@ -1,54 +1,55 @@
 {
-  "name": "Juglans cinerea", 
-  "Relationship": "Compare: JUGLANDIN (duodenal catarrh; bilious diarrhoea); CHELIDON.; BRYON.; IRIS.", 
+  "name": "Juglans cinerea",
+  "Relationship": "Compare: JUGLANDIN (duodenal catarrh; bilious diarrhoea); CHELIDON.; BRYON.; IRIS.",
   "Modalities": [
-    "Better: getting heated", 
-    "Better: exercise", 
-    "Better: scratching", 
-    "Better: on rising in morning", 
+    "Better: getting heated",
+    "Better: exercise",
+    "Better: scratching",
+    "Better: on rising in morning",
     "Worse: walking"
-  ], 
-  "Common names": "Butternut", 
+  ],
+  "Common names": "Butternut",
   "symptoms": {
     "Head": [
-      "Pustules on lids and around eyes", 
-      "Eruption on scalp", 
-      "Head feels enlarged", 
-      "Sharp, occipital headache", 
+      "Pustules on lids and around eyes",
+      "Eruption on scalp",
+      "Head feels enlarged",
+      "Sharp, occipital headache",
       "Dull, full head"
-    ], 
+    ],
     "Stomach": [
-      "Atonic dyspepsia with much eructations and flatulent distention", 
+      "Atonic dyspepsia with much eructations and flatulent distention",
       "Soreness in region of liver"
-    ], 
+    ],
     "Stool": [
-      "Camp diarrhoea", 
+      "Camp diarrhoea",
       "Yellowish-green, with tenesmus and burning at anus"
-    ], 
+    ],
     "Back": [
-      "Muscles of neck rigid, lame", 
-      "Pain between scapula and under right", 
+      "Muscles of neck rigid, lame",
+      "Pain between scapula and under right",
       "Pain in lumbar vertebrae"
-    ], 
+    ],
     "Mouth": [
-      "Dryness of root of tongue and fauces", 
-      "Soreness in region of tonsils externally", 
+      "Dryness of root of tongue and fauces",
+      "Soreness in region of tonsils externally",
       "Acrid feeling in mouth and throat"
-    ], 
+    ],
     "Nose": [
-      "Coryza, preceded by pain under sternum, with threatening suffocation", 
-      "Later, copious, bland, thick mucous discharge", 
-      "Tingling in nose; sneezing"
-    ], 
+      "Coryza, preceded by pain under sternum, with threatening suffocation",
+      "Later, copious, bland, thick mucous discharge",
+      "Tingling in nose",
+      "sneezing"
+    ],
     "Skin": [
-      "Erythema and erysipelatous redness", 
-      "Eczema, especially on lower extremities, sacrum and hands", 
-      "Red, like flush of scarlatina", 
-      "Pustules", 
-      "Jaundice, with pain about liver and right scapula", 
+      "Erythema and erysipelatous redness",
+      "Eczema, especially on lower extremities, sacrum and hands",
+      "Red, like flush of scarlatina",
+      "Pustules",
+      "Jaundice, with pain about liver and right scapula",
       "Itching and prickling when heated"
     ]
-  }, 
-  "details": "A faulty elimination that produces jaundice and various skin eruptions, is pictured by this drug. The sharp, OCCIPITAL HEADACHE, usually associated with liver disturbance, is very characteristic. Pain in chest, axilla and scapula, with suffocative sensation. Feeling as if all internal organs were too large, especially those of left side. Cholelithiasis.", 
+  },
+  "details": "A faulty elimination that produces jaundice and various skin eruptions, is pictured by this drug. The sharp, OCCIPITAL HEADACHE, usually associated with liver disturbance, is very characteristic. Pain in chest, axilla and scapula, with suffocative sensation. Feeling as if all internal organs were too large, especially those of left side. Cholelithiasis.",
   "dosage": "Tincture, to third potency."
 }

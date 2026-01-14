@@ -1,22 +1,24 @@
 {
-  "name": "Brachyglottis", 
-  "Relationship": "Compare: Apis; Helonias; Merc. cor.; Plumbum.", 
-  "Common names": "Pukapuka", 
+  "name": "Brachyglottis",
+  "Relationship": "Compare: Apis; Helonias; Merc. cor.; Plumbum.",
+  "Common names": "Pukapuka",
   "symptoms": {
     "Urine": [
-      "Soreness in urethra; feeling as if urine could not be retained", 
-      "Pressure in neck of bladder; urging to urinate", 
-      "Sense of swishing in bladder", 
+      "Soreness in urethra",
+      "feeling as if urine could not be retained",
+      "Pressure in neck of bladder",
+      "urging to urinate",
+      "Sense of swishing in bladder",
       "Urine contains mucous corpuscles and epithelium, albumen and casts"
-    ], 
+    ],
     "Abdomen": [
-      "Feeling as if something rolling about", 
+      "Feeling as if something rolling about",
       "Fluttering in region of ovary"
-    ], 
+    ],
     "Extremities": [
       "Cramp in fingers, thumb, and wrist when writing - soreness extending along flexor carpi ulnaris"
     ]
-  }, 
-  "details": "FLUTTERING SENSATION. (Caladium.) Kidney and bladder symptoms predominate. Produces symptoms of albuminuria. Itching in ears and nostrils. BRIGHT'S DISEASE. Oppression of chest. Writer's cramp.", 
+  },
+  "details": "FLUTTERING SENSATION. (Caladium.) Kidney and bladder symptoms predominate. Produces symptoms of albuminuria. Itching in ears and nostrils. BRIGHT'S DISEASE. Oppression of chest. Writer's cramp.",
   "dosage": "Third potency."
 }

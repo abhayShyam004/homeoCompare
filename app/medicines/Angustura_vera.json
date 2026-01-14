@@ -1,50 +1,51 @@
 {
-  "name": "Angustura vera", 
-  "Relationship": "Compare: NUX; RUTA; MERCUR.; BRUCEA. Bark of Nux vomica or angustura falsa. (Tetanic spasms with undisturbed consciousness, worse noise liquids, paralyzed lower extremities, worse least touch, CRIES FOR FEAR OF BEING TOUCHED. Painful jerking of legs; cramp-like pain in knees; rigid and lame limbs of paralytics. For pain in the passing of calculus.)", 
-  "Common names": "Bark of Galipea Cusparia", 
+  "name": "Angustura vera",
+  "Relationship": "Compare: NUX; RUTA; MERCUR.; BRUCEA. Bark of Nux vomica or angustura falsa. (Tetanic spasms with undisturbed consciousness, worse noise liquids, paralyzed lower extremities, worse least touch, CRIES FOR FEAR OF BEING TOUCHED. Painful jerking of legs; cramp-like pain in knees; rigid and lame limbs of paralytics. For pain in the passing of calculus.)",
+  "Common names": "Bark of Galipea Cusparia",
   "symptoms": {
     "Head": [
-      "Pain in temporal muscles, when opening the jaws", 
-      "Oversensitive", 
-      "Drawing in facial muscles", 
-      "Headache, with heat of face", 
-      "Pain in articulation of jaw, in masseter muscles, as if fatigued by chewing too much", 
-      "Cramp-pain on the zygomatic arch", 
+      "Pain in temporal muscles, when opening the jaws",
+      "Oversensitive",
+      "Drawing in facial muscles",
+      "Headache, with heat of face",
+      "Pain in articulation of jaw, in masseter muscles, as if fatigued by chewing too much",
+      "Cramp-pain on the zygomatic arch",
       "Acute pain in cheeks"
-    ], 
+    ],
     "Stomach": [
-      "Atonic dyspepsia", 
-      "Belching, with cough", 
-      "Irresistible desire for coffee", 
-      "Pain from navel into sternum", 
+      "Atonic dyspepsia",
+      "Belching, with cough",
+      "Irresistible desire for coffee",
+      "Pain from navel into sternum",
       "Bitter taste"
-    ], 
+    ],
     "Abdomen": [
-      "Burning in anus", 
-      "Diarrhoea and colic", 
-      "Tenesmus with soft stool; chronic diarrhoea, with debility and loss of flesh"
-    ], 
+      "Burning in anus",
+      "Diarrhoea and colic",
+      "Tenesmus with soft stool",
+      "chronic diarrhoea, with debility and loss of flesh"
+    ],
     "Back": [
-      "Bends backwards", 
-      "Twitching and jerking along back", 
-      "Pain in cervical vertebrae", 
-      "Pain in spine, at nape of neck and sacrum, worse on pressure", 
-      "Itching along back", 
+      "Bends backwards",
+      "Twitching and jerking along back",
+      "Pain in cervical vertebrae",
+      "Pain in spine, at nape of neck and sacrum, worse on pressure",
+      "Itching along back",
       "Drawing in the neck"
-    ], 
+    ],
     "Skin": [
       "Caries, very painful ulcers which affect the bone"
-    ], 
+    ],
     "Extremities": [
-      "Cracking in joints", 
-      "Caries of long bones", 
-      "Pain in limbs on walking", 
-      "Stiffness and tension of muscles and joints", 
-      "Pain in knees", 
-      "Arms tired and heavy", 
+      "Cracking in joints",
+      "Caries of long bones",
+      "Pain in limbs on walking",
+      "Stiffness and tension of muscles and joints",
+      "Pain in knees",
+      "Arms tired and heavy",
       "Coldness of fingers"
     ]
-  }, 
-  "details": "Rheumatic and paralytic complaints - great difficulty in walking. Crackling in all joints. The greatest craving for coffee is a characteristic symptom. Caries of long bones. Paralysis. Tetanus. Stiffness of muscles and joints. OVERSENSITIVE. Principal action on spinal motor nerves and mucous membranes.", 
+  },
+  "details": "Rheumatic and paralytic complaints - great difficulty in walking. Crackling in all joints. The greatest craving for coffee is a characteristic symptom. Caries of long bones. Paralysis. Tetanus. Stiffness of muscles and joints. OVERSENSITIVE. Principal action on spinal motor nerves and mucous membranes.",
   "dosage": "Sixth potency"
 }

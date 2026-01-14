@@ -1,41 +1,42 @@
 {
-  "name": "Natrum chloratum", 
-  "Relationship": "Compare: AUR. MUR. NAT.; CALC.; SEPIA; HELIOTROPIUM (uterine displacement, with active bearing-down sensation and loss of voice; membranous dysmenorrhoea). Antidotes: PULSAT.; GUAIACUM.", 
-  "Common names": "Labarraque's Solution", 
+  "name": "Natrum chloratum",
+  "Relationship": "Compare: AUR. MUR. NAT.; CALC.; SEPIA; HELIOTROPIUM (uterine displacement, with active bearing-down sensation and loss of voice; membranous dysmenorrhoea). Antidotes: PULSAT.; GUAIACUM.",
+  "Common names": "Labarraque's Solution",
   "symptoms": {
     "Head": [
-      "Vertigo, with aching across forehead", 
-      "Bleeding of nose in clots", 
+      "Vertigo, with aching across forehead",
+      "Bleeding of nose in clots",
       "Swimming feeling, as if top of head would float off"
-    ], 
+    ],
     "Stomach": [
       "Drowsy after meals"
-    ], 
+    ],
     "Urine": [
-      "Dark, with albumen and casts", 
-      "Much pain across small of back", 
+      "Dark, with albumen and casts",
+      "Much pain across small of back",
       "Diffuse nephritis"
-    ], 
+    ],
     "Mouth": [
-      "Cough with aphonia", 
-      "Sore irritable spots along sides of tongue and throat, gums sore, tongue swollen; aphthous ulceration", 
-      "Furred tongue, large, flabby, indented", 
+      "Cough with aphonia",
+      "Sore irritable spots along sides of tongue and throat, gums sore, tongue swollen",
+      "aphthous ulceration",
+      "Furred tongue, large, flabby, indented",
       "Putrid taste"
-    ], 
+    ],
     "Female": [
-      "Passive, bearing-down from heavy condition of uterus", 
-      "Leucorrhoea and backache", 
-      "Violent metrorrhagia", 
-      "Feels as if it opened and shut", 
-      "Womb is heavy, sodden, with tendency to prolapse", 
-      "Subinvolution", 
+      "Passive, bearing-down from heavy condition of uterus",
+      "Leucorrhoea and backache",
+      "Violent metrorrhagia",
+      "Feels as if it opened and shut",
+      "Womb is heavy, sodden, with tendency to prolapse",
+      "Subinvolution",
       "Feeling as if uterus were pushed up on sitting down"
-    ], 
+    ],
     "Extremities": [
-      "Extreme weakness in ankles and knees", 
+      "Extreme weakness in ankles and knees",
       "Hands swollen every morning"
     ]
-  }, 
-  "details": "In congested and atonic states of the uterus and its ligaments, with hepatic disorders. Chronic catarrhal diseases of the middle ear. FLABBY, DEBILITATED CONSTITUTION. Both hands swollen in morning. Phlegmatic. Depressed, faint.", 
+  },
+  "details": "In congested and atonic states of the uterus and its ligaments, with hepatic disorders. Chronic catarrhal diseases of the middle ear. FLABBY, DEBILITATED CONSTITUTION. Both hands swollen in morning. Phlegmatic. Depressed, faint.",
   "dosage": "Fifteen to twenty drops of Labarraque's solution in water. Third attenuation made with dilute alcohol, lower with water."
 }

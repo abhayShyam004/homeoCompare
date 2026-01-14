@@ -1,81 +1,90 @@
 {
-  "name": "Cistus canadensis", 
-  "Relationship": "Antidotes: RHUS; SEPIA. Compare: CONIUM; CARBO; CALC; ARG. N.", 
+  "name": "Cistus canadensis",
+  "Relationship": "Antidotes: RHUS; SEPIA. Compare: CONIUM; CARBO; CALC; ARG. N.",
   "Modalities": [
-    "Worse: slightest exposure to cold air; mental exertion", 
+    "Worse: slightest exposure to cold air; mental exertion",
     "Worse: excitement"
-  ], 
-  "Common names": "Rock Rose", 
+  ],
+  "Common names": "Rock Rose",
   "symptoms": {
     "Respiratory": [
       "Asthmatic after lying down , preceded by formication"
-    ], 
+    ],
     "Stomach": [
-      "Cool feeling in whole abdomen", 
-      "Cool feeling in stomach before and after eating", 
+      "Cool feeling in whole abdomen",
+      "Cool feeling in stomach before and after eating",
       "Desire for cheese"
-    ], 
+    ],
     "Stool": [
-      "Diarrhoea from coffee and fruit, thin, yellow, urgent; worse in morning"
-    ], 
+      "Diarrhoea from coffee and fruit, thin, yellow, urgent",
+      "worse in morning"
+    ],
     "Chest": [
-      "Hemorrhage from lungs", 
-      "The neck is studded with tumors", 
-      "Induration of mammae", 
+      "Hemorrhage from lungs",
+      "The neck is studded with tumors",
+      "Induration of mammae",
       "Coldness in chest"
-    ], 
+    ],
     "Face": [
-      "Tip of nose painful", 
-      "Itching, burning, and crusts on right zygoma", 
-      "Lupus, caries; open, bleeding cancer"
-    ], 
+      "Tip of nose painful",
+      "Itching, burning, and crusts on right zygoma",
+      "Lupus, caries",
+      "open, bleeding cancer"
+    ],
     "Female": [
-      "Induration and inflammation of mammae", 
-      "Bad smelling leucorrhoea", 
+      "Induration and inflammation of mammae",
+      "Bad smelling leucorrhoea",
       "Sensitive to cold air"
-    ], 
+    ],
     "Skin": [
-      "Small, painful pimples; lupus", 
-      "Hemicrania", 
-      "Glands inflamed and indurated", 
-      "Itching of swollen hands and arms; general itching which prevents sleep", 
-      "Skin of hands hard, thick, dry, fissured; deep cracks", 
-      "Mercurio-syphilitic ulcers", 
+      "Small, painful pimples",
+      "lupus",
+      "Hemicrania",
+      "Glands inflamed and indurated",
+      "Itching of swollen hands and arms",
+      "general itching which prevents sleep",
+      "Skin of hands hard, thick, dry, fissured",
+      "deep cracks",
+      "Mercurio-syphilitic ulcers",
       "Itching all over"
-    ], 
+    ],
     "Throat": [
-      "Spongy feeling; very dry and cold air passing over parts causes pain", 
-      "Breath, tongue, and throat feel cold", 
-      "Hawking of mucus", 
-      "Head drawn to one side by swellings in neck", 
-      "Uvula and tonsils swollen", 
-      "Sore throat from inhaling the least cold air", 
-      "Heat and itching in throat", 
-      "A small, dry spot in throat; must sip water frequently", 
+      "Spongy feeling",
+      "very dry and cold air passing over parts causes pain",
+      "Breath, tongue, and throat feel cold",
+      "Hawking of mucus",
+      "Head drawn to one side by swellings in neck",
+      "Uvula and tonsils swollen",
+      "Sore throat from inhaling the least cold air",
+      "Heat and itching in throat",
+      "A small, dry spot in throat",
+      "must sip water frequently",
       "Swelling and suppuration of glands of throat"
-    ], 
+    ],
     "Mouth": [
-      "Pyorrhoea", 
-      "Mouth feels cold; putrid, impure breath", 
-      "Scorbutic swollen gums", 
+      "Pyorrhoea",
+      "Mouth feels cold",
+      "putrid, impure breath",
+      "Scorbutic swollen gums",
       "Hurts to protrude the tongue"
-    ], 
+    ],
     "Extremities": [
-      "White swelling", 
-      "Sprained pain in wrist", 
-      "Tetter on hands", 
-      "Cold feet", 
-      "Tips of fingers sensitive to cold", 
+      "White swelling",
+      "Sprained pain in wrist",
+      "Tetter on hands",
+      "Cold feet",
+      "Tips of fingers sensitive to cold",
       "Syphilitic ulcers on lower limbs, with hard swelling around"
-    ], 
+    ],
     "Sleep": [
       "Cannot sleep from coldness in throat"
-    ], 
+    ],
     "Ears": [
-      "Tetter on and around ears, extending to external meatus", 
-      "Watery discharge; also fetid pus"
+      "Tetter on and around ears, extending to external meatus",
+      "Watery discharge",
+      "also fetid pus"
     ]
-  }, 
-  "details": "A deep-acting anti-psoric remedy, with marked action in glandular affections, herpetic eruptions, chronic swellings, when patient is EXTREMELY SENSITIVE TO COLD. SENSATION OF COLDNESS IN VARIOUS PARTS. Scrofulous ophthalmia. Poisoned wounds, bites, phagedenic ulcers. MALIGNANT DISEASE OF THE GLANDS OF THE NECK. Cistus has affinity for nasopharynx; aborts colds that center in posterior nose. Sniffling.", 
+  },
+  "details": "A deep-acting anti-psoric remedy, with marked action in glandular affections, herpetic eruptions, chronic swellings, when patient is EXTREMELY SENSITIVE TO COLD. SENSATION OF COLDNESS IN VARIOUS PARTS. Scrofulous ophthalmia. Poisoned wounds, bites, phagedenic ulcers. MALIGNANT DISEASE OF THE GLANDS OF THE NECK. Cistus has affinity for nasopharynx; aborts colds that center in posterior nose. Sniffling.",
   "dosage": "First to thirtieth attenuation. Locally as a wash to arrest fetid discharges."
 }

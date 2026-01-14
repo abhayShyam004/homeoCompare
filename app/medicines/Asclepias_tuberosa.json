@@ -1,31 +1,34 @@
 {
-  "name": "Asclepias tuberosa", 
-  "Relationship": "Compare: Asclepias Incarnata - Swamp Milk Weed. (Chronic gastric Catarrh and leucorrhoea. (Dropsy with dyspnoea.) Periploca graeca - One of the Asclepiades - (Cardiac tonic, acts on circulation and respiratory center, accelerating respiration in a ratio disproportionate to pulse.) Bryonia; Dulc.", 
-  "Common names": "Pleurisy-root", 
+  "name": "Asclepias tuberosa",
+  "Relationship": "Compare: Asclepias Incarnata - Swamp Milk Weed. (Chronic gastric Catarrh and leucorrhoea. (Dropsy with dyspnoea.) Periploca graeca - One of the Asclepiades - (Cardiac tonic, acts on circulation and respiratory center, accelerating respiration in a ratio disproportionate to pulse.) Bryonia; Dulc.",
+  "Common names": "Pleurisy-root",
   "symptoms": {
     "Respiratory": [
-      "Pain in chest; shooting downward from left nipple", 
-      "Chest pains are relieved by bending forward", 
-      "Catarrh, with frontal headache, and sticky yellow discharge", 
-      "A general eliminative remedy, acting specially on the sudoriparous glands", 
-      "Dry cough; throat constricted; causes pain in head and abdomen", 
-      "Respiration painful, especially at base of left lung", 
-      "Spaces between ribs close to sternum tender", 
+      "Pain in chest",
+      "shooting downward from left nipple",
+      "Chest pains are relieved by bending forward",
+      "Catarrh, with frontal headache, and sticky yellow discharge",
+      "A general eliminative remedy, acting specially on the sudoriparous glands",
+      "Dry cough",
+      "throat constricted",
+      "causes pain in head and abdomen",
+      "Respiration painful, especially at base of left lung",
+      "Spaces between ribs close to sternum tender",
       "Lancinating pain between shoulders"
-    ], 
+    ],
     "Stomach": [
-      "Fullness, pressure, weight", 
-      "Sensitive to tobacco", 
+      "Fullness, pressure, weight",
+      "Sensitive to tobacco",
       "Flatulence after meals"
-    ], 
+    ],
     "Rectum": [
-      "Catarrhal dysentery, with rheumatic pains all over", 
+      "Catarrhal dysentery, with rheumatic pains all over",
       "Stools smell like rotten eggs"
-    ], 
+    ],
     "Extremities": [
       "Rheumatic joints give sensations as if adhesions being broken up on bending"
     ]
-  }, 
-  "details": "Its action on the chest muscles is most marked and has been verified. Sick headache, with flatulence in stomach and bowels. Dyspepsia. Bronchitis and pleurisy come within its range. Catarrhal states from cold and damp weather. Irritation of larynx with huskiness; grip, with pleuritic pain.", 
+  },
+  "details": "Its action on the chest muscles is most marked and has been verified. Sick headache, with flatulence in stomach and bowels. Dyspepsia. Bronchitis and pleurisy come within its range. Catarrhal states from cold and damp weather. Irritation of larynx with huskiness; grip, with pleuritic pain.",
   "dosage": "Tincture and first potency."
 }

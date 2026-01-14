@@ -1,36 +1,40 @@
 {
-  "name": "Jacaranda", 
-  "Relationship": "Compare: THUJA; CORALLIUM; JACARANDA GUALANDAI (in syphilitic symptoms, especially of eye and throat. Chancroids; ATONIC ULCERS. Dark, painless diarrhoea).", 
-  "Common names": "Brazilian Caroba-tree", 
+  "name": "Jacaranda",
+  "Relationship": "Compare: THUJA; CORALLIUM; JACARANDA GUALANDAI (in syphilitic symptoms, especially of eye and throat. Chancroids; ATONIC ULCERS. Dark, painless diarrhoea).",
+  "Common names": "Brazilian Caroba-tree",
   "symptoms": {
     "Head": [
-      "Vertigo on rising, with heavy forehead", 
-      "Eyes pain; are inflamed and watery", 
+      "Vertigo on rising, with heavy forehead",
+      "Eyes pain",
+      "are inflamed and watery",
       "Coryza with heavy head"
-    ], 
+    ],
     "Urine": [
-      "Urethra inflamed; discharge of yellow matter"
-    ], 
+      "Urethra inflamed",
+      "discharge of yellow matter"
+    ],
     "Throat": [
-      "Vesicles in pharynx", 
+      "Vesicles in pharynx",
       "Sore, dry, constricted"
-    ], 
+    ],
     "Extremities": [
-      "Morning soreness and stiffness of muscles", 
-      "Weakness of lumbar region", 
-      "Gonorrheal and syphilitic arthritis", 
-      "Rheumatic pain in right knee", 
-      "Itching pimples on hands", 
+      "Morning soreness and stiffness of muscles",
+      "Weakness of lumbar region",
+      "Gonorrheal and syphilitic arthritis",
+      "Rheumatic pain in right knee",
+      "Itching pimples on hands",
       "Gonorrheal rheumatism"
-    ], 
+    ],
     "Male": [
-      "Itching pimples on glans and prepuce", 
-      "Heat and pain in penis; painful erections; phimosis", 
-      "Prepuce painful and swollen", 
-      "Chancroid", 
+      "Itching pimples on glans and prepuce",
+      "Heat and pain in penis",
+      "painful erections",
+      "phimosis",
+      "Prepuce painful and swollen",
+      "Chancroid",
       "Chordee"
     ]
-  }, 
-  "details": "Has reputation as a remedy in venereal diseases and rheumatism. Morning sickness. The urinary and sexual symptoms are important. Rheumatic symptoms. In syphilitic symptoms, especially of eye and throat. Chancroids; ATONIC ULCERS. Dark, painless diarrhoea.", 
+  },
+  "details": "Has reputation as a remedy in venereal diseases and rheumatism. Morning sickness. The urinary and sexual symptoms are important. Rheumatic symptoms. In syphilitic symptoms, especially of eye and throat. Chancroids; ATONIC ULCERS. Dark, painless diarrhoea.",
   "dosage": "Tincture, to third potency."
 }

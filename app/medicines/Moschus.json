@@ -1,67 +1,74 @@
 {
-  "name": "Moschus", 
-  "Relationship": "Compare: NUX MOSCH.; ASAF.; VALER.; SUMBUL.; IGN.; CASTOR. Compatible: AMBRA. Antidotes: CAMPH.; COFF.", 
+  "name": "Moschus",
+  "Relationship": "Compare: NUX MOSCH.; ASAF.; VALER.; SUMBUL.; IGN.; CASTOR. Compatible: AMBRA. Antidotes: CAMPH.; COFF.",
   "Modalities": [
-    "Worse: cold", 
-    "Better: in open air", 
+    "Worse: cold",
+    "Better: in open air",
     "Better: rubbing"
-  ], 
-  "Common names": "Musk", 
+  ],
+  "Common names": "Musk",
   "symptoms": {
     "Heart": [
-      "Hysterical palpitation", 
-      "Trembling around heart", 
+      "Hysterical palpitation",
+      "Trembling around heart",
       "Weak pulse and fainting"
-    ], 
+    ],
     "Head": [
-      "Pressure on top of head", 
-      "Compressive pain over root of nose", 
-      "Scalp sensitive", 
-      "Vertigo on least motion; sensation as if falling from a great height", 
+      "Pressure on top of head",
+      "Compressive pain over root of nose",
+      "Scalp sensitive",
+      "Vertigo on least motion",
+      "sensation as if falling from a great height",
       "Sounds in ears as from the report of a cannon"
-    ], 
+    ],
     "Respiratory": [
-      "Tightness of chest, is obliged to take a deeper breath", 
-      "Globus hystericus", 
-      "Sudden constriction of larynx and trachea", 
-      "Difficult respiration; chest oppressed; hysterical spasm of chest; asthma", 
-      "Spasm of glottis", 
-      "Cough ceases, mucus cannot be expectorated", 
-      "Asthma, with intense anxiety, fear, and smothering sensation", 
+      "Tightness of chest, is obliged to take a deeper breath",
+      "Globus hystericus",
+      "Sudden constriction of larynx and trachea",
+      "Difficult respiration",
+      "chest oppressed",
+      "hysterical spasm of chest",
+      "asthma",
+      "Spasm of glottis",
+      "Cough ceases, mucus cannot be expectorated",
+      "Asthma, with intense anxiety, fear, and smothering sensation",
       "Impending paralysis of lungs"
-    ], 
+    ],
     "Stomach": [
-      "Abdomen greatly distended", 
-      "Aversion to food", 
-      "Spasmodic, nervous hiccough", 
-      "Desire for black coffee, stimulants", 
-      "With stomach symptoms, anxiety in chest", 
-      "Faints when eating", 
-      "Everything tastes flat", 
+      "Abdomen greatly distended",
+      "Aversion to food",
+      "Spasmodic, nervous hiccough",
+      "Desire for black coffee, stimulants",
+      "With stomach symptoms, anxiety in chest",
+      "Faints when eating",
+      "Everything tastes flat",
       "Distended"
-    ], 
+    ],
     "Urine": [
-      "Profuse urination", 
+      "Profuse urination",
       "Diabetes"
-    ], 
+    ],
     "Mind": [
-      "Sexual hypochondriasis", 
-      "Uncontrollable laughter", 
-      "Anxiety, with palpitation; starting as if frightened", 
+      "Sexual hypochondriasis",
+      "Uncontrollable laughter",
+      "Anxiety, with palpitation",
+      "starting as if frightened",
       "Scolding"
-    ], 
+    ],
     "Female": [
-      "Drawing and pushing in the direction of the genitals; sensation as if menses appear", 
-      "Menses too early, too profuse, with disposition to faint", 
+      "Drawing and pushing in the direction of the genitals",
+      "sensation as if menses appear",
+      "Menses too early, too profuse, with disposition to faint",
       "Sexual desire, with intolerable titillation in parts"
-    ], 
+    ],
     "Male": [
-      "Premature senility", 
-      "Violent desire; involuntary emissions", 
-      "Impotence, associated with diabetes", 
+      "Premature senility",
+      "Violent desire",
+      "involuntary emissions",
+      "Impotence, associated with diabetes",
       "Nausea and vomiting after coition"
     ]
-  }, 
-  "details": "A remedy for hysteria and nervous paroxysms, FAINTING FITS and convulsions, catalepsy, etc. The characteristic condition begin aggravation by cold; there is great sensitiveness to air. Much nervous trembling and frequent fainting. Great flatulence. Diseases do not follow a normal course. COLDNESS. Tension in muscles, skin and mind.", 
+  },
+  "details": "A remedy for hysteria and nervous paroxysms, FAINTING FITS and convulsions, catalepsy, etc. The characteristic condition begin aggravation by cold; there is great sensitiveness to air. Much nervous trembling and frequent fainting. Great flatulence. Diseases do not follow a normal course. COLDNESS. Tension in muscles, skin and mind.",
   "dosage": "First to third potency."
 }

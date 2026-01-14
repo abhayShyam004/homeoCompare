@@ -1,39 +1,42 @@
 {
-  "name": "Hippozaenium", 
-  "Relationship": "Compare: MUCO-TOXIN (Cahis' preparation with the micrococcus catarrhalis. Friedlander's Bacillus of Pneumonia and the micrococcus tetragenous - for acute and chronic mucous catarrhs in children and old people.); AUR.; KALI-BICH.; PSOR.; BACILLI.", 
-  "Common names": "Gladerinne-mallein-Farcine", 
+  "name": "Hippozaenium",
+  "Relationship": "Compare: MUCO-TOXIN (Cahis' preparation with the micrococcus catarrhalis. Friedlander's Bacillus of Pneumonia and the micrococcus tetragenous - for acute and chronic mucous catarrhs in children and old people.); AUR.; KALI-BICH.; PSOR.; BACILLI.",
+  "Common names": "Gladerinne-mallein-Farcine",
   "symptoms": {
     "Respiratory": [
-      "Bronchial asthma", 
-      "Bronchitis in the aged, where suffocation from excessive secretion is imminent", 
-      "Excessive secretion", 
-      "Noisy breathing; short, irregular", 
-      "Hoarseness", 
-      "Tuberculosis", 
-      "Suffocation imminent", 
+      "Bronchial asthma",
+      "Bronchitis in the aged, where suffocation from excessive secretion is imminent",
+      "Excessive secretion",
+      "Noisy breathing",
+      "short, irregular",
+      "Hoarseness",
+      "Tuberculosis",
+      "Suffocation imminent",
       "Cough, with dyspepsia"
-    ], 
+    ],
     "Nose": [
-      "Papules and ulceration in frontal sinus and pharynx", 
-      "Discharge acrid, corroding, bloody, offensive", 
-      "Tubercles on alae nasi", 
-      "Red, swollen", 
+      "Papules and ulceration in frontal sinus and pharynx",
+      "Discharge acrid, corroding, bloody, offensive",
+      "Tubercles on alae nasi",
+      "Red, swollen",
       "Catarrh, ozaena, ulceration"
-    ], 
+    ],
     "Skin": [
-      "Articular non-fluctuating swellings", 
-      "Lymphatic swellings", 
-      "Malignant erysipelas", 
-      "Ulcers", 
-      "Rupia", 
-      "Eczema", 
-      "Pustules and abscesses", 
+      "Articular non-fluctuating swellings",
+      "Lymphatic swellings",
+      "Malignant erysipelas",
+      "Ulcers",
+      "Rupia",
+      "Eczema",
+      "Pustules and abscesses",
       "Nodules in arm"
-    ], 
+    ],
     "Face": [
-      "All glands swollen; painful; form abscesses"
+      "All glands swollen",
+      "painful",
+      "form abscesses"
     ]
-  }, 
-  "details": "This powerful nosode introduced by Dr. J.J. Garth Wilkinson, covers symptoms which suggest integral parts of consumption, cancer, syphilis, etc., and promises useful service in the treatment of ozaena, scrofulous swellings. Pyaemia, erysipelas. Chronic rhinitis; sanious secretion.", 
+  },
+  "details": "This powerful nosode introduced by Dr. J.J. Garth Wilkinson, covers symptoms which suggest integral parts of consumption, cancer, syphilis, etc., and promises useful service in the treatment of ozaena, scrofulous swellings. Pyaemia, erysipelas. Chronic rhinitis; sanious secretion.",
   "dosage": "Thirtieth potency."
 }

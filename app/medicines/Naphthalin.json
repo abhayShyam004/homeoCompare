@@ -1,44 +1,55 @@
 {
-  "name": "Naphthalin", 
-  "Relationship": "Compare: DROS.; CORALL.; COCCUS. TERPIN. HYDRAS. (Whooping-cough, hay asthma and bronchial affections. 1-2 grain doses).", 
-  "Common names": "A chemical compound from Coal-tar; Tar Camphor", 
+  "name": "Naphthalin",
+  "Relationship": "Compare: DROS.; CORALL.; COCCUS. TERPIN. HYDRAS. (Whooping-cough, hay asthma and bronchial affections. 1-2 grain doses).",
+  "Common names": "A chemical compound from Coal-tar; Tar Camphor",
   "symptoms": {
     "Eyes": [
-      "It produces detachment of the retina; papillo-retinal infiltration; deposits in patches upon the retina; amblyopia and consecutive amaurosis; sparkling synchysis; soft cataract", 
-      "Exudation in the retina, choroid and ciliary body", 
-      "Marked affinity for the eye", 
-      "Opacity of the cornea", 
+      "It produces detachment of the retina",
+      "papillo-retinal infiltration",
+      "deposits in patches upon the retina",
+      "amblyopia and consecutive amaurosis",
+      "sparkling synchysis",
+      "soft cataract",
+      "Exudation in the retina, choroid and ciliary body",
+      "Marked affinity for the eye",
+      "Opacity of the cornea",
       "Cataract"
-    ], 
+    ],
     "Respiratory": [
-      "Sneezing; eyes inflamed; painful; head hot", 
-      "Dyspnoea and sighing inspiration", 
-      "Acute laryngotracheitis", 
-      "Spasmodic asthma; better in open air", 
-      "Emphysema in the aged with asthma", 
-      "Hay-fever", 
-      "Whooping-cough, long and continued paroxysms of coughing, unable to get a respiration", 
-      "Bronchitis when the spasmodic element is associated with tenacious expectoration and oppression", 
-      "Soreness in chest and stomach; must loosen clothing"
-    ], 
+      "Sneezing",
+      "eyes inflamed",
+      "painful",
+      "head hot",
+      "Dyspnoea and sighing inspiration",
+      "Acute laryngotracheitis",
+      "Spasmodic asthma",
+      "better in open air",
+      "Emphysema in the aged with asthma",
+      "Hay-fever",
+      "Whooping-cough, long and continued paroxysms of coughing, unable to get a respiration",
+      "Bronchitis when the spasmodic element is associated with tenacious expectoration and oppression",
+      "Soreness in chest and stomach",
+      "must loosen clothing"
+    ],
     "Urine": [
-      "Black urine", 
-      "Pain in bladder", 
-      "Meatus red, swollen, and oedema of prepuce", 
-      "Irresistible desire", 
-      "Terribly offensive odor of decomposing ammoniacal urine", 
+      "Black urine",
+      "Pain in bladder",
+      "Meatus red, swollen, and oedema of prepuce",
+      "Irresistible desire",
+      "Terribly offensive odor of decomposing ammoniacal urine",
       "Cutting pain down penis"
-    ], 
+    ],
     "Head": [
-      "Face pale yellowish hue", 
-      "Restless", 
+      "Face pale yellowish hue",
+      "Restless",
       "Lying as if stupefied by a narcotic"
-    ], 
+    ],
     "Skin": [
-      "Dermatitis; itching infiltration", 
+      "Dermatitis",
+      "itching infiltration",
       "Eruptions at corners of mouth and pigmentation around nails"
     ]
-  }, 
-  "details": "Coryza, hay-fever, phthisis pulmonalis, also gonorrhea have been influenced favorably by this drug. Pyelonephritis. Irritation of the periphery of the urinary apparatus. Whooping-cough.", 
+  },
+  "details": "Coryza, hay-fever, phthisis pulmonalis, also gonorrhea have been influenced favorably by this drug. Pyelonephritis. Irritation of the periphery of the urinary apparatus. Whooping-cough.",
   "dosage": "Third trituration. NON-HOMEOPATHIC USES. For worms, and especially pinworms, one-gramme dose. Externally in skin diseases, five per cent. ointment."
 }

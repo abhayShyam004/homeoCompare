@@ -1,27 +1,29 @@
 {
-  "name": "Arum dracontium", 
-  "Relationship": "Arum Italicum. (Brain-fag, with headache in occipital region.) Arum maculatum (inflammation and ulceration of mucous membranes. Nasal irritation with polypus).", 
-  "Common names": "Green Dragon", 
+  "name": "Arum dracontium",
+  "Relationship": "Arum Italicum. (Brain-fag, with headache in occipital region.) Arum maculatum (inflammation and ulceration of mucous membranes. Nasal irritation with polypus).",
+  "Common names": "Green Dragon",
   "symptoms": {
     "Head": [
-      "Heavy; shooting pain in ears, aching pain behind right ear"
-    ], 
+      "Heavy",
+      "shooting pain in ears, aching pain behind right ear"
+    ],
     "Respiratory": [
-      "Expectoration thick, heavy", 
-      "Hoarseness; excess of mucus in larynx", 
+      "Expectoration thick, heavy",
+      "Hoarseness",
+      "excess of mucus in larynx",
       "Asthmatic at night"
-    ], 
+    ],
     "Urine": [
       "Irresistible desire to pass urine, burns and smarts"
-    ], 
+    ],
     "Throat": [
-      "Dry, sore, worse swallowing", 
-      "Continued disposition to clear throat", 
-      "Loose cough worse at night on lying down", 
-      "Croupy, hoarse cough with sore throat", 
+      "Dry, sore, worse swallowing",
+      "Continued disposition to clear throat",
+      "Loose cough worse at night on lying down",
+      "Croupy, hoarse cough with sore throat",
       "Raw and tender"
     ]
-  }, 
-  "details": "A remedy for Pharyngitis with sore, raw and tender throat.", 
+  },
+  "details": "A remedy for Pharyngitis with sore, raw and tender throat.",
   "dosage": "First potency."
 }

@@ -1,57 +1,64 @@
 {
-  "name": "Cobaltum", 
-  "Relationship": "Compare: CANNAB. IND.; SEPIA; ZINC.; AGNUS; SELEN.", 
-  "Common names": "The Metal Cobalt", 
+  "name": "Cobaltum",
+  "Relationship": "Compare: CANNAB. IND.; SEPIA; ZINC.; AGNUS; SELEN.",
+  "Common names": "The Metal Cobalt",
   "symptoms": {
     "Head": [
-      "Aches; worse, bending head forward", 
+      "Aches",
+      "worse, bending head forward",
       "Itching of hairy scalp and beard"
-    ], 
+    ],
     "Rectum": [
       "Constant dropping of blood from the anus, no blood from the stools"
-    ], 
+    ],
     "Teeth": [
-      "Feel too long", 
-      "Cracks across tongue", 
-      "Pain in teeth", 
+      "Feel too long",
+      "Cracks across tongue",
+      "Pain in teeth",
       "Coated white"
-    ], 
+    ],
     "Mind": [
-      "Constant interchange of mental moods", 
+      "Constant interchange of mental moods",
       "All mental excitement increases suffering"
-    ], 
+    ],
     "Back": [
-      "Weakness in legs and backache after emissions", 
-      "Pain in back and sacrum; worse while sitting; better, walking or lying"
-    ], 
+      "Weakness in legs and backache after emissions",
+      "Pain in back and sacrum",
+      "worse while sitting",
+      "better, walking or lying"
+    ],
     "Abdomen": [
-      "Shooting in liver", 
+      "Shooting in liver",
       "Pain in spleen"
-    ], 
+    ],
     "Sleep": [
-      "Unrefreshing; disturbed by lewd dreams"
-    ], 
+      "Unrefreshing",
+      "disturbed by lewd dreams"
+    ],
     "Skin": [
-      "Pimples about nates, chin, hairy scalp", 
+      "Pimples about nates, chin, hairy scalp",
       "Dry and pimply"
-    ], 
+    ],
     "Extremities": [
-      "Aching in wrist-joints", 
-      "Foot-sweat, mostly between toes", 
-      "Weak knees", 
-      "Trembling of limbs", 
-      "Shooting into thighs from liver", 
+      "Aching in wrist-joints",
+      "Foot-sweat, mostly between toes",
+      "Weak knees",
+      "Trembling of limbs",
+      "Shooting into thighs from liver",
       "Tingling in feet"
-    ], 
+    ],
     "Male": [
-      "Backache in lumbar region and weak legs", 
-      "Pain in right testicle; better, urinating", 
-      "Emissions without erection", 
-      "Pain in end of urethra; greenish discharge; brown spots on genitals and abdomen", 
-      "Lewd dreams", 
+      "Backache in lumbar region and weak legs",
+      "Pain in right testicle",
+      "better, urinating",
+      "Emissions without erection",
+      "Pain in end of urethra",
+      "greenish discharge",
+      "brown spots on genitals and abdomen",
+      "Lewd dreams",
       "Impotence"
     ]
-  }, 
-  "details": "Adapted to neurasthenic spinal states. Sexual disturbances. Fatigue, agitation, and bone pains, worse in morning.", 
+  },
+  "details": "Adapted to neurasthenic spinal states. Sexual disturbances. Fatigue, agitation, and bone pains, worse in morning.",
   "dosage": "Sixth to thirtieth potency."
 }

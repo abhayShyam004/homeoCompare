@@ -1,21 +1,22 @@
 {
   "symptoms": {
     "Urine": [
-      "Frequent urination", 
-      "Bladder feels distended", 
+      "Frequent urination",
+      "Bladder feels distended",
       "Pain along spermatic cord, which feels full, as if varicosed"
-    ], 
+    ],
     "Abdomen": [
-      "Itching of anus, with white putty-like stools", 
-      "Aching in region of liver; griping and chilliness inside of abdomen and into legs"
-    ], 
+      "Itching of anus, with white putty-like stools",
+      "Aching in region of liver",
+      "griping and chilliness inside of abdomen and into legs"
+    ],
     "Skin": [
-      "Goose-flesh", 
+      "Goose-flesh",
       "Itching of the soles, as if from chilblains"
     ]
-  }, 
-  "details": "This remedy is akin to the ordinary Chamomilla. Gastric disturbances with coldness. Sensitive to cold air and cold things. Respiration. Coryza with much lachrymation, sneezing, and discharge of clear water from the nose. Symptoms worse indoors. Constriction and rawness of throat. Cough, tickling; worse in warm room.", 
-  "Common names": "Roman Chamomile", 
-  "name": "Anthemis nobilis", 
+  },
+  "details": "This remedy is akin to the ordinary Chamomilla. Gastric disturbances with coldness. Sensitive to cold air and cold things. Respiration. Coryza with much lachrymation, sneezing, and discharge of clear water from the nose. Symptoms worse indoors. Constriction and rawness of throat. Cough, tickling; worse in warm room.",
+  "Common names": "Roman Chamomile",
+  "name": "Anthemis nobilis",
   "dosage": "Use the third potency."
 }

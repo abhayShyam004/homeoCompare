@@ -1,47 +1,60 @@
 {
-  "name": "Sulfonal", 
-  "Relationship": "TRIONAL; insomnia associated with physical excitement; (vertigo, loss of equilibrium, ataxia, nausea, vomiting, diarrhoea, stertorous breathing, cyanosis, tinnitus, hallucination).", 
-  "Common names": "A Coal-tar Product", 
+  "name": "Sulfonal",
+  "Relationship": "TRIONAL; insomnia associated with physical excitement; (vertigo, loss of equilibrium, ataxia, nausea, vomiting, diarrhoea, stertorous breathing, cyanosis, tinnitus, hallucination).",
+  "Common names": "A Coal-tar Product",
   "symptoms": {
     "Head": [
-      "Eyes bloodshot and restless", 
-      "Double vision; heavy look about eyes; tinnitus, aphasia; tongue as if paralyzed", 
-      "Double vision; ptosis; tinnitus; dysphagia, difficult speech", 
-      "Dropsy, stupid; pain on attempting to raise head", 
+      "Eyes bloodshot and restless",
+      "Double vision",
+      "heavy look about eyes",
+      "tinnitus, aphasia",
+      "tongue as if paralyzed",
+      "Double vision",
+      "ptosis",
+      "tinnitus",
+      "dysphagia, difficult speech",
+      "Dropsy, stupid",
+      "pain on attempting to raise head",
       "Vertigo, unable to rise"
-    ], 
+    ],
     "Respiratory": [
-      "Sighing dyspnoea", 
-      "Congestion of lungs; stertorous breathing"
-    ], 
+      "Sighing dyspnoea",
+      "Congestion of lungs",
+      "stertorous breathing"
+    ],
     "Urine": [
-      "Scanty", 
-      "Pink color", 
-      "Albuminuria, with casts", 
-      "Haematoporphyrinuria", 
-      "Constant desire to urinate; scanty, brownish red"
-    ], 
+      "Scanty",
+      "Pink color",
+      "Albuminuria, with casts",
+      "Haematoporphyrinuria",
+      "Constant desire to urinate",
+      "scanty, brownish red"
+    ],
     "Mind": [
-      "Extreme irritability", 
-      "Alternation of happy, hopeful states with depression and weakness", 
-      "Mental confusion, incoherence, illusions; apathetic"
-    ], 
+      "Extreme irritability",
+      "Alternation of happy, hopeful states with depression and weakness",
+      "Mental confusion, incoherence, illusions",
+      "apathetic"
+    ],
     "Sleep": [
-      "Fidgety, wakeful, drowsy", 
+      "Fidgety, wakeful, drowsy",
       "Insomnia"
-    ], 
+    ],
     "Skin": [
-      "Erythema", 
+      "Erythema",
       "Itching, bluish purpura"
-    ], 
+    ],
     "Extremities": [
-      "Knee-jerks disappear", 
-      "Stiffness and paralysis of both legs", 
-      "Extreme restlessness; muscular twitchings", 
-      "Ataxic movements, staggering gait; cold, weak, trembling; legs seem too heavy", 
+      "Knee-jerks disappear",
+      "Stiffness and paralysis of both legs",
+      "Extreme restlessness",
+      "muscular twitchings",
+      "Ataxic movements, staggering gait",
+      "cold, weak, trembling",
+      "legs seem too heavy",
       "Anaesthesia of legs"
     ]
-  }, 
-  "details": "Vertigo of cerebral origin, cerebellar disease, ataxic symptoms and chorea, present a field for the homeopathic employment of this drug. PROFOUND WEAKNESS, gone, faint feeling, and despondency. Loss of control of sphincter. Muscular incoordination.", 
+  },
+  "details": "Vertigo of cerebral origin, cerebellar disease, ataxic symptoms and chorea, present a field for the homeopathic employment of this drug. PROFOUND WEAKNESS, gone, faint feeling, and despondency. Loss of control of sphincter. Muscular incoordination.",
   "dosage": "Third trituration. NON-HOMEOPATHIC USES. As a hypnotic. Dose, ten to thirty grains in hot water. Takes about two hours to act."
 }

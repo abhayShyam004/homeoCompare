@@ -1,63 +1,67 @@
 {
-  "name": "Apocynum cannabinum", 
-  "Relationship": "CYMARIN is the active principle of Apocyn., lowers pulse rate and increases blood-pressure. STROPHANTHUS (extreme cardiac depression with intense gastric disturbance; dropsy). ARALIA HISPIDA - Wild Elder - a valuable diuretic, useful in dropsy of the cavities, either due to hepatic or renal disease with constipation. Urinary disorders, especially with dropsy. Scudder advises doses of five to thirty drops in sweetened cream of tartar, Solution). APIS.; ARSENIC; DIGITAL.; HELL.", 
+  "name": "Apocynum cannabinum",
+  "Relationship": "CYMARIN is the active principle of Apocyn., lowers pulse rate and increases blood-pressure. STROPHANTHUS (extreme cardiac depression with intense gastric disturbance; dropsy). ARALIA HISPIDA - Wild Elder - a valuable diuretic, useful in dropsy of the cavities, either due to hepatic or renal disease with constipation. Urinary disorders, especially with dropsy. Scudder advises doses of five to thirty drops in sweetened cream of tartar, Solution). APIS.; ARSENIC; DIGITAL.; HELL.",
   "Modalities": [
     "Worse: cold weather; cold drinks; uncovering"
-  ], 
-  "Common names": "Indian Hemp", 
+  ],
+  "Common names": "Indian Hemp",
   "symptoms": {
     "Heart": [
-      "Tricuspid regurgitation; rapid and feeble, irregular cardiac action, low arterial tension, pulsating jugulars, general cyanosis and general dropsy"
-    ], 
+      "Tricuspid regurgitation",
+      "rapid and feeble, irregular cardiac action, low arterial tension, pulsating jugulars, general cyanosis and general dropsy"
+    ],
     "Respiratory": [
-      "Short, dry cough", 
-      "Sighing", 
-      "Oppression about epigastrium and chest", 
+      "Short, dry cough",
+      "Sighing",
+      "Oppression about epigastrium and chest",
       "Respiration short and unsatisfactory"
-    ], 
+    ],
     "Stomach": [
-      "Excessive vomiting", 
-      "Dull, heavy, sick feeling", 
-      "Abdomen bloated", 
-      "Nausea, with drowsiness", 
-      "Food or water is immediately ejected", 
-      "Ascites", 
-      "Thirst on walking", 
-      "Sensation of sinking in stomach", 
+      "Excessive vomiting",
+      "Dull, heavy, sick feeling",
+      "Abdomen bloated",
+      "Nausea, with drowsiness",
+      "Food or water is immediately ejected",
+      "Ascites",
+      "Thirst on walking",
+      "Sensation of sinking in stomach",
       "Oppression in epigastrium and chest, impeding breathing"
-    ], 
+    ],
     "Urine": [
-      "Dribbling", 
-      "Bladder much distended", 
-      "Strangury", 
-      "Little expulsive power", 
-      "Turbid, hot urine, with thick mucus and burning in urethra, after urinating", 
+      "Dribbling",
+      "Bladder much distended",
+      "Strangury",
+      "Little expulsive power",
+      "Turbid, hot urine, with thick mucus and burning in urethra, after urinating",
       "Renal dropsy"
-    ], 
+    ],
     "Mind": [
-      "Bewildered", 
+      "Bewildered",
       "Low spirited"
-    ], 
+    ],
     "Stool": [
-      "Feeling as if sphincter were open and stools ran right out", 
-      "Watery, flatulent, with soreness in anus; worse after eating"
-    ], 
+      "Feeling as if sphincter were open and stools ran right out",
+      "Watery, flatulent, with soreness in anus",
+      "worse after eating"
+    ],
     "Sleep": [
       "Great restlessness and little sleep"
-    ], 
+    ],
     "Nose": [
-      "Long-continued sneezing", 
-      "Dull headache", 
-      "Snuffles of children", 
-      "Takes cold easily, nostrils become congested and blocked up easily", 
+      "Long-continued sneezing",
+      "Dull headache",
+      "Snuffles of children",
+      "Takes cold easily, nostrils become congested and blocked up easily",
       "Chronic nasal catarrh with tendency to acute stuffiness with dull, sluggish memory"
-    ], 
+    ],
     "Female": [
-      "Hemorrhages at change of life", 
-      "Amenorrhoea, with bloating; metrorrhagia with nausea; fainting, vital depression", 
+      "Hemorrhages at change of life",
+      "Amenorrhoea, with bloating",
+      "metrorrhagia with nausea",
+      "fainting, vital depression",
       "Blood expelled in large clots"
     ]
-  }, 
-  "details": "Increases secretions of mucous and serous membranes and acts on cellular tissue, producing oedema and dropsy and on skin causing diaphoresis. Acute hydrocephalus. A diminished frequency of the pulse is a prime indication. This is one of our most efficient remedies, in DROPSIES, ascites, anasarca and hydrothorax, and urinary troubles, especially suppression and strangury. In the digestive complaints of Bright's disease, with the nausea, vomiting, drowsiness, difficult breathing, it will be found of frequent service. The dropsy is characterized by great thirst and gastric irritability. Arrhythmia. MITRAL AND TRICUSPID REGURGITATION. ACUTE ALCOHOLISM. Relaxation of sphincters.", 
+  },
+  "details": "Increases secretions of mucous and serous membranes and acts on cellular tissue, producing oedema and dropsy and on skin causing diaphoresis. Acute hydrocephalus. A diminished frequency of the pulse is a prime indication. This is one of our most efficient remedies, in DROPSIES, ascites, anasarca and hydrothorax, and urinary troubles, especially suppression and strangury. In the digestive complaints of Bright's disease, with the nausea, vomiting, drowsiness, difficult breathing, it will be found of frequent service. The dropsy is characterized by great thirst and gastric irritability. Arrhythmia. MITRAL AND TRICUSPID REGURGITATION. ACUTE ALCOHOLISM. Relaxation of sphincters.",
   "dosage": "Tincture (ten drops three times daily) and in acute alcoholism 1 dram of decoction in 4 oz. water."
 }

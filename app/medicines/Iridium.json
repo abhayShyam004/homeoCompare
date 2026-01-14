@@ -1,31 +1,32 @@
 {
-  "name": "Iridium", 
-  "Relationship": "Compare: IRIDIUM CHLORIDE. (Produces salivation and stiffness of jaws followed by head and nervous symptoms. Congestion of nares and bronchi. Dragging pain in lower back. Headache worse right side, heavy feeling as of liquid lead.) Compare: PLATINA; PALLADIUM; OSMIUM.", 
-  "Common names": "The Metal", 
+  "name": "Iridium",
+  "Relationship": "Compare: IRIDIUM CHLORIDE. (Produces salivation and stiffness of jaws followed by head and nervous symptoms. Congestion of nares and bronchi. Dragging pain in lower back. Headache worse right side, heavy feeling as of liquid lead.) Compare: PLATINA; PALLADIUM; OSMIUM.",
+  "Common names": "The Metal",
   "symptoms": {
     "Head": [
-      "Profuse, watery coryza, better indoors", 
-      "Thought confuse", 
-      "Wooden feeling in right side of head", 
-      "Sensation as if mind were void", 
-      "Right side of scalp sensitive", 
-      "Difficult concentration of thought", 
+      "Profuse, watery coryza, better indoors",
+      "Thought confuse",
+      "Wooden feeling in right side of head",
+      "Sensation as if mind were void",
+      "Right side of scalp sensitive",
+      "Difficult concentration of thought",
       "Ozaena"
-    ], 
+    ],
     "Respiratory": [
-      "Hoarse cough, worse talking; posterior nares feel raw, inflamed, profuse, thick, yellowish discharge", 
+      "Hoarse cough, worse talking",
+      "posterior nares feel raw, inflamed, profuse, thick, yellowish discharge",
       "Chronic laryngeal catarrh"
-    ], 
+    ],
     "Back": [
-      "Spinal paresis, especially for the aged and after disease", 
+      "Spinal paresis, especially for the aged and after disease",
       "Weakness in the kidney region"
-    ], 
+    ],
     "Extremities": [
-      "Tension in both thighs, especially left", 
-      "Pressing in groin and left thigh", 
+      "Tension in both thighs, especially left",
+      "Pressing in groin and left thigh",
       "Dislocated feeling in left hip-joint and dull pain toward left gluteal region"
     ]
-  }, 
-  "details": "Intestinal putrefaction and septicaemia. ANAEMIA, increases red corpuscles. Epilepsy; lupus. Rheumatism and gout. Uterine tumors. Spinal paresis. EXHAUSTION AFTER DISEASE. Children who are puny, weak-limbed, and grow too fast. Nephritis of pregnancy.", 
+  },
+  "details": "Intestinal putrefaction and septicaemia. ANAEMIA, increases red corpuscles. Epilepsy; lupus. Rheumatism and gout. Uterine tumors. Spinal paresis. EXHAUSTION AFTER DISEASE. Children who are puny, weak-limbed, and grow too fast. Nephritis of pregnancy.",
   "dosage": "Sixth and higher."
 }

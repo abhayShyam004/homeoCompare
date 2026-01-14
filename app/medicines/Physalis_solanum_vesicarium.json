@@ -1,43 +1,50 @@
 {
-  "name": "Physalis solanum vesicarium", 
+  "name": "Physalis solanum vesicarium",
   "Modalities": [
     "Worse: cold camp evening"
-  ], 
-  "Common names": "Alkekengi - Winter Cherry", 
+  ],
+  "Common names": "Alkekengi - Winter Cherry",
   "symptoms": {
     "Head": [
-      "Dryness of mouth", 
-      "Facial paralysis", 
-      "Vertigo, hazy feeling; memory weakened; desire to talk constantly", 
+      "Dryness of mouth",
+      "Facial paralysis",
+      "Vertigo, hazy feeling",
+      "memory weakened",
+      "desire to talk constantly",
       "Throbbing pain, heavy over eyes in forehead"
-    ], 
+    ],
     "Fever": [
-      "Feverish in evening", 
-      "Chilly in open air", 
-      "Sweat during stool, with creeping sensation, with abundant urine", 
+      "Feverish in evening",
+      "Chilly in open air",
+      "Sweat during stool, with creeping sensation, with abundant urine",
       "Pain in liver during fever"
-    ], 
+    ],
     "Urine": [
-      "Polyuria", 
-      "Sudden inability to hold it in women", 
-      "Nocturnal incontinence", 
-      "Enuresis", 
+      "Polyuria",
+      "Sudden inability to hold it in women",
+      "Nocturnal incontinence",
+      "Enuresis",
       "Acrid, foul, retained, abundant"
-    ], 
+    ],
     "Respiratory": [
-      "Stabbing in chest", 
-      "Cough", 
-      "Hoarse voice; throat irritated; chest oppressed, causing insomnia"
-    ], 
+      "Stabbing in chest",
+      "Cough",
+      "Hoarse voice",
+      "throat irritated",
+      "chest oppressed, causing insomnia"
+    ],
     "Skin": [
-      "Excoriation between fingers and toes; pustules on thighs; nodes on forehead"
-    ], 
+      "Excoriation between fingers and toes",
+      "pustules on thighs",
+      "nodes on forehead"
+    ],
     "Extremities": [
-      "When walking, every jar seems repeated in the head", 
-      "Paralysis", 
-      "Stiff limbs; tonic cramps"
+      "When walking, every jar seems repeated in the head",
+      "Paralysis",
+      "Stiff limbs",
+      "tonic cramps"
     ]
-  }, 
-  "details": "Marked urinary symptoms confirming its ancient uses in gravel, etc. Lithiasis; marked diuretic action. Languor and muscular weakness. Recommended in facial paralysis.", 
+  },
+  "details": "Marked urinary symptoms confirming its ancient uses in gravel, etc. Lithiasis; marked diuretic action. Languor and muscular weakness. Recommended in facial paralysis.",
   "dosage": "Tincture to third attenuation. The juice of the berries is used in dropsical conditions and irritable bladder."
 }

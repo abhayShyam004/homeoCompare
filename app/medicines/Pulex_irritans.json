@@ -1,53 +1,57 @@
 {
-  "name": "Pulex irritans", 
+  "name": "Pulex irritans",
   "Modalities": [
-    "Worse: left side", 
-    "Worse: moving about", 
+    "Worse: left side",
+    "Worse: moving about",
     "Better: sitting or lying down"
-  ], 
-  "Common names": "Common Flea", 
+  ],
+  "Common names": "Common Flea",
   "symptoms": {
     "Head": [
-      "Very impatient, cross, and irritable", 
-      "Face wrinkled and old-looking", 
+      "Very impatient, cross, and irritable",
+      "Face wrinkled and old-looking",
       "Frontal headache, with enlarged feeling of eyes"
-    ], 
+    ],
     "Fever": [
-      "Feels a glow all over, like being over steam; chilly, while sitting beside the fire"
-    ], 
+      "Feels a glow all over, like being over steam",
+      "chilly, while sitting beside the fire"
+    ],
     "Stomach": [
-      "Abdomen bloated", 
-      "Stool very offensive", 
-      "Breath and taste foul", 
+      "Abdomen bloated",
+      "Stool very offensive",
+      "Breath and taste foul",
       "Intense nausea, with vomiting, purging, and faintness"
-    ], 
+    ],
     "Urine": [
-      "Scanty with frequent urging, with pressure on bladder and burning in urethra", 
-      "Cannot retain urine; must attend to the call without delay", 
-      "Flow stops suddenly followed by pain urine foul", 
+      "Scanty with frequent urging, with pressure on bladder and burning in urethra",
+      "Cannot retain urine",
+      "must attend to the call without delay",
+      "Flow stops suddenly followed by pain urine foul",
       "Irritable bladder before menses"
-    ], 
+    ],
     "Back": [
-      "Aches, weak; drawing of muscles below scapulae"
-    ], 
+      "Aches, weak",
+      "drawing of muscles below scapulae"
+    ],
     "Mouth": [
-      "Sensation of a thread in throat", 
-      "Metallic taste", 
+      "Sensation of a thread in throat",
+      "Metallic taste",
       "Thirsty, especially during headache"
-    ], 
+    ],
     "Female": [
-      "Leucorrhoea, profuse, foul, staining a greenish yellow; stains of menses and leucorrhoea very hard to wash out", 
-      "Increased flow of saliva during", 
-      "Backache", 
-      "Menses delayed", 
+      "Leucorrhoea, profuse, foul, staining a greenish yellow",
+      "stains of menses and leucorrhoea very hard to wash out",
+      "Increased flow of saliva during",
+      "Backache",
+      "Menses delayed",
       "Intense burning in vagina"
-    ], 
+    ],
     "Skin": [
-      "Skin emits foul odor", 
-      "Sore spots all over", 
+      "Skin emits foul odor",
+      "Sore spots all over",
       "Prickly itching"
     ]
-  }, 
-  "details": "Marked urinary and female symptoms.", 
+  },
+  "details": "Marked urinary and female symptoms.",
   "dosage": "The higher potencies."
 }

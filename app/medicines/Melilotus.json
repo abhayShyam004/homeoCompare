@@ -1,60 +1,69 @@
 {
-  "name": "Melilotus", 
-  "Relationship": "Compare: MELILOT ALBA - (White Clover) - practically the same action. (Hemorrhages, congestive headaches, engorged blood vessels, spasms.) AMYL.; BELL.; GLON.", 
+  "name": "Melilotus",
+  "Relationship": "Compare: MELILOT ALBA - (White Clover) - practically the same action. (Hemorrhages, congestive headaches, engorged blood vessels, spasms.) AMYL.; BELL.; GLON.",
   "Modalities": [
-    "Worse: rainy", 
-    "Worse: changeable weather", 
-    "Worse: approach of storm", 
+    "Worse: rainy",
+    "Worse: changeable weather",
+    "Worse: approach of storm",
     "Worse: motion; four pm"
-  ], 
-  "Common names": "Yellow Melilot - Sweet Clover", 
+  ],
+  "Common names": "Yellow Melilot - Sweet Clover",
   "symptoms": {
     "Head": [
-      "Scalp sore and tender to touch", 
-      "Fullness all over head", 
-      "Eyes heavy; blurred sight; wants to close them tightly for relief", 
-      "Heavy, oppressed; frontal, throbbing, undulating sensation in brain", 
-      "Headache with retching, vomiting, sense of pressure over orbits, pallor, cold hands and feet, black spots before eyes", 
-      "Sick headache; relieved by epistaxis or menstrual flow", 
+      "Scalp sore and tender to touch",
+      "Fullness all over head",
+      "Eyes heavy",
+      "blurred sight",
+      "wants to close them tightly for relief",
+      "Heavy, oppressed",
+      "frontal, throbbing, undulating sensation in brain",
+      "Headache with retching, vomiting, sense of pressure over orbits, pallor, cold hands and feet, black spots before eyes",
+      "Sick headache",
+      "relieved by epistaxis or menstrual flow",
       "Neuralgia around and over right side of head and neck"
-    ], 
+    ],
     "Respiratory": [
-      "Weight on chest", 
-      "Hemoptysis", 
-      "Tickling in throat with cough", 
+      "Weight on chest",
+      "Hemoptysis",
+      "Tickling in throat with cough",
       "Feels as if smothering, especially from rapid walking"
-    ], 
+    ],
     "Stool": [
-      "Difficult, painful, constipated", 
-      "Anus feels constricted, full, throbs", 
+      "Difficult, painful, constipated",
+      "Anus feels constricted, full, throbs",
       "No desire until there is a large accumulation"
-    ], 
+    ],
     "Mind": [
-      "Unable to fix mind", 
-      "Wants to run away and hide", 
-      "Stupor", 
-      "Memory treacherous", 
-      "Delusions; thinks everyone is looking at her, fears to talk loud, and wants to run away, etc."
-    ], 
+      "Unable to fix mind",
+      "Wants to run away and hide",
+      "Stupor",
+      "Memory treacherous",
+      "Delusions",
+      "thinks everyone is looking at her, fears to talk loud, and wants to run away, etc."
+    ],
     "Face": [
       "Intensely red and flushed, with throbbing carotids"
-    ], 
+    ],
     "Nose": [
-      "Stopped up; dry, must breathe through mouth; dry, hard clinkers in nose; profuse epistaxis"
-    ], 
+      "Stopped up",
+      "dry, must breathe through mouth",
+      "dry, hard clinkers in nose",
+      "profuse epistaxis"
+    ],
     "Female": [
-      "Dysmenorrhoea", 
-      "Sticking pain in external parts", 
-      "Ovarian neuralgia", 
+      "Dysmenorrhoea",
+      "Sticking pain in external parts",
+      "Ovarian neuralgia",
       "Menses scanty, intermit, with nausea and bearing-down"
-    ], 
+    ],
     "Extremities": [
-      "Pain in knee; wants to stretch leg, but does not relieve", 
-      "Skin and extremities cold", 
-      "Numbness and aching in knee-joints", 
+      "Pain in knee",
+      "wants to stretch leg, but does not relieve",
+      "Skin and extremities cold",
+      "Numbness and aching in knee-joints",
       "Joints sore"
     ]
-  }, 
-  "details": "Congestions and hemorrhages seem to be the special manifestations of this drug. Violent congestive and nervous headaches. Infantile spasms. Epilepsy from blow on head. PAINS AND DEBILITY point to it. Coldness but also increase of temperature; tenderness, and pain. Muscular system depressed. Dreams and emissions. Hemorrhages, congestive headaches, engorged blood vessels, spasms.", 
+  },
+  "details": "Congestions and hemorrhages seem to be the special manifestations of this drug. Violent congestive and nervous headaches. Infantile spasms. Epilepsy from blow on head. PAINS AND DEBILITY point to it. Coldness but also increase of temperature; tenderness, and pain. Muscular system depressed. Dreams and emissions. Hemorrhages, congestive headaches, engorged blood vessels, spasms.",
   "dosage": "Tincture, for inhaling; lower potencies."
 }

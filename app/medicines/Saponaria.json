@@ -1,43 +1,48 @@
 {
-  "name": "Saponaria", 
-  "Relationship": "Compare: SAPONIN - a glucosidal principle found in Quillaya, Yucca, Senega, Dioscorea and other plants. (Tired, indifferent. PAIN IN LEFT TEMPLE, EYE, photophobia, hot stitches deep in eye. Fifth nerve affections. Migraine. Much pain BEFORE the menstrual flow; severe sore throat, worse right side; tonsils swollen, worse in warm room. Sharp burning taste and violent sneezing. Compare, also: VERBASC.; COCCUL. (both containing Saponin). QUILLAYA; (Anagallis, AGROSTEMA, Helonias, Sarsaparilla, Paris, Cyclamen and others contain Saponin).", 
+  "name": "Saponaria",
+  "Relationship": "Compare: SAPONIN - a glucosidal principle found in Quillaya, Yucca, Senega, Dioscorea and other plants. (Tired, indifferent. PAIN IN LEFT TEMPLE, EYE, photophobia, hot stitches deep in eye. Fifth nerve affections. Migraine. Much pain BEFORE the menstrual flow; severe sore throat, worse right side; tonsils swollen, worse in warm room. Sharp burning taste and violent sneezing. Compare, also: VERBASC.; COCCUL. (both containing Saponin). QUILLAYA; (Anagallis, AGROSTEMA, Helonias, Sarsaparilla, Paris, Cyclamen and others contain Saponin).",
   "Modalities": [
-    "Worse: at night", 
-    "Worse: mental exertion", 
+    "Worse: at night",
+    "Worse: mental exertion",
     "Worse: left side"
-  ], 
-  "Common names": "Soap Root", 
+  ],
+  "Common names": "Soap Root",
   "symptoms": {
     "Heart": [
-      "Palpitation with anxiety", 
-      "Impulse weak; pulse less frequent"
-    ], 
+      "Palpitation with anxiety",
+      "Impulse weak",
+      "pulse less frequent"
+    ],
     "Head": [
-      "Throbbing over orbits", 
-      "Congestions to head; tired feeling in nape", 
-      "Left-sided trigeminal neuralgia, especially supraorbital", 
-      "Stitching pain, supraorbital; worse, left side, evening, motion", 
-      "Stopped up feeling in nose, also itching and sneezing", 
-      "Coryza", 
+      "Throbbing over orbits",
+      "Congestions to head",
+      "tired feeling in nape",
+      "Left-sided trigeminal neuralgia, especially supraorbital",
+      "Stitching pain, supraorbital",
+      "worse, left side, evening, motion",
+      "Stopped up feeling in nose, also itching and sneezing",
+      "Coryza",
       "Sensation of drunkenness with constant endeavor to go left-wards"
-    ], 
+    ],
     "Stomach": [
-      "Difficult swallowing", 
-      "Nausea, heartburn; full feeling not relieved by eructation"
-    ], 
+      "Difficult swallowing",
+      "Nausea, heartburn",
+      "full feeling not relieved by eructation"
+    ],
     "Mind": [
-      "Apathetic, depressed, with sleepiness", 
+      "Apathetic, depressed, with sleepiness",
       "Utter indifference to pain or possible death"
-    ], 
+    ],
     "Eyes": [
-      "Ciliary neuralgia; worse, left side", 
-      "Photophobia", 
-      "Glaucoma", 
-      "Increased intraocular pressure", 
-      "Violent eye pains", 
-      "Hot stitches deep in eyeball", 
+      "Ciliary neuralgia",
+      "worse, left side",
+      "Photophobia",
+      "Glaucoma",
+      "Increased intraocular pressure",
+      "Violent eye pains",
+      "Hot stitches deep in eyeball",
       "Exophthalmos, worse reading and writing"
     ]
-  }, 
+  },
   "details": "Of great use in the treatment of acute colds, coryza, sore throat, etc. Will often \"break up\" a cold. Sore throat, involuntary urination"
 }

@@ -1,34 +1,35 @@
 {
-  "name": "Magnolia grandiflora", 
-  "Relationship": "Compare: RHUS.; DULCAM.; AURUM.", 
+  "name": "Magnolia grandiflora",
+  "Relationship": "Compare: RHUS.; DULCAM.; AURUM.",
   "Modalities": [
-    "Worse: damp air", 
-    "Worse: lying on left side; in morning on first rising", 
-    "Better: dry weather", 
+    "Worse: damp air",
+    "Worse: lying on left side; in morning on first rising",
+    "Better: dry weather",
     "Better: motion; intermenstrual flow"
-  ], 
-  "Common names": "Magnolia", 
+  ],
+  "Common names": "Magnolia",
   "symptoms": {
     "Heart": [
-      "Crampy pain in heart", 
-      "Dyspnoea", 
-      "Tendency to faint", 
-      "Angina pectoris", 
-      "Feeling of a large bolus of food which distressed the stomach", 
-      "Pain around heart accompanied by itching of the feet", 
-      "Endocarditis and pericarditis", 
-      "Oppression of chest with inability to expand the lungs", 
-      "Suffocated feeling when walking fast or lying on left side", 
+      "Crampy pain in heart",
+      "Dyspnoea",
+      "Tendency to faint",
+      "Angina pectoris",
+      "Feeling of a large bolus of food which distressed the stomach",
+      "Pain around heart accompanied by itching of the feet",
+      "Endocarditis and pericarditis",
+      "Oppression of chest with inability to expand the lungs",
+      "Suffocated feeling when walking fast or lying on left side",
       "Sensation as if heart had stopped beating"
-    ], 
+    ],
     "Extremities": [
-      "Rheumatic pain in clavicles", 
-      "Numbness in left arm", 
-      "Shooting in all limbs", 
-      "Stiffness and sharp erratic pains; worse in joints", 
+      "Rheumatic pain in clavicles",
+      "Numbness in left arm",
+      "Shooting in all limbs",
+      "Stiffness and sharp erratic pains",
+      "worse in joints",
       "Feet itch"
     ]
-  }, 
-  "details": "Rheumatism and cardiac lesions are prominent features in the symptomatology of this drug. STIFFNESS and soreness. Alternating pains between spleen and heart. Patient tired and stiff. Soreness when quiet. Erratic shifting of pains.", 
+  },
+  "details": "Rheumatism and cardiac lesions are prominent features in the symptomatology of this drug. STIFFNESS and soreness. Alternating pains between spleen and heart. Patient tired and stiff. Soreness when quiet. Erratic shifting of pains.",
   "dosage": "Third potency."
 }

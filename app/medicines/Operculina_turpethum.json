@@ -1,20 +1,22 @@
 {
   "symptoms": {
     "Mind": [
-      "Delirium associated with restlessness, loquacity", 
-      "Tendency to escape from bed; ravings, pains cause fainting"
-    ], 
+      "Delirium associated with restlessness, loquacity",
+      "Tendency to escape from bed",
+      "ravings, pains cause fainting"
+    ],
     "Abdomen": [
-      "Cholera morbus", 
-      "Watery diarrhoea; profuse with sinking sensation", 
+      "Cholera morbus",
+      "Watery diarrhoea",
+      "profuse with sinking sensation",
       "Hemorrhoids"
-    ], 
+    ],
     "Skin": [
-      "Lymphatic glands enlarged and indurated", 
+      "Lymphatic glands enlarged and indurated",
       "Boils and slowly suppurating abscesses"
     ]
-  }, 
-  "Common names": "Nishope", 
-  "name": "Operculina turpethum", 
+  },
+  "Common names": "Nishope",
+  "name": "Operculina turpethum",
   "details": "A remedy for plague, fevers, diarrhoea."
 }

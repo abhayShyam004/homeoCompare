@@ -1,80 +1,92 @@
 {
-  "name": "Sulphuricum acidum", 
-  "Relationship": "Complementary: PULS. Compare: ARS.; CALEN.; LED.; SEP.; CALC.", 
+  "name": "Sulphuricum acidum",
+  "Relationship": "Complementary: PULS. Compare: ARS.; CALEN.; LED.; SEP.; CALC.",
   "Modalities": [
-    "Worse: from excess of heat or cold in forenoon and evening", 
-    "Better: from warmth", 
+    "Worse: from excess of heat or cold in forenoon and evening",
+    "Better: from warmth",
     "Better: and lying on affected side"
-  ], 
-  "Common names": "Sulphuric Acid", 
+  ],
+  "Common names": "Sulphuric Acid",
   "symptoms": {
     "Rectum": [
-      "Rectum feels as if it had a big ball", 
-      "Diarrhoea, fetid, black, with sour odor of body, and empty faint feeling in abdomen", 
-      "Piles; oozing dampness"
-    ], 
+      "Rectum feels as if it had a big ball",
+      "Diarrhoea, fetid, black, with sour odor of body, and empty faint feeling in abdomen",
+      "Piles",
+      "oozing dampness"
+    ],
     "Eyes": [
-      "Great chemosis of conjunctiva, with aching and sharp pain", 
+      "Great chemosis of conjunctiva, with aching and sharp pain",
       "Intraocular hemorrhage following traumatism"
-    ], 
+    ],
     "Respiratory": [
-      "Bronchitis in children with short, teasing cough", 
-      "Respiration rapid with shooting in cervical muscles and movement of wings of nose; larynx moves up and down violently"
-    ], 
+      "Bronchitis in children with short, teasing cough",
+      "Respiration rapid with shooting in cervical muscles and movement of wings of nose",
+      "larynx moves up and down violently"
+    ],
     "Stomach": [
-      "Hiccough", 
-      "Craving for alcohol", 
-      "Sour vomiting", 
-      "Desire for fresh food", 
-      "Nausea with chilliness", 
-      "Coldness of stomach relieved by applied heat", 
-      "Relaxed feeling in stomach", 
-      "Heartburn; sour eructations; sets teeth on edge", 
-      "Water causes coldness of stomach; must be mixed with liquors", 
+      "Hiccough",
+      "Craving for alcohol",
+      "Sour vomiting",
+      "Desire for fresh food",
+      "Nausea with chilliness",
+      "Coldness of stomach relieved by applied heat",
+      "Relaxed feeling in stomach",
+      "Heartburn",
+      "sour eructations",
+      "sets teeth on edge",
+      "Water causes coldness of stomach",
+      "must be mixed with liquors",
       "Averse to smell of coffee"
-    ], 
+    ],
     "Head": [
-      "Compressive pain in side of occiput", 
-      "Concussion of brain where skin is cold, body bathed in cold sweat", 
-      "Thrust in right temple as if plug were pressed in", 
-      "Sensation as if brain was loose in forehead and falling from side to side", 
-      "Relieved by holding the hands near the head", 
-      "Right-sided neuralgia; painful shocks; skin feels pinched", 
-      "Pain of outer parts, as if there were subcutaneous ulceration; painful to touch"
-    ], 
+      "Compressive pain in side of occiput",
+      "Concussion of brain where skin is cold, body bathed in cold sweat",
+      "Thrust in right temple as if plug were pressed in",
+      "Sensation as if brain was loose in forehead and falling from side to side",
+      "Relieved by holding the hands near the head",
+      "Right-sided neuralgia",
+      "painful shocks",
+      "skin feels pinched",
+      "Pain of outer parts, as if there were subcutaneous ulceration",
+      "painful to touch"
+    ],
     "Mind": [
-      "Fretful, impatient", 
-      "Unwilling to answer questions; hurried"
-    ], 
+      "Fretful, impatient",
+      "Unwilling to answer questions",
+      "hurried"
+    ],
     "Abdomen": [
-      "Weak feeling, with dragging into the hips and small of back", 
+      "Weak feeling, with dragging into the hips and small of back",
       "Feeling as if hernia would protrude, especially left side"
-    ], 
+    ],
     "Female": [
-      "Erosion of cervix in the aged; easily bleeding", 
-      "Acrid, burning leucorrhoea, often of bloody mucus", 
+      "Erosion of cervix in the aged",
+      "easily bleeding",
+      "Acrid, burning leucorrhoea, often of bloody mucus",
       "Menstruation early and profuse"
-    ], 
+    ],
     "Skin": [
-      "Hemorrhage of black blood from all outlets", 
-      "Bad effects from mechanical injuries, with bruises and livid skin", 
-      "Chilblains with gangrenous tendency", 
-      "Ecchymosis", 
-      "Carbuncles, boils and other staphylococcic and streptococcic infections", 
-      "Purpura hemorrhagica", 
-      "Livid, red, itching blotches", 
-      "Cicatrices turn red and blue and become painful", 
+      "Hemorrhage of black blood from all outlets",
+      "Bad effects from mechanical injuries, with bruises and livid skin",
+      "Chilblains with gangrenous tendency",
+      "Ecchymosis",
+      "Carbuncles, boils and other staphylococcic and streptococcic infections",
+      "Purpura hemorrhagica",
+      "Livid, red, itching blotches",
+      "Cicatrices turn red and blue and become painful",
       "Petechiae"
-    ], 
+    ],
     "Mouth": [
-      "Pyorrhoea", 
-      "Aphthae; gums bleed readily", 
+      "Pyorrhoea",
+      "Aphthae",
+      "gums bleed readily",
       "Offensive breath"
-    ], 
+    ],
     "Extremities": [
-      "Cramp-like paralytic contraction in arms, hands; jerking of fingers while writing"
+      "Cramp-like paralytic contraction in arms, hands",
+      "jerking of fingers while writing"
     ]
-  }, 
-  "details": "The \"debility\" common to acids shows itself here, especially in the digestive tract, giving a very relaxed feeling in the stomach, with craving for stimulants. TREMOR AND WEAKNESS; everything must be done in a hurry. HOT FLUSHES, followed by perspiration, with trembling. Tendency to gangrene following mechanical injuries. Writer's cramp. Lead poisoning. Gastralgia and hypochlorhydria. Purpura hemorrhagia.", 
+  },
+  "details": "The \"debility\" common to acids shows itself here, especially in the digestive tract, giving a very relaxed feeling in the stomach, with craving for stimulants. TREMOR AND WEAKNESS; everything must be done in a hurry. HOT FLUSHES, followed by perspiration, with trembling. Tendency to gangrene following mechanical injuries. Writer's cramp. Lead poisoning. Gastralgia and hypochlorhydria. Purpura hemorrhagia.",
   "dosage": "Sulphuric acid mixed with three parts of alcohol, ten to fifteen drops three times daily for several weeks, has been successfully used to subdue the craving for liquor. For homeopathic purposes second to thirtieth potency."
 }

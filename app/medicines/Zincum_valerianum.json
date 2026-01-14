@@ -1,21 +1,23 @@
 {
   "symptoms": {
     "Head": [
-      "Violent, neuralgic, intermittent headaches", 
-      "Becomes almost insane with pain, which is piercing and stabbing", 
+      "Violent, neuralgic, intermittent headaches",
+      "Becomes almost insane with pain, which is piercing and stabbing",
       "Uncontrollable sleeplessness from pain in head with melancholy"
-    ], 
+    ],
     "Female": [
-      "Ovaralgia; pain shoots down limbs, even to foot"
-    ], 
+      "Ovaralgia",
+      "pain shoots down limbs, even to foot"
+    ],
     "Extremities": [
-      "Sciatic neuralgia", 
-      "Severe pain in neck and spine", 
-      "Cannot sit still; must keep legs in constant motion"
+      "Sciatic neuralgia",
+      "Severe pain in neck and spine",
+      "Cannot sit still",
+      "must keep legs in constant motion"
     ]
-  }, 
-  "details": "A remedy for NEURALGIA, hysteria, angina pectoris, and other PAINFUL affections, notably in OVARIAN AFFECTIONS. Epilepsy without aura. Hysterical heart-pain. FACIAL neuralgia, violent in left temple and inferior maxillary. Sleeplessness in children. Obstinate HICCOUGH.", 
-  "Common names": "Valerate of Zinc", 
-  "name": "Zincum valerianum", 
+  },
+  "details": "A remedy for NEURALGIA, hysteria, angina pectoris, and other PAINFUL affections, notably in OVARIAN AFFECTIONS. Epilepsy without aura. Hysterical heart-pain. FACIAL neuralgia, violent in left temple and inferior maxillary. Sleeplessness in children. Obstinate HICCOUGH.",
+  "Common names": "Valerate of Zinc",
+  "name": "Zincum valerianum",
   "dosage": "First and second trituration. Must be continued for some time in treatment of neuralgia."
 }

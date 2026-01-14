@@ -1,107 +1,121 @@
 {
-  "name": "Cannibis indica", 
-  "Relationship": "Bellad.; Hyoscy.; Stram.; Laches.; Agaric.; Anhalonium (time sense disordered; time periods enormously overestimated; thus, minutes seem hours, etc.).", 
+  "name": "Cannibis indica",
+  "Relationship": "Bellad.; Hyoscy.; Stram.; Laches.; Agaric.; Anhalonium (time sense disordered; time periods enormously overestimated; thus, minutes seem hours, etc.).",
   "Modalities": [
-    "Worse: morning; from coffee", 
+    "Worse: morning; from coffee",
     "Worse: liquor and tobacco; lying on right side"
-  ], 
-  "Common names": "Hashish", 
+  ],
+  "Common names": "Hashish",
   "symptoms": {
     "Heart": [
-      "Piercing pain, with great oppression", 
-      "Palpitation awakes him", 
+      "Piercing pain, with great oppression",
+      "Palpitation awakes him",
       "Pulse very slow"
-    ], 
+    ],
     "Eyes": [
-      "Fixed", 
-      "Spectral illusions without terror", 
-      "Clairvoyance", 
+      "Fixed",
+      "Spectral illusions without terror",
+      "Clairvoyance",
       "Letters run together when reading"
-    ], 
+    ],
     "Respiratory": [
-      "Chest oppressed with deep, labored breathing", 
+      "Chest oppressed with deep, labored breathing",
       "Humid asthma"
-    ], 
+    ],
     "Stomach": [
-      "Sensation of extreme tension in abdominal vessels - feel distended to bursting", 
-      "Pain at cardiac orifice; better, pressure", 
-      "Pyloric spasm", 
-      "Increased appetite", 
+      "Sensation of extreme tension in abdominal vessels - feel distended to bursting",
+      "Pain at cardiac orifice",
+      "better, pressure",
+      "Pyloric spasm",
+      "Increased appetite",
       "Distention"
-    ], 
+    ],
     "Rectum": [
       "Sensation in anus as if sitting on a ball"
-    ], 
+    ],
     "Urine": [
-      "Urine loaded with slimy mucus", 
-      "Stitches and burning in urethra", 
-      "Dull pain in region of right kidney", 
-      "Must strain; dribbling; has to wait some time before the urine flows"
-    ], 
+      "Urine loaded with slimy mucus",
+      "Stitches and burning in urethra",
+      "Dull pain in region of right kidney",
+      "Must strain",
+      "dribbling",
+      "has to wait some time before the urine flows"
+    ],
     "Mind": [
-      "Mania, must constantly move", 
-      "Cannot realize her identity, chronic vertigo as of floating off", 
-      "Clairvoyance", 
-      "Constantly theorizing", 
-      "Anxious depression; constant fear of becoming insane", 
-      "Uncontrollable laughter", 
-      "Excessive loquacity; exuberance of spirits", 
-      "Very forgetful; cannot finish sentence", 
-      "Is lost in delicious thought", 
-      "Time seems too long; seconds seem ages; a few rods an immense distance", 
-      "Delirium tremens", 
-      "Emotional excitement; rapid change of mood"
-    ], 
+      "Mania, must constantly move",
+      "Cannot realize her identity, chronic vertigo as of floating off",
+      "Clairvoyance",
+      "Constantly theorizing",
+      "Anxious depression",
+      "constant fear of becoming insane",
+      "Uncontrollable laughter",
+      "Excessive loquacity",
+      "exuberance of spirits",
+      "Very forgetful",
+      "cannot finish sentence",
+      "Is lost in delicious thought",
+      "Time seems too long",
+      "seconds seem ages",
+      "a few rods an immense distance",
+      "Delirium tremens",
+      "Emotional excitement",
+      "rapid change of mood"
+    ],
     "Head": [
-      "Shocks through brain", 
-      "Headache with flatulence", 
-      "Throbbing and weight at occiput", 
-      "Feels as if top of head were opening and shutting and as if calvarium were being lifted", 
-      "Uraemic headache", 
-      "Involuntary shaking of head", 
+      "Shocks through brain",
+      "Headache with flatulence",
+      "Throbbing and weight at occiput",
+      "Feels as if top of head were opening and shutting and as if calvarium were being lifted",
+      "Uraemic headache",
+      "Involuntary shaking of head",
       "Migraine attack preceded by unusual excitement with loquacity"
-    ], 
+    ],
     "Face": [
-      "Lips glued together", 
-      "Saliva thick, frothy, and sticky", 
-      "Grinding of teeth in sleep", 
-      "Mouth and lips dry", 
+      "Lips glued together",
+      "Saliva thick, frothy, and sticky",
+      "Grinding of teeth in sleep",
+      "Mouth and lips dry",
       "Expression drowsy and stupid"
-    ], 
+    ],
     "Sleep": [
-      "Obstinate and intractable forms of insomnia", 
-      "Nightmare", 
-      "Very sleepy, but unable to do so", 
-      "Catalepsy", 
-      "Dreams of dead bodies; prophetic"
-    ], 
+      "Obstinate and intractable forms of insomnia",
+      "Nightmare",
+      "Very sleepy, but unable to do so",
+      "Catalepsy",
+      "Dreams of dead bodies",
+      "prophetic"
+    ],
     "Female": [
-      "Backache during menses", 
-      "Menses profuse, dark, painful, without clots", 
-      "Dysmenorrhoea with sexual desire", 
-      "Uterine colic, with great nervous agitation and sleeplessness", 
+      "Backache during menses",
+      "Menses profuse, dark, painful, without clots",
+      "Dysmenorrhoea with sexual desire",
+      "Uterine colic, with great nervous agitation and sleeplessness",
       "Sterility"
-    ], 
+    ],
     "Extremities": [
-      "Pain in soles and calves; sharp pains in knees and ankles; very exhausted after a short walk", 
-      "Entire paralysis of the lower extremities", 
-      "Thrilling through arms and hands, and from knees down", 
-      "Pain across shoulders and spine; must stoop; cannot walk erect"
-    ], 
+      "Pain in soles and calves",
+      "sharp pains in knees and ankles",
+      "very exhausted after a short walk",
+      "Entire paralysis of the lower extremities",
+      "Thrilling through arms and hands, and from knees down",
+      "Pain across shoulders and spine",
+      "must stoop",
+      "cannot walk erect"
+    ],
     "Male": [
-      "Chordee", 
-      "Sensation of swelling in perineum or near anus, as if sitting on a ball", 
-      "Satyriasis", 
-      "Oozing of white, glairy mucus from glans", 
-      "After sexual intercourse, backache", 
+      "Chordee",
+      "Sensation of swelling in perineum or near anus, as if sitting on a ball",
+      "Satyriasis",
+      "Oozing of white, glairy mucus from glans",
+      "After sexual intercourse, backache",
       "Prolonged thrill"
-    ], 
+    ],
     "Ears": [
-      "Extreme sensitiveness to noise", 
-      "Noise like boiling water", 
+      "Extreme sensitiveness to noise",
+      "Noise like boiling water",
       "Throbbing, buzzing, and ringing"
     ]
-  }, 
-  "details": "Inhibits the higher faculties and stimulates the imagination to a remarkable degree without any marked stimulation of the lower or animal instinct. A condition of INTENSE EXALTATION, in which all perceptions and conceptions, all sensations and emotions are exaggerated to the utmost degree. Subconscious or DUAL NATURE STATE. Apparently under the control of the second self, but, the original self, prevents the performance of acts which are under the domination of the second self. Apparently the two natures cannot act independently, one acting as a check, upon the other. (Effects of one Dram doses by Dr. Albert Schneider.) The experimenter feels ever and anon that he is distinct from the subject of the hashish dream and can think rationally. Produces the most remarkable hallucinations and imaginations, EXAGGERATION OF THE DURATION OF TIME AND EXTENT OF SPACE, BEING MOST CHARACTERISTIC. Conception of time, space and place is gone. Extremely happy and contented, nothing troubles. Ideas crowd upon each other. Has great soothing influence in many nervous disorders, like epilepsy, mania, dementia, delirium tremens, and irritable reflexes. Exophthalmic goitre. Catalepsy.", 
+  },
+  "details": "Inhibits the higher faculties and stimulates the imagination to a remarkable degree without any marked stimulation of the lower or animal instinct. A condition of INTENSE EXALTATION, in which all perceptions and conceptions, all sensations and emotions are exaggerated to the utmost degree. Subconscious or DUAL NATURE STATE. Apparently under the control of the second self, but, the original self, prevents the performance of acts which are under the domination of the second self. Apparently the two natures cannot act independently, one acting as a check, upon the other. (Effects of one Dram doses by Dr. Albert Schneider.) The experimenter feels ever and anon that he is distinct from the subject of the hashish dream and can think rationally. Produces the most remarkable hallucinations and imaginations, EXAGGERATION OF THE DURATION OF TIME AND EXTENT OF SPACE, BEING MOST CHARACTERISTIC. Conception of time, space and place is gone. Extremely happy and contented, nothing troubles. Ideas crowd upon each other. Has great soothing influence in many nervous disorders, like epilepsy, mania, dementia, delirium tremens, and irritable reflexes. Exophthalmic goitre. Catalepsy.",
   "dosage": "Tincture and low attenuation."
 }

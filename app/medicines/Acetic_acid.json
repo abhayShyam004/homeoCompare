@@ -1,81 +1,85 @@
 {
-  "name": "Acetic acid", 
-  "Relationship": "Acetic acid is antidotal to all anaesthetic vapors. Counteracts sausage poisoning. Compare: Am-acet. (Profuse saccharine urine, patient is bathed in sweat.) Benzoin oderiferum - Spice-wood (night sweats.) Ars.; China; Digitalis; Liatris. General anasarca in heart and kidney disease, dropsy, and chronic diarrhoea.)", 
-  "Common names": "Glacial Acetic Acid", 
+  "name": "Acetic acid",
+  "Relationship": "Acetic acid is antidotal to all anaesthetic vapors. Counteracts sausage poisoning. Compare: Am-acet. (Profuse saccharine urine, patient is bathed in sweat.) Benzoin oderiferum - Spice-wood (night sweats.) Ars.; China; Digitalis; Liatris. General anasarca in heart and kidney disease, dropsy, and chronic diarrhoea.)",
+  "Common names": "Glacial Acetic Acid",
   "symptoms": {
     "Head": [
-      "Temporal vessels distended", 
-      "Blood rushes to head with delirium", 
+      "Temporal vessels distended",
+      "Blood rushes to head with delirium",
       "Nervous headache, from abuse of narcotics"
-    ], 
+    ],
     "Respiratory": [
-      "False membrane in throat", 
-      "Membranous croup", 
-      "Putrid sore throat", 
-      "Profuse bronchorrhea", 
-      "Hoarse, hissing respiration; difficult breathing; cough when inhaling", 
+      "False membrane in throat",
+      "Membranous croup",
+      "Putrid sore throat",
+      "Profuse bronchorrhea",
+      "Hoarse, hissing respiration",
+      "difficult breathing",
+      "cough when inhaling",
       "Irritation of trachea and bronchial tubes"
-    ], 
+    ],
     "Stomach": [
-      "Vomits after every kind of food", 
-      "Fermentation in stomach", 
-      "Hyperchlorhydria and gastralgia", 
-      "Burning pain as of an ulcer", 
-      "Sour belching and vomiting", 
-      "Cold drinks distress", 
-      "Violent burning pain in stomach and chest, followed by coldness of skin and cold sweat on forehead", 
-      "Stomach feels as if she had taken a lot of vinegar", 
-      "Cancer of stomach", 
-      "Burning water brash and profuse salivation", 
-      "Epigastric tenderness", 
-      "Salivation", 
+      "Vomits after every kind of food",
+      "Fermentation in stomach",
+      "Hyperchlorhydria and gastralgia",
+      "Burning pain as of an ulcer",
+      "Sour belching and vomiting",
+      "Cold drinks distress",
+      "Violent burning pain in stomach and chest, followed by coldness of skin and cold sweat on forehead",
+      "Stomach feels as if she had taken a lot of vinegar",
+      "Cancer of stomach",
+      "Burning water brash and profuse salivation",
+      "Epigastric tenderness",
+      "Salivation",
       "Intense burning thirst"
-    ], 
+    ],
     "Urine": [
-      "Large quantities of pale urine", 
+      "Large quantities of pale urine",
       "Diabetes, with great thirst and debility"
-    ], 
+    ],
     "Mind": [
       "Irritable, worried about business affairs"
-    ], 
+    ],
     "Back": [
       "Pain in back, relieved only by lying on abdomen"
-    ], 
+    ],
     "Fever": [
-      "Hectic, with drenching night-sweats", 
-      "Sweat profuse, cold", 
-      "No thirst in fever", 
-      "Red spot on left cheek", 
+      "Hectic, with drenching night-sweats",
+      "Sweat profuse, cold",
+      "No thirst in fever",
+      "Red spot on left cheek",
       "Ebullitions"
-    ], 
+    ],
     "Female": [
-      "Breasts painfully enlarged, distended with milk", 
-      "Excessive catamenia", 
-      "Nausea of pregnancy", 
-      "Hemorrhages after labor", 
-      "Anemia of nursing mothers", 
+      "Breasts painfully enlarged, distended with milk",
+      "Excessive catamenia",
+      "Nausea of pregnancy",
+      "Hemorrhages after labor",
+      "Anemia of nursing mothers",
       "Milk impoverished, bluish, transparent, sour"
-    ], 
+    ],
     "Skin": [
-      "Burning, dry, hot skin, or bathed in profuse sweat", 
-      "Pale, waxen, edematous", 
-      "Scurvy; anasarca", 
-      "Bruises; sprains", 
-      "Useful after stings, bites, etc. varicose swellings", 
+      "Burning, dry, hot skin, or bathed in profuse sweat",
+      "Pale, waxen, edematous",
+      "Scurvy",
+      "anasarca",
+      "Bruises",
+      "sprains",
+      "Useful after stings, bites, etc. varicose swellings",
       "Diminished sensibility of the surface of body"
-    ], 
+    ],
     "Abdomen": [
-      "Hemorrhage from bowels", 
-      "Frequent watery stools, worse in morning", 
-      "Tympanitic", 
-      "Feels as if abdomen was sinking in", 
+      "Hemorrhage from bowels",
+      "Frequent watery stools, worse in morning",
+      "Tympanitic",
+      "Feels as if abdomen was sinking in",
       "Ascites"
-    ], 
+    ],
     "Extremities": [
-      "Emaciation", 
+      "Emaciation",
       "Edema of feet and legs"
     ]
-  }, 
-  "details": "This drug produces a condition of profound anemia, with some dropsical symptoms, great debility, frequent fainting, dyspnea, weak heart, vomiting, profuse urination and sweat. Hemorrhage from any part. Especially indicated in pale, lean persons, with lax, flabby muscles. WASTING AND DEBILITY. Acetic acid has the power to LIQUEFY ALBUMINOUS AND FIBRINOUS DEPOSITS. Epithelial cancer, internally and locally (W. Owens). Sycosis with nodules and formations in the joints. Hard chancre. The 1X solution will soften and cause formation of pus.", 
+  },
+  "details": "This drug produces a condition of profound anemia, with some dropsical symptoms, great debility, frequent fainting, dyspnea, weak heart, vomiting, profuse urination and sweat. Hemorrhage from any part. Especially indicated in pale, lean persons, with lax, flabby muscles. WASTING AND DEBILITY. Acetic acid has the power to LIQUEFY ALBUMINOUS AND FIBRINOUS DEPOSITS. Epithelial cancer, internally and locally (W. Owens). Sycosis with nodules and formations in the joints. Hard chancre. The 1X solution will soften and cause formation of pus.",
   "dosage": "Third to thirtieth potency. Not to be repeated too often, except in croup."
 }

@@ -1,30 +1,34 @@
 {
   "symptoms": {
     "Gastric": [
-      "Salty taste to all cereals", 
-      "Appetite increased", 
-      "Tongue coated, foul taste", 
-      "Light, yellow, narrow, very offensive stool", 
-      "Belching", 
+      "Salty taste to all cereals",
+      "Appetite increased",
+      "Tongue coated, foul taste",
+      "Light, yellow, narrow, very offensive stool",
+      "Belching",
       "Intestinal dyspepsia"
-    ], 
+    ],
     "Urine": [
       "Frequent, scanty, burning, difficult"
-    ], 
+    ],
     "Mind": [
-      "Felt mean towards everyone", 
-      "Lack of concentration; impossible to study; despondent; desire to be with people", 
+      "Felt mean towards everyone",
+      "Lack of concentration",
+      "impossible to study",
+      "despondent",
+      "desire to be with people",
       "Irritable"
-    ], 
+    ],
     "Head": [
       "Frontal headache, worse over left eye, in the evening, better by short step"
-    ], 
+    ],
     "Sleep": [
-      "Increased desire to sleep; wakes unrefreshed, half doped feeling"
+      "Increased desire to sleep",
+      "wakes unrefreshed, half doped feeling"
     ]
-  }, 
-  "details": "Represents the ultimate end of protein decomposition and is a constituent of human feces. Acne with auto-intoxication dependent upon intestinal decomposition. Stomach and abdominal symptoms and frontal headache. Sluggishness with no ambition. Desire to curse and swear.", 
-  "name": "Skatol", 
-  "Relationship": "Compare; INDOL.; BAPTIS.; SULPH.", 
+  },
+  "details": "Represents the ultimate end of protein decomposition and is a constituent of human feces. Acne with auto-intoxication dependent upon intestinal decomposition. Stomach and abdominal symptoms and frontal headache. Sluggishness with no ambition. Desire to curse and swear.",
+  "name": "Skatol",
+  "Relationship": "Compare; INDOL.; BAPTIS.; SULPH.",
   "dosage": "Sixty potency."
 }

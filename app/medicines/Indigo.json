@@ -1,59 +1,63 @@
 {
-  "name": "Indigo", 
-  "Relationship": "Compare: CUPRUM; OESTRUS CAMELI, an Indian medicine for epilepsy.", 
+  "name": "Indigo",
+  "Relationship": "Compare: CUPRUM; OESTRUS CAMELI, an Indian medicine for epilepsy.",
   "Modalities": [
-    "Worse: during rest and sitting", 
-    "Better: pressure", 
-    "Better: rubbing", 
+    "Worse: during rest and sitting",
+    "Better: pressure",
+    "Better: rubbing",
     "Better: motion"
-  ], 
-  "Common names": "Indigo-Dye-stuff", 
+  ],
+  "Common names": "Indigo-Dye-stuff",
   "symptoms": {
     "Head": [
-      "Undulating sensation through whole head", 
-      "Sensation as if brain were frozen", 
-      "Sensation of a band around forehead", 
-      "Head feels frozen", 
-      "Gloomy; cries at night", 
-      "Convulsions", 
-      "Hair feels pulled from vertex", 
+      "Undulating sensation through whole head",
+      "Sensation as if brain were frozen",
+      "Sensation of a band around forehead",
+      "Head feels frozen",
+      "Gloomy",
+      "cries at night",
+      "Convulsions",
+      "Hair feels pulled from vertex",
       "Vertigo with nausea"
-    ], 
+    ],
     "Stomach": [
-      "Flushes of heat rising from stomach to head", 
-      "Eructations", 
-      "Metallic taste", 
-      "Bloating", 
+      "Flushes of heat rising from stomach to head",
+      "Eructations",
+      "Metallic taste",
+      "Bloating",
       "Anorexia"
-    ], 
+    ],
     "Rectum": [
-      "Falling of rectum", 
+      "Falling of rectum",
       "Aroused at night with horrible itching at anus"
-    ], 
+    ],
     "Urine": [
-      "Urine turbid", 
-      "Catarrh of bladder", 
+      "Urine turbid",
+      "Catarrh of bladder",
       "Constant desire to urinate"
-    ], 
+    ],
     "Nose": [
       "Excessive sneezing and bleeding from nose"
-    ], 
+    ],
     "Extremities": [
-      "Hysterical symptoms where pain predominates", 
-      "Epilepsy; flashes of heat from abdomen to head; fit begins with dizziness", 
-      "Reflex spasms from worms", 
-      "Aura from a painful spot between shoulders", 
-      "Excessive nervous irritation", 
-      "Pain in limbs worse after every meal", 
-      "Sciatica", 
-      "Nerves", 
-      "Boring pain in knee-joint; better, walking", 
+      "Hysterical symptoms where pain predominates",
+      "Epilepsy",
+      "flashes of heat from abdomen to head",
+      "fit begins with dizziness",
+      "Reflex spasms from worms",
+      "Aura from a painful spot between shoulders",
+      "Excessive nervous irritation",
+      "Pain in limbs worse after every meal",
+      "Sciatica",
+      "Nerves",
+      "Boring pain in knee-joint",
+      "better, walking",
       "Pain from middle of thigh to knee"
-    ], 
+    ],
     "Ears": [
       "Pressure and roaring"
     ]
-  }, 
-  "details": "Marked action on the nervous system, and of undoubted benefit in the treatment of epilepsy with great sadness. Excited mood and desire to be busy. Neurasthenia and hysteria. Pure powdered Indigo placed on the wound cures snake and spider poison. (KALI-PERMANG.; GOLONDRINA; CEDRON.) Stricture of oesophagus; blue color. (CUPR.)", 
+  },
+  "details": "Marked action on the nervous system, and of undoubted benefit in the treatment of epilepsy with great sadness. Excited mood and desire to be busy. Neurasthenia and hysteria. Pure powdered Indigo placed on the wound cures snake and spider poison. (KALI-PERMANG.; GOLONDRINA; CEDRON.) Stricture of oesophagus; blue color. (CUPR.)",
   "dosage": "Third to thirtieth potency."
 }

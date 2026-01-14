@@ -1,26 +1,27 @@
 {
-  "name": "Mentha piperita", 
-  "Relationship": "Compare: RUMEX; LACHES.; MENTHA PULEGIUM - European penny royal - (pain in bones of forehead and extremities). MENTHA VIRIDIS - Spearmint - (scanty urine with frequent desire).", 
-  "Common names": "Peppermint", 
+  "name": "Mentha piperita",
+  "Relationship": "Compare: RUMEX; LACHES.; MENTHA PULEGIUM - European penny royal - (pain in bones of forehead and extremities). MENTHA VIRIDIS - Spearmint - (scanty urine with frequent desire).",
+  "Common names": "Peppermint",
   "symptoms": {
     "Respiratory": [
-      "Dry cough, worse from air into larynx, tobacco smoke, fog, talking; with irritation in suprasternal fossa  trachea painful to touch", 
-      "Voice husky", 
-      "Tip of nose sore to touch", 
+      "Dry cough, worse from air into larynx, tobacco smoke, fog, talking",
+      "with irritation in suprasternal fossa  trachea painful to touch",
+      "Voice husky",
+      "Tip of nose sore to touch",
       "Throat dry and sore, as if pin crosswise in it"
-    ], 
+    ],
     "Abdomen": [
-      "Infantile colic", 
-      "Bloated, disturbing sleep", 
+      "Infantile colic",
+      "Bloated, disturbing sleep",
       "Bilious colic with great accumulation of gas"
-    ], 
+    ],
     "Skin": [
-      "Vaginal pruritus", 
-      "Every scratch becomes a sore", 
-      "Herpes zoster", 
+      "Vaginal pruritus",
+      "Every scratch becomes a sore",
+      "Herpes zoster",
       "Itching of arm and hand when writing"
     ]
-  }, 
-  "details": "Stimulates the cold-perceiving nerves so just after taking it a current of air at the ordinary temperature seems cold. Marked action on respiratory organs and skin. Useful in gastrodynia, flatulent cold.", 
+  },
+  "details": "Stimulates the cold-perceiving nerves so just after taking it a current of air at the ordinary temperature seems cold. Marked action on respiratory organs and skin. Useful in gastrodynia, flatulent cold.",
   "dosage": "Tincture, 1 to 20 drops, to thirtieth potency. Locally, in pruritis vaginae."
 }

@@ -1,23 +1,24 @@
 {
-  "name": "Calcarea acetic", 
-  "Relationship": "Compare: Brom.; Borax; also Calc. oxal. in excruciating pains of open cancer.", 
-  "Common names": "Acetate of Lime", 
+  "name": "Calcarea acetic",
+  "Relationship": "Compare: Brom.; Borax; also Calc. oxal. in excruciating pains of open cancer.",
+  "Common names": "Acetate of Lime",
   "symptoms": {
     "Head": [
-      "Vertigo in open air", 
-      "Senses obscure while reading", 
+      "Vertigo in open air",
+      "Senses obscure while reading",
       "Megrim, with great coldness in head and sour taste"
-    ], 
+    ],
     "Respiratory": [
-      "Rattling expiration", 
-      "Cough loose, with expectoration of large pieces like casts of bronchial tubes", 
-      "Constrictive anxious sensation in chest", 
-      "Breathing difficult; better bending shoulders backward"
-    ], 
+      "Rattling expiration",
+      "Cough loose, with expectoration of large pieces like casts of bronchial tubes",
+      "Constrictive anxious sensation in chest",
+      "Breathing difficult",
+      "better bending shoulders backward"
+    ],
     "Female": [
       "Membranous dysmenorrhoea"
     ]
-  }, 
-  "details": "Has had brilliant clinical results in inflammations of mucous membranes characterized by MEMBRANOUS EXUDATION; otherwise its action and application is like the carbonate. Cancer pains.", 
+  },
+  "details": "Has had brilliant clinical results in inflammations of mucous membranes characterized by MEMBRANOUS EXUDATION; otherwise its action and application is like the carbonate. Cancer pains.",
   "dosage": "Third trituration."
 }

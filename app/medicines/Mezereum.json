@@ -1,99 +1,116 @@
 {
-  "name": "Mezereum", 
-  "Relationship": "Compare: DIRCA PALUSTRIS - Leather wood - (a gastrointestinal irritant inducing salivation, emesis and purgation; cerebral hyperaemia; neuralgic pains, with depression, palpitation, and dyspnoea); MERC.; PHYT.; RHUS; GUAIAC.; SYPH. Antidotes: KALI-HYD.; MERC.", 
+  "name": "Mezereum",
+  "Relationship": "Compare: DIRCA PALUSTRIS - Leather wood - (a gastrointestinal irritant inducing salivation, emesis and purgation; cerebral hyperaemia; neuralgic pains, with depression, palpitation, and dyspnoea); MERC.; PHYT.; RHUS; GUAIAC.; SYPH. Antidotes: KALI-HYD.; MERC.",
   "Modalities": [
-    "Worse: cold air; night", 
-    "Worse: evening until midnight", 
-    "Worse: warm food", 
-    "Worse: touch", 
-    "Worse: motion", 
+    "Worse: cold air; night",
+    "Worse: evening until midnight",
+    "Worse: warm food",
+    "Worse: touch",
+    "Worse: motion",
     "Better: open air"
-  ], 
-  "Common names": "Spurge Olive", 
+  ],
+  "Common names": "Spurge Olive",
   "symptoms": {
     "Eyes": [
-      "Ciliary neuralgia after operations", 
-      "Pains radiate and shoot downward, with cold feeling and stiffness of bone", 
+      "Ciliary neuralgia after operations",
+      "Pains radiate and shoot downward, with cold feeling and stiffness of bone",
       "Especially after removal of eyeball"
-    ], 
+    ],
     "Respiratory": [
-      "Constriction across chest", 
-      "Soreness and burning in bones of thorax", 
-      "Cough; worse, eating, irritation lower than can be reached, on taking a warm drink"
-    ], 
+      "Constriction across chest",
+      "Soreness and burning in bones of thorax",
+      "Cough",
+      "worse, eating, irritation lower than can be reached, on taking a warm drink"
+    ],
     "Stomach": [
-      "Desire for ham-fat", 
-      "Gastric ulcer with much burning", 
-      "Burning in tongue, extending to stomach", 
-      "Mouth waters", 
-      "Chronic gastritis; burning, corroding pain; nausea, vomiting, chocolate color", 
-      "Nausea felt in throat; better, eating"
-    ], 
+      "Desire for ham-fat",
+      "Gastric ulcer with much burning",
+      "Burning in tongue, extending to stomach",
+      "Mouth waters",
+      "Chronic gastritis",
+      "burning, corroding pain",
+      "nausea, vomiting, chocolate color",
+      "Nausea felt in throat",
+      "better, eating"
+    ],
     "Head": [
-      "Stupefying headache in right side", 
-      "Head covered with thick, leathery crusts, under which pus collects", 
-      "Hard work to talk", 
-      "Headache; worse from talking", 
-      "Roots of teeth decay", 
-      "Violent neuralgia about face and teeth, running towards ear, at night; worse, eating; better near hot stove", 
-      "Teeth feel elongated", 
-      "Affections of external head; scaly eruption, white scabs"
-    ], 
+      "Stupefying headache in right side",
+      "Head covered with thick, leathery crusts, under which pus collects",
+      "Hard work to talk",
+      "Headache",
+      "worse from talking",
+      "Roots of teeth decay",
+      "Violent neuralgia about face and teeth, running towards ear, at night",
+      "worse, eating",
+      "better near hot stove",
+      "Teeth feel elongated",
+      "Affections of external head",
+      "scaly eruption, white scabs"
+    ],
     "Urine": [
-      "Biting, burning in forepart of urethra at the close of micturition", 
-      "After urinating, a few drops of blood are passed", 
-      "Hot, bloody", 
-      "Hematuria preceded by cramp pain in the bladder", 
+      "Biting, burning in forepart of urethra at the close of micturition",
+      "After urinating, a few drops of blood are passed",
+      "Hot, bloody",
+      "Hematuria preceded by cramp pain in the bladder",
       "Red flakes float on top of urine"
-    ], 
+    ],
     "Abdomen": [
-      "Swelling of glands with large abdomen in children", 
-      "Flatulent colic, with shivering and difficult respiration", 
+      "Swelling of glands with large abdomen in children",
+      "Flatulent colic, with shivering and difficult respiration",
       "Pressure in inguinal ring"
-    ], 
+    ],
     "Face": [
-      "Eruption around mouth, with coryza", 
+      "Eruption around mouth, with coryza",
       "Red"
-    ], 
+    ],
     "Nose": [
-      "Sneezing, coryza, interior of nose, excoriated", 
+      "Sneezing, coryza, interior of nose, excoriated",
       "Post-nasal adenoids"
-    ], 
+    ],
     "Female": [
-      "Menses too frequent, soon, profuse", 
-      "Leucorrhoea like albumen; very corroding"
-    ], 
+      "Menses too frequent, soon, profuse",
+      "Leucorrhoea like albumen",
+      "very corroding"
+    ],
     "Skin": [
-      "Eczema; intolerable itching; chilliness with pruritus; worse in bed", 
-      "Zona, with burning pain", 
-      "Bones, especially long bones, inflamed and swollen; caries, exostosis; pain worse night, touch, damp weather", 
-      "Ulcers itch and burn, surrounded by vesicles and shining, fiery-red areola", 
+      "Eczema",
+      "intolerable itching",
+      "chilliness with pruritus",
+      "worse in bed",
+      "Zona, with burning pain",
+      "Bones, especially long bones, inflamed and swollen",
+      "caries, exostosis",
+      "pain worse night, touch, damp weather",
+      "Ulcers itch and burn, surrounded by vesicles and shining, fiery-red areola",
       "Eruptions ulcerate and form thick scabs under which purulent matter exudes"
-    ], 
+    ],
     "Rectum": [
-      "Constipation after confinement", 
-      "Constipation, with hepatic and uterine inertia", 
-      "Green discharges", 
-      "Diarrhoea, with small, white particles", 
-      "Constriction of anus; stitches and prolapse of rectum", 
+      "Constipation after confinement",
+      "Constipation, with hepatic and uterine inertia",
+      "Green discharges",
+      "Diarrhoea, with small, white particles",
+      "Constriction of anus",
+      "stitches and prolapse of rectum",
       "Prolapse of rectum"
-    ], 
+    ],
     "Extremities": [
-      "Pain and burning in tibia and long bones", 
-      "Pain in neck and back; worse, motion and at night; intolerant of all touch", 
-      "Legs and feet go to sleep", 
+      "Pain and burning in tibia and long bones",
+      "Pain in neck and back",
+      "worse, motion and at night",
+      "intolerant of all touch",
+      "Legs and feet go to sleep",
       "Pain in hip and knee"
-    ], 
+    ],
     "Male": [
-      "Violent sexual desire", 
-      "Gonorrhea, with hematuria", 
+      "Violent sexual desire",
+      "Gonorrhea, with hematuria",
       "Enlargement of testicles"
-    ], 
+    ],
     "Ears": [
-      "Feel too much open, as if tympanum was exposed to the cold air and it blew into the ear", 
+      "Feel too much open, as if tympanum was exposed to the cold air and it blew into the ear",
       "Desire to bore fingers in"
     ]
-  }, 
-  "details": "Skin symptoms, affections of bones, and neuralgias most important, especially about teeth and face. Bruised, weary feeling in joints, with drawing and stiffness. PAINS OF VARIOUS KINDS, WITH CHILLINESS AND SENSITIVENESS TO COLD AIR. Bone pains. Eruptions after vaccination. Burning, darting sensation in the muscles, subsultus tendinum. Pains shoot upward and seem to draw patient up out of bed. Semi-lateral complaints. PATIENT IS VERY SENSITIVE TO COLD AIR.", 
+  },
+  "details": "Skin symptoms, affections of bones, and neuralgias most important, especially about teeth and face. Bruised, weary feeling in joints, with drawing and stiffness. PAINS OF VARIOUS KINDS, WITH CHILLINESS AND SENSITIVENESS TO COLD AIR. Bone pains. Eruptions after vaccination. Burning, darting sensation in the muscles, subsultus tendinum. Pains shoot upward and seem to draw patient up out of bed. Semi-lateral complaints. PATIENT IS VERY SENSITIVE TO COLD AIR.",
   "dosage": "Sixth to thirtieth potency."
 }

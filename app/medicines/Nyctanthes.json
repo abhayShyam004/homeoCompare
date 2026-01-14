@@ -1,24 +1,27 @@
 {
   "symptoms": {
     "Head": [
-      "Anxious and restless; dull headache", 
+      "Anxious and restless",
+      "dull headache",
       "Tongue coated"
-    ], 
+    ],
     "Fever": [
-      "Thirst, before and during chill and heat; better vomiting at close of chill; sweat not marked"
-    ], 
+      "Thirst, before and during chill and heat",
+      "better vomiting at close of chill",
+      "sweat not marked"
+    ],
     "Stomach": [
-      "Thirst, better vomiting", 
+      "Thirst, better vomiting",
       "Burning sensation, better cold application"
-    ], 
+    ],
     "Abdomen": [
-      "Tenderness of liver", 
-      "Profuse, bilious stool, with nausea", 
+      "Tenderness of liver",
+      "Profuse, bilious stool, with nausea",
       "Constipation"
     ]
-  }, 
-  "details": "Bilious and obstinate remittent fever; sciatica; rheumatism. Constipation of children.", 
-  "Common names": "Arbor Tristis Paghala-malli - Sad Tree", 
-  "name": "Nyctanthes", 
+  },
+  "details": "Bilious and obstinate remittent fever; sciatica; rheumatism. Constipation of children.",
+  "Common names": "Arbor Tristis Paghala-malli - Sad Tree",
+  "name": "Nyctanthes",
   "dosage": "Tincture, drop doses."
 }

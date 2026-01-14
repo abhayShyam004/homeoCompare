@@ -1,40 +1,46 @@
 {
-  "name": "Osmium", 
-  "Relationship": "Compare: ARGENT.; IRIDIUM; SELEN.; MANGAN.", 
-  "Common names": "The Element", 
+  "name": "Osmium",
+  "Relationship": "Compare: ARGENT.; IRIDIUM; SELEN.; MANGAN.",
+  "Common names": "The Element",
   "symptoms": {
     "Eyes": [
-      "Conjunctivitis", 
-      "Green colors surround candle-light", 
-      "Increase in intraocular tension, dim sight, photophobia", 
-      "Violent supra and infra-orbital neuralgia; violent pains and lachrymation", 
-      "Glaucoma; with iridescent vision"
-    ], 
+      "Conjunctivitis",
+      "Green colors surround candle-light",
+      "Increase in intraocular tension, dim sight, photophobia",
+      "Violent supra and infra-orbital neuralgia",
+      "violent pains and lachrymation",
+      "Glaucoma",
+      "with iridescent vision"
+    ],
     "Respiratory": [
-      "Talking causes pain in larynx", 
-      "Twitching of fingers, with spasmodic cough", 
-      "Acute laryngitis; cough and expectoration of tough, stringy mucus", 
-      "Hoarse; pain in larynx; sore sternum", 
-      "Noisy, dry, hard, cough, in violent short bursts, coming from low down, shaking the whole body", 
-      "Convulsive cough; feels as though membrane were torn from larynx"
-    ], 
+      "Talking causes pain in larynx",
+      "Twitching of fingers, with spasmodic cough",
+      "Acute laryngitis",
+      "cough and expectoration of tough, stringy mucus",
+      "Hoarse",
+      "pain in larynx",
+      "sore sternum",
+      "Noisy, dry, hard, cough, in violent short bursts, coming from low down, shaking the whole body",
+      "Convulsive cough",
+      "feels as though membrane were torn from larynx"
+    ],
     "Head": [
-      "Falling off of hair", 
+      "Falling off of hair",
       "Feels as if a band around head"
-    ], 
+    ],
     "Nose": [
-      "Nose and larynx sensitive to air", 
-      "Coryza, with full feeling in nose", 
+      "Nose and larynx sensitive to air",
+      "Coryza, with full feeling in nose",
       "Small lumps of phlegm from posterior nares"
-    ], 
+    ],
     "Skin": [
-      "Eczema, with pruritus", 
-      "Itching pimples", 
-      "Bromidrosis, sweat in axilla smelling of garlic, worse evening and night", 
-      "Fold remains attached to growing nail", 
+      "Eczema, with pruritus",
+      "Itching pimples",
+      "Bromidrosis, sweat in axilla smelling of garlic, worse evening and night",
+      "Fold remains attached to growing nail",
       "Irritated skin"
     ]
-  }, 
-  "details": "Irritation and catarrh of respiratory organs. Eczema. Albuminuria. PAIN IN TRACHEA. Increases and gives odor to local perspiration. Causes ADHESION OF THE NAIL FOLD.", 
+  },
+  "details": "Irritation and catarrh of respiratory organs. Eczema. Albuminuria. PAIN IN TRACHEA. Increases and gives odor to local perspiration. Causes ADHESION OF THE NAIL FOLD.",
   "dosage": "Sixth potency."
 }

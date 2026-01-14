@@ -1,39 +1,41 @@
 {
-  "name": "Eupatorium purpureum", 
-  "Relationship": "Compare: Senecio; Cannab. sat.; Helon.; Phos-ac.; Triticum; Epigea.", 
-  "Common names": "Queen of the Meadow", 
+  "name": "Eupatorium purpureum",
+  "Relationship": "Compare: Senecio; Cannab. sat.; Helon.; Phos-ac.; Triticum; Epigea.",
+  "Common names": "Queen of the Meadow",
   "symptoms": {
     "Head": [
-      "Left-sided headache with vertigo", 
-      "Sick headache beginning in morning, worse afternoon and evening, worse in cold air", 
+      "Left-sided headache with vertigo",
+      "Sick headache beginning in morning, worse afternoon and evening, worse in cold air",
       "Pain from left shoulder to occiput"
-    ], 
+    ],
     "Fever": [
-      "Bone-pains", 
-      "No thirst during chill, but much frontal ache", 
-      "Violent shaking, with comparatively little coldness", 
+      "Bone-pains",
+      "No thirst during chill, but much frontal ache",
+      "Violent shaking, with comparatively little coldness",
       "Chill commences in back"
-    ], 
+    ],
     "Urine": [
-      "Strangury", 
-      "Vesical irritability in women", 
-      "Burning in bladder and urethra on urinating", 
-      "Insufficient flow; milky", 
-      "Dysuria", 
-      "Hematuria", 
-      "Diabetes insipidus", 
-      "Constant desire; bladder feels dull", 
+      "Strangury",
+      "Vesical irritability in women",
+      "Burning in bladder and urethra on urinating",
+      "Insufficient flow",
+      "milky",
+      "Dysuria",
+      "Hematuria",
+      "Diabetes insipidus",
+      "Constant desire",
+      "bladder feels dull",
       "Deep, dull pain in kidneys"
-    ], 
+    ],
     "Back": [
       "Weight and heaviness in loins and back"
-    ], 
+    ],
     "Female": [
-      "Threatened abortion", 
-      "External genitals feel as though wet", 
+      "Threatened abortion",
+      "External genitals feel as though wet",
       "Pain around left ovary"
     ]
-  }, 
-  "details": "Albuminuria, diabetes, strangury, IRRITABLE BLADDER, enlarged prostate are a special field for this remedy. Excellent in renal dropsy. Chills and pains run upwards. Impotency and sterility. Homesickness.", 
+  },
+  "details": "Albuminuria, diabetes, strangury, IRRITABLE BLADDER, enlarged prostate are a special field for this remedy. Excellent in renal dropsy. Chills and pains run upwards. Impotency and sterility. Homesickness.",
   "dosage": "First potency."
 }

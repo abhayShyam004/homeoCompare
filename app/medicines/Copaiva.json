@@ -1,60 +1,67 @@
 {
-  "name": "Copaiva", 
-  "Relationship": "Antidote: BELL.; MERC. Compare: SANTALUM - (aching in kidneys); CANNAB.; CANTH.; BAROSMA; CUBEB; APIS; VESPA; ERIG.; SENECIO; SEPIA.", 
-  "Common names": "Balsam of Copaiva", 
+  "name": "Copaiva",
+  "Relationship": "Antidote: BELL.; MERC. Compare: SANTALUM - (aching in kidneys); CANNAB.; CANTH.; BAROSMA; CUBEB; APIS; VESPA; ERIG.; SENECIO; SEPIA.",
+  "Common names": "Balsam of Copaiva",
   "symptoms": {
     "Head": [
-      "Sensitive to sharp sounds", 
-      "Dull, frontal headache, passes to occiput and back again, with throbbing, worse right side and motion", 
-      "Scalp sensitive", 
-      "Excessive sensitiveness; pain in occiput"
-    ], 
+      "Sensitive to sharp sounds",
+      "Dull, frontal headache, passes to occiput and back again, with throbbing, worse right side and motion",
+      "Scalp sensitive",
+      "Excessive sensitiveness",
+      "pain in occiput"
+    ],
     "Respiratory": [
-      "Tickling in larynx, trachea, and bronchi", 
-      "Cough, with profuse, gray, purulent expectoration", 
+      "Tickling in larynx, trachea, and bronchi",
+      "Cough, with profuse, gray, purulent expectoration",
       "Bronchial catarrh, with profuse greenish, offensive discharge"
-    ], 
+    ],
     "Stomach": [
-      "Gastric troubles during menstruation or following urticaria", 
-      "Food seems too salty", 
+      "Gastric troubles during menstruation or following urticaria",
+      "Food seems too salty",
       "Gas and intestinal flatulence, urging to stool and difficult passage with pain"
-    ], 
+    ],
     "Urine": [
-      "Swelling of orifice", 
-      "Burning pressure; painful micturition by drops", 
-      "Urine smells of violets", 
-      "Catarrh of bladder; dysuria", 
-      "Retention, with pain in bladder, anus, and rectum", 
-      "Greenish; turbid color; peculiar pungent odor", 
+      "Swelling of orifice",
+      "Burning pressure",
+      "painful micturition by drops",
+      "Urine smells of violets",
+      "Catarrh of bladder",
+      "dysuria",
+      "Retention, with pain in bladder, anus, and rectum",
+      "Greenish",
+      "turbid color",
+      "peculiar pungent odor",
       "Constant desire to urinate"
-    ], 
+    ],
     "Nose": [
-      "Profuse, thick, fetid discharge from nasal passages, running down throat at night", 
-      "Marked catarrhal condition in upper respiratory tract", 
-      "Rawness and soreness of nostrils with stopped-up feeling; dryness of posterior nares", 
+      "Profuse, thick, fetid discharge from nasal passages, running down throat at night",
+      "Marked catarrhal condition in upper respiratory tract",
+      "Rawness and soreness of nostrils with stopped-up feeling",
+      "dryness of posterior nares",
       "Burning and dryness, crusts on turbinated bones"
-    ], 
+    ],
     "Female": [
-      "Itching of vulva and anus, with bloody purulent discharge", 
+      "Itching of vulva and anus, with bloody purulent discharge",
       "Profuse, strong-smelling menstrual discharge, with pains radiating to hip bones, with nausea"
-    ], 
+    ],
     "Skin": [
-      "Circumscribed, lenticular patches, with itching; mottled appearance", 
-      "Chronic urticaria in children", 
-      "Hives, with fever and constipation", 
-      "Bullous eruptions", 
-      "Roseola", 
+      "Circumscribed, lenticular patches, with itching",
+      "mottled appearance",
+      "Chronic urticaria in children",
+      "Hives, with fever and constipation",
+      "Bullous eruptions",
+      "Roseola",
       "Erysipelatous inflammation, especially around abdomen"
-    ], 
+    ],
     "Rectum": [
-      "Burning and itching of anus, caused by piles", 
-      "Stools covered with mucous, with colic and chilliness", 
+      "Burning and itching of anus, caused by piles",
+      "Stools covered with mucous, with colic and chilliness",
       "Mucous colitis"
-    ], 
+    ],
     "Male": [
       "Testicles sensitive and swollen"
     ]
-  }, 
-  "details": "Acts powerfully on mucous membranes, especially that of the urinary tract, the respiratory organs, and the skin, here producing a well-marked nettle-rash. Colds and catarrhs.", 
+  },
+  "details": "Acts powerfully on mucous membranes, especially that of the urinary tract, the respiratory organs, and the skin, here producing a well-marked nettle-rash. Colds and catarrhs.",
   "dosage": "First to third attenuation."
 }

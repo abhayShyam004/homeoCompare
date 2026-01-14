@@ -1,82 +1,87 @@
 {
-  "name": "Kali sulphuricum", 
-  "Relationship": "Compare: KALI-SULPH. CHROMIC. ALUM OF CHROME - 3X. (Produces in the nasal passages very fine threads from the septum to external wall; affections of nasal fossae and hay-fever. Chronic colds. Sneezing, red, watery eyes, irritation of mucous membrane). PULSAT.; KALI-BICH.; NAT-M.", 
+  "name": "Kali sulphuricum",
+  "Relationship": "Compare: KALI-SULPH. CHROMIC. ALUM OF CHROME - 3X. (Produces in the nasal passages very fine threads from the septum to external wall; affections of nasal fossae and hay-fever. Chronic colds. Sneezing, red, watery eyes, irritation of mucous membrane). PULSAT.; KALI-BICH.; NAT-M.",
   "Modalities": [
-    "Worse: in evening", 
-    "Worse: heated room", 
-    "Better: cool", 
+    "Worse: in evening",
+    "Worse: heated room",
+    "Better: cool",
     "Better: open air"
-  ], 
-  "Common names": "Potassium Sulphate", 
+  ],
+  "Common names": "Potassium Sulphate",
   "symptoms": {
     "Head": [
-      "Dandruff and scaldhead", 
-      "Bald spots", 
+      "Dandruff and scaldhead",
+      "Bald spots",
       "Rheumatic headache, beginning in evening"
-    ], 
+    ],
     "Fever": [
-      "Rise of temperature at night", 
+      "Rise of temperature at night",
       "Intermittent fever, with yellow, slimy tongue"
-    ], 
+    ],
     "Stomach": [
-      "Dread of hot drinks", 
-      "Gums painful", 
-      "Insipid, pappy taste", 
-      "Tongue coated yellow and slimy", 
-      "Burning thirst, nausea, and vomiting", 
+      "Dread of hot drinks",
+      "Gums painful",
+      "Insipid, pappy taste",
+      "Tongue coated yellow and slimy",
+      "Burning thirst, nausea, and vomiting",
       "Load feeling"
-    ], 
+    ],
     "Abdomen": [
-      "Yellow, slimy diarrhoea", 
-      "Colicky pains; abdomen feels cold to touch; tympanitic, tense", 
+      "Yellow, slimy diarrhoea",
+      "Colicky pains",
+      "abdomen feels cold to touch",
+      "tympanitic, tense",
       "Constipation, with hemorrhoids"
-    ], 
+    ],
     "Face": [
-      "Epithelioma", 
+      "Epithelioma",
       "Aches in heated room"
-    ], 
+    ],
     "Respiratory": [
-      "Coarse rales", 
-      "Cough; worse in evening and in hot atmosphere", 
-      "Croupy hoarseness", 
-      "Rattling of mucus in chest", 
-      "Bronchial asthma, with yellow expectoration", 
+      "Coarse rales",
+      "Cough",
+      "worse in evening and in hot atmosphere",
+      "Croupy hoarseness",
+      "Rattling of mucus in chest",
+      "Bronchial asthma, with yellow expectoration",
       "Post-grippal cough, especially in children"
-    ], 
+    ],
     "Nose": [
-      "Engorgement of the nasal pharyngeal mucous membrane, mouth breathing, snoring, etc., remaining after removal of adenoids", 
-      "Smell lost", 
-      "Colds, with yellow, slimy expectoration", 
+      "Engorgement of the nasal pharyngeal mucous membrane, mouth breathing, snoring, etc., remaining after removal of adenoids",
+      "Smell lost",
+      "Colds, with yellow, slimy expectoration",
       "Nose obstructed"
-    ], 
+    ],
     "Female": [
-      "Metrorrhagia", 
+      "Metrorrhagia",
       "Menses too late, scanty, with feeling of weight in abdomen"
-    ], 
+    ],
     "Skin": [
-      "Psoriasis", 
-      "Seborrhoea", 
-      "Polypi", 
-      "Eczema; burning, itching, papular eruption", 
-      "Nettle-rash", 
-      "Epithelioma", 
-      "Favus", 
+      "Psoriasis",
+      "Seborrhoea",
+      "Polypi",
+      "Eczema",
+      "burning, itching, papular eruption",
+      "Nettle-rash",
+      "Epithelioma",
+      "Favus",
       "Ring-worm of scalp or beard with abundant scales"
-    ], 
+    ],
     "Extremities": [
-      "Pain in nape, back and limbs, worse in warm room", 
+      "Pain in nape, back and limbs, worse in warm room",
       "Shifting, wandering pains"
-    ], 
+    ],
     "Male": [
-      "Gonorrhea; discharge slimy, yellowish-green", 
-      "Gleet", 
+      "Gonorrhea",
+      "discharge slimy, yellowish-green",
+      "Gleet",
       "Orchitis"
-    ], 
+    ],
     "Ears": [
-      "Discharge of yellow matter", 
+      "Discharge of yellow matter",
       "Eustachian deafness"
     ]
-  }, 
-  "details": "Ailments accompanied by profuse desquamation. Applicable to the later stages of inflammation. YELLOW, mucous and serous discharges, profuse and intermittent. Has been found of much use in oxaluria.", 
+  },
+  "details": "Ailments accompanied by profuse desquamation. Applicable to the later stages of inflammation. YELLOW, mucous and serous discharges, profuse and intermittent. Has been found of much use in oxaluria.",
   "dosage": "Third to twelfth potency."
 }

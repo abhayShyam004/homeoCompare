@@ -1,72 +1,77 @@
 {
-  "name": "Carboneum sulphuratum", 
-  "Relationship": "Compare: Potass. Xanthate - (Similar in action. Acts on cortical substance; loss of memory, marked blood degeneration; impotence and senility. Tuberculin; Radium; Carbo; Sulph.; Caust.; Salicyl-ac.; Cinch. In eye symptoms compare: Benzin. dinitric. Thyroidin (progressive diminution of sight with central Scotoma).", 
+  "name": "Carboneum sulphuratum",
+  "Relationship": "Compare: Potass. Xanthate - (Similar in action. Acts on cortical substance; loss of memory, marked blood degeneration; impotence and senility. Tuberculin; Radium; Carbo; Sulph.; Caust.; Salicyl-ac.; Cinch. In eye symptoms compare: Benzin. dinitric. Thyroidin (progressive diminution of sight with central Scotoma).",
   "Modalities": [
-    "Worse: after breakfast; bathing", 
+    "Worse: after breakfast; bathing",
     "Better: in open air"
-  ], 
-  "Common names": "Alcohol Sulphuris - Bisulfide of Carbon", 
+  ],
+  "Common names": "Alcohol Sulphuris - Bisulfide of Carbon",
   "symptoms": {
     "Eyes": [
-      "Myopia, asthenopia, and dis-chromotopsia, cloudiness and atrophy of optic disc and central scotoma for light and for red and green not for white", 
-      "Arteries and veins congested", 
-      "Optic neuritis advancing toward atrophy", 
-      "Everything seems in a fog", 
-      "Color-blindness", 
-      "Retinal congestion; optic disc pale", 
+      "Myopia, asthenopia, and dis-chromotopsia, cloudiness and atrophy of optic disc and central scotoma for light and for red and green not for white",
+      "Arteries and veins congested",
+      "Optic neuritis advancing toward atrophy",
+      "Everything seems in a fog",
+      "Color-blindness",
+      "Retinal congestion",
+      "optic disc pale",
       "Vision greatly impaired"
-    ], 
+    ],
     "Head": [
-      "Aches as from a tight cap", 
-      "Ears feel obstructed", 
-      "Ulceration of the lips, anaesthesia of mouth and tongue", 
-      "Headache and dizziness", 
+      "Aches as from a tight cap",
+      "Ears feel obstructed",
+      "Ulceration of the lips, anaesthesia of mouth and tongue",
+      "Headache and dizziness",
       "Noises in head"
-    ], 
+    ],
     "Mind": [
-      "Hallucination of sight and hearing", 
-      "Irritable, anxious, intolerant; stupor", 
-      "Sluggishness of mind", 
-      "Dementia alternating with excitement", 
+      "Hallucination of sight and hearing",
+      "Irritable, anxious, intolerant",
+      "stupor",
+      "Sluggishness of mind",
+      "Dementia alternating with excitement",
       "Changeable mood"
-    ], 
+    ],
     "Abdomen": [
-      "Pain with wandering swellings as from flatus", 
+      "Pain with wandering swellings as from flatus",
       "Distention, with soreness and rumbling"
-    ], 
+    ],
     "Sleep": [
       "Deep morning sleep with anxious, vexatious dreams"
-    ], 
+    ],
     "Skin": [
-      "Furunculosis", 
-      "Chronic skin diseases with much itching", 
-      "Anaesthesia; burning, itching, ulcers; small wounds fester", 
+      "Furunculosis",
+      "Chronic skin diseases with much itching",
+      "Anaesthesia",
+      "burning, itching, ulcers",
+      "small wounds fester",
       "Useful to restrain the growth of cancer"
-    ], 
+    ],
     "Extremities": [
-      "Lighting-like pains, with cramps", 
-      "Neuritis", 
-      "Cramps in limbs", 
-      "Herpes on dorsal surface of hands", 
-      "Flying pains, returning regularly for a long time", 
-      "Fingers swollen, insensible, rigid, stiff", 
-      "Feet insensible", 
-      "Sciatica", 
-      "Gait unsteady, tottering; worse in dark", 
-      "Sore, bruised limbs, anaesthesia of arms and hands", 
+      "Lighting-like pains, with cramps",
+      "Neuritis",
+      "Cramps in limbs",
+      "Herpes on dorsal surface of hands",
+      "Flying pains, returning regularly for a long time",
+      "Fingers swollen, insensible, rigid, stiff",
+      "Feet insensible",
+      "Sciatica",
+      "Gait unsteady, tottering",
+      "worse in dark",
+      "Sore, bruised limbs, anaesthesia of arms and hands",
       "Pain in lower limbs, with cramps and formications"
-    ], 
+    ],
     "Male": [
-      "Frequent profuse emissions", 
+      "Frequent profuse emissions",
       "Desire lost, parts atrophied"
-    ], 
+    ],
     "Ears": [
-      "Hearing impaired", 
-      "Tinnitus aurium", 
-      "Meniere's disease", 
+      "Hearing impaired",
+      "Tinnitus aurium",
+      "Meniere's disease",
       "Buzzing and singing noises like an aeolia harp"
     ]
-  }, 
-  "details": "This drug has a deep and disorganizing action and an immense range of action judging from the symptomatology. Very useful in patients broken down by abuse of alcohol. Sensitive patients worse cold, wasted muscles, and skin and mucous membranes anaesthetic. Special affinity for eyes. Chronic rheumatism, sensitive and cold. Lack of vital heat. Diarrhoea every four to six weeks. Paralysis with intense congestion of nerve centers. Tabes. Sensory difficulties in limbs. IMPOTENCE, sciatica, come within the therapeutic sphere of this remedy. Chronic plumbism. DIMINISHED SENSIBILITY of arms, hands and feet. Peripheral neuritis.", 
+  },
+  "details": "This drug has a deep and disorganizing action and an immense range of action judging from the symptomatology. Very useful in patients broken down by abuse of alcohol. Sensitive patients worse cold, wasted muscles, and skin and mucous membranes anaesthetic. Special affinity for eyes. Chronic rheumatism, sensitive and cold. Lack of vital heat. Diarrhoea every four to six weeks. Paralysis with intense congestion of nerve centers. Tabes. Sensory difficulties in limbs. IMPOTENCE, sciatica, come within the therapeutic sphere of this remedy. Chronic plumbism. DIMINISHED SENSIBILITY of arms, hands and feet. Peripheral neuritis.",
   "dosage": "First attenuation. Locally in facial neuralgia and sciatica."
 }

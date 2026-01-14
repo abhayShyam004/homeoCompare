@@ -1,78 +1,83 @@
 {
-  "name": "Selenium", 
-  "Relationship": "Incompatible: CHINA; WINE. Compare: AGNUS; CALAD.; SULPHUR; TELLUR.; PHOS. ACID. Antidotes: IGN.; PULS.", 
+  "name": "Selenium",
+  "Relationship": "Incompatible: CHINA; WINE. Compare: AGNUS; CALAD.; SULPHUR; TELLUR.; PHOS. ACID. Antidotes: IGN.; PULS.",
   "Modalities": [
-    "Worse: after sleep", 
-    "Worse: in hot weather", 
-    "Worse: from cinchona", 
-    "Worse: draft of air", 
+    "Worse: after sleep",
+    "Worse: in hot weather",
+    "Worse: from cinchona",
+    "Worse: draft of air",
     "Worse: coition"
-  ], 
-  "Common names": "The Element Selenium", 
+  ],
+  "Common names": "The Element Selenium",
   "symptoms": {
     "Head": [
-      "Hair falls out", 
-      "Scalp feels tense", 
-      "Headache from tea drinking", 
-      "Pain over left eye; worse, walking in sun, strong odors and tea"
-    ], 
+      "Hair falls out",
+      "Scalp feels tense",
+      "Headache from tea drinking",
+      "Pain over left eye",
+      "worse, walking in sun, strong odors and tea"
+    ],
     "Stomach": [
-      "Hiccough and eructations after smoking", 
-      "Sweetish taste", 
-      "After eating, pulsation all over, especially abdomen", 
+      "Hiccough and eructations after smoking",
+      "Sweetish taste",
+      "After eating, pulsation all over, especially abdomen",
       "Desire for brandy and other strong drink"
-    ], 
+    ],
     "Urine": [
-      "Involuntary dribbling", 
+      "Involuntary dribbling",
       "Sensation in the tip of urethra as if a biting drop were forcing its way out"
-    ], 
+    ],
     "Mind": [
-      "Mental labor fatigues", 
-      "Extreme sadness", 
-      "Lascivious thoughts, with impotency", 
+      "Mental labor fatigues",
+      "Extreme sadness",
+      "Lascivious thoughts, with impotency",
       "Abject despair, uncompromising melancholy"
-    ], 
+    ],
     "Abdomen": [
-      "Chronic liver affections; liver painful, enlarged, with fine rash over liver region", 
+      "Chronic liver affections",
+      "liver painful, enlarged, with fine rash over liver region",
       "Stool constipated, hard and accumulated in rectum"
-    ], 
+    ],
     "Sleep": [
-      "Sleep prevented by pulsation in all vessels, worse abdomen", 
+      "Sleep prevented by pulsation in all vessels, worse abdomen",
       "Sleepless until midnight, awakens early and always same hour"
-    ], 
+    ],
     "Skin": [
-      "Itching about finger-joints and between fingers; in palms", 
-      "Vesicular eruption between fingers", 
-      "Acne", 
-      "Hair falls out from brows, beard, and genitals", 
-      "Seborrhoea oleos; comedones with an oily surface of the skin; alopecia", 
-      "Itching about the ankles and folds of skin, between fingers", 
+      "Itching about finger-joints and between fingers",
+      "in palms",
+      "Vesicular eruption between fingers",
+      "Acne",
+      "Hair falls out from brows, beard, and genitals",
+      "Seborrhoea oleos",
+      "comedones with an oily surface of the skin",
+      "alopecia",
+      "Itching about the ankles and folds of skin, between fingers",
       "Dry, scaly eruption in palms, with itching"
-    ], 
+    ],
     "Throat": [
-      "Hoarseness of singers", 
-      "Much clear, starchy mucus", 
-      "Incipient tubercular laryngitis", 
-      "Cough in morning, with expectoration of bloody mucus", 
-      "Hawking and raising transparent lumps of mucus every morning", 
+      "Hoarseness of singers",
+      "Much clear, starchy mucus",
+      "Incipient tubercular laryngitis",
+      "Cough in morning, with expectoration of bloody mucus",
+      "Hawking and raising transparent lumps of mucus every morning",
       "Hoarseness"
-    ], 
+    ],
     "Extremities": [
-      "Paralytic pains in small of back in the morning", 
+      "Paralytic pains in small of back in the morning",
       "Tearing pain in hands, at night"
-    ], 
+    ],
     "Male": [
-      "Irritability after coitus", 
-      "On attempting coition, penis relaxes", 
-      "Hydrocele", 
-      "Increases desire, decreases ability", 
-      "Semen thin, odorless", 
-      "Dribbling of semen during sleep", 
-      "Sexual neurasthenia", 
-      "Loss of sexual power, with lascivious fancies", 
+      "Irritability after coitus",
+      "On attempting coition, penis relaxes",
+      "Hydrocele",
+      "Increases desire, decreases ability",
+      "Semen thin, odorless",
+      "Dribbling of semen during sleep",
+      "Sexual neurasthenia",
+      "Loss of sexual power, with lascivious fancies",
       "Dribbling of prostatic fluid"
     ]
-  }, 
-  "details": "Selenium is a constant constituent of bones and teeth. Marked effects on the genitourinary organs, and often indicated in elderly men, especially for prostration and sexual atony. GREAT DEBILITY; worse, heat. Easy exhaustion, mental and physical, in old age. Debility after exhausting diseases.", 
+  },
+  "details": "Selenium is a constant constituent of bones and teeth. Marked effects on the genitourinary organs, and often indicated in elderly men, especially for prostration and sexual atony. GREAT DEBILITY; worse, heat. Easy exhaustion, mental and physical, in old age. Debility after exhausting diseases.",
   "dosage": "Sixth to thirtieth potency. Colloidal Selenium injection for inoperable cancer. Pain, sleeplessness, ulceration and discharge are markedly diminished."
 }

@@ -1,28 +1,29 @@
 {
-  "name": "Salix nigra", 
-  "Relationship": "Compare: YOHIMBINE.; CANTH.", 
-  "Common names": "Black-willow", 
+  "name": "Salix nigra",
+  "Relationship": "Compare: YOHIMBINE.; CANTH.",
+  "Common names": "Black-willow",
   "symptoms": {
     "Back": [
-      "Unable to step out quickly", 
+      "Unable to step out quickly",
       "Pain across sacral and lumbar region"
-    ], 
+    ],
     "Face": [
-      "Epistaxis", 
-      "Roots of hair hurt", 
+      "Epistaxis",
+      "Roots of hair hurt",
       "Red, swollen, especially the end of nose - eyes blood-shot and sore to touch and on motion"
-    ], 
+    ],
     "Female": [
-      "Menorrhagia", 
-      "Bleeding with uterine fibroid", 
-      "Nymphomania", 
-      "Before and during menses much nervous disturbance, pain in ovaries; difficult menstruation", 
+      "Menorrhagia",
+      "Bleeding with uterine fibroid",
+      "Nymphomania",
+      "Before and during menses much nervous disturbance, pain in ovaries",
+      "difficult menstruation",
       "Ovarian congestion and neuralgia"
-    ], 
+    ],
     "Male": [
       "Painful movement of the testicles"
     ]
-  }, 
-  "details": "Has a positive action on the generative organs of both sexes. Hysteria and nervousness. Libidinous thoughts and lascivious dreams. Controls genital irritability. Moderates sexual passion. Satyriasis and erotomania. In acute gonorrhea, with much erotic trouble; chordee. After masturbation; spermatorrhoea.", 
+  },
+  "details": "Has a positive action on the generative organs of both sexes. Hysteria and nervousness. Libidinous thoughts and lascivious dreams. Controls genital irritability. Moderates sexual passion. Satyriasis and erotomania. In acute gonorrhea, with much erotic trouble; chordee. After masturbation; spermatorrhoea.",
   "dosage": "Material doses of the tincture, thirty drops."
 }

@@ -1,43 +1,46 @@
 {
-  "name": "Rheum", 
-  "Relationship": "Compare: MAG. PHOS.; HEP.; POD.; CHAM.; IPEC. Antidotes: CAMPH.; CHAM. Complementary: MAG. CARB.", 
+  "name": "Rheum",
+  "Relationship": "Compare: MAG. PHOS.; HEP.; POD.; CHAM.; IPEC. Antidotes: CAMPH.; CHAM. Complementary: MAG. CARB.",
   "Modalities": [
-    "Worse: uncovering", 
-    "Worse: after eating", 
+    "Worse: uncovering",
+    "Worse: after eating",
     "Worse: moving about"
-  ], 
-  "Common names": "Rhubarb", 
+  ],
+  "Common names": "Rhubarb",
   "symptoms": {
     "Head": [
-      "Cool sweat on the face, especially about mouth and nose", 
-      "Sweat on hairy scalp; constant and profuse"
-    ], 
+      "Cool sweat on the face, especially about mouth and nose",
+      "Sweat on hairy scalp",
+      "constant and profuse"
+    ],
     "Stomach": [
-      "Feels full", 
-      "Desire for various kinds of food, but soon tires of all", 
+      "Feels full",
+      "Desire for various kinds of food, but soon tires of all",
       "Throbbing in pit"
-    ], 
+    ],
     "Mind": [
-      "Impatient and vehement; desires many things and cries"
-    ], 
+      "Impatient and vehement",
+      "desires many things and cries"
+    ],
     "Abdomen": [
-      "Colicky pain about navel", 
-      "Colic when uncovering", 
+      "Colicky pain about navel",
+      "Colic when uncovering",
       "Wind seems to rise up to chest"
-    ], 
+    ],
     "Mouth": [
-      "Much saliva", 
-      "Difficult teething; restless and irritable", 
-      "Sensation of coolness in teeth", 
+      "Much saliva",
+      "Difficult teething",
+      "restless and irritable",
+      "Sensation of coolness in teeth",
       "Breath smells sour"
-    ], 
+    ],
     "Rectum": [
-      "Colicky, even ineffectual urging to evacuate altered faecal stools", 
-      "Before stool, unsuccessful urging to urinate", 
-      "Stools smell sour, pasty, with shivering and tenesmus, and burning in anus", 
+      "Colicky, even ineffectual urging to evacuate altered faecal stools",
+      "Before stool, unsuccessful urging to urinate",
+      "Stools smell sour, pasty, with shivering and tenesmus, and burning in anus",
       "Sour diarrhoea during dentition"
     ]
-  }, 
-  "details": "Of frequent use in children with sour diarrhoea; difficult dentition. WHOLE CHILD SMELLS SOUR.", 
+  },
+  "details": "Of frequent use in children with sour diarrhoea; difficult dentition. WHOLE CHILD SMELLS SOUR.",
   "dosage": "Third to sixth potency."
 }

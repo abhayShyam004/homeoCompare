@@ -1,82 +1,89 @@
 {
-  "name": "Euphrasia", 
-  "Relationship": "Antidotes: Camph.; Puls. Compare: Hydrophyllum-Burr-flower - (catarrhal inflammation of eyes; hot lachrymation with itching, swollen lids, dull headache; also for effects of Poison-Oak); Cepa; Ars.; Gels.; Kali-hyd.; Sabadilla.", 
+  "name": "Euphrasia",
+  "Relationship": "Antidotes: Camph.; Puls. Compare: Hydrophyllum-Burr-flower - (catarrhal inflammation of eyes; hot lachrymation with itching, swollen lids, dull headache; also for effects of Poison-Oak); Cepa; Ars.; Gels.; Kali-hyd.; Sabadilla.",
   "Modalities": [
-    "Worse: in evening", 
-    "Worse: indoors", 
-    "Worse: warmth; south winds", 
-    "Worse: from light", 
-    "Better: from coffee", 
+    "Worse: in evening",
+    "Worse: indoors",
+    "Worse: warmth; south winds",
+    "Worse: from light",
+    "Better: from coffee",
     "Better: in dark"
-  ], 
-  "Common names": "Eye bright", 
+  ],
+  "Common names": "Eye bright",
   "symptoms": {
     "Eyes": [
-      "Ptosis", 
-      "Discharge thick and excoriating", 
-      "Pressure in eyes", 
-      "Burning and swelling of the lids", 
-      "Rheumatic iritis", 
-      "The eyes water all the time", 
-      "Frequent inclination to blink", 
-      "Free discharge of acrid matter", 
-      "Catarrhal conjunctivitis; discharge of acrid matter", 
-      "Little blister on cornea", 
-      "Acrid lachrymation; bland coryza", 
-      "Opacities", 
-      "Sticky mucus on cornea; must wink to remove it"
-    ], 
+      "Ptosis",
+      "Discharge thick and excoriating",
+      "Pressure in eyes",
+      "Burning and swelling of the lids",
+      "Rheumatic iritis",
+      "The eyes water all the time",
+      "Frequent inclination to blink",
+      "Free discharge of acrid matter",
+      "Catarrhal conjunctivitis",
+      "discharge of acrid matter",
+      "Little blister on cornea",
+      "Acrid lachrymation",
+      "bland coryza",
+      "Opacities",
+      "Sticky mucus on cornea",
+      "must wink to remove it"
+    ],
     "Respiratory": [
-      "Frequent yawning when walking in open air", 
-      "Profuse, fluent coryza in morning, with much cough and expectoration", 
-      "Influenza", 
-      "Whooping-cough only in day-time, with profuse lachrymation", 
+      "Frequent yawning when walking in open air",
+      "Profuse, fluent coryza in morning, with much cough and expectoration",
+      "Influenza",
+      "Whooping-cough only in day-time, with profuse lachrymation",
       "Gags when clearing the throat in morning"
-    ], 
+    ],
     "Stomach": [
-      "Nausea and bitterness after smoking", 
+      "Nausea and bitterness after smoking",
       "Vomiting from hawking mucus"
-    ], 
+    ],
     "Head": [
-      "Catarrhal headache, with profuse discharge from eyes and nose", 
+      "Catarrhal headache, with profuse discharge from eyes and nose",
       "Bursting headache with dazzling of eyes"
-    ], 
+    ],
     "Face": [
-      "Redness and heat of cheeks", 
+      "Redness and heat of cheeks",
       "Stiffness of upper lip"
-    ], 
+    ],
     "Fever": [
-      "Chilly and cold", 
+      "Chilly and cold",
       "Sear mostly on chest, at night during sleep"
-    ], 
+    ],
     "Female": [
-      "Menses painful; flow lasts only an hour or day; late, scanty, short", 
+      "Menses painful",
+      "flow lasts only an hour or day",
+      "late, scanty, short",
       "Amenorrhoea, with ophthalmia"
-    ], 
+    ],
     "Skin": [
-      "Consequence of external injuries", 
-      "First stage of measles; eye symptoms marked"
-    ], 
+      "Consequence of external injuries",
+      "First stage of measles",
+      "eye symptoms marked"
+    ],
     "Sleep": [
-      "Sleepy during day", 
+      "Sleepy during day",
       "Yawning when walking in open air"
-    ], 
+    ],
     "Rectum": [
-      "Dysentery", 
-      "Constipation", 
-      "Prolapse ani", 
+      "Dysentery",
+      "Constipation",
+      "Prolapse ani",
       "Pressure down in anus when sitting"
-    ], 
+    ],
     "Male": [
-      "Condyloma and sycotic excrescences", 
-      "Nocturnal irritability of bladder; dribbling urine", 
-      "Spasmodic retraction of genitals, with pressure above pubic bone", 
+      "Condyloma and sycotic excrescences",
+      "Nocturnal irritability of bladder",
+      "dribbling urine",
+      "Spasmodic retraction of genitals, with pressure above pubic bone",
       "Prostatitis"
-    ], 
+    ],
     "Nose": [
       "Profuse, fluent coryza, with violent cough and abundant expectoration"
     ]
-  }, 
-  "details": "Manifests itself in inflaming the conjunctival membrane especially, producing profuse lachrymation. Patient is better in open air. Catarrhal affections of mucous membranes especially of eyes and nose. Profuse ACRID lachrymation and bland coryza; worse, evening. Hawking up of offensive mucus.", 
+  },
+  "details": "Manifests itself in inflaming the conjunctival membrane especially, producing profuse lachrymation. Patient is better in open air. Catarrhal affections of mucous membranes especially of eyes and nose. Profuse ACRID lachrymation and bland coryza; worse, evening. Hawking up of offensive mucus.",
   "dosage": "Third to sixth potency."
 }

@@ -1,43 +1,48 @@
 {
-  "name": "Sinapis nigra", 
-  "Relationship": "Compare: SULPH.; CAPSIC.; COLOCY.; SINAPIS ALBA - White mustard - (throat symptoms marked; especially PRESSURE AND BURNING, WITH OBSTRUCTION IN ESOPHAGUS; sensation of a lump in oesophagus behind the Manubrium Sterni and with much eructation; similar symptoms in rectum). MUSTARD OIL by inhalation (acts on the sensory nerve endings of the trigeminal. Relieves pain in middle ear disease and in painful conditions of nose, nasal cavities, and tonsils.)", 
-  "Common names": "Brassica Nigra Black Mustard", 
+  "name": "Sinapis nigra",
+  "Relationship": "Compare: SULPH.; CAPSIC.; COLOCY.; SINAPIS ALBA - White mustard - (throat symptoms marked; especially PRESSURE AND BURNING, WITH OBSTRUCTION IN ESOPHAGUS; sensation of a lump in oesophagus behind the Manubrium Sterni and with much eructation; similar symptoms in rectum). MUSTARD OIL by inhalation (acts on the sensory nerve endings of the trigeminal. Relieves pain in middle ear disease and in painful conditions of nose, nasal cavities, and tonsils.)",
+  "Common names": "Brassica Nigra Black Mustard",
   "symptoms": {
     "Head": [
-      "Sweat on upper lip and forehead", 
-      "Scalp hot and itches", 
+      "Sweat on upper lip and forehead",
+      "Scalp hot and itches",
       "Tongue feels blistered"
-    ], 
+    ],
     "Respiratory": [
       "Cough is relieved by lying down"
-    ], 
+    ],
     "Stomach": [
-      "Burning in stomach, extending up oesophagus, throat, and mouth, which is full of canker sores", 
-      "Offensive breath, smelling like onions", 
-      "Colic; pains come on while bent forward; better, sitting up straight", 
-      "Hot sour eructations", 
+      "Burning in stomach, extending up oesophagus, throat, and mouth, which is full of canker sores",
+      "Offensive breath, smelling like onions",
+      "Colic",
+      "pains come on while bent forward",
+      "better, sitting up straight",
+      "Hot sour eructations",
       "Sweat better when nausea comes on"
-    ], 
+    ],
     "Urine": [
       "Pain in bladder, frequent copious flow day and night"
-    ], 
+    ],
     "Back": [
-      "Rheumatic pain in intercostal and lumbar muscles; sleeplessness from pain in back and hips"
-    ], 
+      "Rheumatic pain in intercostal and lumbar muscles",
+      "sleeplessness from pain in back and hips"
+    ],
     "Nose": [
-      "Mucus from posterior nares feels cold", 
-      "Dryness of anterior nares", 
-      "Stoppage of left nostril all day, or in afternoon and evening", 
-      "Scanty, acrid discharge", 
-      "Nostrils alternately stopped", 
-      "Dry, hot, with lachrymation, sneezing; hacking cough; better lying down"
-    ], 
+      "Mucus from posterior nares feels cold",
+      "Dryness of anterior nares",
+      "Stoppage of left nostril all day, or in afternoon and evening",
+      "Scanty, acrid discharge",
+      "Nostrils alternately stopped",
+      "Dry, hot, with lachrymation, sneezing",
+      "hacking cough",
+      "better lying down"
+    ],
     "Throat": [
-      "Asthmatic breathing", 
-      "Feels scalded, hot, inflamed", 
+      "Asthmatic breathing",
+      "Feels scalded, hot, inflamed",
       "Loud coughing-spells with barking expiration"
     ]
-  }, 
-  "details": "Is of use in hay-fever, coryza, and pharyngitis. Dry nares and pharynx, with thick, lumpy secretion. Small-pox.", 
+  },
+  "details": "Is of use in hay-fever, coryza, and pharyngitis. Dry nares and pharynx, with thick, lumpy secretion. Small-pox.",
   "dosage": "Third potency."
 }

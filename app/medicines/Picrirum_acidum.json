@@ -1,63 +1,69 @@
 {
-  "name": "Picrirum acidum", 
-  "Relationship": "Compare: OXAL-AC.; GELS.; PHOS.; SIL.; ARG. NIT. Compare: ZINC. PIC. (facial palsy and paralysis agitans); FERR. PIC. (buzzing in ears, deafness; chronic gout; epistaxis; prostatic troubles); CALC. PIC. (boils in and around ears).", 
+  "name": "Picrirum acidum",
+  "Relationship": "Compare: OXAL-AC.; GELS.; PHOS.; SIL.; ARG. NIT. Compare: ZINC. PIC. (facial palsy and paralysis agitans); FERR. PIC. (buzzing in ears, deafness; chronic gout; epistaxis; prostatic troubles); CALC. PIC. (boils in and around ears).",
   "Modalities": [
-    "Worse: least exertion", 
-    "Worse: especially mental", 
-    "Worse: after sleep", 
-    "Worse: wet weather", 
-    "Better: from cold air", 
-    "Better: cold water", 
+    "Worse: least exertion",
+    "Worse: especially mental",
+    "Worse: after sleep",
+    "Worse: wet weather",
+    "Better: from cold air",
+    "Better: cold water",
     "Better: tight pressure"
-  ], 
-  "Common names": "(Picric Acid) (Trinitrophenol)", 
+  ],
+  "Common names": "(Picric Acid) (Trinitrophenol)",
   "symptoms": {
     "Eyes": [
       "Chronic catarrhal conjunctivitis with copious, thick yellow discharge"
-    ], 
+    ],
     "Stomach": [
-      "Aversion to food", 
+      "Aversion to food",
       "Bitter taste"
-    ], 
+    ],
     "Urine": [
-      "Nightly urging", 
-      "Inflammation of kidneys with profound weakness, dark, bloody, scanty urine", 
-      "Dribbling micturition", 
-      "Scanty; complete anuria", 
+      "Nightly urging",
+      "Inflammation of kidneys with profound weakness, dark, bloody, scanty urine",
+      "Dribbling micturition",
+      "Scanty",
+      "complete anuria",
       "Urine contains much indican, granular cylinders and fatty degenerated epithelium"
-    ], 
+    ],
     "Mind": [
-      "Cerebral softening", 
-      "Lack of will-power; disinclined to work", 
+      "Cerebral softening",
+      "Lack of will-power",
+      "disinclined to work",
       "Dementia with prostration, sits still and listens"
-    ], 
+    ],
     "Head": [
-      "Boils within ears and back of neck", 
-      "Brain fag", 
-      "Occipital pain; worse, slightest mental exertion", 
-      "Vertigo and noises in ear", 
-      "Head pains; relieved by bandaging tightly", 
+      "Boils within ears and back of neck",
+      "Brain fag",
+      "Occipital pain",
+      "worse, slightest mental exertion",
+      "Vertigo and noises in ear",
+      "Head pains",
+      "relieved by bandaging tightly",
       "After prolonged mental strain, with anxiety and dread of failure at examination"
-    ], 
+    ],
     "Female": [
-      "Pruritus vulvae", 
+      "Pruritus vulvae",
       "Pain in left ovary and leucorrhoea before menstruation"
-    ], 
+    ],
     "Extremities": [
-      "Acute ascending paralysis", 
-      "Great weakness", 
-      "Burning along spine", 
-      "Cannot get warm", 
-      "Tired, heavy feeling all over body, especially limbs; worse, exertion", 
+      "Acute ascending paralysis",
+      "Great weakness",
+      "Burning along spine",
+      "Cannot get warm",
+      "Tired, heavy feeling all over body, especially limbs",
+      "worse, exertion",
       "Feet cold"
-    ], 
+    ],
     "Male": [
-      "Emissions profuse, followed by great exhaustion, without sensual dreams", 
-      "Hard erections, with pain in testicles and up cord", 
-      "Priapism; satyriasis", 
+      "Emissions profuse, followed by great exhaustion, without sensual dreams",
+      "Hard erections, with pain in testicles and up cord",
+      "Priapism",
+      "satyriasis",
       "Prostatic hypertrophy, especially in cases not too far advanced"
     ]
-  }, 
-  "details": "Causes degeneration of the spinal cord, with paralysis. Brain-fag and sexual excitement. Acts upon the generative organs probably through the lumbar centers of the spinal cord; prostration, weakness and pain of back, pins and needle sensation in extremities. NEURASTHENIA. (OXAL-AC.) Muscular debility. Heavy tired feeling. Myelitis with spasms and prostration. Writer's palsy. Progressive, pernicious anaemia. URAEMIA with complete anuria. A one per cent solution applied on lint, is the best application for burns until granulations begin to form. Sallow complexion.", 
+  },
+  "details": "Causes degeneration of the spinal cord, with paralysis. Brain-fag and sexual excitement. Acts upon the generative organs probably through the lumbar centers of the spinal cord; prostration, weakness and pain of back, pins and needle sensation in extremities. NEURASTHENIA. (OXAL-AC.) Muscular debility. Heavy tired feeling. Myelitis with spasms and prostration. Writer's palsy. Progressive, pernicious anaemia. URAEMIA with complete anuria. A one per cent solution applied on lint, is the best application for burns until granulations begin to form. Sallow complexion.",
   "dosage": "Sixth potency."
 }

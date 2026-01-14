@@ -1,28 +1,30 @@
 {
   "symptoms": {
     "Stomach": [
-      "Sour eructations, with empty hungry feeling in stomach; not relieved by eating", 
-      "Salivation; worse at night"
-    ], 
+      "Sour eructations, with empty hungry feeling in stomach",
+      "not relieved by eating",
+      "Salivation",
+      "worse at night"
+    ],
     "Urine": [
-      "Burning in urethra", 
-      "Cloudy", 
+      "Burning in urethra",
+      "Cloudy",
       "Oxaluria"
-    ], 
+    ],
     "Stool": [
-      "Anus moist and sore", 
-      "Constipated, with ineffectual urging", 
+      "Anus moist and sore",
+      "Constipated, with ineffectual urging",
       "Sphincter constricted"
-    ], 
+    ],
     "Mouth": [
-      "Cankers' small, superficial ulceration over inside of mouth and tongue", 
-      "Gums bleed easily", 
-      "Ptyalism", 
-      "Metallic taste", 
+      "Cankers' small, superficial ulceration over inside of mouth and tongue",
+      "Gums bleed easily",
+      "Ptyalism",
+      "Metallic taste",
       "Constant drooling at night"
     ]
-  }, 
-  "Common names": "Aqua Regia", 
-  "name": "Nitro-muriatic acid", 
+  },
+  "Common names": "Aqua Regia",
+  "name": "Nitro-muriatic acid",
   "details": "Almost a specific in Oxaluria. Removes the distressing skin symptoms resembling psoriasis. Three to five drops three times a day. So-called bilious conditions; torpid liver, hepatitis and early cirrhosis of liver. More adapted to hepatic torpor and gastric catarrh common in hot and damp climates and aggravated by meat eating and alcohol (Hale). Constricted anus. Gravel."
 }

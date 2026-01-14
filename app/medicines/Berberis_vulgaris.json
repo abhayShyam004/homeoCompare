@@ -1,105 +1,114 @@
 {
-  "name": "Berberis vulgaris", 
-  "Relationship": "Compare: Ipomea - Convolvulus Duartinus - Morning Glory. - (Pain in left lumbar muscles on stooping. Kidney disorders with pain in back. Much abdominal flatulence. Aching in top of right shoulder renal colic; aching in small of back and extremities), Aloe; Lycopod.; Nux.; Sarsap. Xanthorrhoea arborea (severe pain in kidneys, cystitis and gravel. Pain from ureter to bladder and testicles; pain in small of back returns from least chill or damp). Xanthorrhiza apifolia - Shrub Yellow Root - Contains Berberine. Dilatation of stomach and intestines, atony, enlarged spleen. Antidotes: Camphor; Bell.", 
+  "name": "Berberis vulgaris",
+  "Relationship": "Compare: Ipomea - Convolvulus Duartinus - Morning Glory. - (Pain in left lumbar muscles on stooping. Kidney disorders with pain in back. Much abdominal flatulence. Aching in top of right shoulder renal colic; aching in small of back and extremities), Aloe; Lycopod.; Nux.; Sarsap. Xanthorrhoea arborea (severe pain in kidneys, cystitis and gravel. Pain from ureter to bladder and testicles; pain in small of back returns from least chill or damp). Xanthorrhiza apifolia - Shrub Yellow Root - Contains Berberine. Dilatation of stomach and intestines, atony, enlarged spleen. Antidotes: Camphor; Bell.",
   "Modalities": [
-    "Worse: motion", 
+    "Worse: motion",
     "Worse: standing"
-  ], 
-  "Common names": "Barberry", 
+  ],
+  "Common names": "Barberry",
   "symptoms": {
     "Head": [
-      "Sensation of a tight cap pressing upon the whole scalp", 
-      "Listless, apathetic, indifferent", 
-      "Chilliness in back and occiput", 
-      "Frontal headache", 
-      "Puffy sensation, feeling as if becoming larger", 
-      "Vertigo with attacks of fainting", 
+      "Sensation of a tight cap pressing upon the whole scalp",
+      "Listless, apathetic, indifferent",
+      "Chilliness in back and occiput",
+      "Frontal headache",
+      "Puffy sensation, feeling as if becoming larger",
+      "Vertigo with attacks of fainting",
       "Tearing pain in auricle, and gouty concretions"
-    ], 
+    ],
     "Respiratory": [
-      "Hoarseness; polypus of larynx", 
+      "Hoarseness",
+      "polypus of larynx",
       "Tearing stitches in chest and region of heart"
-    ], 
+    ],
     "Stomach": [
-      "Nausea before breakfast", 
+      "Nausea before breakfast",
       "Heartburn"
-    ], 
+    ],
     "Urine": [
-      "Pain in the thighs and loins on urinating", 
-      "Urine with thick mucus and bright-red, mealy sediment", 
-      "Bubbling, sore sensation in kidneys", 
-      "Burning pains", 
-      "Frequent urination; urethra burns when not urinating", 
-      "Sensation as if some urine remained after urinating", 
+      "Pain in the thighs and loins on urinating",
+      "Urine with thick mucus and bright-red, mealy sediment",
+      "Bubbling, sore sensation in kidneys",
+      "Burning pains",
+      "Frequent urination",
+      "urethra burns when not urinating",
+      "Sensation as if some urine remained after urinating",
       "Pain in bladder region"
-    ], 
+    ],
     "Stool": [
-      "Fistula in anus", 
-      "Constant urging to stool", 
-      "Diarrhoea painless, clay-colored, burning, and smarting in anus and perineum", 
+      "Fistula in anus",
+      "Constant urging to stool",
+      "Diarrhoea painless, clay-colored, burning, and smarting in anus and perineum",
       "Tearing around anus"
-    ], 
+    ],
     "Back": [
-      "Stitches from kidneys into bladder", 
-      "Post-operative pain in lumbar region; soreness with sharp pain following course of circumflex iliac nerve to bladder with frequent urination", 
-      "Sticking pain in region of kidneys radiating thence around abdomen, to hips and groins", 
-      "Metatarsus and metacarpus feel sprained", 
-      "Tearing, sticking with stiffness, making rising difficult, involving hips, nates, limbs, with numbness", 
-      "Stitches in neck and back; worse, respiration", 
-      "Numb, bruised sensation", 
+      "Stitches from kidneys into bladder",
+      "Post-operative pain in lumbar region",
+      "soreness with sharp pain following course of circumflex iliac nerve to bladder with frequent urination",
+      "Sticking pain in region of kidneys radiating thence around abdomen, to hips and groins",
+      "Metatarsus and metacarpus feel sprained",
+      "Tearing, sticking with stiffness, making rising difficult, involving hips, nates, limbs, with numbness",
+      "Stitches in neck and back",
+      "worse, respiration",
+      "Numb, bruised sensation",
       "Lumbago"
-    ], 
+    ],
     "Face": [
-      "Diminished saliva", 
-      "Sticky sensation", 
-      "Tongue feels scalded; vesicles on tongue", 
-      "Pale, sticky", 
-      "Sticky, frothy saliva, like cotton", 
+      "Diminished saliva",
+      "Sticky sensation",
+      "Tongue feels scalded",
+      "vesicles on tongue",
+      "Pale, sticky",
+      "Sticky, frothy saliva, like cotton",
       "Sunken cheeks and eyes, with bluish circles"
-    ], 
+    ],
     "Fever": [
-      "Warmth in lower part of back, hips, and thighs", 
+      "Warmth in lower part of back, hips, and thighs",
       "Cold sensation in various parts, as if spattered with cold water"
-    ], 
+    ],
     "Nose": [
-      "Crawling in nostrils", 
-      "Dry; obstinate catarrh of left nostril"
-    ], 
+      "Crawling in nostrils",
+      "Dry",
+      "obstinate catarrh of left nostril"
+    ],
     "Female": [
-      "Desire diminished, cutting pain during coition", 
-      "Burning and soreness in vagina", 
-      "Pinching constriction in mons veneries, vaginismus, contraction and tenderness of vagina", 
-      "Leucorrhoea, grayish mucus, with painful urinary symptoms", 
-      "Neuralgia of ovaries and vagina", 
+      "Desire diminished, cutting pain during coition",
+      "Burning and soreness in vagina",
+      "Pinching constriction in mons veneries, vaginismus, contraction and tenderness of vagina",
+      "Leucorrhoea, grayish mucus, with painful urinary symptoms",
+      "Neuralgia of ovaries and vagina",
       "Menses scanty, gray mucus, with pain in kidneys and chilliness, pain down thighs"
-    ], 
+    ],
     "Skin": [
-      "Eczema of anus and hands", 
-      "Flat warts", 
-      "Itching, burning and smarting; worse, scratching; better, cold applications", 
-      "Circumscribed pigmentation following eczematous inflammation", 
+      "Eczema of anus and hands",
+      "Flat warts",
+      "Itching, burning and smarting",
+      "worse, scratching",
+      "better, cold applications",
+      "Circumscribed pigmentation following eczematous inflammation",
       "Small pustules over whole body"
-    ], 
+    ],
     "Abdomen": [
-      "Catarrh of the gall-bladder with constipation and yellow complexion", 
-      "Stitches in region of gall-bladder; worse, pressure, extending to stomach", 
-      "Stitching pain in front of kidneys extending to liver, spleen, stomach, groins, poupart's ligament", 
+      "Catarrh of the gall-bladder with constipation and yellow complexion",
+      "Stitches in region of gall-bladder",
+      "worse, pressure, extending to stomach",
+      "Stitching pain in front of kidneys extending to liver, spleen, stomach, groins, poupart's ligament",
       "Sticking deep in ilium"
-    ], 
+    ],
     "Extremities": [
-      "Sensation of cold on outside of thighs", 
-      "Pain in balls of feet on stepping", 
-      "Rheumatic paralytic pain in shoulders, arms, hands and fingers, legs and feet", 
-      "Stitching between metatarsal bones as from a nail when standing", 
-      "Neuralgia under finger-nails, with swelling of finger-joints", 
-      "Intense weariness and lameness of legs after walking a short distance", 
+      "Sensation of cold on outside of thighs",
+      "Pain in balls of feet on stepping",
+      "Rheumatic paralytic pain in shoulders, arms, hands and fingers, legs and feet",
+      "Stitching between metatarsal bones as from a nail when standing",
+      "Neuralgia under finger-nails, with swelling of finger-joints",
+      "Intense weariness and lameness of legs after walking a short distance",
       "Heels pain, as if ulcerated"
-    ], 
+    ],
     "Male": [
-      "Smarting, burning, stitching in testicles, in prepuce and scrotum", 
+      "Smarting, burning, stitching in testicles, in prepuce and scrotum",
       "Neuralgia of spermatic cord and testicles"
     ]
-  }, 
-  "details": "Rapid changes of symptoms - pains change in regard to place and character - thirst alternates with thirstlessness, hunger, and loss of appetite, etc. Acts forcibly on the venous system, producing pelvic engorgements and hemorrhoids. Hepatic, and rheumatic affections, particularly with urinary, hemorrhoidal and menstrual complaints. Old gouty constitutions. Pain in region of kidneys is most marked; hence its use in renal and vesical troubles, gall-stones, and vesical catarrh. It causes inflammation of kidneys with hematuria. Pains may be felt all over body, emanating from small of back. It has also marked action on the liver, promoting the flow of bile. Often called for in arthritic affections with urinary disturbances. Wandering, RADIATING pains. Acts well in fleshy persons, good livers, but with little endurance. Spinal irritation. All Berberis pains radiate, are not worse by pressure, but worse in various attitudes, especially standing and active exercise.", 
+  },
+  "details": "Rapid changes of symptoms - pains change in regard to place and character - thirst alternates with thirstlessness, hunger, and loss of appetite, etc. Acts forcibly on the venous system, producing pelvic engorgements and hemorrhoids. Hepatic, and rheumatic affections, particularly with urinary, hemorrhoidal and menstrual complaints. Old gouty constitutions. Pain in region of kidneys is most marked; hence its use in renal and vesical troubles, gall-stones, and vesical catarrh. It causes inflammation of kidneys with hematuria. Pains may be felt all over body, emanating from small of back. It has also marked action on the liver, promoting the flow of bile. Often called for in arthritic affections with urinary disturbances. Wandering, RADIATING pains. Acts well in fleshy persons, good livers, but with little endurance. Spinal irritation. All Berberis pains radiate, are not worse by pressure, but worse in various attitudes, especially standing and active exercise.",
   "dosage": "Tincture, to sixth potency."
 }

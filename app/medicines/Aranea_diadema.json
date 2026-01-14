@@ -1,52 +1,56 @@
 {
-  "name": "Aranea diadema", 
-  "Relationship": "TELA ARANEARUM - Spider's web. - (Cardiac sleeplessness, increased muscular energy. Excitement and nervous agitation in febrile states. Dry asthma, harassing coughs; periodic headaches with EXTREME NERVOUS ERETHISM. OBSTINATE INTERMITTENTS. Acts immediately on arterial system, pulse full, strong, compressible. Lowers pulse rate frequency. Masked periodical diseases, hectic, broken down patients. Symptoms come on SUDDENLY with cool, CLAMMY skin. Numbness of hands and legs when at rest. CONTINUED CHILLINESS. ARANEA SCINENCIA - Grey Spider - (constant twitching of under eyelids. Sleepiness. Worse in warm room.)", 
+  "name": "Aranea diadema",
+  "Relationship": "TELA ARANEARUM - Spider's web. - (Cardiac sleeplessness, increased muscular energy. Excitement and nervous agitation in febrile states. Dry asthma, harassing coughs; periodic headaches with EXTREME NERVOUS ERETHISM. OBSTINATE INTERMITTENTS. Acts immediately on arterial system, pulse full, strong, compressible. Lowers pulse rate frequency. Masked periodical diseases, hectic, broken down patients. Symptoms come on SUDDENLY with cool, CLAMMY skin. Numbness of hands and legs when at rest. CONTINUED CHILLINESS. ARANEA SCINENCIA - Grey Spider - (constant twitching of under eyelids. Sleepiness. Worse in warm room.)",
   "Modalities": [
-    "Worse: damp weather", 
-    "Worse: late in afternoon", 
-    "Worse: and at midnight", 
+    "Worse: damp weather",
+    "Worse: late in afternoon",
+    "Worse: and at midnight",
     "Better: smoking tobacco"
-  ], 
-  "Common names": "Papal-Cross Spider", 
+  ],
+  "Common names": "Papal-Cross Spider",
   "symptoms": {
     "Head": [
-      "Pain in right trifacial nerve from periphery inwards", 
-      "Sudden violent pain in teeth at night immediately after lying down", 
-      "Heat and flickering in eyes; worse in damp weather", 
-      "Confusion; better by smoking in open air"
-    ], 
+      "Pain in right trifacial nerve from periphery inwards",
+      "Sudden violent pain in teeth at night immediately after lying down",
+      "Heat and flickering in eyes",
+      "worse in damp weather",
+      "Confusion",
+      "better by smoking in open air"
+    ],
     "Fever": [
-      "Coldness, with pain in long bones, and feeling of stone in abdomen at the same hour daily", 
-      "Chilly day and night; always worse during rain"
-    ], 
+      "Coldness, with pain in long bones, and feeling of stone in abdomen at the same hour daily",
+      "Chilly day and night",
+      "always worse during rain"
+    ],
     "Stomach": [
-      "Cramps after eating a little; epigastrium painful to pressure"
-    ], 
+      "Cramps after eating a little",
+      "epigastrium painful to pressure"
+    ],
     "Chest": [
-      "Pain in intercostal nerve from nerve endings to spine", 
+      "Pain in intercostal nerve from nerve endings to spine",
       "Bright red hemorrhage from lungs"
-    ], 
+    ],
     "Abdomen": [
-      "Enlarged spleen", 
-      "Arms and legs feel as if asleep", 
-      "Heaviness in lower abdomen, as of a stone", 
-      "Diarrhoea", 
+      "Enlarged spleen",
+      "Arms and legs feel as if asleep",
+      "Heaviness in lower abdomen, as of a stone",
+      "Diarrhoea",
       "Colic returns same hours"
-    ], 
+    ],
     "Female": [
-      "Distention of abdomen", 
-      "Menses too early, too copious", 
+      "Distention of abdomen",
+      "Menses too early, too copious",
       "Lumbo-abdominal neuralgia"
-    ], 
+    ],
     "Sleep": [
       "Restless and waking, as if hands and forearms were swollen and heavy"
-    ], 
+    ],
     "Extremities": [
-      "Bone-pains in extremities", 
-      "Pain in os calcis", 
+      "Bone-pains in extremities",
+      "Pain in os calcis",
       "Sensation of swelling, and of parts going to sleep"
     ]
-  }, 
-  "details": "All spider poisons powerfully affect the nervous system. (See tarantula, Mygale, etc.) All symptoms of Aranea are characterized by PERIODICITY, AND COLDNESS, and great susceptibility to dampness. It is the remedy for the constitution favorable to malarial poisoning, where every damp day or place favors chilliness. Patient feels cold to the very bones. Coldness not relieved by anything. FEELING AS IF PARTS WERE ENLARGED AND HEAVIER. Wake up at night with hands feeling twice their natural size. Spleen swollen. HYDROGENOID Constitution, i.e., Abnormal sensitiveness to damp and cold, inability to live near fresh water, lakes, rivers, etc., or in damp, chilly places. (Nat-Sulph. Thuja)", 
+  },
+  "details": "All spider poisons powerfully affect the nervous system. (See tarantula, Mygale, etc.) All symptoms of Aranea are characterized by PERIODICITY, AND COLDNESS, and great susceptibility to dampness. It is the remedy for the constitution favorable to malarial poisoning, where every damp day or place favors chilliness. Patient feels cold to the very bones. Coldness not relieved by anything. FEELING AS IF PARTS WERE ENLARGED AND HEAVIER. Wake up at night with hands feeling twice their natural size. Spleen swollen. HYDROGENOID Constitution, i.e., Abnormal sensitiveness to damp and cold, inability to live near fresh water, lakes, rivers, etc., or in damp, chilly places. (Nat-Sulph. Thuja)",
   "dosage": "Tincture to thirtieth potency."
 }

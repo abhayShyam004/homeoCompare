@@ -1,38 +1,40 @@
 {
-  "name": "Berberis aquifolium mahonia", 
-  "Relationship": "Carbol. acid; Euonym; Berb. vulg.; Hydr.", 
-  "Common names": "Mountain Grape", 
+  "name": "Berberis aquifolium mahonia",
+  "Relationship": "Carbol. acid; Euonym; Berb. vulg.; Hydr.",
+  "Common names": "Mountain Grape",
   "symptoms": {
     "Head": [
-      "Sensation of a band just above ears", 
-      "Scaly eczema", 
-      "Bilious headache", 
+      "Sensation of a band just above ears",
+      "Scaly eczema",
+      "Bilious headache",
       "Scald head"
-    ], 
+    ],
     "Stomach": [
-      "Tongue thickly coated, yellowish-brown; feels blistered", 
-      "Nausea and hunger after eating", 
+      "Tongue thickly coated, yellowish-brown",
+      "feels blistered",
+      "Nausea and hunger after eating",
       "Burning in stomach"
-    ], 
+    ],
     "Urine": [
-      "Stitching, crampy pains; thick mucus, and bright-red, mealy sediment"
-    ], 
+      "Stitching, crampy pains",
+      "thick mucus, and bright-red, mealy sediment"
+    ],
     "Skin": [
-      "Psoriasis", 
-      "Dry eczema", 
-      "Acne", 
-      "Glandular induration", 
-      "Eruption on scalp extending to face and neck", 
-      "Tumor of breast, with pain", 
-      "Pimply, dry, rough, scaly", 
+      "Psoriasis",
+      "Dry eczema",
+      "Acne",
+      "Glandular induration",
+      "Eruption on scalp extending to face and neck",
+      "Tumor of breast, with pain",
+      "Pimply, dry, rough, scaly",
       "Pruritis"
-    ], 
+    ],
     "Face": [
-      "Clears the complexion", 
-      "Acne", 
+      "Clears the complexion",
+      "Acne",
       "Blotches and pimples"
     ]
-  }, 
-  "details": "A remedy for the skins, chronic catarrhal affections, secondary syphilis. Hepatic torpor, lassitude and other evidences of incomplete metamorphosis; stimulates all glands and improves nutrition.", 
+  },
+  "details": "A remedy for the skins, chronic catarrhal affections, secondary syphilis. Hepatic torpor, lassitude and other evidences of incomplete metamorphosis; stimulates all glands and improves nutrition.",
   "dosage": "Tincture in rather material doses."
 }

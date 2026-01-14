@@ -1,49 +1,55 @@
 {
-  "name": "Ustilago maydis", 
-  "Relationship": "Compare: SECALE; SABIN.; ZEA ITALICA. (Possess curative properties in skin diseases, particularly in psoriasis and eczema rubrum. Mania for bathing. Impulse to suicide, particularly by drowning. Easily angered. Appetite increased, voracious, alternating with disgust for food. Pyrosis, nausea, vomiting, better drinking wine.)", 
-  "Common names": "Corn-smut", 
+  "name": "Ustilago maydis",
+  "Relationship": "Compare: SECALE; SABIN.; ZEA ITALICA. (Possess curative properties in skin diseases, particularly in psoriasis and eczema rubrum. Mania for bathing. Impulse to suicide, particularly by drowning. Easily angered. Appetite increased, voracious, alternating with disgust for food. Pyrosis, nausea, vomiting, better drinking wine.)",
+  "Common names": "Corn-smut",
   "symptoms": {
     "Head": [
-      "Full feeling", 
-      "Nervous headache from menstrual irregularities", 
-      "Very depressed", 
+      "Full feeling",
+      "Nervous headache from menstrual irregularities",
+      "Very depressed",
       "Aching in eyeballs, with much lachrymation"
-    ], 
+    ],
     "Fever": [
-      "Abundant sweat", 
-      "Palpitations", 
+      "Abundant sweat",
+      "Palpitations",
       "Pulse at first accelerated then enfeebled"
-    ], 
+    ],
     "Female": [
-      "Oozing of dark blood, clotted, forming long black strings", 
-      "Profuse lochia", 
-      "Menorrhagia at climaxes", 
-      "Vicarious menstruation", 
-      "Ovaries burn, pain, swell", 
-      "Uterus hypertrophied", 
-      "Postpartum hemorrhage", 
-      "Cervix bleeds easily", 
-      "Profuse menses after miscarriage; discharge of blood from slightest provocation; bright red; partly clotted"
-    ], 
+      "Oozing of dark blood, clotted, forming long black strings",
+      "Profuse lochia",
+      "Menorrhagia at climaxes",
+      "Vicarious menstruation",
+      "Ovaries burn, pain, swell",
+      "Uterus hypertrophied",
+      "Postpartum hemorrhage",
+      "Cervix bleeds easily",
+      "Profuse menses after miscarriage",
+      "discharge of blood from slightest provocation",
+      "bright red",
+      "partly clotted"
+    ],
     "Skin": [
-      "Alopecia", 
-      "Psoriasis", 
-      "Tendency to small boils", 
-      "Skin dry; eczema; copper-colored spots", 
-      "Pruritus; sunburn"
-    ], 
+      "Alopecia",
+      "Psoriasis",
+      "Tendency to small boils",
+      "Skin dry",
+      "eczema",
+      "copper-colored spots",
+      "Pruritus",
+      "sunburn"
+    ],
     "Extremities": [
-      "Muscular contractions, especially of lower limbs", 
-      "Muscular debility, sensation of boiling water along the back", 
+      "Muscular contractions, especially of lower limbs",
+      "Muscular debility, sensation of boiling water along the back",
       "Clonic and tetanic movements"
-    ], 
+    ],
     "Male": [
-      "Uncontrollable masturbation", 
-      "Dull pain in lumbar region, with great despondency and mental irritability", 
-      "Spermatorrhoea, with erotic fancies and amorous dreams", 
+      "Uncontrollable masturbation",
+      "Dull pain in lumbar region, with great despondency and mental irritability",
+      "Spermatorrhoea, with erotic fancies and amorous dreams",
       "Emissions, with irresistible tendency to masturbation"
     ]
-  }, 
-  "details": "Flabby condition of uterus. Hemorrhage. Congestion to various parts, especially at climacteric. Crusta lactea. (VIOL TRICH.)", 
+  },
+  "details": "Flabby condition of uterus. Hemorrhage. Congestion to various parts, especially at climacteric. Crusta lactea. (VIOL TRICH.)",
   "dosage": "Tincture, to third potency."
 }

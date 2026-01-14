@@ -1,53 +1,63 @@
 {
-  "name": "Salicylicum acidum", 
-  "Relationship": "Compare: SALOL (rheumatic pain in joints, with soreness and stiffness, headache over eyes; urine violet-smelling; COLCH.; CHINA; LACT-AC. Spiraea and Gaultheria contain salicyl. acid.", 
-  "Common names": "Salicylic Acid", 
+  "name": "Salicylicum acidum",
+  "Relationship": "Compare: SALOL (rheumatic pain in joints, with soreness and stiffness, headache over eyes; urine violet-smelling; COLCH.; CHINA; LACT-AC. Spiraea and Gaultheria contain salicyl. acid.",
+  "Common names": "Salicylic Acid",
   "symptoms": {
     "Eyes": [
-      "Retinal hemorrhage", 
+      "Retinal hemorrhage",
       "Retinitis after influenza, also albuminuric"
-    ], 
+    ],
     "Stomach": [
-      "Fermentative dyspepsia", 
-      "Pruritus ani", 
-      "Putrid fermentation", 
-      "Tongue purplish, leaden-colored; foul breath", 
-      "Stools", 
-      "Putrid diarrhoea; gastrointestinal derangements, especially in children; stools like green frog's spawn", 
-      "Canker sores, with burning soreness and fetid breath", 
-      "Flatulence; hot, sour belching"
-    ], 
+      "Fermentative dyspepsia",
+      "Pruritus ani",
+      "Putrid fermentation",
+      "Tongue purplish, leaden-colored",
+      "foul breath",
+      "Stools",
+      "Putrid diarrhoea",
+      "gastrointestinal derangements, especially in children",
+      "stools like green frog's spawn",
+      "Canker sores, with burning soreness and fetid breath",
+      "Flatulence",
+      "hot, sour belching"
+    ],
     "Head": [
-      "Vertigo; tendency to fall to left side", 
-      "Incipient coryza", 
-      "Headache; confusion in head on rising suddenly", 
+      "Vertigo",
+      "tendency to fall to left side",
+      "Incipient coryza",
+      "Headache",
+      "confusion in head on rising suddenly",
       "Piercing pain in temples"
-    ], 
+    ],
     "Skin": [
-      "Itching vesicles and pustules; better by scratching", 
-      "Purpura", 
-      "Herpes zoster", 
-      "Hot and burning skin", 
-      "Necrosis and softening of bones", 
-      "Urticaria", 
+      "Itching vesicles and pustules",
+      "better by scratching",
+      "Purpura",
+      "Herpes zoster",
+      "Hot and burning skin",
+      "Necrosis and softening of bones",
+      "Urticaria",
       "Sweat without sleep"
-    ], 
+    ],
     "Throat": [
-      "Sore, red and swollen", 
-      "Pharyngitis; swallowing difficult"
-    ], 
+      "Sore, red and swollen",
+      "Pharyngitis",
+      "swallowing difficult"
+    ],
     "Extremities": [
-      "Sciatica, burning pain; worse at night", 
-      "Acute articular rheumatism; worse, touch and motion, profuse sweat", 
-      "Knees swollen and painful", 
-      "Pain shifts", 
+      "Sciatica, burning pain",
+      "worse at night",
+      "Acute articular rheumatism",
+      "worse, touch and motion, profuse sweat",
+      "Knees swollen and painful",
+      "Pain shifts",
       "Copious foot-sweat and ill effects where suppressed"
-    ], 
+    ],
     "Ears": [
-      "Roaring and ringing in ears", 
+      "Roaring and ringing in ears",
       "Deafness, with vertigo"
     ]
-  }, 
-  "details": "The symptoms point to its use in rheumatism, dyspepsia, and MENIERE'S DISEASE. Prostration after influenza; also tinnitus aurium and deafness. Hematuria.", 
+  },
+  "details": "The symptoms point to its use in rheumatism, dyspepsia, and MENIERE'S DISEASE. Prostration after influenza; also tinnitus aurium and deafness. Hematuria.",
   "dosage": "Third decimal trituration. In acute articular rheumatism, 5 grains very 3 hours. (Old school dose.)"
 }

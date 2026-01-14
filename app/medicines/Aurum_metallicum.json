@@ -1,132 +1,141 @@
 {
-  "name": "Aurum metallicum", 
-  "Relationship": "Compare: Aur. Ars. (Chronic aortitis, lupus, phthisis in syphilitic headaches; also in anaemia and chlorosis. It causes rapid increase of appetite. Aur-br. (in headaches with neurasthenia, megrim, night terrors, valvular diseases. Aur-mur. (Burning, yellow, acrid leucorrhoea; heart symptoms, glandular affection; warts on tongue and genitals; sclerotic and exudative degeneration of the nervous system. Multiple sclerosis. Morvan's disease. Second trituration. Aur. mur. is a sycotic remedy, causing suppressed discharges to. Valuable in climacteric Hemorrhages from the womb. Diseases of frontal sinus. Stitching pain in left side of forehead. Weariness, aversion to all work. Drawing feeling in stomach. Cancer, tongue as hard as leather; induration after glossitis.) Aur-m-k. Double chloride of Potassium and gold. (In uterine induration and hemorrhage.) Aur-i. (Chronic pericarditis, valvular diseases, arteriosclerosis, ozaena, lupus, osteitis, ovarian cysts, myomata uteri, are pathological lesions, that offer favorable ground for the action of this powerful drug. Senile paresis.) Aur-s. (Paralysis agitans; constant nodding of the head; affections of mammae; swelling pain, cracked nipples with lancinating pains.) Also, Asafetida. (in caries of bones of ears and nose). Syphilin: Kali-iod.; Hep.; Merc.; Mez.; Nit-ac.' Phosph. Antidotes: Bell.; Cinch.; Cupr; Merc.", 
+  "name": "Aurum metallicum",
+  "Relationship": "Compare: Aur. Ars. (Chronic aortitis, lupus, phthisis in syphilitic headaches; also in anaemia and chlorosis. It causes rapid increase of appetite. Aur-br. (in headaches with neurasthenia, megrim, night terrors, valvular diseases. Aur-mur. (Burning, yellow, acrid leucorrhoea; heart symptoms, glandular affection; warts on tongue and genitals; sclerotic and exudative degeneration of the nervous system. Multiple sclerosis. Morvan's disease. Second trituration. Aur. mur. is a sycotic remedy, causing suppressed discharges to. Valuable in climacteric Hemorrhages from the womb. Diseases of frontal sinus. Stitching pain in left side of forehead. Weariness, aversion to all work. Drawing feeling in stomach. Cancer, tongue as hard as leather; induration after glossitis.) Aur-m-k. Double chloride of Potassium and gold. (In uterine induration and hemorrhage.) Aur-i. (Chronic pericarditis, valvular diseases, arteriosclerosis, ozaena, lupus, osteitis, ovarian cysts, myomata uteri, are pathological lesions, that offer favorable ground for the action of this powerful drug. Senile paresis.) Aur-s. (Paralysis agitans; constant nodding of the head; affections of mammae; swelling pain, cracked nipples with lancinating pains.) Also, Asafetida. (in caries of bones of ears and nose). Syphilin: Kali-iod.; Hep.; Merc.; Mez.; Nit-ac.' Phosph. Antidotes: Bell.; Cinch.; Cupr; Merc.",
   "Modalities": [
     "Worse: in cold weather when getting cold"
-  ], 
-  "Common names": "Metallic Gold", 
+  ],
+  "Common names": "Metallic Gold",
   "symptoms": {
     "Urine": [
-      "Painful retention", 
+      "Painful retention",
       "Turbid, like buttermilk, with thick sediment"
-    ], 
+    ],
     "Head": [
-      "Roaring in head", 
-      "Vertigo", 
-      "Pain in bones extending to face", 
-      "Congestion to head", 
-      "Boils on scalp", 
-      "Tearing through brain to forehead", 
-      "Violent pain in head; worse at night, outward pressure"
-    ], 
+      "Roaring in head",
+      "Vertigo",
+      "Pain in bones extending to face",
+      "Congestion to head",
+      "Boils on scalp",
+      "Tearing through brain to forehead",
+      "Violent pain in head",
+      "worse at night, outward pressure"
+    ],
     "Stomach": [
-      "Swelling of epigastrium", 
-      "Burning at stomach and hot eructations", 
+      "Swelling of epigastrium",
+      "Burning at stomach and hot eructations",
       "Appetite and thirst increased, with qualmishness"
-    ], 
+    ],
     "Abdomen": [
-      "Swelling and suppuration of inguinal glands", 
-      "Incarcerated flatus", 
+      "Swelling and suppuration of inguinal glands",
+      "Incarcerated flatus",
       "Right hypochondrium hot and painful"
-    ], 
+    ],
     "Mouth": [
-      "Taste putrid or bitter", 
-      "Foul breath in girls at puberty", 
+      "Taste putrid or bitter",
+      "Foul breath in girls at puberty",
       "Ulceration of gums"
-    ], 
+    ],
     "Rectum": [
-      "Nocturnal diarrhoea, with burning in rectum", 
+      "Nocturnal diarrhoea, with burning in rectum",
       "Constipation, stools hard and knotty"
-    ], 
+    ],
     "Respiratory": [
-      "Frequent, deep breathing; stitches in sternum", 
+      "Frequent, deep breathing",
+      "stitches in sternum",
       "Dyspnoea at night"
-    ], 
+    ],
     "Eyes": [
-      "Double vision; upper half of objects invisible", 
-      "Great soreness all about the eyes and into eyeballs", 
-      "Sticking pains inward", 
-      "Trachoma with pannus", 
-      "Violent pains in bones around eye", 
-      "Sees fiery objects", 
-      "Extreme photophobia", 
-      "Vascular cornea", 
-      "Feel tense", 
-      "Intestinal keratitis", 
+      "Double vision",
+      "upper half of objects invisible",
+      "Great soreness all about the eyes and into eyeballs",
+      "Sticking pains inward",
+      "Trachoma with pannus",
+      "Violent pains in bones around eye",
+      "Sees fiery objects",
+      "Extreme photophobia",
+      "Vascular cornea",
+      "Feel tense",
+      "Intestinal keratitis",
       "Pains from without inward"
-    ], 
+    ],
     "Face": [
-      "Tearing in zygoma", 
+      "Tearing in zygoma",
       "Mastoid and other facial bones inflamed"
-    ], 
+    ],
     "Bones": [
-      "Soreness of affected bones, better in open air, worse at night", 
-      "Destruction of bones, like secondary syphilis", 
-      "Caries of nasal, palatine and mastoid bones", 
+      "Soreness of affected bones, better in open air, worse at night",
+      "Destruction of bones, like secondary syphilis",
+      "Caries of nasal, palatine and mastoid bones",
       "Pain in bones of head, lumps under scalp, exostosis with nightly pains in bones"
-    ], 
+    ],
     "Nose": [
-      "Ulcerated, painful, swollen, obstructed", 
-      "Horrible odor from nose and mouth", 
-      "Inflammation of nose; caries; fetid discharge, purulent, bloody", 
-      "Boring pains in nose, worse at night", 
-      "Sensitive smell", 
-      "Putrid smell from nose", 
+      "Ulcerated, painful, swollen, obstructed",
+      "Horrible odor from nose and mouth",
+      "Inflammation of nose",
+      "caries",
+      "fetid discharge, purulent, bloody",
+      "Boring pains in nose, worse at night",
+      "Sensitive smell",
+      "Putrid smell from nose",
       "Knobby tip of nose"
-    ], 
+    ],
     "Male": [
-      "Atrophy of testicles in boys", 
-      "Violent erections", 
-      "Pain and swelling of testicles", 
-      "Hydrocele", 
+      "Atrophy of testicles in boys",
+      "Violent erections",
+      "Pain and swelling of testicles",
+      "Hydrocele",
       "Chronic induration of testicles"
-    ], 
+    ],
     "Ears": [
-      "Caries of ossicula and of mastoid", 
-      "Obstinate fetid otorrhea after scarlatina", 
-      "External meatus bathed in pus", 
-      "Chronic nerve deafness; labyrinthine disease due to syphilis"
-    ], 
+      "Caries of ossicula and of mastoid",
+      "Obstinate fetid otorrhea after scarlatina",
+      "External meatus bathed in pus",
+      "Chronic nerve deafness",
+      "labyrinthine disease due to syphilis"
+    ],
     "Heart": [
-      "Palpitation", 
-      "Hypertrophy", 
-      "High blood pressure - valvular lesions of arteriosclerotic nature", 
-      "Sensation as if heart stopped beating for two or three seconds, immediately followed by tumultuous rebound, with sinking at the epigastrium", 
+      "Palpitation",
+      "Hypertrophy",
+      "High blood pressure - valvular lesions of arteriosclerotic nature",
+      "Sensation as if heart stopped beating for two or three seconds, immediately followed by tumultuous rebound, with sinking at the epigastrium",
       "Pulse rapid, feeble, irregular"
-    ], 
+    ],
     "Mind": [
-      "Talks of committing suicide", 
-      "Mental derangements", 
-      "Feeling of self-condemnation and utter worthlessness", 
-      "Cannot do things fast enough", 
-      "Profound despondency, with increased blood pressure, with thorough disgust of life, and thoughts of suicide", 
-      "Peevish and vehement at least contradiction", 
-      "Constant rapid questioning without waiting for reply", 
-      "Anthropophobia", 
-      "Over-sensitiveness;  to noise, excitement, confusion", 
+      "Talks of committing suicide",
+      "Mental derangements",
+      "Feeling of self-condemnation and utter worthlessness",
+      "Cannot do things fast enough",
+      "Profound despondency, with increased blood pressure, with thorough disgust of life, and thoughts of suicide",
+      "Peevish and vehement at least contradiction",
+      "Constant rapid questioning without waiting for reply",
+      "Anthropophobia",
+      "Over-sensitiveness",
+      "to noise, excitement, confusion",
       "Great fear of death"
-    ], 
+    ],
     "Sleep": [
-      "Sobs aloud in sleep", 
-      "Sleepless", 
+      "Sobs aloud in sleep",
+      "Sleepless",
       "Frightful dreams"
-    ], 
+    ],
     "Female": [
-      "Great sensitiveness of vagina", 
-      "Sterility; vaginismus", 
+      "Great sensitiveness of vagina",
+      "Sterility",
+      "vaginismus",
       "Uterus enlarged and prolapsed"
-    ], 
+    ],
     "Throat": [
-      "Caries of the palate", 
-      "Stitches when swallowing; pain in glands"
-    ], 
+      "Caries of the palate",
+      "Stitches when swallowing",
+      "pain in glands"
+    ],
     "Extremities": [
-      "Knees weak", 
-      "All the blood seems to rush from head to lower limbs", 
-      "Paralytic, tearing pains in joints", 
-      "Orgasm, as if blood were boiling in all veins", 
+      "Knees weak",
+      "All the blood seems to rush from head to lower limbs",
+      "Paralytic, tearing pains in joints",
+      "Orgasm, as if blood were boiling in all veins",
       "Dropsy of lower limbs"
     ]
-  }, 
+  },
   "details": "Given full play, Aurum develops in the organism, by attacking the blood, glands, and bone, conditions bearing striking resemblance to mercurial and syphilitic infections; and it is just for such deteriorations of the bodily fluids and alterations in the tissues, that Aurum assumes great importance as a remedy. Like the victim of syphilis, mental states of great depression are produced by it. Hopeless, despondent, and GREAT DESIRE TO COMMIT SUICIDE. Every opportunity is sought for self-destruction. Exostosis, caries, nightly bone-pains, especially cranial, nasal, and palatine. Glands swollen in scrofulous subjects. Palpitation and congestions. Ascites often in conjunction with heart affections. Frequently indicated in secondary syphilis and effects of mercury. This use of gold as an anti-venereal and anti-scrofulous remedy is very old, but has been well-nigh forgotten by the old school until rediscovered and placed on its scientific basis by homeopathy, and now it can never be lost again. When syphilis is implanted on the scrofulous constitution, we have one of the most intractable morbid conditions, and gold seems to be especially suited to the vile combination. ENNUI. Ozaena; sexual hyperaesthesia. ARTERIOSCLEROSIS, high blood pressure; nightly paroxysms of pain behind sternum. Sclerosis of liver, arterial system, brain. Pining boys; low spirited, lifeless, weak memory."
 }

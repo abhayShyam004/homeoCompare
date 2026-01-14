@@ -1,101 +1,111 @@
 {
-  "name": "Hydrastis", 
-  "Relationship": "Antidote: SULPH. Useful after too much Chlorate of Potash for sore throat. Compare: XANTHORRHIZA APIFOLIA; KALI-BICH.; CONIUM; ARS. IOD.; PHYTOL.; GALIUM (cancer - nodulated tumor of the tongue); ASTERIAS; STANN.; PULS. Also MANZANITA (diarrhoea, gonorrhea, gleet, leucorrhoea, catarrhal conditions). HYDRASTINUM MURIATICUM - Muriate of Hydrastis. (Locally, in aphthous sore mouth, ulcers, ulcerated sore throat, ozaena, etc. Internally, third Dec. trit. Is a uterine hemostatic and vasoconstrictor; metrorrhagia, especially from fibroid tumors; hemorrhages, IN DILATATION OF THE STOMACH, and chronic digestive disorders). HYDRASTIN SULPH 1x (hemorrhage of bowels in typhoid). MARRUBIUM - Hoar hound - (a stimulant to mucous membranes, especially laryngeal and bronchial; chronic bronchitis, dyspepsia, and hepatic disorders; colds and coughs).", 
-  "Common names": "Golden Seal", 
+  "name": "Hydrastis",
+  "Relationship": "Antidote: SULPH. Useful after too much Chlorate of Potash for sore throat. Compare: XANTHORRHIZA APIFOLIA; KALI-BICH.; CONIUM; ARS. IOD.; PHYTOL.; GALIUM (cancer - nodulated tumor of the tongue); ASTERIAS; STANN.; PULS. Also MANZANITA (diarrhoea, gonorrhea, gleet, leucorrhoea, catarrhal conditions). HYDRASTINUM MURIATICUM - Muriate of Hydrastis. (Locally, in aphthous sore mouth, ulcers, ulcerated sore throat, ozaena, etc. Internally, third Dec. trit. Is a uterine hemostatic and vasoconstrictor; metrorrhagia, especially from fibroid tumors; hemorrhages, IN DILATATION OF THE STOMACH, and chronic digestive disorders). HYDRASTIN SULPH 1x (hemorrhage of bowels in typhoid). MARRUBIUM - Hoar hound - (a stimulant to mucous membranes, especially laryngeal and bronchial; chronic bronchitis, dyspepsia, and hepatic disorders; colds and coughs).",
+  "Common names": "Golden Seal",
   "symptoms": {
     "Head": [
-      "Dull, pressing frontal pain, especially connected with constipation", 
-      "Eczema on forehead along line of hair", 
-      "Myalgic pain in scalp and muscles of neck", 
+      "Dull, pressing frontal pain, especially connected with constipation",
+      "Eczema on forehead along line of hair",
+      "Myalgic pain in scalp and muscles of neck",
       "Sinusitis, after coryza"
-    ], 
+    ],
     "Respiratory": [
-      "Bronchitis in old, exhausted persons, with thick, yellow, tenacious expectoration", 
-      "Chest raw, sore, burning", 
-      "Bronchial catarrh, later stages", 
-      "Pain from chest to left shoulder", 
-      "Frequent fainting spells, with cold sweat all over", 
-      "Feels suffocating when lying on left side", 
+      "Bronchitis in old, exhausted persons, with thick, yellow, tenacious expectoration",
+      "Chest raw, sore, burning",
+      "Bronchial catarrh, later stages",
+      "Pain from chest to left shoulder",
+      "Frequent fainting spells, with cold sweat all over",
+      "Feels suffocating when lying on left side",
       "Dry, harsh cough"
-    ], 
+    ],
     "Stomach": [
-      "Pain as from a hard-cornered substance", 
-      "Atonic dyspepsia", 
-      "Gastritis", 
-      "Pulsation in epigastrium", 
-      "Gone feeling", 
-      "Sore feeling in stomach more or less constant", 
-      "Ulcers and cancer", 
-      "Weak digestion", 
-      "Cannot eat bread or vegetables", 
+      "Pain as from a hard-cornered substance",
+      "Atonic dyspepsia",
+      "Gastritis",
+      "Pulsation in epigastrium",
+      "Gone feeling",
+      "Sore feeling in stomach more or less constant",
+      "Ulcers and cancer",
+      "Weak digestion",
+      "Cannot eat bread or vegetables",
       "Bitter taste"
-    ], 
+    ],
     "Urine": [
-      "Gleety discharge", 
+      "Gleety discharge",
       "Urine smells decomposed"
-    ], 
+    ],
     "Mind": [
-      "Depressed; sure of death, and desires it"
-    ], 
+      "Depressed",
+      "sure of death, and desires it"
+    ],
     "Back": [
       "Dull, heavy, dragging pain and stiffness, particularly across lumbar region, must use arms in raising himself from seat"
-    ], 
+    ],
     "Mouth": [
-      "Peppery taste", 
-      "Tongue white, swollen, large, flabby, slimy; shows imprint of teeth ; as if scalded; stomatitis", 
+      "Peppery taste",
+      "Tongue white, swollen, large, flabby, slimy",
+      "shows imprint of teeth",
+      "as if scalded",
+      "stomatitis",
       "Ulceration of tongue, fissures toward the edges"
-    ], 
+    ],
     "Nose": [
-      "Watery, excoriating discharge", 
-      "Tends to blow nose all the time", 
-      "Thick, tenacious secretion from posterior nares to throat", 
+      "Watery, excoriating discharge",
+      "Tends to blow nose all the time",
+      "Thick, tenacious secretion from posterior nares to throat",
       "Ozaena, with ulceration of septum"
-    ], 
+    ],
     "Female": [
-      "Tumor of breast; nipple retracted", 
-      "Erosion and excoriation of cervix", 
-      "Menorrhagia", 
-      "Pruritus vulvae, with profuse leucorrhoea", 
-      "Leucorrhoea, worse after menses ; acrid and corroding, shreddy, tenacious", 
+      "Tumor of breast",
+      "nipple retracted",
+      "Erosion and excoriation of cervix",
+      "Menorrhagia",
+      "Pruritus vulvae, with profuse leucorrhoea",
+      "Leucorrhoea, worse after menses",
+      "acrid and corroding, shreddy, tenacious",
       "Sexual excitement"
-    ], 
+    ],
     "Skin": [
-      "Eruption like variola", 
-      "General tendency to profuse perspiration and unhealthy skin", 
-      "Lupus; ulcers, cancerous formations"
-    ], 
+      "Eruption like variola",
+      "General tendency to profuse perspiration and unhealthy skin",
+      "Lupus",
+      "ulcers, cancerous formations"
+    ],
     "Throat": [
-      "Goitre of puberty and pregnancy", 
-      "Raw, smarting, excoriating sensation", 
-      "Follicular pharyngitis", 
-      "Hawking of yellow, tenacious mucus", 
+      "Goitre of puberty and pregnancy",
+      "Raw, smarting, excoriating sensation",
+      "Follicular pharyngitis",
+      "Hawking of yellow, tenacious mucus",
       "Child is aroused suddenly from sleep by this tenacious post-nasal dropping"
-    ], 
+    ],
     "Abdomen": [
-      "Liver torpid, tender", 
-      "Gallstones", 
-      "Jaundice", 
-      "Dull dragging in right groin with cutting sensation into right testicle", 
+      "Liver torpid, tender",
+      "Gallstones",
+      "Jaundice",
+      "Dull dragging in right groin with cutting sensation into right testicle",
       "Gastroduodenal catarrh"
-    ], 
+    ],
     "Rectum": [
-      "After stool, long-lasting pain", 
-      "Contraction and spasm", 
-      "During stool, smarting pain in rectum", 
-      "Hemorrhoids; even a light flow exhausts", 
-      "Prolapsed; anus fissured", 
+      "After stool, long-lasting pain",
+      "Contraction and spasm",
+      "During stool, smarting pain in rectum",
+      "Hemorrhoids",
+      "even a light flow exhausts",
+      "Prolapsed",
+      "anus fissured",
       "Constipation, with sinking feeling in stomach, and dull headache"
-    ], 
+    ],
     "Male": [
-      "Gonorrhea, second stage; discharge thick and yellow"
-    ], 
+      "Gonorrhea, second stage",
+      "discharge thick and yellow"
+    ],
     "Ears": [
-      "Deafness", 
-      "Roaring", 
-      "Eustachian catarrh, with high-pitched voice", 
+      "Deafness",
+      "Roaring",
+      "Eustachian catarrh, with high-pitched voice",
       "Mucopurulent discharge"
     ]
-  }, 
-  "details": "Acts especially on mucous membranes, relaxing them and producing a THICK, YELLOWISH, ROPY secretion. The catarrh may be anywhere, - throat, stomach, uterus, urethra, - it is always characterized by this peculiar mucous discharge. Hydrastis is especially active in old, easily-tired people, cachectic individuals, with great debility. Cerebral effects prominent, feels his wits sharpened, head cleared, facile expression. Weak muscular power, poor digestion and obstinate constipation. Lumbago. Emaciation and prostration. Its action on the liver is marked. Cancer and cancerous state, before ulceration, when pain in principal symptom. GOITRE of puberty and pregnancy. SMALLPOX internally and locally. The power of Hydrastis over smallpox seen in modifying the disease, abolishing its distressing symptoms, shortening its course, lessening its danger and greatly mitigating its consequences. (J.J. Garth Wilkinson.)", 
+  },
+  "details": "Acts especially on mucous membranes, relaxing them and producing a THICK, YELLOWISH, ROPY secretion. The catarrh may be anywhere, - throat, stomach, uterus, urethra, - it is always characterized by this peculiar mucous discharge. Hydrastis is especially active in old, easily-tired people, cachectic individuals, with great debility. Cerebral effects prominent, feels his wits sharpened, head cleared, facile expression. Weak muscular power, poor digestion and obstinate constipation. Lumbago. Emaciation and prostration. Its action on the liver is marked. Cancer and cancerous state, before ulceration, when pain in principal symptom. GOITRE of puberty and pregnancy. SMALLPOX internally and locally. The power of Hydrastis over smallpox seen in modifying the disease, abolishing its distressing symptoms, shortening its course, lessening its danger and greatly mitigating its consequences. (J.J. Garth Wilkinson.)",
   "dosage": "Tincture, to thirtieth attenuation. Locally colorless Hydrastis, mother tincture, or fluid extract."
 }

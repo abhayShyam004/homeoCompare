@@ -1,60 +1,66 @@
 {
-  "name": "Sanicula aqua", 
-  "Relationship": "Compare: ABROT.; ALUM.; CALC.; SIL.; SULPH. Sanicula Aqua must not be confounded with the Sanicle (pool-root or wood marsh), also called SANICULA. This is used in various nervous affections, resembling Valeriana. It is used as a vulnerary, resolvent for sanguineous extravasations, and as an astringent. Has not been proved.)", 
+  "name": "Sanicula aqua",
+  "Relationship": "Compare: ABROT.; ALUM.; CALC.; SIL.; SULPH. Sanicula Aqua must not be confounded with the Sanicle (pool-root or wood marsh), also called SANICULA. This is used in various nervous affections, resembling Valeriana. It is used as a vulnerary, resolvent for sanguineous extravasations, and as an astringent. Has not been proved.)",
   "Modalities": [
     "Worse: moving arms backward"
-  ], 
-  "Common names": "The Water of Sanicula Springs, Ottawa, Ill.", 
+  ],
+  "Common names": "The Water of Sanicula Springs, Ottawa, Ill.",
   "symptoms": {
     "Head": [
-      "Photophobia", 
-      "Dread of downward motion", 
-      "Soreness behind ears", 
-      "Lachrymation in cold air or from cold application", 
-      "Profuse scaly dandruff", 
+      "Photophobia",
+      "Dread of downward motion",
+      "Soreness behind ears",
+      "Lachrymation in cold air or from cold application",
+      "Profuse scaly dandruff",
       "Profuse sweat on occiput and in nape of neck, during sleep"
-    ], 
+    ],
     "Stomach": [
-      "Nausea and vomiting from car-riding", 
-      "Thirst; drink little and often", 
+      "Nausea and vomiting from car-riding",
+      "Thirst",
+      "drink little and often",
       "Is vomited as soon as it reaches the stomach"
-    ], 
+    ],
     "Rectum": [
-      "Excoriation of skin about anus, perineum, and genitals", 
-      "Diarrhoea; changeable in character and color; after eating", 
-      "Stools large, heavy and painful", 
-      "Very offensive odor", 
-      "No desire until a large accumulation", 
-      "Pain in whole perineum", 
-      "After great straining only partially expelled; recedes, crumbles at verge of anus"
-    ], 
+      "Excoriation of skin about anus, perineum, and genitals",
+      "Diarrhoea",
+      "changeable in character and color",
+      "after eating",
+      "Stools large, heavy and painful",
+      "Very offensive odor",
+      "No desire until a large accumulation",
+      "Pain in whole perineum",
+      "After great straining only partially expelled",
+      "recedes, crumbles at verge of anus"
+    ],
     "Back": [
       "Dislocated feeling in sacrum and better lying on right side"
-    ], 
+    ],
     "Mouth": [
-      "Ringworm on tongue", 
-      "Tongue large, flabby, burning; must protrude it to keep cool"
-    ], 
+      "Ringworm on tongue",
+      "Tongue large, flabby, burning",
+      "must protrude it to keep cool"
+    ],
     "Female": [
-      "Vagina feels large", 
-      "Soreness of uterus", 
-      "Leucorrhoea with odor of fish-brine or old cheese", 
-      "Bearing-down, as if contents of pelvis would escape; better, rest", 
+      "Vagina feels large",
+      "Soreness of uterus",
+      "Leucorrhoea with odor of fish-brine or old cheese",
+      "Bearing-down, as if contents of pelvis would escape",
+      "better, rest",
       "Desire to support parts"
-    ], 
+    ],
     "Skin": [
-      "Dirty, greasy, brownish, wrinkled", 
+      "Dirty, greasy, brownish, wrinkled",
       "Eczema, fissured hands and fingers"
-    ], 
+    ],
     "Throat": [
       "Thick, ropy, tenacious mucus"
-    ], 
+    ],
     "Extremities": [
-      "Offensive foot-sweat", 
-      "Cold, clammy sweat of extremities", 
+      "Offensive foot-sweat",
+      "Cold, clammy sweat of extremities",
       "Burning of soles of feet"
     ]
-  }, 
-  "details": "Has been found a useful remedy in enuresis, seasickness, constipation, etc. Rickets.", 
+  },
+  "details": "Has been found a useful remedy in enuresis, seasickness, constipation, etc. Rickets.",
   "dosage": "Thirtieth potency."
 }

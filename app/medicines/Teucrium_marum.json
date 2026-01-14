@@ -1,55 +1,60 @@
 {
-  "name": "Teucrium marum", 
-  "Relationship": "Compare: TEUCRIUM SCORODONIA - Wood-sage (in tuberculosis with mucopurulent expectoration; dropsy; orchitis and TUBERCULOUS EPIDIDYMITIS; ESPECIALLY in young, thin individuals with tuberculosis of lungs, glands; bones and uro-genitals, 3X). CINA; IGNAT.; SANG.; SIL.", 
-  "Common names": "Cat-thyme", 
+  "name": "Teucrium marum",
+  "Relationship": "Compare: TEUCRIUM SCORODONIA - Wood-sage (in tuberculosis with mucopurulent expectoration; dropsy; orchitis and TUBERCULOUS EPIDIDYMITIS; ESPECIALLY in young, thin individuals with tuberculosis of lungs, glands; bones and uro-genitals, 3X). CINA; IGNAT.; SANG.; SIL.",
+  "Common names": "Cat-thyme",
   "symptoms": {
     "Extremities": [
-      "Pain in toe-nails, as if they had grown into flesh", 
-      "Tearing pains in arms and legs", 
+      "Pain in toe-nails, as if they had grown into flesh",
+      "Tearing pains in arms and legs",
       "Affection of finger-tips and joints of toes"
-    ], 
+    ],
     "Eyes": [
-      "Smarting in canthi; lids red and puffy; tarsal tumor"
-    ], 
+      "Smarting in canthi",
+      "lids red and puffy",
+      "tarsal tumor"
+    ],
     "Respiratory": [
-      "Dry cough, tickling in trachea; mouldy taste in throat when hawking up mucus, expectoration profuse"
-    ], 
+      "Dry cough, tickling in trachea",
+      "mouldy taste in throat when hawking up mucus, expectoration profuse"
+    ],
     "Stomach": [
-      "Unnatural appetite", 
-      "Vomiting of large quantities of dark-green masses", 
-      "Hiccough on eating, after nursing", 
+      "Unnatural appetite",
+      "Vomiting of large quantities of dark-green masses",
+      "Hiccough on eating, after nursing",
       "Constant hiccough, attended with pain in back"
-    ], 
+    ],
     "Head": [
-      "Excited, tremulous feeling", 
-      "Strengthens brain after delirium tremens", 
-      "Frontal pain; worse, stooping"
-    ], 
+      "Excited, tremulous feeling",
+      "Strengthens brain after delirium tremens",
+      "Frontal pain",
+      "worse, stooping"
+    ],
     "Sleep": [
       "Restless, with twitching, choking, and starting up frightened"
-    ], 
+    ],
     "Nose": [
-      "Chronic catarrh; discharge of large, irregular clinkers", 
-      "Coryza, with stoppage of nostrils", 
-      "Catarrhal condition of both anterior and posterior nostrils", 
-      "Crawling in nostrils, with lachrymation and sneezing", 
-      "Mucous polypus", 
+      "Chronic catarrh",
+      "discharge of large, irregular clinkers",
+      "Coryza, with stoppage of nostrils",
+      "Catarrhal condition of both anterior and posterior nostrils",
+      "Crawling in nostrils, with lachrymation and sneezing",
+      "Mucous polypus",
       "Foul breath"
-    ], 
+    ],
     "Skin": [
-      "Suppurating grooves in the nails", 
-      "Very dry skin", 
+      "Suppurating grooves in the nails",
+      "Very dry skin",
       "Itching causes tossing about all night"
-    ], 
+    ],
     "Rectum": [
-      "Ascarides, with nightly restlessness", 
-      "Crawling in the rectum after stool", 
+      "Ascarides, with nightly restlessness",
+      "Crawling in the rectum after stool",
       "Itching of anus, and constant irritation in the evening in bed"
-    ], 
+    ],
     "Ears": [
       "Hissing and ringing otalgia"
     ]
-  }, 
-  "details": "Nasal and rectal symptoms marked. POLYPI. Affections of children. Suitable after too much medicine has been taken. Over-sensitiveness. DESIRE TO STRETCH. A remedy of first importance in chronic nasal catarrh with atrophy; large, offensive crusts and clinkers. OZAENA. LOSS OF SENSE OF SMELL.", 
+  },
+  "details": "Nasal and rectal symptoms marked. POLYPI. Affections of children. Suitable after too much medicine has been taken. Over-sensitiveness. DESIRE TO STRETCH. A remedy of first importance in chronic nasal catarrh with atrophy; large, offensive crusts and clinkers. OZAENA. LOSS OF SENSE OF SMELL.",
   "dosage": "First to sixth potency. Locally for polypi, dry powder."
 }

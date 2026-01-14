@@ -1,85 +1,94 @@
 {
-  "name": "Calcarea phosphorica", 
-  "Relationship": "Complementary: Ruta.; Hepar. Compare: Calcar. hypophosporosa (is to be preferred when it seems necessary to furnish the organism with liberal doses of phosphorus in consequence of continued abscesses having reduced the vitality Give first and second decimal trit. Loss of appetite, rapid debility, night sweats; Acne pustulosa. Pallor of skin, habitually COLD EXTREMITIES. Phthisis - diarrhoea and cough; acute pains in chest. Mesenteric tuberculosis. Bleeding from lungs; angina pectoris; asthma; affection of arteries. Veins stand out like whipcords. Attacks of pain occurring two hours after meals (relieved by a cup of milk or light food). Cheiranthus (effects of cutting wisdom teeth). Calcarea renalis - Lapis renalis - (arthritic nodosities. Riggs disease; lessens tendency to accumulation of tartar on teeth; gravel and renal calculi). Conchiolin. Mater perlarum. Mother of pearl (Osteitis. Has a wide range of action in bone affections, especially when the growing ends are affected. Petechiae). Silica; Psorin.; Sulph.", 
+  "name": "Calcarea phosphorica",
+  "Relationship": "Complementary: Ruta.; Hepar. Compare: Calcar. hypophosporosa (is to be preferred when it seems necessary to furnish the organism with liberal doses of phosphorus in consequence of continued abscesses having reduced the vitality Give first and second decimal trit. Loss of appetite, rapid debility, night sweats; Acne pustulosa. Pallor of skin, habitually COLD EXTREMITIES. Phthisis - diarrhoea and cough; acute pains in chest. Mesenteric tuberculosis. Bleeding from lungs; angina pectoris; asthma; affection of arteries. Veins stand out like whipcords. Attacks of pain occurring two hours after meals (relieved by a cup of milk or light food). Cheiranthus (effects of cutting wisdom teeth). Calcarea renalis - Lapis renalis - (arthritic nodosities. Riggs disease; lessens tendency to accumulation of tartar on teeth; gravel and renal calculi). Conchiolin. Mater perlarum. Mother of pearl (Osteitis. Has a wide range of action in bone affections, especially when the growing ends are affected. Petechiae). Silica; Psorin.; Sulph.",
   "Modalities": [
-    "Worse: exposure to damp", 
-    "Worse: cold weather", 
+    "Worse: exposure to damp",
+    "Worse: cold weather",
     "Worse: melting snow"
-  ], 
-  "Common names": "Phosphate of Lime", 
+  ],
+  "Common names": "Phosphate of Lime",
   "symptoms": {
     "Eyes": [
       "Diffused opacity in cornea following abscess"
-    ], 
+    ],
     "Respiratory": [
-      "Pain through lower left lung", 
-      "Suffocative cough; better lying down", 
-      "Hoarseness", 
-      "Chest sore", 
+      "Pain through lower left lung",
+      "Suffocative cough",
+      "better lying down",
+      "Hoarseness",
+      "Chest sore",
       "Involuntary sighing"
-    ], 
+    ],
     "Stomach": [
-      "Craving for bacon, ham, salted or smoked meats", 
-      "Easy vomiting in children", 
-      "Heartburn", 
-      "Much flatulence", 
-      "Great hunger with thirst, flatulence temporarily relieved by sour eructations", 
+      "Craving for bacon, ham, salted or smoked meats",
+      "Easy vomiting in children",
+      "Heartburn",
+      "Much flatulence",
+      "Great hunger with thirst, flatulence temporarily relieved by sour eructations",
       "Infant wants to nurse all the time and vomits easily"
-    ], 
+    ],
     "Urine": [
-      "Increased, with sensation of weakness", 
+      "Increased, with sensation of weakness",
       "Pain in region of kidneys when lifting or blowing the nose"
-    ], 
+    ],
     "Head": [
-      "Fontanelles remain open too long", 
-      "Cranial bones soft and thin", 
-      "Headache, with abdominal flatulence", 
-      "Defective hearing", 
-      "Head hot, with smarting of roots of hair", 
+      "Fontanelles remain open too long",
+      "Cranial bones soft and thin",
+      "Headache, with abdominal flatulence",
+      "Defective hearing",
+      "Head hot, with smarting of roots of hair",
       "Headache, worse near the region of sutures, from change of weather, of school children about puberty"
-    ], 
+    ],
     "Mind": [
-      "Peevish, forgetful; after grief and vexation", 
+      "Peevish, forgetful",
+      "after grief and vexation",
       "Always wants to go somewhere"
-    ], 
+    ],
     "Stool": [
-      "Fistula in anus, alternating with chest symptoms", 
-      "Diarrhoea from juicy fruits or cider; during dentition", 
-      "Bleeding after hard stool", 
+      "Fistula in anus, alternating with chest symptoms",
+      "Diarrhoea from juicy fruits or cider",
+      "during dentition",
+      "Bleeding after hard stool",
       "Green, slimy, hot, sputtering, undigested, with fetid flatus"
-    ], 
+    ],
     "Extremities": [
-      "Weary when going upstairs", 
-      "Stiffness and pain, with cold, numb feeling, worse any change of weather", 
-      "Buttocks, back and limbs asleep", 
-      "Pains in joints and bones", 
+      "Weary when going upstairs",
+      "Stiffness and pain, with cold, numb feeling, worse any change of weather",
+      "Buttocks, back and limbs asleep",
+      "Pains in joints and bones",
       "Crawling and coldness"
-    ], 
+    ],
     "Female": [
-      "Menses too early, excessive and bright in girls", 
-      "Child refuses breast; milk tastes salty", 
-      "After prolonged nursing", 
-      "Nymphomania, with aching, pressing, or weakness in uterine region", 
-      "If late, blood is dark; sometimes, first bright, then dark, with violent backache", 
-      "During lactation, with sexual excitement", 
-      "Prolapsus in debilitated persons", 
-      "Leucorrhoea, like white of egg; worse in morning"
-    ], 
+      "Menses too early, excessive and bright in girls",
+      "Child refuses breast",
+      "milk tastes salty",
+      "After prolonged nursing",
+      "Nymphomania, with aching, pressing, or weakness in uterine region",
+      "If late, blood is dark",
+      "sometimes, first bright, then dark, with violent backache",
+      "During lactation, with sexual excitement",
+      "Prolapsus in debilitated persons",
+      "Leucorrhoea, like white of egg",
+      "worse in morning"
+    ],
     "Abdomen": [
-      "At every attempt to eat, colicky pain in abdomen", 
-      "Sunken and flabby", 
+      "At every attempt to eat, colicky pain in abdomen",
+      "Sunken and flabby",
       "Colic, soreness and burning around navel"
-    ], 
+    ],
     "Neck and Back": [
-      "Rheumatic pain from draft of air, with stiffness and dullness of head", 
+      "Rheumatic pain from draft of air, with stiffness and dullness of head",
       "Soreness in sacroiliac symphysis, as if broken"
-    ], 
+    ],
     "Mouth": [
-      "Adenoid growths", 
-      "Swollen tonsils; cannot open mouth without pain", 
-      "Complaints during teething; teeth develop slowly; rapid decay of teeth"
+      "Adenoid growths",
+      "Swollen tonsils",
+      "cannot open mouth without pain",
+      "Complaints during teething",
+      "teeth develop slowly",
+      "rapid decay of teeth"
     ]
-  }, 
-  "details": "One of the most important tissue remedies, and while it has many symptoms in common with CALCAREA CARB., there are some differences and characteristic features of its own. It is especially indicated in tardy dentition and troubles incident to that period, bone disease, non-union of fractured bones, and the anemias after acute diseases and chronic wasting diseases. ANAEMIC CHILDREN WHO ARE PEEVISH, FLABBY, HAVE COLD EXTREMITIES AND FEEBLE DIGESTION. It has a special affinity where bones form sutures or symphyses, and all its symptoms are worse from any change of weather. NUMBNESS AND CRAWLING are characteristic sensations, and tendency to perspiration and glandular enlargement are symptoms it shares with the carbonate. Scrofulosis, chlorosis and phthisis.", 
+  },
+  "details": "One of the most important tissue remedies, and while it has many symptoms in common with CALCAREA CARB., there are some differences and characteristic features of its own. It is especially indicated in tardy dentition and troubles incident to that period, bone disease, non-union of fractured bones, and the anemias after acute diseases and chronic wasting diseases. ANAEMIC CHILDREN WHO ARE PEEVISH, FLABBY, HAVE COLD EXTREMITIES AND FEEBLE DIGESTION. It has a special affinity where bones form sutures or symphyses, and all its symptoms are worse from any change of weather. NUMBNESS AND CRAWLING are characteristic sensations, and tendency to perspiration and glandular enlargement are symptoms it shares with the carbonate. Scrofulosis, chlorosis and phthisis.",
   "dosage": "First to third trituration. Higher potencies often more effective."
 }

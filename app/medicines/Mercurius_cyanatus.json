@@ -1,51 +1,57 @@
 {
   "symptoms": {
     "Head": [
-      "Great excitement, fits of passion; fury; talkativeness", 
-      "Atrocious headache", 
-      "Eyes sunken; face pale"
-    ], 
+      "Great excitement, fits of passion",
+      "fury",
+      "talkativeness",
+      "Atrocious headache",
+      "Eyes sunken",
+      "face pale"
+    ],
     "Stomach": [
-      "Nausea, vomiting, bilious, bloody; hiccough; abdomen painful, tender to pressure"
-    ], 
+      "Nausea, vomiting, bilious, bloody",
+      "hiccough",
+      "abdomen painful, tender to pressure"
+    ],
     "Urine": [
-      "Amber color, painful, albuminous, scanty", 
-      "Suppression of urine", 
+      "Amber color, painful, albuminous, scanty",
+      "Suppression of urine",
       "Nephritis with great debility and chilliness"
-    ], 
+    ],
     "Mouth": [
-      "Astringent taste", 
-      "Free salivation", 
-      "Fetor of breath", 
-      "Tongue pale", 
-      "Ulcerations of mouth have a gray membrane", 
-      "Covered with ulceration", 
+      "Astringent taste",
+      "Free salivation",
+      "Fetor of breath",
+      "Tongue pale",
+      "Ulcerations of mouth have a gray membrane",
+      "Covered with ulceration",
       "Pain and swelling of salivary glands"
-    ], 
+    ],
     "Skin": [
       "Moisture, with icy coldness"
-    ], 
+    ],
     "Throat": [
-      "Dark blood from nose", 
-      "Diphtheria of the larynx and nose", 
-      "Swallowing very difficult", 
-      "Looks raw in spots, especially in public speakers", 
-      "Feels raw and sore", 
-      "Mucous membranes broken down, ulcerated", 
-      "Hoarseness, and talking is painful", 
-      "Intense redness of fauces", 
+      "Dark blood from nose",
+      "Diphtheria of the larynx and nose",
+      "Swallowing very difficult",
+      "Looks raw in spots, especially in public speakers",
+      "Feels raw and sore",
+      "Mucous membranes broken down, ulcerated",
+      "Hoarseness, and talking is painful",
+      "Intense redness of fauces",
       "Necrotic destruction of soft parts of palate and fauces"
-    ], 
+    ],
     "Rectum": [
-      "Intolerable pain", 
-      "Discharge of fetid liquid with gangrenous odor", 
-      "Frequent hemorrhage; stools with tenesmus", 
-      "Black stools", 
+      "Intolerable pain",
+      "Discharge of fetid liquid with gangrenous odor",
+      "Frequent hemorrhage",
+      "stools with tenesmus",
+      "Black stools",
       "Redness around anus"
     ]
-  }, 
-  "details": "Acute infections, pneumonia, nephritis. Its action is similar to that of the toxins of infectious diseases. Great and rapid prostration, tendency toward hemorrhages, from the different orifices, of dark fluid blood, cyanosis, rapid respiration and heart action, albuminuria and twitching and jerking of muscles. Typhoid pneumonia. Livid states from great struggling, where suffocation is imminent and paralysis of lung threatening; great sweat. Affects most prominently the buccal cavity. This, together with marked prostration, gives it a place in the treatment of DIPHTHERIA, where it has achieved unquestioned great results. Malignant types, with prostration. Coldness and nausea. Syphilitic ulcers when perforation threatens.", 
-  "Common names": "Cyanide of Mercury", 
-  "name": "Mercurius cyanatus", 
+  },
+  "details": "Acute infections, pneumonia, nephritis. Its action is similar to that of the toxins of infectious diseases. Great and rapid prostration, tendency toward hemorrhages, from the different orifices, of dark fluid blood, cyanosis, rapid respiration and heart action, albuminuria and twitching and jerking of muscles. Typhoid pneumonia. Livid states from great struggling, where suffocation is imminent and paralysis of lung threatening; great sweat. Affects most prominently the buccal cavity. This, together with marked prostration, gives it a place in the treatment of DIPHTHERIA, where it has achieved unquestioned great results. Malignant types, with prostration. Coldness and nausea. Syphilitic ulcers when perforation threatens.",
+  "Common names": "Cyanide of Mercury",
+  "name": "Mercurius cyanatus",
   "dosage": "Sixth to thirtieth potency. Aggravation is apt to occur from potencies below the sixth."
 }

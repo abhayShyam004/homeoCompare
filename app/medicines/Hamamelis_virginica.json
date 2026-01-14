@@ -1,94 +1,103 @@
 {
-  "name": "Hamamelis virginica", 
-  "Relationship": "Compare in hemorrhoids: CALC. FLUOR.; ALOE; MUR-AC. in varicose veins. MANGIFERA INDICA. Compare: ARNICA, CALEN.; TRILLIUM; BELLIS; SULPH-AC.; PULSATILLA. Antidote: ARNICA. Complementary: FERRUM.", 
+  "name": "Hamamelis virginica",
+  "Relationship": "Compare in hemorrhoids: CALC. FLUOR.; ALOE; MUR-AC. in varicose veins. MANGIFERA INDICA. Compare: ARNICA, CALEN.; TRILLIUM; BELLIS; SULPH-AC.; PULSATILLA. Antidote: ARNICA. Complementary: FERRUM.",
   "Modalities": [
-    "Worse: warm", 
+    "Worse: warm",
     "Worse: moist air"
-  ], 
-  "Common names": "Witch-hazel", 
+  ],
+  "Common names": "Witch-hazel",
   "symptoms": {
     "Eyes": [
-      "Painful weakness; sore pain in eyes; bloodshot appearance; inflamed vessels greatly injected", 
-      "Eyes feel forced out", 
+      "Painful weakness",
+      "sore pain in eyes",
+      "bloodshot appearance",
+      "inflamed vessels greatly injected",
+      "Eyes feel forced out",
       "Hastens absorption of intraocular hemorrhage"
-    ], 
+    ],
     "Respiratory": [
-      "Chest feels sore and constricted", 
-      "Hemoptysis; tickling cough"
-    ], 
+      "Chest feels sore and constricted",
+      "Hemoptysis",
+      "tickling cough"
+    ],
     "Stomach": [
-      "Hematemesis of black blood", 
-      "Blisters on side", 
-      "Throbbing and pain in stomach", 
-      "Tongue feels burnt", 
+      "Hematemesis of black blood",
+      "Blisters on side",
+      "Throbbing and pain in stomach",
+      "Tongue feels burnt",
       "Thirst"
-    ], 
+    ],
     "Head": [
-      "Feeling as of a bolt from temple to temple", 
-      "Fullness, followed by epistaxis", 
-      "Numbness over frontal bone", 
+      "Feeling as of a bolt from temple to temple",
+      "Fullness, followed by epistaxis",
+      "Numbness over frontal bone",
       "Wants the respect due to me shown"
-    ], 
+    ],
     "Urine": [
       "Hematuria, with increased desire"
-    ], 
+    ],
     "Stool": [
-      "Anus feels sore and raw", 
-      "Dysentery", 
-      "Hemorrhoids, bleeding profusely, with soreness", 
+      "Anus feels sore and raw",
+      "Dysentery",
+      "Hemorrhoids, bleeding profusely, with soreness",
       "Pulsation in rectum"
-    ], 
+    ],
     "Back": [
-      "Sore pain down cervical vertebrae", 
+      "Sore pain down cervical vertebrae",
       "Severe pain in lumbar and hypogastric region, extending down legs"
-    ], 
+    ],
     "Nose": [
-      "Bad odor from nose", 
-      "Bleeding from nose profuse; flow passive, non-coagulable, with tightness in bridge of nose"
-    ], 
+      "Bad odor from nose",
+      "Bleeding from nose profuse",
+      "flow passive, non-coagulable, with tightness in bridge of nose"
+    ],
     "Female": [
-      "Metrorrhagia, occurring midway between menstrual periods", 
-      "Menses dark, profuse, with soreness in abdomen", 
-      "Uterine hemorrhage, bearing-down pain in back", 
-      "Milk-leg, hemorrhoids, and sore nipples, after confinement", 
-      "Ovarian congestion and neuralgia; feel very sore", 
-      "Vaginismus, ovaritis, soreness over whole abdomen", 
-      "Profuse leucorrhoea", 
-      "Vulva itches", 
-      "Vicarious menstruation", 
-      "Vagina very tender", 
-      "Metrorrhagia; passive flow", 
-      "Phlegmasia alba", 
+      "Metrorrhagia, occurring midway between menstrual periods",
+      "Menses dark, profuse, with soreness in abdomen",
+      "Uterine hemorrhage, bearing-down pain in back",
+      "Milk-leg, hemorrhoids, and sore nipples, after confinement",
+      "Ovarian congestion and neuralgia",
+      "feel very sore",
+      "Vaginismus, ovaritis, soreness over whole abdomen",
+      "Profuse leucorrhoea",
+      "Vulva itches",
+      "Vicarious menstruation",
+      "Vagina very tender",
+      "Metrorrhagia",
+      "passive flow",
+      "Phlegmasia alba",
       "Intermenstrual pain"
-    ], 
+    ],
     "Skin": [
-      "Ecchymosis", 
-      "Varicose veins and ulcers; very sore", 
-      "Phlebitis", 
-      "Bluish chilblains", 
-      "Traumatic inflammations", 
-      "Purpura", 
+      "Ecchymosis",
+      "Varicose veins and ulcers",
+      "very sore",
+      "Phlebitis",
+      "Bluish chilblains",
+      "Traumatic inflammations",
+      "Purpura",
       "Burns"
-    ], 
+    ],
     "Throat": [
-      "Mucous membrane distended and bluish; varicosis of throat"
-    ], 
+      "Mucous membrane distended and bluish",
+      "varicosis of throat"
+    ],
     "Extremities": [
-      "Very sore muscles and joints", 
-      "Neuralgia of internal saphenous nerve", 
-      "Tired feeling in arms and legs", 
-      "Chilliness in back and hips, extending down legs", 
+      "Very sore muscles and joints",
+      "Neuralgia of internal saphenous nerve",
+      "Tired feeling in arms and legs",
+      "Chilliness in back and hips, extending down legs",
       "Varicose veins"
-    ], 
+    ],
     "Male": [
-      "Pain in spermatic cord, running into testes", 
-      "Varicocele", 
-      "Testicles enlarged, hot, and painful", 
-      "Pain in testicles", 
-      "Epididymitis", 
+      "Pain in spermatic cord, running into testes",
+      "Varicocele",
+      "Testicles enlarged, hot, and painful",
+      "Pain in testicles",
+      "Epididymitis",
       "Orchitis"
     ]
-  }, 
-  "details": "Venous congestion, hemorrhages, varicose veins, and hemorrhoids, with BRUISED SORENESS OF AFFECTED PARTS, seem to be the special sphere of this remedy. Acts upon the coats of the veins causing relaxation with consequent engorgement. Passive venous hemorrhages from any part. Great value in open, painful wounds, with weakness from loss of blood. After operations, super cedes the use of morphia (Helmuth).", 
+  },
+  "details": "Venous congestion, hemorrhages, varicose veins, and hemorrhoids, with BRUISED SORENESS OF AFFECTED PARTS, seem to be the special sphere of this remedy. Acts upon the coats of the veins causing relaxation with consequent engorgement. Passive venous hemorrhages from any part. Great value in open, painful wounds, with weakness from loss of blood. After operations, super cedes the use of morphia (Helmuth).",
   "dosage": "Tincture, to sixth attenuation. Distilled extract locally."
 }

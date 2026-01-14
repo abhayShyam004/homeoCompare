@@ -1,13 +1,15 @@
 {
   "symptoms": {
     "Respiratory": [
-      "Bronchorrhea", 
-      "Pain in left lung ; painful while coughing and sensitive to percussion", 
-      "Cough with profuse mucopurulent expectoration, gagging and vomiting during cough; worse while or after eating"
+      "Bronchorrhea",
+      "Pain in left lung",
+      "painful while coughing and sensitive to percussion",
+      "Cough with profuse mucopurulent expectoration, gagging and vomiting during cough",
+      "worse while or after eating"
     ]
-  }, 
-  "details": "Chronic bronchitis and phthisis. Night-sweats.", 
-  "Common names": "Forget-me-not", 
-  "name": "Myosotis", 
+  },
+  "details": "Chronic bronchitis and phthisis. Night-sweats.",
+  "Common names": "Forget-me-not",
+  "name": "Myosotis",
   "dosage": "Tincture to second potency."
 }

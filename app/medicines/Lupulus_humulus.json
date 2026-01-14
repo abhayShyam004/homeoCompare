@@ -1,28 +1,29 @@
 {
-  "name": "Lupulus humulus", 
-  "Relationship": "Antidotes: COFFEA, VINEGAR. Compare: NUX; URTICA; CANNAB.", 
-  "Common names": "Hops", 
+  "name": "Lupulus humulus",
+  "Relationship": "Antidotes: COFFEA, VINEGAR. Compare: NUX; URTICA; CANNAB.",
+  "Common names": "Hops",
   "symptoms": {
     "Head": [
-      "Dull, heavy headache with dizziness", 
-      "Highly excited", 
-      "Drawing and twitching in every muscle", 
+      "Dull, heavy headache with dizziness",
+      "Highly excited",
+      "Drawing and twitching in every muscle",
       "Morbid vigilance"
-    ], 
+    ],
     "Sleep": [
-      "Drowsy during the day", 
+      "Drowsy during the day",
       "Sopor"
-    ], 
+    ],
     "Skin": [
-      "Feels like insects crawling under skin; feels chapped, skin peels", 
+      "Feels like insects crawling under skin",
+      "feels chapped, skin peels",
       "Scarlatina-like eruption on face"
-    ], 
+    ],
     "Male": [
-      "Emissions, depending on sexual weakness and after onanism", 
-      "Painful erections", 
+      "Emissions, depending on sexual weakness and after onanism",
+      "Painful erections",
       "Spermatorrhoea"
     ]
-  }, 
-  "details": "Is a good remedy in unstrung condition of the nervous system attended with nausea, dizziness, headache following a night's debauch. INFANTILE JAUNDICE. Urethral burning. Drawing and twitching in almost every muscle. Nervous tremors; wakefulness and delirium of drunkards. GIDDINESS AND STUPEFACTION. SLOW pulse. Perspiration profuse, clammy, greasy.", 
+  },
+  "details": "Is a good remedy in unstrung condition of the nervous system attended with nausea, dizziness, headache following a night's debauch. INFANTILE JAUNDICE. Urethral burning. Drawing and twitching in almost every muscle. Nervous tremors; wakefulness and delirium of drunkards. GIDDINESS AND STUPEFACTION. SLOW pulse. Perspiration profuse, clammy, greasy.",
   "dosage": "Tincture, to third potency. LUPULIN 1x trit. (Best in seminal emissions. Locally in painful cancers.)"
 }

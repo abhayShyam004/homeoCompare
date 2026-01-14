@@ -1,39 +1,40 @@
 {
-  "name": "Stellaria media", 
-  "Relationship": "Compare: PULS. (similar in rheumatism, pains shifting, worse, rest, warmth; better cold air).", 
+  "name": "Stellaria media",
+  "Relationship": "Compare: PULS. (similar in rheumatism, pains shifting, worse, rest, warmth; better cold air).",
   "Modalities": [
-    "Worse: mornings", 
-    "Worse: warmth", 
-    "Worse: tobacco", 
-    "Better: evenings", 
-    "Better: cold air", 
+    "Worse: mornings",
+    "Worse: warmth",
+    "Worse: tobacco",
+    "Better: evenings",
+    "Better: cold air",
     "Better: motion"
-  ], 
-  "Common names": "Chickweed", 
+  ],
+  "Common names": "Chickweed",
   "symptoms": {
     "Head": [
-      "Lassitude, indisposition to work", 
-      "Smarting and burning in eyes, feel protruded", 
-      "General irritability", 
-      "Neck muscles stiff and sore", 
-      "Eyes feel protruded", 
-      "Dull, frontal headache; worse in morning and left side with sleepiness"
-    ], 
+      "Lassitude, indisposition to work",
+      "Smarting and burning in eyes, feel protruded",
+      "General irritability",
+      "Neck muscles stiff and sore",
+      "Eyes feel protruded",
+      "Dull, frontal headache",
+      "worse in morning and left side with sleepiness"
+    ],
     "Abdomen": [
-      "Hepatic torpor", 
-      "Clay-colored stools", 
-      "Constipation or alternating constipation and diarrhoea", 
+      "Hepatic torpor",
+      "Clay-colored stools",
+      "Constipation or alternating constipation and diarrhoea",
       "Liver engorged, swollen, with stitching pain and sensitive to pressure"
-    ], 
+    ],
     "Extremities": [
-      "Pain in shoulders and arms", 
-      "Synovitis", 
-      "Bruised feeling", 
-      "Rheumatoid pains in different parts of the body", 
-      "Rheumatic pains in calves of legs", 
+      "Pain in shoulders and arms",
+      "Synovitis",
+      "Bruised feeling",
+      "Rheumatoid pains in different parts of the body",
+      "Rheumatic pains in calves of legs",
       "Sharp pain in small of back, over kidneys, in gluteal region, extending down thigh"
     ]
-  }, 
-  "details": "Induces a condition of stasis, congestion, and sluggishness of all functions. Morning aggravation. Sharp, SHIFTING, rheumatic pains in all parts very pronounced. RHEUMATISM; darting pains in almost every part; stiffness of joints; parts sore to touch; worse motion. CHRONIC RHEUMATISM. SHIFTING PAINS. (PULS.; KALI-SULPH.) Psoriasis. Enlarged and inflamed gouty finger joints.", 
+  },
+  "details": "Induces a condition of stasis, congestion, and sluggishness of all functions. Morning aggravation. Sharp, SHIFTING, rheumatic pains in all parts very pronounced. RHEUMATISM; darting pains in almost every part; stiffness of joints; parts sore to touch; worse motion. CHRONIC RHEUMATISM. SHIFTING PAINS. (PULS.; KALI-SULPH.) Psoriasis. Enlarged and inflamed gouty finger joints.",
   "dosage": "Tincture, externally. Internally, 2x potency."
 }

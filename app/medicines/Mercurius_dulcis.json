@@ -1,35 +1,42 @@
 {
-  "name": "Mercurius dulcis", 
-  "Relationship": "Compare: KALI-MUR.", 
-  "Common names": "Calomel", 
+  "name": "Mercurius dulcis",
+  "Relationship": "Compare: KALI-MUR.",
+  "Common names": "Calomel",
   "symptoms": {
     "Stomach": [
-      "Nausea and vomiting", 
+      "Nausea and vomiting",
       "Cyclic vomiting of infants"
-    ], 
+    ],
     "Stool": [
-      "Dark-green, watery, with griping", 
-      "Scanty, bloody mucus, with bile, and constant desire, without tenesmus", 
-      "Dysentery; small stools of mucus and blood, covered with bile", 
+      "Dark-green, watery, with griping",
+      "Scanty, bloody mucus, with bile, and constant desire, without tenesmus",
+      "Dysentery",
+      "small stools of mucus and blood, covered with bile",
       "Anus sore and burning"
-    ], 
+    ],
     "Mouth": [
-      "Offensive breath; salivation; sore gums", 
-      "Ulcers", 
-      "Tongue black", 
-      "Ulceration of throat, with dysphagia", 
-      "Granular pharyngitis", 
-      "Constant flow of dark, putrid saliva; very offensive"
-    ], 
+      "Offensive breath",
+      "salivation",
+      "sore gums",
+      "Ulcers",
+      "Tongue black",
+      "Ulceration of throat, with dysphagia",
+      "Granular pharyngitis",
+      "Constant flow of dark, putrid saliva",
+      "very offensive"
+    ],
     "Skin": [
-      "Swollen glands, phagedenic ulcers", 
-      "Flabby and ill nourished", 
+      "Swollen glands, phagedenic ulcers",
+      "Flabby and ill nourished",
       "Copper-colored eruptions"
-    ], 
+    ],
     "Ears": [
-      "Otitis media; closure of eustachian tube; ear troubles of scrofulous children; membrana tympani retracted, thickened and immovable"
+      "Otitis media",
+      "closure of eustachian tube",
+      "ear troubles of scrofulous children",
+      "membrana tympani retracted, thickened and immovable"
     ]
-  }, 
-  "details": "Has marked effect on catarrhal inflammation of ear, and useful in Eustachian catarrh, deafness. Diarrhoea, with soreness of anus. PROSTATITIS. Remittent bilious attacks. PALLOR, FLABBY BLOATEDNESS, and turgid flaccidity. Inflammation with plastic exudate. Especially indicated in systems disposed to remittent bilious fevers; in peritonitis and meningitis WITH PLASTIC EXUDATE. Dropsies due to combined renal and cardiac diseases, especially with jaundice. (Hale). Cirrhosis of the liver, especially in the hypertrophic form. Use 1x (Jousset)", 
+  },
+  "details": "Has marked effect on catarrhal inflammation of ear, and useful in Eustachian catarrh, deafness. Diarrhoea, with soreness of anus. PROSTATITIS. Remittent bilious attacks. PALLOR, FLABBY BLOATEDNESS, and turgid flaccidity. Inflammation with plastic exudate. Especially indicated in systems disposed to remittent bilious fevers; in peritonitis and meningitis WITH PLASTIC EXUDATE. Dropsies due to combined renal and cardiac diseases, especially with jaundice. (Hale). Cirrhosis of the liver, especially in the hypertrophic form. Use 1x (Jousset)",
   "dosage": "Third to sixth trituration. For palliative (non-homeopathic) purposes, to secure evacuation of bowels, two or three-grain doses of first decimal trituration, repeated several times every hour."
 }

@@ -1,33 +1,35 @@
 {
   "symptoms": {
     "Head": [
-      "Nose red", 
-      "Aches as if top of head would fly off", 
+      "Nose red",
+      "Aches as if top of head would fly off",
       "Arteries of forehead throb"
-    ], 
+    ],
     "Abdomen": [
-      "Deep pain in right side over liver, going through back", 
+      "Deep pain in right side over liver, going through back",
       "Stool yellowish brown, with bile"
-    ], 
+    ],
     "Face": [
-      "Yellow; tongue yellow, coated, taking imprint of teeth"
-    ], 
+      "Yellow",
+      "tongue yellow, coated, taking imprint of teeth"
+    ],
     "Mouth": [
       "Taste as of rotten eggs"
-    ], 
+    ],
     "Skin": [
       "Erythematous redness"
-    ], 
+    ],
     "Throat": [
-      "Sensation as if something hung down from posterior nares; cannot get it up or down"
-    ], 
+      "Sensation as if something hung down from posterior nares",
+      "cannot get it up or down"
+    ],
     "Male": [
-      "Gonorrhea", 
+      "Gonorrhea",
       "Burning and swelling of the prepuce, with redness of meatus"
     ]
-  }, 
-  "details": "So-called bilious symptoms, with headache. Despondent and irritable.", 
-  "Common names": "Bear-grass", 
-  "name": "Yucca filamentosa", 
+  },
+  "details": "So-called bilious symptoms, with headache. Despondent and irritable.",
+  "Common names": "Bear-grass",
+  "name": "Yucca filamentosa",
   "dosage": "Tincture, to third potency."
 }

@@ -1,92 +1,113 @@
 {
-  "name": "Spongia tosta", 
-  "Relationship": "Compare: ACON.; HEP.; BROM.; LACH.; MERC. PROT.; IOD. (Goitre.)", 
+  "name": "Spongia tosta",
+  "Relationship": "Compare: ACON.; HEP.; BROM.; LACH.; MERC. PROT.; IOD. (Goitre.)",
   "Modalities": [
-    "Worse: ascending", 
-    "Worse: wind", 
-    "Worse: before midnight", 
-    "Better: descending", 
+    "Worse: ascending",
+    "Worse: wind",
+    "Worse: before midnight",
+    "Better: descending",
     "Better: lying with head low"
-  ], 
-  "Common names": "Roasted Sponge", 
+  ],
+  "Common names": "Roasted Sponge",
   "symptoms": {
     "Heart": [
-      "Awakened suddenly after midnight with pain and suffocation; is flushed, hot, and frightened to death", 
-      "Hypertrophy of heart, especially right, with asthmatic symptoms", 
-      "Rapid and violent palpitation, with dyspnoea; cannot lie down; also feels best resting in horizontal position", 
-      "Ebullition of blood, veins distended", 
-      "Valvular insufficiency", 
-      "Angina pectoris; faintness, and anxious sweat", 
+      "Awakened suddenly after midnight with pain and suffocation",
+      "is flushed, hot, and frightened to death",
+      "Hypertrophy of heart, especially right, with asthmatic symptoms",
+      "Rapid and violent palpitation, with dyspnoea",
+      "cannot lie down",
+      "also feels best resting in horizontal position",
+      "Ebullition of blood, veins distended",
+      "Valvular insufficiency",
+      "Angina pectoris",
+      "faintness, and anxious sweat",
       "Surging of heart into chest, as if it would force out upward"
-    ], 
+    ],
     "Eyes": [
-      "Watering; gummy or mucus discharge"
-    ], 
+      "Watering",
+      "gummy or mucus discharge"
+    ],
     "Fever": [
-      "Attacks of heat with anxiety; heat and redness of face and perspiration"
-    ], 
+      "Attacks of heat with anxiety",
+      "heat and redness of face and perspiration"
+    ],
     "Stomach": [
-      "Excessive thirst, great hunger", 
-      "Hiccough", 
+      "Excessive thirst, great hunger",
+      "Hiccough",
       "Cannot bear tight clothing around trunk"
-    ], 
+    ],
     "Mind": [
-      "Every excitement increases the cough", 
+      "Every excitement increases the cough",
       "Anxiety and fear"
-    ], 
+    ],
     "Head": [
-      "Rush of blood; bursting headache; worse, forehead"
-    ], 
+      "Rush of blood",
+      "bursting headache",
+      "worse, forehead"
+    ],
     "Respiratory": [
-      "Oppression and heat of chest, with sudden weakness", 
-      "Irrepressible cough from a spot deep in chest, as if raw and sore", 
-      "Bronchial catarrh, with wheezing, asthmatic cough, worse cold air, with profuse expectoration and suffocation; worse, lying with head low and in hot room", 
-      "Respiration short, panting, difficult; feeling of a plug in larynx", 
-      "Goitre, with suffocative spells", 
-      "The dry, chronic sympathetic cough or organic heart disease is relieved by spongia", 
-      "Chest weak; can scarcely talk", 
-      "Great dryness of all air-passages", 
-      "Cough abates after eating or drinking, especially warm drinks", 
-      "Laryngeal phthisis", 
-      "Hoarseness; larynx dry, burns, constricted", 
-      "Croup; worse, during inspiration and before midnight", 
-      "Cough, dry, barking, croupy; larynx sensitive to touch"
-    ], 
+      "Oppression and heat of chest, with sudden weakness",
+      "Irrepressible cough from a spot deep in chest, as if raw and sore",
+      "Bronchial catarrh, with wheezing, asthmatic cough, worse cold air, with profuse expectoration and suffocation",
+      "worse, lying with head low and in hot room",
+      "Respiration short, panting, difficult",
+      "feeling of a plug in larynx",
+      "Goitre, with suffocative spells",
+      "The dry, chronic sympathetic cough or organic heart disease is relieved by spongia",
+      "Chest weak",
+      "can scarcely talk",
+      "Great dryness of all air-passages",
+      "Cough abates after eating or drinking, especially warm drinks",
+      "Laryngeal phthisis",
+      "Hoarseness",
+      "larynx dry, burns, constricted",
+      "Croup",
+      "worse, during inspiration and before midnight",
+      "Cough, dry, barking, croupy",
+      "larynx sensitive to touch"
+    ],
     "Mouth": [
-      "Tongue dry and brown; full of vesicles"
-    ], 
+      "Tongue dry and brown",
+      "full of vesicles"
+    ],
     "Nose": [
-      "Dryness; chronic, dry, nasal catarrh", 
+      "Dryness",
+      "chronic, dry, nasal catarrh",
       "Fluent coryza, alternating with stoppage"
-    ], 
+    ],
     "Female": [
-      "Before menses, pain in sacrum, hunger, palpitation", 
-      "Amenorrhoea, with asthma", 
+      "Before menses, pain in sacrum, hunger, palpitation",
+      "Amenorrhoea, with asthma",
       "During menses, wakes with suffocative spells"
-    ], 
+    ],
     "Skin": [
-      "Swelling and induration of glands; also exophthalmic; cervical glands swollen with tensive pain on turning head, painful on pressure; goitre", 
-      "Itching; measles"
-    ], 
+      "Swelling and induration of glands",
+      "also exophthalmic",
+      "cervical glands swollen with tensive pain on turning head, painful on pressure",
+      "goitre",
+      "Itching",
+      "measles"
+    ],
     "Throat": [
-      "Thyroid gland swollen", 
-      "Stitches and dryness", 
-      "Sore throat; worse after eating sweet things", 
-      "Clears throat constantly", 
-      "Tickling causes cough", 
+      "Thyroid gland swollen",
+      "Stitches and dryness",
+      "Sore throat",
+      "worse after eating sweet things",
+      "Clears throat constantly",
+      "Tickling causes cough",
       "Burning and stinging"
-    ], 
+    ],
     "Sleep": [
-      "Awakes in a fright, and feels as if suffocating", 
+      "Awakes in a fright, and feels as if suffocating",
       "Generally worse after sleep, or sleeps into an aggravation"
-    ], 
+    ],
     "Male": [
-      "Heat in parts", 
-      "Epididymitis", 
-      "Swelling of spermatic cord and testicles, with pain and tenderness", 
+      "Heat in parts",
+      "Epididymitis",
+      "Swelling of spermatic cord and testicles, with pain and tenderness",
       "Orchitis"
     ]
-  }, 
-  "details": "A remedy especially marked in the symptoms of the respiratory organs, cough, croup, etc. Heart affections and often indicated for the tubercular diathesis. Children with fair complexion, lax fiber; swollen glands. EXHAUSTION AND HEAVINESS OF THE BODY AFTER SLIGHT EXERTION, WITH ORGASM OF BLOOD TO CHEST, FACE. ANXIETY AND DIFFICULT BREATHING.", 
+  },
+  "details": "A remedy especially marked in the symptoms of the respiratory organs, cough, croup, etc. Heart affections and often indicated for the tubercular diathesis. Children with fair complexion, lax fiber; swollen glands. EXHAUSTION AND HEAVINESS OF THE BODY AFTER SLIGHT EXERTION, WITH ORGASM OF BLOOD TO CHEST, FACE. ANXIETY AND DIFFICULT BREATHING.",
   "dosage": "Second trituration, or tincture to third potency."
 }

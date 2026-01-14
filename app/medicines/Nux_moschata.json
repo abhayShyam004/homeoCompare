@@ -1,94 +1,103 @@
 {
-  "name": "Nux moschata", 
-  "Relationship": "OLEUM MYRISTICAE - Oil of Nutmeg - (as a remedy for boils, felons, poisonous ulcers, it has been used in the 2X potency); ORNITHOGALUM (FLATULENCE, swollen feeling across lower chest; whenever she turns in bed, FEELS AS IF A BAG OF WATER turned also; gastric ulcer and cancer). MYRISTICA SEBIFERA (phlegmonous inflammation, hastens suppuration; powerful antiseptic. Ulcerative tendency in all tissues. Said to act more powerfully than Hepar and Silica). Compare: NUX-V.; PULS.; RHUS; IGN.; ASAF. Antidotes: CAMPH.; GELS.; VALER.", 
+  "name": "Nux moschata",
+  "Relationship": "OLEUM MYRISTICAE - Oil of Nutmeg - (as a remedy for boils, felons, poisonous ulcers, it has been used in the 2X potency); ORNITHOGALUM (FLATULENCE, swollen feeling across lower chest; whenever she turns in bed, FEELS AS IF A BAG OF WATER turned also; gastric ulcer and cancer). MYRISTICA SEBIFERA (phlegmonous inflammation, hastens suppuration; powerful antiseptic. Ulcerative tendency in all tissues. Said to act more powerfully than Hepar and Silica). Compare: NUX-V.; PULS.; RHUS; IGN.; ASAF. Antidotes: CAMPH.; GELS.; VALER.",
   "Modalities": [
-    "Worse: cold moist wind", 
-    "Worse: cold food", 
-    "Worse: cold washing", 
-    "Worse: lying on painful side", 
-    "Worse: motion", 
-    "Worse: jar", 
-    "Better: warmth", 
+    "Worse: cold moist wind",
+    "Worse: cold food",
+    "Worse: cold washing",
+    "Worse: lying on painful side",
+    "Worse: motion",
+    "Worse: jar",
+    "Better: warmth",
     "Better: dry weather"
-  ], 
-  "Common names": "Nutmeg", 
+  ],
+  "Common names": "Nutmeg",
   "symptoms": {
     "Heart": [
-      "Sensation as if something grasped heart", 
-      "Palpitation; pulse intermits", 
+      "Sensation as if something grasped heart",
+      "Palpitation",
+      "pulse intermits",
       "Trembling, fluttering"
-    ], 
+    ],
     "Eyes": [
-      "Mydriasis", 
-      "Objects look larger, very distant, or vanish", 
+      "Mydriasis",
+      "Objects look larger, very distant, or vanish",
       "Motes before eyes"
-    ], 
+    ],
     "Respiratory": [
-      "Cough when getting warm in bed", 
+      "Cough when getting warm in bed",
       "Loss of voice from walking against the wind"
-    ], 
+    ],
     "Stomach": [
-      "Hiccough, and craving for highly-seasoned food", 
-      "Flatulent dyspepsia", 
-      "Excessively bloated", 
+      "Hiccough, and craving for highly-seasoned food",
+      "Flatulent dyspepsia",
+      "Excessively bloated",
       "Retrocession of gout to stomach"
-    ], 
+    ],
     "Head": [
-      "Pulsating in head", 
-      "Vertigo when walking in open air; aches from eating a little too much", 
-      "Feeling of expansion, with sleepiness", 
-      "Cracking sensation in head", 
-      "Sensitive to slightest touch in a draft of air", 
-      "Bursting headache; better hard pressure"
-    ], 
+      "Pulsating in head",
+      "Vertigo when walking in open air",
+      "aches from eating a little too much",
+      "Feeling of expansion, with sleepiness",
+      "Cracking sensation in head",
+      "Sensitive to slightest touch in a draft of air",
+      "Bursting headache",
+      "better hard pressure"
+    ],
     "Mind": [
-      "Changeable; laughing and crying", 
-      "Confused, impaired memory", 
-      "Thinks she has two heads", 
+      "Changeable",
+      "laughing and crying",
+      "Confused, impaired memory",
+      "Thinks she has two heads",
       "Bewildered sense, as in a dream"
-    ], 
+    ],
     "Abdomen": [
-      "Enormously distended", 
-      "Paralytic weakness of intestines", 
-      "Faintness during or after stool", 
-      "Stool is soft, and yet is unable to expel it, even with long straining", 
+      "Enormously distended",
+      "Paralytic weakness of intestines",
+      "Faintness during or after stool",
+      "Stool is soft, and yet is unable to expel it, even with long straining",
       "Protruding piles"
-    ], 
+    ],
     "Fever": [
-      "Dry skin and of inner parts, also of eyes, nose, lips, mouth, tongue, throat, etc.", 
-      "Chilliness and heat without thirst; want of perspiration", 
+      "Dry skin and of inner parts, also of eyes, nose, lips, mouth, tongue, throat, etc.",
+      "Chilliness and heat without thirst",
+      "want of perspiration",
       "Chill begins in left hand"
-    ], 
+    ],
     "Mouth": [
-      "Dryness of throat", 
-      "Very dry", 
-      "Tongue numb, paralyzed", 
-      "Saliva like cotton", 
-      "Tongue adheres to roof of mouth; but no desire for water", 
+      "Dryness of throat",
+      "Very dry",
+      "Tongue numb, paralyzed",
+      "Saliva like cotton",
+      "Tongue adheres to roof of mouth",
+      "but no desire for water",
       "Toothache in pregnancy"
-    ], 
+    ],
     "Nose": [
-      "Oversensitive to smell; nosebleed, dark blood; dry, stopped up"
-    ], 
+      "Oversensitive to smell",
+      "nosebleed, dark blood",
+      "dry, stopped up"
+    ],
     "Female": [
-      "Uterine hemorrhages", 
-      "Menses too long, dark, thick", 
-      "Suppression, with persistent fainting attacks and sleepiness", 
-      "Leucorrhoea muddy and bloody", 
+      "Uterine hemorrhages",
+      "Menses too long, dark, thick",
+      "Suppression, with persistent fainting attacks and sleepiness",
+      "Leucorrhoea muddy and bloody",
       "Variableness of menstruation, irregularity of time and quantity"
-    ], 
+    ],
     "Sleep": [
-      "Great drowsiness", 
-      "Coma", 
+      "Great drowsiness",
+      "Coma",
       "Complaints cause sleepiness"
-    ], 
+    ],
     "Extremities": [
-      "Rheumatism relieved by dry, warm clothes", 
-      "Rheumatism from getting feet wet, from exposure to drafts", 
-      "Pain in right hip to knee; worse, motion, especially going upstairs", 
+      "Rheumatism relieved by dry, warm clothes",
+      "Rheumatism from getting feet wet, from exposure to drafts",
+      "Pain in right hip to knee",
+      "worse, motion, especially going upstairs",
       "Fatigue on slight exertion"
     ]
-  }, 
-  "details": "Marked tendency to FAINTING FITS, with heart failure. Cold extremities, EXTREME DRYNESS OF MUCOUS MEMBRANES and skin. Strange feeling, with irresistible DROWSINESS. Indicanuria. General inclination to become unconscious during acute attacks. Lypothymia. (IGNATIA.) Staggers on trying to walk.", 
+  },
+  "details": "Marked tendency to FAINTING FITS, with heart failure. Cold extremities, EXTREME DRYNESS OF MUCOUS MEMBRANES and skin. Strange feeling, with irresistible DROWSINESS. Indicanuria. General inclination to become unconscious during acute attacks. Lypothymia. (IGNATIA.) Staggers on trying to walk.",
   "dosage": "First to sixth potency."
 }

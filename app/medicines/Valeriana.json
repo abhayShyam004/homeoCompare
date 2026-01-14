@@ -1,69 +1,72 @@
 {
-  "name": "Valeriana", 
-  "Relationship": "Compare: ASAF.; IGN.; CROC.; CASTOR.; AMM. VALER. (in neuralgia, gastric disturbance and great nervous agitation). Insomnia especially during pregnancy and menopause. Feeble, hysterical nervous patients.", 
-  "Common names": "Valerian", 
+  "name": "Valeriana",
+  "Relationship": "Compare: ASAF.; IGN.; CROC.; CASTOR.; AMM. VALER. (in neuralgia, gastric disturbance and great nervous agitation). Insomnia especially during pregnancy and menopause. Feeble, hysterical nervous patients.",
+  "Common names": "Valerian",
   "symptoms": {
     "Head": [
-      "Pressure in forehead", 
-      "Sensation of great coldness", 
+      "Pressure in forehead",
+      "Sensation of great coldness",
       "Feeling of intoxication"
-    ], 
+    ],
     "Fever": [
-      "Heat predominates", 
-      "Long lasting heat, often with sweat on face", 
+      "Heat predominates",
+      "Long lasting heat, often with sweat on face",
       "Sensation of icy coldness"
-    ], 
+    ],
     "Stomach": [
-      "Hunger, with nausea", 
-      "Heartburn with gulping of rancid fluid", 
-      "Nausea, with faintness", 
-      "Eructations foul", 
+      "Hunger, with nausea",
+      "Heartburn with gulping of rancid fluid",
+      "Nausea, with faintness",
+      "Eructations foul",
       "Child vomits curdled milk in large lumps after nursing"
-    ], 
+    ],
     "Mind": [
-      "Over-sensitiveness", 
-      "Feels light, as if floating in air", 
-      "Hallucinations at night", 
-      "Irritable", 
-      "Changeable disposition", 
+      "Over-sensitiveness",
+      "Feels light, as if floating in air",
+      "Hallucinations at night",
+      "Irritable",
+      "Changeable disposition",
       "Tremulous"
-    ], 
+    ],
     "Abdomen": [
-      "Thin, watery diarrhoea, with lumps of coagulated milk, with violent screaming in children", 
-      "Bloated", 
-      "Spasms in bowels after food and at night in bed", 
-      "Hysterical cramps", 
+      "Thin, watery diarrhoea, with lumps of coagulated milk, with violent screaming in children",
+      "Bloated",
+      "Spasms in bowels after food and at night in bed",
+      "Hysterical cramps",
       "Greenish, papescent, bloody stool"
-    ], 
+    ],
     "Respiratory": [
-      "Choking on falling asleep", 
-      "Spasmodic asthma; convulsive movements of the diaphragm"
-    ], 
+      "Choking on falling asleep",
+      "Spasmodic asthma",
+      "convulsive movements of the diaphragm"
+    ],
     "Sleep": [
-      "Worse on waking", 
+      "Worse on waking",
       "Sleepless, with nightly itching and muscular spasms"
-    ], 
+    ],
     "Female": [
       "Menses late and scanty"
-    ], 
+    ],
     "Throat": [
-      "Nausea felt in throat", 
-      "Sensation as if a thread were hanging down throat", 
+      "Nausea felt in throat",
+      "Sensation as if a thread were hanging down throat",
       "Pharynx feels constricted"
-    ], 
+    ],
     "Extremities": [
-      "Rheumatic pains in limbs", 
-      "Constant jerking", 
-      "Sciatica; pain worse standing and resting on floor ; better walking", 
-      "Pain in heels when sitting", 
+      "Rheumatic pains in limbs",
+      "Constant jerking",
+      "Sciatica",
+      "pain worse standing and resting on floor",
+      "better walking",
+      "Pain in heels when sitting",
       "Heaviness"
-    ], 
+    ],
     "Ears": [
-      "Hyperaesthesia", 
-      "Nervous noises", 
+      "Hyperaesthesia",
+      "Nervous noises",
       "Earache from exposure to drafts and cold"
     ]
-  }, 
-  "details": "Hysteria, over-sensitiveness, nervous affections, when apparently well-chosen remedies fail. Hysterical spasms and affections generally. HYSTERICAL FLATULENCY.", 
+  },
+  "details": "Hysteria, over-sensitiveness, nervous affections, when apparently well-chosen remedies fail. Hysterical spasms and affections generally. HYSTERICAL FLATULENCY.",
   "dosage": "Tincture."
 }

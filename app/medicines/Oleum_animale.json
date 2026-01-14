@@ -1,84 +1,94 @@
 {
-  "name": "Oleum animale", 
-  "Relationship": "Compare: PULS.; ARS.; SILIC.; SEPIA. Antidotes: CAMPH.; OP.", 
+  "name": "Oleum animale",
+  "Relationship": "Compare: PULS.; ARS.; SILIC.; SEPIA. Antidotes: CAMPH.; OP.",
   "Modalities": [
-    "Worse: after eating", 
-    "Worse: from 2 to nine pm", 
-    "Better: by rubbing", 
-    "Better: eructation", 
+    "Worse: after eating",
+    "Worse: from 2 to nine pm",
+    "Better: by rubbing",
+    "Better: eructation",
     "Better: open air"
-  ], 
-  "Common names": "Dippel's Animal Oil", 
+  ],
+  "Common names": "Dippel's Animal Oil",
   "symptoms": {
     "Eyes": [
-      "Short-sighted", 
-      "Lachrymation when eating", 
-      "Glistening bodies before eyes", 
-      "Twitching of lids", 
-      "Smarting in eyes; misty vision"
-    ], 
+      "Short-sighted",
+      "Lachrymation when eating",
+      "Glistening bodies before eyes",
+      "Twitching of lids",
+      "Smarting in eyes",
+      "misty vision"
+    ],
     "Respiratory": [
-      "Asthma from suppressed foot-sweat", 
-      "Oppression", 
-      "Stitches in breast from behind forward", 
+      "Asthma from suppressed foot-sweat",
+      "Oppression",
+      "Stitches in breast from behind forward",
       "Chest feels constricted"
-    ], 
+    ],
     "Stomach": [
-      "Sensation as if water were in stomach; of coldness, of constriction, and of burning; better, eructations"
-    ], 
+      "Sensation as if water were in stomach",
+      "of coldness, of constriction, and of burning",
+      "better, eructations"
+    ],
     "Head": [
-      "Malar bones feel pulled forcibly upward", 
-      "Itching, burning vesicles; better, friction", 
-      "Tearing pain, with sadness and irritability; worse after dinner; relieved by rubbing", 
+      "Malar bones feel pulled forcibly upward",
+      "Itching, burning vesicles",
+      "better, friction",
+      "Tearing pain, with sadness and irritability",
+      "worse after dinner",
+      "relieved by rubbing",
       "Migraine with polyuria"
-    ], 
+    ],
     "Urine": [
-      "Itching in urethra", 
-      "Polyuria", 
+      "Itching in urethra",
+      "Polyuria",
       "Greenish urine, frequent and urgent want to urinate, with tenesmus and scanty emission"
-    ], 
+    ],
     "Abdomen": [
-      "After stool, bruised pain in abdomen", 
-      "Ineffectual urging to stool, with burning in anus", 
+      "After stool, bruised pain in abdomen",
+      "Ineffectual urging to stool, with burning in anus",
       "Flatulence and rumbling"
-    ], 
+    ],
     "Face": [
-      "Feels drawn", 
-      "Twitching of lips", 
-      "Cramp-like pains", 
-      "Malar bone feels pulled upward", 
+      "Feels drawn",
+      "Twitching of lips",
+      "Cramp-like pains",
+      "Malar bone feels pulled upward",
       "Toothache, better pressing teeth together"
-    ], 
+    ],
     "Nose": [
-      "Watery, excoriating discharge; worse in open air"
-    ], 
+      "Watery, excoriating discharge",
+      "worse in open air"
+    ],
     "Female": [
-      "Early and scant menstruation; flow black"
-    ], 
+      "Early and scant menstruation",
+      "flow black"
+    ],
     "Throat": [
-      "Air feels cold", 
+      "Air feels cold",
       "Sore, dry, constricted"
-    ], 
+    ],
     "Mouth": [
-      "Greasy feeling in mouth", 
-      "Tongue feels sore", 
+      "Greasy feeling in mouth",
+      "Tongue feels sore",
       "Bites cheek while eating"
-    ], 
+    ],
     "Extremities": [
-      "Restlessness", 
-      "Rheumatic pain in shoulders", 
-      "Cracking of vertebrae on raising head", 
-      "Sprained feeling in small of back", 
+      "Restlessness",
+      "Rheumatic pain in shoulders",
+      "Cracking of vertebrae on raising head",
+      "Sprained feeling in small of back",
       "Fish-brine odor of sweat of heels"
-    ], 
+    ],
     "Male": [
-      "Pain along spermatic cord to testicles", 
-      "Testicles feel seized and pulled forcibly upward; worse, right", 
-      "Desire increased; ejaculation too soon", 
-      "Pressure in the perineum", 
+      "Pain along spermatic cord to testicles",
+      "Testicles feel seized and pulled forcibly upward",
+      "worse, right",
+      "Desire increased",
+      "ejaculation too soon",
+      "Pressure in the perineum",
       "Prostatic hypertrophy"
     ]
-  }, 
-  "details": "Acts on the nervous system, especially on pneumogastric region. Useful in migraine and neuralgia of spermatic cord. Burning pains and stitches. \"PULLED UPWARD\" AND \"FROM BEHIND FORWARD\" PAINS.", 
+  },
+  "details": "Acts on the nervous system, especially on pneumogastric region. Useful in migraine and neuralgia of spermatic cord. Burning pains and stitches. \"PULLED UPWARD\" AND \"FROM BEHIND FORWARD\" PAINS.",
   "dosage": "Third to thirtieth potency and higher."
 }

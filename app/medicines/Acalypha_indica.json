@@ -1,26 +1,29 @@
 {
-  "name": "Acalypha indica", 
-  "Relationship": "Compare: Mill; Phos.; Acetic acid; Kali-n.", 
-  "Common names": "Indian Nettle", 
+  "name": "Acalypha indica",
+  "Relationship": "Compare: Mill; Phos.; Acetic acid; Kali-n.",
+  "Common names": "Indian Nettle",
   "symptoms": {
     "Abdomen": [
-      "Rectal hemorrhage; worse in morning", 
-      "Burning in intestines", 
-      "Rumbling distention, and griping pain in abdomen", 
+      "Rectal hemorrhage",
+      "worse in morning",
+      "Burning in intestines",
+      "Rumbling distention, and griping pain in abdomen",
       "Spluttering diarrhea with forcible expulsion of noisy flatus, bearing down pains and tenesmus"
-    ], 
+    ],
     "Chest": [
-      "Cough dry, hard, followed by hemoptysis; worse in morning and at night", 
-      "Blood bright red and not profuse in morning; dark and clotted in afternoon", 
-      "Burning in pharynx, oesophagus, and stomach", 
-      "Constant and severe pain in chest", 
+      "Cough dry, hard, followed by hemoptysis",
+      "worse in morning and at night",
+      "Blood bright red and not profuse in morning",
+      "dark and clotted in afternoon",
+      "Burning in pharynx, oesophagus, and stomach",
+      "Constant and severe pain in chest",
       "Pulse soft and compressible"
-    ], 
+    ],
     "Skin": [
-      "Itching and circumscribed furuncle-like swellings", 
+      "Itching and circumscribed furuncle-like swellings",
       "Jaundice"
     ]
-  }, 
-  "details": "A drug having a marked action on the alimentary canal and respiratory organs. It is indicated in incipient phthisis, with hard, racking cough, bloody expectoration, arterial hemorrhage, but no febrile disturbance. Very weak in the morning, gains strength during day. Progressive emaciation. All pathological hemorrhages having notably a MORNING AGGRAVATION.", 
+  },
+  "details": "A drug having a marked action on the alimentary canal and respiratory organs. It is indicated in incipient phthisis, with hard, racking cough, bloody expectoration, arterial hemorrhage, but no febrile disturbance. Very weak in the morning, gains strength during day. Progressive emaciation. All pathological hemorrhages having notably a MORNING AGGRAVATION.",
   "dosage": "Third to sixth potency."
 }

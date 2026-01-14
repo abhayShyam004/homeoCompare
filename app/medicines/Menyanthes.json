@@ -1,41 +1,47 @@
 {
-  "name": "Menyanthes", 
-  "Relationship": "Compare: CAPS.; PULS.; CALC.; PHOS-AC.; SANG. Antidote: CAMPH.", 
+  "name": "Menyanthes",
+  "Relationship": "Compare: CAPS.; PULS.; CALC.; PHOS-AC.; SANG. Antidote: CAMPH.",
   "Modalities": [
-    "Worse: during rest", 
-    "Worse: ascending", 
-    "Better: pressure on affected part", 
-    "Better: stooping", 
+    "Worse: during rest",
+    "Worse: ascending",
+    "Better: pressure on affected part",
+    "Better: stooping",
     "Better: motion"
-  ], 
-  "Common names": "Buck-bean", 
+  ],
+  "Common names": "Buck-bean",
   "symptoms": {
     "Head": [
-      "Weight pressing on brain with every step on ascending", 
-      "Pain from nape over whole brain; better, stooping, sitting; worse, going upstairs", 
-      "Pressing in vertex; better, hard pressure with hand", 
-      "Pressing-together pain", 
+      "Weight pressing on brain with every step on ascending",
+      "Pain from nape over whole brain",
+      "better, stooping, sitting",
+      "worse, going upstairs",
+      "Pressing in vertex",
+      "better, hard pressure with hand",
+      "Pressing-together pain",
       "Cracking in jaw and twitching of facial muscles"
-    ], 
+    ],
     "Fever": [
-      "Coldness predominates; felt most acutely in abdomen and legs and tip of nose"
-    ], 
+      "Coldness predominates",
+      "felt most acutely in abdomen and legs and tip of nose"
+    ],
     "Stomach": [
-      "No thirst at any time", 
-      "Desire for meat", 
-      "Sensation of coldness extending up to oesophagus", 
-      "Ravenous hunger; passing away after eating a little"
-    ], 
+      "No thirst at any time",
+      "Desire for meat",
+      "Sensation of coldness extending up to oesophagus",
+      "Ravenous hunger",
+      "passing away after eating a little"
+    ],
     "Abdomen": [
-      "Coldness of abdomen", 
-      "Distended and full; increased by smoking tobacco"
-    ], 
+      "Coldness of abdomen",
+      "Distended and full",
+      "increased by smoking tobacco"
+    ],
     "Extremities": [
-      "Icy coldness of hands and feet", 
-      "As soon as patient lies down, legs jerk and twitch", 
+      "Icy coldness of hands and feet",
+      "As soon as patient lies down, legs jerk and twitch",
       "Cramp-like pain"
     ]
-  }, 
-  "details": "A remedy for certain headaches, intermittent fever. Coldness of abdomen. Twitchings. Sensation of tension and compression. Fidgets and urinary difficulties in women. Diabetes.", 
+  },
+  "details": "A remedy for certain headaches, intermittent fever. Coldness of abdomen. Twitchings. Sensation of tension and compression. Fidgets and urinary difficulties in women. Diabetes.",
   "dosage": "Third to thirtieth potency."
 }

@@ -1,49 +1,55 @@
 {
-  "name": "Helonias chamaelirium", 
-  "Relationship": "Compare: AGRIMONIA - Cocklebur - (painful kidneys, impaired digestion and menstrual difficulties; Bronchorrhea and catarrh of bladder. Cough with profuse expectoration attended with expulsion of urine. Tincture 1-10 gtt.). ALETRIS; LILIUM; PULS.; SENECIO; STANNUM.", 
+  "name": "Helonias chamaelirium",
+  "Relationship": "Compare: AGRIMONIA - Cocklebur - (painful kidneys, impaired digestion and menstrual difficulties; Bronchorrhea and catarrh of bladder. Cough with profuse expectoration attended with expulsion of urine. Tincture 1-10 gtt.). ALETRIS; LILIUM; PULS.; SENECIO; STANNUM.",
   "Modalities": [
-    "Better: when doing something", 
-    "Worse: motion", 
+    "Better: when doing something",
+    "Worse: motion",
     "Worse: touch"
-  ], 
-  "Common names": "Unicorn-root", 
+  ],
+  "Common names": "Unicorn-root",
   "symptoms": {
     "Head": [
-      "Headache, better mental exertion", 
+      "Headache, better mental exertion",
       "Burning sensation on top"
-    ], 
+    ],
     "Urine": [
-      "Albuminous, phosphatic; profuse and clear, saccharine", 
+      "Albuminous, phosphatic",
+      "profuse and clear, saccharine",
       "Diabetes"
-    ], 
+    ],
     "Mind": [
-      "Irritable; cannot endure the least contradiction", 
-      "Patient is better when kept busy, with mind engaged, when doing something", 
+      "Irritable",
+      "cannot endure the least contradiction",
+      "Patient is better when kept busy, with mind engaged, when doing something",
       "Profound melancholy"
-    ], 
+    ],
     "Back": [
-      "Great languor, better exercising", 
-      "Pain and weight in back; tired and weak", 
-      "Boring pain in lumbar region, extending down legs", 
-      "Aching and burning across the lumbar region; can trace outlines of kidneys by constant burning"
-    ], 
+      "Great languor, better exercising",
+      "Pain and weight in back",
+      "tired and weak",
+      "Boring pain in lumbar region, extending down legs",
+      "Aching and burning across the lumbar region",
+      "can trace outlines of kidneys by constant burning"
+    ],
     "Female": [
-      "Parts hot, red, swollen; burn and itch terribly", 
-      "Albuminuria during pregnancy", 
-      "Weight and soreness in womb; conscious of womb", 
-      "Dragging in sacral region, with prolapse, especially after a miscarriage", 
-      "Debility attending the menopause", 
-      "Backache after miscarriage", 
-      "Pruritus vulvae", 
-      "Leucorrhoea", 
-      "Breasts swollen, nipples painful and tender", 
+      "Parts hot, red, swollen",
+      "burn and itch terribly",
+      "Albuminuria during pregnancy",
+      "Weight and soreness in womb",
+      "conscious of womb",
+      "Dragging in sacral region, with prolapse, especially after a miscarriage",
+      "Debility attending the menopause",
+      "Backache after miscarriage",
+      "Pruritus vulvae",
+      "Leucorrhoea",
+      "Breasts swollen, nipples painful and tender",
       "Menses too frequent, too profuse"
-    ], 
+    ],
     "Extremities": [
-      "Feet feel numb when sitting", 
+      "Feet feel numb when sitting",
       "Sensation as if a cool wind streamed up calves of legs"
     ]
-  }, 
-  "details": "Sensation of weakness, dragging and in the sacrum and pelvis, with great languor and prostration, are excellent indications for this remedy. There is a sensitiveness expressed as a consciousness of a womb. Tired, back achy females. The weakness shows itself also in a tendency to prolapse and other malposition of the womb. The menses are often suppressed and the kidneys congested. It seems as if the monthly congestion, instead of venting itself as it should through the uterine vessels, had extended to the kidneys. With it all, there is a profound melancholia. Patient must be doing something to engage the mind. Remember it, for women with prolapsus from atony, enervated by indolence and luxury (better when attention is engaged - hence when the doctor comes), or for those worn out with hard work; tired, strained muscles burn and ache; sleepless. Diabetes mellitus, and insipidus. Constant aching and tenderness over kidneys.", 
+  },
+  "details": "Sensation of weakness, dragging and in the sacrum and pelvis, with great languor and prostration, are excellent indications for this remedy. There is a sensitiveness expressed as a consciousness of a womb. Tired, back achy females. The weakness shows itself also in a tendency to prolapse and other malposition of the womb. The menses are often suppressed and the kidneys congested. It seems as if the monthly congestion, instead of venting itself as it should through the uterine vessels, had extended to the kidneys. With it all, there is a profound melancholia. Patient must be doing something to engage the mind. Remember it, for women with prolapsus from atony, enervated by indolence and luxury (better when attention is engaged - hence when the doctor comes), or for those worn out with hard work; tired, strained muscles burn and ache; sleepless. Diabetes mellitus, and insipidus. Constant aching and tenderness over kidneys.",
   "dosage": "Tincture, to sixth attenuation."
 }

@@ -1,30 +1,32 @@
 {
-  "name": "Lolium temulentum", 
-  "Relationship": "Compare: SECALE; LATHYR; ASTRAG.", 
-  "Common names": "Darnel", 
+  "name": "Lolium temulentum",
+  "Relationship": "Compare: SECALE; LATHYR; ASTRAG.",
+  "Common names": "Darnel",
   "symptoms": {
     "Head": [
-      "Vertigo; must close eyes", 
-      "Noises in ears", 
-      "Anxious and depressed, confused", 
+      "Vertigo",
+      "must close eyes",
+      "Noises in ears",
+      "Anxious and depressed, confused",
       "Head heavy"
-    ], 
+    ],
     "Stomach": [
-      "Pain in pit of stomach and abdomen", 
-      "Severe purging", 
+      "Pain in pit of stomach and abdomen",
+      "Severe purging",
       "Nausea, vomiting"
-    ], 
+    ],
     "Extremities": [
-      "Violent pain in calves, as if bound with cords", 
-      "Trembling of hands in paralysis", 
-      "Spasmodic motion of arms and legs", 
-      "Cannot write; cannot hold a glass of water", 
-      "Cold extremities", 
-      "Loss of power in extremities", 
-      "In trembling of hands and legsgait unsteady", 
+      "Violent pain in calves, as if bound with cords",
+      "Trembling of hands in paralysis",
+      "Spasmodic motion of arms and legs",
+      "Cannot write",
+      "cannot hold a glass of water",
+      "Cold extremities",
+      "Loss of power in extremities",
+      "In trembling of hands and legsgait unsteady",
       "Trembling of all limbs"
     ]
-  }, 
-  "details": "Has been made use of in cephalgia, sciatica, paralysis. Prostration and restlessness.", 
+  },
+  "details": "Has been made use of in cephalgia, sciatica, paralysis. Prostration and restlessness.",
   "dosage": "Sixth potency."
 }

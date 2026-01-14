@@ -1,31 +1,33 @@
 {
-  "name": "Asparagus officinalis", 
-  "Relationship": "Antidote: Acon.; Apis. Compare: Althaea - Marshmallow - (contains asparagine; irritable bladder, throat and bronchi.) Physalis Alkekengi. Digital.; Sarsap.; Spigelia", 
-  "Common names": "Common Garden Asparagus", 
+  "name": "Asparagus officinalis",
+  "Relationship": "Antidote: Acon.; Apis. Compare: Althaea - Marshmallow - (contains asparagine; irritable bladder, throat and bronchi.) Physalis Alkekengi. Digital.; Sarsap.; Spigelia",
+  "Common names": "Common Garden Asparagus",
   "symptoms": {
     "Heart": [
-      "Hydrothorax", 
-      "Palpation, with oppression of chest", 
-      "Pulse intermits, weak, pain about left shoulder and heart, associated with bladder disturbances", 
+      "Hydrothorax",
+      "Palpation, with oppression of chest",
+      "Pulse intermits, weak, pain about left shoulder and heart, associated with bladder disturbances",
       "Great oppression in breathing"
-    ], 
+    ],
     "Head": [
-      "Migrainous morning headache with scotoma", 
-      "Aching in forehead and root of nose", 
-      "Throat feels rough, with hawking copious, tenacious mucus from throat", 
-      "Confused", 
+      "Migrainous morning headache with scotoma",
+      "Aching in forehead and root of nose",
+      "Throat feels rough, with hawking copious, tenacious mucus from throat",
+      "Confused",
       "Coryza, with profuse, thin fluid"
-    ], 
+    ],
     "Urine": [
-      "Lithiasis", 
-      "Frequent, with fine stitches in orifice of urethra; burning; of peculiar odor", 
+      "Lithiasis",
+      "Frequent, with fine stitches in orifice of urethra",
+      "burning",
+      "of peculiar odor",
       "Cystitis, with pus, mucus and tenesmus"
-    ], 
+    ],
     "Extremities": [
-      "Pain at acromion process of left scapula under clavicle and down arm, with feeble pulse", 
+      "Pain at acromion process of left scapula under clavicle and down arm, with feeble pulse",
       "Rheumatic pain in back, especially near shoulder and limbs"
     ]
-  }, 
-  "details": "Its marked and immediate action on the urinary secretion is well known. It causes weakness and cardia depression with dropsy. Rheumatic pains. Especially about left shoulder and heart.", 
+  },
+  "details": "Its marked and immediate action on the urinary secretion is well known. It causes weakness and cardia depression with dropsy. Rheumatic pains. Especially about left shoulder and heart.",
   "dosage": "Sixth potency"
 }

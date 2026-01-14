@@ -1,22 +1,26 @@
 {
-  "name": "Aralia racemosa", 
-  "Relationship": "Compare: Pecten - Scallop (humid asthma. Quick, labored breathing. Constriction of chest, especially right side. Asthma preceded by coryza and burning in throat and chest. Attack ends with copious expectoration of tough, frothy mucus. Worse at night.) Ars. Iod.; Naphtha line; Cepa; Rosa; Sabad.; Sinapis.", 
-  "Common names": "American Spikenard", 
+  "name": "Aralia racemosa",
+  "Relationship": "Compare: Pecten - Scallop (humid asthma. Quick, labored breathing. Constriction of chest, especially right side. Asthma preceded by coryza and burning in throat and chest. Attack ends with copious expectoration of tough, frothy mucus. Worse at night.) Ars. Iod.; Naphtha line; Cepa; Rosa; Sabad.; Sinapis.",
+  "Common names": "American Spikenard",
   "symptoms": {
     "Respiratory": [
-      "Constriction of chest; feels as if a foreign body were in throat", 
-      "Hay-fever; frequent sneezing", 
-      "Dry cough coming on after first sleep, about middle of night", 
-      "Obstruction worse in spring", 
-      "Asthma on lying down at night with spasmodic cough; worse after first sleep, with tickling in throat", 
-      "Rawness and burning behind sternum", 
+      "Constriction of chest",
+      "feels as if a foreign body were in throat",
+      "Hay-fever",
+      "frequent sneezing",
+      "Dry cough coming on after first sleep, about middle of night",
+      "Obstruction worse in spring",
+      "Asthma on lying down at night with spasmodic cough",
+      "worse after first sleep, with tickling in throat",
+      "Rawness and burning behind sternum",
       "The least current of air causes sneezing, with copious watery, excoriating nasal discharge, of salty acrid taste"
-    ], 
+    ],
     "Female": [
-      "Lochia suppressed, with tympanites", 
-      "Menses suppressed; leucorrhoea foul-smelling, acrid, with pressing-down pain"
+      "Lochia suppressed, with tympanites",
+      "Menses suppressed",
+      "leucorrhoea foul-smelling, acrid, with pressing-down pain"
     ]
-  }, 
-  "details": "This is a remedy for asthmatic conditions, with COUGH AGGRAVATED ON LYING DOWN. Drenching sweat during sleep. Extreme sensitiveness to drafts. Diarrhoea, prolapse of rectum. Aching in rectum extending upwards; worse lying on side lain upon.", 
+  },
+  "details": "This is a remedy for asthmatic conditions, with COUGH AGGRAVATED ON LYING DOWN. Drenching sweat during sleep. Extreme sensitiveness to drafts. Diarrhoea, prolapse of rectum. Aching in rectum extending upwards; worse lying on side lain upon.",
   "dosage": "Tincture, to third potency."
 }

@@ -1,40 +1,42 @@
 {
-  "name": "Gratiola", 
-  "Relationship": "Compare: DIG.; EUPH.; TAB.; CHAM.; AMMON. PIC.; NUX-VOM.", 
+  "name": "Gratiola",
+  "Relationship": "Compare: DIG.; EUPH.; TAB.; CHAM.; AMMON. PIC.; NUX-VOM.",
   "Modalities": [
     "Worse: drinking too much water"
-  ], 
-  "Common names": "Hedge Hyssop", 
+  ],
+  "Common names": "Hedge Hyssop",
   "symptoms": {
     "Head": [
-      "Eyes dry, burn", 
-      "Myopia", 
-      "Tightness in forehead, with wrinkles in skin", 
-      "Sick headache", 
-      "Sensation as if brain was contracting and head became smaller", 
+      "Eyes dry, burn",
+      "Myopia",
+      "Tightness in forehead, with wrinkles in skin",
+      "Sick headache",
+      "Sensation as if brain was contracting and head became smaller",
       "Rush of blood with vanishing of sight"
-    ], 
+    ],
     "Stomach": [
-      "Dyspepsia, with much distention of the stomach", 
-      "Dysphagia for liquids", 
-      "Cramps and colic after supper and during night, with swelling of abdomen and constipation", 
-      "Vertigo during and after meals; hunger and feeling of emptiness after meals"
-    ], 
+      "Dyspepsia, with much distention of the stomach",
+      "Dysphagia for liquids",
+      "Cramps and colic after supper and during night, with swelling of abdomen and constipation",
+      "Vertigo during and after meals",
+      "hunger and feeling of emptiness after meals"
+    ],
     "Stool": [
-      "Rectum constricted", 
-      "Hemorrhoids, with hypochondriasis", 
-      "Constipation, with gouty acidity", 
-      "Diarrhoea; green, frothy water, followed by anal burning, forcibly evacuated without pain"
-    ], 
+      "Rectum constricted",
+      "Hemorrhoids, with hypochondriasis",
+      "Constipation, with gouty acidity",
+      "Diarrhoea",
+      "green, frothy water, followed by anal burning, forcibly evacuated without pain"
+    ],
     "Sleep": [
       "Insomnia"
-    ], 
+    ],
     "Female": [
-      "Menses too profuse, premature, and too long", 
-      "Leucorrhoea", 
+      "Menses too profuse, premature, and too long",
+      "Leucorrhoea",
       "Nymphomania"
     ]
-  }, 
-  "details": "Acts especially on gastrointestinal tract. Chronic catarrhal conditions, leucorrhoea and gonorrhea. Obstinate ulcers. Useful in mental troubles from overweening pride. Especially useful in females. Nux symptoms in females often met by Gratiola.", 
+  },
+  "details": "Acts especially on gastrointestinal tract. Chronic catarrhal conditions, leucorrhoea and gonorrhea. Obstinate ulcers. Useful in mental troubles from overweening pride. Especially useful in females. Nux symptoms in females often met by Gratiola.",
   "dosage": "Second to third potency."
 }

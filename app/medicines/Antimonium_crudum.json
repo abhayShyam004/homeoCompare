@@ -1,125 +1,139 @@
 {
-  "name": "Antimonium crudum", 
-  "Relationship": "Compare: ANTIMONIUM CHLORIDUM. Butter of Antimony. (A remedy for cancer. Mucous membranes destroyed. Abrasions. Skin cold and clammy. Great prostration of strength. Dose - third trituration.) ANTIMON. JODAT. (Uterine hyperplasia; humid asthma. Pneumonia and bronchitis; loss of strength, and appetite, yellowish skin, sweaty, dull and drowsy.) In sub-acute and chronic colds in chest which have extended downwards from head and have fastened themselves upon the bronchial tubes in the form of hard, croupy cough with a decided wheeze and inability to raise the sputum, especially in the aged and weak patients (Bacmeister). Stage of resolution of pneumonia slow and delayed. Compare: Kermes mineral - Stibiato sulph. rub. (Bronchitis.) Also Puls., Ipecac, Sulph. Complementary: Sulph. Antidote: Hepar.", 
-  "Common names": "Black Sulphide of Antimony", 
+  "name": "Antimonium crudum",
+  "Relationship": "Compare: ANTIMONIUM CHLORIDUM. Butter of Antimony. (A remedy for cancer. Mucous membranes destroyed. Abrasions. Skin cold and clammy. Great prostration of strength. Dose - third trituration.) ANTIMON. JODAT. (Uterine hyperplasia; humid asthma. Pneumonia and bronchitis; loss of strength, and appetite, yellowish skin, sweaty, dull and drowsy.) In sub-acute and chronic colds in chest which have extended downwards from head and have fastened themselves upon the bronchial tubes in the form of hard, croupy cough with a decided wheeze and inability to raise the sputum, especially in the aged and weak patients (Bacmeister). Stage of resolution of pneumonia slow and delayed. Compare: Kermes mineral - Stibiato sulph. rub. (Bronchitis.) Also Puls., Ipecac, Sulph. Complementary: Sulph. Antidote: Hepar.",
+  "Common names": "Black Sulphide of Antimony",
   "symptoms": {
     "Urine": [
-      "Frequent, with burning, and backache; turbid and foul odor"
-    ], 
+      "Frequent, with burning, and backache",
+      "turbid and foul odor"
+    ],
     "Stool": [
-      "Diarrhoea after acids, sour wine, baths, over eating; slimy, flatulent stools", 
-      "Diarrhea alternates with constipation, especially in old people", 
-      "Stools composed entirely of mucus", 
-      "Catarrhal proctitis", 
-      "Hard lumps mixed with watery discharge", 
-      "Mucous piles, continued oozing of mucus", 
+      "Diarrhoea after acids, sour wine, baths, over eating",
+      "slimy, flatulent stools",
+      "Diarrhea alternates with constipation, especially in old people",
+      "Stools composed entirely of mucus",
+      "Catarrhal proctitis",
+      "Hard lumps mixed with watery discharge",
+      "Mucous piles, continued oozing of mucus",
       "Anal itching"
-    ], 
+    ],
     "Head": [
-      "Suppressed eruptions", 
-      "Headache with great loss of hair", 
-      "Aching, worse in vertex, on ascending, from bathing, from disordered stomach, especially from eating candy or drinking acid wine", 
-      "Heaviness in forehead, with vertigo; nausea, and nosebleed"
-    ], 
+      "Suppressed eruptions",
+      "Headache with great loss of hair",
+      "Aching, worse in vertex, on ascending, from bathing, from disordered stomach, especially from eating candy or drinking acid wine",
+      "Heaviness in forehead, with vertigo",
+      "nausea, and nosebleed"
+    ],
     "Fever": [
-      "Hot sweat", 
-      "Chilly even in warm room", 
+      "Hot sweat",
+      "Chilly even in warm room",
       "Intermittent with disgust, nausea, vomiting, eructations, coated tongue, diarrhoea"
-    ], 
+    ],
     "Stomach": [
-      "Eructation tasting of the ingesta", 
-      "Constant belching", 
-      "Loss of appetite", 
-      "Bloating after eating", 
-      "Gouty metastasis to stomach and bowels", 
-      "Gastric and intestinal complaints from bread and pastry, acids, sour wine, cold bathing, overheating, hot weather", 
-      "Desire for acids, pickles", 
-      "After nursing, the child vomits its milk in curds, and refuses to nurse afterwards, and is very cross", 
-      "Sweetish water brash", 
-      "Heartburn, nausea, vomiting", 
+      "Eructation tasting of the ingesta",
+      "Constant belching",
+      "Loss of appetite",
+      "Bloating after eating",
+      "Gouty metastasis to stomach and bowels",
+      "Gastric and intestinal complaints from bread and pastry, acids, sour wine, cold bathing, overheating, hot weather",
+      "Desire for acids, pickles",
+      "After nursing, the child vomits its milk in curds, and refuses to nurse afterwards, and is very cross",
+      "Sweetish water brash",
+      "Heartburn, nausea, vomiting",
       "Thirst in evening and night"
-    ], 
+    ],
     "Respiratory": [
-      "Loss of voice from becoming overheated", 
-      "Voice harsh and badly pitched", 
+      "Loss of voice from becoming overheated",
+      "Voice harsh and badly pitched",
       "Cough worse coming into warm room, with burning sensation in chest, itching of chest, oppression"
-    ], 
+    ],
     "Eyes": [
-      "Canthi raw and fissured", 
-      "Chronic blepharitis", 
-      "Pustules on cornea and lids", 
+      "Canthi raw and fissured",
+      "Chronic blepharitis",
+      "Pustules on cornea and lids",
       "Dull, sunken, red, itch, inflamed, agglutinated"
-    ], 
+    ],
     "Face": [
-      "Sallow and haggard", 
-      "Pimples, pustules, and boils on face", 
+      "Sallow and haggard",
+      "Pimples, pustules, and boils on face",
       "Yellow crusted eruption on cheeks and chin"
-    ], 
+    ],
     "Nose": [
-      "Nostrils chapped and covered with crusts", 
+      "Nostrils chapped and covered with crusts",
       "Eczema of nostrils, sore, cracked, and scurfy"
-    ], 
+    ],
     "Male": [
-      "Eruption on scrotum and about genitals", 
-      "Atrophy of penis and testicles", 
+      "Eruption on scrotum and about genitals",
+      "Atrophy of penis and testicles",
       "Impotence"
-    ], 
+    ],
     "Ears": [
-      "Moist eruption around ear", 
-      "Ringing and deafness", 
-      "Redness; swelling; pain in eustachian tube"
-    ], 
+      "Moist eruption around ear",
+      "Ringing and deafness",
+      "Redness",
+      "swelling",
+      "pain in eustachian tube"
+    ],
     "Mind": [
-      "Cross and contradictive; whatever is done fails to give satisfaction", 
-      "Much concerned about his fate", 
-      "Peevish; vexed without cause", 
-      "Sulky; does not wish to speak", 
-      "Angry at every little attention", 
-      "Sentimental mood", 
+      "Cross and contradictive",
+      "whatever is done fails to give satisfaction",
+      "Much concerned about his fate",
+      "Peevish",
+      "vexed without cause",
+      "Sulky",
+      "does not wish to speak",
+      "Angry at every little attention",
+      "Sentimental mood",
       "Child cannot bear to be touched or looked at"
-    ], 
+    ],
     "Back": [
       "Itching and pain of neck and back"
-    ], 
+    ],
     "Sleep": [
       "Continued drowsiness in old people"
-    ], 
+    ],
     "Female": [
-      "Excited; parts itch", 
-      "Before menses, toothache; menses too early and profuse", 
-      "Menses suppressed from cold bathing, with feeling of pressure in pelvis and tenderness in ovarian region", 
-      "Leucorrhoea watery; acrid, lumpy"
-    ], 
+      "Excited",
+      "parts itch",
+      "Before menses, toothache",
+      "menses too early and profuse",
+      "Menses suppressed from cold bathing, with feeling of pressure in pelvis and tenderness in ovarian region",
+      "Leucorrhoea watery",
+      "acrid, lumpy"
+    ],
     "Skin": [
-      "Dry gangrene", 
-      "Urticaria; measly-like eruption", 
-      "Pimples, vesicles, and pustules", 
-      "Scaly, pustular eruption with burning and itching, worse at night", 
-      "Thick, hard, honey-colored scabs", 
-      "Dry skin", 
-      "Eczema with gastric derangements", 
-      "Itching when warm in bed", 
-      "Warts", 
+      "Dry gangrene",
+      "Urticaria",
+      "measly-like eruption",
+      "Pimples, vesicles, and pustules",
+      "Scaly, pustular eruption with burning and itching, worse at night",
+      "Thick, hard, honey-colored scabs",
+      "Dry skin",
+      "Eczema with gastric derangements",
+      "Itching when warm in bed",
+      "Warts",
       "Sensitive to cold bathing"
-    ], 
+    ],
     "Throat": [
-      "Hawking in open air", 
-      "Much thick yellowish mucus from posterior nares", 
-      "Laryngitis", 
+      "Hawking in open air",
+      "Much thick yellowish mucus from posterior nares",
+      "Laryngitis",
       "Rough voice from over use"
-    ], 
+    ],
     "Extremities": [
-      "Nails brittle; grow out of shape", 
-      "Feet very tender; covered with large horny places", 
-      "Twitching of muscles", 
-      "Horny warts on hands and soles", 
-      "Jerks in arms", 
-      "Weakness and shaking of hands in writing followed by offensive flatulence", 
-      "Arthritic pain in fingers", 
-      "Pain in heels", 
+      "Nails brittle",
+      "grow out of shape",
+      "Feet very tender",
+      "covered with large horny places",
+      "Twitching of muscles",
+      "Horny warts on hands and soles",
+      "Jerks in arms",
+      "Weakness and shaking of hands in writing followed by offensive flatulence",
+      "Arthritic pain in fingers",
+      "Pain in heels",
       "Inflamed corns"
     ]
-  }, 
-  "details": "For homeopathic employment, the mental symptoms, and those of the gastric sphere, determine its choice. EXCESSIVE IRRITABILITY AND FRETFULNESS, together with a THICKLY-COATED WHITE TONGUE, are true guiding symptoms to many forms of disease calling for this remedy. All the conditions are aggravated by HEAT AND COLD BATHING. Cannot bear heat of sun. Tendency to grow fat. An absence of pain, where it could be expected, is noticeable. Gout with gastric symptoms.", 
+  },
+  "details": "For homeopathic employment, the mental symptoms, and those of the gastric sphere, determine its choice. EXCESSIVE IRRITABILITY AND FRETFULNESS, together with a THICKLY-COATED WHITE TONGUE, are true guiding symptoms to many forms of disease calling for this remedy. All the conditions are aggravated by HEAT AND COLD BATHING. Cannot bear heat of sun. Tendency to grow fat. An absence of pain, where it could be expected, is noticeable. Gout with gastric symptoms.",
   "dosage": "Third to sixth potency."
 }

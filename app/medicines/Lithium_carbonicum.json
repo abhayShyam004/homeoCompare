@@ -1,72 +1,79 @@
 {
-  "name": "Lithium carbonicum", 
-  "Relationship": "Compare: LYC.; AMMON. PHOS.; BENZ-AC.; CALC.; LITHIUM CHLOR. (symptoms of cinchonism, viz.: DIZZY head, full, BLURRING OF VISION. Ringing in ears; marked tremors; GENERAL WEAKNESS; marked muscular and general prostration; no gastrointestinal effects. Nose sore, heartburn, pain in teeth). LITHIUM LACTICUM (rheumatism of shoulder, and small joints relieved by moving about; worse, resting). LITHIUM BENZOICUM (deep-seated pains in loins; in small of back; uneasiness in bladder. Cystic irritation. Gallstones. Frequent desire. Diminishing uric acid deposit). LITHIUM BROMATUM (cerebral congestion, threatened apoplexy, insomnia and epilepsy).", 
+  "name": "Lithium carbonicum",
+  "Relationship": "Compare: LYC.; AMMON. PHOS.; BENZ-AC.; CALC.; LITHIUM CHLOR. (symptoms of cinchonism, viz.: DIZZY head, full, BLURRING OF VISION. Ringing in ears; marked tremors; GENERAL WEAKNESS; marked muscular and general prostration; no gastrointestinal effects. Nose sore, heartburn, pain in teeth). LITHIUM LACTICUM (rheumatism of shoulder, and small joints relieved by moving about; worse, resting). LITHIUM BENZOICUM (deep-seated pains in loins; in small of back; uneasiness in bladder. Cystic irritation. Gallstones. Frequent desire. Diminishing uric acid deposit). LITHIUM BROMATUM (cerebral congestion, threatened apoplexy, insomnia and epilepsy).",
   "Modalities": [
-    "Worse: in morning", 
-    "Worse: right side", 
+    "Worse: in morning",
+    "Worse: right side",
     "Better: rising and moving about"
-  ], 
-  "Common names": "Carbonate of Lithium", 
+  ],
+  "Common names": "Carbonate of Lithium",
   "symptoms": {
     "Heart": [
-      "Sudden shock in heart", 
-      "Rheumatic soreness in cardiac region", 
-      "Pains in heart before menses, and associated with pains in bladder, and before urinating; better, after", 
-      "Trembling and fluttering in heart, extending to back", 
+      "Sudden shock in heart",
+      "Rheumatic soreness in cardiac region",
+      "Pains in heart before menses, and associated with pains in bladder, and before urinating",
+      "better, after",
+      "Trembling and fluttering in heart, extending to back",
       "Throbbing, dull stitch in cardiac region"
-    ], 
+    ],
     "Eyes": [
-      "Eyes pain after reading", 
-      "Photophobia", 
-      "Dry lids", 
-      "Pain over eyes", 
-      "Half vision; invisible right half"
-    ], 
+      "Eyes pain after reading",
+      "Photophobia",
+      "Dry lids",
+      "Pain over eyes",
+      "Half vision",
+      "invisible right half"
+    ],
     "Respiratory": [
-      "Air feels cold when inspired", 
-      "Pain in mammary glands, which extend into the arms and fingers", 
-      "Constriction of chest", 
+      "Air feels cold when inspired",
+      "Pain in mammary glands, which extend into the arms and fingers",
+      "Constriction of chest",
       "Violent cough when lying down"
-    ], 
+    ],
     "Stomach": [
-      "Acidity, nausea, gnawing, relieved by eating", 
+      "Acidity, nausea, gnawing, relieved by eating",
       "Cannot endure slightest pressure of clothes"
-    ], 
+    ],
     "Urine": [
-      "Pain in region of right kidney", 
-      "Turbid urine, with mucus and red deposit", 
-      "While urinating, pressure in heart", 
-      "Soreness of bladder; pain in right kidney and ureter", 
-      "Tenesmus", 
-      "Cystitis, subacute and chronic", 
-      "Free and colorless", 
-      "Turbid urine with mucus, scanty and dark, acrid; sandy deposits"
-    ], 
+      "Pain in region of right kidney",
+      "Turbid urine, with mucus and red deposit",
+      "While urinating, pressure in heart",
+      "Soreness of bladder",
+      "pain in right kidney and ureter",
+      "Tenesmus",
+      "Cystitis, subacute and chronic",
+      "Free and colorless",
+      "Turbid urine with mucus, scanty and dark, acrid",
+      "sandy deposits"
+    ],
     "Head": [
-      "Externally sensitive", 
-      "Both cheeks covered with dry, bran-like scales", 
-      "Pain in heart; extends to head", 
-      "Trembling and throbbing", 
-      "Headache ceases while eating", 
-      "Dizzy states with ringing in ears", 
-      "Tension, as if bound; better, sitting and going out"
-    ], 
+      "Externally sensitive",
+      "Both cheeks covered with dry, bran-like scales",
+      "Pain in heart",
+      "extends to head",
+      "Trembling and throbbing",
+      "Headache ceases while eating",
+      "Dizzy states with ringing in ears",
+      "Tension, as if bound",
+      "better, sitting and going out"
+    ],
     "Skin": [
-      "Rough rash all over body, much loose epithelium, tough, dry, itchy skin", 
-      "Dull stitch, ending in itching", 
-      "Scabby, tettery eruption on hands, head, and cheeks, preceded by red, raw skin", 
+      "Rough rash all over body, much loose epithelium, tough, dry, itchy skin",
+      "Dull stitch, ending in itching",
+      "Scabby, tettery eruption on hands, head, and cheeks, preceded by red, raw skin",
       "Barber's itch"
-    ], 
+    ],
     "Extremities": [
-      "Rheumatic pains throughout shoulder-joint, arm, and fingers and small joints generally", 
-      "Pain in hollow of foot, extending to knee", 
-      "Swelling and tenderness of finger and toe joints; better, hot water", 
-      "Paralytic stiffness all over", 
-      "Itching about joints", 
-      "Nodular swellings in joints", 
+      "Rheumatic pains throughout shoulder-joint, arm, and fingers and small joints generally",
+      "Pain in hollow of foot, extending to knee",
+      "Swelling and tenderness of finger and toe joints",
+      "better, hot water",
+      "Paralytic stiffness all over",
+      "Itching about joints",
+      "Nodular swellings in joints",
       "Ankles pain when walking"
     ]
-  }, 
-  "details": "Chronic RHEUMATISM CONNECTED WITH HEART LESIONS and asthenopia offer a field for this remedy. Rheumatic nodes. Uric acid diathesis. Whole body is SORE. Gout and tophi.", 
+  },
+  "details": "Chronic RHEUMATISM CONNECTED WITH HEART LESIONS and asthenopia offer a field for this remedy. Rheumatic nodes. Uric acid diathesis. Whole body is SORE. Gout and tophi.",
   "dosage": "First to third trituration."
 }

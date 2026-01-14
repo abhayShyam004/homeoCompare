@@ -1,41 +1,44 @@
 {
   "symptoms": {
     "Eyes": [
-      "Distressing photophobia", 
-      "Spots before eyes", 
-      "Sore eyeballs", 
+      "Distressing photophobia",
+      "Spots before eyes",
+      "Sore eyeballs",
       "Stitches in eyebrow"
-    ], 
+    ],
     "Respiratory": [
-      "Asthma in scrofulous patients", 
-      "Violent dyspnoea, oppression of chest with trembling", 
+      "Asthma in scrofulous patients",
+      "Violent dyspnoea, oppression of chest with trembling",
       "Pain about bifurcation of trachea"
-    ], 
+    ],
     "Head": [
-      "Vertigo felt in vertex, greater when standing; drowsiness; pain from forehead to back of head", 
-      "Crusta lactea", 
+      "Vertigo felt in vertex, greater when standing",
+      "drowsiness",
+      "pain from forehead to back of head",
+      "Crusta lactea",
       "Eczema behind ear"
-    ], 
+    ],
     "Abdomen": [
-      "Pain in liver on pressure", 
-      "Colic below navel", 
-      "Pain in sigmoid flexure and rectum", 
+      "Pain in liver on pressure",
+      "Colic below navel",
+      "Pain in sigmoid flexure and rectum",
       "Painful bleeding, protruding piles"
-    ], 
+    ],
     "Sleep": [
-      "Great drowsiness; in morning and before and after meals with weariness"
-    ], 
+      "Great drowsiness",
+      "in morning and before and after meals with weariness"
+    ],
     "Skin": [
       "Prickling, itching, worse back of hand"
-    ], 
+    ],
     "Ears": [
-      "Eczema around ear", 
-      "Inflammation about auricle", 
+      "Eczema around ear",
+      "Inflammation about auricle",
       "Deep ulcerated auricle"
     ]
-  }, 
-  "details": "A powerful medicine whenever ENLARGED GLANDS are present. Hodgkin's disease. A valuable skin remedy. Has a specific affinity for the breast; very useful in the dissipation of breast tumors. ECZEMA OF THE EAR. Pruritus vaginae. Lupoid ulceration. SCROFULOUS SWELLINGS. (CISTUS.) PAINFUL HEMORRHOIDS. Tubercular testis. Epithelioma. Nodosities in the breasts. (SCIRRHINUM.) Pain in all flexor muscles.", 
-  "Common names": "Knotted Fig wort", 
-  "name": "Scrophularia nodosa", 
+  },
+  "details": "A powerful medicine whenever ENLARGED GLANDS are present. Hodgkin's disease. A valuable skin remedy. Has a specific affinity for the breast; very useful in the dissipation of breast tumors. ECZEMA OF THE EAR. Pruritus vaginae. Lupoid ulceration. SCROFULOUS SWELLINGS. (CISTUS.) PAINFUL HEMORRHOIDS. Tubercular testis. Epithelioma. Nodosities in the breasts. (SCIRRHINUM.) Pain in all flexor muscles.",
+  "Common names": "Knotted Fig wort",
+  "name": "Scrophularia nodosa",
   "dosage": "Tincture and first potency. Apply locally to cancerous glands also SEMPER. VIV."
 }

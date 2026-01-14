@@ -1,64 +1,67 @@
 {
-  "name": "Rhamnus californica", 
-  "Relationship": "RHAMNUS CATHARTICA OR RHAMNUS FRANGULA - European Buckthorn - a rheumatic remedy - (abdominal symptoms, colic; diarrhoea; hemorrhoids, especially chronic). RHAMNUS PURSHIANA - CASCARA SAGRADA - (palliative in constipation, as an intestinal tonic, and dyspepsia dependent thereon. 10-15 drops of tincture).", 
-  "Common names": "California Coffee-tree", 
+  "name": "Rhamnus californica",
+  "Relationship": "RHAMNUS CATHARTICA OR RHAMNUS FRANGULA - European Buckthorn - a rheumatic remedy - (abdominal symptoms, colic; diarrhoea; hemorrhoids, especially chronic). RHAMNUS PURSHIANA - CASCARA SAGRADA - (palliative in constipation, as an intestinal tonic, and dyspepsia dependent thereon. 10-15 drops of tincture).",
+  "Common names": "California Coffee-tree",
   "symptoms": {
     "Heart": [
-      "Slow pulse", 
+      "Slow pulse",
       "Variation of pulse"
-    ], 
+    ],
     "Head": [
-      "Dull aching in frontal region , extending backwards and over forehead", 
-      "Deep, right-sided frontal headache", 
-      "Heavy bruised sensation; better, from pressure", 
-      "Twitching eyelids", 
-      "Soreness, especially in occiput and vertex, worse, bending over", 
-      "Dizzy full feeling", 
-      "Dull pain in left temple", 
+      "Dull aching in frontal region , extending backwards and over forehead",
+      "Deep, right-sided frontal headache",
+      "Heavy bruised sensation",
+      "better, from pressure",
+      "Twitching eyelids",
+      "Soreness, especially in occiput and vertex, worse, bending over",
+      "Dizzy full feeling",
+      "Dull pain in left temple",
       "Bursting feeling with every step"
-    ], 
+    ],
     "Respiratory": [
-      "Substernal oppression", 
+      "Substernal oppression",
       "Tenderness on pressure of right intercostal muscles"
-    ], 
+    ],
     "Urine": [
-      "Increased urination", 
+      "Increased urination",
       "Tickling in anterior urethra, small morning drop"
-    ], 
+    ],
     "Mind": [
-      "Lassitude; mentally dull and dazed; unable to concentrate mind on studies", 
+      "Lassitude",
+      "mentally dull and dazed",
+      "unable to concentrate mind on studies",
       "Nervous, restless, irritable"
-    ], 
+    ],
     "Face": [
-      "Outward pressure from malar processes", 
+      "Outward pressure from malar processes",
       "Flushed, hot and glowing"
-    ], 
+    ],
     "Throat": [
-      "Dry, rough", 
+      "Dry, rough",
       "Soreness on right side and tonsil"
-    ], 
+    ],
     "Mouth": [
-      "Tongue coated, with clean, pink, central patch", 
+      "Tongue coated, with clean, pink, central patch",
       "Canker sore between gums and lips"
-    ], 
+    ],
     "Female": [
       "Sexual desire increased"
-    ], 
+    ],
     "Bowels": [
-      "Flatulent diarrhoea", 
-      "Tenesmus and dry stool", 
+      "Flatulent diarrhoea",
+      "Tenesmus and dry stool",
       "Constipation with some flatus"
-    ], 
+    ],
     "Extremities": [
-      "Walked like a drunken man", 
-      "Unable to control muscular action", 
+      "Walked like a drunken man",
+      "Unable to control muscular action",
       "Legs sore"
-    ], 
+    ],
     "Ears": [
-      "Soreness, deep under right tragus on swallowing", 
+      "Soreness, deep under right tragus on swallowing",
       "Dullness of hearing"
     ]
-  }, 
-  "details": "One of the most positive remedies for rheumatism and MUSCULAR PAINS. Pleurodynia, lumbago, gastralgia. Vesical tenesmus; DYSMENORRHOEA of myalgic origin; pain in head, neck, and face. INFLAMMATORY RHEUMATISM, joints swollen, painful; tendency to metastasis; profuse sweat. Rheumatic heart (Webster). Provings of students. 2x potency.", 
+  },
+  "details": "One of the most positive remedies for rheumatism and MUSCULAR PAINS. Pleurodynia, lumbago, gastralgia. Vesical tenesmus; DYSMENORRHOEA of myalgic origin; pain in head, neck, and face. INFLAMMATORY RHEUMATISM, joints swollen, painful; tendency to metastasis; profuse sweat. Rheumatic heart (Webster). Provings of students. 2x potency.",
   "dosage": "Tincture in 15-drop doses every four hours."
 }

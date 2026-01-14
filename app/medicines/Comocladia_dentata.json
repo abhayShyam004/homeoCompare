@@ -1,41 +1,44 @@
 {
-  "name": "Comocladia dentata", 
-  "Relationship": "Compare: RHUS; ANACARD.; EUPHORB.", 
+  "name": "Comocladia dentata",
+  "Relationship": "Compare: RHUS; ANACARD.; EUPHORB.",
   "Modalities": [
-    "Worse: touch", 
-    "Worse: warmth", 
-    "Worse: rest; night", 
-    "Better: open air", 
-    "Better: scratching", 
+    "Worse: touch",
+    "Worse: warmth",
+    "Worse: rest; night",
+    "Better: open air",
+    "Better: scratching",
     "Better: by motion"
-  ], 
-  "Common names": "Guao", 
+  ],
+  "Common names": "Guao",
   "symptoms": {
     "Eyes": [
-      "Worse, near warm stove; feels as if pressed outward", 
-      "Sees only glimmer of light with left eye", 
-      "Motion of eyes aggravates", 
-      "Ciliary neuralgia with eyes feeling large and protruded, especially right", 
-      "Glaucoma, sense of fullness; eyeball feels too large"
-    ], 
+      "Worse, near warm stove",
+      "feels as if pressed outward",
+      "Sees only glimmer of light with left eye",
+      "Motion of eyes aggravates",
+      "Ciliary neuralgia with eyes feeling large and protruded, especially right",
+      "Glaucoma, sense of fullness",
+      "eyeball feels too large"
+    ],
     "Chest": [
-      "Acute pain in left mammary gland", 
-      "Cough with pain under left breast, going through to left scapula", 
+      "Acute pain in left mammary gland",
+      "Cough with pain under left breast, going through to left scapula",
       "Pain from right side of chest down arm to fingers"
-    ], 
+    ],
     "Face": [
       "Swollen, with eyes projecting"
-    ], 
+    ],
     "Skin": [
-      "Itches, red and pimples", 
-      "Red stripes on skin", 
-      "Deep ulcers, with hard edges", 
-      "Erysipelas", 
-      "Leprosy", 
-      "Eczema  of the trunk and extremities; also pustular type", 
+      "Itches, red and pimples",
+      "Red stripes on skin",
+      "Deep ulcers, with hard edges",
+      "Erysipelas",
+      "Leprosy",
+      "Eczema  of the trunk and extremities",
+      "also pustular type",
       "Redness all over, like scarlatina"
     ]
-  }, 
-  "details": "Important eye and skin symptoms. Affections of antrum. Sacroiliac and abdominal pain. THROBBING PAINS WORSE BY HEAT. Pain in joints and ankles.", 
+  },
+  "details": "Important eye and skin symptoms. Affections of antrum. Sacroiliac and abdominal pain. THROBBING PAINS WORSE BY HEAT. Pain in joints and ankles.",
   "dosage": "First to thirtieth potency."
 }

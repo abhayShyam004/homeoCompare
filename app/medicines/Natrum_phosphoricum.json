@@ -1,74 +1,78 @@
 {
-  "name": "Natrum phosphoricum", 
-  "Relationship": "Compare: NATRUM LACTIC. (rheumatism and gout; gouty concretions; rheumatism with diabetes); NATRUM NITROSUM (angina pectoris. Cyanosis, fainting, copious liquid stools at night; throbbing and fullness; faintness, nervous pain in head, nausea, eructations, blue lips). NATRUM SILICOFLUORICUM - SALUFER - (a cancer remedy; tumors, bone affection, caries, lupus, ethmoiditis. Must be used carefully); NAT-SELEN. (chronic laryngitis and laryngeal phthisis; hoarseness of singers, expectorate small lumps of mucus with frequent clearing of throat); NAT-SULPHUROSUM (diarrhoea, with YEASTY STOOLS); NAT-SULPH-CARBOL. (pyaemia; purulent pleurisy, 3 to 5 grains every three hours); NAT-TELLURICUM (breath has odor of garlic; night-sweats of phthisis) CALC.; ROBIN.; PHOS. In oxaluria 1x four times daily prevents formation of calculi; keeps the oxal. of lime in solution (Schwartz).", 
-  "Common names": "Phosphate of Sodium", 
+  "name": "Natrum phosphoricum",
+  "Relationship": "Compare: NATRUM LACTIC. (rheumatism and gout; gouty concretions; rheumatism with diabetes); NATRUM NITROSUM (angina pectoris. Cyanosis, fainting, copious liquid stools at night; throbbing and fullness; faintness, nervous pain in head, nausea, eructations, blue lips). NATRUM SILICOFLUORICUM - SALUFER - (a cancer remedy; tumors, bone affection, caries, lupus, ethmoiditis. Must be used carefully); NAT-SELEN. (chronic laryngitis and laryngeal phthisis; hoarseness of singers, expectorate small lumps of mucus with frequent clearing of throat); NAT-SULPHUROSUM (diarrhoea, with YEASTY STOOLS); NAT-SULPH-CARBOL. (pyaemia; purulent pleurisy, 3 to 5 grains every three hours); NAT-TELLURICUM (breath has odor of garlic; night-sweats of phthisis) CALC.; ROBIN.; PHOS. In oxaluria 1x four times daily prevents formation of calculi; keeps the oxal. of lime in solution (Schwartz).",
+  "Common names": "Phosphate of Sodium",
   "symptoms": {
     "Eyes": [
-      "Dilation of one pupil", 
-      "Discharge of golden-yellow, creamy matter from the eyes", 
+      "Dilation of one pupil",
+      "Discharge of golden-yellow, creamy matter from the eyes",
       "Whites of eyes dirty yellow"
-    ], 
+    ],
     "Stomach": [
-      "Spits mouthfuls of food", 
+      "Spits mouthfuls of food",
       "Sour eructations, sour vomiting, greenish diarrhoea"
-    ], 
+    ],
     "Head": [
       "Feels dull in the morning, full feeling and throbbing"
-    ], 
+    ],
     "Mind": [
-      "Fear", 
-      "Imagines, on waking at night, that pieces of furniture are persons; that he hears footsteps in next room"
-    ], 
+      "Fear",
+      "Imagines, on waking at night, that pieces of furniture are persons",
+      "that he hears footsteps in next room"
+    ],
     "Back": [
-      "Weariness; aching in wrists and finger-joints", 
-      "Hamstrings sore", 
-      "Rheumatic arthritis", 
+      "Weariness",
+      "aching in wrists and finger-joints",
+      "Hamstrings sore",
+      "Rheumatic arthritis",
       "Synovial crepitation"
-    ], 
+    ],
     "Face": [
       "Paleness of bluish, florid appearance of face"
-    ], 
+    ],
     "Mouth": [
-      "Dysphagic", 
-      "Thick, creamy membrane over tonsils and soft palate", 
-      "Thin, moist coating on the tongue", 
-      "Canker sores of lip and cheeks", 
-      "Yellow, creamy coating at the back part of the roof of the mouth", 
+      "Dysphagic",
+      "Thick, creamy membrane over tonsils and soft palate",
+      "Thin, moist coating on the tongue",
+      "Canker sores of lip and cheeks",
+      "Yellow, creamy coating at the back part of the roof of the mouth",
       "Blisters on tip of tongue, with stinging in evening"
-    ], 
+    ],
     "Nose": [
-      "Itching of nose", 
-      "Naso-pharyngeal catarrh, with thick, yellow, offensive mucus", 
+      "Itching of nose",
+      "Naso-pharyngeal catarrh, with thick, yellow, offensive mucus",
       "Offensive odor"
-    ], 
+    ],
     "Female": [
-      "Leucorrhoea; discharge creamy or honey-colored, or acid and watery", 
-      "Menses too early; pale, thin, watery", 
-      "Sour-smelling discharges from uterus", 
-      "Sterility, with acid secretions from vagina", 
+      "Leucorrhoea",
+      "discharge creamy or honey-colored, or acid and watery",
+      "Menses too early",
+      "pale, thin, watery",
+      "Sour-smelling discharges from uterus",
+      "Sterility, with acid secretions from vagina",
       "Morning sickness, with sour vomiting"
-    ], 
+    ],
     "Skin": [
-      "Feet icy cold in daytime, burn at night", 
-      "Swelling of lymphatic glands", 
-      "Erysipelas", 
-      "Hives", 
-      "Yellow", 
-      "Smooth, red, shining", 
+      "Feet icy cold in daytime, burn at night",
+      "Swelling of lymphatic glands",
+      "Erysipelas",
+      "Hives",
+      "Yellow",
+      "Smooth, red, shining",
       "Itching in various parts, especially of ankles"
-    ], 
+    ],
     "Extremities": [
       "Rheumatism of the knee-joint"
-    ], 
+    ],
     "Male": [
-      "Emissions without dreams, with weakness in back and trembling in limbs", 
-      "Gonorrhea", 
+      "Emissions without dreams, with weakness in back and trembling in limbs",
+      "Gonorrhea",
       "Desire without erection"
-    ], 
+    ],
     "Ears": [
       "One ear hot, frequently itchy, accompanied by gastric derangements and acidity"
     ]
-  }, 
-  "details": "Natrum phosphoricum is the remedy for conditions arising from excess of lactic acid, often resulting from too much sugar. Ailments, with EXCESS OF ACIDITY. Sour eructations and taste. Sour vomiting. YELLOW, CREAMY COATING AT THE BACK OF THE ROOF OF MOUTH AND TONGUE. Inflammation of any part of the throat, with sensation of a lump in throat. Flatulence, with sour risings. Colic, with symptoms of worms. of joints. JAUNDICE (1x trit.) Oxaluria.", 
+  },
+  "details": "Natrum phosphoricum is the remedy for conditions arising from excess of lactic acid, often resulting from too much sugar. Ailments, with EXCESS OF ACIDITY. Sour eructations and taste. Sour vomiting. YELLOW, CREAMY COATING AT THE BACK OF THE ROOF OF MOUTH AND TONGUE. Inflammation of any part of the throat, with sensation of a lump in throat. Flatulence, with sour risings. Colic, with symptoms of worms. of joints. JAUNDICE (1x trit.) Oxaluria.",
   "dosage": "Third to twelfth trituration. In Jaundice 1x. Non-homeopathically. Phosphate soda used hypodermically for Morphine habit, by Dr. M. J. Lys. Phosphate Soda, 75 gr. daily, for constitutional iodism, thyroidism and Grave's disease."
 }

@@ -1,25 +1,29 @@
 {
   "symptoms": {
     "Head": [
-      "Ozaena; frontal pain", 
-      "Influenza, with aching pains all over, and heat in the limbs", 
+      "Ozaena",
+      "frontal pain",
+      "Influenza, with aching pains all over, and heat in the limbs",
       "Occipital pain, with nausea on rising, followed by vomiting"
-    ], 
+    ],
     "Stomach": [
-      "Stools watery, frothy", 
-      "Loathing of food; nausea on rising, followed by vomiting and cramps"
-    ], 
+      "Stools watery, frothy",
+      "Loathing of food",
+      "nausea on rising, followed by vomiting and cramps"
+    ],
     "Skin": [
-      "Itching welts", 
+      "Itching welts",
       "Urticaria from gastric derangement"
-    ], 
+    ],
     "Extremities": [
-      "Stiffness of all joints; calves numbs; aching in bones", 
-      "Rheumatic pain in back", 
+      "Stiffness of all joints",
+      "calves numbs",
+      "aching in bones",
+      "Rheumatic pain in back",
       "Pains in limbs"
     ]
-  }, 
-  "Common names": "Fever-root", 
-  "name": "Triosteum perfoliatum", 
+  },
+  "Common names": "Fever-root",
+  "name": "Triosteum perfoliatum",
   "details": "Triosteum is a very valuable remedy in diarrhoea attended with colic pains and nausea, NUMBNESS OF LOWER LIMBS AFTER STOOL, and increased flow of urine; also in influenza. Quiets nervous symptoms. (COFFEA.; HYOS.) Biliousness. Bilious colic."
 }

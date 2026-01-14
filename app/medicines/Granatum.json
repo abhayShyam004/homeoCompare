@@ -1,41 +1,46 @@
 {
-  "name": "Granatum", 
-  "Relationship": "Compare: PELLETIERINE (one of its constituents - an anthelmintic, especially for tapeworm); CINA; KOUSSO.", 
-  "Common names": "Pomegranate", 
+  "name": "Granatum",
+  "Relationship": "Compare: PELLETIERINE (one of its constituents - an anthelmintic, especially for tapeworm); CINA; KOUSSO.",
+  "Common names": "Pomegranate",
   "symptoms": {
     "Head": [
-      "Vertigo very persistent", 
-      "Sunken eyes; pupils dilated; weak sight", 
+      "Vertigo very persistent",
+      "Sunken eyes",
+      "pupils dilated",
+      "weak sight",
       "Feels empty"
-    ], 
+    ],
     "Stomach": [
-      "Poor digestion", 
-      "Vomiting at night", 
-      "Constant hunger", 
+      "Poor digestion",
+      "Vomiting at night",
+      "Constant hunger",
       "Loses flesh"
-    ], 
+    ],
     "Abdomen": [
-      "Pain in stomach and abdomen; worse about umbilicus ; ineffectual urging", 
-      "Itching at anus", 
-      "Swelling resembling umbilical hernia", 
+      "Pain in stomach and abdomen",
+      "worse about umbilicus",
+      "ineffectual urging",
+      "Itching at anus",
+      "Swelling resembling umbilical hernia",
       "Dragging in vaginal region, as if hernia would protrude"
-    ], 
+    ],
     "Chest": [
-      "Oppressed, with sighing", 
-      "Pain between shoulders; even clothing is oppressive"
-    ], 
+      "Oppressed, with sighing",
+      "Pain between shoulders",
+      "even clothing is oppressive"
+    ],
     "Skin": [
-      "Itching in palms", 
-      "Jaundiced complexion", 
+      "Itching in palms",
+      "Jaundiced complexion",
       "Sensation as if pimples would break out"
-    ], 
+    ],
     "Extremities": [
-      "Convulsive movements", 
-      "Tearing in knee-joint", 
-      "Pain around shoulders, as if heavy load had been carried", 
+      "Convulsive movements",
+      "Tearing in knee-joint",
+      "Pain around shoulders, as if heavy load had been carried",
       "Pain in all finger-joints"
     ]
-  }, 
-  "details": "As a vermifuge for the expulsion of tapeworm, and homeopathically for the following symptomatic indications. SALIVATION, with nausea, and vertigo. Spasm of the glottis.", 
+  },
+  "details": "As a vermifuge for the expulsion of tapeworm, and homeopathically for the following symptomatic indications. SALIVATION, with nausea, and vertigo. Spasm of the glottis.",
   "dosage": "First to third potency."
 }

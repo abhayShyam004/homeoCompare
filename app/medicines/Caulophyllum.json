@@ -1,33 +1,35 @@
 {
-  "name": "Caulophyllum", 
-  "Relationship": "Incompatible: Coffea. Compare: Viol. Odor. (rheumatic carpal and metacarpal joints); Cimicif.; Sepia; Pulsat.; Gels.", 
-  "Common names": "Blue Cohosh", 
+  "name": "Caulophyllum",
+  "Relationship": "Incompatible: Coffea. Compare: Viol. Odor. (rheumatic carpal and metacarpal joints); Cimicif.; Sepia; Pulsat.; Gels.",
+  "Common names": "Blue Cohosh",
   "symptoms": {
     "Stomach": [
-      "Dyspepsia with spasmodic symptoms", 
+      "Dyspepsia with spasmodic symptoms",
       "Cardialgia, spasms of stomach"
-    ], 
+    ],
     "Female": [
-      "Extraordinary rigidity of os", 
-      "Spasmodic and severe pains, which fly in all directions; shivering, without progress: false pains", 
-      "Needle-like pains in cervix", 
-      "After-pains", 
-      "Revives labor pains and furthers progress of labor", 
-      "Menses and leucorrhoea profuse", 
-      "Lochia protracted; great atony", 
-      "Dysmenorrhoea, with pains flying to other parts of body", 
-      "Habitual abortion from uterine debility", 
+      "Extraordinary rigidity of os",
+      "Spasmodic and severe pains, which fly in all directions",
+      "shivering, without progress: false pains",
+      "Needle-like pains in cervix",
+      "After-pains",
+      "Revives labor pains and furthers progress of labor",
+      "Menses and leucorrhoea profuse",
+      "Lochia protracted",
+      "great atony",
+      "Dysmenorrhoea, with pains flying to other parts of body",
+      "Habitual abortion from uterine debility",
       "Leucorrhoea, with moth-spots on forehead"
-    ], 
+    ],
     "Skin": [
       "Discoloration of skin in women with menstrual and uterine disorder"
-    ], 
+    ],
     "Extremities": [
-      "Erratic pains, changing place every few minutes", 
-      "Cutting pains on closing hands", 
+      "Erratic pains, changing place every few minutes",
+      "Cutting pains on closing hands",
       "Severe drawing, erratic pain and stiffness in small joints, fingers, toes, ankles, etc. aching in wrists"
     ]
-  }, 
-  "details": "This is a woman's remedy. Want of tonicity of the womb. During labor, when the pains are deficient and the patient is exhausted and fretful. Besides, it has a special affinity for the smaller joints. Thrush, locally and internally.", 
+  },
+  "details": "This is a woman's remedy. Want of tonicity of the womb. During labor, when the pains are deficient and the patient is exhausted and fretful. Besides, it has a special affinity for the smaller joints. Thrush, locally and internally.",
   "dosage": "Tincture to third attenuation."
 }

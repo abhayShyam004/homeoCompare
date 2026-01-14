@@ -1,68 +1,77 @@
 {
-  "name": "Arundo", 
-  "Relationship": "Compare: Anthroxantum - sweet vernal grass (a popular medicine for hay-fever and coryza). Lolium; Cepa; Sabad.; Silica.", 
-  "Common names": "Reed", 
+  "name": "Arundo",
+  "Relationship": "Compare: Anthroxantum - sweet vernal grass (a popular medicine for hay-fever and coryza). Lolium; Cepa; Sabad.; Silica.",
+  "Common names": "Reed",
   "symptoms": {
     "Head": [
-      "Deep seated pain in sides of head", 
-      "Itching; falling off of hair; roots of hair painful", 
-      "Pain in occiput, extends to right ciliary region", 
+      "Deep seated pain in sides of head",
+      "Itching",
+      "falling off of hair",
+      "roots of hair painful",
+      "Pain in occiput, extends to right ciliary region",
       "Pustules"
-    ], 
+    ],
     "Respiratory": [
-      "Burning and pain in nipples", 
-      "Dyspnoea; cough; bluish expectoration"
-    ], 
+      "Burning and pain in nipples",
+      "Dyspnoea",
+      "cough",
+      "bluish expectoration"
+    ],
     "Stomach": [
-      "Coldness in stomach", 
+      "Coldness in stomach",
       "Longing for acids"
-    ], 
+    ],
     "Urine": [
-      "Red sediment", 
+      "Red sediment",
       "Burning"
-    ], 
+    ],
     "Stool": [
-      "Diarrhoea of nursing children", 
-      "Burning at anus", 
+      "Diarrhoea of nursing children",
+      "Burning at anus",
       "Greenish"
-    ], 
+    ],
     "Abdomen": [
-      "Movement as from something alive", 
-      "Flatulence; pain at pubic region"
-    ], 
+      "Movement as from something alive",
+      "Flatulence",
+      "pain at pubic region"
+    ],
     "Mouth": [
-      "Burning and itching; bleeding of gums", 
-      "Fissures in tongue", 
+      "Burning and itching",
+      "bleeding of gums",
+      "Fissures in tongue",
       "Ulcers and exfoliations in the commissaries"
-    ], 
+    ],
     "Nose": [
-      "Annoying itching in the nostrils and roof of the mouth", 
-      "Sneezing, itching of nostrils", 
-      "Hay-fever begins with burning and itching of palate and conjunctiva", 
-      "Coryza; loss of smell"
-    ], 
+      "Annoying itching in the nostrils and roof of the mouth",
+      "Sneezing, itching of nostrils",
+      "Hay-fever begins with burning and itching of palate and conjunctiva",
+      "Coryza",
+      "loss of smell"
+    ],
     "Female": [
-      "Desire with vaginal pruritus", 
-      "Neuralgic pains from face to shoulders and pubis", 
+      "Desire with vaginal pruritus",
+      "Neuralgic pains from face to shoulders and pubis",
       "Menses too early and too profuse"
-    ], 
+    ],
     "Skin": [
-      "Fissures in fingers and heels", 
-      "Eczema; itching and crawling, especially of chest, upper extremities"
-    ], 
+      "Fissures in fingers and heels",
+      "Eczema",
+      "itching and crawling, especially of chest, upper extremities"
+    ],
     "Extremities": [
-      "Itching, burning; oedema of hands and feet", 
-      "Copious and offensive sweat of feet", 
+      "Itching, burning",
+      "oedema of hands and feet",
+      "Copious and offensive sweat of feet",
       "Burning and swelling of soles"
-    ], 
+    ],
     "Male": [
       "Pain in spermatic cord after embrace"
-    ], 
+    ],
     "Ears": [
-      "Eczema behind ears", 
+      "Eczema behind ears",
       "Burning and itching in auditory canals"
     ]
-  }, 
-  "details": "A remedy for catarrhal states. Hay-fever. Arundo donax seems to be the same: Acts on excretory and generative organs; suppuration, especially chronic, and where the ulceration is fistulous, especially in long bones. Itching eruption on chest, upper extremities and behind ears.", 
+  },
+  "details": "A remedy for catarrhal states. Hay-fever. Arundo donax seems to be the same: Acts on excretory and generative organs; suppuration, especially chronic, and where the ulceration is fistulous, especially in long bones. Itching eruption on chest, upper extremities and behind ears.",
   "dosage": "Third to sixth potency."
 }

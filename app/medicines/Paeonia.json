@@ -1,41 +1,45 @@
 {
-  "name": "Paeonia", 
-  "Relationship": "Compare: GLECHOMA - Ground Ivy - (rectal symptom). HAMAN.; SIL.; AESC.; RATANH. (GREAT CONSTRICTION of anus; stools forced with great effort). Antidotes: RATANH.; ALOE.", 
-  "Common names": "Peony", 
+  "name": "Paeonia",
+  "Relationship": "Compare: GLECHOMA - Ground Ivy - (rectal symptom). HAMAN.; SIL.; AESC.; RATANH. (GREAT CONSTRICTION of anus; stools forced with great effort). Antidotes: RATANH.; ALOE.",
+  "Common names": "Peony",
   "symptoms": {
     "Head": [
-      "Nervous", 
-      "Burning in eyes and ringing in ears", 
-      "Vertigo when moving", 
+      "Nervous",
+      "Burning in eyes and ringing in ears",
+      "Vertigo when moving",
       "Rush of blood to head and face"
-    ], 
+    ],
     "Rectum": [
-      "Biting, itching in anus; orifice swollen", 
-      "Atrocious pains with and after each stool", 
-      "Hemorrhoids, fissures, ulceration of anus and perineum, purple, covered with crusts", 
-      "Painful ulcer, oozing offensive moisture on perineum", 
-      "Burning in anus after stool; then internal chilliness", 
-      "Fistula ani, diarrhoea, with anal burning and internal chilliness", 
+      "Biting, itching in anus",
+      "orifice swollen",
+      "Atrocious pains with and after each stool",
+      "Hemorrhoids, fissures, ulceration of anus and perineum, purple, covered with crusts",
+      "Painful ulcer, oozing offensive moisture on perineum",
+      "Burning in anus after stool",
+      "then internal chilliness",
+      "Fistula ani, diarrhoea, with anal burning and internal chilliness",
       "Sudden, pasty diarrhoea, with faintness in abdomen"
-    ], 
+    ],
     "Chest": [
-      "Dull shooting from to back through heart", 
-      "Sticking pain in left chest", 
+      "Dull shooting from to back through heart",
+      "Sticking pain in left chest",
       "Heat in chest"
-    ], 
+    ],
     "Sleep": [
       "Terrifying dreams, nightmare"
-    ], 
+    ],
     "Skin": [
-      "Ulcers below coccyx, around sacrum; varicose veins", 
-      "Ulcers in general, from pressure, bedsores, etc. itching, burning, as from nettles", 
+      "Ulcers below coccyx, around sacrum",
+      "varicose veins",
+      "Ulcers in general, from pressure, bedsores, etc. itching, burning, as from nettles",
       "Sensitive, painful"
-    ], 
+    ],
     "Extremities": [
-      "Weakness of legs, inhibiting walking", 
-      "Pain in wrist and fingers; knees and toes"
+      "Weakness of legs, inhibiting walking",
+      "Pain in wrist and fingers",
+      "knees and toes"
     ]
-  }, 
-  "details": "The rectal and anal symptoms are most important. Chronic ulcers on lower parts of body, leg, foot, toes, also breast, rectum.", 
+  },
+  "details": "The rectal and anal symptoms are most important. Chronic ulcers on lower parts of body, leg, foot, toes, also breast, rectum.",
   "dosage": "Third potency."
 }

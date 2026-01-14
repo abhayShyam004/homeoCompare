@@ -1,26 +1,28 @@
 {
-  "name": "Coccinella septempunctata", 
-  "Relationship": "Compare: CANTH.; MANG. C.", 
-  "Common names": "Lady Bug", 
+  "name": "Coccinella septempunctata",
+  "Relationship": "Compare: CANTH.; MANG. C.",
+  "Common names": "Lady Bug",
   "symptoms": {
     "Head": [
-      "Cannot open eyes during paroxysm", 
-      "Periodical attacks of frontal neuralgia", 
-      "Pain worse from any bright object; better, sleep", 
-      "Aching in temples and occiput", 
-      "Rush of blood to face", 
-      "Cold sensation in teeth and mouth", 
-      "Pain in forehead over right eye, sensitive to touch; from superior molars to forehead", 
+      "Cannot open eyes during paroxysm",
+      "Periodical attacks of frontal neuralgia",
+      "Pain worse from any bright object",
+      "better, sleep",
+      "Aching in temples and occiput",
+      "Rush of blood to face",
+      "Cold sensation in teeth and mouth",
+      "Pain in forehead over right eye, sensitive to touch",
+      "from superior molars to forehead",
       "Throbbing toothache"
-    ], 
+    ],
     "Stomach": [
       "Hiccough and burning in stomach"
-    ], 
+    ],
     "Back": [
-      "Icy cold extremities", 
+      "Icy cold extremities",
       "Pain in region of kidneys and loins"
     ]
-  }, 
-  "details": "This remedy ought to be remembered in neuralgias, teeth, gums, mouth, etc. Is awakened by profuse accumulation of saliva. Uvula feels too long. Symptoms of hydrophobia; worse, by any bright object.", 
+  },
+  "details": "This remedy ought to be remembered in neuralgias, teeth, gums, mouth, etc. Is awakened by profuse accumulation of saliva. Uvula feels too long. Symptoms of hydrophobia; worse, by any bright object.",
   "dosage": "Third potency."
 }

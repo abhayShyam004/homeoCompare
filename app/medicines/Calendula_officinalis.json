@@ -1,61 +1,73 @@
 {
-  "name": "Calendula officinalis", 
-  "Relationship": "Compare: Hamamel.; Hypericum.; Symph.; Arn. Compare in deafness: Ferr. pic.; Kal. iod.; Calc; Mag. ac; Graph. Antidote: Chelidonium; Rheum. Complementary: Hepar.", 
+  "name": "Calendula officinalis",
+  "Relationship": "Compare: Hamamel.; Hypericum.; Symph.; Arn. Compare in deafness: Ferr. pic.; Kal. iod.; Calc; Mag. ac; Graph. Antidote: Chelidonium; Rheum. Complementary: Hepar.",
   "Modalities": [
-    "Worse: in damp", 
-    "Worse: heavy", 
+    "Worse: in damp",
+    "Worse: heavy",
     "Worse: cloudy weather"
-  ], 
-  "Common names": "Marigold", 
+  ],
+  "Common names": "Marigold",
   "symptoms": {
     "Eyes": [
-      "Injuries to eyes which tend to suppuration; after operations; blennorrhoea of lachrymal sac"
-    ], 
+      "Injuries to eyes which tend to suppuration",
+      "after operations",
+      "blennorrhoea of lachrymal sac"
+    ],
     "Fever": [
-      "Heat in evening", 
-      "Coldness, great sensitiveness to open air; shuddering in back, skin feels warm to touch"
-    ], 
+      "Heat in evening",
+      "Coldness, great sensitiveness to open air",
+      "shuddering in back, skin feels warm to touch"
+    ],
     "Stomach": [
-      "Heartburn with horripilations", 
-      "Bulimia", 
-      "Nausea in chest", 
-      "Vomiting", 
-      "Epigastric distention", 
-      "Sinking sensation", 
+      "Heartburn with horripilations",
+      "Bulimia",
+      "Nausea in chest",
+      "Vomiting",
+      "Epigastric distention",
+      "Sinking sensation",
       "Hunger immediately after nursing"
-    ], 
+    ],
     "Head": [
-      "Lacerated scalp wounds", 
-      "Extremely nervous; easily frightened; tearing headache; weight on brain", 
-      "Submaxillary glands swollen, painful to touch", 
+      "Lacerated scalp wounds",
+      "Extremely nervous",
+      "easily frightened",
+      "tearing headache",
+      "weight on brain",
+      "Submaxillary glands swollen, painful to touch",
       "Pain in right side of neck"
-    ], 
+    ],
     "Respiratory": [
-      "Cough, with green expectoration, hoarseness; with distention of inguinal ring"
-    ], 
+      "Cough, with green expectoration, hoarseness",
+      "with distention of inguinal ring"
+    ],
     "Nose": [
-      "Coryza in one nostril; with much green discharge"
-    ], 
+      "Coryza in one nostril",
+      "with much green discharge"
+    ],
     "Female": [
-      "Menses suppressed, with cough", 
-      "Chronic endocervicitis", 
-      "Warts the os externum", 
-      "Menorrhagia", 
-      "Os lower than natural", 
-      "Uterine hypertrophy, sensation of weight and fullness in pelvis; stretching and dragging in groin; pain on sudden movements"
-    ], 
+      "Menses suppressed, with cough",
+      "Chronic endocervicitis",
+      "Warts the os externum",
+      "Menorrhagia",
+      "Os lower than natural",
+      "Uterine hypertrophy, sensation of weight and fullness in pelvis",
+      "stretching and dragging in groin",
+      "pain on sudden movements"
+    ],
     "Skin": [
-      "Superficial burns and scalds", 
-      "Erysipelas", 
-      "Yellow; goose-flesh", 
-      "Slough, proud flesh, and raised edges", 
+      "Superficial burns and scalds",
+      "Erysipelas",
+      "Yellow",
+      "goose-flesh",
+      "Slough, proud flesh, and raised edges",
       "Promotes favorable cicatrization, with least amount of suppuration"
-    ], 
+    ],
     "Ears": [
-      "Deafness; worse in damp surroundings and with eczematous conditions", 
+      "Deafness",
+      "worse in damp surroundings and with eczematous conditions",
       "Hears best on a train, and distant sounds"
     ]
-  }, 
-  "details": "A most remarkable healing agent, applied locally. Useful for open wounds, parts that will not heal, ulcers, etc. Promotes healthy granulations and rapid healing by first intention. Hemostatic after tooth extraction. Deafness. Catarrhal conditions. Neuroma. Constitutional tendency to erysipelas. Pain is excessive and out of all proportion to injury. GREAT DISPOSITION TO TAKE COLD, ESPECIALLY IN DAMP WEATHER. Paralysis after apoplexy. Cancer, as an intercurrent remedy. Has remarkable power to produce local exudation and helps to make acrid discharge healthy and free. Cold hands.", 
+  },
+  "details": "A most remarkable healing agent, applied locally. Useful for open wounds, parts that will not heal, ulcers, etc. Promotes healthy granulations and rapid healing by first intention. Hemostatic after tooth extraction. Deafness. Catarrhal conditions. Neuroma. Constitutional tendency to erysipelas. Pain is excessive and out of all proportion to injury. GREAT DISPOSITION TO TAKE COLD, ESPECIALLY IN DAMP WEATHER. Paralysis after apoplexy. Cancer, as an intercurrent remedy. Has remarkable power to produce local exudation and helps to make acrid discharge healthy and free. Cold hands.",
   "dosage": "Locally. Aqueous Calendula (Marigoldin.) for all wounds, the greatest healing agent. Also as an injection in leucorrhoea; internally, tincture, to third potency. For burns, sores, fissures, and abrasions, etc., use Calendula Cerate."
 }

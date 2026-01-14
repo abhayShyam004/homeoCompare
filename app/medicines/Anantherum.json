@@ -1,35 +1,37 @@
 {
-  "name": "Anantherum", 
-  "Relationship": "Compare: Staphisag.; Mercur.; Thuja.", 
-  "Common names": "Cuscus - An East Indian Grass", 
+  "name": "Anantherum",
+  "Relationship": "Compare: Staphisag.; Mercur.; Thuja.",
+  "Common names": "Cuscus - An East Indian Grass",
   "symptoms": {
     "Head": [
-      "Boils and tumors on tip of nose", 
-      "Pains pierce brain like pointed arrows; worse in afternoon", 
-      "Wart like growth on eyebrows", 
-      "Tongue fissured, as if cut on edges; copious salivation", 
+      "Boils and tumors on tip of nose",
+      "Pains pierce brain like pointed arrows",
+      "worse in afternoon",
+      "Wart like growth on eyebrows",
+      "Tongue fissured, as if cut on edges",
+      "copious salivation",
       "Herpes, ulcers, and tumors on scalp"
-    ], 
+    ],
     "Sexual organs": [
-      "Scirrhus-like swelling of cervix", 
-      "Breasts swollen, indurated, nipples excoriated", 
+      "Scirrhus-like swelling of cervix",
+      "Breasts swollen, indurated, nipples excoriated",
       "Chancre-like sores"
-    ], 
+    ],
     "Urine": [
-      "Involuntary", 
-      "Cystitis", 
-      "Constant urging", 
-      "Turbid, thick, full of mucus", 
+      "Involuntary",
+      "Cystitis",
+      "Constant urging",
+      "Turbid, thick, full of mucus",
       "Bladder cannot hold smallest quantity"
-    ], 
+    ],
     "Skin": [
-      "Offensive foot-sweat", 
-      "Abscesses, boils, ulcers", 
-      "Erysipelas", 
-      "Pruritus, herpes", 
+      "Offensive foot-sweat",
+      "Abscesses, boils, ulcers",
+      "Erysipelas",
+      "Pruritus, herpes",
       "Diseased and deformed nails"
     ]
-  }, 
-  "details": "A skin remedy of high order. Painful swelling of various parts, going on to suppuration. Glandular inflammation.", 
+  },
+  "details": "A skin remedy of high order. Painful swelling of various parts, going on to suppuration. Glandular inflammation.",
   "dosage": "Third potency"
 }

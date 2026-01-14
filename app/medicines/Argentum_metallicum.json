@@ -1,69 +1,72 @@
 {
-  "name": "Argentum metallicum", 
-  "Relationship": "Antidotes: Mercur.; Puls. Compare: Selen.; Alum.; Platina; Stannum; Ampelopsis. (Chronic hoarseness in scrofulous patients.)", 
-  "Common names": "Silver", 
+  "name": "Argentum metallicum",
+  "Relationship": "Antidotes: Mercur.; Puls. Compare: Selen.; Alum.; Platina; Stannum; Ampelopsis. (Chronic hoarseness in scrofulous patients.)",
+  "Common names": "Silver",
   "symptoms": {
     "Head": [
-      "Head feels empty, hollow", 
-      "Exhausting coryza, with sneezing", 
-      "Pain between left eye and frontal eminence", 
-      "Vertigo, with intoxicated feeling, on looking at running water", 
-      "Scalp very tender to touch", 
-      "Eyelids red and thick", 
-      "Pain in facial bones", 
+      "Head feels empty, hollow",
+      "Exhausting coryza, with sneezing",
+      "Pain between left eye and frontal eminence",
+      "Vertigo, with intoxicated feeling, on looking at running water",
+      "Scalp very tender to touch",
+      "Eyelids red and thick",
+      "Pain in facial bones",
       "Dull paroxysmal neuralgia over left side, gradually increasing and ceasing suddenly"
-    ], 
+    ],
     "Respiratory": [
-      "Alteration in timbre of voice", 
-      "Total loss of voice of professional singers", 
-      "Easy expectoration, looking like boiled starch", 
-      "Cough from laughing", 
-      "Worse from use of voice", 
-      "On reading aloud, must hem and hawk", 
-      "Feeling of raw spot near supra sterna fossa", 
-      "Great weakness of chest; worse at left side", 
-      "Hectic fever at noon", 
-      "Larynx feels sore and raw", 
-      "Hoarseness aphonia", 
-      "Pain in left lower ribs", 
+      "Alteration in timbre of voice",
+      "Total loss of voice of professional singers",
+      "Easy expectoration, looking like boiled starch",
+      "Cough from laughing",
+      "Worse from use of voice",
+      "On reading aloud, must hem and hawk",
+      "Feeling of raw spot near supra sterna fossa",
+      "Great weakness of chest",
+      "worse at left side",
+      "Hectic fever at noon",
+      "Larynx feels sore and raw",
+      "Hoarseness aphonia",
+      "Pain in left lower ribs",
       "Raw, sore feeling when coughing"
-    ], 
+    ],
     "Urine": [
-      "Diuresis", 
-      "Polyuria", 
-      "Urine profuse, turbid, sweet odor", 
+      "Diuresis",
+      "Polyuria",
+      "Urine profuse, turbid, sweet odor",
       "Frequent urination"
-    ], 
+    ],
     "Back": [
-      "Severe backache; must walk bent, with oppression of chest"
-    ], 
+      "Severe backache",
+      "must walk bent, with oppression of chest"
+    ],
     "Female": [
-      "Bearing-down pain", 
-      "Pain in left ovary", 
-      "Leucorrhea foul, excoriating", 
-      "Palliative in scirrhus of uterus", 
-      "Ovaries feel too large", 
-      "Climacteric hemorrhage", 
-      "Eroded spongy cervix", 
-      "Sore feeling throughout abdomen", 
+      "Bearing-down pain",
+      "Pain in left ovary",
+      "Leucorrhea foul, excoriating",
+      "Palliative in scirrhus of uterus",
+      "Ovaries feel too large",
+      "Climacteric hemorrhage",
+      "Eroded spongy cervix",
+      "Sore feeling throughout abdomen",
       "Prolapse of womb"
-    ], 
+    ],
     "Throat": [
-      "Profuse and easy morning expectoration", 
+      "Profuse and easy morning expectoration",
       "Raw, hawking, gray, jelly-like mucus, and throat sore on coughing"
-    ], 
+    ],
     "Extremities": [
-      "Legs weak and trembling, worse descending stairs", 
-      "Rheumatic affections of joints, especially elbow and knee", 
-      "Swelling of ankles", 
-      "Involuntary contractions of fingers, partial paralysis of forearm; writer's cramp"
-    ], 
+      "Legs weak and trembling, worse descending stairs",
+      "Rheumatic affections of joints, especially elbow and knee",
+      "Swelling of ankles",
+      "Involuntary contractions of fingers, partial paralysis of forearm",
+      "writer's cramp"
+    ],
     "Male": [
-      "Seminal emissions, without sexual excitement", 
-      "Frequent micturition with burning", 
+      "Seminal emissions, without sexual excitement",
+      "Frequent micturition with burning",
       "Crushed pain in testicles"
     ]
-  }, 
-  "details": "Emaciation, a gradual drying up, desire for fresh air, dyspnoea, sensation of expansion and left-sided pains are characteristic. The chief action is centered on the articulations and their component elements, bones, cartilages, and ligaments. Here the small blood vessels become closed up or withered and carious affections result. They come on insidiously, lingering, but progress. The larynx is also a special center for this drug. Mental. Hurried feeling; time passes slowly; melancholy.", 
+  },
+  "details": "Emaciation, a gradual drying up, desire for fresh air, dyspnoea, sensation of expansion and left-sided pains are characteristic. The chief action is centered on the articulations and their component elements, bones, cartilages, and ligaments. Here the small blood vessels become closed up or withered and carious affections result. They come on insidiously, lingering, but progress. The larynx is also a special center for this drug. Mental. Hurried feeling; time passes slowly; melancholy.",
   "dosage": "Sixth trituration and higher. Not too frequent repetition."
 }

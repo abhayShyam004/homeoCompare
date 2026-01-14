@@ -1,42 +1,44 @@
 {
-  "name": "Grindelia", 
-  "Relationship": "Compare: TART-EMET. ERIODICTYON; LACH.; SANGUINAR.", 
-  "Common names": "Rosin-wood", 
+  "name": "Grindelia",
+  "Relationship": "Compare: TART-EMET. ERIODICTYON; LACH.; SANGUINAR.",
+  "Common names": "Rosin-wood",
   "symptoms": {
     "Head": [
-      "Feels full, as from quinine", 
-      "Purulent ophthalmia and iritis", 
-      "Pupils dilated", 
-      "Pain in eyeballs, running back to brain; worse, moving eyes"
-    ], 
+      "Feels full, as from quinine",
+      "Purulent ophthalmia and iritis",
+      "Pupils dilated",
+      "Pain in eyeballs, running back to brain",
+      "worse, moving eyes"
+    ],
     "Respiratory": [
-      "Acts on the pulmonary circulation", 
-      "The sibilant rales are disseminated with foamy mucus, very difficult to detach", 
-      "Weak heart and respiration", 
-      "Stops breathing when falling asleep; wakes with a start, and gasps for breath", 
-      "Bronchorrhea, with tough, whitish, mucous expectoration", 
-      "Cannot breathe when lying down", 
-      "Cheyne-stokes respiration", 
-      "An efficacious remedy for wheezing and oppression in bronchitis patients", 
-      "Cannot breathe lying down", 
-      "Asthma, with profuse tenacious expectoration, which relieves", 
-      "Sibilant rales", 
-      "Pertussis, with profuse mucous secretion", 
+      "Acts on the pulmonary circulation",
+      "The sibilant rales are disseminated with foamy mucus, very difficult to detach",
+      "Weak heart and respiration",
+      "Stops breathing when falling asleep",
+      "wakes with a start, and gasps for breath",
+      "Bronchorrhea, with tough, whitish, mucous expectoration",
+      "Cannot breathe when lying down",
+      "Cheyne-stokes respiration",
+      "An efficacious remedy for wheezing and oppression in bronchitis patients",
+      "Cannot breathe lying down",
+      "Asthma, with profuse tenacious expectoration, which relieves",
+      "Sibilant rales",
+      "Pertussis, with profuse mucous secretion",
       "Must sit up to breathe"
-    ], 
+    ],
     "Abdomen": [
-      "Cutting pain in region of spleen, extending to hips", 
+      "Cutting pain in region of spleen, extending to hips",
       "Spleen enlarged"
-    ], 
+    ],
     "Skin": [
-      "Rash, like roseola, with severe burning and itching", 
-      "Ulcers, with swollen, purplish skin", 
-      "Itching and burning", 
-      "Herpes zoster", 
-      "Vesicular and papular eruptions", 
+      "Rash, like roseola, with severe burning and itching",
+      "Ulcers, with swollen, purplish skin",
+      "Itching and burning",
+      "Herpes zoster",
+      "Vesicular and papular eruptions",
       "Poison oak"
     ]
-  }, 
-  "details": "Both Grindelia robusta and Grindelia squarrosa have been used for the symptoms here recorded. There is practically no difference in their action, although the G. Squarrosa is credited with more SPLENIC symptoms, dull pains and fullness in left hypochondrium; chronic malaria; gastric pains associated with splenic congestion. Induces paralysis, beginning in extremities. Its action is shown on the heart first quickening, then retarding it. Acts on the cardiopulmonary distribution of the pneumo gastric in dry catarrh (tart Emetic in mucopurulent). Produces a paresis of the pneumogastric, interfering with respiration. SMOTHERING AFTER FALLING ASLEEP. Asthmatic conditions, chronic bronchitis. Bronchorrhea with tough mucus, difficult to detach. Raises the blood pressure. Nausea and retching of gastric ulcer. Sugar in urine An effective antidote to Rhus-poisoning, locally and internally; also for burns, blisters, vaginal catarrh and herpes zoster. Hyperchlorhydria when attended with asthmatic and other neurotic symptoms. Hyperaemia of gastric mucous membrane with difficult respiration.", 
+  },
+  "details": "Both Grindelia robusta and Grindelia squarrosa have been used for the symptoms here recorded. There is practically no difference in their action, although the G. Squarrosa is credited with more SPLENIC symptoms, dull pains and fullness in left hypochondrium; chronic malaria; gastric pains associated with splenic congestion. Induces paralysis, beginning in extremities. Its action is shown on the heart first quickening, then retarding it. Acts on the cardiopulmonary distribution of the pneumo gastric in dry catarrh (tart Emetic in mucopurulent). Produces a paresis of the pneumogastric, interfering with respiration. SMOTHERING AFTER FALLING ASLEEP. Asthmatic conditions, chronic bronchitis. Bronchorrhea with tough mucus, difficult to detach. Raises the blood pressure. Nausea and retching of gastric ulcer. Sugar in urine An effective antidote to Rhus-poisoning, locally and internally; also for burns, blisters, vaginal catarrh and herpes zoster. Hyperchlorhydria when attended with asthmatic and other neurotic symptoms. Hyperaemia of gastric mucous membrane with difficult respiration.",
   "dosage": "Tincture in 1 to 15 drop doses, also lower potencies."
 }

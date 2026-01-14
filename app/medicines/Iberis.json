@@ -1,43 +1,45 @@
 {
-  "name": "Iberis", 
-  "Relationship": "Compare: CACT.; DIG.; AMYL.; BELL.", 
+  "name": "Iberis",
+  "Relationship": "Compare: CACT.; DIG.; AMYL.; BELL.",
   "Modalities": [
-    "Worse: lying down; on left side; motion", 
+    "Worse: lying down; on left side; motion",
     "Worse: exertion; warm room"
-  ], 
-  "Common names": "Bitter Candy tuft", 
+  ],
+  "Common names": "Bitter Candy tuft",
   "symptoms": {
     "Heart": [
-      "Violent palpitation induced by slightest exertion, or by laughing, or coughing", 
-      "Darting pains through heart", 
-      "Worse, least motion and in warm room sensation of weight and pressure, with occasional sharp, stinging pains", 
-      "Dropsy, with enlarged heart", 
-      "Conscious of heart's action", 
-      "Wakes with palpitation about two am throat and trachea fills up with mucus", 
-      "Cardiac dyspnoea", 
-      "On turning on left side, stitching pain as of needles through ventricles felt at each systole", 
-      "Dilation of heart", 
-      "Cough causes redness of face", 
-      "Palpitation, with vertigo and choking in throat", 
-      "Stitching pains in cardiac region", 
-      "Tachycardia", 
+      "Violent palpitation induced by slightest exertion, or by laughing, or coughing",
+      "Darting pains through heart",
+      "Worse, least motion and in warm room sensation of weight and pressure, with occasional sharp, stinging pains",
+      "Dropsy, with enlarged heart",
+      "Conscious of heart's action",
+      "Wakes with palpitation about two am throat and trachea fills up with mucus",
+      "Cardiac dyspnoea",
+      "On turning on left side, stitching pain as of needles through ventricles felt at each systole",
+      "Dilation of heart",
+      "Cough causes redness of face",
+      "Palpitation, with vertigo and choking in throat",
+      "Stitching pains in cardiac region",
+      "Tachycardia",
       "Pulse full, irregular, intermittent"
-    ], 
+    ],
     "Head": [
-      "Vertigo, as if occiput were turning around; eyes feel forced outwards", 
-      "Hot, flushed face", 
-      "Vertigo and pains around heart", 
+      "Vertigo, as if occiput were turning around",
+      "eyes feel forced outwards",
+      "Hot, flushed face",
+      "Vertigo and pains around heart",
       "Constant hawking of thick, stringy mucus until after a meal"
-    ], 
+    ],
     "Mind": [
-      "Sad and sighing; fearful and trembling", 
+      "Sad and sighing",
+      "fearful and trembling",
       "Irritable"
-    ], 
+    ],
     "Extremities": [
-      "Numbness and tingling in left hand and arm", 
+      "Numbness and tingling in left hand and arm",
       "Whole body sore, lame and trembling"
     ]
-  }, 
-  "details": "State of nervous excitement. Has marked action upon the heart. Possesses great efficacy in cardiac diseases. Controls vascular excitement in hypertrophy with thickening of the heart's walls. Cardiac debility after influenza. Liver region full and painful. White stools.", 
+  },
+  "details": "State of nervous excitement. Has marked action upon the heart. Possesses great efficacy in cardiac diseases. Controls vascular excitement in hypertrophy with thickening of the heart's walls. Cardiac debility after influenza. Liver region full and painful. White stools.",
   "dosage": "Tincture and first potency."
 }

@@ -1,88 +1,94 @@
 {
-  "name": "Sabina", 
-  "Relationship": "Complementary: THUJA. Compare: SANGUISORBA (Venous congestion and passive hemorrhages; varices of lower extremities; dysentery. LONG LASTING, PROFUSE MENSES with congestion to head and limbs in sensitive, irritable patients. CLIMACTERIC hemorrhages. Use 2x attenuation.) SANGUISUGA - The leech - (Hemorrhages, especially bleeding from anus. Use 6X). ROSMARINUS (menses too early; violent pains followed by uterine hemorrhage. Head heavy, DROWSY. Chilly with icy coldness of lower extremities without thirst, followed by heat. Memory deficient). CROC.; CALC.; TRILL.; IPEC.; MILLE.; ERIG. Antidote: PULS.", 
+  "name": "Sabina",
+  "Relationship": "Complementary: THUJA. Compare: SANGUISORBA (Venous congestion and passive hemorrhages; varices of lower extremities; dysentery. LONG LASTING, PROFUSE MENSES with congestion to head and limbs in sensitive, irritable patients. CLIMACTERIC hemorrhages. Use 2x attenuation.) SANGUISUGA - The leech - (Hemorrhages, especially bleeding from anus. Use 6X). ROSMARINUS (menses too early; violent pains followed by uterine hemorrhage. Head heavy, DROWSY. Chilly with icy coldness of lower extremities without thirst, followed by heat. Memory deficient). CROC.; CALC.; TRILL.; IPEC.; MILLE.; ERIG. Antidote: PULS.",
   "Modalities": [
-    "Worse: from least motion", 
-    "Worse: heat", 
-    "Worse: warm air", 
+    "Worse: from least motion",
+    "Worse: heat",
+    "Worse: warm air",
     "Better: in cool fresh air"
-  ], 
-  "Common names": "Sabine", 
+  ],
+  "Common names": "Sabine",
   "symptoms": {
     "Head": [
-      "Teeth ache when chewing", 
-      "Bursting headache, suddenly coming and going slowly", 
-      "Drawing pains in masseter muscles", 
-      "Rush of blood to head and face", 
+      "Teeth ache when chewing",
+      "Bursting headache, suddenly coming and going slowly",
+      "Drawing pains in masseter muscles",
+      "Rush of blood to head and face",
       "Vertigo with suppressed menses"
-    ], 
+    ],
     "Stomach": [
-      "Heartburn", 
-      "Lancinating pain from pit of stomach across back", 
-      "Desire for lemonade", 
+      "Heartburn",
+      "Lancinating pain from pit of stomach across back",
+      "Desire for lemonade",
       "Bitter taste"
-    ], 
+    ],
     "Rectum": [
-      "Sense of fullness", 
-      "Hemorrhoids, with bright red blood; bleed copiously", 
-      "Constipation", 
+      "Sense of fullness",
+      "Hemorrhoids, with bright red blood",
+      "bleed copiously",
+      "Constipation",
       "Pain from back to pubis"
-    ], 
+    ],
     "Urine": [
-      "Burning and throbbing in region of kidneys", 
-      "Inflammation of urethra", 
-      "Bladder inflamed with throbbing all over", 
-      "Bloody urine; much urging"
-    ], 
+      "Burning and throbbing in region of kidneys",
+      "Inflammation of urethra",
+      "Bladder inflamed with throbbing all over",
+      "Bloody urine",
+      "much urging"
+    ],
     "Mind": [
       "Music is intolerable, produces nervousness"
-    ], 
+    ],
     "Back": [
-      "Paralytic pain in small of back", 
+      "Paralytic pain in small of back",
       "Pain between sacrum and pubis from one bone to another"
-    ], 
+    ],
     "Female": [
-      "Retained placenta; intense after-pains", 
-      "Threatened miscarriage", 
-      "Uterine pains extend into thighs", 
-      "Sexual desire increased", 
-      "Pain from sacrum to pubis, and from below upwards shooting up the vagina", 
-      "Discharge of blood between periods, with sexual excitement", 
-      "Menorrhagia in womenwho aborted readily", 
-      "Leucorrhoea after menses, corrosive, offensive", 
-      "Inflammation of ovaries and uterus after abortion", 
-      "Menses profuse, bright", 
-      "Promotes expulsion of moles from uterus", 
-      "Atony of uterus", 
-      "Hemorrhage; partly clotted; worse from least motion"
-    ], 
+      "Retained placenta",
+      "intense after-pains",
+      "Threatened miscarriage",
+      "Uterine pains extend into thighs",
+      "Sexual desire increased",
+      "Pain from sacrum to pubis, and from below upwards shooting up the vagina",
+      "Discharge of blood between periods, with sexual excitement",
+      "Menorrhagia in womenwho aborted readily",
+      "Leucorrhoea after menses, corrosive, offensive",
+      "Inflammation of ovaries and uterus after abortion",
+      "Menses profuse, bright",
+      "Promotes expulsion of moles from uterus",
+      "Atony of uterus",
+      "Hemorrhage",
+      "partly clotted",
+      "worse from least motion"
+    ],
     "Skin": [
-      "Warts", 
-      "Fig-warts, with intolerable itching and burning", 
-      "Black pores in skin", 
+      "Warts",
+      "Fig-warts, with intolerable itching and burning",
+      "Black pores in skin",
       "Exuberant granulations"
-    ], 
+    ],
     "Abdomen": [
-      "Tympanitic distention", 
-      "Colic, mostly in hypogastric region", 
+      "Tympanitic distention",
+      "Colic, mostly in hypogastric region",
       "Bearing-down, constrictive pain"
-    ], 
+    ],
     "Extremities": [
-      "Red, shining swelling", 
-      "Gouty nodosities", 
-      "Arthritic pain in joints", 
-      "Shooting in heels and metatarsal bones", 
-      "Gout; worse, in heated room", 
+      "Red, shining swelling",
+      "Gouty nodosities",
+      "Arthritic pain in joints",
+      "Shooting in heels and metatarsal bones",
+      "Gout",
+      "worse, in heated room",
       "Bruised pains in anterior portion of thighs"
-    ], 
+    ],
     "Male": [
-      "Prepuce painful with difficulty in retracting it", 
-      "Increased desire", 
-      "Sycotic excrescences", 
-      "Burning, sore pain in glans", 
+      "Prepuce painful with difficulty in retracting it",
+      "Increased desire",
+      "Sycotic excrescences",
+      "Burning, sore pain in glans",
       "Inflammatory gonorrhea, with pus-like discharge"
     ]
-  }, 
-  "details": "Has a special action on the uterus; also upon serous and fibrous membranes; hence its use in gout. Pain FROM SACRUM TO THE PUBIS. HEMORRHAGES, WHERE BLOOD IS FLUID AND CLOTS TOGETHER. Tendency to miscarriage, especially at third month. VIOLENT PULSATIONS; wants windows open.", 
+  },
+  "details": "Has a special action on the uterus; also upon serous and fibrous membranes; hence its use in gout. Pain FROM SACRUM TO THE PUBIS. HEMORRHAGES, WHERE BLOOD IS FLUID AND CLOTS TOGETHER. Tendency to miscarriage, especially at third month. VIOLENT PULSATIONS; wants windows open.",
   "dosage": "Locally, for warts, tincture. Internally, third to thirtieth potency."
 }

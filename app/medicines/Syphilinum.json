@@ -1,80 +1,98 @@
 {
-  "name": "Syphilinum", 
-  "Relationship": "Compare: MERC.; KAL. HYD.; NIT-AC.; AUR.; ALUM", 
+  "name": "Syphilinum",
+  "Relationship": "Compare: MERC.; KAL. HYD.; NIT-AC.; AUR.; ALUM",
   "Modalities": [
-    "Worse: at night", 
-    "Worse: sundown to sunrise", 
-    "Worse: seashore", 
-    "Worse: in summer", 
-    "Better: inland and mountains", 
-    "Better: during day", 
+    "Worse: at night",
+    "Worse: sundown to sunrise",
+    "Worse: seashore",
+    "Worse: in summer",
+    "Better: inland and mountains",
+    "Better: during day",
     "Better: moving about slowly"
-  ], 
-  "Common names": "The Syphilitic Virus - A Nosode", 
+  ],
+  "Common names": "The Syphilitic Virus - A Nosode",
   "symptoms": {
     "Eyes": [
-      "Feeling of cold air blowing on eye", 
-      "Diplopia; one image seen below the other", 
-      "Tubercular iritis", 
-      "Lids swollen; pain intense at night; ptosis", 
-      "Chronic, recurrent, phlyctenular inflammation of cornea; successive crops of phlyctenules and abrasions of epithelial layer of cornea; photophobia intense, lachrymation, profuse"
-    ], 
+      "Feeling of cold air blowing on eye",
+      "Diplopia",
+      "one image seen below the other",
+      "Tubercular iritis",
+      "Lids swollen",
+      "pain intense at night",
+      "ptosis",
+      "Chronic, recurrent, phlyctenular inflammation of cornea",
+      "successive crops of phlyctenules and abrasions of epithelial layer of cornea",
+      "photophobia intense, lachrymation, profuse"
+    ],
     "Respiratory": [
-      "Cough dry, hard; worse at night; windpipe sensitive to touch", 
-      "Lancinating pains from base of heart to apex at night", 
-      "Aphonia; chronic asthma in summer, wheezing and rattling"
-    ], 
+      "Cough dry, hard",
+      "worse at night",
+      "windpipe sensitive to touch",
+      "Lancinating pains from base of heart to apex at night",
+      "Aphonia",
+      "chronic asthma in summer, wheezing and rattling"
+    ],
     "Stomach": [
       "Craves alcohol"
-    ], 
+    ],
     "Rectum": [
-      "Feels tied up with strictures", 
-      "Fissures, prolapse", 
+      "Feels tied up with strictures",
+      "Fissures, prolapse",
       "Enemas very painful"
-    ], 
+    ],
     "Mind": [
-      "Loss of memory; remembers everything previous to his illness", 
-      "Fears the night, and the suffering from exhaustion on awakening", 
-      "Apathetic; feels as if going insane or being paralyzed", 
-      "Hopeless; despairs of recovery"
-    ], 
+      "Loss of memory",
+      "remembers everything previous to his illness",
+      "Fears the night, and the suffering from exhaustion on awakening",
+      "Apathetic",
+      "feels as if going insane or being paralyzed",
+      "Hopeless",
+      "despairs of recovery"
+    ],
     "Head": [
-      "Top of head feels as if coming off", 
-      "Stupefying cephalgia", 
-      "Pain in bones of head", 
-      "Falling of the hair", 
-      "Linear pains from temples across, or from eyes backward; cause sleeplessness and delirium at night"
-    ], 
+      "Top of head feels as if coming off",
+      "Stupefying cephalgia",
+      "Pain in bones of head",
+      "Falling of the hair",
+      "Linear pains from temples across, or from eyes backward",
+      "cause sleeplessness and delirium at night"
+    ],
     "Nose": [
-      "Caries of nasal bones, hard palate and septum, with perforation; ozaena"
-    ], 
+      "Caries of nasal bones, hard palate and septum, with perforation",
+      "ozaena"
+    ],
     "Female": [
-      "Leucorrhoea profuse, thin, watery, acrid, with sharp, knife-like pain in ovaries", 
+      "Leucorrhoea profuse, thin, watery, acrid, with sharp, knife-like pain in ovaries",
       "Ulcers on labia"
-    ], 
+    ],
     "Skin": [
-      "Extreme emaciation", 
+      "Extreme emaciation",
       "Reddish-brown eruption, with a disagreeable odor"
-    ], 
+    ],
     "Mouth": [
-      "Teeth decay at gum; edges serrated, dwarfed", 
-      "Ulcers smart and burn", 
-      "Tongue coated, teeth-indented; deep longitudinal cracks", 
-      "Excessive flow of saliva; it runs out of mouth when sleeping"
-    ], 
+      "Teeth decay at gum",
+      "edges serrated, dwarfed",
+      "Ulcers smart and burn",
+      "Tongue coated, teeth-indented",
+      "deep longitudinal cracks",
+      "Excessive flow of saliva",
+      "it runs out of mouth when sleeping"
+    ],
     "Extremities": [
-      "Muscles contracted in hard knots", 
-      "Indolent ulcers", 
-      "Redness and rawness between toes  rheumatism, muscles are caked in hard knot or lumps", 
-      "Sciatica; worse at night; better about daybreak", 
-      "Severe pain in long bones", 
-      "Always washing the hands", 
+      "Muscles contracted in hard knots",
+      "Indolent ulcers",
+      "Redness and rawness between toes  rheumatism, muscles are caked in hard knot or lumps",
+      "Sciatica",
+      "worse at night",
+      "better about daybreak",
+      "Severe pain in long bones",
+      "Always washing the hands",
       "Rheumatism of shoulder-joint, at insertion of deltoid"
-    ], 
+    ],
     "Ears": [
       "Caries of ossicles in ear of syphilitic origin"
     ]
-  }, 
-  "details": "Utter prostration and debility in the morning. Shifting rheumatic pains. Chronic eruptions and rheumatism. Ichthyosis. Syphilitic affections. Pains from darkness to daylight; decrease and increase gradually. Hereditary tendency to alcoholism. ULCERATION OF mouth, nose, genitals, skin. SUCCESSION OF ABSCESSES.", 
+  },
+  "details": "Utter prostration and debility in the morning. Shifting rheumatic pains. Chronic eruptions and rheumatism. Ichthyosis. Syphilitic affections. Pains from darkness to daylight; decrease and increase gradually. Hereditary tendency to alcoholism. ULCERATION OF mouth, nose, genitals, skin. SUCCESSION OF ABSCESSES.",
   "dosage": "The highest potencies only, and in infrequent doses."
 }

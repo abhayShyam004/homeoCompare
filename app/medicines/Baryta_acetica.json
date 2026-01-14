@@ -1,21 +1,22 @@
 {
   "symptoms": {
     "Mind": [
-      "Forgetful; wavering long between opposite resolutions", 
+      "Forgetful",
+      "wavering long between opposite resolutions",
       "Lack of self confidence"
-    ], 
+    ],
     "Extremities": [
-      "Drawing pain down whole left leg", 
-      "Paralysis", 
-      "Crawling, with burning stitches", 
+      "Drawing pain down whole left leg",
+      "Paralysis",
+      "Crawling, with burning stitches",
       "Lumbago and rheumatic pain in muscles and joints"
-    ], 
+    ],
     "Face": [
       "Feeling of cobweb in face"
     ]
-  }, 
-  "details": "Produces paralysis beginning at the extremities and spreading upward. Pruritus of aged.", 
-  "Common names": "Acetate of Barium", 
-  "name": "Baryta acetica", 
+  },
+  "details": "Produces paralysis beginning at the extremities and spreading upward. Pruritus of aged.",
+  "Common names": "Acetate of Barium",
+  "name": "Baryta acetica",
   "dosage": "Second and third trituration in repeated dosage."
 }

@@ -1,55 +1,64 @@
 {
-  "name": "Strontia", 
-  "Relationship": "Compare: ARNICA; RUTA; SIL.; BARYTA C.; CARBO.; STRONT. JODAT (arteriosclerosis.) STRONTIUM BROM. (often gives excellent results where a bromide is indicated. Vomiting of pregnancy. Nervous dyspepsia. It is anti-fermentative and neutralizes excessive acidity.) STRONT. NIT. (Morbid cravings; headache and eczema behind ears.)", 
-  "Common names": "Carbonate of STRONTIA", 
+  "name": "Strontia",
+  "Relationship": "Compare: ARNICA; RUTA; SIL.; BARYTA C.; CARBO.; STRONT. JODAT (arteriosclerosis.) STRONTIUM BROM. (often gives excellent results where a bromide is indicated. Vomiting of pregnancy. Nervous dyspepsia. It is anti-fermentative and neutralizes excessive acidity.) STRONT. NIT. (Morbid cravings; headache and eczema behind ears.)",
+  "Common names": "Carbonate of STRONTIA",
   "symptoms": {
     "Eyes": [
-      "Pain and lachrymation on using eyes, with dancing and chromatic alterations of objects looked at", 
+      "Pain and lachrymation on using eyes, with dancing and chromatic alterations of objects looked at",
       "Burning and redness of eyes"
-    ], 
+    ],
     "Fever": [
       "Heat, with aversion to uncover or undress"
-    ], 
+    ],
     "Stomach": [
-      "Hiccough causes chest pains; cardialgia", 
-      "Food tasteless", 
-      "Loss of appetite, aversion to meat, craves bread and beer", 
+      "Hiccough causes chest pains",
+      "cardialgia",
+      "Food tasteless",
+      "Loss of appetite, aversion to meat, craves bread and beer",
       "Eructations after eating"
-    ], 
+    ],
     "Head": [
-      "Face red; burns, itches", 
-      "Bloody crusts in nose", 
-      "Flushes in face; violent pulsating", 
-      "Aches from nape of neck, spreading upwards; better wrapping head up warmly", 
-      "Supraorbital neuralgia; pains increase and decrease slowly", 
-      "Vertigo with headache and nausea", 
-      "Itching, redness and burning of nose", 
+      "Face red",
+      "burns, itches",
+      "Bloody crusts in nose",
+      "Flushes in face",
+      "violent pulsating",
+      "Aches from nape of neck, spreading upwards",
+      "better wrapping head up warmly",
+      "Supraorbital neuralgia",
+      "pains increase and decrease slowly",
+      "Vertigo with headache and nausea",
+      "Itching, redness and burning of nose",
       "Distensive pressure"
-    ], 
+    ],
     "Abdomen": [
-      "Sticking in abdominal ring", 
-      "Uncomfortable fullness and swelling of abdomen", 
-      "Diarrhoea; worse at night; continuous urging; better towards morning", 
+      "Sticking in abdominal ring",
+      "Uncomfortable fullness and swelling of abdomen",
+      "Diarrhoea",
+      "worse at night",
+      "continuous urging",
+      "better towards morning",
       "Burning in anus lasts a long time after stool"
-    ], 
+    ],
     "Skin": [
-      "Sprains of ankle-joint, with edema", 
-      "Violent perspiration at night", 
-      "Moist, itching, burning eruption; better in open air, especially warm sunshine"
-    ], 
+      "Sprains of ankle-joint, with edema",
+      "Violent perspiration at night",
+      "Moist, itching, burning eruption",
+      "better in open air, especially warm sunshine"
+    ],
     "Extremities": [
-      "Rheumatism with diarrhoea", 
-      "Sciatica with oedema of ankle", 
-      "Edematous swelling", 
-      "Veins of hands engorged", 
-      "Gnawing as if in marrow of bones", 
-      "Rheumatic pain in right shoulder", 
-      "Chronic spasms, particularly of ankle-joint", 
-      "Rheumatic pains, especially in joints", 
-      "Cramps in calves and soles", 
+      "Rheumatism with diarrhoea",
+      "Sciatica with oedema of ankle",
+      "Edematous swelling",
+      "Veins of hands engorged",
+      "Gnawing as if in marrow of bones",
+      "Rheumatic pain in right shoulder",
+      "Chronic spasms, particularly of ankle-joint",
+      "Rheumatic pains, especially in joints",
+      "Cramps in calves and soles",
       "Icy-cold feet"
     ]
-  }, 
-  "details": "Rheumatic pains, chronic sprains, stenosis of oesophagus. Pains make patient faint or sick all over. Chronic SEQUALAE OF HEMORRHAGES, after operations with much oozing of blood and coldness and prostration. Arteriosclerosis. High blood pressure with flushed face pulsating arteries, threatened apoplexy. Violent involuntary starts. Affections of bones, especially femur. Restlessness at night, smothering feeling. FOR SHOCK AFTER SURGICAL OPERATIONS. NEURITIS, great sensitiveness to cold.", 
+  },
+  "details": "Rheumatic pains, chronic sprains, stenosis of oesophagus. Pains make patient faint or sick all over. Chronic SEQUALAE OF HEMORRHAGES, after operations with much oozing of blood and coldness and prostration. Arteriosclerosis. High blood pressure with flushed face pulsating arteries, threatened apoplexy. Violent involuntary starts. Affections of bones, especially femur. Restlessness at night, smothering feeling. FOR SHOCK AFTER SURGICAL OPERATIONS. NEURITIS, great sensitiveness to cold.",
   "dosage": "Sixth trituration and thirtieth potency."
 }

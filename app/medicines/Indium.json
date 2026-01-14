@@ -1,36 +1,38 @@
 {
-  "name": "Indium", 
-  "Relationship": "Compare: SELENIUM; TITANIUM (male sexual organs).", 
-  "Common names": "The Metal Indium", 
+  "name": "Indium",
+  "Relationship": "Compare: SELENIUM; TITANIUM (male sexual organs).",
+  "Common names": "The Metal Indium",
   "symptoms": {
     "Head": [
-      "Dull pains in temples and forehead, with nausea, weakness, sleepiness", 
-      "Sexual psychopathy", 
-      "Pain in head when straining at stool", 
-      "Bursting in head during stool", 
+      "Dull pains in temples and forehead, with nausea, weakness, sleepiness",
+      "Sexual psychopathy",
+      "Pain in head when straining at stool",
+      "Bursting in head during stool",
       "Gone feeling in stomach about eleven am violent attack of sneezing"
-    ], 
+    ],
     "Face": [
-      "Painful suppurating pimples", 
+      "Painful suppurating pimples",
       "Corners of mouth cracked and sore"
-    ], 
+    ],
     "Throat": [
-      "Worse evening", 
-      "Uvula enlarged, ulcerated; thick, tough mucus in back part of pharynx"
-    ], 
+      "Worse evening",
+      "Uvula enlarged, ulcerated",
+      "thick, tough mucus in back part of pharynx"
+    ],
     "Extremities": [
-      "Toes itch", 
-      "Stiffness in neck and shoulders", 
-      "Pain, especially in left arm", 
+      "Toes itch",
+      "Stiffness in neck and shoulders",
+      "Pain, especially in left arm",
       "Legs restless and weary"
-    ], 
+    ],
     "Male": [
-      "Testicles tender; drawing pains along spermatic cord", 
-      "Emissions too frequent", 
-      "Horribly offensive smell of urine after standing a short time", 
+      "Testicles tender",
+      "drawing pains along spermatic cord",
+      "Emissions too frequent",
+      "Horribly offensive smell of urine after standing a short time",
       "Diminished power"
     ]
-  }, 
-  "details": "Headaches and migraine. Seminal emissions. BACKACHE.", 
+  },
+  "details": "Headaches and migraine. Seminal emissions. BACKACHE.",
   "dosage": "Sixth to 200th potency."
 }

@@ -1,49 +1,50 @@
 {
-  "name": "Cuprum aceticum", 
-  "Relationship": "Acts similarly to CUPRUM MET. but is more violent in action.", 
+  "name": "Cuprum aceticum",
+  "Relationship": "Acts similarly to CUPRUM MET. but is more violent in action.",
   "Modalities": [
-    "Worse: mental emotions", 
-    "Worse: touch", 
-    "Better: chewing", 
-    "Better: pressure", 
-    "Better: night", 
-    "Better: lying on affected side", 
+    "Worse: mental emotions",
+    "Worse: touch",
+    "Better: chewing",
+    "Better: pressure",
+    "Better: night",
+    "Better: lying on affected side",
     "Better: and warmth"
-  ], 
-  "Common names": "Acetate of Copper", 
+  ],
+  "Common names": "Acetate of Copper",
   "symptoms": {
     "Head": [
-      "Constant protrusion and retraction of tongue", 
-      "Loses consciousness; head reels when in high-ceiling room", 
-      "Left-sided brow ague", 
-      "Brain seems void", 
-      "Violent throbbing and lancinating pains in forehead", 
-      "Neuralgia with heaviness of head, burning, stinging and stitching in temples and forehead", 
+      "Constant protrusion and retraction of tongue",
+      "Loses consciousness",
+      "head reels when in high-ceiling room",
+      "Left-sided brow ague",
+      "Brain seems void",
+      "Violent throbbing and lancinating pains in forehead",
+      "Neuralgia with heaviness of head, burning, stinging and stitching in temples and forehead",
       "Inclined to gape and cry"
-    ], 
+    ],
     "Respiratory": [
-      "Short, difficult respiration", 
-      "Dyspnoea", 
-      "Spasmodic constriction of chest", 
-      "Attacks of angina pectoris coming on when excited", 
+      "Short, difficult respiration",
+      "Dyspnoea",
+      "Spasmodic constriction of chest",
+      "Attacks of angina pectoris coming on when excited",
       "Violent spasmodic cough"
-    ], 
+    ],
     "Stomach": [
-      "Cholera", 
-      "Slimy brown diarrhoea", 
-      "Violent tenesmus", 
-      "Violent spasmodic pains in stomach and abdomen", 
+      "Cholera",
+      "Slimy brown diarrhoea",
+      "Violent tenesmus",
+      "Violent spasmodic pains in stomach and abdomen",
       "Vomiting"
-    ], 
+    ],
     "Face": [
-      "Facial neuralgia in cheek-bone, upper jaw, and behind right ear", 
-      "Better by chewing, pressure, and external warmth", 
+      "Facial neuralgia in cheek-bone, upper jaw, and behind right ear",
+      "Better by chewing, pressure, and external warmth",
       "Collapsed, hippocratic"
-    ], 
+    ],
     "Skin": [
       "Leprous-like eruption, without itching, over whole body, in spots of various sizes"
     ]
-  }, 
-  "details": "Hay-fever, with burning excoriation, paroxysmal cough; tough, tenacious mucus, and fear of suffocation. PROTRACTED LABOR. Chronic psoriasis and lepra.", 
+  },
+  "details": "Hay-fever, with burning excoriation, paroxysmal cough; tough, tenacious mucus, and fear of suffocation. PROTRACTED LABOR. Chronic psoriasis and lepra.",
   "dosage": "Third to sixth trituration."
 }

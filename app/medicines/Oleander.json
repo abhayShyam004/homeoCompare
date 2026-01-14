@@ -1,79 +1,87 @@
 {
-  "name": "Oleander", 
-  "Relationship": "Compare: CON.; NAT-M.; RHUS; CAUST.; LATHYR. Oleander contains Oleandrin and also Nerein which latter is said to be closely related if not identical with Digitalin. The pulse becomes slower, more regular, more powerful. DIURESIS; palpitation, oedema and dyspnoea of valvular disease, disappear. Antidotes: CAMPH.; SULPH.", 
+  "name": "Oleander",
+  "Relationship": "Compare: CON.; NAT-M.; RHUS; CAUST.; LATHYR. Oleander contains Oleandrin and also Nerein which latter is said to be closely related if not identical with Digitalin. The pulse becomes slower, more regular, more powerful. DIURESIS; palpitation, oedema and dyspnoea of valvular disease, disappear. Antidotes: CAMPH.; SULPH.",
   "Modalities": [
-    "Worse: undressing", 
-    "Worse: rest", 
+    "Worse: undressing",
+    "Worse: rest",
     "Worse: friction of clothes"
-  ], 
-  "Common names": "Nerium Odorum Rose-laurel", 
+  ],
+  "Common names": "Nerium Odorum Rose-laurel",
   "symptoms": {
     "Eyes": [
-      "Can see objects only when looking at them sideways", 
-      "Sensation as if eyes were drawn back into the head", 
-      "Double vision", 
+      "Can see objects only when looking at them sideways",
+      "Sensation as if eyes were drawn back into the head",
+      "Double vision",
       "Eyes water on reading"
-    ], 
+    ],
     "Stomach": [
-      "Canine hunger, with hurried eating, without appetite", 
-      "Vomiting of food; greenish water", 
-      "Empty belching", 
-      "Thirst", 
+      "Canine hunger, with hurried eating, without appetite",
+      "Vomiting of food",
+      "greenish water",
+      "Empty belching",
+      "Thirst",
       "Throbbing in pit"
-    ], 
+    ],
     "Head": [
-      "Occiput, with red, rough, herpetic spots in front", 
-      "Numb feeling", 
-      "Eruption on scalp", 
-      "Dull, unable to think", 
-      "Vertigo and diplopia, when looking down", 
-      "Pain in brain, as if head would burst", 
-      "Vertigo, when looking fixedly at an object, and on rising in bed", 
-      "Indolence", 
-      "Humid, fetid spots behind ears", 
-      "Corrosive itching on forehead and edge of hair; worse, heat"
-    ], 
+      "Occiput, with red, rough, herpetic spots in front",
+      "Numb feeling",
+      "Eruption on scalp",
+      "Dull, unable to think",
+      "Vertigo and diplopia, when looking down",
+      "Pain in brain, as if head would burst",
+      "Vertigo, when looking fixedly at an object, and on rising in bed",
+      "Indolence",
+      "Humid, fetid spots behind ears",
+      "Corrosive itching on forehead and edge of hair",
+      "worse, heat"
+    ],
     "Mind": [
-      "Melancholy, with obstinate constipation", 
-      "Memory weak; slow perception"
-    ], 
+      "Melancholy, with obstinate constipation",
+      "Memory weak",
+      "slow perception"
+    ],
     "Chest": [
-      "Obtuse stitches in chest", 
-      "Dyspnoea", 
-      "Palpitation, with weakness and empty feeling in chest", 
-      "Oppression as from a weight; asthmatic when lying down"
-    ], 
+      "Obtuse stitches in chest",
+      "Dyspnoea",
+      "Palpitation, with weakness and empty feeling in chest",
+      "Oppression as from a weight",
+      "asthmatic when lying down"
+    ],
     "Face": [
       "Pale, sunken, with blue rings around eyes"
-    ], 
+    ],
     "Skin": [
-      "Very sensitive skin; slightest friction causes soreness and chapping", 
-      "Violent itching eruption, bleeding, oozing; want of perspiration", 
-      "Pruritus, especially of scalp, which is sensitive", 
-      "Nocturnal burning", 
-      "Itching, scurfy pimples; herpes; sensitive and numb"
-    ], 
+      "Very sensitive skin",
+      "slightest friction causes soreness and chapping",
+      "Violent itching eruption, bleeding, oozing",
+      "want of perspiration",
+      "Pruritus, especially of scalp, which is sensitive",
+      "Nocturnal burning",
+      "Itching, scurfy pimples",
+      "herpes",
+      "sensitive and numb"
+    ],
     "Abdomen": [
-      "Gnawing around navel", 
-      "Burning pain in anus", 
-      "Undigested feces", 
-      "Ineffectual urging", 
-      "Stool passes when emitting flatus", 
+      "Gnawing around navel",
+      "Burning pain in anus",
+      "Undigested feces",
+      "Ineffectual urging",
+      "Stool passes when emitting flatus",
       "Borborygmus, with profuse, fetid flatus"
-    ], 
+    ],
     "Extremities": [
-      "Painless paralysis", 
-      "Weakness of lower limbs", 
-      "Stiffness of joints", 
-      "Cold feet", 
-      "Swelling, burning stiffness of fingers", 
-      "Paralysis of legs and feet", 
-      "Veins on hands swollen", 
-      "Constant cold feet", 
-      "Want of animal heat in limbs", 
+      "Painless paralysis",
+      "Weakness of lower limbs",
+      "Stiffness of joints",
+      "Cold feet",
+      "Swelling, burning stiffness of fingers",
+      "Paralysis of legs and feet",
+      "Veins on hands swollen",
+      "Constant cold feet",
+      "Want of animal heat in limbs",
       "Oedema"
     ]
-  }, 
-  "details": "Has a marked action on the skin, heart and nervous system, producing and curing paralytic conditions with cramp-like contractions of upper extremities. Hemiplegia. Difficult articulation.", 
+  },
+  "details": "Has a marked action on the skin, heart and nervous system, producing and curing paralytic conditions with cramp-like contractions of upper extremities. Hemiplegia. Difficult articulation.",
   "dosage": "Third to thirtieth potency."
 }

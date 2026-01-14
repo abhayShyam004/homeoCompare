@@ -1,66 +1,75 @@
 {
-  "name": "Tellurium", 
-  "Relationship": "Compare: RADIUM.; SELENIUM.; TETRADYMITE - crystals from Georgia and North Carolina containing BISMUTH, TELLURIUM AND SULPHUR - (coccygodynia, ulceration of nails; pains in hands, in small spots, ankles, heels, and tendo-achilles); SEP.; ARTS.; RHUS.", 
+  "name": "Tellurium",
+  "Relationship": "Compare: RADIUM.; SELENIUM.; TETRADYMITE - crystals from Georgia and North Carolina containing BISMUTH, TELLURIUM AND SULPHUR - (coccygodynia, ulceration of nails; pains in hands, in small spots, ankles, heels, and tendo-achilles); SEP.; ARTS.; RHUS.",
   "Modalities": [
-    "Worse: while at rest at night", 
-    "Worse: cold weather", 
-    "Worse: from friction", 
-    "Worse: coughing", 
-    "Worse: laughing", 
-    "Worse: lying on painful side", 
+    "Worse: while at rest at night",
+    "Worse: cold weather",
+    "Worse: from friction",
+    "Worse: coughing",
+    "Worse: laughing",
+    "Worse: lying on painful side",
     "Worse: touch"
-  ], 
-  "Common names": "The Metal Tellurium", 
+  ],
+  "Common names": "The Metal Tellurium",
   "symptoms": {
     "Eyes": [
-      "Cataract, following ocular lesions; aids the absorption of infiltrations in iris and choroid", 
-      "Lids thickened, inflamed, itching", 
-      "Pterygium; pustular conjunctivitis"
-    ], 
+      "Cataract, following ocular lesions",
+      "aids the absorption of infiltrations in iris and choroid",
+      "Lids thickened, inflamed, itching",
+      "Pterygium",
+      "pustular conjunctivitis"
+    ],
     "Stomach": [
-      "Craving for apples", 
-      "Heartburn", 
+      "Craving for apples",
+      "Heartburn",
       "Empty and weak feeling"
-    ], 
+    ],
     "Head": [
-      "Itching of scalp; red spots", 
-      "Distortion and twitching of left facial muscles; when speaking left angle of mouth drawn upwards and to left", 
-      "Fear of being touched in sensitive places", 
-      "Neglectful and forgetful", 
-      "Congestion to head and nape of neck, followed by weakness and faintness in stomach", 
+      "Itching of scalp",
+      "red spots",
+      "Distortion and twitching of left facial muscles",
+      "when speaking left angle of mouth drawn upwards and to left",
+      "Fear of being touched in sensitive places",
+      "Neglectful and forgetful",
+      "Congestion to head and nape of neck, followed by weakness and faintness in stomach",
       "Pain in left side of head and in forehead above left eye"
-    ], 
+    ],
     "Back": [
-      "Pain in sacrum", 
-      "Contraction of tendons in bends of knees", 
-      "Pain from last cervical to fifth dorsal vertebra, very sensitive; worse touch", 
-      "Sciatica; worse right side, coughing, straining, and at night, with sensitive vertebral column"
-    ], 
+      "Pain in sacrum",
+      "Contraction of tendons in bends of knees",
+      "Pain from last cervical to fifth dorsal vertebra, very sensitive",
+      "worse touch",
+      "Sciatica",
+      "worse right side, coughing, straining, and at night, with sensitive vertebral column"
+    ],
     "Nose": [
-      "Obstructed; hawks salty phlegm from posterior nares", 
-      "Coryza, lachrymation and hoarseness; better in open air"
-    ], 
+      "Obstructed",
+      "hawks salty phlegm from posterior nares",
+      "Coryza, lachrymation and hoarseness",
+      "better in open air"
+    ],
     "Skin": [
-      "Eczema, back of ears and occiput", 
-      "Ring-shape lesions, offensive odors from affected parts", 
-      "Stinging in skin", 
-      "Barber's itch", 
-      "Itching of hands and feet", 
-      "Offensive foot-sweat", 
-      "Circular patches of eczema", 
-      "Herpetic spots; ringworm", 
+      "Eczema, back of ears and occiput",
+      "Ring-shape lesions, offensive odors from affected parts",
+      "Stinging in skin",
+      "Barber's itch",
+      "Itching of hands and feet",
+      "Offensive foot-sweat",
+      "Circular patches of eczema",
+      "Herpetic spots",
+      "ringworm",
       "Fetid exhalations"
-    ], 
+    ],
     "Rectum": [
       "Pruritus ani et perinei after every stool"
-    ], 
+    ],
     "Ears": [
-      "Catarrh of middle ear, discharge acrid, smells like fish-pickle", 
-      "Itching, swelling, throbbing in meatus", 
-      "Eczema behind ear", 
+      "Catarrh of middle ear, discharge acrid, smells like fish-pickle",
+      "Itching, swelling, throbbing in meatus",
+      "Eczema behind ear",
       "Deafness"
     ]
-  }, 
-  "details": "Marked skin (herpes circinatus), spinal, eye and ear symptoms. VERY SENSITIVE BACK. Pains all over body. Offensive discharges. Slow development of symptoms. (RADIUM.) Sacral and sciatic pains.", 
+  },
+  "details": "Marked skin (herpes circinatus), spinal, eye and ear symptoms. VERY SENSITIVE BACK. Pains all over body. Offensive discharges. Slow development of symptoms. (RADIUM.) Sacral and sciatic pains.",
   "dosage": "Sixth potency and higher. Takes long time to develop its action, which is very prolonged."
 }

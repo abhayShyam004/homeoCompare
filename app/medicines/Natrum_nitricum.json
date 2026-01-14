@@ -1,30 +1,32 @@
 {
   "symptoms": {
     "Heart": [
-      "Pain in region of heart", 
+      "Pain in region of heart",
       "Pulse slower and softer"
-    ], 
+    ],
     "Head": [
-      "Otalgia", 
-      "Nosebleed", 
-      "Pressing inward pain", 
-      "Indisposed to mental and bodily exertion", 
-      "Inward pressing in malar bones", 
+      "Otalgia",
+      "Nosebleed",
+      "Pressing inward pain",
+      "Indisposed to mental and bodily exertion",
+      "Inward pressing in malar bones",
       "Dull"
-    ], 
+    ],
     "Stomach": [
-      "Sour risings", 
-      "Aversions to coffee", 
-      "Flatulence, with pressure in pit of stomach and pain in chest; worse motion, better eructation"
-    ], 
+      "Sour risings",
+      "Aversions to coffee",
+      "Flatulence, with pressure in pit of stomach and pain in chest",
+      "worse motion, better eructation"
+    ],
     "Abdomen": [
-      "Distended", 
-      "Abdominal muscles painfully contracted towards the spine", 
-      "Difficult stool; feels as if more remained to pass"
+      "Distended",
+      "Abdominal muscles painfully contracted towards the spine",
+      "Difficult stool",
+      "feels as if more remained to pass"
     ]
-  }, 
-  "details": "A Rademacherian remedy for INFLAMMATIONS. Hemoptysis. Hematuria. Purpura hemorrhagica. Hemorrhagic Variola. Drowsiness. Pains of tabes INFLUENZA. Hemorrhages from mucous membranes, particularly nasal. Hemoglobinuria. Uric acid diathesis. Asthma with urine supersaturated with solids. Anemia and hydraemia. Exhaustion, must rest frequently when walking.", 
-  "Common names": "Nitrate of Sodium", 
-  "name": "Natrum nitricum", 
+  },
+  "details": "A Rademacherian remedy for INFLAMMATIONS. Hemoptysis. Hematuria. Purpura hemorrhagica. Hemorrhagic Variola. Drowsiness. Pains of tabes INFLUENZA. Hemorrhages from mucous membranes, particularly nasal. Hemoglobinuria. Uric acid diathesis. Asthma with urine supersaturated with solids. Anemia and hydraemia. Exhaustion, must rest frequently when walking.",
+  "Common names": "Nitrate of Sodium",
+  "name": "Natrum nitricum",
   "dosage": "Second trituration, also watery solution; 1 dram of salt to 8 oz. water. Dram doses."
 }

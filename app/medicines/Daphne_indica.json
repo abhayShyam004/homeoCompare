@@ -1,31 +1,34 @@
 {
-  "name": "Daphne indica", 
-  "Relationship": "Antidotes: BRY.; RHUS. Compare: FLUOR-AC.; AUR; MEZ.; STAPH.", 
-  "Common names": "Spurge Laurel", 
+  "name": "Daphne indica",
+  "Relationship": "Antidotes: BRY.; RHUS. Compare: FLUOR-AC.; AUR; MEZ.; STAPH.",
+  "Common names": "Spurge Laurel",
   "symptoms": {
     "Head": [
-      "Tongue coated on one side only", 
-      "Heat in head, especially in vertex", 
-      "Feels as if skull would burst; as if head were separated from body", 
+      "Tongue coated on one side only",
+      "Heat in head, especially in vertex",
+      "Feels as if skull would burst",
+      "as if head were separated from body",
       "Foul-smelling, ptyalism hot"
-    ], 
+    ],
     "Urine": [
       "Thick, turbid, yellowish, like rotten eggs"
-    ], 
+    ],
     "Sleep": [
-      "Starting on falling to sleep with chilliness and clamminess", 
-      "Entire inability to sleep; sometimes caused by aching in bones", 
-      "Dreams of cats, black cats", 
+      "Starting on falling to sleep with chilliness and clamminess",
+      "Entire inability to sleep",
+      "sometimes caused by aching in bones",
+      "Dreams of cats, black cats",
       "Dreams, with nightmare"
-    ], 
+    ],
     "Extremities": [
-      "Cold feeling on buttocks", 
-      "Pain shoots upward into abdomen and heart", 
-      "Shooting pains, shift rapidly; worse, cold air", 
-      "Right toe swollen, painful", 
+      "Cold feeling on buttocks",
+      "Pain shoots upward into abdomen and heart",
+      "Shooting pains, shift rapidly",
+      "worse, cold air",
+      "Right toe swollen, painful",
       "Rheumatic pains in thighs and knees"
     ]
-  }, 
-  "details": "Acts on lower tissues, muscles, bones and skin. Sudden, lightning jerks in different parts of the body. CRAVING FOR TOBACCO. Burning in stomach. Parts of the body feel separated. (BAPT.) FETID breath, urine, sweat.", 
+  },
+  "details": "Acts on lower tissues, muscles, bones and skin. Sudden, lightning jerks in different parts of the body. CRAVING FOR TOBACCO. Burning in stomach. Parts of the body feel separated. (BAPT.) FETID breath, urine, sweat.",
   "dosage": "First to sixth attenuation."
 }

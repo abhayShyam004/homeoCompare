@@ -1,21 +1,24 @@
 {
   "symptoms": {
     "Head": [
-      "Sensation as if brain were falling forwards; as from a blow on head"
-    ], 
+      "Sensation as if brain were falling forwards",
+      "as from a blow on head"
+    ],
     "Respiratory": [
-      "Cough with sweat, pain and tightness of chest; larynx irritated"
-    ], 
+      "Cough with sweat, pain and tightness of chest",
+      "larynx irritated"
+    ],
     "Eyes": [
-      "Epiphora", 
-      "Eye symptoms alternate with diminished hearing", 
-      "Conjunctiva inflamed, swollen", 
-      "Tearing pain in eyeballs; tension, forced-out feeling", 
+      "Epiphora",
+      "Eye symptoms alternate with diminished hearing",
+      "Conjunctiva inflamed, swollen",
+      "Tearing pain in eyeballs",
+      "tension, forced-out feeling",
       "Objects appear gray, upside down"
     ]
-  }, 
-  "details": "Eye symptoms have been verified. Chemosis and pterygium have been cured with it. Lupus of an ochre-red color.", 
-  "Common names": "Ball wood", 
-  "name": "Guarea", 
+  },
+  "details": "Eye symptoms have been verified. Chemosis and pterygium have been cured with it. Lupus of an ochre-red color.",
+  "Common names": "Ball wood",
+  "name": "Guarea",
   "dosage": "Tincture."
 }

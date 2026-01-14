@@ -1,23 +1,26 @@
 {
-  "name": "Mercurius iodatus flavus", 
-  "Relationship": "Compare: PLUM. IOD. (in mammary tumors).", 
-  "Common names": "Proto-iodide of Mercury", 
+  "name": "Mercurius iodatus flavus",
+  "Relationship": "Compare: PLUM. IOD. (in mammary tumors).",
+  "Common names": "Proto-iodide of Mercury",
   "symptoms": {
     "Mouth": [
-      "Tip and edges may be red and take imprint of teeth", 
-      "Tongue coated thickly; yellow at the base"
-    ], 
+      "Tip and edges may be red and take imprint of teeth",
+      "Tongue coated thickly",
+      "yellow at the base"
+    ],
     "Throat": [
-      "Constant inclination to swallow", 
-      "Easily detached patches on inflamed pharynx and fauces; worse on right tonsil; much tenacious mucus", 
-      "When only the superficial part of the tonsils is involved", 
-      "Small ulcers on posterior pharynx", 
-      "Swelling begins on right side", 
-      "Lacunar tonsillitis", 
-      "Cheesy exudates with offensive breath", 
+      "Constant inclination to swallow",
+      "Easily detached patches on inflamed pharynx and fauces",
+      "worse on right tonsil",
+      "much tenacious mucus",
+      "When only the superficial part of the tonsils is involved",
+      "Small ulcers on posterior pharynx",
+      "Swelling begins on right side",
+      "Lacunar tonsillitis",
+      "Cheesy exudates with offensive breath",
       "Sensation of a lump"
     ]
-  }, 
-  "details": "Throat affections, with greatly swollen glands and characteristic coating of tongue. Worse, right side. Chancre; induration remains long time. Swollen inguinal glands, large and hard. MAMMARY TUMORS, with tendency to much warm perspiration and gastric disturbances.", 
+  },
+  "details": "Throat affections, with greatly swollen glands and characteristic coating of tongue. Worse, right side. Chancre; induration remains long time. Swollen inguinal glands, large and hard. MAMMARY TUMORS, with tendency to much warm perspiration and gastric disturbances.",
   "dosage": "Second trituration."
 }

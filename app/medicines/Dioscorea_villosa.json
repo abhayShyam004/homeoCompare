@@ -1,72 +1,88 @@
 {
-  "name": "Dioscorea villosa", 
-  "Relationship": "Antidotes: CHAMOM.; CAMPH. Compare: COLOC. (differs in modalities); NUX; CHAM.; BRY.", 
+  "name": "Dioscorea villosa",
+  "Relationship": "Antidotes: CHAMOM.; CAMPH. Compare: COLOC. (differs in modalities); NUX; CHAM.; BRY.",
   "Modalities": [
-    "Worse: evening and night; lying down", 
-    "Worse: and doubling up", 
-    "Better: standing erect", 
+    "Worse: evening and night; lying down",
+    "Worse: and doubling up",
+    "Better: standing erect",
     "Better: motion in open air; pressure"
-  ], 
-  "Common names": "Wild Yam", 
+  ],
+  "Common names": "Wild Yam",
   "symptoms": {
     "Heart": [
-      "Angina pectoris; pain back of sternum into arms; labored breathing; feeble action of heart", 
+      "Angina pectoris",
+      "pain back of sternum into arms",
+      "labored breathing",
+      "feeble action of heart",
       "Especially with flatulence and pain through chest and tightness across"
-    ], 
+    ],
     "Head": [
-      "Dull pain in both temples; better pressure, but worse afterwards", 
+      "Dull pain in both temples",
+      "better pressure, but worse afterwards",
       "Buzzing in head"
-    ], 
+    ],
     "Respiratory": [
-      "Chest does not seem to expand on breathing", 
-      "Tight feeling all along sternum", 
+      "Chest does not seem to expand on breathing",
+      "Tight feeling all along sternum",
       "Short-winded"
-    ], 
+    ],
     "Stomach": [
-      "Pain along sternum and extending into arms", 
-      "Eructations of sour, bitter wind, with hiccough", 
-      "Sharp pain in epigastrium, relieved by standing erect", 
-      "Belching of large quantities of offensive gas", 
-      "Sinking at the pit of the stomach; pyrosis", 
-      "Neuralgia of stomach", 
+      "Pain along sternum and extending into arms",
+      "Eructations of sour, bitter wind, with hiccough",
+      "Sharp pain in epigastrium, relieved by standing erect",
+      "Belching of large quantities of offensive gas",
+      "Sinking at the pit of the stomach",
+      "pyrosis",
+      "Neuralgia of stomach",
       "Mouth dry and bitter in morning, tongue coated, no thirst"
-    ], 
+    ],
     "Rectum": [
-      "Diarrhoea , yellowish, followed by exhaustion, as if flatus and feces were hot", 
-      "Hemorrhoids, with darting pains to liver; look like bunches of grapes or red cherries; protrude after stool, with pain in anus"
-    ], 
+      "Diarrhoea , yellowish, followed by exhaustion, as if flatus and feces were hot",
+      "Hemorrhoids, with darting pains to liver",
+      "look like bunches of grapes or red cherries",
+      "protrude after stool, with pain in anus"
+    ],
     "Mind": [
       "Calls things by the wrong name"
-    ], 
+    ],
     "Abdomen": [
-      "Sharp pains from liver, shooting upward to right nipple", 
-      "Renal colic, with pain in extremities", 
-      "Griping, cutting in hypogastric region, with intermittent cutting in stomach and small intestines", 
-      "Colic; better walking about; pains radiate from abdomen to back, chest, arms; worse, bending forwards and while lying", 
-      "Hurried desire for stool", 
-      "Rumbling, with emission of much flatus", 
-      "Pains suddenly shift to different parts; appear in remote localities, as fingers and toes", 
+      "Sharp pains from liver, shooting upward to right nipple",
+      "Renal colic, with pain in extremities",
+      "Griping, cutting in hypogastric region, with intermittent cutting in stomach and small intestines",
+      "Colic",
+      "better walking about",
+      "pains radiate from abdomen to back, chest, arms",
+      "worse, bending forwards and while lying",
+      "Hurried desire for stool",
+      "Rumbling, with emission of much flatus",
+      "Pains suddenly shift to different parts",
+      "appear in remote localities, as fingers and toes",
       "Pain from gall-bladder to chest, back, and arms"
-    ], 
+    ],
     "Female": [
-      "Vivid dreams", 
-      "Uterine colic; pains radiate from uterus"
-    ], 
+      "Vivid dreams",
+      "Uterine colic",
+      "pains radiate from uterus"
+    ],
     "Extremities": [
-      "Sciatica; pains shoot down thigh; worse, right side; better, when perfectly still", 
-      "Nails brittle", 
-      "Cramps in flexors of fingers and toes", 
-      "Felons in beginning, when pricking is first felt", 
-      "Lameness in back; worse, stooping", 
+      "Sciatica",
+      "pains shoot down thigh",
+      "worse, right side",
+      "better, when perfectly still",
+      "Nails brittle",
+      "Cramps in flexors of fingers and toes",
+      "Felons in beginning, when pricking is first felt",
+      "Lameness in back",
+      "worse, stooping",
       "Aching and stiffness in joints"
-    ], 
+    ],
     "Male": [
-      "Pains shoot into testicles from region of kidneys", 
-      "Relaxation and coldness of organs", 
-      "Emissions in sleep, or from sexual atony, with weak knees", 
+      "Pains shoot into testicles from region of kidneys",
+      "Relaxation and coldness of organs",
+      "Emissions in sleep, or from sexual atony, with weak knees",
       "Strong-smelling sweat on scrotum and pubes"
     ]
-  }, 
-  "details": "As a remedy for many kinds of PAIN, especially colic, and in severe, painful affections of abdominal and pelvic viscera; it ranks with the polychrests of the Materia Medica. Persons of feeble digestive powers; tea-drinkers, with much flatulence. GALL STONE COLIC.", 
+  },
+  "details": "As a remedy for many kinds of PAIN, especially colic, and in severe, painful affections of abdominal and pelvic viscera; it ranks with the polychrests of the Materia Medica. Persons of feeble digestive powers; tea-drinkers, with much flatulence. GALL STONE COLIC.",
   "dosage": "Tincture, to third potency."
 }

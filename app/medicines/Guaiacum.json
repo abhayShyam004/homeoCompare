@@ -1,86 +1,90 @@
 {
-  "name": "Guaiacum", 
-  "Relationship": "GUAIACOL (in the treatment of gonorrheal epididymitis, 2 parts to 30 vaseline, locally). Antidote: NUX. Follows sepia. Compare: MERC.; CAUST.; RHUS; MEZER.; RHODO.", 
+  "name": "Guaiacum",
+  "Relationship": "GUAIACOL (in the treatment of gonorrheal epididymitis, 2 parts to 30 vaseline, locally). Antidote: NUX. Follows sepia. Compare: MERC.; CAUST.; RHUS; MEZER.; RHODO.",
   "Modalities": [
-    "Worse: from motion", 
-    "Worse: heat", 
-    "Worse: cold", 
-    "Worse: wet weather; pressure", 
-    "Worse: touch", 
-    "Worse: from six pm to four am", 
+    "Worse: from motion",
+    "Worse: heat",
+    "Worse: cold",
+    "Worse: wet weather; pressure",
+    "Worse: touch",
+    "Worse: from six pm to four am",
     "Better: external pressure"
-  ], 
-  "Common names": "Resin of Lignum Vitae", 
+  ],
+  "Common names": "Resin of Lignum Vitae",
   "symptoms": {
     "Eyes": [
-      "Pupils dilated", 
-      "Eyelids appear too short", 
+      "Pupils dilated",
+      "Eyelids appear too short",
       "Pimples around eyes"
-    ], 
+    ],
     "Respiratory": [
-      "Pleuritic stitches", 
-      "Feels suffocated", 
-      "Fetid breath after coughing", 
-      "Chest pains in articulations of ribs, with shortness of breathing till expectoration sets in", 
+      "Pleuritic stitches",
+      "Feels suffocated",
+      "Fetid breath after coughing",
+      "Chest pains in articulations of ribs, with shortness of breathing till expectoration sets in",
       "Dry, tight cough"
-    ], 
+    ],
     "Stomach": [
-      "Burning in stomach", 
-      "Constricted epigastric region", 
-      "Tongue furred", 
-      "Desire from apples and other fruits", 
+      "Burning in stomach",
+      "Constricted epigastric region",
+      "Tongue furred",
+      "Desire from apples and other fruits",
       "Aversion to milk"
-    ], 
+    ],
     "Head": [
-      "Aching in left ear", 
-      "Tearing pain in skull; worse, cold, wet weather", 
-      "Pains often end in a stitch, especially in head", 
-      "Feels swollen, and blood-vessels distended", 
+      "Aching in left ear",
+      "Tearing pain in skull",
+      "worse, cold, wet weather",
+      "Pains often end in a stitch, especially in head",
+      "Feels swollen, and blood-vessels distended",
       "Gouty and rheumatic pain in head and face, extending to neck"
-    ], 
+    ],
     "Urine": [
-      "Constant desire", 
+      "Constant desire",
       "Sharp stitches after urinating"
-    ], 
+    ],
     "Mind": [
-      "Forgetful; thoughtless; staring", 
+      "Forgetful",
+      "thoughtless",
+      "staring",
       "Slow to comprehend"
-    ], 
+    ],
     "Back": [
-      "Contractive pain between scapulae", 
-      "Stitches between scapulae to occiput", 
-      "Aching in nape", 
-      "Pain from head to neck", 
+      "Contractive pain between scapulae",
+      "Stitches between scapulae to occiput",
+      "Aching in nape",
+      "Pain from head to neck",
       "Stiff neck and sore shoulders"
-    ], 
+    ],
     "Abdomen": [
-      "Diarrhoea, cholera infantum", 
-      "Intestinal fermentation", 
+      "Diarrhoea, cholera infantum",
+      "Intestinal fermentation",
       "Much wind in bowels"
-    ], 
+    ],
     "Female": [
       "Ovaritis in rheumatic patients, with irregular menstruation and dysmenorrhoea, and irritable bladder"
-    ], 
+    ],
     "Throat": [
-      "Acute tonsillitis", 
-      "Syphilitic sore throat", 
-      "Rheumatic sore throat with weak throat muscles", 
+      "Acute tonsillitis",
+      "Syphilitic sore throat",
+      "Rheumatic sore throat with weak throat muscles",
       "Throat dry, burns, swollen, stitches toward ear"
-    ], 
+    ],
     "Extremities": [
-      "Pricking in nates", 
-      "Sciatica and lumbago", 
-      "Immovable stiffness", 
-      "Arthritic lancinations followed by contraction of limbs", 
-      "Gouty tearing, with contractions", 
-      "A feeling of heat in the affected limbs", 
-      "Growing pains", 
-      "Stinging pain in limbs", 
-      "Rheumatic pain in shoulders, arms and hands", 
-      "Ankle pain extending up the leg, causing lameness", 
-      "Joints swollen, painful, and intolerant of pressure; can bear no heat"
+      "Pricking in nates",
+      "Sciatica and lumbago",
+      "Immovable stiffness",
+      "Arthritic lancinations followed by contraction of limbs",
+      "Gouty tearing, with contractions",
+      "A feeling of heat in the affected limbs",
+      "Growing pains",
+      "Stinging pain in limbs",
+      "Rheumatic pain in shoulders, arms and hands",
+      "Ankle pain extending up the leg, causing lameness",
+      "Joints swollen, painful, and intolerant of pressure",
+      "can bear no heat"
     ]
-  }, 
-  "details": "Chief action on fibrous tissue, and is especially adapted to the arthritic diathesis, rheumatism, and tonsillitis. Secondary syphilis. Very valuable in acute rheumatism. FREE FOUL SECRETIONS. UNCLEAN ODOR FROM WHOLE BODY. Promotes suppuration of abscesses. Sensitiveness and aggravation from local heat. Contraction of limbs, stiffness and immobility. Feeling that he must stretch.", 
+  },
+  "details": "Chief action on fibrous tissue, and is especially adapted to the arthritic diathesis, rheumatism, and tonsillitis. Secondary syphilis. Very valuable in acute rheumatism. FREE FOUL SECRETIONS. UNCLEAN ODOR FROM WHOLE BODY. Promotes suppuration of abscesses. Sensitiveness and aggravation from local heat. Contraction of limbs, stiffness and immobility. Feeling that he must stretch.",
   "dosage": "Tincture, to sixth attenuation."
 }

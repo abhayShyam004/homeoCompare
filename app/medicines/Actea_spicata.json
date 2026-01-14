@@ -1,43 +1,47 @@
 {
-  "name": "Actea spicata", 
-  "Relationship": "Compare: Cimic.; Caul.; Led.", 
-  "Common names": "Bane berry", 
+  "name": "Actea spicata",
+  "Relationship": "Compare: Cimic.; Caul.; Led.",
+  "Common names": "Bane berry",
   "symptoms": {
     "Head": [
-      "Itching of scalp alternating with heat; nose red at tip, fluent coryza", 
-      "Fearful, starts easily; confused", 
-      "Ebullition of blood to head excited by drinking coffee", 
-      "Vertigo, tearing headache, better in open air, throbbing in brain, pain from crown to between eyebrows; heat in forehead, pain in left frontal eminence as if bone were crushed"
-    ], 
+      "Itching of scalp alternating with heat",
+      "nose red at tip, fluent coryza",
+      "Fearful, starts easily",
+      "confused",
+      "Ebullition of blood to head excited by drinking coffee",
+      "Vertigo, tearing headache, better in open air, throbbing in brain, pain from crown to between eyebrows",
+      "heat in forehead, pain in left frontal eminence as if bone were crushed"
+    ],
     "Respiratory": [
-      "Short, irregular breathing at night, while lying", 
-      "Great oppression", 
+      "Short, irregular breathing at night, while lying",
+      "Great oppression",
       "Shortness of breath on exposure to fresh air"
-    ], 
+    ],
     "Stomach": [
-      "Cramp-like pains in stomach and epigastrium, with difficult breathing; sense of suffocation", 
-      "Tearing, darting pains in epigastric region, with vomiting", 
+      "Cramp-like pains in stomach and epigastrium, with difficult breathing",
+      "sense of suffocation",
+      "Tearing, darting pains in epigastric region, with vomiting",
       "Sudden lassitude after eating"
-    ], 
+    ],
     "Abdomen": [
-      "Sticking pain and distension of hypogastrium", 
+      "Sticking pain and distension of hypogastrium",
       "Spasmodic retraction"
-    ], 
+    ],
     "Face": [
-      "Perspiration on face and head", 
+      "Perspiration on face and head",
       "Violent pain in upper jaw, running from teeth through malar bones to temples"
-    ], 
+    ],
     "Extremities": [
-      "Tearing pains in loins", 
-      "Swelling in joints from slight fatigue", 
-      "Pain in knee", 
-      "Paralytic weakness in the hands", 
-      "Wrist swollen, red, worse any motion", 
-      "Lame feeling in arms", 
-      "Sudden lassitude after talking or eating", 
+      "Tearing pains in loins",
+      "Swelling in joints from slight fatigue",
+      "Pain in knee",
+      "Paralytic weakness in the hands",
+      "Wrist swollen, red, worse any motion",
+      "Lame feeling in arms",
+      "Sudden lassitude after talking or eating",
       "Rheumatic pains in small joints, wrist,  fingers, ankles, toes"
     ]
-  }, 
-  "details": "Is a rheumatic remedy, especially of the SMALL JOINTS; tearing, tingling pains characterize it. WRIST-RHEUMATISM. Pulsations over whole body, especially liver and renal region. Cardiovascular spasm. Pains worse from touch and motion.", 
+  },
+  "details": "Is a rheumatic remedy, especially of the SMALL JOINTS; tearing, tingling pains characterize it. WRIST-RHEUMATISM. Pulsations over whole body, especially liver and renal region. Cardiovascular spasm. Pains worse from touch and motion.",
   "dosage": "Third potency."
 }

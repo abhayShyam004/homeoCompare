@@ -1,48 +1,51 @@
 {
-  "name": "Theridion", 
+  "name": "Theridion",
   "Modalities": [
     "Worse: touch; pressure; on shipboard; riding in carriage; closing eyes; jar; noise; coitus; left side"
-  ], 
-  "Common names": "Orange-spider", 
+  ],
+  "Common names": "Orange-spider",
   "symptoms": {
     "Eyes": [
-      "Throbbing over left eye", 
-      "Pressure behind eyeballs", 
-      "Luminous vibrations before eyes; sensitive to light"
-    ], 
+      "Throbbing over left eye",
+      "Pressure behind eyeballs",
+      "Luminous vibrations before eyes",
+      "sensitive to light"
+    ],
     "Respiratory": [
-      "Cardiac anxiety and pain", 
-      "Pinching in left pectoral muscle", 
-      "Pain in left floating ribs", 
+      "Cardiac anxiety and pain",
+      "Pinching in left pectoral muscle",
+      "Pain in left floating ribs",
       "Pain in upper left chest"
-    ], 
+    ],
     "Stomach": [
-      "Stinging pain on left side over anterior aspect of spleen", 
-      "Nausea and vomiting when closing eyes and on motion", 
-      "Seasickness", 
+      "Stinging pain on left side over anterior aspect of spleen",
+      "Nausea and vomiting when closing eyes and on motion",
+      "Seasickness",
       "Burning in liver region"
-    ], 
+    ],
     "Head": [
-      "Pain worse anyone walking over floor", 
+      "Pain worse anyone walking over floor",
       "Vertigo, with nausea and vomiting on least motion, particularly when closing eyes"
-    ], 
+    ],
     "Mind": [
-      "Restless; finds pleasure in nothing", 
+      "Restless",
+      "finds pleasure in nothing",
       "Time passes too quickly"
-    ], 
+    ],
     "Back": [
-      "Stinging pains", 
-      "Sensitiveness between vertebrae; avoids pressure on spine"
-    ], 
+      "Stinging pains",
+      "Sensitiveness between vertebrae",
+      "avoids pressure on spine"
+    ],
     "Nose": [
       "Discharge yellowish, offensive, ozaena"
-    ], 
+    ],
     "Skin": [
-      "Sensitive skin in thighs", 
-      "Stinging thrusts everywhere", 
+      "Sensitive skin in thighs",
+      "Stinging thrusts everywhere",
       "Itching sensations"
     ]
-  }, 
-  "details": "Nervous hyperaesthesia. Has affinity for the tubercular diathesis. Vertigo, sick headache, peculiar pain around heart region, phthisis florida, scrofula have all been treated successfully with this remedy. SENSITIVE TO NOISE; IT PENETRATES THE BODY, ESPECIALLY TEETH. Noises seem to strike on painful spots over the body. Rachitis, caries, necrosis. Phthisis, stitch high up in left apex. (ANTHRAX.) Where the indicated remedy does not hold long.", 
+  },
+  "details": "Nervous hyperaesthesia. Has affinity for the tubercular diathesis. Vertigo, sick headache, peculiar pain around heart region, phthisis florida, scrofula have all been treated successfully with this remedy. SENSITIVE TO NOISE; IT PENETRATES THE BODY, ESPECIALLY TEETH. Noises seem to strike on painful spots over the body. Rachitis, caries, necrosis. Phthisis, stitch high up in left apex. (ANTHRAX.) Where the indicated remedy does not hold long.",
   "dosage": "Thirtieth potency."
 }

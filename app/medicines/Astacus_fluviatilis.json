@@ -1,20 +1,22 @@
 {
-  "name": "Astacus fluviatilis", 
-  "Relationship": "Compare: Bombyx - Caterpillar - Itching of whole body. (Urticaria.) Apis; Rhus; Nat. m.; Homar.", 
-  "Common names": "Cancer Astacus Crawfish", 
+  "name": "Astacus fluviatilis",
+  "Relationship": "Compare: Bombyx - Caterpillar - Itching of whole body. (Urticaria.) Apis; Rhus; Nat. m.; Homar.",
+  "Common names": "Cancer Astacus Crawfish",
   "symptoms": {
     "Fever": [
-      "Inward chilliness; very sensitive to air, worse uncovering; violent fever, with headache"
-    ], 
+      "Inward chilliness",
+      "very sensitive to air, worse uncovering",
+      "violent fever, with headache"
+    ],
     "Skin": [
-      "Erysipelas, and liver infection with nettle-rash", 
-      "Crusta lactea, with enlarged lymphatic glands", 
-      "Swelling of cervical glands", 
-      "Itching", 
-      "Nettle-rash over whole body", 
+      "Erysipelas, and liver infection with nettle-rash",
+      "Crusta lactea, with enlarged lymphatic glands",
+      "Swelling of cervical glands",
+      "Itching",
+      "Nettle-rash over whole body",
       "Jaundice"
     ]
-  }, 
-  "details": "Skin symptoms most important. Urticaria.", 
+  },
+  "details": "Skin symptoms most important. Urticaria.",
   "dosage": "Third to thirtieth potency."
 }

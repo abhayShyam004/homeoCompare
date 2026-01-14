@@ -1,74 +1,84 @@
 {
-  "name": "Kalmia latifolia", 
-  "Relationship": "Compare: Kalmia contains Arbutin g.v. DERRIS PINUTA (of great service in neuralgic headaches of rheumatic origin). Compare: SPIGELIA; PULSAT. Complementary: BENZ. ACID.", 
+  "name": "Kalmia latifolia",
+  "Relationship": "Compare: Kalmia contains Arbutin g.v. DERRIS PINUTA (of great service in neuralgic headaches of rheumatic origin). Compare: SPIGELIA; PULSAT. Complementary: BENZ. ACID.",
   "Modalities": [
-    "Worse: leaning forward ; looking down; motion", 
+    "Worse: leaning forward ; looking down; motion",
     "Worse: open air"
-  ], 
-  "Common names": "Mountain Laurel", 
+  ],
+  "Common names": "Mountain Laurel",
   "symptoms": {
     "Heart": [
-      "Weak, slow pulse", 
-      "Heart's action tumultuous, rapid and visible", 
-      "Shooting through chest above heart into shoulder-blades", 
-      "Paroxysms of anguish around heart", 
-      "Fluttering of heart, with anxiety", 
-      "Frequent pulse", 
-      "Gouty and rheumatic metastasis of heart", 
-      "Tobacco heart", 
-      "Tachycardia, with pain", 
-      "Dyspnoea and pressure from epigastrium toward the heart", 
-      "Palpitation; worse leaning forward", 
+      "Weak, slow pulse",
+      "Heart's action tumultuous, rapid and visible",
+      "Shooting through chest above heart into shoulder-blades",
+      "Paroxysms of anguish around heart",
+      "Fluttering of heart, with anxiety",
+      "Frequent pulse",
+      "Gouty and rheumatic metastasis of heart",
+      "Tobacco heart",
+      "Tachycardia, with pain",
+      "Dyspnoea and pressure from epigastrium toward the heart",
+      "Palpitation",
+      "worse leaning forward",
       "Sharp pains take away the breath"
-    ], 
+    ],
     "Eyes": [
-      "Stiff, drawing sensation when moving eyes", 
-      "Rheumatic iritis", 
-      "Scleritis, pain increased by moving the eye", 
+      "Stiff, drawing sensation when moving eyes",
+      "Rheumatic iritis",
+      "Scleritis, pain increased by moving the eye",
       "Vision impaired"
-    ], 
+    ],
     "Stomach": [
-      "Bilious attacks, with nausea, vertigo, and headache", 
-      "Nausea; vomiting", 
-      "Pain in pit of stomach; worse by bending forward; relieved by sitting erect", 
-      "Sensation of something being pressed under the epigastrium", 
+      "Bilious attacks, with nausea, vertigo, and headache",
+      "Nausea",
+      "vomiting",
+      "Pain in pit of stomach",
+      "worse by bending forward",
+      "relieved by sitting erect",
+      "Sensation of something being pressed under the epigastrium",
       "Warm, glowing sensation in epigastrium"
-    ], 
+    ],
     "Head": [
-      "Confusion of brain", 
-      "Vertigo; worse stooping", 
-      "Pain in front and temporal region from head to nape and to teeth; from cardiac origin"
-    ], 
+      "Confusion of brain",
+      "Vertigo",
+      "worse stooping",
+      "Pain in front and temporal region from head to nape and to teeth",
+      "from cardiac origin"
+    ],
     "Urine": [
-      "Frequent, with sharp pains in lumbar region", 
+      "Frequent, with sharp pains in lumbar region",
       "Post-scarlatinal nephritis"
-    ], 
+    ],
     "Back": [
-      "Lumbar pains, of nervous origin", 
-      "Pain from neck down arm; in upper three dorsal vertebrae extending to shoulder-blade", 
-      "Pain down back, as if it would break; in localized regions of spine; through shoulders"
-    ], 
+      "Lumbar pains, of nervous origin",
+      "Pain from neck down arm",
+      "in upper three dorsal vertebrae extending to shoulder-blade",
+      "Pain down back, as if it would break",
+      "in localized regions of spine",
+      "through shoulders"
+    ],
     "Face": [
-      "Stitches and tearing in bones of jaw and face", 
-      "Stitches in tongue", 
-      "Neuralgia; worse right side"
-    ], 
+      "Stitches and tearing in bones of jaw and face",
+      "Stitches in tongue",
+      "Neuralgia",
+      "worse right side"
+    ],
     "Sleep": [
       "Sleepless, wakes very early in morning"
-    ], 
+    ],
     "Female": [
-      "Menses too early, or suppressed, with pain in limbs and back and inside of thighs", 
+      "Menses too early, or suppressed, with pain in limbs and back and inside of thighs",
       "Leucorrhoea follows menses"
-    ], 
+    ],
     "Extremities": [
-      "Pains along ulnar nerve, index finger", 
-      "Weakness, numbness, pricking, and sense of coldness in limbs", 
-      "Pains affect a large part of a limb, or several joints, and pass through quickly", 
-      "Pains from hips to knees and feet", 
-      "Deltoid rheumatism especially right", 
-      "Tingling and numbness of left arm", 
+      "Pains along ulnar nerve, index finger",
+      "Weakness, numbness, pricking, and sense of coldness in limbs",
+      "Pains affect a large part of a limb, or several joints, and pass through quickly",
+      "Pains from hips to knees and feet",
+      "Deltoid rheumatism especially right",
+      "Tingling and numbness of left arm",
       "Joints red, hot, swollen"
     ]
-  }, 
+  },
   "details": "A rheumatic remedy. Pains shift rapidly. Nausea and slow pulse frequently accompanying. Has also a prominent action on the heart. In small doses, it accelerates the heart's action; in larger it moderates it greatly. Neuralgia; PAINS SHOOT DOWNWARDS, WITH NUMBNESS. FULGURATING PAINS OF LOCOMOTOR ATAXIA. Protracted and continuous FEVERS, with tympanites. Paralytic sensations; pains and achings in limbs accompany nearly every group of symptoms. ALBUMINURIA."
 }

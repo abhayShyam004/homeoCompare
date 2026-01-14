@@ -1,50 +1,56 @@
 {
-  "name": "Corallium", 
-  "Relationship": "Complementary: SULPH. Compare: BELLAD; DROSERA.; MEPHIT.; CAUST.", 
-  "Common names": "Red Coral", 
+  "name": "Corallium",
+  "Relationship": "Complementary: SULPH. Compare: BELLAD; DROSERA.; MEPHIT.; CAUST.",
+  "Common names": "Red Coral",
   "symptoms": {
     "Head": [
-      "Eyes hot and painful", 
-      "Pain aggravated by breathing cold air through nose", 
-      "Feels very large; violent pain as if parietal bones were forced apart; worse stooping", 
+      "Eyes hot and painful",
+      "Pain aggravated by breathing cold air through nose",
+      "Feels very large",
+      "violent pain as if parietal bones were forced apart",
+      "worse stooping",
       "Deep-seated frontal headache with sever pain back of eyeballs"
-    ], 
+    ],
     "Respiratory": [
-      "Hawking of profuse mucus", 
-      "Inspired air feels cold", 
-      "Cough with great sensitiveness of air-passages; feel cold on deep inspiration", 
-      "Throat very sensitive, especially to air", 
-      "Profuse, nasal catarrh", 
-      "Feels suffocated and greatly exhausted after whooping-cough", 
-      "Dry, spasmodic, suffocative cough; very rapid cough, short, barking", 
-      "Continuous hysterical cough", 
+      "Hawking of profuse mucus",
+      "Inspired air feels cold",
+      "Cough with great sensitiveness of air-passages",
+      "feel cold on deep inspiration",
+      "Throat very sensitive, especially to air",
+      "Profuse, nasal catarrh",
+      "Feels suffocated and greatly exhausted after whooping-cough",
+      "Dry, spasmodic, suffocative cough",
+      "very rapid cough, short, barking",
+      "Continuous hysterical cough",
       "Profuse secretion of mucus dropping through posterior nares"
-    ], 
+    ],
     "Mouth": [
-      "Bread tastes like straw", 
-      "Food tastes like sawdust", 
-      "Beer tastes sweet", 
-      "Pain in articulation of left lower jaw", 
+      "Bread tastes like straw",
+      "Food tastes like sawdust",
+      "Beer tastes sweet",
+      "Pain in articulation of left lower jaw",
       "Craves salt"
-    ], 
+    ],
     "Nose": [
-      "Post-nasal catarrh", 
-      "Odors of smoke, onions, etc. painful ulcer in nostrils", 
-      "Epistaxis", 
-      "Dry coryza; nose stopped up and ulcerated", 
-      "Profuse secretion of mucus dropping through posterior nares; air feels cold"
-    ], 
+      "Post-nasal catarrh",
+      "Odors of smoke, onions, etc. painful ulcer in nostrils",
+      "Epistaxis",
+      "Dry coryza",
+      "nose stopped up and ulcerated",
+      "Profuse secretion of mucus dropping through posterior nares",
+      "air feels cold"
+    ],
     "Skin": [
-      "Coral-colored, then dark red spots, changing to copper-colored spots", 
-      "Psoriasis of palms and soles", 
+      "Coral-colored, then dark red spots, changing to copper-colored spots",
+      "Psoriasis of palms and soles",
       "Red, flat ulcers"
-    ], 
+    ],
     "Male": [
-      "Ulcers on glans and inner prepuce, with yellow ichor", 
-      "Profuse perspiration of genitals", 
+      "Ulcers on glans and inner prepuce, with yellow ichor",
+      "Profuse perspiration of genitals",
       "Emissions and weakened sexual power"
     ]
-  }, 
-  "details": "The provings of coral develop much coryza and epistaxis, and even ulceration within the nostrils. It is to be thought of for whooping and spasmodic coughs, especially when the attack comes on with a VERY RAPID cough, and the attacks follow so closely as to almost run into each other. Often preceded by sensation of smothering, followed by exhaustion. Congestion of face after dinner. Patient becomes purple in face. VIOLENCE OF PAROXYSM, even with EXPECTORATION of blood. Feeling as if cold air were streaming through skull and air-passages. One is too cold when uncovered and too hot when covered; relieved by artificial heat.", 
+  },
+  "details": "The provings of coral develop much coryza and epistaxis, and even ulceration within the nostrils. It is to be thought of for whooping and spasmodic coughs, especially when the attack comes on with a VERY RAPID cough, and the attacks follow so closely as to almost run into each other. Often preceded by sensation of smothering, followed by exhaustion. Congestion of face after dinner. Patient becomes purple in face. VIOLENCE OF PAROXYSM, even with EXPECTORATION of blood. Feeling as if cold air were streaming through skull and air-passages. One is too cold when uncovered and too hot when covered; relieved by artificial heat.",
   "dosage": "Third to thirtieth attenuation."
 }

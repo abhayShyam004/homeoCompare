@@ -1,75 +1,83 @@
 {
-  "name": "Convallaria majalis", 
-  "Relationship": "Compare: DIGIT.; CRATAEG.; LILIUM; ADONIS (feeble heart action due only to functional disturbance).", 
+  "name": "Convallaria majalis",
+  "Relationship": "Compare: DIGIT.; CRATAEG.; LILIUM; ADONIS (feeble heart action due only to functional disturbance).",
   "Modalities": [
-    "Worse: in warm room", 
+    "Worse: in warm room",
     "Better: in open air"
-  ], 
-  "Common names": "Lily of the Valley", 
+  ],
+  "Common names": "Lily of the Valley",
   "symptoms": {
     "Heart": [
-      "Sensation as if heart ceased beating, then starting very suddenly", 
-      "Angina pectoris", 
-      "Tobacco heart, especially when due to cigarettes", 
-      "Endocarditis, with extreme orthopnoea", 
-      "Feeling as if heart beat throughout the chest", 
-      "Palpitation from the least exertion", 
+      "Sensation as if heart ceased beating, then starting very suddenly",
+      "Angina pectoris",
+      "Tobacco heart, especially when due to cigarettes",
+      "Endocarditis, with extreme orthopnoea",
+      "Feeling as if heart beat throughout the chest",
+      "Palpitation from the least exertion",
       "Extremely rapid and irregular pulse"
-    ], 
+    ],
     "Fever": [
-      "Chilly in back and down spine, followed by fever, little sweat", 
-      "Dyspnoea during fever", 
+      "Chilly in back and down spine, followed by fever, little sweat",
+      "Dyspnoea during fever",
       "Thirst and headache during chill"
-    ], 
+    ],
     "Urine": [
-      "Frequent urination; offensive; scanty urine", 
-      "Aching in bladder; feels distended"
-    ], 
+      "Frequent urination",
+      "offensive",
+      "scanty urine",
+      "Aching in bladder",
+      "feels distended"
+    ],
     "Back and Extremities": [
-      "Pain and aching in lumbar region; aching of legs; in big toe", 
-      "Trembling of hands", 
+      "Pain and aching in lumbar region",
+      "aching of legs",
+      "in big toe",
+      "Trembling of hands",
       "Aching in wrists and ankles"
-    ], 
+    ],
     "Mind": [
-      "Irritability", 
-      "Dull intellect", 
-      "Scalp sensitive", 
-      "Dull headache; worse, ascending, hawking", 
-      "Grieves easily", 
+      "Irritability",
+      "Dull intellect",
+      "Scalp sensitive",
+      "Dull headache",
+      "worse, ascending, hawking",
+      "Grieves easily",
       "Hysterical manifestations"
-    ], 
+    ],
     "Abdomen": [
-      "Sensitive", 
-      "Colicky pains", 
-      "Gurgling and pain on taking deep breath", 
-      "Clothes feel too tight", 
+      "Sensitive",
+      "Colicky pains",
+      "Gurgling and pain on taking deep breath",
+      "Clothes feel too tight",
       "Movement in abdomen like fist of a child"
-    ], 
+    ],
     "Face": [
-      "Sees imaginary gray spot about three inches square", 
-      "Epistaxis", 
-      "Hydroa in nose and lips; raw and sore"
-    ], 
+      "Sees imaginary gray spot about three inches square",
+      "Epistaxis",
+      "Hydroa in nose and lips",
+      "raw and sore"
+    ],
     "Respiratory": [
-      "Pulmonary congestion", 
-      "Hot feeling in throat", 
-      "Orthopnoea", 
+      "Pulmonary congestion",
+      "Hot feeling in throat",
+      "Orthopnoea",
       "Dyspnoea while walking"
-    ], 
+    ],
     "Mouth": [
-      "Coppery taste", 
-      "Tongue feels sore and scalded; broad and thick with heavy, dirty coating", 
+      "Coppery taste",
+      "Tongue feels sore and scalded",
+      "broad and thick with heavy, dirty coating",
       "Grating of teeth in the morning"
-    ], 
+    ],
     "Female": [
-      "Pain in sacroiliac joints, running down leg", 
-      "Great soreness in uterine region, with sympathetic palpitation of heart", 
+      "Pain in sacroiliac joints, running down leg",
+      "Great soreness in uterine region, with sympathetic palpitation of heart",
       "Itching of urinary meatus and vaginal orifice"
-    ], 
+    ],
     "Throat": [
       "Raw feeling in back of throat when inspiring"
     ]
-  }, 
-  "details": "A heart remedy. Increases energy of heart's action, renders it more regular. Of use when the ventricles are over distended and dilatation begins, and when there is an absence of compensatory hypertrophy, and when venous stasis is marked. Dyspnoea, dropsy, oneiric tendency. ANASARCA. Heart disease with vertigo and digestive disturbances.", 
+  },
+  "details": "A heart remedy. Increases energy of heart's action, renders it more regular. Of use when the ventricles are over distended and dilatation begins, and when there is an absence of compensatory hypertrophy, and when venous stasis is marked. Dyspnoea, dropsy, oneiric tendency. ANASARCA. Heart disease with vertigo and digestive disturbances.",
   "dosage": "Third attenuation, and for symptoms of heart failure, tincture, one to fifteen drops."
 }

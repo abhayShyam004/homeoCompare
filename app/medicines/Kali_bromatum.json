@@ -1,88 +1,95 @@
 {
-  "name": "Kali bromatum", 
+  "name": "Kali bromatum",
   "Modalities": [
     "Better: when occupied mentally or physically"
-  ], 
-  "Common names": "Bromide of Potash", 
+  ],
+  "Common names": "Bromide of Potash",
   "symptoms": {
     "Head": [
-      "Brain-fag", 
-      "Numb feeling in head", 
-      "Suicidal mania with tremulousness", 
-      "Face flushed", 
+      "Brain-fag",
+      "Numb feeling in head",
+      "Suicidal mania with tremulousness",
+      "Face flushed",
       "Coryza with tendency to extension into throat"
-    ], 
+    ],
     "Respiratory": [
-      "Spasmodic croup", 
-      "Reflex cough during pregnancy", 
+      "Spasmodic croup",
+      "Reflex cough during pregnancy",
       "Dry, fatiguing, hacking cough at night"
-    ], 
+    ],
     "Stomach": [
-      "Persistent hiccough", 
+      "Persistent hiccough",
       "Vomiting, with intense thirst, after each meal"
-    ], 
+    ],
     "Urine": [
-      "Sensibility of urethra diminished", 
-      "Diabetes", 
+      "Sensibility of urethra diminished",
+      "Diabetes",
       "Urine profuse, with thirst"
-    ], 
+    ],
     "Mind": [
-      "Loss of memory", 
-      "Amnesic aphasia; can pronounce any word told, but cannot speak otherwise", 
-      "Must do something - move about; gets fidgety", 
-      "Active delirium", 
-      "Imagines he is singled out as an object of divine wrath", 
-      "Profound, melancholic delusion; feeling of moral deficiency; religious depression; delusions of conspiracies against him", 
-      "Horrid illusions", 
-      "Night terrors", 
+      "Loss of memory",
+      "Amnesic aphasia",
+      "can pronounce any word told, but cannot speak otherwise",
+      "Must do something - move about",
+      "gets fidgety",
+      "Active delirium",
+      "Imagines he is singled out as an object of divine wrath",
+      "Profound, melancholic delusion",
+      "feeling of moral deficiency",
+      "religious depression",
+      "delusions of conspiracies against him",
+      "Horrid illusions",
+      "Night terrors",
       "Fear of being poisoned"
-    ], 
+    ],
     "Abdomen": [
-      "Green, watery stools with intense thirst, vomiting, eyes sunken", 
-      "Sensation as if bowels were falling out", 
-      "Retraction of abdomen", 
-      "Green, watery stools", 
-      "Internal coldness of abdomen", 
-      "Diarrhoea, with much blood", 
-      "Cholera infantum, with reflex cerebral irritation, jerking and twitching of muscles", 
+      "Green, watery stools with intense thirst, vomiting, eyes sunken",
+      "Sensation as if bowels were falling out",
+      "Retraction of abdomen",
+      "Green, watery stools",
+      "Internal coldness of abdomen",
+      "Diarrhoea, with much blood",
+      "Cholera infantum, with reflex cerebral irritation, jerking and twitching of muscles",
       "Prostration"
-    ], 
+    ],
     "Sleep": [
-      "Horrible dreams", 
-      "Somnambulism", 
-      "Sleeplessness due to worry and grief and sexual excess", 
-      "Night terrors", 
-      "Extreme drowsiness", 
-      "Restless sleep", 
+      "Horrible dreams",
+      "Somnambulism",
+      "Sleeplessness due to worry and grief and sexual excess",
+      "Night terrors",
+      "Extreme drowsiness",
+      "Restless sleep",
       "Grinding teeth in sleep"
-    ], 
+    ],
     "Female": [
-      "Pruritus", 
-      "Exaggerated sexual desires", 
-      "Cystic tumors of ovaries", 
+      "Pruritus",
+      "Exaggerated sexual desires",
+      "Cystic tumors of ovaries",
       "Ovarian neuralgia with great nervous uneasiness"
-    ], 
+    ],
     "Skin": [
-      "Acne of face, pustules", 
-      "Itching; worse on chest, shoulders, and face", 
-      "Psoriasis", 
+      "Acne of face, pustules",
+      "Itching",
+      "worse on chest, shoulders, and face",
+      "Psoriasis",
       "Anaesthesia of skin"
-    ], 
+    ],
     "Throat": [
-      "Congestion of uvula and fauces", 
-      "Dysphagia, especially of liquids", 
+      "Congestion of uvula and fauces",
+      "Dysphagia, especially of liquids",
       "Anaesthesia of fauces, pharynx, and larynx"
-    ], 
+    ],
     "Extremities": [
-      "Fidgety hands; busy twitching of fingers", 
+      "Fidgety hands",
+      "busy twitching of fingers",
       "Jerking and twitching of muscles"
-    ], 
+    ],
     "Male": [
-      "Debility and impotence", 
-      "Effects of sexual excesses, especially loss of memory, impaired coordination, numbness and tingling in limbs", 
+      "Debility and impotence",
+      "Effects of sexual excesses, especially loss of memory, impaired coordination, numbness and tingling in limbs",
       "Sexual excitement during partial slumber"
     ]
-  }, 
-  "details": "Like all Potash Salts, this weakens the heart and lowers temperature. Brominism is caused by it. General failure of mental power, loss of memory, melancholia, anaesthesia of the mucous membranes, especially of eyes, throat, and skin; acne; loss of sexual desire, paralysis. Leading remedy in psoriasis. Nodular form of chronic gout. SYMPTOMS OF APOPLECTIC ATTACKS, uraemic or otherwise; somnolence and stertor, convulsions, aphasia, albuminuria. Epilepsy (with salt-free diet).", 
+  },
+  "details": "Like all Potash Salts, this weakens the heart and lowers temperature. Brominism is caused by it. General failure of mental power, loss of memory, melancholia, anaesthesia of the mucous membranes, especially of eyes, throat, and skin; acne; loss of sexual desire, paralysis. Leading remedy in psoriasis. Nodular form of chronic gout. SYMPTOMS OF APOPLECTIC ATTACKS, uraemic or otherwise; somnolence and stertor, convulsions, aphasia, albuminuria. Epilepsy (with salt-free diet).",
   "dosage": "A few grains of the crude salt to the third trituration. Remember the unstable character of this salt. Said to be much more active if salt is eliminated from the diet."
 }

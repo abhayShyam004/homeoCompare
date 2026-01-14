@@ -1,51 +1,54 @@
 {
-  "name": "Cocaina", 
-  "Relationship": "Compare: STOVAIN (an analgesic, a vasomotor dilator.) Antidote to disagreeable effects occasionally resulting from injection of cocaine into skin or gums, drop doses of nitro-glycer. 1% sol.", 
-  "Common names": "An Alkaloid from Erythroxylon Coca", 
+  "name": "Cocaina",
+  "Relationship": "Compare: STOVAIN (an analgesic, a vasomotor dilator.) Antidote to disagreeable effects occasionally resulting from injection of cocaine into skin or gums, drop doses of nitro-glycer. 1% sol.",
+  "Common names": "An Alkaloid from Erythroxylon Coca",
   "symptoms": {
     "Eyes": [
-      "Eyes staring, expressionless", 
+      "Eyes staring, expressionless",
       "Glaucoma, increased tension, decreased corneal sensibility"
-    ], 
+    ],
     "Fever": [
       "Coldness with intense pallor"
-    ], 
+    ],
     "Stomach": [
-      "Hemorrhages from bowels, stomach", 
-      "Loss of appetite for solid food", 
+      "Hemorrhages from bowels, stomach",
+      "Loss of appetite for solid food",
       "Likes sweets"
-    ], 
+    ],
     "Mind": [
-      "Thinks he hears unpleasant remarks about himself", 
-      "Irrational jealousy", 
-      "Constant desire to do something great, to undertake vast feats of strength", 
-      "Insomnia", 
-      "Frightful persecutory hallucinations; sees and feels bugs and worms", 
-      "Cerebral activity", 
-      "Hallucinations of hearing", 
-      "Personal appearance neglected", 
-      "Moral sense blunted", 
+      "Thinks he hears unpleasant remarks about himself",
+      "Irrational jealousy",
+      "Constant desire to do something great, to undertake vast feats of strength",
+      "Insomnia",
+      "Frightful persecutory hallucinations",
+      "sees and feels bugs and worms",
+      "Cerebral activity",
+      "Hallucinations of hearing",
+      "Personal appearance neglected",
+      "Moral sense blunted",
       "Talkative"
-    ], 
+    ],
     "Head": [
-      "Throbbing and bursting sensation", 
-      "Roaring and noises in head", 
-      "Pupils dilated", 
+      "Throbbing and bursting sensation",
+      "Roaring and noises in head",
+      "Pupils dilated",
       "Hearing greatly increased"
-    ], 
+    ],
     "Sleep": [
       "Restless, cannot sleep for hours after retiring"
-    ], 
+    ],
     "Throat": [
-      "Dry, burning, tickling, constricted, paralysis of muscles of deglutition", 
+      "Dry, burning, tickling, constricted, paralysis of muscles of deglutition",
       "Speech difficult"
-    ], 
+    ],
     "Nervous System": [
-      "Formication and numbness in hands and forearms", 
-      "Local sensory paralysis", 
-      "Chorea; paralysis agitans; alcoholic tremors and senile trembling"
+      "Formication and numbness in hands and forearms",
+      "Local sensory paralysis",
+      "Chorea",
+      "paralysis agitans",
+      "alcoholic tremors and senile trembling"
     ]
-  }, 
-  "details": "Besides the great usefulness of Cocaine as a local anaesthetic, it has specific homeopathic uses, though the symptoms are mainly clinical only. Sensation AS IF SMALL FOREIGN BODIES OR WORMS WERE UNDER THE SKIN.", 
+  },
+  "details": "Besides the great usefulness of Cocaine as a local anaesthetic, it has specific homeopathic uses, though the symptoms are mainly clinical only. Sensation AS IF SMALL FOREIGN BODIES OR WORMS WERE UNDER THE SKIN.",
   "dosage": "Lower potencies. As a local application to mucous membranes, 2-4%."
 }

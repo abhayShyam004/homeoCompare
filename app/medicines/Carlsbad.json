@@ -1,35 +1,40 @@
 {
-  "name": "Carlsbad", 
-  "Relationship": "Compare: Nat-sulph.; Nux.", 
-  "Common names": "The Waters of the Sprudel Springs", 
+  "name": "Carlsbad",
+  "Relationship": "Compare: Nat-sulph.; Nux.",
+  "Common names": "The Waters of the Sprudel Springs",
   "symptoms": {
     "Head": [
-      "Aches, with swollen temporal veins ; better, motion, in open air"
-    ], 
+      "Aches, with swollen temporal veins",
+      "better, motion, in open air"
+    ],
     "Stomach": [
-      "Sour or salty taste", 
-      "Offensive smell from mouth", 
-      "Heartburn", 
-      "Tongue coated white", 
-      "Furry sensation", 
+      "Sour or salty taste",
+      "Offensive smell from mouth",
+      "Heartburn",
+      "Tongue coated white",
+      "Furry sensation",
       "Hiccough and yawning"
-    ], 
+    ],
     "Urine": [
-      "Stream weak and slow; only passed by pressing abdominal muscles"
-    ], 
+      "Stream weak and slow",
+      "only passed by pressing abdominal muscles"
+    ],
     "Mind": [
       "Discouraged and anxious about domestic duties"
-    ], 
+    ],
     "Rectum": [
-      "Burning in rectum and anus", 
-      "Stool slow, and only passed by much abdominal pressure", 
-      "Faeces held back", 
+      "Burning in rectum and anus",
+      "Stool slow, and only passed by much abdominal pressure",
+      "Faeces held back",
       "Bleeding piles"
-    ], 
+    ],
     "Face": [
-      "Yellow, sallow; red and hot; pain in zygomatic process; feels as if cobwebs were on it"
+      "Yellow, sallow",
+      "red and hot",
+      "pain in zygomatic process",
+      "feels as if cobwebs were on it"
     ]
-  }, 
-  "details": "Famous for its action on the liver and in the treatment of obesity, diabetes, and gout. In homeopathic potencies useful in weakness of all organs, constipation, great liability to take cold. Periodicity, effects repeated after from two to four weeks. (Oxal-ac.; Sulph.) FLASHES IF HEAT ALL OVER. Itching on various parts.", 
+  },
+  "details": "Famous for its action on the liver and in the treatment of obesity, diabetes, and gout. In homeopathic potencies useful in weakness of all organs, constipation, great liability to take cold. Periodicity, effects repeated after from two to four weeks. (Oxal-ac.; Sulph.) FLASHES IF HEAT ALL OVER. Itching on various parts.",
   "dosage": "Lower potencies."
 }

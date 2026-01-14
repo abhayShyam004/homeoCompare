@@ -1,46 +1,48 @@
 {
-  "name": "Thea", 
-  "Relationship": "Antidote: KALI-HYPO PHOS.; THUJA.; FERR.; KALI-HYD. (Material doses for tea-taster's cough.)", 
+  "name": "Thea",
+  "Relationship": "Antidote: KALI-HYPO PHOS.; THUJA.; FERR.; KALI-HYD. (Material doses for tea-taster's cough.)",
   "Modalities": [
-    "Worse: night", 
-    "Worse: on walking in open air", 
+    "Worse: night",
+    "Worse: on walking in open air",
     "Worse: after meals"
-  ], 
-  "Common names": "Tea", 
+  ],
+  "Common names": "Tea",
   "symptoms": {
     "Heart": [
-      "Pulse rapid, irregular, intermittent", 
-      "Precordial distress", 
-      "Anxious oppression", 
-      "Fluttering", 
-      "Palpitation; unable to lie on left side"
-    ], 
+      "Pulse rapid, irregular, intermittent",
+      "Precordial distress",
+      "Anxious oppression",
+      "Fluttering",
+      "Palpitation",
+      "unable to lie on left side"
+    ],
     "Head": [
-      "Hallucinations of hearing", 
-      "Sleepless and restless", 
-      "Temporary mental exaltation", 
-      "Sick headache radiating from one point", 
-      "Ill-humored", 
+      "Hallucinations of hearing",
+      "Sleepless and restless",
+      "Temporary mental exaltation",
+      "Sick headache radiating from one point",
+      "Ill-humored",
       "Cold damp feeling at back of head"
-    ], 
+    ],
     "Stomach": [
-      "Faint, gone feeling", 
-      "Craves acids", 
-      "Sinking sensation at epigastrium", 
+      "Faint, gone feeling",
+      "Craves acids",
+      "Sinking sensation at epigastrium",
       "Sudden production of wind in large quantities"
-    ], 
+    ],
     "Abdomen": [
-      "Liability to hernia", 
+      "Liability to hernia",
       "Borborygmi"
-    ], 
+    ],
     "Female": [
       "Soreness and tenderness in ovaries"
-    ], 
+    ],
     "Sleep": [
-      "Sleepy in daytime; sleepiness at night, with vascular excitement and restlessness, and dry skin", 
+      "Sleepy in daytime",
+      "sleepiness at night, with vascular excitement and restlessness, and dry skin",
       "Horrible dreams cause no horror"
     ]
-  }, 
-  "details": "Nervous sleeplessness, heart troubles, palpitation, and dyspepsia of old tea-drinkers. Produces most of the sick headaches Tabacum antidotal (Allen).", 
+  },
+  "details": "Nervous sleeplessness, heart troubles, palpitation, and dyspepsia of old tea-drinkers. Produces most of the sick headaches Tabacum antidotal (Allen).",
   "dosage": "Third to thirtieth potency. Theine 1/4-1/2 grain hypodermically for sciatica and supraorbital neuralgia."
 }

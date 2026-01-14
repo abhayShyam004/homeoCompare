@@ -1,67 +1,70 @@
 {
-  "name": "Alumen", 
+  "name": "Alumen",
   "Modalities": [
-    "Worse: cold except headache", 
+    "Worse: cold except headache",
     "Worse: which is relieved by cold"
-  ], 
-  "Common names": "Common Potash Alum", 
+  ],
+  "Common names": "Common Potash Alum",
   "symptoms": {
     "Heart": [
       "Palpitation, from lying down on right side"
-    ], 
+    ],
     "Head": [
-      "Alopecia", 
-      "Burning pain as if weight on top of head better by pressure of hand", 
+      "Alopecia",
+      "Burning pain as if weight on top of head better by pressure of hand",
       "Vertigo, with weakness in pit of stomach"
-    ], 
+    ],
     "Respiratory": [
-      "Copious, ropy morning expectoration in old people", 
-      "Asthma", 
-      "Hemoptysis, great weakness of chest; difficult to expel mucus"
-    ], 
+      "Copious, ropy morning expectoration in old people",
+      "Asthma",
+      "Hemoptysis, great weakness of chest",
+      "difficult to expel mucus"
+    ],
     "Rectum": [
-      "Constipation of the most aggravated kind", 
-      "Itching in anus", 
-      "Itching after stool", 
-      "Violent ineffectual urging to stool", 
-      "Yellow, like an infant's", 
-      "No ability to expel stool", 
-      "Hemorrhage from bowels", 
-      "Long lasting pain and smarting in rectum after stool; also hemorrhoids", 
-      "Marble-like masses pass, but rectum still feels full", 
+      "Constipation of the most aggravated kind",
+      "Itching in anus",
+      "Itching after stool",
+      "Violent ineffectual urging to stool",
+      "Yellow, like an infant's",
+      "No ability to expel stool",
+      "Hemorrhage from bowels",
+      "Long lasting pain and smarting in rectum after stool",
+      "also hemorrhoids",
+      "Marble-like masses pass, but rectum still feels full",
       "No desire to stool for days"
-    ], 
+    ],
     "Female": [
-      "Menses watery", 
-      "Chronic gonorrhea, yellow with little lumps along urethra", 
-      "Tendency to induration of neck of uterus and mammary glands", 
-      "Chronic yellow vaginal discharge", 
+      "Menses watery",
+      "Chronic gonorrhea, yellow with little lumps along urethra",
+      "Tendency to induration of neck of uterus and mammary glands",
+      "Chronic yellow vaginal discharge",
       "Aphthous patches in vagina"
-    ], 
+    ],
     "Skin": [
-      "Ulcers, with indurated base", 
-      "Indurations resulting from long-continued inflammatory irritations", 
-      "Alopecia, scrotal eczema and on back of penis", 
-      "Glands inflame and harden", 
-      "To be thought of in indurated glands, epithelioma, etc.; veins become varicose and bleed"
-    ], 
+      "Ulcers, with indurated base",
+      "Indurations resulting from long-continued inflammatory irritations",
+      "Alopecia, scrotal eczema and on back of penis",
+      "Glands inflame and harden",
+      "To be thought of in indurated glands, epithelioma, etc.",
+      "veins become varicose and bleed"
+    ],
     "Throat": [
-      "Constriction of oesophagus", 
-      "Enlarged and indurated tonsils", 
-      "Throat relaxed", 
-      "Mucous membrane red and swollen", 
-      "Every cold settles in throat", 
-      "Tendency to throat colds", 
-      "Tickling in throat", 
-      "Burning pain down the oesophagus", 
-      "Cough", 
+      "Constriction of oesophagus",
+      "Enlarged and indurated tonsils",
+      "Throat relaxed",
+      "Mucous membrane red and swollen",
+      "Every cold settles in throat",
+      "Tendency to throat colds",
+      "Tickling in throat",
+      "Burning pain down the oesophagus",
+      "Cough",
       "Complete aphonia"
-    ], 
+    ],
     "Extremities": [
-      "Constricted feeling around limbs", 
+      "Constricted feeling around limbs",
       "Weakness of all muscles, especially arms and legs"
     ]
-  }, 
-  "details": "The clinical application of this remedy points to its bowel symptoms, both in obstinate constipation and in hemorrhage from bowels in the course of typhoid - one phase of the PARALYTIC WEAKNESS of the muscles in all parts of the body. Tendency to INDURATION is also marked, a low form of tissue-making is favored. Hardening of tissues of tongue, rectum, uterus, etc.; ulcers with indurated base. Adapted to old people, especially bronchial catarrhs. SENSATION OF DRYNESS AND CONSTRICTION. Mental paresis; dysphagia especially to liquids. Tendency to induration, Scirrhus of the tongue.", 
+  },
+  "details": "The clinical application of this remedy points to its bowel symptoms, both in obstinate constipation and in hemorrhage from bowels in the course of typhoid - one phase of the PARALYTIC WEAKNESS of the muscles in all parts of the body. Tendency to INDURATION is also marked, a low form of tissue-making is favored. Hardening of tissues of tongue, rectum, uterus, etc.; ulcers with indurated base. Adapted to old people, especially bronchial catarrhs. SENSATION OF DRYNESS AND CONSTRICTION. Mental paresis; dysphagia especially to liquids. Tendency to induration, Scirrhus of the tongue.",
   "dosage": "First to thirtieth potency. The very highest potencies have proved efficacious. Powdered alum, 10 grains, placed on tongue, said to arrest an attack of asthma."
 }

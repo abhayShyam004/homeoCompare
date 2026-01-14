@@ -1,25 +1,27 @@
 {
   "symptoms": {
     "Fever": [
-      "Hands alternately hot and cold", 
-      "Flushes of heat", 
+      "Hands alternately hot and cold",
+      "Flushes of heat",
       "Sweat on palms"
-    ], 
+    ],
     "Female": [
-      "Leucorrhoea, bloody", 
-      "Pruritis; vulva red; dryness and burning in vagina", 
+      "Leucorrhoea, bloody",
+      "Pruritis",
+      "vulva red",
+      "dryness and burning in vagina",
       "Burning pain in vagina during coition"
-    ], 
+    ],
     "Extremities": [
-      "Sciatic pain, especially right side", 
-      "Pain in all articulation of hands", 
-      "Swelling of veins of hands", 
-      "Coldness of feet and toes", 
+      "Sciatic pain, especially right side",
+      "Pain in all articulation of hands",
+      "Swelling of veins of hands",
+      "Coldness of feet and toes",
       "Pain in shoulders"
     ]
-  }, 
-  "details": "Has been used for milk-flow in nursing women, lumbago and rheumatism, colic, with drowsiness and spasmodic yawning. Is an anti-phlogistic remedy akin to Acon. its symptoms showing congestion and inflammation. Acidity and burning in oesophagus with eructation.", 
-  "Common names": "Lady's Tresses", 
-  "name": "Spiranthes", 
+  },
+  "details": "Has been used for milk-flow in nursing women, lumbago and rheumatism, colic, with drowsiness and spasmodic yawning. Is an anti-phlogistic remedy akin to Acon. its symptoms showing congestion and inflammation. Acidity and burning in oesophagus with eructation.",
+  "Common names": "Lady's Tresses",
+  "name": "Spiranthes",
   "dosage": "Third potency."
 }

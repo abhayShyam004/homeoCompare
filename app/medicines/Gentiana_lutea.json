@@ -1,25 +1,26 @@
 {
-  "name": "Gentiana lutea", 
-  "Relationship": "Compare: GENTIANA QUINQUE FLORA (intermittent fever; dyspepsia, cholera infantum, weakness); GENTIANA CRUCIATA (throat symptoms in addition to similar stomach symptoms; dysphagia; vertigo with headache; pressing inward sensation in eyes; constricted throat and head and abdomen. Distention, fullness and tightness in abdomen. Creeping over body as from fleas. HYDRAS.; NUX.", 
-  "Common names": "Yellow Gentian", 
+  "name": "Gentiana lutea",
+  "Relationship": "Compare: GENTIANA QUINQUE FLORA (intermittent fever; dyspepsia, cholera infantum, weakness); GENTIANA CRUCIATA (throat symptoms in addition to similar stomach symptoms; dysphagia; vertigo with headache; pressing inward sensation in eyes; constricted throat and head and abdomen. Distention, fullness and tightness in abdomen. Creeping over body as from fleas. HYDRAS.; NUX.",
+  "Common names": "Yellow Gentian",
   "symptoms": {
     "Head": [
-      "Frontal headache, better eating and open air", 
-      "Brain feels loose, head tender", 
-      "Vertigo, worse, rising or motion; better open air", 
+      "Frontal headache, better eating and open air",
+      "Brain feels loose, head tender",
+      "Vertigo, worse, rising or motion",
+      "better open air",
       "Aching in eyes"
-    ], 
+    ],
     "Stomach": [
-      "Inflation and tension of stomach and abdomen", 
-      "Flatulence", 
-      "Colic, umbilical region sensitive to touch", 
+      "Inflation and tension of stomach and abdomen",
+      "Flatulence",
+      "Colic, umbilical region sensitive to touch",
       "Acid risings, ravenous hunger, nausea, weight and aching in stomach"
-    ], 
+    ],
     "Throat": [
-      "Dry", 
+      "Dry",
       "Thick saliva"
     ]
-  }, 
-  "details": "Stomach symptoms marked. Acts as a tonic, increasing appetite.", 
+  },
+  "details": "Stomach symptoms marked. Acts as a tonic, increasing appetite.",
   "dosage": "First to third attenuation."
 }

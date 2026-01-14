@@ -1,41 +1,45 @@
 {
-  "name": "Hedeoma", 
-  "Relationship": "Compare; MENTHA; SEPIA; LILIUM; OCIMUM (uric acid diathesis, pain in ureters. HEDERA HELIX - Common Ivy - (Delirium and chronic convulsions. Chronic hydrocephalus Rhinorrhoea, cerebro-spinalis. Cataract. Acts on blood vessels, menorrhagia.) GLECHOMA HEDERACEA - Ground Ivy - (Hemorrhoids with RECTAL IRRITATION and bleeding. Diarrhoea. Anus feels raw and sore. Cough with laryngeal and tracheal irritation. Glandula sub-mentalis inflamed.)", 
-  "Common names": "Penny royal", 
+  "name": "Hedeoma",
+  "Relationship": "Compare; MENTHA; SEPIA; LILIUM; OCIMUM (uric acid diathesis, pain in ureters. HEDERA HELIX - Common Ivy - (Delirium and chronic convulsions. Chronic hydrocephalus Rhinorrhoea, cerebro-spinalis. Cataract. Acts on blood vessels, menorrhagia.) GLECHOMA HEDERACEA - Ground Ivy - (Hemorrhoids with RECTAL IRRITATION and bleeding. Diarrhoea. Anus feels raw and sore. Cough with laryngeal and tracheal irritation. Glandula sub-mentalis inflamed.)",
+  "Common names": "Penny royal",
   "symptoms": {
     "Head": [
-      "Dull, heavy feeling in morning", 
-      "Sore pain, as from a cut", 
-      "Weak, faint; better, lying down"
-    ], 
+      "Dull, heavy feeling in morning",
+      "Sore pain, as from a cut",
+      "Weak, faint",
+      "better, lying down"
+    ],
     "Stomach": [
-      "Tongue coated thin white", 
-      "Everything taken into stomach causes pain", 
-      "Nausea", 
+      "Tongue coated thin white",
+      "Everything taken into stomach causes pain",
+      "Nausea",
       "Gastritis"
-    ], 
+    ],
     "Urine": [
-      "Dull burning pain over left kidney", 
-      "Frequent urging, cutting pains", 
-      "Burning irritation at neck of bladder causing frequent intense desire to urinate and inability to retain urine for more than a few minutes, better urinating", 
-      "Dragging pain from kidney to bladder", 
+      "Dull burning pain over left kidney",
+      "Frequent urging, cutting pains",
+      "Burning irritation at neck of bladder causing frequent intense desire to urinate and inability to retain urine for more than a few minutes, better urinating",
+      "Dragging pain from kidney to bladder",
       "Pain along left ureter"
-    ], 
+    ],
     "Abdomen": [
       "Distended, sore, and sensitive"
-    ], 
+    ],
     "Female": [
-      "Ovaries congested and painful; bearing-down spasmodic contractions", 
-      "Leucorrhoea, with itching and burning", 
-      "Bearing-down pains, with much backache; worse, least movement"
-    ], 
+      "Ovaries congested and painful",
+      "bearing-down spasmodic contractions",
+      "Leucorrhoea, with itching and burning",
+      "Bearing-down pains, with much backache",
+      "worse, least movement"
+    ],
     "Extremities": [
-      "Pain, coldness, and paretic conditions", 
-      "Pain in thumb-joint", 
-      "Tendo-achilles painful, as if sprained and swollen; walking painful", 
+      "Pain, coldness, and paretic conditions",
+      "Pain in thumb-joint",
+      "Tendo-achilles painful, as if sprained and swollen",
+      "walking painful",
       "Twitchings jerkings, soreness"
     ]
-  }, 
-  "details": "Female symptoms are most marked; usually associated with nervous disturbances. Red sand in urine. PAIN ALONG URETER. Flatulent colic. Antidotes effects of Poison-oak. (GRINDELIA.)", 
+  },
+  "details": "Female symptoms are most marked; usually associated with nervous disturbances. Red sand in urine. PAIN ALONG URETER. Flatulent colic. Antidotes effects of Poison-oak. (GRINDELIA.)",
   "dosage": "First potency."
 }

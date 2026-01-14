@@ -1,61 +1,69 @@
 {
-  "name": "Rhododendron", 
-  "Relationship": "Compare: AMPELOPSIS (hydrocele and renal dropsy); DULC.; RHUS; NAT-SULPH.", 
+  "name": "Rhododendron",
+  "Relationship": "Compare: AMPELOPSIS (hydrocele and renal dropsy); DULC.; RHUS; NAT-SULPH.",
   "Modalities": [
-    "Worse: before a storm", 
-    "Better: after the storm breaks", 
-    "Better: warmth", 
+    "Worse: before a storm",
+    "Better: after the storm breaks",
+    "Better: warmth",
     "Better: and eating"
-  ], 
-  "Common names": "Snow-rose", 
+  ],
+  "Common names": "Snow-rose",
   "symptoms": {
     "Eyes": [
-      "Muscular asthenopia; darting pains through eyes from head, worse before a storm"
-    ], 
+      "Muscular asthenopia",
+      "darting pains through eyes from head, worse before a storm"
+    ],
     "Head": [
-      "Heat in eyes when using them", 
-      "Headache; worse, wine, wind, cold and wet weather", 
-      "Aching in temples", 
-      "Tearing pain in bones", 
-      "Pain in eyes before a storm", 
+      "Heat in eyes when using them",
+      "Headache",
+      "worse, wine, wind, cold and wet weather",
+      "Aching in temples",
+      "Tearing pain in bones",
+      "Pain in eyes before a storm",
       "Ciliary neuralgia, involving eyeball, orbit, and head"
-    ], 
+    ],
     "Mind": [
-      "Forgetful", 
-      "Dread of a storm; particularly afraid of thunder"
-    ], 
+      "Forgetful",
+      "Dread of a storm",
+      "particularly afraid of thunder"
+    ],
     "Chest": [
-      "Crampy pain under short ribs", 
-      "Violent pleuritic pains running downward in left anterior chest", 
-      "Breathless and speechless from violent pleuritic pains running down the anterior chest", 
+      "Crampy pain under short ribs",
+      "Violent pleuritic pains running downward in left anterior chest",
+      "Breathless and speechless from violent pleuritic pains running down the anterior chest",
       "Stitches in spleen from fast walking"
-    ], 
+    ],
     "Face": [
-      "Swollen gums", 
-      "Prosopalgia; violent jerking pain involving dental nerves, from temple to lower jaw and chin, better, warmth and eating", 
-      "Stumps of teeth are loosened", 
+      "Swollen gums",
+      "Prosopalgia",
+      "violent jerking pain involving dental nerves, from temple to lower jaw and chin, better, warmth and eating",
+      "Stumps of teeth are loosened",
       "Toothache in damp weather and before a storm"
-    ], 
+    ],
     "Extremities": [
-      "Cannot sleep unless legs are crossed", 
-      "Pains in bones in spots, and reappear by change of weather", 
-      "Rheumatic tearing in all limbs, especially right side; worse, at rest and in stormy weather", 
-      "Stiffness of neck", 
-      "Pain in shoulders, arms, wrists; worse when at rest", 
-      "Gouty inflammation of great toe-joint", 
+      "Cannot sleep unless legs are crossed",
+      "Pains in bones in spots, and reappear by change of weather",
+      "Rheumatic tearing in all limbs, especially right side",
+      "worse, at rest and in stormy weather",
+      "Stiffness of neck",
+      "Pain in shoulders, arms, wrists",
+      "worse when at rest",
+      "Gouty inflammation of great toe-joint",
       "Joints swollen"
-    ], 
+    ],
     "Male": [
-      "Orchitis; glands feel crushed", 
-      "Testicles, worse left, swollen, painful, drawn up", 
-      "Induration and swelling of testes after gonorrhea", 
+      "Orchitis",
+      "glands feel crushed",
+      "Testicles, worse left, swollen, painful, drawn up",
+      "Induration and swelling of testes after gonorrhea",
       "Hydrocele"
-    ], 
+    ],
     "Ears": [
-      "Difficult hearing, with whizzing and ringing in ears", 
-      "Hearing better in the morning; noises come on after patient has been up a few hours"
+      "Difficult hearing, with whizzing and ringing in ears",
+      "Hearing better in the morning",
+      "noises come on after patient has been up a few hours"
     ]
-  }, 
-  "details": "Rheumatic and gouty symptoms well marked. Rheumatism in the hot season. The modality (worse before a storm) is a true guiding symptom.", 
+  },
+  "details": "Rheumatic and gouty symptoms well marked. Rheumatism in the hot season. The modality (worse before a storm) is a true guiding symptom.",
   "dosage": "First to sixth potency."
 }

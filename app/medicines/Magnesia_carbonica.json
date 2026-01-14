@@ -1,88 +1,103 @@
 {
-  "name": "Magnesia carbonica", 
-  "Relationship": "Antidotes: ARS.; MERC. Complementary: CHAM. Compare: RHEUM.; KREOS.; ALOES; CHEIRANTHUS - Wall flower - (deafness, otorrhoea, nose stopped up at night from IRRITATION OF CUTTING WISDOM-TEETH.", 
+  "name": "Magnesia carbonica",
+  "Relationship": "Antidotes: ARS.; MERC. Complementary: CHAM. Compare: RHEUM.; KREOS.; ALOES; CHEIRANTHUS - Wall flower - (deafness, otorrhoea, nose stopped up at night from IRRITATION OF CUTTING WISDOM-TEETH.",
   "Modalities": [
-    "Worse: warmth of bed; change of temperature; cold wind or weather; every three weeks; rest", 
+    "Worse: warmth of bed; change of temperature; cold wind or weather; every three weeks; rest",
     "Better: warm air; walking in open air"
-  ], 
-  "Common names": "Carbonate of Magnesia", 
+  ],
+  "Common names": "Carbonate of Magnesia",
   "symptoms": {
     "Head": [
-      "Itching of scalp worse in damp weather", 
-      "Pain above margin of right orbit", 
-      "Sticking pain in the side of the head on which he lies as if the hair was pulled; worse, mental exertion", 
+      "Itching of scalp worse in damp weather",
+      "Pain above margin of right orbit",
+      "Sticking pain in the side of the head on which he lies as if the hair was pulled",
+      "worse, mental exertion",
       "Black motes before eyes"
-    ], 
+    ],
     "Fever": [
-      "Chilly in evening", 
-      "Sour, greasy perspiration", 
+      "Chilly in evening",
+      "Sour, greasy perspiration",
       "Fever at night"
-    ], 
+    ],
     "Stomach": [
-      "Craving for meat", 
-      "Eructations sour, and vomiting of bitter water", 
+      "Craving for meat",
+      "Eructations sour, and vomiting of bitter water",
       "Desire for fruits, acids, and vegetables"
-    ], 
+    ],
     "Stool": [
-      "Milk passes undigested in nursing children", 
-      "Sour, with tenesmus  constipation after mental shock or severe nervous strain", 
-      "Bloody mucous stools", 
-      "Preceded by griping, colicky pain", 
+      "Milk passes undigested in nursing children",
+      "Sour, with tenesmus  constipation after mental shock or severe nervous strain",
+      "Bloody mucous stools",
+      "Preceded by griping, colicky pain",
       "Green, watery, frothy, like a frog-pond's scum"
-    ], 
+    ],
     "Abdomen": [
-      "Rumbling, gurgling", 
-      "Dragging towards pelvis", 
-      "Very heavy; contractive, pinching pain in right iliac region"
-    ], 
+      "Rumbling, gurgling",
+      "Dragging towards pelvis",
+      "Very heavy",
+      "contractive, pinching pain in right iliac region"
+    ],
     "Face": [
-      "Pain in malar bone, worse during rest, night", 
-      "Ailments from cutting wisdom teeth", 
-      "Swelling of malar bone with pulsating pain, worse exposure to cold wind", 
-      "Teeth feel too long", 
-      "Tearing pain in one side; worse, quiet; must move about", 
-      "Toothache, especially during pregnancy; worse at night; worse, cold and quiet"
-    ], 
+      "Pain in malar bone, worse during rest, night",
+      "Ailments from cutting wisdom teeth",
+      "Swelling of malar bone with pulsating pain, worse exposure to cold wind",
+      "Teeth feel too long",
+      "Tearing pain in one side",
+      "worse, quiet",
+      "must move about",
+      "Toothache, especially during pregnancy",
+      "worse at night",
+      "worse, cold and quiet"
+    ],
     "Respiratory": [
-      "Tickling cough, with salty, bloody expectoration", 
-      "Soreness in chest during motion", 
+      "Tickling cough, with salty, bloody expectoration",
+      "Soreness in chest during motion",
       "Constrictive pains in chest, with dyspnoea"
-    ], 
+    ],
     "Mouth": [
-      "Dry at night", 
-      "Sour taste", 
-      "Vesicular eruption; bloody saliva", 
-      "Sticking pain in throat; hawking up fetid, pea-colored particles"
-    ], 
+      "Dry at night",
+      "Sour taste",
+      "Vesicular eruption",
+      "bloody saliva",
+      "Sticking pain in throat",
+      "hawking up fetid, pea-colored particles"
+    ],
     "Female": [
-      "Sore throat before menses appear", 
-      "Menses too late and scanty, thick, dark, like pitch; mucous leucorrhoea", 
-      "Menses flow only in sleep; more profuse at night , or when lying down; cease when walking", 
+      "Sore throat before menses appear",
+      "Menses too late and scanty, thick, dark, like pitch",
+      "mucous leucorrhoea",
+      "Menses flow only in sleep",
+      "more profuse at night , or when lying down",
+      "cease when walking",
       "Before menses, coryza and nasal stoppage"
-    ], 
+    ],
     "Skin": [
-      "Earthy, sallow and parchment-like; emaciation", 
-      "Sore; sensitive to cold", 
-      "Itching vesicles on hands and fingers", 
+      "Earthy, sallow and parchment-like",
+      "emaciation",
+      "Sore",
+      "sensitive to cold",
+      "Itching vesicles on hands and fingers",
       "Nodosities under skin"
-    ], 
+    ],
     "Sleep": [
-      "Unrefreshing; more tired on rising than on retiring"
-    ], 
+      "Unrefreshing",
+      "more tired on rising than on retiring"
+    ],
     "Extremities": [
-      "Swelling in bend of knee", 
-      "Tearing in shoulders as if dislocated", 
-      "Whole body feels tired and painful, especially legs and feet", 
+      "Swelling in bend of knee",
+      "Tearing in shoulders as if dislocated",
+      "Whole body feels tired and painful, especially legs and feet",
       "Right shoulder painful, cannot raise it"
-    ], 
+    ],
     "Ears": [
-      "Diminished hearing", 
-      "Numbness of outer ear", 
-      "Feeling of distention of middle ear", 
-      "Deafness; comes suddenly and varies", 
+      "Diminished hearing",
+      "Numbness of outer ear",
+      "Feeling of distention of middle ear",
+      "Deafness",
+      "comes suddenly and varies",
       "Subdued tinnitus"
     ]
-  }, 
-  "details": "Gastrointestinal catarrh, with marked acidity. Often used with advantage for complaints arising in people who have been taking this drug to sweeten the stomach. Is frequently indicated in children; whole body smells sour, and disposed to boils. Broken-down, \"worn-out\" women, with uterine and climacteric disorders. With numbness and distention in various parts and nerve prostration. Sensitive to the least start, noise, touch, etc. Affections of the antrum of Highmore. Effects of shock, blows, mental distress. Sense of numbness; nerve prostration; tendency to constipation after nervous strain; SENSITIVE TO LEAST TOUCH, it causes starting, or cold winds or weather or from excess of care and worry with constipation and heaviness. Intense neuralgic pains.", 
+  },
+  "details": "Gastrointestinal catarrh, with marked acidity. Often used with advantage for complaints arising in people who have been taking this drug to sweeten the stomach. Is frequently indicated in children; whole body smells sour, and disposed to boils. Broken-down, \"worn-out\" women, with uterine and climacteric disorders. With numbness and distention in various parts and nerve prostration. Sensitive to the least start, noise, touch, etc. Affections of the antrum of Highmore. Effects of shock, blows, mental distress. Sense of numbness; nerve prostration; tendency to constipation after nervous strain; SENSITIVE TO LEAST TOUCH, it causes starting, or cold winds or weather or from excess of care and worry with constipation and heaviness. Intense neuralgic pains.",
   "dosage": "Third to thirtieth potency."
 }

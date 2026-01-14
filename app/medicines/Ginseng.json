@@ -1,40 +1,45 @@
 {
-  "name": "Ginseng", 
-  "Relationship": "Compare: ARAL.; COCA. HEDERA - Ivy - mental depression and skin irritation antidoted by Gunpowder.", 
-  "Common names": "Aralia Quinquefolia - Wild Ginseng - Panax", 
+  "name": "Ginseng",
+  "Relationship": "Compare: ARAL.; COCA. HEDERA - Ivy - mental depression and skin irritation antidoted by Gunpowder.",
+  "Common names": "Aralia Quinquefolia - Wild Ginseng - Panax",
   "symptoms": {
     "Head": [
-      "Vertigo, with gray spots before eyes; semi-lateral headache; occipital; difficult opening of eyelids; objects appear double"
-    ], 
+      "Vertigo, with gray spots before eyes",
+      "semi-lateral headache",
+      "occipital",
+      "difficult opening of eyelids",
+      "objects appear double"
+    ],
     "Abdomen": [
-      "Tense, painful, rumbling", 
-      "Loud gurgling in ileo-caecal region", 
-      "Pain in right side", 
+      "Tense, painful, rumbling",
+      "Loud gurgling in ileo-caecal region",
+      "Pain in right side",
       "Perityphlitis"
-    ], 
+    ],
     "Throat": [
       "Tonsillitis, just like bellad, but in dark-complexioned people"
-    ], 
+    ],
     "Extremities": [
-      "Eruption on upper inner thighs", 
-      "Bruised pain in small of back and thighs; nightly digging in right lower limb to toes", 
-      "Stiff, contracted joints, heaviness of lower limbs", 
-      "Coldness in back and spine", 
-      "Burning heat in tips of fingers", 
-      "Skin feels tight", 
-      "Stiffness in back", 
-      "Hands feel swollen", 
-      "Crackling in joints", 
+      "Eruption on upper inner thighs",
+      "Bruised pain in small of back and thighs",
+      "nightly digging in right lower limb to toes",
+      "Stiff, contracted joints, heaviness of lower limbs",
+      "Coldness in back and spine",
+      "Burning heat in tips of fingers",
+      "Skin feels tight",
+      "Stiffness in back",
+      "Hands feel swollen",
+      "Crackling in joints",
       "Contraction"
-    ], 
+    ],
     "Male": [
-      "Sexual excitement", 
-      "Rheumatic pains after frequent emissions", 
-      "Voluptuous tickling at end of urethra", 
-      "Weakness of genital organs", 
+      "Sexual excitement",
+      "Rheumatic pains after frequent emissions",
+      "Voluptuous tickling at end of urethra",
+      "Weakness of genital organs",
       "Pressure in testicles"
     ]
-  }, 
-  "details": "Said to be a stimulant to the secretory glands, especially salivary. Acts on the lower part of the spinal cord. LUMBAGO, SCIATICA, AND RHEUMATISM. Paralytic weakness. HICCOUGH. Skin symptoms, itching pimples on neck and chest.", 
+  },
+  "details": "Said to be a stimulant to the secretory glands, especially salivary. Acts on the lower part of the spinal cord. LUMBAGO, SCIATICA, AND RHEUMATISM. Paralytic weakness. HICCOUGH. Skin symptoms, itching pimples on neck and chest.",
   "dosage": "Tincture, to third potency."
 }

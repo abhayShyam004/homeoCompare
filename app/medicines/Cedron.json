@@ -1,34 +1,37 @@
 {
-  "name": "Cedron", 
-  "Relationship": "Antidote: Lach. Compare: Ars.; China.", 
-  "Common names": "Simaruba Ferroginea Rattlesnake Bean", 
+  "name": "Cedron",
+  "Relationship": "Antidote: Lach. Compare: Ars.; China.",
+  "Common names": "Simaruba Ferroginea Rattlesnake Bean",
   "symptoms": {
     "Head": [
-      "Pain from temple to temple across eyes", 
-      "Pain over whole right side of face, coming on about nine am crazy feeling from pain across forehead; worse working on black", 
-      "Roaring in ears produced by cinchona", 
+      "Pain from temple to temple across eyes",
+      "Pain over whole right side of face, coming on about nine am crazy feeling from pain across forehead",
+      "worse working on black",
+      "Roaring in ears produced by cinchona",
       "Whole body seems numb with headache"
-    ], 
+    ],
     "Fever": [
-      "Red eyes", 
-      "Chilliness toward evening; then frontal headache extending into parietal region", 
+      "Red eyes",
+      "Chilliness toward evening",
+      "then frontal headache extending into parietal region",
       "Heat, with itching of eyes, tearing pain in limbs, numbness of limbs"
-    ], 
+    ],
     "Eyes": [
-      "Supraorbital neuralgia periodic", 
-      "Scalding lachrymation", 
-      "Shooting over left eye", 
-      "Severe pain in eyeball, with radiating pains around eye, shooting into nose", 
+      "Supraorbital neuralgia periodic",
+      "Scalding lachrymation",
+      "Shooting over left eye",
+      "Severe pain in eyeball, with radiating pains around eye, shooting into nose",
       "Iritis, choroiditis"
-    ], 
+    ],
     "Extremities": [
-      "Sudden pain in ball of right thumb, extending up arm to shoulder", 
-      "Pain in ball of right foot, extending to knee", 
-      "Shingles, with radiating pain", 
-      "Dropsy of knee-joint", 
-      "Lancinating pain in joints; worse, feet and hands"
+      "Sudden pain in ball of right thumb, extending up arm to shoulder",
+      "Pain in ball of right foot, extending to knee",
+      "Shingles, with radiating pain",
+      "Dropsy of knee-joint",
+      "Lancinating pain in joints",
+      "worse, feet and hands"
     ]
-  }, 
-  "details": "Periodicity is the most marked characteristic of this drug. Is particularly useful in tropical or in damp, warm, marshy countries. It has been found curative in malarial affections, especially neuralgia. Adapted to persons of a voluptuous disposition, excitable, nervous temperament. Has powers of anti-doting snake-bites and stings of insects. Tincture of pure bean scraped on wound. Mania.", 
+  },
+  "details": "Periodicity is the most marked characteristic of this drug. Is particularly useful in tropical or in damp, warm, marshy countries. It has been found curative in malarial affections, especially neuralgia. Adapted to persons of a voluptuous disposition, excitable, nervous temperament. Has powers of anti-doting snake-bites and stings of insects. Tincture of pure bean scraped on wound. Mania.",
   "dosage": "Tincture to third attenuation."
 }

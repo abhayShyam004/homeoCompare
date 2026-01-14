@@ -1,23 +1,24 @@
 {
-  "name": "Nitri spiritus dulcis", 
-  "Relationship": "Increases the action of Digitalis. Compare: PHOS-AC.; LYCOP.", 
+  "name": "Nitri spiritus dulcis",
+  "Relationship": "Increases the action of Digitalis. Compare: PHOS-AC.; LYCOP.",
   "Modalities": [
-    "Worse: from mental disturbance", 
+    "Worse: from mental disturbance",
     "Worse: during winter and spring"
-  ], 
-  "Common names": "Sweet Spirits of Nitre", 
+  ],
+  "Common names": "Sweet Spirits of Nitre",
   "symptoms": {
     "Respiratory": [
-      "Very rapid breathing by going only a short walk", 
+      "Very rapid breathing by going only a short walk",
       "Painful constriction behind sternum"
-    ], 
+    ],
     "Face": [
-      "Burning in cheeks, and vomiting, followed by lassitude", 
-      "Prosopalgia, with photophobia", 
-      "Boring in facial bones; in angles of lower jaw", 
+      "Burning in cheeks, and vomiting, followed by lassitude",
+      "Prosopalgia, with photophobia",
+      "Boring in facial bones",
+      "in angles of lower jaw",
       "Very sensitive to cold"
     ]
-  }, 
-  "details": "SENSORIAL APATHY in low fevers when there is stupor, difficulty of arousing patient, is met by this remedy. Dry skin, nausea, flatulence. Salty taste. ILL-EFFECTS OF SALT (halophagia). (ARS.; PHOS.) Catching cold in stormy weather. Acute nephritis following scarlet fever. Dropsy. Is an excellent diuretic.", 
+  },
+  "details": "SENSORIAL APATHY in low fevers when there is stupor, difficulty of arousing patient, is met by this remedy. Dry skin, nausea, flatulence. Salty taste. ILL-EFFECTS OF SALT (halophagia). (ARS.; PHOS.) Catching cold in stormy weather. Acute nephritis following scarlet fever. Dropsy. Is an excellent diuretic.",
   "dosage": "A few drops of the pure spirits in water every two or three hours."
 }

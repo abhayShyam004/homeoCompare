@@ -1,53 +1,56 @@
 {
-  "name": "Urtica urens", 
-  "Relationship": "Compare: MEDUSA; NAT-MUR.; LAC. CAN.; RICIN (diminished mammary secretion); BOMBYX; RHUS; APIS; CHLORAL.; ASTAC.; PULS. (urticaria); BOLETUS LURIDUS AND ANACARD. (urticaria tuberosa); LYCOP. AND HEDEOMA (uric acid conditions); FORMICA.", 
+  "name": "Urtica urens",
+  "Relationship": "Compare: MEDUSA; NAT-MUR.; LAC. CAN.; RICIN (diminished mammary secretion); BOMBYX; RHUS; APIS; CHLORAL.; ASTAC.; PULS. (urticaria); BOLETUS LURIDUS AND ANACARD. (urticaria tuberosa); LYCOP. AND HEDEOMA (uric acid conditions); FORMICA.",
   "Modalities": [
-    "Worse: from snow-air; water", 
-    "Worse: cool moist air", 
+    "Worse: from snow-air; water",
+    "Worse: cool moist air",
     "Worse: touch"
-  ], 
-  "Common names": "Stinging-nettle", 
+  ],
+  "Common names": "Stinging-nettle",
   "symptoms": {
     "Head": [
       "Vertigo, headache with spleen pains"
-    ], 
+    ],
     "Fever": [
-      "Tropical fever", 
-      "Fever of gout", 
+      "Tropical fever",
+      "Fever of gout",
       "General heat in bed with soreness over abdomen"
-    ], 
+    ],
     "Abdomen": [
       "Diarrhoea chronic disease of large intestine characterized by large secretion of mucus"
-    ], 
+    ],
     "Female": [
-      "Acid and excoriating leucorrhoea", 
-      "Pruritus vulvae, with stinging, itching, and oedema", 
-      "Diminished secretion of milk", 
-      "Uterine hemorrhages", 
-      "Excessive swelling of breasts", 
+      "Acid and excoriating leucorrhoea",
+      "Pruritus vulvae, with stinging, itching, and oedema",
+      "Diminished secretion of milk",
+      "Uterine hemorrhages",
+      "Excessive swelling of breasts",
       "Arrests flow of milk after weaning"
-    ], 
+    ],
     "Skin": [
-      "Urticaria, burning heat, with formication; violent itching", 
-      "Urticaria nodosa", 
-      "Rheumatism alternates with nettle-rash", 
-      "Chicken-pox", 
-      "Itching and stinging of scrotum", 
-      "Itching blotches", 
-      "Burn confined to skin", 
-      "Herpes labialis with sensation of heat and itching", 
-      "Angioneurotic oedema", 
-      "Erythema, with burning and stinging", 
-      "Burns and scalds", 
+      "Urticaria, burning heat, with formication",
+      "violent itching",
+      "Urticaria nodosa",
+      "Rheumatism alternates with nettle-rash",
+      "Chicken-pox",
+      "Itching and stinging of scrotum",
+      "Itching blotches",
+      "Burn confined to skin",
+      "Herpes labialis with sensation of heat and itching",
+      "Angioneurotic oedema",
+      "Erythema, with burning and stinging",
+      "Burns and scalds",
       "Consequences of suppressed nettle-rash"
-    ], 
+    ],
     "Extremities": [
-      "Pain in acute gout deltoid; pain in ankles, wrists"
-    ], 
+      "Pain in acute gout deltoid",
+      "pain in ankles, wrists"
+    ],
     "Male": [
-      "Itching of scrotum, keeps him awake; scrotum swollen"
+      "Itching of scrotum, keeps him awake",
+      "scrotum swollen"
     ]
-  }, 
-  "details": "A remedy for agalactia and LITHIASIS. Profuse discharge from mucous surfaces. Enuresis and urticaria. Spleen affections. ANTIDOTES ILL-EFFECTS OF EATING SHELLFISH. Symptoms return at the same time every year. Gout and uric acid diathesis. Favors elimination. RHEUMATISM ASSOCIATED WITH URTICARIA-LIKE ERUPTIONS. NEURITIS.", 
+  },
+  "details": "A remedy for agalactia and LITHIASIS. Profuse discharge from mucous surfaces. Enuresis and urticaria. Spleen affections. ANTIDOTES ILL-EFFECTS OF EATING SHELLFISH. Symptoms return at the same time every year. Gout and uric acid diathesis. Favors elimination. RHEUMATISM ASSOCIATED WITH URTICARIA-LIKE ERUPTIONS. NEURITIS.",
   "dosage": "Tincture and lower potencies."
 }

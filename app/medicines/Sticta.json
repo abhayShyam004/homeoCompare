@@ -1,59 +1,66 @@
 {
-  "name": "Sticta", 
-  "Relationship": "Compare: DATURA ARBOREA - BOUGMANCIA CANDIDA (cannot concentrate thoughts; brain floats in thousands of problems and grand ideas. Floating sensation as if ideas were floating outside of brain. Headache, heartburn. Burning sensation around cardiac end of stomach, extending to oesophagus with sense of constriction. Heat and fullness over liver region.) CERTRARIA - Iceland Moss (chronic diarrhoea, phthisis, bloody expectoration. Is used as a decoction and boiled with milk as an expectorant and nutrient in bronchorrhea, catarrh, etc.) Also compare: ERYNG.; DROS.; STILLING.; RUMEX; SAMBUCUS.", 
+  "name": "Sticta",
+  "Relationship": "Compare: DATURA ARBOREA - BOUGMANCIA CANDIDA (cannot concentrate thoughts; brain floats in thousands of problems and grand ideas. Floating sensation as if ideas were floating outside of brain. Headache, heartburn. Burning sensation around cardiac end of stomach, extending to oesophagus with sense of constriction. Heat and fullness over liver region.) CERTRARIA - Iceland Moss (chronic diarrhoea, phthisis, bloody expectoration. Is used as a decoction and boiled with milk as an expectorant and nutrient in bronchorrhea, catarrh, etc.) Also compare: ERYNG.; DROS.; STILLING.; RUMEX; SAMBUCUS.",
   "Modalities": [
     "Worse: sudden changes of temperature"
-  ], 
-  "Common names": "Lung wort", 
+  ],
+  "Common names": "Lung wort",
   "symptoms": {
     "Head": [
-      "Catarrhal headache before discharge appears", 
-      "Burning in eyes and soreness of balls", 
-      "Burning in eyelids", 
-      "Sensation as if scalp were too small", 
+      "Catarrhal headache before discharge appears",
+      "Burning in eyes and soreness of balls",
+      "Burning in eyelids",
+      "Sensation as if scalp were too small",
       "Dull headache, with dull heavy pressure in forehead and root of nose"
-    ], 
+    ],
     "Respiratory": [
-      "Tracheitis, facilitates expectoration", 
-      "Cough after measles", 
-      "Worse towards evening and when tired", 
-      "Pain through chest from sternum to spinal column", 
-      "Loose cough in morning", 
-      "Throat raw; dropping of mucus posteriorly", 
-      "Dry, hacking cough during night; worse, inspiration", 
+      "Tracheitis, facilitates expectoration",
+      "Cough after measles",
+      "Worse towards evening and when tired",
+      "Pain through chest from sternum to spinal column",
+      "Loose cough in morning",
+      "Throat raw",
+      "dropping of mucus posteriorly",
+      "Dry, hacking cough during night",
+      "worse, inspiration",
       "Pulsation from right side of sternum down to abdomen"
-    ], 
+    ],
     "Mind": [
-      "Feels as if floating in air", 
-      "Confusion of ideas; patient must talk"
-    ], 
+      "Feels as if floating in air",
+      "Confusion of ideas",
+      "patient must talk"
+    ],
     "Abdomen": [
-      "Urine increased, with soreness and aching in bladder", 
-      "Diarrhoea; stools profuse, frothy; worse, morning"
-    ], 
+      "Urine increased, with soreness and aching in bladder",
+      "Diarrhoea",
+      "stools profuse, frothy",
+      "worse, morning"
+    ],
     "Nose": [
-      "Constant need to blow the nose, but no discharge", 
-      "Dry scabs, especially in evening and night", 
-      "Hay-fever; incessant sneezing", 
-      "Atrophic rhinitis", 
-      "Feeling of fullness at the root f the nose", 
+      "Constant need to blow the nose, but no discharge",
+      "Dry scabs, especially in evening and night",
+      "Hay-fever",
+      "incessant sneezing",
+      "Atrophic rhinitis",
+      "Feeling of fullness at the root f the nose",
       "Dryness of nasal membrane"
-    ], 
+    ],
     "Female": [
       "Scanty flow of milk"
-    ], 
+    ],
     "Extremities": [
-      "Swelling, heat, redness of joints", 
-      "Housemaid's knee", 
-      "Pain severe and drawing", 
-      "Chorea-like spasms; legs feel floating in air", 
-      "Shooting pains in knees", 
-      "Joints and neighboring muscles red, swollen, painful", 
-      "Spot of inflammation and redness over affected joint", 
-      "Rheumatic pain in right shoulder joint, deltoid, and biceps", 
+      "Swelling, heat, redness of joints",
+      "Housemaid's knee",
+      "Pain severe and drawing",
+      "Chorea-like spasms",
+      "legs feel floating in air",
+      "Shooting pains in knees",
+      "Joints and neighboring muscles red, swollen, painful",
+      "Spot of inflammation and redness over affected joint",
+      "Rheumatic pain in right shoulder joint, deltoid, and biceps",
       "Rheumatic pains precede catarrhal symptoms"
     ]
-  }, 
-  "details": "Offers a set of symptoms like coryza, bronchial catarrh and influenza, together with nervous and RHEUMATIC disturbances. There is a general feeling of dullness and malaise, as when a cold is coming on; dull, heavy pressure in forehead, catarrhal conjunctivitis, etc. RHEUMATIC STIFFNESS OF NECK.", 
+  },
+  "details": "Offers a set of symptoms like coryza, bronchial catarrh and influenza, together with nervous and RHEUMATIC disturbances. There is a general feeling of dullness and malaise, as when a cold is coming on; dull, heavy pressure in forehead, catarrhal conjunctivitis, etc. RHEUMATIC STIFFNESS OF NECK.",
   "dosage": "Tincture, to sixth potency."
 }

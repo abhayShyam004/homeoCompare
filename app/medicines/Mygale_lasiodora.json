@@ -1,43 +1,46 @@
 {
-  "name": "Mygale lasiodora", 
-  "Relationship": "Compare: AGAR.; TARENT.; CUPR.; ZIZIA.", 
+  "name": "Mygale lasiodora",
+  "Relationship": "Compare: AGAR.; TARENT.; CUPR.; ZIZIA.",
   "Modalities": [
-    "Worse: in morning", 
+    "Worse: in morning",
     "Better: during sleep"
-  ], 
-  "Common names": "Black Cuban Spider", 
+  ],
+  "Common names": "Black Cuban Spider",
   "symptoms": {
     "Stomach": [
-      "Aversion to food", 
-      "Excessive thirst", 
+      "Aversion to food",
+      "Excessive thirst",
       "Nausea, with dim sight"
-    ], 
+    ],
     "Mind": [
-      "Delirious, restless, sad; fears death; despondent"
-    ], 
+      "Delirious, restless, sad",
+      "fears death",
+      "despondent"
+    ],
     "Face": [
-      "Tongue dry and parched; put out with difficulty", 
-      "Mouth and eyes open in rapid succession", 
-      "Grating of teeth at night", 
-      "Head jerked to one side", 
-      "Hot and flushed", 
+      "Tongue dry and parched",
+      "put out with difficulty",
+      "Mouth and eyes open in rapid succession",
+      "Grating of teeth at night",
+      "Head jerked to one side",
+      "Hot and flushed",
       "Twitching of facial muscles"
-    ], 
+    ],
     "Extremities": [
-      "Limbs drag while walking", 
-      "Twitching of limbs", 
-      "Intense redness in streaks, following course of lymphatics", 
-      "Convulsive, uncontrollable movements of arms and legs", 
-      "Constant motion of whole body", 
-      "Unsteady gait", 
-      "Restless hands", 
+      "Limbs drag while walking",
+      "Twitching of limbs",
+      "Intense redness in streaks, following course of lymphatics",
+      "Convulsive, uncontrollable movements of arms and legs",
+      "Constant motion of whole body",
+      "Unsteady gait",
+      "Restless hands",
       "Tremulous"
-    ], 
+    ],
     "Male": [
-      "Violent erections", 
+      "Violent erections",
       "Chordee"
     ]
-  }, 
-  "details": "Weakness, palpitation, nervousness, fear, like other spider preparations. Chorea is the principal therapeutic field of this. Sexual symptoms are important.", 
+  },
+  "details": "Weakness, palpitation, nervousness, fear, like other spider preparations. Chorea is the principal therapeutic field of this. Sexual symptoms are important.",
   "dosage": "Third to thirtieth potency."
 }

@@ -1,54 +1,62 @@
 {
-  "name": "Solanum lycopersicum", 
-  "Relationship": "Compare: BELL. (follows well); EUP. PERF.; RHUS; SANGUIN.; CAPS.", 
+  "name": "Solanum lycopersicum",
+  "Relationship": "Compare: BELL. (follows well); EUP. PERF.; RHUS; SANGUIN.; CAPS.",
   "Modalities": [
-    "Worse: right side", 
-    "Worse: open air", 
-    "Worse: continued motion", 
-    "Worse: jar", 
-    "Worse: noises", 
-    "Better: warm room", 
+    "Worse: right side",
+    "Worse: open air",
+    "Worse: continued motion",
+    "Worse: jar",
+    "Worse: noises",
+    "Better: warm room",
     "Better: tobacco"
-  ], 
-  "Common names": "Lycopersicum Esculentum Tomato", 
+  ],
+  "Common names": "Lycopersicum Esculentum Tomato",
   "symptoms": {
     "Heart": [
       "Decided decrease in pulse rate with anxiety and apprehensiveness"
-    ], 
+    ],
     "Eyes": [
-      "Dull, heavy; pupils contracted; eyeballs feel contracted; aching in and around eyes", 
+      "Dull, heavy",
+      "pupils contracted",
+      "eyeballs feel contracted",
+      "aching in and around eyes",
       "Eyes suffused"
-    ], 
+    ],
     "Respiratory": [
-      "Voice husky", 
-      "Chest oppressed; dry, hacking cough coming on at night and keeping one awake", 
-      "Pain in chest, extending to head", 
-      "Expulsive cough, deep and harsh", 
-      "Hoarseness; constant desire to clear throat"
-    ], 
+      "Voice husky",
+      "Chest oppressed",
+      "dry, hacking cough coming on at night and keeping one awake",
+      "Pain in chest, extending to head",
+      "Expulsive cough, deep and harsh",
+      "Hoarseness",
+      "constant desire to clear throat"
+    ],
     "Urine": [
-      "Must rise at night to urinate", 
+      "Must rise at night to urinate",
       "Constant dribbling in open air"
-    ], 
+    ],
     "Head": [
-      "Bursting pain, beginning in occiput and spreading all over", 
+      "Bursting pain, beginning in occiput and spreading all over",
       "Whole head and scalp feels sore, bruised, after pain has ceased"
-    ], 
+    ],
     "Nose": [
-      "Itching in anterior chamber; worse, breathing any dust; better, indoors", 
-      "Profuse, watery coryza; drops down throat"
-    ], 
+      "Itching in anterior chamber",
+      "worse, breathing any dust",
+      "better, indoors",
+      "Profuse, watery coryza",
+      "drops down throat"
+    ],
     "Extremities": [
-      "Dull pain in lumbar region", 
-      "Pain deep in middle of right arm", 
-      "Intense aching in lower limbs", 
-      "Sharp pain in right deltoid and pectoralis muscles", 
-      "Rheumatic pain in right elbow and wrist, and hands of both sides", 
-      "Aching through back", 
-      "Tingling along right ulnar nerve", 
+      "Dull pain in lumbar region",
+      "Pain deep in middle of right arm",
+      "Intense aching in lower limbs",
+      "Sharp pain in right deltoid and pectoralis muscles",
+      "Rheumatic pain in right elbow and wrist, and hands of both sides",
+      "Aching through back",
+      "Tingling along right ulnar nerve",
       "Right crural neuralgia"
     ]
-  }, 
-  "details": "Marked symptoms of rheumatism and influenza. Severe aching pains all over body. PAINS LEFT AFTER INFLUENZA. Head always shows signs of acute congestion. Hay-fever, with marked aggravation from breathing the least dust. Frequent urination and profuse watery diarrhoea.", 
+  },
+  "details": "Marked symptoms of rheumatism and influenza. Severe aching pains all over body. PAINS LEFT AFTER INFLUENZA. Head always shows signs of acute congestion. Hay-fever, with marked aggravation from breathing the least dust. Frequent urination and profuse watery diarrhoea.",
   "dosage": "Third to thirtieth potency."
 }

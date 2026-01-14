@@ -1,22 +1,26 @@
 {
-  "name": "Lobelia purpurascens", 
-  "Relationship": "Compare: BAPTISIA; LOBELIA CARDINALIS (debility, especially of lower extremities; oppressed breathing, pleurisy, STICKING pain in chest on taking a long breath. Pain in LEFT lung, intermitting pricking during the day).", 
-  "Common names": "Purple Lobelia", 
+  "name": "Lobelia purpurascens",
+  "Relationship": "Compare: BAPTISIA; LOBELIA CARDINALIS (debility, especially of lower extremities; oppressed breathing, pleurisy, STICKING pain in chest on taking a long breath. Pain in LEFT lung, intermitting pricking during the day).",
+  "Common names": "Purple Lobelia",
   "symptoms": {
     "Head": [
-      "Confused and depressed", 
-      "Headache with nausea, vertigo; especially between eyebrows", 
-      "Cannot keep eyes open; spasmodic closure of lids"
-    ], 
+      "Confused and depressed",
+      "Headache with nausea, vertigo",
+      "especially between eyebrows",
+      "Cannot keep eyes open",
+      "spasmodic closure of lids"
+    ],
     "Eyes": [
-      "Impossible to keep open", 
+      "Impossible to keep open",
       "Drowsy"
-    ], 
+    ],
     "Chest": [
-      "Heart beats sound to him like boom of a drum", 
-      "Superficial respiration; heart and lungs feel paralyzed; respiration slow"
+      "Heart beats sound to him like boom of a drum",
+      "Superficial respiration",
+      "heart and lungs feel paralyzed",
+      "respiration slow"
     ]
-  }, 
-  "details": "Profound prostration of all the vital forces and of the nervous system; RESPIRATORY PARALYSIS. NERVOUS PROSTRATION OF INFLUENZA. Coma. Tongue white and paralyzed. Drowsiness; dizzy headache between eyebrows; cannot keep eyes open; tongue white - feels paralyzed as also do the heart and lungs; intense prostration of all vital forces; deadly chill, without shivering; useful for the low, nervous prostration of grippe", 
+  },
+  "details": "Profound prostration of all the vital forces and of the nervous system; RESPIRATORY PARALYSIS. NERVOUS PROSTRATION OF INFLUENZA. Coma. Tongue white and paralyzed. Drowsiness; dizzy headache between eyebrows; cannot keep eyes open; tongue white - feels paralyzed as also do the heart and lungs; intense prostration of all vital forces; deadly chill, without shivering; useful for the low, nervous prostration of grippe",
   "dosage": "Third potency."
 }

@@ -1,59 +1,69 @@
 {
-  "name": "Echinacea Rudbeckia", 
-  "Relationship": "Compare: CENCHRIS CONTORTRIX; BOTHROPS; ARS.; LACHES.; BAPTIS.; RHUS; CISTUS; HEPAR; CALENDULA.", 
-  "Common names": "Purple Cone-flower", 
+  "name": "Echinacea Rudbeckia",
+  "Relationship": "Compare: CENCHRIS CONTORTRIX; BOTHROPS; ARS.; LACHES.; BAPTIS.; RHUS; CISTUS; HEPAR; CALENDULA.",
+  "Common names": "Purple Cone-flower",
   "symptoms": {
     "Head": [
-      "Confused, depressed", 
-      "Aches with a peculiar periodical flushing of the face, even to the neck; dizziness and profound prostration"
-    ], 
+      "Confused, depressed",
+      "Aches with a peculiar periodical flushing of the face, even to the neck",
+      "dizziness and profound prostration"
+    ],
     "Fever": [
-      "Cold flashes all over back", 
-      "Chilliness, with nausea", 
+      "Cold flashes all over back",
+      "Chilliness, with nausea",
       "Malarial fever"
-    ], 
+    ],
     "Stomach": [
-      "Sour belching and heartburn", 
-      "Nausea; better lying down"
-    ], 
+      "Sour belching and heartburn",
+      "Nausea",
+      "better lying down"
+    ],
     "Urine": [
       "Albuminous, scanty, frequent, and involuntary"
-    ], 
+    ],
     "Chest": [
-      "Pain in pectoral muscles", 
+      "Pain in pectoral muscles",
       "Pain as of a lump in chest and under sternum"
-    ], 
+    ],
     "Mouth": [
-      "Tongue, lips and fauces tingle, with sense of fear about heart", 
-      "Canker; gums recede and bleed easily; corners of mouth and lips crack; tongue dry and swollen; sores; dirty brownish", 
-      "White coating of tongue, with red edges", 
+      "Tongue, lips and fauces tingle, with sense of fear about heart",
+      "Canker",
+      "gums recede and bleed easily",
+      "corners of mouth and lips crack",
+      "tongue dry and swollen",
+      "sores",
+      "dirty brownish",
+      "White coating of tongue, with red edges",
       "Promotes the flow of saliva"
-    ], 
+    ],
     "Nose": [
-      "Foul-smelling discharge, membranous formations protruding", 
-      "Nose feels stuffed up", 
-      "Post-nasal catarrh with ulceration and fetor", 
+      "Foul-smelling discharge, membranous formations protruding",
+      "Nose feels stuffed up",
+      "Post-nasal catarrh with ulceration and fetor",
       "Right nostril raw, bleeding"
-    ], 
+    ],
     "Female": [
-      "Puerperal septicaemia; discharges suppressed; abdomen sensitive and tympanitic; offensive, excoriating leucorrhoea"
-    ], 
+      "Puerperal septicaemia",
+      "discharges suppressed",
+      "abdomen sensitive and tympanitic",
+      "offensive, excoriating leucorrhoea"
+    ],
     "Skin": [
-      "Lymphatics enlarged", 
-      "Old tibial ulcers", 
-      "Recurring boils", 
-      "Carbuncles", 
-      "Gangrene", 
+      "Lymphatics enlarged",
+      "Old tibial ulcers",
+      "Recurring boils",
+      "Carbuncles",
+      "Gangrene",
       "Irritations from insect bites and poisonous plants"
-    ], 
+    ],
     "Throat": [
-      "Tonsils purple or black, gray exudation extending to posterior nares and air-passages", 
+      "Tonsils purple or black, gray exudation extending to posterior nares and air-passages",
       "Ulcerated sore throat"
-    ], 
+    ],
     "Extremities": [
       "Aching in limbs and general lassitude"
     ]
-  }, 
-  "details": "We are indebted to the Eclectic school for this remarkable medicine as a \"corrector of blood dyscrasia.\" Acute auto-infection. Symptoms of BLOOD POISONING, SEPTIC CONDITIONS GENERALLY. Diarrhoea in typhoid. Gonorrhea. Boils. ERYSIPELAS and foul ulcers. GANGRENE. Goitre with exophthalmic symptoms; full doses, also injecting 5-10 drops into thyroid gland. Tendency to malignancy in acute and subacute disorders. Last stages of cancer to ease pain. VENOM INFECTION. Cerebrospinal meningitis. Puerperal infections. TIRED FEELING. Piles. Pustules. Acts no vermiform appendix thus has been used for appendicitis, but remember it promotes suppuration and a neglected appendicitis with pus formation would probably rupture sooner under its use. Lymphatic inflammation; crushing injuries. SNAKE BITES and bites and stings generally. Foul discharges with emaciation and great debility.", 
+  },
+  "details": "We are indebted to the Eclectic school for this remarkable medicine as a \"corrector of blood dyscrasia.\" Acute auto-infection. Symptoms of BLOOD POISONING, SEPTIC CONDITIONS GENERALLY. Diarrhoea in typhoid. Gonorrhea. Boils. ERYSIPELAS and foul ulcers. GANGRENE. Goitre with exophthalmic symptoms; full doses, also injecting 5-10 drops into thyroid gland. Tendency to malignancy in acute and subacute disorders. Last stages of cancer to ease pain. VENOM INFECTION. Cerebrospinal meningitis. Puerperal infections. TIRED FEELING. Piles. Pustules. Acts no vermiform appendix thus has been used for appendicitis, but remember it promotes suppuration and a neglected appendicitis with pus formation would probably rupture sooner under its use. Lymphatic inflammation; crushing injuries. SNAKE BITES and bites and stings generally. Foul discharges with emaciation and great debility.",
   "dosage": "Tincture, one to ten drops, every two hours, and larger doses. LOCALLY, as a cleansing and antiseptic wash."
 }

@@ -1,55 +1,62 @@
 {
-  "name": "Arum triphyllum", 
-  "Relationship": "Compare: Ammon. carb.; Ailanthus; Cepa. Antidotes: Buttermilk, Acet-ac.; Puls.", 
+  "name": "Arum triphyllum",
+  "Relationship": "Compare: Ammon. carb.; Ailanthus; Cepa. Antidotes: Buttermilk, Acet-ac.; Puls.",
   "Modalities": [
     "Worse: northwest wind; lying down"
-  ], 
-  "Common names": "Jack-in-the-Pulpit", 
+  ],
+  "Common names": "Jack-in-the-Pulpit",
   "symptoms": {
     "Eyes": [
       "Quivering of upper eyelids, especially left"
-    ], 
+    ],
     "Head": [
-      "Bores head in pillow", 
+      "Bores head in pillow",
       "Headache from too warm clothing, from hot coffee"
-    ], 
+    ],
     "Mouth": [
-      "Tongue red, sore; whole mouth raw", 
-      "Picking lips until they bleed", 
-      "Lips chapped and burning", 
-      "Corners of mouth sore and cracked", 
-      "Lips and soft palate sore and burning", 
-      "Raw feeling at roof and palate", 
+      "Tongue red, sore",
+      "whole mouth raw",
+      "Picking lips until they bleed",
+      "Lips chapped and burning",
+      "Corners of mouth sore and cracked",
+      "Lips and soft palate sore and burning",
+      "Raw feeling at roof and palate",
       "Saliva profuse, acrid, corroding"
-    ], 
+    ],
     "Nose": [
-      "Hay-fever, with pain over root of nose", 
-      "Acrid, excoriating discharge, producing raw sores", 
-      "Boring in nose", 
-      "Face feels chapped, as if from cold wind; feels hot", 
-      "Nose completely stopped, with fluent, acrid discharge", 
-      "Constant picking at nose until it bleeds", 
-      "Soreness of nostrils", 
-      "Large scabs high up on right side of nose", 
-      "Nose obstructed; must breathe through mouth", 
-      "Coryza; discharge blood-streaked, watery"
-    ], 
+      "Hay-fever, with pain over root of nose",
+      "Acrid, excoriating discharge, producing raw sores",
+      "Boring in nose",
+      "Face feels chapped, as if from cold wind",
+      "feels hot",
+      "Nose completely stopped, with fluent, acrid discharge",
+      "Constant picking at nose until it bleeds",
+      "Soreness of nostrils",
+      "Large scabs high up on right side of nose",
+      "Nose obstructed",
+      "must breathe through mouth",
+      "Coryza",
+      "discharge blood-streaked, watery"
+    ],
     "Skin": [
-      "Impetigo contagiosa", 
-      "Scarlet rash; raw, bloody surfaces anywhere"
-    ], 
+      "Impetigo contagiosa",
+      "Scarlet rash",
+      "raw, bloody surfaces anywhere"
+    ],
     "Throat": [
-      "Expectoration of much mucus", 
-      "Constant hawking", 
-      "Worse, talking, singing", 
-      "Voice uncertain, uncontrollable", 
-      "Swelling of sub-maxillary glands", 
-      "Hoarseness", 
-      "Constricted and swollen; burns; raw", 
-      "Clergyman's sore throat", 
+      "Expectoration of much mucus",
+      "Constant hawking",
+      "Worse, talking, singing",
+      "Voice uncertain, uncontrollable",
+      "Swelling of sub-maxillary glands",
+      "Hoarseness",
+      "Constricted and swollen",
+      "burns",
+      "raw",
+      "Clergyman's sore throat",
       "Lungs feel sore"
     ]
-  }, 
-  "details": "Arum maculatum, Italicum, Dracontium, have the same action as the Triphyllum. They all contain an irritant poison, causing inflammation of mucous surfaces and destruction of tissue. ACRIDITY is the keynote of the kind of action characteristic of Arum.", 
+  },
+  "details": "Arum maculatum, Italicum, Dracontium, have the same action as the Triphyllum. They all contain an irritant poison, causing inflammation of mucous surfaces and destruction of tissue. ACRIDITY is the keynote of the kind of action characteristic of Arum.",
   "dosage": "Third to thirtieth potency."
 }

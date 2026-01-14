@@ -1,93 +1,109 @@
 {
-  "name": "Lilium tigrinum", 
-  "Relationship": "Compare: CACT.; HELON.; MUREX; SEP.; PLAT.; PALLAD. Antidote: HELON.", 
+  "name": "Lilium tigrinum",
+  "Relationship": "Compare: CACT.; HELON.; MUREX; SEP.; PLAT.; PALLAD. Antidote: HELON.",
   "Modalities": [
-    "Worse: consolation", 
-    "Worse: warm room", 
+    "Worse: consolation",
+    "Worse: warm room",
     "Better: fresh air"
-  ], 
-  "Common names": "Tiger-lily", 
+  ],
+  "Common names": "Tiger-lily",
   "symptoms": {
     "Heart": [
-      "Pulsations over whole body", 
-      "Feels full to bursting", 
-      "Pain in cardiac region with feeling of a load on chest", 
-      "Cold feeling about heart", 
-      "Suffocating feeling in a crowded and warm room", 
-      "Palpitation; irregular pulse; very rapid", 
-      "Angina pectoris with pain in right arm", 
+      "Pulsations over whole body",
+      "Feels full to bursting",
+      "Pain in cardiac region with feeling of a load on chest",
+      "Cold feeling about heart",
+      "Suffocating feeling in a crowded and warm room",
+      "Palpitation",
+      "irregular pulse",
+      "very rapid",
+      "Angina pectoris with pain in right arm",
       "Sensation as if heart were grasped in a vise"
-    ], 
+    ],
     "Eyes": [
-      "Myopic astigmia", 
-      "Pain, extending back into head; lachrymation; and impaired vision", 
-      "Hyperaesthesia of retina", 
+      "Myopic astigmia",
+      "Pain, extending back into head",
+      "lachrymation",
+      "and impaired vision",
+      "Hyperaesthesia of retina",
       "Useful in restoring power to the weakened ciliary muscle"
-    ], 
+    ],
     "Fever": [
       "Great heat and lassitude in afternoon, with throbbing throughout body"
-    ], 
+    ],
     "Stomach": [
-      "Thirsty, drinks often and much, and before severe symptoms", 
-      "Flatulent; nausea, with sensation of lump in stomach", 
-      "Hungry; longs for meat"
-    ], 
+      "Thirsty, drinks often and much, and before severe symptoms",
+      "Flatulent",
+      "nausea, with sensation of lump in stomach",
+      "Hungry",
+      "longs for meat"
+    ],
     "Urine": [
-      "Urine milky, scanty, hot", 
+      "Urine milky, scanty, hot",
       "Frequent urging"
-    ], 
+    ],
     "Head": [
-      "Faint in warm room", 
-      "Hot, dull, heavy", 
+      "Faint in warm room",
+      "Hot, dull, heavy",
       "Wild feeling in head"
-    ], 
+    ],
     "Mind": [
-      "Consolation aggravates", 
-      "Tormented about her salvation", 
-      "Anxious; fears some organic and incurable disease", 
-      "Constant inclination to weep", 
-      "Aimless, hurried manner; must keep busy", 
-      "Disposed to curse, strike, think obscene things", 
+      "Consolation aggravates",
+      "Tormented about her salvation",
+      "Anxious",
+      "fears some organic and incurable disease",
+      "Constant inclination to weep",
+      "Aimless, hurried manner",
+      "must keep busy",
+      "Disposed to curse, strike, think obscene things",
       "Profound depression of spirits"
-    ], 
+    ],
     "Stool": [
-      "Early-morning urgent stool", 
-      "Dysentery; mucus and blood, with tenesmus, especially in plethoric and nervous women at change of life", 
-      "Constant desire to defecate; from pressure in rectum, worse standing", 
+      "Early-morning urgent stool",
+      "Dysentery",
+      "mucus and blood, with tenesmus, especially in plethoric and nervous women at change of life",
+      "Constant desire to defecate",
+      "from pressure in rectum, worse standing",
       "Pressure down the anus"
-    ], 
+    ],
     "Abdomen": [
-      "Pressure downwards and backwards against rectum and anus; worse, standing; better, walking in open air", 
-      "Bearing down in lower part of abdomen", 
-      "Abdomen sore, distended; trembling sensation in abdomen"
-    ], 
+      "Pressure downwards and backwards against rectum and anus",
+      "worse, standing",
+      "better, walking in open air",
+      "Bearing down in lower part of abdomen",
+      "Abdomen sore, distended",
+      "trembling sensation in abdomen"
+    ],
     "Female": [
-      "Sexual instinct awakened", 
-      "Constant desire to support parts externally", 
-      "Menses early, scanty, dark, clotted, offensive; flow only when moving about", 
-      "Sub-involution", 
-      "Pruritis pudendi", 
-      "Congestion of uterus, prolapse, and anteversion", 
-      "Pain in ovaries and down thighs", 
-      "Bloated feeling in uterine region", 
-      "Ceases when resting", 
-      "Bearing-down sensation with urgent desire for stool, as though all organs would escape", 
-      "Acrid, brown leucorrhoea; smarting in labia"
-    ], 
+      "Sexual instinct awakened",
+      "Constant desire to support parts externally",
+      "Menses early, scanty, dark, clotted, offensive",
+      "flow only when moving about",
+      "Sub-involution",
+      "Pruritis pudendi",
+      "Congestion of uterus, prolapse, and anteversion",
+      "Pain in ovaries and down thighs",
+      "Bloated feeling in uterine region",
+      "Ceases when resting",
+      "Bearing-down sensation with urgent desire for stool, as though all organs would escape",
+      "Acrid, brown leucorrhoea",
+      "smarting in labia"
+    ],
     "Sleep": [
-      "Unable to sleep, with wild feeling in head", 
+      "Unable to sleep, with wild feeling in head",
       "Unrefreshing, with disagreeable dreams"
-    ], 
+    ],
     "Extremities": [
-      "Legs ache; cannot keep them still", 
-      "Cannot walk on uneven ground", 
-      "Pain in right arm and hip", 
-      "Pain in back and spine, with trembling, but oftener in front of a pressing-down character", 
-      "Pricking in fingers", 
-      "Pain in ankle joint", 
+      "Legs ache",
+      "cannot keep them still",
+      "Cannot walk on uneven ground",
+      "Pain in right arm and hip",
+      "Pain in back and spine, with trembling, but oftener in front of a pressing-down character",
+      "Pricking in fingers",
+      "Pain in ankle joint",
       "Burning palms and soles"
     ]
-  }, 
-  "details": "Manifests powerful influence over the pelvic organs, and is adapted to many reflex states dependent on some pathological condition of uterus and ovaries. More often indicated in unmarried women. The action on the heart is very marked. Pain in small spots. (OXAL-AC.) Rheumatic arthritis.", 
+  },
+  "details": "Manifests powerful influence over the pelvic organs, and is adapted to many reflex states dependent on some pathological condition of uterus and ovaries. More often indicated in unmarried women. The action on the heart is very marked. Pain in small spots. (OXAL-AC.) Rheumatic arthritis.",
   "dosage": "The middle and higher potencies seem to have done best. Its curative action sometimes is slow in developing itself."
 }

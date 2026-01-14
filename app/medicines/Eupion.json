@@ -1,35 +1,41 @@
 {
-  "name": "Eupion", 
-  "Relationship": "Kreosote.; Graph.; Lach.", 
-  "Common names": "Wood-tar distillation", 
+  "name": "Eupion",
+  "Relationship": "Kreosote.; Graph.; Lach.",
+  "Common names": "Wood-tar distillation",
   "symptoms": {
     "Head": [
-      "Heat at vertex; stitches from vertex down limbs into abdomen and genitals", 
-      "Painful pulsation in forehead", 
-      "Vertigo; everything turns round on sitting up in bed", 
+      "Heat at vertex",
+      "stitches from vertex down limbs into abdomen and genitals",
+      "Painful pulsation in forehead",
+      "Vertigo",
+      "everything turns round on sitting up in bed",
       "Sore painful spots on head"
-    ], 
+    ],
     "Back": [
-      "Sacrum pains, as if broken", 
-      "Severe backache; must lean against something for support", 
+      "Sacrum pains, as if broken",
+      "Severe backache",
+      "must lean against something for support",
       "Pains extended into pelvis"
-    ], 
+    ],
     "Female": [
-      "During menses, irritable and disinclined to talk; burning and stitches in chest and heart", 
-      "When pain in back ceases, the discharge gushes out", 
-      "Uterine flexions", 
-      "Burning in right ovary", 
-      "After menses, yellow leucorrhoea, with sever backache", 
-      "Pruritus pudendi; labia swollen", 
-      "Sore pain between labia during urination", 
-      "Chronic tubal disease", 
-      "Menses too early and copious", 
+      "During menses, irritable and disinclined to talk",
+      "burning and stitches in chest and heart",
+      "When pain in back ceases, the discharge gushes out",
+      "Uterine flexions",
+      "Burning in right ovary",
+      "After menses, yellow leucorrhoea, with sever backache",
+      "Pruritus pudendi",
+      "labia swollen",
+      "Sore pain between labia during urination",
+      "Chronic tubal disease",
+      "Menses too early and copious",
       "Gushing leucorrhoea"
-    ], 
+    ],
     "Extremities": [
-      "Cramps in the calves; worse at night"
+      "Cramps in the calves",
+      "worse at night"
     ]
-  }, 
-  "details": "Marked female symptoms, and backache. A remedy for UTERINE DISPLACEMENTS. Pain in back, followed by a bland leucorrhoea. Menses too early and copious; flow thin. INTENSE SWEAT FROM SLIGHTEST EXERTION. Disgusting dreams. Sensation as if whole body were made of jelly.", 
+  },
+  "details": "Marked female symptoms, and backache. A remedy for UTERINE DISPLACEMENTS. Pain in back, followed by a bland leucorrhoea. Menses too early and copious; flow thin. INTENSE SWEAT FROM SLIGHTEST EXERTION. Disgusting dreams. Sensation as if whole body were made of jelly.",
   "dosage": "Third potency."
 }

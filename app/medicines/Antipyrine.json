@@ -1,82 +1,87 @@
 {
   "symptoms": {
     "Heart": [
-      "General prostration", 
-      "Epileptiform seizures", 
-      "Contractures", 
-      "Trembling and cramps", 
-      "Rapid, weak, irregular pulse", 
-      "Faintness, with sensation of stoppage of heart", 
-      "Nerves", 
-      "Crawling and numbness", 
+      "General prostration",
+      "Epileptiform seizures",
+      "Contractures",
+      "Trembling and cramps",
+      "Rapid, weak, irregular pulse",
+      "Faintness, with sensation of stoppage of heart",
+      "Nerves",
+      "Crawling and numbness",
       "Throbbing throughout the body"
-    ], 
+    ],
     "Eyes": [
-      "Conjunctiva red and oedematous, with lachrymation", 
-      "Puffiness of lids", 
+      "Conjunctiva red and oedematous, with lachrymation",
+      "Puffiness of lids",
       "Red spots"
-    ], 
+    ],
     "Respiratory": [
-      "Cheyne-stokes respiration", 
-      "Fluent coryza", 
-      "Nasal mucous membrane swollen", 
-      "Dull pains in frontal sinus", 
-      "Aphonia", 
+      "Cheyne-stokes respiration",
+      "Fluent coryza",
+      "Nasal mucous membrane swollen",
+      "Dull pains in frontal sinus",
+      "Aphonia",
       "Oppression and dyspnoea"
-    ], 
+    ],
     "Stomach": [
-      "Nausea and vomiting; burning and pain"
-    ], 
+      "Nausea and vomiting",
+      "burning and pain"
+    ],
     "Urine": [
-      "Diminished", 
+      "Diminished",
       "Penis black"
-    ], 
+    ],
     "Mind": [
-      "Fear of becoming insane; nervous anxiety; hallucinations of sight and hearing"
-    ], 
+      "Fear of becoming insane",
+      "nervous anxiety",
+      "hallucinations of sight and hearing"
+    ],
     "Head": [
-      "Headache under ears with earache", 
-      "Throbbing headache; sensation of constriction", 
+      "Headache under ears with earache",
+      "Throbbing headache",
+      "sensation of constriction",
       "Flashes of heat"
-    ], 
+    ],
     "Face": [
-      "Oedema and puffiness", 
+      "Oedema and puffiness",
       "Red and swollen"
-    ], 
+    ],
     "Mouth": [
-      "Ulceration of lips and tongue; vesicles and bullae", 
-      "Toothache along lower jaw", 
-      "Burning of mouth and gums", 
-      "Tongue swollen", 
-      "Small lump in cheek", 
-      "Swelling of lips", 
+      "Ulceration of lips and tongue",
+      "vesicles and bullae",
+      "Toothache along lower jaw",
+      "Burning of mouth and gums",
+      "Tongue swollen",
+      "Small lump in cheek",
+      "Swelling of lips",
       "Bloody saliva"
-    ], 
+    ],
     "Female": [
-      "Watery leucorrhoea", 
-      "Itching and burning in vagina", 
+      "Watery leucorrhoea",
+      "Itching and burning in vagina",
       "Menses suppressed"
-    ], 
+    ],
     "Skin": [
-      "Erythema, eczema, pemphigus", 
-      "Intense pruritus", 
-      "Angioneurotic-oedema", 
-      "Dark blotches on skin of penis, sometimes with oedema", 
+      "Erythema, eczema, pemphigus",
+      "Intense pruritus",
+      "Angioneurotic-oedema",
+      "Dark blotches on skin of penis, sometimes with oedema",
       "Urticaria, appearing and disappearing suddenly, with internal coldness"
-    ], 
+    ],
     "Throat": [
-      "Pain on swallowing", 
-      "Expectoration of fetid pus", 
-      "Sensation of burning", 
+      "Pain on swallowing",
+      "Expectoration of fetid pus",
+      "Sensation of burning",
       "Abscess, white false membrane"
-    ], 
+    ],
     "Ears": [
-      "Pains and buzzing", 
+      "Pains and buzzing",
       "Tinnitus"
     ]
-  }, 
-  "details": "Antipyrine is one of the drugs that induce leucocytosis, similar to Ergotin, salicylates, and tuberculin. Acts especially on the vasomotor centers, causing dilation of capillaries of skin and consequent circumscribed patches of hyperaemia and swelling. In large doses causes profuse perspiration, dizziness, cyanosis, and somnolence, albumen and blood in urine. Acute erythema multiform.", 
-  "Common names": "Phenazone - A Coal-tar Derivative", 
-  "name": "Antipyrine", 
+  },
+  "details": "Antipyrine is one of the drugs that induce leucocytosis, similar to Ergotin, salicylates, and tuberculin. Acts especially on the vasomotor centers, causing dilation of capillaries of skin and consequent circumscribed patches of hyperaemia and swelling. In large doses causes profuse perspiration, dizziness, cyanosis, and somnolence, albumen and blood in urine. Acute erythema multiform.",
+  "Common names": "Phenazone - A Coal-tar Derivative",
+  "name": "Antipyrine",
   "dosage": "Second decimal potency."
 }

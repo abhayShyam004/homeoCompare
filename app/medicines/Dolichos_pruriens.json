@@ -1,31 +1,34 @@
 {
-  "name": "Dolichos pruriens", 
-  "Relationship": "Compare: RHUS; BELL.; HEP.; NIT-AC.; FAGOPYR.", 
+  "name": "Dolichos pruriens",
+  "Relationship": "Compare: RHUS; BELL.; HEP.; NIT-AC.; FAGOPYR.",
   "Modalities": [
-    "Worse: at night", 
-    "Worse: scratching", 
+    "Worse: at night",
+    "Worse: scratching",
     "Worse: right side"
-  ], 
-  "Common names": "Dolichos Mucuna Cowhage", 
+  ],
+  "Common names": "Dolichos Mucuna Cowhage",
   "symptoms": {
     "Abdomen": [
-      "Constipation, with intense itching; bloated abdomen", 
-      "Colic from getting feet wet", 
-      "Hemorrhoids, with burning sensation", 
-      "Swelling of liver", 
+      "Constipation, with intense itching",
+      "bloated abdomen",
+      "Colic from getting feet wet",
+      "Hemorrhoids, with burning sensation",
+      "Swelling of liver",
       "White stools"
-    ], 
+    ],
     "Skin": [
-      "Jaundice", 
-      "Yellow in spots; itching excessively at night", 
-      "Intense itching, with no swelling or rash; worse across shoulders, also about elbows and knees and hairy parts", 
+      "Jaundice",
+      "Yellow in spots",
+      "itching excessively at night",
+      "Intense itching, with no swelling or rash",
+      "worse across shoulders, also about elbows and knees and hairy parts",
       "Herpes zoster"
-    ], 
+    ],
     "Throat": [
-      "Pain in throat, worse swallowing, below right angle of jaw, as if splinter were imbedded vertically", 
+      "Pain in throat, worse swallowing, below right angle of jaw, as if splinter were imbedded vertically",
       "Pain in gums prevents sleep"
     ]
-  }, 
-  "details": "A right-sided medicine, with pronounced liver and skin symptoms. A general INTENSE ITCHING without eruption. Exalted nervous sensibility. Senile pruritus. Hemorrhoidal diathesis.", 
+  },
+  "details": "A right-sided medicine, with pronounced liver and skin symptoms. A general INTENSE ITCHING without eruption. Exalted nervous sensibility. Senile pruritus. Hemorrhoidal diathesis.",
   "dosage": "Sixth potency. Tincture, drop doses, in hemorrhoids."
 }

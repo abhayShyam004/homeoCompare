@@ -1,13 +1,14 @@
 {
-  "name": "Rosa damascena", 
-  "Relationship": "Compare: in hay fever: PHLEUM PRATENSE - Timothy grass - (Hay-fever with asthma; watery coryza, itching of nose and eyes; frequent sneezing, dyspnoea. Use 6-30 potency. Rabe.) SUCCIN. ACID; SABAD.; EUPH.; PSOR.; KALI-HYD.; NAPHT.", 
-  "Common names": "Damask Rose", 
+  "name": "Rosa damascena",
+  "Relationship": "Compare: in hay fever: PHLEUM PRATENSE - Timothy grass - (Hay-fever with asthma; watery coryza, itching of nose and eyes; frequent sneezing, dyspnoea. Use 6-30 potency. Rabe.) SUCCIN. ACID; SABAD.; EUPH.; PSOR.; KALI-HYD.; NAPHT.",
+  "Common names": "Damask Rose",
   "symptoms": {
     "Ears": [
-      "Eustachian catarrh", 
-      "Hardness of hearing; tinnitus"
+      "Eustachian catarrh",
+      "Hardness of hearing",
+      "tinnitus"
     ]
-  }, 
-  "details": "Useful in the beginning of hay-fever, with involvement of Eustachian tube.", 
+  },
+  "details": "Useful in the beginning of hay-fever, with involvement of Eustachian tube.",
   "dosage": "Lower potencies."
 }

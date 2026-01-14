@@ -2,44 +2,46 @@
   "symptoms": {
     "Heart": [
       "Constriction and pain in region of heart, suffocating feeling, palpitation, oppression and throbbing and pain in back extending to arms"
-    ], 
+    ],
     "Head": [
-      "Weekly headache", 
-      "Pain in head better by lying on painful side", 
-      "Benumbing headache mostly around ears", 
+      "Weekly headache",
+      "Pain in head better by lying on painful side",
+      "Benumbing headache mostly around ears",
       "Violent rush of blood to head with vertigo"
-    ], 
+    ],
     "Stomach": [
-      "Enlarged liver and spleen in children", 
-      "Belching with saliva and beating of heart", 
-      "Pancreatic disease; relieves burning pain in cancer of pancreas", 
+      "Enlarged liver and spleen in children",
+      "Belching with saliva and beating of heart",
+      "Pancreatic disease",
+      "relieves burning pain in cancer of pancreas",
       "Region of stomach distended"
-    ], 
+    ],
     "Urine": [
-      "Albuminuria, passes urine every hour", 
+      "Albuminuria, passes urine every hour",
       "Kidney region sensitive to pressure"
-    ], 
+    ],
     "Mind": [
-      "Desire for company", 
-      "Great depression", 
-      "Anger, anxiety", 
+      "Desire for company",
+      "Great depression",
+      "Anger, anxiety",
       "Confusion, delusions, illusions"
-    ], 
+    ],
     "Back": [
-      "Pain and stiffness near nape of neck", 
+      "Pain and stiffness near nape of neck",
       "Violent back ache, throbbing, drives out of bed"
-    ], 
+    ],
     "Female": [
-      "Offensive, bloody leucorrhoea", 
-      "Cancer of uterus; burning pain in uterus and vagina"
-    ], 
+      "Offensive, bloody leucorrhoea",
+      "Cancer of uterus",
+      "burning pain in uterus and vagina"
+    ],
     "Extremities": [
-      "Weariness and lameness of lower limbs", 
+      "Weariness and lameness of lower limbs",
       "Removes inflammatory products in veins of lower extremities"
     ]
-  }, 
-  "details": "Epilepsy with rush of blood to the head before attack; aura felt in region of heart; flying sensation. Complaints in fat women around climacteric. Chronic malaria. Infantile enlarged liver and spleen. NEPHRITIS, with great sensitiveness in kidney region. Complaints of drunkards after abstaining. (Carbon. sulph.) Fleshy women at climacteric, SLIGHTEST EMOTION CAUSING PALPITATION. Dysphonia, with feeble heart. CHILLINESS. Albuminuria. Dropsy. Affections of spleen and mesenteric glands. Haemoglobin and red corpuscles are low.", 
-  "Common names": "Arsenite of Lime", 
-  "name": "Calcarea arsenica", 
+  },
+  "details": "Epilepsy with rush of blood to the head before attack; aura felt in region of heart; flying sensation. Complaints in fat women around climacteric. Chronic malaria. Infantile enlarged liver and spleen. NEPHRITIS, with great sensitiveness in kidney region. Complaints of drunkards after abstaining. (Carbon. sulph.) Fleshy women at climacteric, SLIGHTEST EMOTION CAUSING PALPITATION. Dysphonia, with feeble heart. CHILLINESS. Albuminuria. Dropsy. Affections of spleen and mesenteric glands. Haemoglobin and red corpuscles are low.",
+  "Common names": "Arsenite of Lime",
+  "name": "Calcarea arsenica",
   "dosage": "Third trituration."
 }

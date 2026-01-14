@@ -1,36 +1,38 @@
 {
-  "name": "Thaspium aureum", 
-  "Relationship": "Compare: AGAR.; STRAM.; TARENT.; CICUTA; AETHUSA.", 
+  "name": "Thaspium aureum",
+  "Relationship": "Compare: AGAR.; STRAM.; TARENT.; CICUTA; AETHUSA.",
   "Modalities": [
     "Worse: during sleep"
-  ], 
-  "Common names": "Zizia Meadow Parsnip", 
+  ],
+  "Common names": "Zizia Meadow Parsnip",
   "symptoms": {
     "Head": [
       "Pressure on top, in right temple, associated with backache"
-    ], 
+    ],
     "Respiratory": [
-      "Dyspnoea", 
+      "Dyspnoea",
       "Dry cough, with stitches in chest"
-    ], 
+    ],
     "Mind": [
-      "Suicidal; depressed; laughing and weeping moods alternate"
-    ], 
+      "Suicidal",
+      "depressed",
+      "laughing and weeping moods alternate"
+    ],
     "Female": [
-      "Intermittent neuralgia of left ovary", 
+      "Intermittent neuralgia of left ovary",
       "Acrid, profuse leucorrhoea, with retarded menses"
-    ], 
+    ],
     "Extremities": [
-      "Chorea, especially during sleep", 
-      "Unusual tired feeling", 
-      "Fidgety legs", 
+      "Chorea, especially during sleep",
+      "Unusual tired feeling",
+      "Fidgety legs",
       "Lameness in arms and spasmodic twitching"
-    ], 
+    ],
     "Male": [
-      "Sexual power increased", 
+      "Sexual power increased",
       "Great lassitude following coitus"
     ]
-  }, 
-  "details": "Hysteria, epilepsy, chorea, hypochondriasis, come within the sphere of this remedy.", 
+  },
+  "details": "Hysteria, epilepsy, chorea, hypochondriasis, come within the sphere of this remedy.",
   "dosage": "Tincture, to third potency."
 }

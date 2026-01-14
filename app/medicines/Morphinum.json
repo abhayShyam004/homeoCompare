@@ -1,124 +1,143 @@
 {
   "symptoms": {
     "Urine": [
-      "Paresis of bladder", 
-      "Retention of prostatic hypertrophy", 
-      "Strangury", 
-      "Slow and difficult urination", 
+      "Paresis of bladder",
+      "Retention of prostatic hypertrophy",
+      "Strangury",
+      "Slow and difficult urination",
       "Uraemia, acute and chronic"
-    ], 
+    ],
     "Head": [
-      "Bursting pain; head drawn back", 
-      "Vertigo from the least movement of the head", 
+      "Bursting pain",
+      "head drawn back",
+      "Vertigo from the least movement of the head",
       "Headache, with sensation of being wound-up"
-    ], 
+    ],
     "Fever": [
-      "Icy coldness", 
-      "Chills", 
-      "Burning heat; profuse sweat"
-    ], 
+      "Icy coldness",
+      "Chills",
+      "Burning heat",
+      "profuse sweat"
+    ],
     "Stomach": [
-      "Nausea incessant and deathly, faintness, constant retching", 
-      "Nausea and vomiting on rising up", 
+      "Nausea incessant and deathly, faintness, constant retching",
+      "Nausea and vomiting on rising up",
       "Vomiting of green fluid"
-    ], 
+    ],
     "Abdomen": [
-      "Acute pain in abdomen and along spinal column", 
-      "Tympanitis", 
+      "Acute pain in abdomen and along spinal column",
+      "Tympanitis",
       "Distended"
-    ], 
+    ],
     "Mouth": [
-      "Tongue dry, brown violet in middle", 
-      "Loss of appetite, with aversion to meat", 
-      "Thirst", 
+      "Tongue dry, brown violet in middle",
+      "Loss of appetite, with aversion to meat",
+      "Thirst",
       "Very dry"
-    ], 
+    ],
     "Rectum": [
-      "Constipation; stools large, dry, knotty, with tendency to bruise and fissure", 
+      "Constipation",
+      "stools large, dry, knotty, with tendency to bruise and fissure",
       "Diarrhoea watery, brown, or black with horrible tenesmus"
-    ], 
+    ],
     "Respiratory": [
-      "Strangling cough, with viscid mucus sputum; thin, scanty, but sounds loose and abundant", 
-      "Cheyne-stokes respiration", 
-      "Dry, hard, teasing, exhausting cough, worse at night", 
-      "Faint and struggling for breath; diaphragmatic paralysis; hiccough; dyspnoea, paroxysmal, on first falling asleep", 
-      "Pain in middle of sternum", 
+      "Strangling cough, with viscid mucus sputum",
+      "thin, scanty, but sounds loose and abundant",
+      "Cheyne-stokes respiration",
+      "Dry, hard, teasing, exhausting cough, worse at night",
+      "Faint and struggling for breath",
+      "diaphragmatic paralysis",
+      "hiccough",
+      "dyspnoea, paroxysmal, on first falling asleep",
+      "Pain in middle of sternum",
       "Chest tight"
-    ], 
+    ],
     "Eyes": [
-      "Ptosis", 
-      "Delusion of vision on closing eyes", 
-      "Bluish, drooping lids", 
-      "Paresis of recti interni", 
-      "Look unsteady", 
-      "Pupils unequally contracted", 
-      "Staring, injected; diverging strabismus", 
+      "Ptosis",
+      "Delusion of vision on closing eyes",
+      "Bluish, drooping lids",
+      "Paresis of recti interni",
+      "Look unsteady",
+      "Pupils unequally contracted",
+      "Staring, injected",
+      "diverging strabismus",
       "Itching of eyes"
-    ], 
+    ],
     "Face": [
       "Dusky red or pallid lividity of face, lips, tongue, mouth or throat"
-    ], 
+    ],
     "Nose": [
-      "Sneezing in paroxysms", 
+      "Sneezing in paroxysms",
       "Itching and tingling on end of nose"
-    ], 
+    ],
     "Male": [
-      "Impotency", 
+      "Impotency",
       "Pain in right spermatic cord"
-    ], 
+    ],
     "Ears": [
-      "Left ear throbs painfully; better, heat", 
+      "Left ear throbs painfully",
+      "better, heat",
       "Seems to hear circulation all over body"
-    ], 
+    ],
     "Heart": [
-      "Pulse small, weak, dicrotic", 
-      "Alternation of tachycardia and bradycardia", 
+      "Pulse small, weak, dicrotic",
+      "Alternation of tachycardia and bradycardia",
       "Cardiac muscular tissue is intact, even if severely exhausted"
-    ], 
+    ],
     "Mind": [
-      "Dream-like state", 
-      "Shock induced by terror", 
-      "Irritable, fault-finding, hysterical", 
+      "Dream-like state",
+      "Shock induced by terror",
+      "Irritable, fault-finding, hysterical",
       "Profound depression"
-    ], 
+    ],
     "Back": [
-      "Aching across lumbosacral region; cannot walk erect", 
-      "Weakness of loins", 
+      "Aching across lumbosacral region",
+      "cannot walk erect",
+      "Weakness of loins",
       "Pain along spine"
-    ], 
+    ],
     "Sleep": [
-      "Sleepy, but cannot sleep", 
-      "Sleepless; restless sleep, with frequent startings", 
-      "Yawning, drowsy; prolonged, deep sleep"
-    ], 
+      "Sleepy, but cannot sleep",
+      "Sleepless",
+      "restless sleep, with frequent startings",
+      "Yawning, drowsy",
+      "prolonged, deep sleep"
+    ],
     "Skin": [
-      "Aggravation after sleep", 
-      "Nervous", 
-      "Restlessness and hyperaesthesia; trembling, twitching, jerking, convulsions", 
-      "Extremely susceptible to pain", 
-      "Delirium, melancholic in character", 
-      "Itching", 
-      "Pain causes twitching and jerking of limbs", 
-      "Livid; purple spots; zoster-like herpes", 
-      "Sore feeling all over", 
-      "Bed feels too hard", 
-      "Violent and sudden neuralgic pains and sudden fainting", 
-      "Neuralgias intensely painful; left supraorbital; right intercostal, better from heat; multiple neuritis", 
-      "Neuralgia after zoster", 
-      "Skin lost its elasticity", 
+      "Aggravation after sleep",
+      "Nervous",
+      "Restlessness and hyperaesthesia",
+      "trembling, twitching, jerking, convulsions",
+      "Extremely susceptible to pain",
+      "Delirium, melancholic in character",
+      "Itching",
+      "Pain causes twitching and jerking of limbs",
+      "Livid",
+      "purple spots",
+      "zoster-like herpes",
+      "Sore feeling all over",
+      "Bed feels too hard",
+      "Violent and sudden neuralgic pains and sudden fainting",
+      "Neuralgias intensely painful",
+      "left supraorbital",
+      "right intercostal, better from heat",
+      "multiple neuritis",
+      "Neuralgia after zoster",
+      "Skin lost its elasticity",
       "Urticaria appearing at climaxis"
-    ], 
+    ],
     "Throat": [
-      "Pharynx paralyzed, swallowing almost impossible; better hot drinks, worse solids", 
+      "Pharynx paralyzed, swallowing almost impossible",
+      "better hot drinks, worse solids",
       "Dry and constricted"
-    ], 
+    ],
     "Extremities": [
-      "Staggering gait", 
+      "Staggering gait",
       "Numbness"
     ]
-  }, 
-  "details": "Morphine bears the same relation to Opium as Atropine to Belladonna - i.e., represents its nervous side. It is less stimulating, less convulsant, and more decidedly hypnotic. Constipates less and affects contractility of the bladder more. It is less diaphoretic and more pruritic. Extreme susceptibility to pain; twitching; tympanites; much itching", 
-  "Common names": "An Alkaloid of Opium", 
-  "name": "Morphinum", 
+  },
+  "details": "Morphine bears the same relation to Opium as Atropine to Belladonna - i.e., represents its nervous side. It is less stimulating, less convulsant, and more decidedly hypnotic. Constipates less and affects contractility of the bladder more. It is less diaphoretic and more pruritic. Extreme susceptibility to pain; twitching; tympanites; much itching",
+  "Common names": "An Alkaloid of Opium",
+  "name": "Morphinum",
   "dosage": "Third to sixth trituration."
 }

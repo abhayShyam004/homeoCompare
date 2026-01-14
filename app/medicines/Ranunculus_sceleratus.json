@@ -1,39 +1,40 @@
 {
   "symptoms": {
     "Head": [
-      "Frightful dreams about corpses, serpents, battles, etc. fluent coryza, with sneezing and burning micturition", 
+      "Frightful dreams about corpses, serpents, battles, etc. fluent coryza, with sneezing and burning micturition",
       "Gnawing in one spot left of vertex"
-    ], 
+    ],
     "Abdomen": [
-      "Sensation of a plug behind umbilicus", 
-      "Pain over region of liver, with sensation as if diarrhoea would set in", 
-      "Pressure as of a plug behind right false ribs; worse, deep inspiration"
-    ], 
+      "Sensation of a plug behind umbilicus",
+      "Pain over region of liver, with sensation as if diarrhoea would set in",
+      "Pressure as of a plug behind right false ribs",
+      "worse, deep inspiration"
+    ],
     "Chest": [
-      "Bruised pain and weakness in the chest every evening", 
-      "Sore burning behind xiphoid cartilage", 
+      "Bruised pain and weakness in the chest every evening",
+      "Sore burning behind xiphoid cartilage",
       "Integument sensitive"
-    ], 
+    ],
     "Mouth": [
-      "Tongue mapped", 
-      "Denuded patches", 
-      "Teeth and gums sensitive", 
-      "Burning and rawness of tongue", 
+      "Tongue mapped",
+      "Denuded patches",
+      "Teeth and gums sensitive",
+      "Burning and rawness of tongue",
       "Mouth sore and raw"
-    ], 
+    ],
     "Skin": [
-      "Acrid exudation, which makes surrounding parts sore", 
+      "Acrid exudation, which makes surrounding parts sore",
       "Vesicular eruption, with tendency to form large blisters"
-    ], 
+    ],
     "Extremities": [
-      "Boring pain", 
-      "Sudden burning sticking in right toe", 
-      "Corns, with burning and soreness, especially when feet hang down", 
+      "Boring pain",
+      "Sudden burning sticking in right toe",
+      "Corns, with burning and soreness, especially when feet hang down",
       "Gout in fingers and toes"
     ]
-  }, 
-  "details": "Is more irritating than others of this botanical family, as seen in the skin symptoms. BORING, GNAWING PAIN very marked. PEMPHIGUS. Periodical complaints. Fainting with pain in stomach.", 
-  "Common names": "Marsh Buttercup", 
-  "name": "Ranunculus sceleratus", 
+  },
+  "details": "Is more irritating than others of this botanical family, as seen in the skin symptoms. BORING, GNAWING PAIN very marked. PEMPHIGUS. Periodical complaints. Fainting with pain in stomach.",
+  "Common names": "Marsh Buttercup",
+  "name": "Ranunculus sceleratus",
   "dosage": "First to third potency."
 }
