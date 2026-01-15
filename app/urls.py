@@ -16,5 +16,9 @@ urlpatterns = [
     path('admin-panel/medicine/<str:source>/<str:name>/', views.admin_medicine_detail, name='admin_medicine_detail'),
     path('admin-panel/medicine/save/', views.admin_medicine_save, name='admin_medicine_save'),
     path('api/track-search/', views.track_search_api, name='track_search_api'),
+    
+    # Feedback
+    path('submit-feedback/', views.submit_feedback, name='submit_feedback'),
+    path('admin-panel/feedback/', views.admin_feedback_list, name='admin_feedback'),
 ]
 

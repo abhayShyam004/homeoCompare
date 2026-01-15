@@ -29,3 +29,17 @@ class SearchQuery(models.Model):
     
     def __str__(self):
         return f"{', '.join(self.remedies)} - {self.category}"
+
+
+class Feedback(models.Model):
+    """Store user feedback/suggestions"""
+    email = models.EmailField()
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        ordering = ['-timestamp']
+        verbose_name_plural = 'Feedback'
+    
+    def __str__(self):
+        return f"{self.email} - {self.timestamp.strftime('%Y-%m-%d %H:%M')}"

@@ -14,7 +14,7 @@
     <style>
         :root {
             --sidebar-width: 280px;
-            --header-height: 64px;
+            --header-height: 85px;
             
             --primary: #6366f1;
             --primary-dark: #4f46e5;
@@ -317,7 +317,8 @@
         }
 
         .topbar {
-            height: var(--header-height);
+            height: 85px !important; /* Force override */
+            min-height: 85px;
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
             display: flex;
@@ -365,24 +366,55 @@
             margin-bottom: 2rem;
         }
 
-        @media (max-width: 1400px) {
-            .stats-row { grid-template-columns: repeat(3, 1fr); }
-        }
-
-        @media (max-width: 900px) {
-            .stats-row { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 600px) {
-            .stats-row { grid-template-columns: 1fr; }
-        }
-
         .stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             padding: 1.5rem;
             transition: all 0.2s;
+        }
+
+        /* Responsive: Matrix Layout (2x2 + 1) for Tablet/Mobile */
+        @media (max-width: 1400px) {
+            .stats-row { 
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            .stat-card:last-child { 
+                grid-column: span 2; /* The 5th card spans full width */
+            }
+        }
+
+        /* Very small screens: Stack all vertically if needed, or keep matrix? 
+           User asked for distinct matrix logic. A 2-col grid works on most phones.
+           Let's keep the matrix logic down to the smallest size unless it breaks.
+        */
+        /* Phone (< 480px) */
+        @media (max-width: 480px) {
+            /* Force Matrix Layout on Mobile */
+            .stats-row { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 0.5rem; /* Smaller gap */
+            }
+            .stat-card:last-child { 
+                grid-column: span 2; 
+            }
+            
+            /* Compact Cards for 2-col logic */
+            .stat-card {
+                padding: 1rem;
+            }
+            .stat-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 0.9rem;
+            }
+            .stat-value {
+                font-size: 1.5rem; /* Smaller number */
+                margin-bottom: 0.25rem;
+            }
+            .stat-label {
+                font-size: 0.75rem;
+            }
         }
 
         .stat-card:hover {
@@ -591,6 +623,79 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            width: 48px;
+            height: 48px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text-primary);
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--bg-hover);
+            color: var(--primary);
+        }
+
+        /* Sidebar Overlay */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 90;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Responsive: Tablet & Mobile (< 1200px) */
+        @media (max-width: 1200px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+                z-index: 1000;
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .main-wrapper {
+                margin-left: 0;
+                width: 100%;
+                overflow-x: hidden;
+            }
+            .topbar {
+                padding: 0 1.5rem;
+            }
+            .mobile-menu-btn {
+                display: flex;
+            }
+            .sidebar-overlay.active {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        /* Responsive: Phone (< 768px) */
+        @media (max-width: 768px) {
+            .topbar { padding: 0 1rem; }
+            .chart-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -625,7 +730,8 @@
     
     {% else %}
     <!-- Dashboard -->
-    <aside class="sidebar">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="{% url 'home' %}" class="logo">
                 <div class="logo-icon">Hc</div>
@@ -682,6 +788,9 @@
                     <i class="fas fa-circle"></i>
                     Live
                 </div>
+                <button class="mobile-menu-btn" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </header>
 
@@ -895,6 +1004,32 @@
                 visitorChart.update();
             });
         });
+
+        // Mobile Sidebar Toggle
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarLinks = document.querySelectorAll('.nav-link, .logout-btn');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            sidebarOverlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', toggleSidebar);
+            sidebarOverlay.addEventListener('click', toggleSidebar);
+            
+            // Close sidebar when clicking links
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                   if (window.innerWidth < 1200) {
+                       toggleSidebar();
+                   }
+                });
+            });
+        }
     </script>
     {% endif %}
 </body>

@@ -6,311 +6,259 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send Feedback – HomeoCompare</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --success-color: #2ecc71;
-            --warning-color: #f39c12;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-            --bg-color: #f5f7fa;
-            --text-color: #333;
-            --card-bg: white;
-            --header-bg: #2c3e50;
-            --input-bg: white;
+            /* Slate Theme Variables */
+            --primary: #059669;
+            --primary-dark: #047857;
+            --primary-light: #10b981;
+            --secondary: #0891b2;
+            
+            --bg-dark: #0f172a;
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --bg-hover: #334155;
+            
+            --text-white: #ffffff;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --border: #334155;
+            --border-light: #475569;
+            --radius: 8px;
+            --radius-lg: 12px;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        [data-theme="light"] {
+            --bg-dark: #f1f5f9;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-input: #f1f5f9;
+            --bg-hover: #e2e8f0;
+            
+            --text-white: #0f172a;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            
+            --border: #e2e8f0;
+            --border-light: #cbd5e1;
+            
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            padding: 0;
-            margin: 0;
+            color: var(--text-primary);
+            background-color: var(--bg-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            background-color: var(--header-bg);
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-            box-shadow: var(--box-shadow);
-            position: relative;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
+            padding: 2rem 1.5rem;
             flex: 1;
         }
 
-        /* Default h1 for desktop */
-        h1.desktop {
-            display: block;
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 1.25rem 0;
+            margin-bottom: 0;
+            box-shadow: none;
         }
 
-        /* h1 for mobile */
-        h1.mobile {
-            display: none;
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        @media (max-width: 600px) {
-            h1.desktop {
-                display: none;
-            }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-            h1.mobile {
-                display: block;
-            }
+        .home-button {
+            text-decoration: none;
+            background: var(--primary);
+            color: white;
+            width: 40px; 
+            height: 40px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            border: none;
+        }
+        
+        .home-button:hover { transform: translateY(-2px); }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+            text-align: center;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .page-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-white), var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .theme-toggle {
-            position: absolute;
-            right: 2.5rem;
-            top: 30%;
-            transform: translateY(-50%);
-            background: var(--primary-color);
-            color: white;
-            border: none;
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
             padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
+            border-radius: var(--radius);
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        @media (max-width: 600px) {
-            .theme-toggle {
-                right: 1rem;
-                top: 0.4rem;
-                transform: none;
-                padding: 0.4rem 0.8rem;
-                font-size: 0.9rem;
-            }
+            transition: all 0.2s;
+            font-size: 0.85rem;
+            font-weight: 500;
         }
 
         .theme-toggle:hover {
-            background: var(--accent-color);
-        }
-
-        .home-button {
-            background: none;
-            color: white;
-            border: none;
-            padding: 0;
-            font-size: 1.5rem;
-            font-weight: 560;
-            cursor: pointer;
-            position: absolute;
-            top: 14%;
-            left: 2.8rem;
-            z-index: 1001;
-            transition: color 0.3s ease;
-        }
-
-        @media (max-width: 600px) {
-            .home-button {
-                left: 1rem;
-                top: 0.2rem;
-                transform: none;
-                font-size: 1.2rem !important;
-            }
-        }
-
-        .home-button:hover {
-            color: var(--accent-color);
-            /* red tone */
+            background: var(--bg-hover);
+            color: var(--text-primary);
         }
 
         form {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 2rem;
-            margin-bottom: 2rem;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
         }
 
         label {
             display: block;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             margin-bottom: 0.5rem;
-            color: var(--primary-color);
+            color: var(--text-secondary);
+            font-weight: 500;
         }
 
         input[type="email"],
         textarea {
             width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: var(--border-radius);
+            padding: 0.8rem 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
             font-size: 1rem;
-            background-color: var(--input-bg);
-            transition: var(--transition);
-            color: var(--input-text-color);
+            background-color: var(--bg-input);
+            color: var(--text-primary);
+            transition: all 0.2s;
+            font-family: inherit;
         }
 
         input[type="email"]:focus,
         textarea:focus {
             outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
-            color: var(--input-text-color);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 150px;
-            color: var(--input-text-color);
-        }
-
-        [data-theme="dark"] {
-            --input-text-color: #fff;
-        }
-
-        [data-theme="light"] {
-            --input-text-color: #000;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
         }
 
         button[type="submit"] {
             display: inline-block;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: var(--primary);
             color: white;
             border: none;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            border-radius: 50px;
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius);
             cursor: pointer;
-            transition: var(--transition);
-            width: auto;
+            transition: all 0.2s;
+            width: 100%;
         }
 
         button[type="submit"]:hover {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            background: var(--primary-dark);
+            transform: translateY(-1px);
         }
 
         footer {
             text-align: center;
             padding: 2rem 0;
-            color: #777;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            background: var(--bg-card);
+            margin-top: auto;
             font-size: 0.9rem;
-            margin-top: 2rem;
-            border-top: 1px solid #eee;
         }
 
-        [data-theme="dark"] {
-            --primary-color: #4a89dc;
-            --secondary-color: #3b7dd8;
-            --accent-color: #e74c3c;
-            --light-color: #2c3e50;
-            --dark-color: #ecf0f1;
-            --bg-color: #121a24;
-            --card-bg: #1e2a3a;
-            --text-color: #e0e6ed;
-            --border-color: #2d3e50;
-            --header-bg: #0d1520;
-            --input-bg: #1a2634;
-        }
-
-        [data-theme="dark"] header {
-            background-color: var(--header-bg);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        [data-theme="dark"] form {
-            border: 1px solid var(--border-color);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            form {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .toggle-text {
-                display: none;
-            }
-
-            .theme-toggle {
-                width: 2.5rem;
-                justify-content: center;
-            }
-
-            .home-button {
-                padding: 0.4rem 0.8rem;
-                font-size: 1rem;
-            }
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem 1rem; }
+            form { padding: 1.5rem; }
+            .toggle-text { display: none; }
         }
     </style>
 </head>
 
-<body>
     <header>
         <div class="header-content">
-            <button onclick="window.location.href='/'" class="home-button">
-                <span class="home">Hc</span>
-            </button>
-
-            <h1 class="desktop">Send Us Your Suggestions</h1>
-            <h1 class="mobile">Send Us Your <br> Feedback</h1>
-            <button class="theme-toggle" aria-label="Toggle Theme">
-                <i class="fas fa-sun"></i>
+            <div class="header-left">
+                <a href="/" class="home-button">Hc</a>
+                <h1>Feedback</h1>
+            </div>
+            
+            <button class="theme-toggle" id="themeToggle">
                 <span class="toggle-text">Light Mode</span>
+                <i class="fas fa-moon"></i>
             </button>
         </div>
     </header>
 
     <div class="container">
-        <form action="https://formspree.io/f/mjkrorjy" method="POST">
+        <div class="page-title">
+            <h2>Send Suggestions</h2>
+            <p style="color:var(--text-secondary)">Help us improve HomeoCompare</p>
+        </div>
+
+        <form action="{% url 'submit_feedback' %}" method="POST">
+            {% csrf_token %}
+            <!-- Hidden inputs preserved for Formspree if proxied, but handled in view -->
             <input type="hidden" name="_next" value="{% url 'thanks' %}">
             <input type="hidden" name="_subject" value="New Suggestion from HomeoCompare users">
 
             <label for="email">Your email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="name@example.com">
 
             <label for="message">Your suggestion:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us what you think..."></textarea>
 
             <button type="submit">Send Feedback</button>
         </form>
@@ -325,21 +273,22 @@
         const toggleText = themeToggle.querySelector('.toggle-text');
         const toggleIcon = themeToggle.querySelector('i');
 
+        // Initial check is implicit in CSS defaults (root: dark)
+        // If user wants to toggle:
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                document.documentElement.removeAttribute('data-theme');
-                toggleText.textContent = 'Dark Mode';
+            if (currentTheme === 'light') {
+                document.documentElement.removeAttribute('data-theme'); // Go back to root (Dark)
+                toggleText.textContent = 'Light Mode';
                 toggleIcon.classList.remove('fa-sun');
                 toggleIcon.classList.add('fa-moon');
             } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                toggleText.textContent = 'Light Mode';
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggleText.textContent = 'Dark Mode';
                 toggleIcon.classList.remove('fa-moon');
                 toggleIcon.classList.add('fa-sun');
             }
         });
     </script>
-</body>
 
 </html>

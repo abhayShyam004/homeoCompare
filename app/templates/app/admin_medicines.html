@@ -132,7 +132,8 @@
             overflow-y: auto;
         }
         .topbar {
-            height: 64px;
+            height: 85px !important;
+            min-height: 85px;
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
             display: flex;
@@ -211,6 +212,7 @@
             transition: all 0.15s;
         }
         .alpha-btn:hover { background: var(--primary); color: white; }
+        .alpha-btn.active { background: var(--primary); color: white; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3); }
         .alpha-btn.disabled { opacity: 0.3; cursor: not-allowed; }
 
         /* Medicine Grid */
@@ -270,10 +272,41 @@
 
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none; width: 48px; height: 48px;
+            background: var(--bg-input); border: 1px solid var(--border);
+            border-radius: var(--radius); color: var(--text-primary);
+            align-items: center; justify-content: center;
+            font-size: 1.2rem; cursor: pointer; transition: all 0.2s;
+        }
+        .mobile-menu-btn:hover { background: var(--bg-hover); color: var(--primary); }
+
+        .sidebar-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6); z-index: 90; display: none;
+            opacity: 0; transition: opacity 0.3s ease; backdrop-filter: blur(2px);
+        }
+
+        @media (max-width: 1200px) {
+            .sidebar { transform: translateX(-100%); transition: transform 0.3s ease; box-shadow: 2px 0 10px rgba(0,0,0,0.5); z-index: 1000; }
+            .sidebar.active { transform: translateX(0); }
+            .main-wrapper { margin-left: 0; width: 100%; overflow-x: hidden; }
+            .topbar { padding: 0 1.5rem; }
+            .mobile-menu-btn { display: flex; }
+            .sidebar-overlay.active { display: block; opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .topbar { padding: 0 1rem; }
+            .medicine-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-    <aside class="sidebar">
+<body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="{% url 'home' %}" class="logo">
                 <div class="logo-icon">Hc</div>
@@ -289,6 +322,13 @@
                 <a href="{% url 'admin_panel' %}" class="nav-link">
                     <i class="fas fa-chart-line"></i>
                     <span>Analytics</span>
+                </a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Management</div>
+                <a href="{% url 'admin_feedback' %}" class="nav-link">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>User Feedback</span>
                 </a>
             </div>
             <div class="nav-section">
@@ -321,7 +361,10 @@
     <div class="main-wrapper">
         <header class="topbar">
             <h1 class="topbar-title">{{ source_title }}</h1>
-            <span class="topbar-badge">{{ total_count }} Medicines</span>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span class="topbar-badge">{{ total_count }} Medicines</span>
+                <button class="mobile-menu-btn" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+            </div>
         </header>
 
         <main class="main-content">
@@ -335,6 +378,7 @@
 
             <!-- Alphabet -->
             <div class="alphabet-bar">
+                <button class="alpha-btn active" data-letter="all">All</button>
                 {% for letter, meds in by_letter.items %}
                 <button class="alpha-btn" data-letter="{{ letter }}">{{ letter }}</button>
                 {% endfor %}
@@ -363,30 +407,82 @@
     </div>
 
     <script>
-        // Search
+        // Alphabet Filter
+        const alphaBtns = document.querySelectorAll('.alpha-btn');
+        const sections = document.querySelectorAll('.letter-section');
+        
+        alphaBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active state
+                alphaBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const letter = this.dataset.letter;
+                
+                if (letter === 'all') {
+                    sections.forEach(sec => sec.style.display = '');
+                } else {
+                    sections.forEach(sec => {
+                        if (sec.id === 'letter-' + letter) {
+                            sec.style.display = '';
+                        } else {
+                            sec.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Reset search if filter is used (optional, but good for UX)
+                document.getElementById('searchInput').value = '';
+                document.querySelectorAll('.medicine-card').forEach(c => c.style.display = '');
+            });
+        });
+
+        // Search (Integrated to reset filter or work with it)
         document.getElementById('searchInput').addEventListener('input', function() {
             const q = this.value.toLowerCase();
+            
+            // If searching, effectively reset alphabet filter to 'All' visually (optional choice)
+            // Or just search within currently visible? 
+            // Better UX: Search searches EVERYTHING. So reset alphabet active state to 'All'
+            
+            if (q.length > 0) {
+                alphaBtns.forEach(b => b.classList.remove('active'));
+                document.querySelector('.alpha-btn[data-letter="all"]').classList.add('active');
+                sections.forEach(sec => sec.style.display = ''); // Show all sections so we can search inside them
+            }
+
             document.querySelectorAll('.medicine-card').forEach(card => {
                 const name = card.dataset.name;
                 card.style.display = name.includes(q) ? '' : 'none';
             });
+            
             // Hide empty sections
-            document.querySelectorAll('.letter-section').forEach(sec => {
-                const visibleCards = sec.querySelectorAll('.medicine-card[style=""], .medicine-card:not([style])');
+            sections.forEach(sec => {
+                const visibleCards = sec.querySelectorAll('.medicine-card:not([style*="display: none"])');
                 sec.style.display = visibleCards.length ? '' : 'none';
             });
         });
 
-        // Alphabet jump
-        document.querySelectorAll('.alpha-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const letter = this.dataset.letter;
-                const section = document.getElementById('letter-' + letter);
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        // Toggle Sidebar
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        const toggle = document.getElementById('sidebarToggle');
+        
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+
+        if(toggle) {
+            toggle.addEventListener('click', toggleSidebar);
+            overlay.addEventListener('click', toggleSidebar);
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if(window.innerWidth < 1200) toggleSidebar();
+                });
             });
-        });
+        }
     </script>
 </body>
 </html>

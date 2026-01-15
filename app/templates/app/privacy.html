@@ -8,250 +8,215 @@
 
     <title>Privacy Policy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --success-color: #2ecc71;
-            --warning-color: #f39c12;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-            --bg-color: #f5f7fa;
-            --text-color: #333;
-            --card-bg: white;
-            --header-bg: #2c3e50;
-            --input-bg: white;
+            /* Slate Theme Variables */
+            --primary: #059669;
+            --primary-dark: #047857;
+            --primary-light: #10b981;
+            --secondary: #0891b2;
+            
+            --bg-dark: #0f172a;
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --bg-hover: #334155;
+            
+            --text-white: #ffffff;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --border: #334155;
+            --border-light: #475569;
+            --radius: 8px;
+            --radius-lg: 12px;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        [data-theme="light"] {
+            --bg-dark: #f1f5f9;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-input: #f1f5f9;
+            --bg-hover: #e2e8f0;
+            
+            --text-white: #0f172a;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            
+            --border: #e2e8f0;
+            --border-light: #cbd5e1;
+            
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            color: var(--text-primary);
+            background-color: var(--bg-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 1.5rem;
-        }
-
-        header {
-            background-color: var(--header-bg);
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            box-shadow: var(--box-shadow);
-            position: relative;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-        }
-
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            margin-bottom: 0.5rem;
-            margin-top: 1rem;
+            padding: 2rem 1.5rem;
             flex: 1;
         }
 
-        h1.desktop {
-            display: block;
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 1.25rem 0;
+            margin-bottom: 0;
+            box-shadow: none;
         }
 
-        h1.mobile {
-            display: none;
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .subtitle {
-            font-size: clamp(0.9rem, 3vw, 1.1rem);
-            color: var(--light-color);
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .theme-toggle {
-            position: absolute;
-            right: -11rem;
-            top: 6%;
-            transform: translateY(-50%);
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.5rem 0.9rem;
-            border-radius: var(--border-radius);
-            cursor: pointer;
+        .header-left {
             display: flex;
             align-items: center;
-            gap: 0.4rem;
-            transition: var(--transition);
-            font-size: 0.9rem;
+            gap: 1rem;
         }
-
-        .theme-toggle:hover {
-            background: var(--accent-color);
+        
+        .header-title-group {
+            display: flex;
+            flex-direction: column;
         }
 
         .home-button {
-            background: none;
+            text-decoration: none;
+            background: var(--primary);
             color: white;
+            width: 40px; 
+            height: 40px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.2s;
             border: none;
-            padding: 0;
-            font-size: 1.5rem;
-            font-weight: 560;
+        }
+        
+        .home-button:hover { transform: translateY(-2px); }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .theme-toggle {
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
             cursor: pointer;
-            position: absolute;
-            top: -3%;
-            left: -12rem;
-            z-index: 1001;
-            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .theme-toggle:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
         }
 
         .card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 1.5rem;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
             margin-bottom: 1.5rem;
+        }
+        
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-white);
         }
 
         .card p {
             margin-bottom: 1rem;
-            font-size: clamp(0.9rem, 3vw, 1rem);
+            font-size: 1rem;
+            color: var(--text-secondary);
         }
 
         .card a {
-            color: var(--accent-color);
+            color: var(--primary-light);
             text-decoration: none;
+            font-weight: 500;
         }
 
         .card a:hover {
             text-decoration: underline;
+            color: var(--primary);
         }
 
         footer {
             text-align: center;
-            padding: 1.5rem 0;
-            color: #777;
-            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
-            margin-top: 1.5rem;
-            border-top: 1px solid #eee;
-        }
-
-        [data-theme="dark"] {
-            --primary-color: #4a89dc;
-            --secondary-color: #3b7dd8;
-            --accent-color: #e74c3c;
-            --light-color: #2c3e50;
-            --dark-color: #ecf0f1;
-            --bg-color: #121a24;
-            --card-bg: #1e2a3a;
-            --text-color: #e0e6ed;
-            --border-color: #2d3e50;
-            --header-bg: #0d1520;
-            --input-bg: #1a2634;
-        }
-
-        [data-theme="dark"] header {
-            background-color: var(--header-bg);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        [data-theme="dark"] .card {
-            border: 1px solid var(--border-color);
-        }
-
-        [data-theme="dark"] .subtitle {
-            color: #a0d2ff;
-            opacity: 0.95;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-            font-weight: 350;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: clamp(1.5rem, 4.5vw, 1.8rem);
-                margin-top: 2rem;
-            }
-
-            .card {
-                padding: 1rem;
-            }
+            padding: 2rem 0;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            background: var(--bg-card);
+            margin-top: auto;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 600px) {
-            h1.desktop {
-                display: none;
-            }
-
-            h1.mobile {
-                display: block;
-            }
-
-            .home-button {
-                left: 1rem;
-                top: 0.2rem;
-                transform: none;
-                font-size: 1.2rem !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .toggle-text {
-                display: none;
-            }
-
-            .theme-toggle {
-                width: 2rem;
-                padding: 0.3rem;
-                justify-content: center;
-                right: 1rem;
-            }
-
-            .home-button {
-                padding: 0.3rem 0.6rem;
-                font-size: clamp(0.9rem, 2.5vw, 1rem);
-                left: 1rem;
-                top: -10%;
-            }
+            .container { padding: 1.5rem 1rem; }
+            .card { padding: 1.5rem; }
+            .toggle-text { display: none; }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <button class="home-button" onclick="window.location.href='/'">Hc</button>
-                <div>
-                    <h1 class="desktop">Privacy Policy</h1>
-                    <h1 class="mobile">Privacy Policy</h1>
-                    <p class="subtitle">Just Like Your Health, Your Privacy Matters</p>
+        <div class="header-content">
+            <div class="header-left">
+                <a href="/" class="home-button">Hc</a>
+                <div class="header-title-group">
+                    <h1>Privacy Policy</h1>
+                    <span class="subtitle">Just Like Your Health, Your Privacy Matters</span>
                 </div>
-                <button id="themeToggle" class="theme-toggle"></button>
             </div>
+            
+            <button class="theme-toggle" id="themeToggle">
+                <span class="toggle-text">Light Mode</span>
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
     <div class="container">
@@ -272,24 +237,23 @@
         const themeToggle = document.getElementById('themeToggle');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-        function initTheme() {
-            const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            themeToggle.innerHTML = currentTheme === 'dark'
-                ? '<i class="fas fa-sun"></i> <span class="toggle-text">Light Mode</span>'
-                : '<i class="fas fa-moon"></i> <span class="toggle-text">Dark Mode</span>';
-        }
-
+        const themeToggle = document.getElementById('themeToggle');
+        const toggleText = themeToggle.querySelector('.toggle-text');
+        
+        // Initial check is implicit in CSS defaults (root: dark)
+        
         themeToggle.addEventListener('click', () => {
-            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeToggle.innerHTML = newTheme === 'dark'
-                ? '<i class="fas fa-sun"></i> <span class="toggle-text">Light Mode</span>'
-                : '<i class="fas fa-moon"></i> <span class="toggle-text">Dark Mode</span>';
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                toggleText.textContent = 'Light Mode';
+                themeToggle.querySelector('i').className = 'fas fa-moon';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggleText.textContent = 'Dark Mode';
+                themeToggle.querySelector('i').className = 'fas fa-sun';
+            }
         });
-
-        initTheme();
     </script>
 </body>
 

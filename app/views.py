@@ -320,7 +320,7 @@ def get_admin_credentials():
     import os
     from dotenv import load_dotenv
     env_path = Path(os.path.dirname(__file__)).parent / '.env'
-    load_dotenv(env_path)
+    load_dotenv(env_path, override=True)
     return {
         'username': os.environ.get('ADMIN_USERNAME', ''),
         'password_hash': os.environ.get('ADMIN_PASSWORD_HASH', ''),
@@ -749,3 +749,62 @@ def admin_medicine_save(request):
         
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+
+
+# === FEEDBACK SYSTEM ===
+
+def submit_feedback(request):
+    """Handle feedback submission: Save to DB + Proxy to Formspree"""
+    from .models import Feedback
+    import urllib.request
+    import urllib.parse
+    from django.shortcuts import redirect
+    
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        
+        # 1. Save to Database
+        if email and message:
+            Feedback.objects.create(email=email, message=message)
+            
+        # 2. Proxy to Formspree
+        # We need to forward all POST data (including hidden fields like _next, _subject)
+        formspree_url = "https://formspree.io/f/mjkrorjy"
+        
+        try:
+            # Convert QueryDict to standard dict for urllib
+            data = {k: v for k, v in request.POST.items()}
+            data_encoded = urllib.parse.urlencode(data).encode('utf-8')
+            
+            req = urllib.request.Request(formspree_url, data=data_encoded, method='POST')
+            req.add_header('Referer', request.build_absolute_uri()) # Formspree checks referer
+            req.add_header('User-Agent', request.META.get('HTTP_USER_AGENT', 'Django Proxy'))
+            
+            with urllib.request.urlopen(req) as response:
+                # Formspree usually redirects or returns JSON. 
+                # Since we want to control the flow, we ignore their response content
+                # and do our own redirect.
+                pass
+                
+        except Exception as e:
+            print(f"Formspree proxy error: {e}")
+            # Even if email fails, we saved to DB, so we can consider it a success 
+            # or log the error. We shouldn't block the user.
+            
+        return redirect('thanks')
+        
+    return redirect('suggestion')
+
+
+@require_admin
+def admin_feedback_list(request):
+    """List all feedback messages"""
+    from .models import Feedback
+    
+    feedback_items = Feedback.objects.all()
+    
+    context = {
+        'feedback_items': feedback_items
+    }
+    return render(request, 'app/admin_feedback.html', context)
