@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Capparis coriaccea", 
-  "details": "Polyuria, glandular affections, mucous diarrhoea; influenza."
+  "symptoms": {
+    "details": "Polyuria, glandular affections, mucous diarrhoea; influenza."
+  },
+  "name": "Capparis coriaccea"
 }

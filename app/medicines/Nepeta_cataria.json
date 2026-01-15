@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Nepeta cataria", 
-  "details": "Catnip to break up a cold; infantile colic; hysteria."
+  "symptoms": {
+    "details": "Catnip to break up a cold; infantile colic; hysteria."
+  },
+  "name": "Nepeta cataria"
 }

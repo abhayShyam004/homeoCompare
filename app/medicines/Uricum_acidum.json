@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Uricum acidum", 
-  "details": "Gout, gouty eczema, rheumatism, lipoma."
+  "symptoms": {
+    "details": "Gout, gouty eczema, rheumatism, lipoma."
+  },
+  "name": "Uricum acidum"
 }

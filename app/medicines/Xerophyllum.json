@@ -1,14 +1,5 @@
 {
   "name": "Xerophyllum",
-  "Relationship": "Compare: RHUS; ANACARD.; GRINDELIA.",
-  "Modalities": [
-    "Worse: application of cold water",
-    "Worse: in afternoon and evening",
-    "Better: application of hot water",
-    "Better: in morning",
-    "Better: moving affected part"
-  ],
-  "Common names": "Tamalpais Lily. Basket Grass Flower",
   "symptoms": {
     "Mind": [
       "Dull, cannot concentrate mind for study",
@@ -92,8 +83,17 @@
       "Pain in knees",
       "Muscular lameness, trembling",
       "Limbs feel stiff"
-    ]
-  },
-  "details": "Should prove curative in eczematous conditions, poison-oak, early typhoid states, etc. Dysmenorrhoea and skin symptoms.",
-  "dosage": "Sixth potency or higher."
+    ],
+    "Relationship": "Compare: RHUS; ANACARD.; GRINDELIA.",
+    "Modalities": [
+      "Worse: application of cold water",
+      "Worse: in afternoon and evening",
+      "Better: application of hot water",
+      "Better: in morning",
+      "Better: moving affected part"
+    ],
+    "Common names": "Tamalpais Lily. Basket Grass Flower",
+    "details": "Should prove curative in eczematous conditions, poison-oak, early typhoid states, etc. Dysmenorrhoea and skin symptoms.",
+    "dosage": "Sixth potency or higher."
+  }
 }

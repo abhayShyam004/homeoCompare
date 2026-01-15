@@ -1,7 +1,5 @@
 {
   "name": "Eupion",
-  "Relationship": "Kreosote.; Graph.; Lach.",
-  "Common names": "Wood-tar distillation",
   "symptoms": {
     "Head": [
       "Heat at vertex",
@@ -34,8 +32,10 @@
     "Extremities": [
       "Cramps in the calves",
       "worse at night"
-    ]
-  },
-  "details": "Marked female symptoms, and backache. A remedy for UTERINE DISPLACEMENTS. Pain in back, followed by a bland leucorrhoea. Menses too early and copious; flow thin. INTENSE SWEAT FROM SLIGHTEST EXERTION. Disgusting dreams. Sensation as if whole body were made of jelly.",
-  "dosage": "Third potency."
+    ],
+    "Relationship": "Kreosote.; Graph.; Lach.",
+    "Common names": "Wood-tar distillation",
+    "details": "Marked female symptoms, and backache. A remedy for UTERINE DISPLACEMENTS. Pain in back, followed by a bland leucorrhoea. Menses too early and copious; flow thin. INTENSE SWEAT FROM SLIGHTEST EXERTION. Disgusting dreams. Sensation as if whole body were made of jelly.",
+    "dosage": "Third potency."
+  }
 }

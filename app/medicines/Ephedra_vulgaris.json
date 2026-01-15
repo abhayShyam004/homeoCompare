@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ephedra vulgaris", 
-  "details": "Teamster's Tea - in exophthalmic goitre; eyes feel pushed out with TUMULTUOUS action of heart."
+  "symptoms": {
+    "details": "Teamster's Tea - in exophthalmic goitre; eyes feel pushed out with TUMULTUOUS action of heart."
+  },
+  "name": "Ephedra vulgaris"
 }

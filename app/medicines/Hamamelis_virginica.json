@@ -1,11 +1,5 @@
 {
   "name": "Hamamelis virginica",
-  "Relationship": "Compare in hemorrhoids: CALC. FLUOR.; ALOE; MUR-AC. in varicose veins. MANGIFERA INDICA. Compare: ARNICA, CALEN.; TRILLIUM; BELLIS; SULPH-AC.; PULSATILLA. Antidote: ARNICA. Complementary: FERRUM.",
-  "Modalities": [
-    "Worse: warm",
-    "Worse: moist air"
-  ],
-  "Common names": "Witch-hazel",
   "symptoms": {
     "Eyes": [
       "Painful weakness",
@@ -96,8 +90,14 @@
       "Pain in testicles",
       "Epididymitis",
       "Orchitis"
-    ]
-  },
-  "details": "Venous congestion, hemorrhages, varicose veins, and hemorrhoids, with BRUISED SORENESS OF AFFECTED PARTS, seem to be the special sphere of this remedy. Acts upon the coats of the veins causing relaxation with consequent engorgement. Passive venous hemorrhages from any part. Great value in open, painful wounds, with weakness from loss of blood. After operations, super cedes the use of morphia (Helmuth).",
-  "dosage": "Tincture, to sixth attenuation. Distilled extract locally."
+    ],
+    "Relationship": "Compare in hemorrhoids: CALC. FLUOR.; ALOE; MUR-AC. in varicose veins. MANGIFERA INDICA. Compare: ARNICA, CALEN.; TRILLIUM; BELLIS; SULPH-AC.; PULSATILLA. Antidote: ARNICA. Complementary: FERRUM.",
+    "Modalities": [
+      "Worse: warm",
+      "Worse: moist air"
+    ],
+    "Common names": "Witch-hazel",
+    "details": "Venous congestion, hemorrhages, varicose veins, and hemorrhoids, with BRUISED SORENESS OF AFFECTED PARTS, seem to be the special sphere of this remedy. Acts upon the coats of the veins causing relaxation with consequent engorgement. Passive venous hemorrhages from any part. Great value in open, painful wounds, with weakness from loss of blood. After operations, super cedes the use of morphia (Helmuth).",
+    "dosage": "Tincture, to sixth attenuation. Distilled extract locally."
+  }
 }

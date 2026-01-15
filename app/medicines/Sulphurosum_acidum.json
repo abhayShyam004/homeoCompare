@@ -1,31 +1,31 @@
 {
   "symptoms": {
     "Head": [
-      "Ringing in ears", 
-      "Anxious, furious, disposed to fight", 
+      "Ringing in ears",
+      "Anxious, furious, disposed to fight",
       "Headache better by vomiting"
-    ], 
+    ],
     "Respiratory": [
-      "Hoarseness, constriction of chest", 
-      "Difficult breathing", 
+      "Hoarseness, constriction of chest",
+      "Difficult breathing",
       "Persistent choking cough with copious expectoration"
-    ], 
+    ],
     "Stomach": [
-      "Loss of appetite", 
+      "Loss of appetite",
       "Obstinate constipation"
-    ], 
+    ],
     "Mouth": [
-      "Tongue red or bluish-red", 
-      "Coated", 
+      "Tongue red or bluish-red",
+      "Coated",
       "Ulcerative inflammation of mouth"
-    ], 
+    ],
     "Female": [
-      "Debility", 
+      "Debility",
       "Fluor albus"
-    ]
-  }, 
-  "details": "SULPHUROUS ACID, (tonsillitis (as a spray), acne rosacea, ULCERATIVE STOMATITIS, pityriasis versicolor).", 
-  "Common names": "Sulphurous Acid, H2SO3", 
-  "name": "Sulphurosum acidum", 
-  "dosage": "As a spray in tonsillitis. According to Ringer, ten to fifteen minims taken ten minutes before each meal will remedy pyrosis and prevent fermentation and flatulence. It also removes thrus. Homeopathically, third attenuation."
+    ],
+    "details": "SULPHUROUS ACID, (tonsillitis (as a spray), acne rosacea, ULCERATIVE STOMATITIS, pityriasis versicolor).",
+    "Common names": "Sulphurous Acid, H2SO3",
+    "dosage": "As a spray in tonsillitis. According to Ringer, ten to fifteen minims taken ten minutes before each meal will remedy pyrosis and prevent fermentation and flatulence. It also removes thrus. Homeopathically, third attenuation."
+  },
+  "name": "Sulphurosum acidum"
 }

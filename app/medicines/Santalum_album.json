@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Santalum album", 
-  "details": "Aching in kidneys."
+  "symptoms": {
+    "details": "Aching in kidneys."
+  },
+  "name": "Santalum album"
 }

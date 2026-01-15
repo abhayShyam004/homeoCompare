@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Pedicularis canadensis", 
-  "details": "Symptoms of locomotor ataxia; spinal irritation."
+  "symptoms": {
+    "details": "Symptoms of locomotor ataxia; spinal irritation."
+  },
+  "name": "Pedicularis canadensis"
 }

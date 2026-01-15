@@ -1,10 +1,5 @@
 {
   "name": "Bothrops lanciolatus",
-  "Relationship": "Compare: Toxicophis. Mocassin Snake (pain and fever recur annually, after bite from this snake, and sometimes change location with disappearance of first symptoms, An unusual dryness of skin follows the bite. Oedematous swellings and periodical neuralgia. Pain travels from one part to another.) Other snake poisons, notably Lachesis.; Trachinus, - Sting fish (intolerable pains, swelling acute blood poisoning, gangrene).",
-  "Modalities": [
-    "Worse: right side"
-  ],
-  "Common names": "Lachesis Lanciolatus Yellow Viper",
   "symptoms": {
     "Eyes": [
       "Amaurosis",
@@ -34,8 +29,13 @@
     "Throat": [
       "Red, dry, constricted",
       "swallowing difficult, cannot pass liquids"
-    ]
-  },
-  "details": "Its venom is most coagulating, (also Lachesis). We should expect to find under these remedies the symptomatology of thrombosis, also thrombotic phenomena, as hemiplegia, aphasia, inability to articulate. (Linn J. Boyd.) Broken-down, hemorrhagic constitutions; septic states. Great lassitude and sluggishness; Hemorrhages from every orifice of the body; black spots. Hemiplegia with aphasia. Inability to articulate, without any affection of the tongue. Nervous trembling. Pain in right big toe. Diagonal course of symptoms. Pulmonary congestion.",
-  "dosage": "Sixth to thirtieth potency."
+    ],
+    "Relationship": "Compare: Toxicophis. Mocassin Snake (pain and fever recur annually, after bite from this snake, and sometimes change location with disappearance of first symptoms, An unusual dryness of skin follows the bite. Oedematous swellings and periodical neuralgia. Pain travels from one part to another.) Other snake poisons, notably Lachesis.; Trachinus, - Sting fish (intolerable pains, swelling acute blood poisoning, gangrene).",
+    "Modalities": [
+      "Worse: right side"
+    ],
+    "Common names": "Lachesis Lanciolatus Yellow Viper",
+    "details": "Its venom is most coagulating, (also Lachesis). We should expect to find under these remedies the symptomatology of thrombosis, also thrombotic phenomena, as hemiplegia, aphasia, inability to articulate. (Linn J. Boyd.) Broken-down, hemorrhagic constitutions; septic states. Great lassitude and sluggishness; Hemorrhages from every orifice of the body; black spots. Hemiplegia with aphasia. Inability to articulate, without any affection of the tongue. Nervous trembling. Pain in right big toe. Diagonal course of symptoms. Pulmonary congestion.",
+    "dosage": "Sixth to thirtieth potency."
+  }
 }

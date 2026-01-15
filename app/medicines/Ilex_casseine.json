@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ilex casseine", 
-  "details": "Christmas berry Tea - Excellent diuretic and substitute for tea."
+  "symptoms": {
+    "details": "Christmas berry Tea - Excellent diuretic and substitute for tea."
+  },
+  "name": "Ilex casseine"
 }

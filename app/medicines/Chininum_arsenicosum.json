@@ -1,7 +1,5 @@
 {
   "name": "Chininum arsenicosum",
-  "Relationship": "Compare: Chininum; also Ferrum Citricum (in nephritis with great anaemia; acid dyspepsia in chlorosis. Morbus maculosus Werlhoff); Chin in. mur. (in severe neuralgic pains around eyes, with chills; exaggerated sensitiveness to alcohol and tobacco; prostration and restlessness). Oenothera (effortless diarrhoea with nervous exhaustion; incipient hydrocephaloid). Macrozamia spiralis (extreme debility after illness; collapse).",
-  "Common names": "Arsenite of Quinine",
   "symptoms": {
     "Heart": [
       "Palpitation",
@@ -53,8 +51,10 @@
       "Tearing pains",
       "Coldness of hands and feet, knees and limbs",
       "Weak limbs"
-    ]
-  },
-  "details": "The symptoms of general WEARINESS AND PROSTRATION produced by the drug have been utilized in prescribing it homeopathically as a general tonic, often with very marked beneficial and prompt effect. In diphtheria with great prostration, cases that are prolonged, especially, and in malarial affections, neuralgia, etc., it has been found curative. Asthmatic attacks which recur periodically, with great prostration. Icy skin. Pressure in the solar plexus, with tender spine back of it.",
-  "dosage": "Second and third trituration."
+    ],
+    "Relationship": "Compare: Chininum; also Ferrum Citricum (in nephritis with great anaemia; acid dyspepsia in chlorosis. Morbus maculosus Werlhoff); Chin in. mur. (in severe neuralgic pains around eyes, with chills; exaggerated sensitiveness to alcohol and tobacco; prostration and restlessness). Oenothera (effortless diarrhoea with nervous exhaustion; incipient hydrocephaloid). Macrozamia spiralis (extreme debility after illness; collapse).",
+    "Common names": "Arsenite of Quinine",
+    "details": "The symptoms of general WEARINESS AND PROSTRATION produced by the drug have been utilized in prescribing it homeopathically as a general tonic, often with very marked beneficial and prompt effect. In diphtheria with great prostration, cases that are prolonged, especially, and in malarial affections, neuralgia, etc., it has been found curative. Asthmatic attacks which recur periodically, with great prostration. Icy skin. Pressure in the solar plexus, with tender spine back of it.",
+    "dosage": "Second and third trituration."
+  }
 }

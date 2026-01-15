@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Nymphaea oderata", 
-  "details": "Sweet Water Lily - early morning diarrhoea, backache; acrid leucorrhoea, offensive ulcers; bronchorrhea; ulcerative sore throat."
+  "symptoms": {
+    "details": "Sweet Water Lily - early morning diarrhoea, backache; acrid leucorrhoea, offensive ulcers; bronchorrhea; ulcerative sore throat."
+  },
+  "name": "Nymphaea oderata"
 }

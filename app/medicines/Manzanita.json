@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Manzanita", 
-  "details": "Diarrhoea, gonorrhoea, gleet, leucorrhoea, catarrhal conditions. Acts on renal and reproductive organs. Gonorrhoea, vesical catarrh, diabetes, menorrhagia. Tincture of leaves."
+  "symptoms": {
+    "details": "Diarrhoea, gonorrhoea, gleet, leucorrhoea, catarrhal conditions. Acts on renal and reproductive organs. Gonorrhoea, vesical catarrh, diabetes, menorrhagia. Tincture of leaves."
+  },
+  "name": "Manzanita"
 }

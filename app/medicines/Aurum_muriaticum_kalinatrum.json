@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Aurum muriaticum kalinatrum", 
-  "details": "Double chloride of Potassium and gold. In uterine induration and hemorrhage."
+  "symptoms": {
+    "details": "Double chloride of Potassium and gold. In uterine induration and hemorrhage."
+  },
+  "name": "Aurum muriaticum kalinatrum"
 }

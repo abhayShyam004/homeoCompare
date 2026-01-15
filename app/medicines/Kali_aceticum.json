@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Kali aceticum", 
-  "details": "Diabetes, diarrhoea, dropsy, alkaline urine, very much increased in quantity."
+  "symptoms": {
+    "details": "Diabetes, diarrhoea, dropsy, alkaline urine, very much increased in quantity."
+  },
+  "name": "Kali aceticum"
 }

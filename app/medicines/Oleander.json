@@ -1,12 +1,5 @@
 {
   "name": "Oleander",
-  "Relationship": "Compare: CON.; NAT-M.; RHUS; CAUST.; LATHYR. Oleander contains Oleandrin and also Nerein which latter is said to be closely related if not identical with Digitalin. The pulse becomes slower, more regular, more powerful. DIURESIS; palpitation, oedema and dyspnoea of valvular disease, disappear. Antidotes: CAMPH.; SULPH.",
-  "Modalities": [
-    "Worse: undressing",
-    "Worse: rest",
-    "Worse: friction of clothes"
-  ],
-  "Common names": "Nerium Odorum Rose-laurel",
   "symptoms": {
     "Eyes": [
       "Can see objects only when looking at them sideways",
@@ -80,8 +73,15 @@
       "Constant cold feet",
       "Want of animal heat in limbs",
       "Oedema"
-    ]
-  },
-  "details": "Has a marked action on the skin, heart and nervous system, producing and curing paralytic conditions with cramp-like contractions of upper extremities. Hemiplegia. Difficult articulation.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: CON.; NAT-M.; RHUS; CAUST.; LATHYR. Oleander contains Oleandrin and also Nerein which latter is said to be closely related if not identical with Digitalin. The pulse becomes slower, more regular, more powerful. DIURESIS; palpitation, oedema and dyspnoea of valvular disease, disappear. Antidotes: CAMPH.; SULPH.",
+    "Modalities": [
+      "Worse: undressing",
+      "Worse: rest",
+      "Worse: friction of clothes"
+    ],
+    "Common names": "Nerium Odorum Rose-laurel",
+    "details": "Has a marked action on the skin, heart and nervous system, producing and curing paralytic conditions with cramp-like contractions of upper extremities. Hemiplegia. Difficult articulation.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

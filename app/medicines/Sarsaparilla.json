@@ -1,14 +1,5 @@
 {
   "name": "Sarsaparilla",
-  "Relationship": "Complementary: MERC.; SEP. Compare: BERB.; LYCOP.; NAT-M.; PETROL.; SASSAFRAS; SAURURUS - Lizard's tail - (Irritation of kidneys, bladder, prostate and urinary passages. Painful and difficult micturition; cystitis with strangury). CUCURBITA CITRULLUS - Watermelon. Infusion of the seed acts promptly in painful urination with constriction and backache, relieves pain and stimulates flow. Antidote: BELL.",
-  "Modalities": [
-    "Worse: dampness at night",
-    "Worse: after urinating",
-    "Worse: when yawning",
-    "Worse: in spring",
-    "Worse: before menses"
-  ],
-  "Common names": "Smilax",
   "symptoms": {
     "Head": [
       "Influenza",
@@ -94,8 +85,17 @@
       "Intolerable stench on genitals",
       "Itching on scrotum and perineum",
       "Bloody, seminal emissions"
-    ]
-  },
-  "details": "Renal colic; marasmus and periosteal pains due to venereal disease. Eruptions following hot weather and vaccinations; boils, and eczema. Urinary symptoms well marked.",
-  "dosage": "First to sixth potency."
+    ],
+    "Relationship": "Complementary: MERC.; SEP. Compare: BERB.; LYCOP.; NAT-M.; PETROL.; SASSAFRAS; SAURURUS - Lizard's tail - (Irritation of kidneys, bladder, prostate and urinary passages. Painful and difficult micturition; cystitis with strangury). CUCURBITA CITRULLUS - Watermelon. Infusion of the seed acts promptly in painful urination with constriction and backache, relieves pain and stimulates flow. Antidote: BELL.",
+    "Modalities": [
+      "Worse: dampness at night",
+      "Worse: after urinating",
+      "Worse: when yawning",
+      "Worse: in spring",
+      "Worse: before menses"
+    ],
+    "Common names": "Smilax",
+    "details": "Renal colic; marasmus and periosteal pains due to venereal disease. Eruptions following hot weather and vaccinations; boils, and eczema. Urinary symptoms well marked.",
+    "dosage": "First to sixth potency."
+  }
 }

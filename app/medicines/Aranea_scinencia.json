@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Aranea scinencia", 
-  "details": "Grey Spider - constant twitching of under eyelids. Sleepiness. Worse in warm room."
+  "symptoms": {
+    "details": "Grey Spider - constant twitching of under eyelids. Sleepiness. Worse in warm room."
+  },
+  "name": "Aranea scinencia"
 }

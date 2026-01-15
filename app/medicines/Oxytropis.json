@@ -1,12 +1,5 @@
 {
   "name": "Oxytropis",
-  "Relationship": "Compare: ASTRAG.; LATHYR.; OXAL-AC.; BARYTA (Loco plant is rich in Baryta). LOLIUM.",
-  "Modalities": [
-    "Worse: thinking of symptoms",
-    "Worse: every other day",
-    "Better: after sleep"
-  ],
-  "Common names": "Loco-weed",
   "symptoms": {
     "Eyes": [
       "Paralysis of nerves and muscles of eyes",
@@ -55,8 +48,15 @@
     "Male": [
       "No desire or ability",
       "Pain in testicles and along spermatic cord and down thighs"
-    ]
-  },
-  "details": "Marked action on nervous system. Trembling, sensation of emptiness. Walks backwards. Congestion of spine and paralysis. Pains come and go quickly. Sphincters relaxed. Staggering gait. Reflexes lost.",
-  "dosage": "Third potency and higher."
+    ],
+    "Relationship": "Compare: ASTRAG.; LATHYR.; OXAL-AC.; BARYTA (Loco plant is rich in Baryta). LOLIUM.",
+    "Modalities": [
+      "Worse: thinking of symptoms",
+      "Worse: every other day",
+      "Better: after sleep"
+    ],
+    "Common names": "Loco-weed",
+    "details": "Marked action on nervous system. Trembling, sensation of emptiness. Walks backwards. Congestion of spine and paralysis. Pains come and go quickly. Sphincters relaxed. Staggering gait. Reflexes lost.",
+    "dosage": "Third potency and higher."
+  }
 }

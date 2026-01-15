@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Strychninum nitricum", 
-  "details": "Said to remove craving for alcohol. Use for two weeks."
+  "symptoms": {
+    "details": "Said to remove craving for alcohol. Use for two weeks."
+  },
+  "name": "Strychninum nitricum"
 }

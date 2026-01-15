@@ -1,13 +1,5 @@
 {
   "name": "Mercurius corrosivus",
-  "Relationship": "Compare: ARS.; LACH.; LEONURUS - MOTHER-WORT (Influences pelvic organs, allays spasm and nervous irritability, promotes secretion and reduces febrile excitement. Valuable in suppressed menses and LOCHIA; dysentery; vomiting, frightful pains in abdomen, violent thirst. Tongue dry and cracked). MONSONIA - An African plant belonging to the Geraniaceae - (Used for dysentery in material doses). Antidote: CALCIUM SULPHIDE is antidotal to Bichloride poisoning. Use intravenous injection of 7 1/2 grains in 7 1/2 oz. boiled water.",
-  "Modalities": [
-    "Worse: evening",
-    "Worse: night",
-    "Worse: acids",
-    "Better: while at rest"
-  ],
-  "Common names": "Corrosive Sublimate",
   "symptoms": {
     "Eyes": [
       "Retinitis albuminuric, ophthalmia neonatorum",
@@ -108,8 +100,16 @@
     "Ears": [
       "Fetid pus",
       "Violent pulsations"
-    ]
-  },
-  "details": "This salt leads all other remedies in tenesmus of the rectum, which is incessant, and is not relieved by the stool. The tenesmus often involves the bladder as well. Bright's disease. Gonorrhea; second stage, with continuous tenesmus. Destroys the secreting portions of the kidneys. This process is slow, but sure. Albuminuria in early pregnancy. (PHOSPH. later and at full term).",
-  "dosage": "Sixth potency. In solution 1: 1000, hypodermically injected under conjunctiva in choroiditis with progressive myopia. Stops immediately the severe aching pain behind eyeballs (Dr. G. D. Halle.)"
+    ],
+    "Relationship": "Compare: ARS.; LACH.; LEONURUS - MOTHER-WORT (Influences pelvic organs, allays spasm and nervous irritability, promotes secretion and reduces febrile excitement. Valuable in suppressed menses and LOCHIA; dysentery; vomiting, frightful pains in abdomen, violent thirst. Tongue dry and cracked). MONSONIA - An African plant belonging to the Geraniaceae - (Used for dysentery in material doses). Antidote: CALCIUM SULPHIDE is antidotal to Bichloride poisoning. Use intravenous injection of 7 1/2 grains in 7 1/2 oz. boiled water.",
+    "Modalities": [
+      "Worse: evening",
+      "Worse: night",
+      "Worse: acids",
+      "Better: while at rest"
+    ],
+    "Common names": "Corrosive Sublimate",
+    "details": "This salt leads all other remedies in tenesmus of the rectum, which is incessant, and is not relieved by the stool. The tenesmus often involves the bladder as well. Bright's disease. Gonorrhea; second stage, with continuous tenesmus. Destroys the secreting portions of the kidneys. This process is slow, but sure. Albuminuria in early pregnancy. (PHOSPH. later and at full term).",
+    "dosage": "Sixth potency. In solution 1: 1000, hypodermically injected under conjunctiva in choroiditis with progressive myopia. Stops immediately the severe aching pain behind eyeballs (Dr. G. D. Halle.)"
+  }
 }

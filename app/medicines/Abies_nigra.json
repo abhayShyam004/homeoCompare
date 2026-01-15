@@ -1,7 +1,5 @@
 {
   "name": "Abies nigra",
-  "Relationship": "Compare: (Lump in stomach - China Bry. Puls.) also other Conifers - Thuja, Sabina, Cupressus (painful indigestion) also Nux-v. Kali-c.",
-  "Common names": "Black Spruce",
   "symptoms": {
     "Head": [
       "Unable to think",
@@ -40,8 +38,10 @@
     "Sleep": [
       "Bad dreams",
       "Wakeful and restless at night, with hunger"
-    ]
-  },
-  "details": "A powerful and long-acting remedy, in various forms of disease, whenever the characteristic stomach symptoms are present. Most of the symptoms are associated with the gastric disturbances. IN DYSPEPTIC TROUBLES OF THE AGED, with functional heart symptoms; also after tea or tobacco. CONSTIPATION. Pain in external meatus.",
-  "dosage": "First to thirtieth potency."
+    ],
+    "Relationship": "Compare: (Lump in stomach - China Bry. Puls.) also other Conifers - Thuja, Sabina, Cupressus (painful indigestion) also Nux-v. Kali-c.",
+    "Common names": "Black Spruce",
+    "details": "A powerful and long-acting remedy, in various forms of disease, whenever the characteristic stomach symptoms are present. Most of the symptoms are associated with the gastric disturbances. IN DYSPEPTIC TROUBLES OF THE AGED, with functional heart symptoms; also after tea or tobacco. CONSTIPATION. Pain in external meatus.",
+    "dosage": "First to thirtieth potency."
+  }
 }

@@ -1,7 +1,5 @@
 {
   "name": "Berberis aquifolium mahonia",
-  "Relationship": "Carbol. acid; Euonym; Berb. vulg.; Hydr.",
-  "Common names": "Mountain Grape",
   "symptoms": {
     "Head": [
       "Sensation of a band just above ears",
@@ -33,8 +31,10 @@
       "Clears the complexion",
       "Acne",
       "Blotches and pimples"
-    ]
-  },
-  "details": "A remedy for the skins, chronic catarrhal affections, secondary syphilis. Hepatic torpor, lassitude and other evidences of incomplete metamorphosis; stimulates all glands and improves nutrition.",
-  "dosage": "Tincture in rather material doses."
+    ],
+    "Relationship": "Carbol. acid; Euonym; Berb. vulg.; Hydr.",
+    "Common names": "Mountain Grape",
+    "details": "A remedy for the skins, chronic catarrhal affections, secondary syphilis. Hepatic torpor, lassitude and other evidences of incomplete metamorphosis; stimulates all glands and improves nutrition.",
+    "dosage": "Tincture in rather material doses."
+  }
 }

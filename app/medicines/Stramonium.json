@@ -1,17 +1,5 @@
 {
   "name": "Stramonium",
-  "Relationship": "Compare especially: HYOSCY. and BELL. It has less fever than BELL., but more than HYOS. It causes more functional excitement of the brain, but never approaches the true inflammatory condition of BELL. Antidotes: BELL.; TABAC.; NUX.",
-  "Modalities": [
-    "Worse: in dark room",
-    "Worse: when alone",
-    "Worse: looking at bright or shining objects",
-    "Worse: after sleep",
-    "Worse: on swallowing",
-    "Better: from bright light",
-    "Better: company",
-    "Better: warmth"
-  ],
-  "Common names": "Thorn-apple",
   "symptoms": {
     "Eyes": [
       "Parts of the body seem enormously swollen",
@@ -101,8 +89,20 @@
       "Awakens terrified",
       "screams with fright",
       "Sleepy, but cannot sleep"
-    ]
-  },
-  "details": "The entire force of this drug seems to be expended on the brain, though the skin and throat show some disturbance. Suppressed secretions and excretions. Sensation as if limbs were separated from body. Delirium tremens. Absence of pain and muscular mobility especially of muscles of expression and of locomotion. Gyratory and graceful motions. Parkinsonism.",
-  "dosage": "Thirtieth potency and lower."
+    ],
+    "Relationship": "Compare especially: HYOSCY. and BELL. It has less fever than BELL., but more than HYOS. It causes more functional excitement of the brain, but never approaches the true inflammatory condition of BELL. Antidotes: BELL.; TABAC.; NUX.",
+    "Modalities": [
+      "Worse: in dark room",
+      "Worse: when alone",
+      "Worse: looking at bright or shining objects",
+      "Worse: after sleep",
+      "Worse: on swallowing",
+      "Better: from bright light",
+      "Better: company",
+      "Better: warmth"
+    ],
+    "Common names": "Thorn-apple",
+    "details": "The entire force of this drug seems to be expended on the brain, though the skin and throat show some disturbance. Suppressed secretions and excretions. Sensation as if limbs were separated from body. Delirium tremens. Absence of pain and muscular mobility especially of muscles of expression and of locomotion. Gyratory and graceful motions. Parkinsonism.",
+    "dosage": "Thirtieth potency and lower."
+  }
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Centaurea tagana", 
-  "details": "Surging of blood; homesickness; intermittent fever."
+  "symptoms": {
+    "details": "Surging of blood; homesickness; intermittent fever."
+  },
+  "name": "Centaurea tagana"
 }

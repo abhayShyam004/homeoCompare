@@ -1,13 +1,5 @@
 {
   "name": "Dioscorea villosa",
-  "Relationship": "Antidotes: CHAMOM.; CAMPH. Compare: COLOC. (differs in modalities); NUX; CHAM.; BRY.",
-  "Modalities": [
-    "Worse: evening and night; lying down",
-    "Worse: and doubling up",
-    "Better: standing erect",
-    "Better: motion in open air; pressure"
-  ],
-  "Common names": "Wild Yam",
   "symptoms": {
     "Heart": [
       "Angina pectoris",
@@ -81,8 +73,16 @@
       "Relaxation and coldness of organs",
       "Emissions in sleep, or from sexual atony, with weak knees",
       "Strong-smelling sweat on scrotum and pubes"
-    ]
-  },
-  "details": "As a remedy for many kinds of PAIN, especially colic, and in severe, painful affections of abdominal and pelvic viscera; it ranks with the polychrests of the Materia Medica. Persons of feeble digestive powers; tea-drinkers, with much flatulence. GALL STONE COLIC.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Antidotes: CHAMOM.; CAMPH. Compare: COLOC. (differs in modalities); NUX; CHAM.; BRY.",
+    "Modalities": [
+      "Worse: evening and night; lying down",
+      "Worse: and doubling up",
+      "Better: standing erect",
+      "Better: motion in open air; pressure"
+    ],
+    "Common names": "Wild Yam",
+    "details": "As a remedy for many kinds of PAIN, especially colic, and in severe, painful affections of abdominal and pelvic viscera; it ranks with the polychrests of the Materia Medica. Persons of feeble digestive powers; tea-drinkers, with much flatulence. GALL STONE COLIC.",
+    "dosage": "Tincture, to third potency."
+  }
 }

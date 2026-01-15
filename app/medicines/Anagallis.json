@@ -1,7 +1,5 @@
 {
   "name": "Anagallis",
-  "Relationship": "Anagallis contains Saponin, q.v. Compare: Cyclamen; Primula obcon.",
-  "Common names": "Scarlet Pimpernel",
   "symptoms": {
     "Head": [
       "Great hilarity",
@@ -27,8 +25,10 @@
       "Rheumatic and gouty pains",
       "Pain in shoulder and arm",
       "Cramp in ball of thumbs and fingers"
-    ]
-  },
-  "details": "Marked action on skin, characterized by great itching and tingling everywhere. Favors expulsion of splinters. An old medicine for hydrophobia and dropsy. Possesses power of softening flesh and destroying warts.",
-  "dosage": "First to third potency."
+    ],
+    "Relationship": "Anagallis contains Saponin, q.v. Compare: Cyclamen; Primula obcon.",
+    "Common names": "Scarlet Pimpernel",
+    "details": "Marked action on skin, characterized by great itching and tingling everywhere. Favors expulsion of splinters. An old medicine for hydrophobia and dropsy. Possesses power of softening flesh and destroying warts.",
+    "dosage": "First to third potency."
+  }
 }

@@ -1,7 +1,5 @@
 {
   "name": "Eriodictyon",
-  "Relationship": "Compare: GRIND.; ARAL.; EUCALYPT.; IPEC.",
-  "Common names": "Yerba Santa",
   "symptoms": {
     "Head": [
       "Pain in ears",
@@ -23,8 +21,10 @@
     "Male": [
       "Sore, dragging in testicle, could not bear any pressure",
       "better gentle support"
-    ]
-  },
-  "details": "A remedy for asthmatic and bronchial affections. Bronchial phthisis, with night-sweats and emaciation. Asthma relieved by expectoration. COUGH AFTER INFLUENZA. Furthers absorption of effusion in plural cavity. Appetite poor and impaired digestion. Whooping cough.",
-  "dosage": "Tincture in doses of 2 to 20 drops and attenuations."
+    ],
+    "Relationship": "Compare: GRIND.; ARAL.; EUCALYPT.; IPEC.",
+    "Common names": "Yerba Santa",
+    "details": "A remedy for asthmatic and bronchial affections. Bronchial phthisis, with night-sweats and emaciation. Asthma relieved by expectoration. COUGH AFTER INFLUENZA. Furthers absorption of effusion in plural cavity. Appetite poor and impaired digestion. Whooping cough.",
+    "dosage": "Tincture in doses of 2 to 20 drops and attenuations."
+  }
 }

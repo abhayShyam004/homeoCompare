@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Tussilago farfara", 
-  "details": "Coughs; as an intercurrent medicine in phthisis pulmonalis."
+  "symptoms": {
+    "details": "Coughs; as an intercurrent medicine in phthisis pulmonalis."
+  },
+  "name": "Tussilago farfara"
 }

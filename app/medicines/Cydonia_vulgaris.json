@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cydonia vulgaris", 
-  "details": "Quince supposed to be of use to strengthen the sexual organs and stomach."
+  "symptoms": {
+    "details": "Quince supposed to be of use to strengthen the sexual organs and stomach."
+  },
+  "name": "Cydonia vulgaris"
 }

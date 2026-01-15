@@ -1,39 +1,39 @@
 {
   "symptoms": {
     "Head": [
-      "Catarrhal discharge from posterior nares", 
-      "Headache and sharp pains all over", 
-      "Aching back of head and neck", 
-      "Irritable and nervous", 
-      "Sneezing and wheezing", 
+      "Catarrhal discharge from posterior nares",
+      "Headache and sharp pains all over",
+      "Aching back of head and neck",
+      "Irritable and nervous",
+      "Sneezing and wheezing",
       "Worse from constipation"
-    ], 
+    ],
     "Stomach": [
-      "Constipation", 
-      "Sour, yeasty, mouldy odor from discharges", 
-      "Rumbling, pains shift, flatulence", 
-      "Bad taste", 
-      "Belching of gas in stomach and abdomen", 
-      "Poor digestion", 
-      "Soreness all over abdomen", 
-      "Sense of fullness", 
+      "Constipation",
+      "Sour, yeasty, mouldy odor from discharges",
+      "Rumbling, pains shift, flatulence",
+      "Bad taste",
+      "Belching of gas in stomach and abdomen",
+      "Poor digestion",
+      "Soreness all over abdomen",
+      "Sense of fullness",
       "Nausea"
-    ], 
+    ],
     "Sleep": [
       "Disturbed with much restlessness"
-    ], 
+    ],
     "Skin": [
-      "Boils, recurrent", 
-      "Itching eczema around ankles", 
+      "Boils, recurrent",
+      "Itching eczema around ankles",
       "Tinea versicolor"
-    ], 
+    ],
     "Extremities": [
-      "Hands cold like ice and go to sleep easily", 
+      "Hands cold like ice and go to sleep easily",
       "Backache, tired and weak from elbows and knees down"
-    ]
-  }, 
-  "details": "Introduced by Drs. Lehman and Yingling. Not proved, hence clinical symptoms only but many have been verified. Sycotic remedy Anaphylactic states produced by proteins and enzymes (Yingling).", 
-  "Common names": "Saccharomyces) (Yeast Plant", 
-  "name": "Torula cervisiae", 
-  "dosage": "Pure yeast cake or potencies from 3rd to high. Yeast poultices are much used in skin diseases, boils and swelling."
+    ],
+    "details": "Introduced by Drs. Lehman and Yingling. Not proved, hence clinical symptoms only but many have been verified. Sycotic remedy Anaphylactic states produced by proteins and enzymes (Yingling).",
+    "Common names": "Saccharomyces) (Yeast Plant",
+    "dosage": "Pure yeast cake or potencies from 3rd to high. Yeast poultices are much used in skin diseases, boils and swelling."
+  },
+  "name": "Torula cervisiae"
 }

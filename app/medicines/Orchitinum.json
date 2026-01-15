@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Orchitinum", 
-  "details": "Testicular extract - after ovariotomy, sexual weakness, senile decay."
+  "symptoms": {
+    "details": "Testicular extract - after ovariotomy, sexual weakness, senile decay."
+  },
+  "name": "Orchitinum"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cholas terrapina", 
-  "details": "Cramps in calves and feet; rheumatism, with cramp-like pains."
+  "symptoms": {
+    "details": "Cramps in calves and feet; rheumatism, with cramp-like pains."
+  },
+  "name": "Cholas terrapina"
 }

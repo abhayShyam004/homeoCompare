@@ -1,7 +1,8 @@
 {
-  "symptoms": {}, 
-  "details": "Renal dropsies, hydrocele, and chronic hoarseness in scrofulous patients have been benefited by this drug. Choleric symptoms. Generally worse about six PM Dilated pupils. Left coastal region sore and sensitive. Elbow joints pain, back sore. Soreness of all limbs. Vomiting, purging with tenesmus. Rumbling in abdomen. Hydrocele and renal dropsy.", 
-  "Common names": "Virginia Creeper", 
-  "name": "Ampelopsis", 
-  "dosage": "Second to third potency."
+  "symptoms": {
+    "details": "Renal dropsies, hydrocele, and chronic hoarseness in scrofulous patients have been benefited by this drug. Choleric symptoms. Generally worse about six PM Dilated pupils. Left coastal region sore and sensitive. Elbow joints pain, back sore. Soreness of all limbs. Vomiting, purging with tenesmus. Rumbling in abdomen. Hydrocele and renal dropsy.",
+    "Common names": "Virginia Creeper",
+    "dosage": "Second to third potency."
+  },
+  "name": "Ampelopsis"
 }

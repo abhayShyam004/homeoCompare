@@ -1,13 +1,5 @@
 {
   "name": "Coca",
-  "Relationship": "Compare: ARS.; PAULIN.; CYP; CHAMOM. Antidote: GELS.",
-  "Modalities": [
-    "Better: from wine; riding",
-    "Better: quick motion in open air",
-    "Worse: ascending",
-    "Worse: high altitudes"
-  ],
-  "Common names": "Erythroxylon Coca (The Divine Plant of the Incas - but the Spanish priests denounced it as \"un delusio del demonio\")",
   "symptoms": {
     "Heart": [
       "Palpitation, with weak heart and dyspnoea"
@@ -52,8 +44,16 @@
     ],
     "Male": [
       "Diabetes, with impotency"
-    ]
-  },
-  "details": "The mountaineer's remedy. Useful in a variety of complaints incidental to mountain climbing, such as palpitation, dyspnoea, anxiety and insomnia. Exhausted nervous system from physical and mental strain. Cavities of teeth. LOSS OF VOICE. Give 5-6 drops, every half hour, two hours before expected demand on voice. Nocturnal enuresis. Emphysema (QUEBRACHO).",
-  "dosage": "Tincture to third attenuation."
+    ],
+    "Relationship": "Compare: ARS.; PAULIN.; CYP; CHAMOM. Antidote: GELS.",
+    "Modalities": [
+      "Better: from wine; riding",
+      "Better: quick motion in open air",
+      "Worse: ascending",
+      "Worse: high altitudes"
+    ],
+    "Common names": "Erythroxylon Coca (The Divine Plant of the Incas - but the Spanish priests denounced it as \"un delusio del demonio\")",
+    "details": "The mountaineer's remedy. Useful in a variety of complaints incidental to mountain climbing, such as palpitation, dyspnoea, anxiety and insomnia. Exhausted nervous system from physical and mental strain. Cavities of teeth. LOSS OF VOICE. Give 5-6 drops, every half hour, two hours before expected demand on voice. Nocturnal enuresis. Emphysema (QUEBRACHO).",
+    "dosage": "Tincture to third attenuation."
+  }
 }

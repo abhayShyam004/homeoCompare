@@ -1,17 +1,5 @@
 {
   "name": "Ammonium carb",
-  "Relationship": "Inimical to LACHESIS. Similar in action. Antidotes: Arnica; Camphor. Compare: Rhus; Muriatic acid; Tartar emet. Of use in poisoning by charcoal fumes.",
-  "Modalities": [
-    "Worse: evenings",
-    "Worse: from cold",
-    "Worse: wet weather",
-    "Worse: wet applications",
-    "Worse: washing",
-    "Worse: and during 3 to four am",
-    "Worse: during menses",
-    "Better: lying on painful side and on stomach; in dry weather"
-  ],
-  "Common names": "Carbonate of Ammonia",
   "symptoms": {
     "Urine": [
       "Urine white, sandy, bloody, copious, turbid and fetid",
@@ -134,7 +122,19 @@
       "Heel painful on standing",
       "Cramps in calves and soles",
       "Big toe painful and swollen"
-    ]
-  },
-  "dosage": "Lower potencies deteriorate with age. Sixth potency best for general use."
+    ],
+    "Relationship": "Inimical to LACHESIS. Similar in action. Antidotes: Arnica; Camphor. Compare: Rhus; Muriatic acid; Tartar emet. Of use in poisoning by charcoal fumes.",
+    "Modalities": [
+      "Worse: evenings",
+      "Worse: from cold",
+      "Worse: wet weather",
+      "Worse: wet applications",
+      "Worse: washing",
+      "Worse: and during 3 to four am",
+      "Worse: during menses",
+      "Better: lying on painful side and on stomach; in dry weather"
+    ],
+    "Common names": "Carbonate of Ammonia",
+    "dosage": "Lower potencies deteriorate with age. Sixth potency best for general use."
+  }
 }

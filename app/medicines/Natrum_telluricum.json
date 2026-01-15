@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Natrum telluricum", 
-  "details": "Breath has odor of garlic; night-sweats of phthisis."
+  "symptoms": {
+    "details": "Breath has odor of garlic; night-sweats of phthisis."
+  },
+  "name": "Natrum telluricum"
 }

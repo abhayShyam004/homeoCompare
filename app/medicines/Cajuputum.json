@@ -1,10 +1,5 @@
 {
   "name": "Cajuputum",
-  "Relationship": "Compare: Bovista.; Nux mosch.; Asaf.; Ign.; Bapt.",
-  "Modalities": [
-    "Worse: about five am; night"
-  ],
-  "Common names": "Oleum Wittnebianum Cajuput Oil",
   "symptoms": {
     "Head": [
       "As if he could not get himself together",
@@ -25,8 +20,13 @@
       "Tongue feels swollen, fills whole mouth",
       "Spasmodic stricture of oesophagus",
       "Constricted sensation on swallowing solid food"
-    ]
-  },
-  "details": "Acts like Oil of Cloves. A remedy for FLATULENCE and affections of the tongue. SENSE OF ENLARGEMENT. Causes copious diaphoresis. Retrodecent gout. Neuralgic affection not inflammatory. Nervous dyspnoea.",
-  "dosage": "First to third potency. (5 drops of oil.)"
+    ],
+    "Relationship": "Compare: Bovista.; Nux mosch.; Asaf.; Ign.; Bapt.",
+    "Modalities": [
+      "Worse: about five am; night"
+    ],
+    "Common names": "Oleum Wittnebianum Cajuput Oil",
+    "details": "Acts like Oil of Cloves. A remedy for FLATULENCE and affections of the tongue. SENSE OF ENLARGEMENT. Causes copious diaphoresis. Retrodecent gout. Neuralgic affection not inflammatory. Nervous dyspnoea.",
+    "dosage": "First to third potency. (5 drops of oil.)"
+  }
 }

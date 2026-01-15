@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Trichosanthes", 
-  "details": "Diarrhoea, pain in liver, dizziness after every stool."
+  "symptoms": {
+    "details": "Diarrhoea, pain in liver, dizziness after every stool."
+  },
+  "name": "Trichosanthes"
 }

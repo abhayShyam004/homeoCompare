@@ -1,14 +1,5 @@
 {
   "name": "Menyanthes",
-  "Relationship": "Compare: CAPS.; PULS.; CALC.; PHOS-AC.; SANG. Antidote: CAMPH.",
-  "Modalities": [
-    "Worse: during rest",
-    "Worse: ascending",
-    "Better: pressure on affected part",
-    "Better: stooping",
-    "Better: motion"
-  ],
-  "Common names": "Buck-bean",
   "symptoms": {
     "Head": [
       "Weight pressing on brain with every step on ascending",
@@ -40,8 +31,17 @@
       "Icy coldness of hands and feet",
       "As soon as patient lies down, legs jerk and twitch",
       "Cramp-like pain"
-    ]
-  },
-  "details": "A remedy for certain headaches, intermittent fever. Coldness of abdomen. Twitchings. Sensation of tension and compression. Fidgets and urinary difficulties in women. Diabetes.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: CAPS.; PULS.; CALC.; PHOS-AC.; SANG. Antidote: CAMPH.",
+    "Modalities": [
+      "Worse: during rest",
+      "Worse: ascending",
+      "Better: pressure on affected part",
+      "Better: stooping",
+      "Better: motion"
+    ],
+    "Common names": "Buck-bean",
+    "details": "A remedy for certain headaches, intermittent fever. Coldness of abdomen. Twitchings. Sensation of tension and compression. Fidgets and urinary difficulties in women. Diabetes.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

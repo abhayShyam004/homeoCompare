@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Iris factissima", 
-  "details": "Headache and hernia."
+  "symptoms": {
+    "details": "Headache and hernia."
+  },
+  "name": "Iris factissima"
 }

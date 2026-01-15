@@ -1,7 +1,5 @@
 {
   "name": "Cahinca",
-  "Relationship": "Compare: Apocyn.; Ars.; Coffea (similar botanically and in relieving effects of fatigue).",
-  "Common names": "Brazilian Plant - Chiococca",
   "symptoms": {
     "Urine": [
       "Urine fiery",
@@ -17,8 +15,10 @@
     "Male": [
       "Pain worse during passage of pungent smelling urine",
       "Drawing in of testicles and spermatic cord"
-    ]
-  },
-  "details": "This remedy has been found of use in dropsical affections. Its urinary symptoms are well marked. Albuminuria, with dyspnoea on lying down at night. Ascites and anasarca, with dry skin.",
-  "dosage": "Third potency or lower."
+    ],
+    "Relationship": "Compare: Apocyn.; Ars.; Coffea (similar botanically and in relieving effects of fatigue).",
+    "Common names": "Brazilian Plant - Chiococca",
+    "details": "This remedy has been found of use in dropsical affections. Its urinary symptoms are well marked. Albuminuria, with dyspnoea on lying down at night. Ascites and anasarca, with dry skin.",
+    "dosage": "Third potency or lower."
+  }
 }

@@ -1,14 +1,5 @@
 {
   "name": "Graphites",
-  "Relationship": "Complementary: ARGENT. NIT. (follows well in gastric derangements); CAUSTIC.; HEP.; LYCOP.; ARS.; TUBERC. Compare: PETROL.; SEP.; SULPH.; FLUOR-AC. The associated constipation with mucus-covered stools and gastric flatulency should be taken into consideration and differentiate it from such remedies as PETOL. and LYCOP. (Raue.) Antidote: NUX.; ACON.; ARS.",
-  "Modalities": [
-    "Worse: warmth",
-    "Worse: at night",
-    "Worse: during and after menstruation",
-    "Better: in the dark",
-    "Better: from wrapping up"
-  ],
-  "Common names": "(Black Lead) - Plumbago",
   "symptoms": {
     "Urine": [
       "Turbid, with sediment",
@@ -165,8 +156,17 @@
       "Toe-nails crippled",
       "Excoriation between thighs",
       "Pain in nape of neck, shoulders and back and limbs"
-    ]
-  },
-  "details": "Like all the carbons, this remedy is an anti-psoric of great power, but especially active in patients who are rather stout, of fair complexion, with tendency to skin affections and constipation, FAT, CHILLY, AND COSTIVE, with delayed menstrual history. Take cold easily. Children impudent, teasing, laugh at reprimands. Has a particular tendency to develop the skin phase of internal disorders. ERADICATES TENDENCY TO ERYSIPELAS. Anaemia with redness of face. Tendency to obesity. Swollen genitals. Gushing leucorrhoea. Aids absorption of cicatricial tissue. Induration of tissue. Cancer of pylorus. Duodenal ulcer.",
-  "dosage": "Sixth to thirtieth potency. Locally as a cerate, in sore nipples."
+    ],
+    "Relationship": "Complementary: ARGENT. NIT. (follows well in gastric derangements); CAUSTIC.; HEP.; LYCOP.; ARS.; TUBERC. Compare: PETROL.; SEP.; SULPH.; FLUOR-AC. The associated constipation with mucus-covered stools and gastric flatulency should be taken into consideration and differentiate it from such remedies as PETOL. and LYCOP. (Raue.) Antidote: NUX.; ACON.; ARS.",
+    "Modalities": [
+      "Worse: warmth",
+      "Worse: at night",
+      "Worse: during and after menstruation",
+      "Better: in the dark",
+      "Better: from wrapping up"
+    ],
+    "Common names": "(Black Lead) - Plumbago",
+    "details": "Like all the carbons, this remedy is an anti-psoric of great power, but especially active in patients who are rather stout, of fair complexion, with tendency to skin affections and constipation, FAT, CHILLY, AND COSTIVE, with delayed menstrual history. Take cold easily. Children impudent, teasing, laugh at reprimands. Has a particular tendency to develop the skin phase of internal disorders. ERADICATES TENDENCY TO ERYSIPELAS. Anaemia with redness of face. Tendency to obesity. Swollen genitals. Gushing leucorrhoea. Aids absorption of cicatricial tissue. Induration of tissue. Cancer of pylorus. Duodenal ulcer.",
+    "dosage": "Sixth to thirtieth potency. Locally as a cerate, in sore nipples."
+  }
 }

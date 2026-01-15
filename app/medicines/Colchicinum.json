@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Colchicinum", 
-  "details": "Intestinal catarrh with shreddy membranes; convulsive jerkings of right hand; rheumatic fever, gout, endo and pericarditis, pleurisy, arthritis, deformans in early stages; INTENSE PAIN OF RHEUMATISM 3x trit."
+  "symptoms": {
+    "details": "Intestinal catarrh with shreddy membranes; convulsive jerkings of right hand; rheumatic fever, gout, endo and pericarditis, pleurisy, arthritis, deformans in early stages; INTENSE PAIN OF RHEUMATISM 3x trit."
+  },
+  "name": "Colchicinum"
 }

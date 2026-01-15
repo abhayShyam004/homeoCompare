@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ficus venosa", 
-  "details": "PAKUR. Hemorrhage from bowels and lungs."
+  "symptoms": {
+    "details": "PAKUR. Hemorrhage from bowels and lungs."
+  },
+  "name": "Ficus venosa"
 }

@@ -1,7 +1,5 @@
 {
   "name": "Cochlearia armoracia",
-  "Relationship": "Compare: CANNAB; SINAPIS; CAPS.",
-  "Common names": "Armoracia Sativa Horse-radish",
   "symptoms": {
     "Eyes": [
       "Copious running from eyes",
@@ -37,8 +35,10 @@
     ],
     "Back": [
       "Pain in back as from incarcerated flatulence from abdomen through to back and down into sacrum"
-    ]
-  },
-  "details": "Frontal bone and sinus, antrum and salivary glands are specifically affected by this drug. Bloated sensation. Raises vital forces. Used as a gargle in scorbutic gums and sore throat. Hoarseness and in relaxed conditions of the fauces. Internally in gonorrhea. Useful as a condiment in enfeebled states of the stomach. An infusion of the root in cider, for dropsy, causes copious diuresis. Locally cures dandruff.",
-  "dosage": "First to third attenuation."
+    ],
+    "Relationship": "Compare: CANNAB; SINAPIS; CAPS.",
+    "Common names": "Armoracia Sativa Horse-radish",
+    "details": "Frontal bone and sinus, antrum and salivary glands are specifically affected by this drug. Bloated sensation. Raises vital forces. Used as a gargle in scorbutic gums and sore throat. Hoarseness and in relaxed conditions of the fauces. Internally in gonorrhea. Useful as a condiment in enfeebled states of the stomach. An infusion of the root in cider, for dropsy, causes copious diuresis. Locally cures dandruff.",
+    "dosage": "First to third attenuation."
+  }
 }

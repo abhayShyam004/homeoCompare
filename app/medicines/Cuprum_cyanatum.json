@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cuprum cyanatum", 
-  "details": "Meningitis basilaris."
+  "symptoms": {
+    "details": "Meningitis basilaris."
+  },
+  "name": "Cuprum cyanatum"
 }

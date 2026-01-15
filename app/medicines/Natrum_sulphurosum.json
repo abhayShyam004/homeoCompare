@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Natrum sulphurosum", 
-  "details": "Diarrhoea, with YEASTY STOOLS."
+  "symptoms": {
+    "details": "Diarrhoea, with YEASTY STOOLS."
+  },
+  "name": "Natrum sulphurosum"
 }

@@ -1,16 +1,5 @@
 {
   "name": "Sanguinaria",
-  "Relationship": "Complementary: TART. EM. Compare: JUSTICIA (bronchial catarrh, coryza, hoarseness; oversensitive). DIGITALIS (Migraine). BELL.; IRIS; MELI.; LACH.; FERR.; OP.",
-  "Modalities": [
-    "Worse: sweets",
-    "Worse: right side",
-    "Worse: motion",
-    "Worse: touch",
-    "Better: acids",
-    "Better: sleep",
-    "Better: darkness"
-  ],
-  "Common names": "Blood Root",
   "symptoms": {
     "Head": [
       "Headaches return at climacteric",
@@ -125,8 +114,19 @@
       "Humming and roaring",
       "Burning in ears",
       "Earache with headache"
-    ]
-  },
-  "details": "Is a right-sided remedy pre-eminently, and affects chiefly the mucous membranes, especially of the respiratory tract. It has marked vasomotor disturbances, as seen in the circumscribed redness of the cheeks, flashes of heat, determination of blood to head and chest, distention of temporal veins, burning in palms and soles, and has been found very applicable to climacteric disorders. BURNING sensations, like from hot water. Influenzal coughs. Phthisis. SUDDEN STOPPING OF CATARRH OF RESPIRATORY TRACT FOLLOWED BY DIARRHOEA. BURNING in various parts is characteristic.",
-  "dosage": "Tincture in headaches; sixth potency in rheumatism."
+    ],
+    "Relationship": "Complementary: TART. EM. Compare: JUSTICIA (bronchial catarrh, coryza, hoarseness; oversensitive). DIGITALIS (Migraine). BELL.; IRIS; MELI.; LACH.; FERR.; OP.",
+    "Modalities": [
+      "Worse: sweets",
+      "Worse: right side",
+      "Worse: motion",
+      "Worse: touch",
+      "Better: acids",
+      "Better: sleep",
+      "Better: darkness"
+    ],
+    "Common names": "Blood Root",
+    "details": "Is a right-sided remedy pre-eminently, and affects chiefly the mucous membranes, especially of the respiratory tract. It has marked vasomotor disturbances, as seen in the circumscribed redness of the cheeks, flashes of heat, determination of blood to head and chest, distention of temporal veins, burning in palms and soles, and has been found very applicable to climacteric disorders. BURNING sensations, like from hot water. Influenzal coughs. Phthisis. SUDDEN STOPPING OF CATARRH OF RESPIRATORY TRACT FOLLOWED BY DIARRHOEA. BURNING in various parts is characteristic.",
+    "dosage": "Tincture in headaches; sixth potency in rheumatism."
+  }
 }

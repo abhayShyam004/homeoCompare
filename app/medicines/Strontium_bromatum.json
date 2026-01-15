@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Strontium bromatum", 
-  "details": "Often gives excellent results where a bromide is indicated. Vomiting of pregnancy. Nervous dyspepsia. It is anti-fermentative and neutralizes excessive acidity."
+  "symptoms": {
+    "details": "Often gives excellent results where a bromide is indicated. Vomiting of pregnancy. Nervous dyspepsia. It is anti-fermentative and neutralizes excessive acidity."
+  },
+  "name": "Strontium bromatum"
 }

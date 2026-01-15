@@ -1,12 +1,5 @@
 {
   "name": "Hypericum",
-  "Relationship": "Compare: LEDUM (punched wounds and bites of animals); ARNICA; STAPHIS.; CALEN.; RUTA; COFF. Antidotes: ARS.; CHAM.",
-  "Modalities": [
-    "Worse: in cold; dampness",
-    "Worse: in a fog; in close room; least exposure; touch",
-    "Better: bending head backward"
-  ],
-  "Common names": "St. John's-wort",
   "symptoms": {
     "Head": [
       "In fractured skull, bone splinters",
@@ -70,8 +63,15 @@
       "Joints feel bruised",
       "Crawling in hand and feet",
       "Lancinating pain in upper and lower limbs"
-    ]
-  },
-  "details": "The great remedy for injuries to nerves, especially of fingers, toes and nails. Crushed fingers, especially tips. Excessive painfulness is a guiding symptom to its use. Prevents lockjaw. PUNCTURED wounds. Relieves pain after operations. Quite supersedes the use of Morphia after operations. (Helmuth.) Spasms after every injury. Has an important action on the rectum; hemorrhoids. COCCYDYNIA. Spasmodic asthmatic attacks with changes of weather or before storms, better by copious expectoration. Injured nerves from bites of animals. Tetanus. Neuritis, tingling, burning and numbness. Constant drowsiness.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: LEDUM (punched wounds and bites of animals); ARNICA; STAPHIS.; CALEN.; RUTA; COFF. Antidotes: ARS.; CHAM.",
+    "Modalities": [
+      "Worse: in cold; dampness",
+      "Worse: in a fog; in close room; least exposure; touch",
+      "Better: bending head backward"
+    ],
+    "Common names": "St. John's-wort",
+    "details": "The great remedy for injuries to nerves, especially of fingers, toes and nails. Crushed fingers, especially tips. Excessive painfulness is a guiding symptom to its use. Prevents lockjaw. PUNCTURED wounds. Relieves pain after operations. Quite supersedes the use of Morphia after operations. (Helmuth.) Spasms after every injury. Has an important action on the rectum; hemorrhoids. COCCYDYNIA. Spasmodic asthmatic attacks with changes of weather or before storms, better by copious expectoration. Injured nerves from bites of animals. Tetanus. Neuritis, tingling, burning and numbness. Constant drowsiness.",
+    "dosage": "Tincture, to third potency."
+  }
 }

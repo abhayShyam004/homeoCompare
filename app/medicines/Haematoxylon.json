@@ -1,7 +1,5 @@
 {
   "name": "Haematoxylon",
-  "Relationship": "Compare: CACTUS; COLOCY.; NAJA.",
-  "Common names": "Log wood",
   "symptoms": {
     "Head": [
       "Feels constricted",
@@ -24,8 +22,10 @@
     "Female": [
       "Pain in hypogastrium, attended with slimy, whitish leucorrhoea",
       "Weak feeling, with painful bearing down sensation at menstrual period"
-    ]
-  },
-  "details": "Sense of constriction is characteristic. SENSATION AS IF A BAR LAY ACROSS CHEST. Angina pectoris.",
-  "dosage": "Third potency."
+    ],
+    "Relationship": "Compare: CACTUS; COLOCY.; NAJA.",
+    "Common names": "Log wood",
+    "details": "Sense of constriction is characteristic. SENSATION AS IF A BAR LAY ACROSS CHEST. Angina pectoris.",
+    "dosage": "Third potency."
+  }
 }

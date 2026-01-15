@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Magneticus polus australis", 
-  "details": "Dryness of lids, easy dislocation of ankle, INGROWING TOE-NAILS, aching in patella, shooting in soles."
+  "symptoms": {
+    "details": "Dryness of lids, easy dislocation of ankle, INGROWING TOE-NAILS, aching in patella, shooting in soles."
+  },
+  "name": "Magneticus polus australis"
 }

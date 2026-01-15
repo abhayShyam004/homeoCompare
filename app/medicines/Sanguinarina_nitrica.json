@@ -1,7 +1,5 @@
 {
   "name": "Sanguinarina nitrica",
-  "Relationship": "Compare: SANGUIN. TARTARICUM (exophthalmos); MYDRIASIS; dim vision); ARUM TRIPH.; PSORIN.; KAL. BICH.",
-  "Common names": "Nitrate of Sanguinarine",
   "symptoms": {
     "Respiratory": [
       "Voice altered, deep, hoarse",
@@ -30,8 +28,10 @@
     "Throat": [
       "Rough, dry, constricted, burning",
       "Right tonsil sore, swallowing difficult"
-    ]
-  },
-  "details": "Is of use in polypus of the nose. Acute and chronic catarrh. Acute pharyngitis. (WYETHIA). Smarting and burning in throat and chest especially under sternum. INFLUENZA. Lachrymation, pains in eyes and head, sore scalp; SENSE OF OBSTRUCTION. Chronic follicular pharyngitis. Diseases of rectum",
-  "dosage": "Third trituration."
+    ],
+    "Relationship": "Compare: SANGUIN. TARTARICUM (exophthalmos); MYDRIASIS; dim vision); ARUM TRIPH.; PSORIN.; KAL. BICH.",
+    "Common names": "Nitrate of Sanguinarine",
+    "details": "Is of use in polypus of the nose. Acute and chronic catarrh. Acute pharyngitis. (WYETHIA). Smarting and burning in throat and chest especially under sternum. INFLUENZA. Lachrymation, pains in eyes and head, sore scalp; SENSE OF OBSTRUCTION. Chronic follicular pharyngitis. Diseases of rectum",
+    "dosage": "Third trituration."
+  }
 }

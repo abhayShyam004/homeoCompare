@@ -1,12 +1,5 @@
 {
   "name": "Dolichos pruriens",
-  "Relationship": "Compare: RHUS; BELL.; HEP.; NIT-AC.; FAGOPYR.",
-  "Modalities": [
-    "Worse: at night",
-    "Worse: scratching",
-    "Worse: right side"
-  ],
-  "Common names": "Dolichos Mucuna Cowhage",
   "symptoms": {
     "Abdomen": [
       "Constipation, with intense itching",
@@ -27,8 +20,15 @@
     "Throat": [
       "Pain in throat, worse swallowing, below right angle of jaw, as if splinter were imbedded vertically",
       "Pain in gums prevents sleep"
-    ]
-  },
-  "details": "A right-sided medicine, with pronounced liver and skin symptoms. A general INTENSE ITCHING without eruption. Exalted nervous sensibility. Senile pruritus. Hemorrhoidal diathesis.",
-  "dosage": "Sixth potency. Tincture, drop doses, in hemorrhoids."
+    ],
+    "Relationship": "Compare: RHUS; BELL.; HEP.; NIT-AC.; FAGOPYR.",
+    "Modalities": [
+      "Worse: at night",
+      "Worse: scratching",
+      "Worse: right side"
+    ],
+    "Common names": "Dolichos Mucuna Cowhage",
+    "details": "A right-sided medicine, with pronounced liver and skin symptoms. A general INTENSE ITCHING without eruption. Exalted nervous sensibility. Senile pruritus. Hemorrhoidal diathesis.",
+    "dosage": "Sixth potency. Tincture, drop doses, in hemorrhoids."
+  }
 }

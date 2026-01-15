@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Natrum succinicum", 
-  "details": "Every 3 hours. Catarrhal jaundice."
+  "symptoms": {
+    "details": "Every 3 hours. Catarrhal jaundice."
+  },
+  "name": "Natrum succinicum"
 }

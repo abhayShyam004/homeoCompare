@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Scorpio", 
-  "details": "Salivation; strabismus; tetanus."
+  "symptoms": {
+    "details": "Salivation; strabismus; tetanus."
+  },
+  "name": "Scorpio"
 }

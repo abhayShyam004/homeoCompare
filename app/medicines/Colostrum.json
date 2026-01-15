@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Colostrum", 
-  "details": "Diarrhoea in infants. Whole body smells sour. Colic."
+  "symptoms": {
+    "details": "Diarrhoea in infants. Whole body smells sour. Colic."
+  },
+  "name": "Colostrum"
 }

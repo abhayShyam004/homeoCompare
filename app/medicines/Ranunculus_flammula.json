@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ranunculus flammula", 
-  "details": "Ulceration; gangrene of arm."
+  "symptoms": {
+    "details": "Ulceration; gangrene of arm."
+  },
+  "name": "Ranunculus flammula"
 }

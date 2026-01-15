@@ -1,17 +1,5 @@
 {
   "name": "Crocus sativa",
-  "Relationship": "Antidote: OPIUM; BELL. Compare: IPEC.; TRILLIUM; PLAT.; CHINA; SABINA.",
-  "Modalities": [
-    "Worse: lying down",
-    "Worse: hot weather",
-    "Worse: warm room",
-    "Worse: in morning",
-    "Worse: fasting",
-    "Worse: before breakfast",
-    "Worse: looking fixedly at an object",
-    "Better: in open air"
-  ],
-  "Common names": "Saffron",
   "symptoms": {
     "Eyes": [
       "Sensation as if she had been looking through too sharp spectacles",
@@ -79,8 +67,20 @@
       "Cracking in hip-joint and knees",
       "Spasmodic contractions and twitchings of single set of muscles",
       "Pain in ankles and soles"
-    ]
-  },
-  "details": "Is a remedy often useful in Hemorrhages that are black and stringy. Tingling in various parts. Chorea and hysterical affections. Frequent and extreme changes in sensations and mental conditions. Anger with violence followed by repentance. LAUGHING mania. Drowsiness and LASSITUDE; better by literary labor.",
-  "dosage": "Tincture, to thirtieth attenuation."
+    ],
+    "Relationship": "Antidote: OPIUM; BELL. Compare: IPEC.; TRILLIUM; PLAT.; CHINA; SABINA.",
+    "Modalities": [
+      "Worse: lying down",
+      "Worse: hot weather",
+      "Worse: warm room",
+      "Worse: in morning",
+      "Worse: fasting",
+      "Worse: before breakfast",
+      "Worse: looking fixedly at an object",
+      "Better: in open air"
+    ],
+    "Common names": "Saffron",
+    "details": "Is a remedy often useful in Hemorrhages that are black and stringy. Tingling in various parts. Chorea and hysterical affections. Frequent and extreme changes in sensations and mental conditions. Anger with violence followed by repentance. LAUGHING mania. Drowsiness and LASSITUDE; better by literary labor.",
+    "dosage": "Tincture, to thirtieth attenuation."
+  }
 }

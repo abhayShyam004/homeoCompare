@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Scirrhinum", 
-  "details": "Cancer nosode - cancerous diathesis; enlarged glands; cancer of breast; worms."
+  "symptoms": {
+    "details": "Cancer nosode - cancerous diathesis; enlarged glands; cancer of breast; worms."
+  },
+  "name": "Scirrhinum"
 }

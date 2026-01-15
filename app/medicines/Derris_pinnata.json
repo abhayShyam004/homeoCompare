@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Derris pinnata", 
-  "details": "Neuralgic headaches of rheumatic origin."
+  "symptoms": {
+    "details": "Neuralgic headaches of rheumatic origin."
+  },
+  "name": "Derris pinnata"
 }

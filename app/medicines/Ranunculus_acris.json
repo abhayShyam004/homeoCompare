@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ranunculus acris", 
-  "details": "Pain in lumbar muscles and joints by bending and turning body."
+  "symptoms": {
+    "details": "Pain in lumbar muscles and joints by bending and turning body."
+  },
+  "name": "Ranunculus acris"
 }

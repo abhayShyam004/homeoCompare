@@ -1,17 +1,5 @@
 {
   "name": "Nux moschata",
-  "Relationship": "OLEUM MYRISTICAE - Oil of Nutmeg - (as a remedy for boils, felons, poisonous ulcers, it has been used in the 2X potency); ORNITHOGALUM (FLATULENCE, swollen feeling across lower chest; whenever she turns in bed, FEELS AS IF A BAG OF WATER turned also; gastric ulcer and cancer). MYRISTICA SEBIFERA (phlegmonous inflammation, hastens suppuration; powerful antiseptic. Ulcerative tendency in all tissues. Said to act more powerfully than Hepar and Silica). Compare: NUX-V.; PULS.; RHUS; IGN.; ASAF. Antidotes: CAMPH.; GELS.; VALER.",
-  "Modalities": [
-    "Worse: cold moist wind",
-    "Worse: cold food",
-    "Worse: cold washing",
-    "Worse: lying on painful side",
-    "Worse: motion",
-    "Worse: jar",
-    "Better: warmth",
-    "Better: dry weather"
-  ],
-  "Common names": "Nutmeg",
   "symptoms": {
     "Heart": [
       "Sensation as if something grasped heart",
@@ -96,8 +84,20 @@
       "Pain in right hip to knee",
       "worse, motion, especially going upstairs",
       "Fatigue on slight exertion"
-    ]
-  },
-  "details": "Marked tendency to FAINTING FITS, with heart failure. Cold extremities, EXTREME DRYNESS OF MUCOUS MEMBRANES and skin. Strange feeling, with irresistible DROWSINESS. Indicanuria. General inclination to become unconscious during acute attacks. Lypothymia. (IGNATIA.) Staggers on trying to walk.",
-  "dosage": "First to sixth potency."
+    ],
+    "Relationship": "OLEUM MYRISTICAE - Oil of Nutmeg - (as a remedy for boils, felons, poisonous ulcers, it has been used in the 2X potency); ORNITHOGALUM (FLATULENCE, swollen feeling across lower chest; whenever she turns in bed, FEELS AS IF A BAG OF WATER turned also; gastric ulcer and cancer). MYRISTICA SEBIFERA (phlegmonous inflammation, hastens suppuration; powerful antiseptic. Ulcerative tendency in all tissues. Said to act more powerfully than Hepar and Silica). Compare: NUX-V.; PULS.; RHUS; IGN.; ASAF. Antidotes: CAMPH.; GELS.; VALER.",
+    "Modalities": [
+      "Worse: cold moist wind",
+      "Worse: cold food",
+      "Worse: cold washing",
+      "Worse: lying on painful side",
+      "Worse: motion",
+      "Worse: jar",
+      "Better: warmth",
+      "Better: dry weather"
+    ],
+    "Common names": "Nutmeg",
+    "details": "Marked tendency to FAINTING FITS, with heart failure. Cold extremities, EXTREME DRYNESS OF MUCOUS MEMBRANES and skin. Strange feeling, with irresistible DROWSINESS. Indicanuria. General inclination to become unconscious during acute attacks. Lypothymia. (IGNATIA.) Staggers on trying to walk.",
+    "dosage": "First to sixth potency."
+  }
 }

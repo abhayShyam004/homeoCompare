@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ medicine.name }} | Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+    <style>
+        :root {
+            --sidebar-width: 280px;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --success: #10b981;
+            --danger: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-sidebar: #1e293b;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --text-white: #ffffff;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #334155;
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+        }
+        .sidebar-header { padding: 1.5rem; border-bottom: 1px solid var(--border); }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--radius-lg);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 1.1rem;
+        }
+        .logo-text h1 { font-size: 1rem; font-weight: 700; color: var(--text-white); }
+        .logo-text span { font-size: 0.7rem; color: var(--text-muted); }
+        .sidebar-nav { flex: 1; padding: 1rem 0; }
+        .nav-section { padding: 0 1rem; margin-bottom: 1.5rem; }
+        .nav-section-title { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 0 0.75rem; margin-bottom: 0.5rem; }
+        .nav-link { display: flex; align-items: center; gap: 12px; padding: 0.75rem 1rem; color: var(--text-secondary); text-decoration: none; border-radius: var(--radius); font-size: 0.9rem; font-weight: 500; transition: all 0.15s; margin-bottom: 4px; }
+        .nav-link:hover { background: var(--bg-input); color: var(--text-primary); }
+        .nav-link.active { background: rgba(99, 102, 241, 0.15); color: var(--primary-light); }
+        .nav-link i { width: 20px; text-align: center; }
+        .sidebar-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border); }
+        .logout-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 0.75rem; background: transparent; border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; }
+        .logout-btn:hover { background: rgba(239, 68, 68, 0.1); border-color: var(--danger); color: var(--danger); }
+
+        .main-wrapper { margin-left: var(--sidebar-width); flex: 1; height: 100vh; overflow-y: auto; }
+        .topbar {
+            height: 64px; background: var(--bg-card); border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;
+            position: sticky; top: 0; z-index: 50;
+        }
+        .topbar-left { display: flex; align-items: center; gap: 1rem; }
+        .back-btn { display: flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--bg-input); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; transition: all 0.15s; }
+        .back-btn:hover { background: var(--bg-dark); color: var(--text-primary); }
+        .topbar-title { font-size: 1.25rem; font-weight: 700; }
+        .topbar-actions { display: flex; gap: 0.75rem; }
+        .btn {
+            display: flex; align-items: center; gap: 8px; padding: 10px 20px;
+            border: none; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600;
+            cursor: pointer; transition: all 0.15s;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-success { background: var(--success); color: white; }
+        .btn-success:hover { opacity: 0.9; }
+
+        .main-content { padding: 2rem; }
+
+        .category-section { margin-bottom: 1.5rem; }
+        .category-header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 1rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0; cursor: pointer;
+        }
+        .category-header:hover { background: var(--bg-input); }
+        .category-title { font-size: 1rem; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+        .category-title i { color: var(--primary-light); }
+        .category-toggle { color: var(--text-muted); transition: transform 0.2s; }
+        .category-header.open .category-toggle { transform: rotate(180deg); }
+        .category-body {
+            background: var(--bg-dark); border: 1px solid var(--border); border-top: none;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg); padding: 1.25rem;
+            display: none;
+        }
+        .category-body.open { display: block; }
+        .category-textarea {
+            width: 100%; min-height: 150px; padding: 1rem;
+            background: var(--bg-card); border: 2px solid var(--border);
+            border-radius: var(--radius); font-family: 'Inter', monospace;
+            font-size: 0.9rem; color: var(--text-primary); resize: vertical;
+        }
+        .category-textarea:focus { outline: none; border-color: var(--primary); }
+
+        .save-toast {
+            position: fixed; bottom: 2rem; right: 2rem;
+            padding: 1rem 1.5rem; background: var(--success);
+            border-radius: var(--radius); color: white;
+            font-weight: 600; display: none; z-index: 100;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="{% url 'home' %}" class="logo">
+                <div class="logo-icon">Hc</div>
+                <div class="logo-text">
+                    <h1>HomeoCompare</h1>
+                    <span>Admin Panel</span>
+                </div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Dashboard</div>
+                <a href="{% url 'admin_panel' %}" class="nav-link"><i class="fas fa-chart-line"></i><span>Analytics</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Manage Medicines</div>
+                <a href="{% url 'admin_boericke' %}" class="nav-link {% if source == 'boericke' %}active{% endif %}"><i class="fas fa-book"></i><span>Boericke's</span></a>
+                <a href="{% url 'admin_allen' %}" class="nav-link {% if source == 'allen' %}active{% endif %}"><i class="fas fa-book-medical"></i><span>Allen's Keynotes</span></a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="{% url 'admin_logout' %}" class="logout-btn"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="topbar-left">
+                <a href="{% if source == 'boericke' %}{% url 'admin_boericke' %}{% else %}{% url 'admin_allen' %}{% endif %}" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <h1 class="topbar-title">{{ medicine.name }}</h1>
+            </div>
+            <div class="topbar-actions">
+                <button class="btn btn-success" id="saveBtn">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            {% if source == 'boericke' %}
+                <!-- Boericke format -->
+                {% for key, value in medicine.symptoms.items %}
+                <div class="category-section">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <span class="category-title"><i class="fas fa-stethoscope"></i> {{ key }}</span>
+                        <i class="fas fa-chevron-down category-toggle"></i>
+                    </div>
+                    <div class="category-body">
+                        <textarea class="category-textarea" data-key="symptoms.{{ key }}">{{ value }}</textarea>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <!-- Allen format -->
+                {% for key, value in medicine.items %}
+                {% if key != 'name' %}
+                <div class="category-section">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <span class="category-title"><i class="fas fa-stethoscope"></i> {{ key }}</span>
+                        <i class="fas fa-chevron-down category-toggle"></i>
+                    </div>
+                    <div class="category-body">
+                        <textarea class="category-textarea" data-key="{{ key }}">{{ value }}</textarea>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </main>
+    </div>
+
+    <div class="save-toast" id="saveToast">
+        <i class="fas fa-check-circle"></i> Changes saved successfully!
+    </div>
+
+    <script>
+        function toggleCategory(header) {
+            header.classList.toggle('open');
+            header.nextElementSibling.classList.toggle('open');
+        }
+
+        // Open first category by default
+        const firstHeader = document.querySelector('.category-header');
+        if (firstHeader) {
+            firstHeader.classList.add('open');
+            firstHeader.nextElementSibling.classList.add('open');
+        }
+
+        // Save button
+        document.getElementById('saveBtn').addEventListener('click', async function() {
+            const btn = this;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+
+            // Collect all data
+            const content = {};
+            const source = '{{ source }}';
+            
+            {% if source == 'boericke' %}
+            content.name = '{{ medicine.name }}';
+            content.symptoms = {};
+            document.querySelectorAll('.category-textarea').forEach(ta => {
+                const key = ta.dataset.key;
+                if (key === 'details') {
+                    content.details = ta.value;
+                } else if (key.startsWith('symptoms.')) {
+                    const symKey = key.replace('symptoms.', '');
+                    content.symptoms[symKey] = ta.value.split(';').map(s => s.trim()).filter(s => s);
+                }
+            });
+            {% else %}
+            document.querySelectorAll('.category-textarea').forEach(ta => {
+                content[ta.dataset.key] = ta.value;
+            });
+            {% endif %}
+
+            try {
+                const resp = await fetch('{% url "admin_medicine_save" %}', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        source: '{{ source }}',
+                        name: '{{ medicine.name }}',
+                        content: content
+                    })
+                });
+                
+                if (resp.ok) {
+                    document.getElementById('saveToast').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('saveToast').style.display = 'none';
+                    }, 3000);
+                } else {
+                    alert('Error saving changes');
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
+            }
+
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-save"></i> Save Changes';
+        });
+    </script>
+</body>
+</html>

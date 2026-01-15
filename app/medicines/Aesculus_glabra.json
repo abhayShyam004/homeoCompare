@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Aesculus glabra", 
-  "details": "Ohio-Buckeye Proctitis. Very painful, dark purple, external hemorrhoids, with constipation and vertigo and portal congestion. Speech thick, tickling in throat, impaired vision, paresis."
+  "symptoms": {
+    "details": "Ohio-Buckeye Proctitis. Very painful, dark purple, external hemorrhoids, with constipation and vertigo and portal congestion. Speech thick, tickling in throat, impaired vision, paresis."
+  },
+  "name": "Aesculus glabra"
 }

@@ -1,9 +1,4 @@
 {
-  "Modalities": [
-    "Worse: at night",
-    "Worse: fast walking",
-    "Worse: going upstairs"
-  ],
   "symptoms": {
     "Head": [
       "Worries over trifles",
@@ -35,9 +30,14 @@
       "Crumbling away of finger-nails",
       "Profuse, offensive sweat of feet",
       "Perspiration on slight exertion"
-    ]
+    ],
+    "Modalities": [
+      "Worse: at night",
+      "Worse: fast walking",
+      "Worse: going upstairs"
+    ],
+    "Common names": "A volatile acid obtained chiefly from butter",
+    "dosage": "Third attenuation."
   },
-  "Common names": "A volatile acid obtained chiefly from butter",
-  "name": "Butyric acid",
-  "dosage": "Third attenuation."
+  "name": "Butyric acid"
 }

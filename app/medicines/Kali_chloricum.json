@@ -1,34 +1,34 @@
 {
   "symptoms": {
     "Stomach": [
-      "Feeling of weight in epigastric and umbilical region", 
-      "Flatulence", 
+      "Feeling of weight in epigastric and umbilical region",
+      "Flatulence",
       "Vomiting of greenish black matter"
-    ], 
+    ],
     "Urine": [
-      "Hematuria, diuresis", 
-      "Necleo-albumin and bile, high phosphoric acid, with toatl solids", 
+      "Hematuria, diuresis",
+      "Necleo-albumin and bile, high phosphoric acid, with toatl solids",
       "Albuminous, scanty, suppressed"
-    ], 
+    ],
     "Stool": [
       "Diarrhea, profuse, greenish mucus"
-    ], 
+    ],
     "Mouth": [
-      "Profuse secretion of acid saliva", 
-      "Fetor", 
-      "Whole mucous surface red, tumid, with gray based ulcers", 
-      "Tongue swollen", 
-      "Mercurial stomatitis", 
+      "Profuse secretion of acid saliva",
+      "Fetor",
+      "Whole mucous surface red, tumid, with gray based ulcers",
+      "Tongue swollen",
+      "Mercurial stomatitis",
       "Stomatitis- aphthous and  gangrenous"
-    ], 
+    ],
     "Skin": [
-      "Discolored, chocolate tint", 
-      "Jaundice", 
+      "Discolored, chocolate tint",
+      "Jaundice",
       "Itching miliary or papular eruptions"
-    ]
-  }, 
-  "details": "Acts very destructively on the kidneys, producing a croupous nephritis, hemoglobinuria, etc. Parenchymatous nephritis with stomatitis. Produces most acute ulcerative and follicular stomatitis.  Noma. Toxemic conditions of pregnancy (urinary symptoms). Chronic Nephritis; hepatitis. Septicemia.", 
-  "Common names": "Chlorate of Potassium", 
-  "name": "Kali chloricum", 
-  "dosage": "Second to sixth potency. Use cautiously locally as it is poisonous."
+    ],
+    "details": "Acts very destructively on the kidneys, producing a croupous nephritis, hemoglobinuria, etc. Parenchymatous nephritis with stomatitis. Produces most acute ulcerative and follicular stomatitis.  Noma. Toxemic conditions of pregnancy (urinary symptoms). Chronic Nephritis; hepatitis. Septicemia.",
+    "Common names": "Chlorate of Potassium",
+    "dosage": "Second to sixth potency. Use cautiously locally as it is poisonous."
+  },
+  "name": "Kali chloricum"
 }

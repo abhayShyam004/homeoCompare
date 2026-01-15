@@ -1,10 +1,5 @@
 {
   "name": "Gambogia",
-  "Relationship": "Compare: CROTON; ALOES; POD.",
-  "Modalities": [
-    "Worse: towards evening and at night"
-  ],
-  "Common names": "Garcinia Morella Gummi Gutti",
   "symptoms": {
     "Head": [
       "Itching and burning in eyes",
@@ -25,8 +20,13 @@
       "Profuse, watery diarrhoea in hot weather, particularly old people",
       "Dysentery, with retained scybala, with pain in sacral region",
       "Rumbling and rolling"
-    ]
-  },
-  "details": "The use of this drug in Homeopathy has been confined to its action on the alimentary tract. It produces a diarrhoea very similar to Croton. From its pathogenesis, it is very evident that it has very intense and definite action especially on the gastroenteric tract.",
-  "dosage": "Third to thirtieth potency. Gamboge painted on the chest in lung tuberculosis is considered by Abrams specific and incipient cases are symptomatically cured in several weeks."
+    ],
+    "Relationship": "Compare: CROTON; ALOES; POD.",
+    "Modalities": [
+      "Worse: towards evening and at night"
+    ],
+    "Common names": "Garcinia Morella Gummi Gutti",
+    "details": "The use of this drug in Homeopathy has been confined to its action on the alimentary tract. It produces a diarrhoea very similar to Croton. From its pathogenesis, it is very evident that it has very intense and definite action especially on the gastroenteric tract.",
+    "dosage": "Third to thirtieth potency. Gamboge painted on the chest in lung tuberculosis is considered by Abrams specific and incipient cases are symptomatically cured in several weeks."
+  }
 }

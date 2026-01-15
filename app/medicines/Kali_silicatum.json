@@ -1,14 +1,5 @@
 {
   "name": "Kali silicatum",
-  "Modalities": [
-    "Worse: open air",
-    "Worse: drafts",
-    "Worse: cold",
-    "Worse: exertion",
-    "Worse: motion uncovering",
-    "Worse: bathing"
-  ],
-  "Common names": "Silicate of Potash",
   "symptoms": {
     "Gastric": [
       "Weight in stomach after eating, nausea, pain, flatulence",
@@ -29,8 +20,17 @@
       "Stiffness over body and limbs",
       "Twitching of muscles",
       "Creeping sensation over limbs"
-    ]
-  },
-  "details": "A deep-acting remedy. Lassitude is very marked. Desire to lie down all the time. Emaciation. Gouty nodosities",
-  "dosage": "Higher potencies."
+    ],
+    "Modalities": [
+      "Worse: open air",
+      "Worse: drafts",
+      "Worse: cold",
+      "Worse: exertion",
+      "Worse: motion uncovering",
+      "Worse: bathing"
+    ],
+    "Common names": "Silicate of Potash",
+    "details": "A deep-acting remedy. Lassitude is very marked. Desire to lie down all the time. Emaciation. Gouty nodosities",
+    "dosage": "Higher potencies."
+  }
 }

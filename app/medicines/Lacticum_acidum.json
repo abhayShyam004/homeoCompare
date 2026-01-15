@@ -1,7 +1,5 @@
 {
   "name": "Lacticum acidum",
-  "Relationship": "Compare: SARCOLACTIC ACID Q.V. LITHIA; PHOS-AC.",
-  "Common names": "Lactic Acid",
   "symptoms": {
     "Stomach": [
       "Burning, hot gas from stomach to throat, causing profuse secretion of tenacious mucus, worse smoking",
@@ -30,8 +28,10 @@
       "Limbs feel chilly",
       "Rheumatic pain in joints and shoulders, wrists, knees, with much weakness",
       "Trembling of whole body while walking"
-    ]
-  },
-  "details": "Morning sickness, DIABETES, and rheumatism offer a field for this remedy. TROUBLES IN THE BREASTS. Locally, in the tuberculous ulceration of vocal cords.",
-  "dosage": "Third to thirtieth potency. Six to ten drops in a small glass of water in acute gastroenteritis (Cartier.)."
+    ],
+    "Relationship": "Compare: SARCOLACTIC ACID Q.V. LITHIA; PHOS-AC.",
+    "Common names": "Lactic Acid",
+    "details": "Morning sickness, DIABETES, and rheumatism offer a field for this remedy. TROUBLES IN THE BREASTS. Locally, in the tuberculous ulceration of vocal cords.",
+    "dosage": "Third to thirtieth potency. Six to ten drops in a small glass of water in acute gastroenteritis (Cartier.)."
+  }
 }

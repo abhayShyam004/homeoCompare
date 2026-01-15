@@ -1,10 +1,5 @@
 {
   "name": "Aethusa cynapium",
-  "Modalities": [
-    "Worse: 3 to four am and evenings; warmth",
-    "Worse: summer"
-  ],
-  "Common names": "Fool's Parsley",
   "symptoms": {
     "Urine": [
       "Cutting pain in bladder, with frequent urging",
@@ -126,8 +121,13 @@
       "Weakness of lower extremities",
       "Squinting of eyes downward",
       "Numbness of hands and feet"
-    ]
-  },
-  "details": "The characteristic symptoms relate mainly to the brain and nervous system, connected with gastrointestinal disturbance. Anguish, crying, and expression of uneasiness and discontent, lead to this remedy most frequently in disease in children, during dentition, summer complaint, when, with the diarrhoea, there is MARKED INABILITY TO DIGEST MILK, and poor circulation. Symptoms set in with VIOLENCE.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Modalities": [
+      "Worse: 3 to four am and evenings; warmth",
+      "Worse: summer"
+    ],
+    "Common names": "Fool's Parsley",
+    "details": "The characteristic symptoms relate mainly to the brain and nervous system, connected with gastrointestinal disturbance. Anguish, crying, and expression of uneasiness and discontent, lead to this remedy most frequently in disease in children, during dentition, summer complaint, when, with the diarrhoea, there is MARKED INABILITY TO DIGEST MILK, and poor circulation. Symptoms set in with VIOLENCE.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

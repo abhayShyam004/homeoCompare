@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Zincum phosphoricum", 
-  "details": "Neuralgia of head and face; lightning-like pains in locomotor ataxia, brain-fag, nervousness, and vertigo; sexual excitement and sleeplessness."
+  "symptoms": {
+    "details": "Neuralgia of head and face; lightning-like pains in locomotor ataxia, brain-fag, nervousness, and vertigo; sexual excitement and sleeplessness."
+  },
+  "name": "Zincum phosphoricum"
 }

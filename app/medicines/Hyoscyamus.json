@@ -1,14 +1,5 @@
 {
   "name": "Hyoscyamus",
-  "Relationship": "Antidotes: BELL.; CAMPH. Compare: BELLAD.; STRAM.; AGARIC.; GELS.; HYOS. HYDROBROM. SCOPOLAMINE HYDROBROMIDE. (Paralysis agitans; TREMORS OF DISSEMINATED SCLEROSIS. Sleeplessness and nervous agitation. Dry cough in phthisis. Similar in its effects to alcohol, both recent and remote. Corresponds to the effects of strong poisons introduced into or generated within the body. Symptoms of uraemia and acute nervous exhaustion. A remedy for shock. Third and fourth Dec. trituration. In physiological dosage (1-200 gr.) mania and chorea; insomnia. SCOPOLA (Japanese Belladonna) - chemically identical with Hyoscine. (Joyous delirium, licking of lips and smacking of mouth; sleepless; tries to get out of bed; sees cats, picks imaginary hairs, warms hands before imaginary fire, etc.)",
-  "Modalities": [
-    "Worse: at night",
-    "Worse: during menses",
-    "Worse: after eating",
-    "Worse: when lying down",
-    "Better: stooping"
-  ],
-  "Common names": "Henbane",
   "symptoms": {
     "Eyes": [
       "Spasmodic closing of lids",
@@ -114,8 +105,17 @@
       "Colic, as if abdomen would burst",
       "Distention",
       "Tympanites"
-    ]
-  },
-  "details": "Disturbs the nervous system profoundly. It is as if some diabolical force took possession of the brain and prevented its functions. It causes a perfect picture of MANIA OF A QUARRELSOME AND OBSCENE CHARACTER. Inclined to be unseemly and immodest in acts, gestures and expressions. Very talkative, and persists in stripping herself, or uncovering genitals. Is jealous, afraid of being poisoned, etc. Its symptoms also point to weakness and NERVOUS AGITATION; hence typhoid and other infections with COMA VIGIL. TREMULOUS WEAKNESS AND TWITCHING OF TENDONS. Subsultus tendinum. Muscular twitchings, spasmodic affections, generally with delirium. Non-inflammatory cerebral activity. TOXIC GASTRITIS.",
-  "dosage": "Sixth, to 200th potency."
+    ],
+    "Relationship": "Antidotes: BELL.; CAMPH. Compare: BELLAD.; STRAM.; AGARIC.; GELS.; HYOS. HYDROBROM. SCOPOLAMINE HYDROBROMIDE. (Paralysis agitans; TREMORS OF DISSEMINATED SCLEROSIS. Sleeplessness and nervous agitation. Dry cough in phthisis. Similar in its effects to alcohol, both recent and remote. Corresponds to the effects of strong poisons introduced into or generated within the body. Symptoms of uraemia and acute nervous exhaustion. A remedy for shock. Third and fourth Dec. trituration. In physiological dosage (1-200 gr.) mania and chorea; insomnia. SCOPOLA (Japanese Belladonna) - chemically identical with Hyoscine. (Joyous delirium, licking of lips and smacking of mouth; sleepless; tries to get out of bed; sees cats, picks imaginary hairs, warms hands before imaginary fire, etc.)",
+    "Modalities": [
+      "Worse: at night",
+      "Worse: during menses",
+      "Worse: after eating",
+      "Worse: when lying down",
+      "Better: stooping"
+    ],
+    "Common names": "Henbane",
+    "details": "Disturbs the nervous system profoundly. It is as if some diabolical force took possession of the brain and prevented its functions. It causes a perfect picture of MANIA OF A QUARRELSOME AND OBSCENE CHARACTER. Inclined to be unseemly and immodest in acts, gestures and expressions. Very talkative, and persists in stripping herself, or uncovering genitals. Is jealous, afraid of being poisoned, etc. Its symptoms also point to weakness and NERVOUS AGITATION; hence typhoid and other infections with COMA VIGIL. TREMULOUS WEAKNESS AND TWITCHING OF TENDONS. Subsultus tendinum. Muscular twitchings, spasmodic affections, generally with delirium. Non-inflammatory cerebral activity. TOXIC GASTRITIS.",
+    "dosage": "Sixth, to 200th potency."
+  }
 }

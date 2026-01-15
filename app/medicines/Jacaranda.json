@@ -1,7 +1,5 @@
 {
   "name": "Jacaranda",
-  "Relationship": "Compare: THUJA; CORALLIUM; JACARANDA GUALANDAI (in syphilitic symptoms, especially of eye and throat. Chancroids; ATONIC ULCERS. Dark, painless diarrhoea).",
-  "Common names": "Brazilian Caroba-tree",
   "symptoms": {
     "Head": [
       "Vertigo on rising, with heavy forehead",
@@ -33,8 +31,10 @@
       "Prepuce painful and swollen",
       "Chancroid",
       "Chordee"
-    ]
-  },
-  "details": "Has reputation as a remedy in venereal diseases and rheumatism. Morning sickness. The urinary and sexual symptoms are important. Rheumatic symptoms. In syphilitic symptoms, especially of eye and throat. Chancroids; ATONIC ULCERS. Dark, painless diarrhoea.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: THUJA; CORALLIUM; JACARANDA GUALANDAI (in syphilitic symptoms, especially of eye and throat. Chancroids; ATONIC ULCERS. Dark, painless diarrhoea).",
+    "Common names": "Brazilian Caroba-tree",
+    "details": "Has reputation as a remedy in venereal diseases and rheumatism. Morning sickness. The urinary and sexual symptoms are important. Rheumatic symptoms. In syphilitic symptoms, especially of eye and throat. Chancroids; ATONIC ULCERS. Dark, painless diarrhoea.",
+    "dosage": "Tincture, to third potency."
+  }
 }

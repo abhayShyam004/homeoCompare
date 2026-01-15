@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Solaninum aceticum", 
-  "details": "Threatening paralysis of the lungs in the course of bronchitis in the aged and children must cough a long time before able to raise expectoration."
+  "symptoms": {
+    "details": "Threatening paralysis of the lungs in the course of bronchitis in the aged and children must cough a long time before able to raise expectoration."
+  },
+  "name": "Solaninum aceticum"
 }

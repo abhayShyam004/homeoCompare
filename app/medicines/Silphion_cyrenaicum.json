@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Silphion cyrenaicum", 
-  "details": "Phthisis pulmonum, with incessant cough, profuse night-sweats, emaciation, etc."
+  "symptoms": {
+    "details": "Phthisis pulmonum, with incessant cough, profuse night-sweats, emaciation, etc."
+  },
+  "name": "Silphion cyrenaicum"
 }

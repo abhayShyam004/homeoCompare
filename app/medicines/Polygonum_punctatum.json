@@ -1,31 +1,31 @@
 {
-  "name": "Polygonum punctatum", 
-  "Relationship": "Compare: CARDUUS MAR. (ulcers); HAMAM.; SENECIO; POLYGONUM PERSICARIA (renal colic and calculi; GANGRENE); POLYGONUM SAGITTATUM - arrow-leaved. Tear-thumb - (2x for PAINS OF NEPHRITIC COLIC; suppurative nephritis; lancinating pains along spine; itching of hard palate; burning inner side of right foot and ankle. C.M. Boger); POLYGONUM AVICULARE - knot-grass - (in material doses of tincture, found useful in phthisis pulmonalis and intermittent fever, and especially in ARTERIOSCLEROSIS. Erythema).", 
-  "Common names": "Hydropiper Smart weed", 
+  "name": "Polygonum punctatum",
   "symptoms": {
     "Urine": [
       "Painful constriction at neck of bladder"
-    ], 
+    ],
     "Abdomen": [
-      "Flatulent colic", 
+      "Flatulent colic",
       "Griping pain, with great rumbling, nausea, and liquid faeces"
-    ], 
+    ],
     "Female": [
-      "Sensation of weight and tension within pelvis", 
-      "Aching pains in hips and loins", 
-      "Sensation as if hips were being drawn together", 
-      "Amenorrhoea", 
+      "Sensation of weight and tension within pelvis",
+      "Aching pains in hips and loins",
+      "Sensation as if hips were being drawn together",
+      "Amenorrhoea",
       "Shooting pains through breasts"
-    ], 
+    ],
     "Skin": [
       "Superficial ulcers and sores on lower extremities, especially in females at climacteric"
-    ], 
+    ],
     "Rectum": [
-      "Hemorrhoids", 
-      "Liquid faeces", 
+      "Hemorrhoids",
+      "Liquid faeces",
       "Interior of anus studded with itching eminence"
-    ]
-  }, 
-  "details": "Metrorrhagia, also Amenorrhoea in young girls. VARICOSIS; hemorrhoids and rectal pockets. Burning in stomach followed by feeling of coldness in the pit of the stomach.", 
-  "dosage": "Tincture."
+    ],
+    "Relationship": "Compare: CARDUUS MAR. (ulcers); HAMAM.; SENECIO; POLYGONUM PERSICARIA (renal colic and calculi; GANGRENE); POLYGONUM SAGITTATUM - arrow-leaved. Tear-thumb - (2x for PAINS OF NEPHRITIC COLIC; suppurative nephritis; lancinating pains along spine; itching of hard palate; burning inner side of right foot and ankle. C.M. Boger); POLYGONUM AVICULARE - knot-grass - (in material doses of tincture, found useful in phthisis pulmonalis and intermittent fever, and especially in ARTERIOSCLEROSIS. Erythema).",
+    "Common names": "Hydropiper Smart weed",
+    "details": "Metrorrhagia, also Amenorrhoea in young girls. VARICOSIS; hemorrhoids and rectal pockets. Burning in stomach followed by feeling of coldness in the pit of the stomach.",
+    "dosage": "Tincture."
+  }
 }

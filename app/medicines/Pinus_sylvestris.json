@@ -1,7 +1,5 @@
 {
   "name": "Pinus sylvestris",
-  "Relationship": "Compare: PINUS LAMBERTINA - Sugar Pine - (constipation, amenorrhoea, abortion). PINUS LAMBERTINA sap is a decided cathartic. Delayed and painful menstruation. Also, ABIES CAN.; ABIES NIG.",
-  "Common names": "Scotch Pine",
   "symptoms": {
     "Skin": [
       "Nose itches",
@@ -12,8 +10,10 @@
       "Stiffness",
       "gouty pain in all joints, especially finger-joints",
       "Cramps in calves"
-    ]
-  },
-  "details": "Has been found of real use in the treatment of WEAK ANKLES and tardiness in walking, in scrofulous and rachitic children. Emaciation of lower extremities. Pinus sylvestris combines rheumatic, bronchial and urticarious symptoms; the chest seems thin and to give way.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: PINUS LAMBERTINA - Sugar Pine - (constipation, amenorrhoea, abortion). PINUS LAMBERTINA sap is a decided cathartic. Delayed and painful menstruation. Also, ABIES CAN.; ABIES NIG.",
+    "Common names": "Scotch Pine",
+    "details": "Has been found of real use in the treatment of WEAK ANKLES and tardiness in walking, in scrofulous and rachitic children. Emaciation of lower extremities. Pinus sylvestris combines rheumatic, bronchial and urticarious symptoms; the chest seems thin and to give way.",
+    "dosage": "Tincture, to third potency."
+  }
 }

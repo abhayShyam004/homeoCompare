@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Colloidal manganese", 
-  "details": "Boils and other staphylococcal infections."
+  "symptoms": {
+    "details": "Boils and other staphylococcal infections."
+  },
+  "name": "Colloidal manganese"
 }

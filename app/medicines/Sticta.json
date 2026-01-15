@@ -1,10 +1,5 @@
 {
   "name": "Sticta",
-  "Relationship": "Compare: DATURA ARBOREA - BOUGMANCIA CANDIDA (cannot concentrate thoughts; brain floats in thousands of problems and grand ideas. Floating sensation as if ideas were floating outside of brain. Headache, heartburn. Burning sensation around cardiac end of stomach, extending to oesophagus with sense of constriction. Heat and fullness over liver region.) CERTRARIA - Iceland Moss (chronic diarrhoea, phthisis, bloody expectoration. Is used as a decoction and boiled with milk as an expectorant and nutrient in bronchorrhea, catarrh, etc.) Also compare: ERYNG.; DROS.; STILLING.; RUMEX; SAMBUCUS.",
-  "Modalities": [
-    "Worse: sudden changes of temperature"
-  ],
-  "Common names": "Lung wort",
   "symptoms": {
     "Head": [
       "Catarrhal headache before discharge appears",
@@ -59,8 +54,13 @@
       "Spot of inflammation and redness over affected joint",
       "Rheumatic pain in right shoulder joint, deltoid, and biceps",
       "Rheumatic pains precede catarrhal symptoms"
-    ]
-  },
-  "details": "Offers a set of symptoms like coryza, bronchial catarrh and influenza, together with nervous and RHEUMATIC disturbances. There is a general feeling of dullness and malaise, as when a cold is coming on; dull, heavy pressure in forehead, catarrhal conjunctivitis, etc. RHEUMATIC STIFFNESS OF NECK.",
-  "dosage": "Tincture, to sixth potency."
+    ],
+    "Relationship": "Compare: DATURA ARBOREA - BOUGMANCIA CANDIDA (cannot concentrate thoughts; brain floats in thousands of problems and grand ideas. Floating sensation as if ideas were floating outside of brain. Headache, heartburn. Burning sensation around cardiac end of stomach, extending to oesophagus with sense of constriction. Heat and fullness over liver region.) CERTRARIA - Iceland Moss (chronic diarrhoea, phthisis, bloody expectoration. Is used as a decoction and boiled with milk as an expectorant and nutrient in bronchorrhea, catarrh, etc.) Also compare: ERYNG.; DROS.; STILLING.; RUMEX; SAMBUCUS.",
+    "Modalities": [
+      "Worse: sudden changes of temperature"
+    ],
+    "Common names": "Lung wort",
+    "details": "Offers a set of symptoms like coryza, bronchial catarrh and influenza, together with nervous and RHEUMATIC disturbances. There is a general feeling of dullness and malaise, as when a cold is coming on; dull, heavy pressure in forehead, catarrhal conjunctivitis, etc. RHEUMATIC STIFFNESS OF NECK.",
+    "dosage": "Tincture, to sixth potency."
+  }
 }

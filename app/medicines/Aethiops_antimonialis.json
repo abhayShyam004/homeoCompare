@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Aethiops antimonialis", 
-  "details": "Hydrargyrum stibiato sulfuratum. Often more effective than the above in scrofulous eruptions, glandular swellings, otorrhoea and scrofulous eye affections, corneal ulcers. Third trituration."
+  "symptoms": {
+    "details": "Hydrargyrum stibiato sulfuratum. Often more effective than the above in scrofulous eruptions, glandular swellings, otorrhoea and scrofulous eye affections, corneal ulcers. Third trituration."
+  },
+  "name": "Aethiops antimonialis"
 }

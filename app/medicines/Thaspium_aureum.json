@@ -1,10 +1,5 @@
 {
   "name": "Thaspium aureum",
-  "Relationship": "Compare: AGAR.; STRAM.; TARENT.; CICUTA; AETHUSA.",
-  "Modalities": [
-    "Worse: during sleep"
-  ],
-  "Common names": "Zizia Meadow Parsnip",
   "symptoms": {
     "Head": [
       "Pressure on top, in right temple, associated with backache"
@@ -31,8 +26,13 @@
     "Male": [
       "Sexual power increased",
       "Great lassitude following coitus"
-    ]
-  },
-  "details": "Hysteria, epilepsy, chorea, hypochondriasis, come within the sphere of this remedy.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: AGAR.; STRAM.; TARENT.; CICUTA; AETHUSA.",
+    "Modalities": [
+      "Worse: during sleep"
+    ],
+    "Common names": "Zizia Meadow Parsnip",
+    "details": "Hysteria, epilepsy, chorea, hypochondriasis, come within the sphere of this remedy.",
+    "dosage": "Tincture, to third potency."
+  }
 }

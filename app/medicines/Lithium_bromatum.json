@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lithium bromatum", 
-  "details": "Cerebral congestion, threatened apoplexy, insomnia and epilepsy."
+  "symptoms": {
+    "details": "Cerebral congestion, threatened apoplexy, insomnia and epilepsy."
+  },
+  "name": "Lithium bromatum"
 }

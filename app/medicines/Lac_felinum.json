@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lac felinum", 
-  "details": "Cat's Milk - ciliary neuralgia; eye symptoms, photophobia; ASTHENOPIA; dysmenorrhoea"
+  "symptoms": {
+    "details": "Cat's Milk - ciliary neuralgia; eye symptoms, photophobia; ASTHENOPIA; dysmenorrhoea"
+  },
+  "name": "Lac felinum"
 }

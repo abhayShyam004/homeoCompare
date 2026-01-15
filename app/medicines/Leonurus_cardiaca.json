@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Leonurus cardiaca", 
-  "details": "MOTHER-WORT Influences pelvic organs, allays spasm and nervous irritability, promotes secretion and reduces febrile excitement. Valuable in suppressed menses and LOCHIA; dysentery; vomiting, frightful pains in abdomen, violent thirst. Tongue dry and cracked."
+  "symptoms": {
+    "details": "MOTHER-WORT Influences pelvic organs, allays spasm and nervous irritability, promotes secretion and reduces febrile excitement. Valuable in suppressed menses and LOCHIA; dysentery; vomiting, frightful pains in abdomen, violent thirst. Tongue dry and cracked."
+  },
+  "name": "Leonurus cardiaca"
 }

@@ -1,13 +1,5 @@
 {
   "name": "Fagopyrum",
-  "Relationship": "Compare: DOLICHOS; BOVISTA; URTICA.",
-  "Modalities": [
-    "Better: cold water",
-    "Better: coffee; worse",
-    "Better: in afternoon; from sunlight",
-    "Better: scratching"
-  ],
-  "Common names": "Buckwheat",
   "symptoms": {
     "Heart": [
       "Pain around heart, better lying on back, extending to left shoulder and arm",
@@ -67,8 +59,16 @@
       "Vehement itching in arms and legs",
       "worse towards evening",
       "Streaking pains in arms and legs"
-    ]
-  },
-  "details": "Its action on the skin, producing pruritus, is very marked. Visible pulsation of arteries. Fluent coryza. Offensive excretions. Itching erythema. PRURITUS SENILIS. Post-nasal catarrh; dry crusts, granular appearance of posterior nares with itching.",
-  "dosage": "Third potency and 12X."
+    ],
+    "Relationship": "Compare: DOLICHOS; BOVISTA; URTICA.",
+    "Modalities": [
+      "Better: cold water",
+      "Better: coffee; worse",
+      "Better: in afternoon; from sunlight",
+      "Better: scratching"
+    ],
+    "Common names": "Buckwheat",
+    "details": "Its action on the skin, producing pruritus, is very marked. Visible pulsation of arteries. Fluent coryza. Offensive excretions. Itching erythema. PRURITUS SENILIS. Post-nasal catarrh; dry crusts, granular appearance of posterior nares with itching.",
+    "dosage": "Third potency and 12X."
+  }
 }

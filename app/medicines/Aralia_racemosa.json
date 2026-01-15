@@ -1,7 +1,5 @@
 {
   "name": "Aralia racemosa",
-  "Relationship": "Compare: Pecten - Scallop (humid asthma. Quick, labored breathing. Constriction of chest, especially right side. Asthma preceded by coryza and burning in throat and chest. Attack ends with copious expectoration of tough, frothy mucus. Worse at night.) Ars. Iod.; Naphtha line; Cepa; Rosa; Sabad.; Sinapis.",
-  "Common names": "American Spikenard",
   "symptoms": {
     "Respiratory": [
       "Constriction of chest",
@@ -19,8 +17,10 @@
       "Lochia suppressed, with tympanites",
       "Menses suppressed",
       "leucorrhoea foul-smelling, acrid, with pressing-down pain"
-    ]
-  },
-  "details": "This is a remedy for asthmatic conditions, with COUGH AGGRAVATED ON LYING DOWN. Drenching sweat during sleep. Extreme sensitiveness to drafts. Diarrhoea, prolapse of rectum. Aching in rectum extending upwards; worse lying on side lain upon.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: Pecten - Scallop (humid asthma. Quick, labored breathing. Constriction of chest, especially right side. Asthma preceded by coryza and burning in throat and chest. Attack ends with copious expectoration of tough, frothy mucus. Worse at night.) Ars. Iod.; Naphtha line; Cepa; Rosa; Sabad.; Sinapis.",
+    "Common names": "American Spikenard",
+    "details": "This is a remedy for asthmatic conditions, with COUGH AGGRAVATED ON LYING DOWN. Drenching sweat during sleep. Extreme sensitiveness to drafts. Diarrhoea, prolapse of rectum. Aching in rectum extending upwards; worse lying on side lain upon.",
+    "dosage": "Tincture, to third potency."
+  }
 }

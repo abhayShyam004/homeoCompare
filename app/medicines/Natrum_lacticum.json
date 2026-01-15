@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Natrum lacticum", 
-  "details": "Rheumatism and gout; gouty concretions; rheumatism with diabetes."
+  "symptoms": {
+    "details": "Rheumatism and gout; gouty concretions; rheumatism with diabetes."
+  },
+  "name": "Natrum lacticum"
 }

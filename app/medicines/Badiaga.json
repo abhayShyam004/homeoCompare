@@ -1,10 +1,5 @@
 {
   "name": "Badiaga",
-  "Relationship": "Compare: Merc. similar but opposite modalities. Spongia; Kali-hyd.; Phytol.; Conium. Complementary: Sulph.; Merc.; Iod.",
-  "Modalities": [
-    "Better: by heat"
-  ],
-  "Common names": "Fresh-Water Sponge",
   "symptoms": {
     "Heart": [
       "Indescribable bad feeling about the heart with soreness and pain, flying stitches all over"
@@ -55,8 +50,13 @@
       "Freckles",
       "Sore to touch",
       "Rhagades"
-    ]
-  },
-  "details": "Soreness of muscles and integuments; worse motion and friction of clothes, with sensitiveness to cold. Glands swollen. General paresis. Basedow's disease. Lues, bubo, roseola.",
-  "dosage": "First to sixth attenuation."
+    ],
+    "Relationship": "Compare: Merc. similar but opposite modalities. Spongia; Kali-hyd.; Phytol.; Conium. Complementary: Sulph.; Merc.; Iod.",
+    "Modalities": [
+      "Better: by heat"
+    ],
+    "Common names": "Fresh-Water Sponge",
+    "details": "Soreness of muscles and integuments; worse motion and friction of clothes, with sensitiveness to cold. Glands swollen. General paresis. Basedow's disease. Lues, bubo, roseola.",
+    "dosage": "First to sixth attenuation."
+  }
 }

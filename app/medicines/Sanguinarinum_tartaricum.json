@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Sanguinarinum tartaricum", 
-  "details": "Exophthalmos; MYDRIASIS; dim vision."
+  "symptoms": {
+    "details": "Exophthalmos; MYDRIASIS; dim vision."
+  },
+  "name": "Sanguinarinum tartaricum"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Amygdalae amar aqua", 
-  "details": "Bitter Almond. Pains through tonsils, throat dark, difficult swallowing, vomiting, cough with sore chest."
+  "symptoms": {
+    "details": "Bitter Almond. Pains through tonsils, throat dark, difficult swallowing, vomiting, cough with sore chest."
+  },
+  "name": "Amygdalae amar aqua"
 }

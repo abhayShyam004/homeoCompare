@@ -1,31 +1,31 @@
 {
   "symptoms": {
     "Respiratory": [
-      "Dry hard cough", 
-      "Respiration difficult, pressure in bronchi, with constriction", 
-      "Tough mucus in bronchi and larynx", 
-      "Pneumonia, when hepatization occurred and resolution failed to take place", 
-      "Winter coughs, patient is sore all over", 
-      "Increased mucus with fullness in bronchi", 
-      "Tickling in larynx", 
+      "Dry hard cough",
+      "Respiration difficult, pressure in bronchi, with constriction",
+      "Tough mucus in bronchi and larynx",
+      "Pneumonia, when hepatization occurred and resolution failed to take place",
+      "Winter coughs, patient is sore all over",
+      "Increased mucus with fullness in bronchi",
+      "Tickling in larynx",
       "Congestion of upper lobe of left lung"
-    ], 
+    ],
     "Nose": [
-      "Nosebleed on washing", 
-      "Loss of smell", 
+      "Nosebleed on washing",
+      "Loss of smell",
       "Increased secretion in nose and throat"
-    ], 
+    ],
     "Skin": [
-      "Itching on hands and feet", 
+      "Itching on hands and feet",
       "Acne"
-    ], 
+    ],
     "Throat": [
-      "Metallic styptic taste", 
+      "Metallic styptic taste",
       "Rough and scrappy feeling"
-    ]
-  }, 
-  "details": "A remarkable remedy for many forms of chronic nasal and bronchial catarrh. Acne. Amaurosis.", 
-  "Common names": "(Golden Sulfuret of Antimony", 
-  "name": "Antimonium sulphuratum auratum", 
-  "dosage": "Second or third trituration."
+    ],
+    "details": "A remarkable remedy for many forms of chronic nasal and bronchial catarrh. Acne. Amaurosis.",
+    "Common names": "(Golden Sulfuret of Antimony",
+    "dosage": "Second or third trituration."
+  },
+  "name": "Antimonium sulphuratum auratum"
 }

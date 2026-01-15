@@ -1,8 +1,9 @@
 {
-  "name": "Agave americana", 
-  "Relationship": "Compare: ANHALONIUM; LYSSIN; LACH.", 
-  "Common names": "Century Plant", 
-  "symptoms": {}, 
-  "details": "Indicated in stomachache, and painful erections in gonorrhea. Strangury. Hydrophobia. Scurvy; countenance pale, gums swollen and bleeding, legs covered with dark purple blotches, swollen, painful and hard. Appetite poor; bowels constipated.", 
-  "dosage": "Tincture."
+  "name": "Agave americana",
+  "symptoms": {
+    "Relationship": "Compare: ANHALONIUM; LYSSIN; LACH.",
+    "Common names": "Century Plant",
+    "details": "Indicated in stomachache, and painful erections in gonorrhea. Strangury. Hydrophobia. Scurvy; countenance pale, gums swollen and bleeding, legs covered with dark purple blotches, swollen, painful and hard. Appetite poor; bowels constipated.",
+    "dosage": "Tincture."
+  }
 }

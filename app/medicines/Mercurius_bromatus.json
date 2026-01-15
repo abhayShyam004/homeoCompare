@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Mercurius bromatus", 
-  "details": "Secondary syphilitic skin affection."
+  "symptoms": {
+    "details": "Secondary syphilitic skin affection."
+  },
+  "name": "Mercurius bromatus"
 }

@@ -1,10 +1,5 @@
 {
   "name": "Ceanothus",
-  "Relationship": "Compare: Tinospora cordifolia (a Hindu medicine for chronic cases of fever with enlarged spleen). Polymnia uvedalia - Bears foot - (acute splenitis with tenderness over left hypochondriac region; spleen enlarged, ague cake. Vascular atony, tissues sodden, flabby and non-elastic. Enlarged glands; influences all ductless glands). Ceanothus thrysiflorus - California Lilac - (Pharyngitis, tonsillitis, nasal catarrh, diphtheria. Tincture internally and as a gargle.) Compare: Berberis; Myrica; Cedron; Agaricus (spleen).",
-  "Modalities": [
-    "Worse: motion; lying on left side"
-  ],
-  "Common names": "New Jersey Tea",
   "symptoms": {
     "Urine": [
       "Constant urging to urinate",
@@ -26,8 +21,13 @@
     "Rectum": [
       "Diarrhoea",
       "bearing down in abdomen and rectum"
-    ]
-  },
-  "details": "This remedy seems to possess a specific relation to the spleen. Ague cake of malaria. A left-sided remedy generally. Anaemic patients where liver and spleen are at fault. Chronic bronchitis with profuse secretion. Marked blood pressure, reducing powers. Active hemostatic, materially reducing the clotting of blood.",
-  "dosage": "First attenuation. Locally as hair tonic."
+    ],
+    "Relationship": "Compare: Tinospora cordifolia (a Hindu medicine for chronic cases of fever with enlarged spleen). Polymnia uvedalia - Bears foot - (acute splenitis with tenderness over left hypochondriac region; spleen enlarged, ague cake. Vascular atony, tissues sodden, flabby and non-elastic. Enlarged glands; influences all ductless glands). Ceanothus thrysiflorus - California Lilac - (Pharyngitis, tonsillitis, nasal catarrh, diphtheria. Tincture internally and as a gargle.) Compare: Berberis; Myrica; Cedron; Agaricus (spleen).",
+    "Modalities": [
+      "Worse: motion; lying on left side"
+    ],
+    "Common names": "New Jersey Tea",
+    "details": "This remedy seems to possess a specific relation to the spleen. Ague cake of malaria. A left-sided remedy generally. Anaemic patients where liver and spleen are at fault. Chronic bronchitis with profuse secretion. Marked blood pressure, reducing powers. Active hemostatic, materially reducing the clotting of blood.",
+    "dosage": "First attenuation. Locally as hair tonic."
+  }
 }

@@ -1,26 +1,26 @@
 {
-  "name": "Mercurialis perennis", 
-  "Relationship": "Compare: BORAX; CROTON; EUPHORB.", 
-  "Common names": "Dog's Mercury", 
+  "name": "Mercurialis perennis",
   "symptoms": {
     "Head": [
-      "Pain as from a band tightly across forehead", 
-      "Nostrils sore, conscious of nose, feels as if she had two noses", 
-      "Head confused", 
+      "Pain as from a band tightly across forehead",
+      "Nostrils sore, conscious of nose, feels as if she had two noses",
+      "Head confused",
       "Vertigo on going down stairs"
-    ], 
+    ],
     "Mouth": [
-      "Dryness of throat", 
-      "Ulcers on palate, tonsils and back of pharynx", 
-      "Burning blisters of tongue, lips and cheeks", 
+      "Dryness of throat",
+      "Ulcers on palate, tonsils and back of pharynx",
+      "Burning blisters of tongue, lips and cheeks",
       "Great dryness of mouth and throat, tongue feels heavy and dry, numb"
-    ], 
+    ],
     "Female": [
-      "Dysmenorrhoea", 
-      "Amenorrhoea, scanty menses, accompanied with orgasms", 
+      "Dysmenorrhoea",
+      "Amenorrhoea, scanty menses, accompanied with orgasms",
       "Pains and swelling of breasts"
-    ]
-  }, 
-  "details": "Great exhaustion and drowsiness. Tumor at ensiform appendix, very sensitive. Affections of the muscular fibres of stomach, intestines, bladder.", 
-  "dosage": "Third potency."
+    ],
+    "Relationship": "Compare: BORAX; CROTON; EUPHORB.",
+    "Common names": "Dog's Mercury",
+    "details": "Great exhaustion and drowsiness. Tumor at ensiform appendix, very sensitive. Affections of the muscular fibres of stomach, intestines, bladder.",
+    "dosage": "Third potency."
+  }
 }

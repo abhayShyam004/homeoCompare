@@ -1,26 +1,26 @@
 {
   "symptoms": {
     "Head": [
-      "Face puffy and pale", 
-      "Pupils dilated", 
+      "Face puffy and pale",
+      "Pupils dilated",
       "Supraorbital and temporal pain on right side, with lachrymation"
-    ], 
+    ],
     "Stomach": [
-      "Feeling of pins and needles at pit of stomach, of emptiness, must eat frequently", 
-      "Pain in pit of stomach and region of navel", 
-      "Saliva hot, acrid", 
-      "After eating, cough", 
+      "Feeling of pins and needles at pit of stomach, of emptiness, must eat frequently",
+      "Pain in pit of stomach and region of navel",
+      "Saliva hot, acrid",
+      "After eating, cough",
       "Nausea"
-    ], 
+    ],
     "Skin": [
-      "Large, flat, itching pustules", 
-      "Podagra", 
-      "Badly smelling night-sweats", 
+      "Large, flat, itching pustules",
+      "Podagra",
+      "Badly smelling night-sweats",
       "Erysipelas"
-    ]
-  }, 
-  "details": "In pustular diseases of skin and night-sweats. Also in gout and chronic rheumatism.", 
-  "Common names": "Yew", 
-  "name": "Taxus baccata", 
-  "dosage": "Tincture, to third potency."
+    ],
+    "details": "In pustular diseases of skin and night-sweats. Also in gout and chronic rheumatism.",
+    "Common names": "Yew",
+    "dosage": "Tincture, to third potency."
+  },
+  "name": "Taxus baccata"
 }

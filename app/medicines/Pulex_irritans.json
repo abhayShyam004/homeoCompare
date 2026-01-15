@@ -1,11 +1,5 @@
 {
   "name": "Pulex irritans",
-  "Modalities": [
-    "Worse: left side",
-    "Worse: moving about",
-    "Better: sitting or lying down"
-  ],
-  "Common names": "Common Flea",
   "symptoms": {
     "Head": [
       "Very impatient, cross, and irritable",
@@ -50,8 +44,14 @@
       "Skin emits foul odor",
       "Sore spots all over",
       "Prickly itching"
-    ]
-  },
-  "details": "Marked urinary and female symptoms.",
-  "dosage": "The higher potencies."
+    ],
+    "Modalities": [
+      "Worse: left side",
+      "Worse: moving about",
+      "Better: sitting or lying down"
+    ],
+    "Common names": "Common Flea",
+    "details": "Marked urinary and female symptoms.",
+    "dosage": "The higher potencies."
+  }
 }

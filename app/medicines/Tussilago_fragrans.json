@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Tussilago fragrans", 
-  "details": "Pylorus pain, plethora and corpulency."
+  "symptoms": {
+    "details": "Pylorus pain, plethora and corpulency."
+  },
+  "name": "Tussilago fragrans"
 }

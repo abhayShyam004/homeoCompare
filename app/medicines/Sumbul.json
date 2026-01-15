@@ -1,10 +1,5 @@
 {
   "name": "Sumbul",
-  "Relationship": "Compare: ASAF.; MOSCH.",
-  "Modalities": [
-    "Worse: active exercise; left side"
-  ],
-  "Common names": "Ferula Sumbul Musk-root",
   "symptoms": {
     "Heart": [
       "Cardiac asthma",
@@ -35,8 +30,13 @@
       "Choking constriction",
       "constant swallowing",
       "Belching of gas from stomach"
-    ]
-  },
-  "details": "Has many hysterical and nervous symptoms, and is of use in neuralgic affections and anomalous, functional, cardiac disorders. NUMBNESS ON BECOMING COLD. Numbness on left side. INSOMNIA of delirium tremens (fifteen drops of tincture). Sensation as if water dropped down spine. Asthma. A tissue remedy for sclerosed arteries.",
-  "dosage": "Tincture, to third potency. Dr. W. McGeorge advises the 2x every 3 hours for arteriosclerosis."
+    ],
+    "Relationship": "Compare: ASAF.; MOSCH.",
+    "Modalities": [
+      "Worse: active exercise; left side"
+    ],
+    "Common names": "Ferula Sumbul Musk-root",
+    "details": "Has many hysterical and nervous symptoms, and is of use in neuralgic affections and anomalous, functional, cardiac disorders. NUMBNESS ON BECOMING COLD. Numbness on left side. INSOMNIA of delirium tremens (fifteen drops of tincture). Sensation as if water dropped down spine. Asthma. A tissue remedy for sclerosed arteries.",
+    "dosage": "Tincture, to third potency. Dr. W. McGeorge advises the 2x every 3 hours for arteriosclerosis."
+  }
 }

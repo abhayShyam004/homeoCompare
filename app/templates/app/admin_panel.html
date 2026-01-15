@@ -600,7 +600,7 @@
         <div class="login-card">
             <div class="login-logo">Hc</div>
             <h1 class="login-title">Admin Panel</h1>
-            <p class="login-subtitle">Enter your password to access the dashboard</p>
+            <p class="login-subtitle">Enter your credentials to access the dashboard</p>
             
             {% if error %}
             <div class="login-error">
@@ -610,7 +610,8 @@
             
             <form method="POST">
                 {% csrf_token %}
-                <input type="password" name="password" class="login-input" placeholder="Enter password..." autofocus>
+                <input type="text" name="username" class="login-input" placeholder="Username" style="margin-bottom: 1rem;" autofocus>
+                <input type="password" name="password" class="login-input" placeholder="Password">
                 <button type="submit" class="login-btn">
                     <i class="fas fa-arrow-right"></i> Sign In
                 </button>
@@ -645,18 +646,22 @@
             </div>
 
             <div class="nav-section">
+                <div class="nav-section-title">Manage Medicines</div>
+                <a href="{% url 'admin_boericke' %}" class="nav-link">
+                    <i class="fas fa-book"></i>
+                    <span>Boericke's</span>
+                </a>
+                <a href="{% url 'admin_allen' %}" class="nav-link">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Allen's Keynotes</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
                 <div class="nav-section-title">Quick Links</div>
                 <a href="{% url 'home' %}" class="nav-link">
                     <i class="fas fa-home"></i>
                     <span>Home Page</span>
-                </a>
-                <a href="{% url 'remedy_compare' %}" class="nav-link">
-                    <i class="fas fa-book"></i>
-                    <span>Boericke's</span>
-                </a>
-                <a href="{% url 'allen_compare' %}" class="nav-link">
-                    <i class="fas fa-book-medical"></i>
-                    <span>Allen's Keynotes</span>
                 </a>
             </div>
         </nav>

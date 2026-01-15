@@ -1,15 +1,5 @@
 {
   "name": "Stellaria media",
-  "Relationship": "Compare: PULS. (similar in rheumatism, pains shifting, worse, rest, warmth; better cold air).",
-  "Modalities": [
-    "Worse: mornings",
-    "Worse: warmth",
-    "Worse: tobacco",
-    "Better: evenings",
-    "Better: cold air",
-    "Better: motion"
-  ],
-  "Common names": "Chickweed",
   "symptoms": {
     "Head": [
       "Lassitude, indisposition to work",
@@ -33,8 +23,18 @@
       "Rheumatoid pains in different parts of the body",
       "Rheumatic pains in calves of legs",
       "Sharp pain in small of back, over kidneys, in gluteal region, extending down thigh"
-    ]
-  },
-  "details": "Induces a condition of stasis, congestion, and sluggishness of all functions. Morning aggravation. Sharp, SHIFTING, rheumatic pains in all parts very pronounced. RHEUMATISM; darting pains in almost every part; stiffness of joints; parts sore to touch; worse motion. CHRONIC RHEUMATISM. SHIFTING PAINS. (PULS.; KALI-SULPH.) Psoriasis. Enlarged and inflamed gouty finger joints.",
-  "dosage": "Tincture, externally. Internally, 2x potency."
+    ],
+    "Relationship": "Compare: PULS. (similar in rheumatism, pains shifting, worse, rest, warmth; better cold air).",
+    "Modalities": [
+      "Worse: mornings",
+      "Worse: warmth",
+      "Worse: tobacco",
+      "Better: evenings",
+      "Better: cold air",
+      "Better: motion"
+    ],
+    "Common names": "Chickweed",
+    "details": "Induces a condition of stasis, congestion, and sluggishness of all functions. Morning aggravation. Sharp, SHIFTING, rheumatic pains in all parts very pronounced. RHEUMATISM; darting pains in almost every part; stiffness of joints; parts sore to touch; worse motion. CHRONIC RHEUMATISM. SHIFTING PAINS. (PULS.; KALI-SULPH.) Psoriasis. Enlarged and inflamed gouty finger joints.",
+    "dosage": "Tincture, externally. Internally, 2x potency."
+  }
 }

@@ -1,11 +1,5 @@
 {
   "name": "Ferrum metallicum",
-  "Relationship": "Antidotes: ARS.; HEP. Complementary: CHIN.; ALUM.; HAMAMEL. Compare: RUMEX (similar in respiratory and digestive sphere and contains organic iron.) FERRUM ACETICUM (alkaline urine in acute diseases. Pain in right deltoid. Epistaxis; especially adapted to thin, pale, weak children who grow rapidly and are easily exhausted; VARICES OF THE FEET; copious expectoration of greenish pus; asthma; worse, sitting still and lying; phthisis, constant cough, vomiting of food after eating, hemoptysis). FERRUM ARSENICUM (enlarged liver and spleen, with fever; undigested stool; albuminuria.) Simple and pernicious anaemia and chlorosis. Skin dry. Eczema, psoriasis, impetigo. Use 3x trituration.) FERRUM BROMATUM (sticky, excoriating leucorrhoea; uterus heavy and prolapsed, scalp feels numb). FERRUM CYANATUM (neuroses with irritable weakness and hypersensitiveness, especially of a periodical character; EPILEPSY; cardialgia, with nausea, flatulence, constipation, alternating with diarrhoea; chorea). FERRUM MAGNETICUM (small warts on hands). FERRUM MURIATICUM. (Arrested menstruation; tendency to seminal emissions or copious urination at puberty; very dark, watery stools; diphtheria; phlegmonous erysipelas; pyelitis; hemoptysis of dark, clotted blood; dyspareunia; pain in RIGHT SHOULDER, right elbow, and marked tendency to cramps and round red spots on cheeks; bright crystals in urine. Anaemia, 3x after meals. Tincture 1-5 drops 3 times daily for chronic interstitial nephritis.) FERRUM SULPHURICUM. (Watery and painless stools; menorrhagia, pressing, throbbing between periods with rush of blood to head. Basedow's disease. Erethism. (Pain in gall-bladder; toothache; acidity; eructation of food in mouthfuls); FERRUM PERNITRICUM (cough, with florid complexion); FERRUM TARTARICUM (cardialgia; heat at cardiac orifice of stomach). FERRUM PROTOXALATUM (Anaemia). Use 1x trit. Compare also: GRAPH.; MANGAN.; CUPR.",
-  "Modalities": [
-    "Better: walking slowly about",
-    "Worse: while sweating; while sitting still"
-  ],
-  "Common names": "Iron",
   "symptoms": {
     "Heart": [
       "Heart suddenly bleeds into the blood vessels, and as suddenly draws a reflux, leaving pallor of surface",
@@ -112,8 +106,14 @@
       "Dropsy after loss of vital fluids",
       "Pain in hip-joint, tibia, soles, and heel",
       "Rheumatism of the shoulder"
-    ]
-  },
-  "details": "Best adapted to young weakly persons, anaemic and chlorotic, with pseudo-plethora, who flush easily; cold extremities; OVER-SENSITIVENESS; worse after any active effort. WEAKNESS from mere speaking or walking though LOOKING strong. PALLOR of skin, mucous membranes, face, alternating with flushes. Orgasms of blood to face, chest, head, lungs, etc. Irregular distribution of blood. Pseudo-plethora. Muscles flabby and relaxed.",
-  "dosage": "States of debility where the blood is poor in hematin require material doses; plethoric, hemorrhagic conditions call for small doses, from the second to the sixth potency."
+    ],
+    "Relationship": "Antidotes: ARS.; HEP. Complementary: CHIN.; ALUM.; HAMAMEL. Compare: RUMEX (similar in respiratory and digestive sphere and contains organic iron.) FERRUM ACETICUM (alkaline urine in acute diseases. Pain in right deltoid. Epistaxis; especially adapted to thin, pale, weak children who grow rapidly and are easily exhausted; VARICES OF THE FEET; copious expectoration of greenish pus; asthma; worse, sitting still and lying; phthisis, constant cough, vomiting of food after eating, hemoptysis). FERRUM ARSENICUM (enlarged liver and spleen, with fever; undigested stool; albuminuria.) Simple and pernicious anaemia and chlorosis. Skin dry. Eczema, psoriasis, impetigo. Use 3x trituration.) FERRUM BROMATUM (sticky, excoriating leucorrhoea; uterus heavy and prolapsed, scalp feels numb). FERRUM CYANATUM (neuroses with irritable weakness and hypersensitiveness, especially of a periodical character; EPILEPSY; cardialgia, with nausea, flatulence, constipation, alternating with diarrhoea; chorea). FERRUM MAGNETICUM (small warts on hands). FERRUM MURIATICUM. (Arrested menstruation; tendency to seminal emissions or copious urination at puberty; very dark, watery stools; diphtheria; phlegmonous erysipelas; pyelitis; hemoptysis of dark, clotted blood; dyspareunia; pain in RIGHT SHOULDER, right elbow, and marked tendency to cramps and round red spots on cheeks; bright crystals in urine. Anaemia, 3x after meals. Tincture 1-5 drops 3 times daily for chronic interstitial nephritis.) FERRUM SULPHURICUM. (Watery and painless stools; menorrhagia, pressing, throbbing between periods with rush of blood to head. Basedow's disease. Erethism. (Pain in gall-bladder; toothache; acidity; eructation of food in mouthfuls); FERRUM PERNITRICUM (cough, with florid complexion); FERRUM TARTARICUM (cardialgia; heat at cardiac orifice of stomach). FERRUM PROTOXALATUM (Anaemia). Use 1x trit. Compare also: GRAPH.; MANGAN.; CUPR.",
+    "Modalities": [
+      "Better: walking slowly about",
+      "Worse: while sweating; while sitting still"
+    ],
+    "Common names": "Iron",
+    "details": "Best adapted to young weakly persons, anaemic and chlorotic, with pseudo-plethora, who flush easily; cold extremities; OVER-SENSITIVENESS; worse after any active effort. WEAKNESS from mere speaking or walking though LOOKING strong. PALLOR of skin, mucous membranes, face, alternating with flushes. Orgasms of blood to face, chest, head, lungs, etc. Irregular distribution of blood. Pseudo-plethora. Muscles flabby and relaxed.",
+    "dosage": "States of debility where the blood is poor in hematin require material doses; plethoric, hemorrhagic conditions call for small doses, from the second to the sixth potency."
+  }
 }

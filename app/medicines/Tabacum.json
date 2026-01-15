@@ -1,12 +1,5 @@
 {
   "name": "Tabacum",
-  "Relationship": "Compare: HYDROBROMIC ACID; CAMPH.; VERAT.; ARS. Compare: NICOTINUM (Alternate tonic and clonic spasms, followed by general relaxation and trembling; nausea, cold sweat, and speedy collapse; head drawn back, contraction of eyelids and masseter muscles; muscles of neck and back rigid; hissing respiration from spasm of laryngeal and bronchial muscles). Antidote: Vinegar; sour apples. CAMPHOR in the physiologicla antagonist. ARS. (chewing tobacco); IGN.; (smoking); SEP. (neuralgia and dyspepsia); LYCOP. (Impotency); NUX (bad taste due to tobacco); CALAD. AND PLAN TAG. (Cause aversion to tobacco); PHOSPH. (Tobacco heart, sexual weakness).",
-  "Modalities": [
-    "Worse: opening eyes; evening; extremes of heat and cold",
-    "Better: uncovering",
-    "Better: open fresh air"
-  ],
-  "Common names": "Tobacco",
   "symptoms": {
     "Rectum": [
       "Constipation",
@@ -95,8 +88,15 @@
       "Legs and hands icy cold",
       "limbs tremble",
       "Gait shuffling, unsteady"
-    ]
-  },
-  "details": "The symptomatology of Tabacum is exceedingly well marked. The nausea, giddiness, death-like pallor, vomiting, icy coldness, and sweat, with the intermittent pulse, are all most characteristic. Has marked antiseptic qualities, antidotal to cholera germs. Complete prostration of the entire muscular system. Collapse. Gastralgia, enteralgia, SEASICKNESS, cholera infantum; cold, but WANTS ABDOMEN UNCOVERED. Vigorous peristaltic activity. Diarrhoea. Produces high tension and arteriosclerosis of the coronary arteries. Should prove the most homeopathic drug for angina pectoris, with coronaritis and high tension (Cartier). Constriction of throat, chest, bladder, rectum. Pallor, breathlessness, hard cord like pulse.",
-  "dosage": "Third to thirtieth and higher potencies."
+    ],
+    "Relationship": "Compare: HYDROBROMIC ACID; CAMPH.; VERAT.; ARS. Compare: NICOTINUM (Alternate tonic and clonic spasms, followed by general relaxation and trembling; nausea, cold sweat, and speedy collapse; head drawn back, contraction of eyelids and masseter muscles; muscles of neck and back rigid; hissing respiration from spasm of laryngeal and bronchial muscles). Antidote: Vinegar; sour apples. CAMPHOR in the physiologicla antagonist. ARS. (chewing tobacco); IGN.; (smoking); SEP. (neuralgia and dyspepsia); LYCOP. (Impotency); NUX (bad taste due to tobacco); CALAD. AND PLAN TAG. (Cause aversion to tobacco); PHOSPH. (Tobacco heart, sexual weakness).",
+    "Modalities": [
+      "Worse: opening eyes; evening; extremes of heat and cold",
+      "Better: uncovering",
+      "Better: open fresh air"
+    ],
+    "Common names": "Tobacco",
+    "details": "The symptomatology of Tabacum is exceedingly well marked. The nausea, giddiness, death-like pallor, vomiting, icy coldness, and sweat, with the intermittent pulse, are all most characteristic. Has marked antiseptic qualities, antidotal to cholera germs. Complete prostration of the entire muscular system. Collapse. Gastralgia, enteralgia, SEASICKNESS, cholera infantum; cold, but WANTS ABDOMEN UNCOVERED. Vigorous peristaltic activity. Diarrhoea. Produces high tension and arteriosclerosis of the coronary arteries. Should prove the most homeopathic drug for angina pectoris, with coronaritis and high tension (Cartier). Constriction of throat, chest, bladder, rectum. Pallor, breathlessness, hard cord like pulse.",
+    "dosage": "Third to thirtieth and higher potencies."
+  }
 }

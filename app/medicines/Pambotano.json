@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Pambotano", 
-  "details": "Mexican remedy for intermittent and tropical fevers."
+  "symptoms": {
+    "details": "Mexican remedy for intermittent and tropical fevers."
+  },
+  "name": "Pambotano"
 }

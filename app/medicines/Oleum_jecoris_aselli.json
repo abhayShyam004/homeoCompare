@@ -1,32 +1,32 @@
 {
-  "name": "Oleum jecoris aselli", 
-  "Relationship": "Compare: CHOLESTERINE; TUBERCUL; PHOSPH.; IOD. One litre of Ol. Jecoris contains 0.4 gram Iod. GADUS MORRHUA - Cod - (frequent breathing, with flapping of alae nasi; rush of blood to chest; pain in lungs and cough; dry heat in palms).", 
-  "Common names": "Cod-liver Oil", 
+  "name": "Oleum jecoris aselli",
   "symptoms": {
     "Fever": [
-      "Night-sweats", 
-      "Constantly chilly towards evening", 
+      "Night-sweats",
+      "Constantly chilly towards evening",
       "Hectic fever"
-    ], 
+    ],
     "Chest": [
-      "Yellowness", 
-      "Whooping cough in miserable, scrofulous children", 
-      "Soreness through chest", 
-      "Palpitation, accompanies other symptoms", 
-      "Hemoptysis", 
-      "Hoarseness", 
-      "Children who cannot take milk", 
-      "Here give drop doses, increasing daily one drop up to twelve, then descend in the same way", 
-      "Dry, hacking, tickling cough, especially at night", 
-      "Sharp stitching pains", 
+      "Yellowness",
+      "Whooping cough in miserable, scrofulous children",
+      "Soreness through chest",
+      "Palpitation, accompanies other symptoms",
+      "Hemoptysis",
+      "Hoarseness",
+      "Children who cannot take milk",
+      "Here give drop doses, increasing daily one drop up to twelve, then descend in the same way",
+      "Dry, hacking, tickling cough, especially at night",
+      "Sharp stitching pains",
       "Burning spots"
-    ], 
+    ],
     "Extremities": [
-      "Burning in palms", 
-      "Chronic rheumatism, with rigid muscles and tendons", 
+      "Burning in palms",
+      "Chronic rheumatism, with rigid muscles and tendons",
       "Aching in elbows and knees, in sacrum"
-    ]
-  }, 
-  "details": "Internally, a nutrient and a hepatic and pancreatic remedy. (Burnett.) Emaciation, lassitude, scrofulous diseases, rheumatic affections. ATROPHY OF INFANTS; emaciation with hot handle and head; restless and feverish at night. PAINS IN LIVER REGION. Tuberculosis in the beginning.", 
-  "dosage": "First to third trituration. Locally in RING-WORM, and nightly rubbing, for dwarfish, emaciated babies."
+    ],
+    "Relationship": "Compare: CHOLESTERINE; TUBERCUL; PHOSPH.; IOD. One litre of Ol. Jecoris contains 0.4 gram Iod. GADUS MORRHUA - Cod - (frequent breathing, with flapping of alae nasi; rush of blood to chest; pain in lungs and cough; dry heat in palms).",
+    "Common names": "Cod-liver Oil",
+    "details": "Internally, a nutrient and a hepatic and pancreatic remedy. (Burnett.) Emaciation, lassitude, scrofulous diseases, rheumatic affections. ATROPHY OF INFANTS; emaciation with hot handle and head; restless and feverish at night. PAINS IN LIVER REGION. Tuberculosis in the beginning.",
+    "dosage": "First to third trituration. Locally in RING-WORM, and nightly rubbing, for dwarfish, emaciated babies."
+  }
 }

@@ -1,15 +1,5 @@
 {
   "name": "Euphrasia",
-  "Relationship": "Antidotes: Camph.; Puls. Compare: Hydrophyllum-Burr-flower - (catarrhal inflammation of eyes; hot lachrymation with itching, swollen lids, dull headache; also for effects of Poison-Oak); Cepa; Ars.; Gels.; Kali-hyd.; Sabadilla.",
-  "Modalities": [
-    "Worse: in evening",
-    "Worse: indoors",
-    "Worse: warmth; south winds",
-    "Worse: from light",
-    "Better: from coffee",
-    "Better: in dark"
-  ],
-  "Common names": "Eye bright",
   "symptoms": {
     "Eyes": [
       "Ptosis",
@@ -82,8 +72,18 @@
     ],
     "Nose": [
       "Profuse, fluent coryza, with violent cough and abundant expectoration"
-    ]
-  },
-  "details": "Manifests itself in inflaming the conjunctival membrane especially, producing profuse lachrymation. Patient is better in open air. Catarrhal affections of mucous membranes especially of eyes and nose. Profuse ACRID lachrymation and bland coryza; worse, evening. Hawking up of offensive mucus.",
-  "dosage": "Third to sixth potency."
+    ],
+    "Relationship": "Antidotes: Camph.; Puls. Compare: Hydrophyllum-Burr-flower - (catarrhal inflammation of eyes; hot lachrymation with itching, swollen lids, dull headache; also for effects of Poison-Oak); Cepa; Ars.; Gels.; Kali-hyd.; Sabadilla.",
+    "Modalities": [
+      "Worse: in evening",
+      "Worse: indoors",
+      "Worse: warmth; south winds",
+      "Worse: from light",
+      "Better: from coffee",
+      "Better: in dark"
+    ],
+    "Common names": "Eye bright",
+    "details": "Manifests itself in inflaming the conjunctival membrane especially, producing profuse lachrymation. Patient is better in open air. Catarrhal affections of mucous membranes especially of eyes and nose. Profuse ACRID lachrymation and bland coryza; worse, evening. Hawking up of offensive mucus.",
+    "dosage": "Third to sixth potency."
+  }
 }

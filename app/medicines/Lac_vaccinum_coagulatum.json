@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lac vaccinum coagulatum", 
-  "details": "Curds - nausea of pregnancy."
+  "symptoms": {
+    "details": "Curds - nausea of pregnancy."
+  },
+  "name": "Lac vaccinum coagulatum"
 }

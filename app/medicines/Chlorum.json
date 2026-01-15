@@ -1,25 +1,25 @@
 {
   "symptoms": {
     "Respiratory": [
-      "Coryza with sudden gushes of sharp, corroding fluid, making nose sore inside and about the alae", 
-      "Spasm of the glottis", 
-      "Extreme dryness of tongue", 
-      "Sooty, smoky nostrils", 
-      "Inspiration free, with obstructed expiration", 
-      "Prolonged, loud, whistling rales", 
-      "Constriction, with suffocation", 
-      "Sudden dyspnoea from spasm of the vocal cords, with staring protruding eyes, blue face, cold sweat, pulse small", 
-      "Loss of voice from damp air", 
-      "Livid face", 
+      "Coryza with sudden gushes of sharp, corroding fluid, making nose sore inside and about the alae",
+      "Spasm of the glottis",
+      "Extreme dryness of tongue",
+      "Sooty, smoky nostrils",
+      "Inspiration free, with obstructed expiration",
+      "Prolonged, loud, whistling rales",
+      "Constriction, with suffocation",
+      "Sudden dyspnoea from spasm of the vocal cords, with staring protruding eyes, blue face, cold sweat, pulse small",
+      "Loss of voice from damp air",
+      "Livid face",
       "Irritation of epiglottis, larynx, and bronchi"
-    ], 
+    ],
     "Mind": [
-      "Fear of becoming crazy", 
+      "Fear of becoming crazy",
       "Marked loss of memory, especially for names"
-    ]
-  }, 
-  "details": "The marked effect on the respiratory organs, producing spasm of the glottis, is the chief symptom of the drug. Asthma to relieve the spasm of glottis. Useful externally and internally in gangrene.", 
-  "Common names": "Chlorine Gas in Water", 
-  "name": "Chlorum", 
-  "dosage": "Chlorine water, when required of full strength, must be freshly prepared. Fourth to sixty potency."
+    ],
+    "details": "The marked effect on the respiratory organs, producing spasm of the glottis, is the chief symptom of the drug. Asthma to relieve the spasm of glottis. Useful externally and internally in gangrene.",
+    "Common names": "Chlorine Gas in Water",
+    "dosage": "Chlorine water, when required of full strength, must be freshly prepared. Fourth to sixty potency."
+  },
+  "name": "Chlorum"
 }

@@ -1,35 +1,35 @@
 {
-  "name": "Latrodectus mactans", 
-  "Relationship": "Compare: LATRODECTUS HASSELTI - New South Wales Black Spider - (Long lasting effects seem to indicate it as a \"chronic\" blood poisoning. Arrests intense pain in pyaemia. Great oedema in neighborhood of wound; paralysis of limbs, with great wasting of muscles. Violent, darting, burning pains preceding paralysis; vertigo, tendency to fall forward, septicaemic conditions; constant delusion of FLYING. Loss of memory. Roaring noises.) ARANEA; MYGALE; THERIDION; LATRODECTUS KALIPO - New Zealand spider - (lymphangitis and nervous twitchings, scarlet burning eruption.) TRIATOMA - Kissing bug - (Swelling with violent itching of fingers and toes. Smothering sensation and difficult breathing succeeded by fainting and rapid pulse.)", 
-  "Common names": "Spider", 
+  "name": "Latrodectus mactans",
   "symptoms": {
     "Head": [
-      "Occipital pain", 
-      "Screams with pain", 
-      "Anxiety", 
+      "Occipital pain",
+      "Screams with pain",
+      "Anxiety",
       "Pain in neck to back of head"
-    ], 
+    ],
     "Respiratory": [
-      "Fears losing breath", 
-      "Gasping respiration", 
+      "Fears losing breath",
+      "Gasping respiration",
       "Extreme apnoea"
-    ], 
+    ],
     "Chest": [
-      "Violent, precordial pain extending to the axilla and down the arm and forearm to fingers, with numbness of the extremity", 
-      "Sinking sensation", 
-      "Cramping pain from chest to abdomen", 
+      "Violent, precordial pain extending to the axilla and down the arm and forearm to fingers, with numbness of the extremity",
+      "Sinking sensation",
+      "Cramping pain from chest to abdomen",
       "Pulse feeble and rapid"
-    ], 
+    ],
     "Skin": [
-      "Coldness of whole surface", 
+      "Coldness of whole surface",
       "Skin cold as marble"
-    ], 
+    ],
     "Extremities": [
-      "Pain in left arm, feels paralyzed", 
-      "Weakness of legs followed by cramps in the abdominal muscles", 
+      "Pain in left arm, feels paralyzed",
+      "Weakness of legs followed by cramps in the abdominal muscles",
       "Paraesthesia of lower limbs"
-    ]
-  }, 
-  "details": "The bite produces tetanic effects that last several days. A picture of ANGINA PECTORIS is presented by the action of the drug. The precordial region seems to be the center of attack. Constriction of chest muscles, with radiation to shoulders and back. Lowered coagulability.", 
-  "dosage": "Sixth potency."
+    ],
+    "Relationship": "Compare: LATRODECTUS HASSELTI - New South Wales Black Spider - (Long lasting effects seem to indicate it as a \"chronic\" blood poisoning. Arrests intense pain in pyaemia. Great oedema in neighborhood of wound; paralysis of limbs, with great wasting of muscles. Violent, darting, burning pains preceding paralysis; vertigo, tendency to fall forward, septicaemic conditions; constant delusion of FLYING. Loss of memory. Roaring noises.) ARANEA; MYGALE; THERIDION; LATRODECTUS KALIPO - New Zealand spider - (lymphangitis and nervous twitchings, scarlet burning eruption.) TRIATOMA - Kissing bug - (Swelling with violent itching of fingers and toes. Smothering sensation and difficult breathing succeeded by fainting and rapid pulse.)",
+    "Common names": "Spider",
+    "details": "The bite produces tetanic effects that last several days. A picture of ANGINA PECTORIS is presented by the action of the drug. The precordial region seems to be the center of attack. Constriction of chest muscles, with radiation to shoulders and back. Lowered coagulability.",
+    "dosage": "Sixth potency."
+  }
 }

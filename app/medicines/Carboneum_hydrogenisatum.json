@@ -1,17 +1,17 @@
 {
   "symptoms": {
     "Eyes": [
-      "Oscillation of eyeballs", 
-      "Pupils insensible to light", 
+      "Oscillation of eyeballs",
+      "Pupils insensible to light",
       "Lids half closed"
-    ], 
+    ],
     "Mind": [
-      "All thoughts appear in a moment as if seen in an inner mirror", 
-      "Stupefaction", 
+      "All thoughts appear in a moment as if seen in an inner mirror",
+      "Stupefaction",
       "Extraordinary sensation of contentment"
-    ]
-  }, 
-  "Common names": "Carburetted Hydrogen", 
-  "name": "Carboneum hydrogenisatum", 
-  "details": "Symptoms resemble an apoplectic attack. Spasm as in lock-jaw. Trismus. Involuntary stools and urine."
+    ],
+    "Common names": "Carburetted Hydrogen",
+    "details": "Symptoms resemble an apoplectic attack. Spasm as in lock-jaw. Trismus. Involuntary stools and urine."
+  },
+  "name": "Carboneum hydrogenisatum"
 }

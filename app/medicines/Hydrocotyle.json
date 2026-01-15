@@ -1,34 +1,34 @@
 {
-  "name": "Hydrocotyle", 
-  "Relationship": "Compare: ELAESIS - South American Palm - (scleroderma, elephantiasis, leprosy, skin thickened, itching and hardened. Anaesthesia). HURA; TRYCHNOS GAULTHERIANA (bites of serpents, ulcers and cutaneous affections generally); HOANG-NA. CHAULMOOGRA OIL from seeds of TARAKTOGENOS; HYDRAST.; ARSENIC; AURUM; SEPIA.", 
-  "Common names": "Indian Penny wort", 
+  "name": "Hydrocotyle",
   "symptoms": {
     "Female": [
-      "Dull pain in ovarian region", 
-      "Heat within vagina", 
-      "Inflammation of neck of bladder", 
-      "Profuse leucorrhoea", 
-      "Pruritus of vagina", 
-      "Granular ulceration of womb", 
+      "Dull pain in ovarian region",
+      "Heat within vagina",
+      "Inflammation of neck of bladder",
+      "Profuse leucorrhoea",
+      "Pruritus of vagina",
+      "Granular ulceration of womb",
       "Cervical redness"
-    ], 
+    ],
     "Skin": [
-      "Syphilitic affections", 
-      "Pustules on chest", 
-      "Acne", 
-      "Great thickening of epidermoid layer and exfoliation of scales", 
-      "Profuse sweat", 
-      "Leprosy", 
-      "Circular spots, with scaly edges", 
-      "Dry eruptions", 
-      "Psoriasis gyrate, on trunk and extremities, palms and soles", 
-      "Elephantiasis  lupus non-exedens", 
+      "Syphilitic affections",
+      "Pustules on chest",
+      "Acne",
+      "Great thickening of epidermoid layer and exfoliation of scales",
+      "Profuse sweat",
+      "Leprosy",
+      "Circular spots, with scaly edges",
+      "Dry eruptions",
+      "Psoriasis gyrate, on trunk and extremities, palms and soles",
+      "Elephantiasis  lupus non-exedens",
       "Intolerable itching, especially of soles"
-    ], 
+    ],
     "Face": [
       "Pain in left cheek-bones and about orbits"
-    ]
-  }, 
-  "details": "Curative in disorders that exhibit interstitial inflammation and cellular proliferation in any part. Hypertrophy and induration of connective tissue. Has considerable reputation in LEPROSY AND LUPUS, when there is no ulceration. The skin symptoms are very important. Of great use in ulceration of womb. Difficulty in maintaining the upright posture. Very copious perspiration. Pains of cervical cancer.", 
-  "dosage": "First to sixth potency."
+    ],
+    "Relationship": "Compare: ELAESIS - South American Palm - (scleroderma, elephantiasis, leprosy, skin thickened, itching and hardened. Anaesthesia). HURA; TRYCHNOS GAULTHERIANA (bites of serpents, ulcers and cutaneous affections generally); HOANG-NA. CHAULMOOGRA OIL from seeds of TARAKTOGENOS; HYDRAST.; ARSENIC; AURUM; SEPIA.",
+    "Common names": "Indian Penny wort",
+    "details": "Curative in disorders that exhibit interstitial inflammation and cellular proliferation in any part. Hypertrophy and induration of connective tissue. Has considerable reputation in LEPROSY AND LUPUS, when there is no ulceration. The skin symptoms are very important. Of great use in ulceration of womb. Difficulty in maintaining the upright posture. Very copious perspiration. Pains of cervical cancer.",
+    "dosage": "First to sixth potency."
+  }
 }

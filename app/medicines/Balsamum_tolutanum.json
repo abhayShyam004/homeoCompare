@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Balsamum tolutanum", 
-  "details": "The balsam of Myroxylon toluifera - chronic bronchitis with profuse expectoration."
+  "symptoms": {
+    "details": "The balsam of Myroxylon toluifera - chronic bronchitis with profuse expectoration."
+  },
+  "name": "Balsamum tolutanum"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Periploca graeca", 
-  "details": "One of the Asclepiades - Cardiac tonic, acts on circulation and respiratory center, accelerating respiration in a ratio disproportionate to pulse."
+  "symptoms": {
+    "details": "One of the Asclepiades - Cardiac tonic, acts on circulation and respiratory center, accelerating respiration in a ratio disproportionate to pulse."
+  },
+  "name": "Periploca graeca"
 }

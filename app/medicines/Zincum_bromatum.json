@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Zincum bromatum", 
-  "details": "Dentition, chorea, hydrocephalus."
+  "symptoms": {
+    "details": "Dentition, chorea, hydrocephalus."
+  },
+  "name": "Zincum bromatum"
 }

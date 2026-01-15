@@ -1,7 +1,5 @@
 {
   "name": "Glycerinum",
-  "Relationship": "Compare: LACTIC ACID; GELSEMIUM; CALC.",
-  "Common names": "Glycerine",
   "symptoms": {
     "Head": [
       "Severe headache two days before menstruation",
@@ -34,8 +32,10 @@
     "Extremities": [
       "Rheumatic pains of a remittent type",
       "Feet painful and hot, feel enlarged"
-    ]
-  },
-  "details": "Used homeopathically, dynamited Glycerine seems to act deeply and long, building up tissue, hence of great use in marasmus, debility, mental and physical, diabetes, etc. It disturbs nutrition in its primary action, and, secondarily, seems to improve the general state of nutrition. (Dr. W. B. Griggs.)",
-  "dosage": "Thirtieth and higher potencies. Pure Glycerine in teaspoonful doses, t.i.d., with lemon juice for pernicious anaemia."
+    ],
+    "Relationship": "Compare: LACTIC ACID; GELSEMIUM; CALC.",
+    "Common names": "Glycerine",
+    "details": "Used homeopathically, dynamited Glycerine seems to act deeply and long, building up tissue, hence of great use in marasmus, debility, mental and physical, diabetes, etc. It disturbs nutrition in its primary action, and, secondarily, seems to improve the general state of nutrition. (Dr. W. B. Griggs.)",
+    "dosage": "Thirtieth and higher potencies. Pure Glycerine in teaspoonful doses, t.i.d., with lemon juice for pernicious anaemia."
+  }
 }

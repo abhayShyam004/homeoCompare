@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Citrus limonum", 
-  "details": "Scorbutus, sore throat and cancer pain; check excessive menstruation."
+  "symptoms": {
+    "details": "Scorbutus, sore throat and cancer pain; check excessive menstruation."
+  },
+  "name": "Citrus limonum"
 }

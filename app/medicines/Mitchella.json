@@ -1,7 +1,5 @@
 {
   "name": "Mitchella",
-  "Relationship": "Compare: CHIMAPH.; SENECIO; UVA; GERAN.; GOSSIP.",
-  "Common names": "Partridge-berry",
   "symptoms": {
     "Urine": [
       "Dysuria",
@@ -12,8 +10,10 @@
       "Cervix dark red, swollen",
       "Dysmenorrhoea and uterine hemorrhage",
       "blood bright red"
-    ]
-  },
-  "details": "Bladder symptoms accompany complaints, especially uterine congestion.",
-  "dosage": "Tincture."
+    ],
+    "Relationship": "Compare: CHIMAPH.; SENECIO; UVA; GERAN.; GOSSIP.",
+    "Common names": "Partridge-berry",
+    "details": "Bladder symptoms accompany complaints, especially uterine congestion.",
+    "dosage": "Tincture."
+  }
 }

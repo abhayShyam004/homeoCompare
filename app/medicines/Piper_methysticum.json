@@ -1,35 +1,35 @@
 {
-  "name": "Piper methysticum", 
-  "Relationship": "Compare: CHAULMOOGRA - TARAKTOGENOS - (The oil and its derivatives are to a certain extent effective in the treatment of LEPROSY, especially in early cases.) BIXA ORELLANA, a South American plant related to Chaulmoogra, recommended for leprosy, eczema and elephantiasis.", 
-  "Modalities": [
-    "Better: by turning mind to another topic; changing position"
-  ], 
-  "Common names": "Kava-kava", 
+  "name": "Piper methysticum",
   "symptoms": {
     "Urine": [
-      "Burning during micturition, gonorrhea, and gleet", 
-      "Chordee", 
-      "Increased", 
+      "Burning during micturition, gonorrhea, and gleet",
+      "Chordee",
+      "Increased",
       "Cystitis"
-    ], 
+    ],
     "Mind": [
-      "Exaltation of mind", 
-      "Very sensitive", 
-      "Amelioration of pains for a time by diverting attention", 
+      "Exaltation of mind",
+      "Very sensitive",
+      "Amelioration of pains for a time by diverting attention",
       "Restless desire to change position"
-    ], 
+    ],
     "Skin": [
-      "Ichthyosis", 
-      "Leprosy", 
-      "Fall of scales leaves white spots, which often ulcerate", 
+      "Ichthyosis",
+      "Leprosy",
+      "Fall of scales leaves white spots, which often ulcerate",
       "Scaly"
-    ], 
+    ],
     "Extremities": [
-      "Pain in thumb-joint", 
-      "Pain in right arm", 
+      "Pain in thumb-joint",
+      "Pain in right arm",
       "Hands feel paralyzed"
-    ]
-  }, 
-  "details": "The intoxication produced by KAVA is of a silent and drowsy character with incoherent dreams, loss of muscular power. Urinary and skin symptoms have been verified. Marked modality. ARTHRITIS deformans. Colic with flatulence.", 
-  "dosage": "Tincture, and lower potencies."
+    ],
+    "Relationship": "Compare: CHAULMOOGRA - TARAKTOGENOS - (The oil and its derivatives are to a certain extent effective in the treatment of LEPROSY, especially in early cases.) BIXA ORELLANA, a South American plant related to Chaulmoogra, recommended for leprosy, eczema and elephantiasis.",
+    "Modalities": [
+      "Better: by turning mind to another topic; changing position"
+    ],
+    "Common names": "Kava-kava",
+    "details": "The intoxication produced by KAVA is of a silent and drowsy character with incoherent dreams, loss of muscular power. Urinary and skin symptoms have been verified. Marked modality. ARTHRITIS deformans. Colic with flatulence.",
+    "dosage": "Tincture, and lower potencies."
+  }
 }

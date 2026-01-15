@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Jatropha urens", 
-  "details": "Sponge-nettle - oedema and cardiac paresis."
+  "symptoms": {
+    "details": "Sponge-nettle - oedema and cardiac paresis."
+  },
+  "name": "Jatropha urens"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Vaccinium myrtillus", 
-  "details": "Huckleberries - dysentery; typhoid, keeps intestines aseptic and prevents absorption and reinfection."
+  "symptoms": {
+    "details": "Huckleberries - dysentery; typhoid, keeps intestines aseptic and prevents absorption and reinfection."
+  },
+  "name": "Vaccinium myrtillus"
 }

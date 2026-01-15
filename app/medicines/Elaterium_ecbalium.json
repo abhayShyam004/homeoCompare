@@ -1,10 +1,5 @@
 {
   "name": "Elaterium ecbalium",
-  "Relationship": "Compare: BRY.; CROTON; GAMBOGIA.",
-  "Modalities": [
-    "Worse: from exposure on damp ground"
-  ],
-  "Common names": "Squirting Cucumber",
   "symptoms": {
     "Fever": [
       "Chills and fever, with spurting diarrhoea",
@@ -32,8 +27,13 @@
       "pain in hip-joints with diarrhoea",
       "Arthritic nodules",
       "Sharp pains in fingers and thumbs, knees, toes, and instep"
-    ]
-  },
-  "details": "This is an invaluable remedy in violent vomiting and purging, especially if the evacuations are copious and watery. It is a very efficient remedy in certain forms of dropsy. Much yawning and stretching. BERIBERI; choleraic conditions; urticaria and mental disorders coming on as a consequence of suppressed malaria. Irresistible desire to wander from home at night. Effects of damp weather.",
-  "dosage": "Third to thirtieth potency. As a hydragogue cathartic to produce free discharge in dropsies, Elaterin 1-20 of a grain. Palliative only."
+    ],
+    "Relationship": "Compare: BRY.; CROTON; GAMBOGIA.",
+    "Modalities": [
+      "Worse: from exposure on damp ground"
+    ],
+    "Common names": "Squirting Cucumber",
+    "details": "This is an invaluable remedy in violent vomiting and purging, especially if the evacuations are copious and watery. It is a very efficient remedy in certain forms of dropsy. Much yawning and stretching. BERIBERI; choleraic conditions; urticaria and mental disorders coming on as a consequence of suppressed malaria. Irresistible desire to wander from home at night. Effects of damp weather.",
+    "dosage": "Third to thirtieth potency. As a hydragogue cathartic to produce free discharge in dropsies, Elaterin 1-20 of a grain. Palliative only."
+  }
 }

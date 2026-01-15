@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ditin", 
-  "details": "Active principle, is anti-periodic, like quinine, but without unpleasant effects."
+  "symptoms": {
+    "details": "Active principle, is anti-periodic, like quinine, but without unpleasant effects."
+  },
+  "name": "Ditin"
 }

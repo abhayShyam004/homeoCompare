@@ -1,10 +1,5 @@
 {
   "name": "Arum triphyllum",
-  "Relationship": "Compare: Ammon. carb.; Ailanthus; Cepa. Antidotes: Buttermilk, Acet-ac.; Puls.",
-  "Modalities": [
-    "Worse: northwest wind; lying down"
-  ],
-  "Common names": "Jack-in-the-Pulpit",
   "symptoms": {
     "Eyes": [
       "Quivering of upper eyelids, especially left"
@@ -55,8 +50,13 @@
       "raw",
       "Clergyman's sore throat",
       "Lungs feel sore"
-    ]
-  },
-  "details": "Arum maculatum, Italicum, Dracontium, have the same action as the Triphyllum. They all contain an irritant poison, causing inflammation of mucous surfaces and destruction of tissue. ACRIDITY is the keynote of the kind of action characteristic of Arum.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: Ammon. carb.; Ailanthus; Cepa. Antidotes: Buttermilk, Acet-ac.; Puls.",
+    "Modalities": [
+      "Worse: northwest wind; lying down"
+    ],
+    "Common names": "Jack-in-the-Pulpit",
+    "details": "Arum maculatum, Italicum, Dracontium, have the same action as the Triphyllum. They all contain an irritant poison, causing inflammation of mucous surfaces and destruction of tissue. ACRIDITY is the keynote of the kind of action characteristic of Arum.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

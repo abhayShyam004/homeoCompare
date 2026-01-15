@@ -1,13 +1,5 @@
 {
   "name": "Sabadilla",
-  "Relationship": "Complementary: SEPIA. Compare: VERATRINE (is alkaloid of Sabadilla, NOT of Veratrum, locally in neuralgias, and for removal of dropsy. Five grains to two drams. Lanolin, rubbed on inside of thighs, causes diuresis). COLCH.; NUX; ARUNDO AND POLLANTIN. PHLEUM PRATENSE - Timothy - Hay-fever - Potentized - 12 - specific to many cases and evidently acts in a desensitizing manner. (Rabe.) CUMARINUM (hay-fever). Antidotes: PULS.; LYCOP.; CONIUM; LACH.",
-  "Modalities": [
-    "Worse: cold and cold drinks",
-    "Worse: full moon",
-    "Better: warm food and drink",
-    "Better: wrapped up"
-  ],
-  "Common names": "Cevadilla Seed. Asagraea Officialis",
   "symptoms": {
     "Head": [
       "Lachrymation",
@@ -79,8 +71,16 @@
     "Extremities": [
       "Cracking of skin under and beneath toes",
       "inflammation under toe-nails"
-    ]
-  },
-  "details": "Action on mucous membrane of the nose and the lachrymal glands, producing coryza and symptoms like HAY-FEVER, which have been utilized homeopathically. CHILLINESS; sensitive to cold. Ascarides, with reflex symptoms (nymphomania; convulsive symptoms). Children's diarrhoea with constant cutting pains.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Complementary: SEPIA. Compare: VERATRINE (is alkaloid of Sabadilla, NOT of Veratrum, locally in neuralgias, and for removal of dropsy. Five grains to two drams. Lanolin, rubbed on inside of thighs, causes diuresis). COLCH.; NUX; ARUNDO AND POLLANTIN. PHLEUM PRATENSE - Timothy - Hay-fever - Potentized - 12 - specific to many cases and evidently acts in a desensitizing manner. (Rabe.) CUMARINUM (hay-fever). Antidotes: PULS.; LYCOP.; CONIUM; LACH.",
+    "Modalities": [
+      "Worse: cold and cold drinks",
+      "Worse: full moon",
+      "Better: warm food and drink",
+      "Better: wrapped up"
+    ],
+    "Common names": "Cevadilla Seed. Asagraea Officialis",
+    "details": "Action on mucous membrane of the nose and the lachrymal glands, producing coryza and symptoms like HAY-FEVER, which have been utilized homeopathically. CHILLINESS; sensitive to cold. Ascarides, with reflex symptoms (nymphomania; convulsive symptoms). Children's diarrhoea with constant cutting pains.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

@@ -1,7 +1,5 @@
 {
   "name": "Mephitis",
-  "Relationship": "Compare: DROS.; CORAL.; STICTA.",
-  "Common names": "Skunk",
   "symptoms": {
     "Eyes": [
       "Pain from over exertion",
@@ -36,8 +34,10 @@
       "Bloated face",
       "Coppery taste, as after eating onions",
       "Painful jerks in root of teeth"
-    ]
-  },
-  "details": "A great medicine for WHOOPING-COUGH. In order to insure its full success, it should be given in the lower dilutions from 1x to 3X. Suffocative feeling, asthmatic paroxysms, spasmodic cough; cough so violent, seems as if each spell would terminate life. Child must be raised up, gets blue in face, cannot exhale. Mucous rales through upper part of chest. Patient wants to bathe in ice-cold water.",
-  "dosage": "First to third potency. Has a very short action."
+    ],
+    "Relationship": "Compare: DROS.; CORAL.; STICTA.",
+    "Common names": "Skunk",
+    "details": "A great medicine for WHOOPING-COUGH. In order to insure its full success, it should be given in the lower dilutions from 1x to 3X. Suffocative feeling, asthmatic paroxysms, spasmodic cough; cough so violent, seems as if each spell would terminate life. Child must be raised up, gets blue in face, cannot exhale. Mucous rales through upper part of chest. Patient wants to bathe in ice-cold water.",
+    "dosage": "First to third potency. Has a very short action."
+  }
 }

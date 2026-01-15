@@ -19,8 +19,8 @@
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
     <style>
         :root {
-            --sidebar-width: 320px;
-            --header-height: 70px;
+            --sidebar-width: 300px; /* Reduced slightly */
+            --header-height: 85px; /* Thicker header */
             
             --primary: #059669;
             --primary-dark: #047857;
@@ -483,6 +483,7 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
+            transition: margin-left 0.3s ease;
         }
 
         .topbar {
@@ -501,7 +502,13 @@
         .topbar-left {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
 
         .topbar-title {
@@ -524,6 +531,12 @@
             display: flex;
             align-items: center;
             gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .topbar-stats { display: none; }
+            .topbar-left { gap: 0.75rem; }
+            .topbar-title { font-size: 1.1rem; }
         }
 
         .stat-item {
@@ -726,6 +739,79 @@
             background: var(--primary-dark);
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
+        }
+
+        /* Mobile Menu Button - Defined BEFORE media queries */
+        .mobile-menu-btn {
+            display: none;
+            width: 48px;
+            height: 48px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text-primary);
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--bg-hover);
+            color: var(--primary);
+        }
+
+        /* Sidebar Overlay */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 90;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Responsive: Tablet & Mobile (< 1200px) */
+        @media (max-width: 1200px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+                z-index: 1000;
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .main-wrapper {
+                margin-left: 0;
+                width: 100%;
+                overflow-x: hidden; /* Fix horizontal overflow */
+            }
+            .topbar {
+                padding: 0 1.5rem;
+            }
+            .mobile-menu-btn {
+                display: flex; /* Show hamburger */
+            }
+            .sidebar-overlay.active {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        /* Responsive: Phone (< 768px) */
+        @media (max-width: 768px) {
+            .topbar { padding: 0 1rem; }
+            .topbar-stats { display: none; }
+            .topbar-title { font-size: 1.15rem; }
+            .results-grid { grid-template-columns: 1fr; }
+            .search-grid { grid-template-columns: 1fr; }
         }
 
         /* === LOADING === */
@@ -984,6 +1070,9 @@
 </head>
 
 <body>
+    <!-- Mobile Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
@@ -1081,18 +1170,23 @@
     <div class="main-wrapper">
         <header class="topbar">
             <div class="topbar-left">
-                <h2 class="topbar-title">Remedy Comparison</h2>
-                <span class="topbar-badge">Boericke's</span>
+                <h2 class="topbar-title">Boericke</h2>
+                <span class="topbar-badge">Comparison</span>
             </div>
-            <div class="topbar-stats">
-                <div class="stat-item">
-                    <i class="fas fa-flask"></i>
-                    <span><strong id="totalRemedies">{{ remedy_names|length }}</strong> Remedies</span>
+            <div class="topbar-right">
+                <div class="topbar-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-flask"></i>
+                        <span><strong id="totalRemedies">{{ remedy_names|length }}</strong> Remedies</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-th-list"></i>
+                        <span><strong>{{ symptom_options|length }}</strong> Categories</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-th-list"></i>
-                    <span><strong>{{ symptom_options|length }}</strong> Categories</span>
-                </div>
+                <button class="mobile-menu-btn" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </header>
 
@@ -1398,6 +1492,31 @@
         setupAutocomplete('search2', 'remedy2', 'suggestions2');
         setupAutocomplete('search3', 'remedy3', 'suggestions3');
         setupAutocomplete('search4', 'remedy4', 'suggestions4');
+
+        // === MOBILE SIDEBAR ===
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        if(sidebarToggle) {
+            sidebarToggle.addEventListener('click', toggleSidebar);
+            overlay.addEventListener('click', toggleSidebar);
+        }
+
+        // Close sidebar when clicking a link on mobile
+        document.querySelectorAll('.sidebar a, .search-result-item, .recent-item').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                }
+            });
+        });
 
         // === FORMAT SYMPTOM CONTENT ===
         function formatSymptomContent() {

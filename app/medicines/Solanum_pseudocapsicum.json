@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Solanum pseudocapsicum", 
-  "details": "Acute pains, in lower abdomen."
+  "symptoms": {
+    "details": "Acute pains, in lower abdomen."
+  },
+  "name": "Solanum pseudocapsicum"
 }

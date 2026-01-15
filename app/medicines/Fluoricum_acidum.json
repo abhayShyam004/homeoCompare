@@ -1,14 +1,5 @@
 {
   "name": "Fluoricum acidum",
-  "Relationship": "Compare: THIOSINAMINUM (action on cicatricial tissues; adhesions, strictures, tumors); CALC. FLUOR.; SILICA. Complementary: SILICA.",
-  "Modalities": [
-    "Worse: warmth",
-    "Worse: morning",
-    "Worse: warm drinks",
-    "Better: cold",
-    "Better: while walking"
-  ],
-  "Common names": "Hydrofluoric Acid",
   "symptoms": {
     "Eyes": [
       "Violent itching of inner canthus",
@@ -101,8 +92,17 @@
       "Swollen scrotum",
       "Burning in urethra",
       "Sexual passion and desire increased, with erections at night, during sleep"
-    ]
-  },
-  "details": "Especially adapted to chronic diseases with syphilitic and mercurial history. GLABELLA REGION BLOATED. Acts especially upon lower tissues, and indicated in deep, destructive processes, bedsores, ulcerations, varicose veins, and ulcers. Patient is compelled to move about energetically. Complaints of old age, or the prematurely aged, with weak, distended blood vessels. Hobnailed liver of alcoholics. GOITRE (Dr. Woakes) (Kali-fluoride produced bronchocele in dogs). Early decay of teeth. Old cases of nightly fevers, coming on periodically.",
-  "dosage": "Sixth to thirtieth potency."
+    ],
+    "Relationship": "Compare: THIOSINAMINUM (action on cicatricial tissues; adhesions, strictures, tumors); CALC. FLUOR.; SILICA. Complementary: SILICA.",
+    "Modalities": [
+      "Worse: warmth",
+      "Worse: morning",
+      "Worse: warm drinks",
+      "Better: cold",
+      "Better: while walking"
+    ],
+    "Common names": "Hydrofluoric Acid",
+    "details": "Especially adapted to chronic diseases with syphilitic and mercurial history. GLABELLA REGION BLOATED. Acts especially upon lower tissues, and indicated in deep, destructive processes, bedsores, ulcerations, varicose veins, and ulcers. Patient is compelled to move about energetically. Complaints of old age, or the prematurely aged, with weak, distended blood vessels. Hobnailed liver of alcoholics. GOITRE (Dr. Woakes) (Kali-fluoride produced bronchocele in dogs). Early decay of teeth. Old cases of nightly fevers, coming on periodically.",
+    "dosage": "Sixth to thirtieth potency."
+  }
 }

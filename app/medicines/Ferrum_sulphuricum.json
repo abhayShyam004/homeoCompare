@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ferrum sulphuricum", 
-  "details": "Watery and painless stools; menorrhagia, pressing, throbbing between periods with rush of blood to head. Basedow's disease. Erethism. Pain in gall-bladder; toothache; acidity; eructation of food in mouthfuls."
+  "symptoms": {
+    "details": "Watery and painless stools; menorrhagia, pressing, throbbing between periods with rush of blood to head. Basedow's disease. Erethism. Pain in gall-bladder; toothache; acidity; eructation of food in mouthfuls."
+  },
+  "name": "Ferrum sulphuricum"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Zincum aceticum", 
-  "details": "Effects of night-watching and erysipelas; brain feels sore."
+  "symptoms": {
+    "details": "Effects of night-watching and erysipelas; brain feels sore."
+  },
+  "name": "Zincum aceticum"
 }

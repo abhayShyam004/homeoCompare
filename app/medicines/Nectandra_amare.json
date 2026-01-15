@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Nectandra amare", 
-  "details": "Watery diarrhoea, dry tongue, colic, bluish ring around sunken eyes, restless sleep."
+  "symptoms": {
+    "details": "Watery diarrhoea, dry tongue, colic, bluish ring around sunken eyes, restless sleep."
+  },
+  "name": "Nectandra amare"
 }

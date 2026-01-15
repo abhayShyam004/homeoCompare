@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Pyrus malus", 
-  "details": "Crab apple tree - Labyrinthine vertigo. Dr. Cooper."
+  "symptoms": {
+    "details": "Crab apple tree - Labyrinthine vertigo. Dr. Cooper."
+  },
+  "name": "Pyrus malus"
 }

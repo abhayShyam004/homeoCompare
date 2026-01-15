@@ -1,7 +1,5 @@
 {
   "name": "Aragallus lamberti",
-  "Relationship": "Compare: Astragalus and Oxytropis, two varieties of Loco Weed; also Baryta.",
-  "Common names": "White Loco Weed - Rattle Weed",
   "symptoms": {
     "Head": [
       "Cracking of lower lip",
@@ -38,8 +36,10 @@
       "Weakness of limbs",
       "Cramps of muscles on front of led while walking",
       "Pain in left sciatic nerve"
-    ]
-  },
-  "details": "Acts principally on nervous system, producing a bewildered, confused state. Symptoms of incoordination and paralysis. Locomotor ataxia. Tired in the morning. Baryta; Oxytropis.",
-  "dosage": "Sixth and two hundredth potencies."
+    ],
+    "Relationship": "Compare: Astragalus and Oxytropis, two varieties of Loco Weed; also Baryta.",
+    "Common names": "White Loco Weed - Rattle Weed",
+    "details": "Acts principally on nervous system, producing a bewildered, confused state. Symptoms of incoordination and paralysis. Locomotor ataxia. Tired in the morning. Baryta; Oxytropis.",
+    "dosage": "Sixth and two hundredth potencies."
+  }
 }

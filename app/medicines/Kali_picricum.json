@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Kali picricum", 
-  "details": "Jaundice, violent eructations."
+  "symptoms": {
+    "details": "Jaundice, violent eructations."
+  },
+  "name": "Kali picricum"
 }

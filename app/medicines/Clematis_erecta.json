@@ -1,12 +1,5 @@
 {
   "name": "Clematis erecta",
-  "Relationship": "Compare: CLEMATIS VITALBA (varicose and other ulcers); SIL.; STAPH.; PETROL.; OLEAND.; SARSAP.; CANTH.; PHOS-AC.; PULSAT. Antidotes: BRYON.; CAMPH.",
-  "Modalities": [
-    "Worse: at night",
-    "Worse: and warmth of bed",
-    "Better: in open air"
-  ],
-  "Common names": "Virgin's Bower",
   "symptoms": {
     "Eyes": [
       "Pustular conjunctivitis, with tinea capitis",
@@ -69,8 +62,15 @@
       "Violent erections with stitches in urethra",
       "Right half only",
       "Swelling of scrotum"
-    ]
-  },
-  "details": "Scrofulous, rheumatic, gonorrheal, and syphilitic patients. Acts especially on skin, GLANDS and genitourinary organs, especially testicles. A remedy of much importance in disturbances of sleep, and neuralgic PAINS in various parts. Many of these pains are relieved by perspiration. Muscles relaxed or twitching. Great emaciation. GREAT SLEEPINESS. Distant pulsation in whole body.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: CLEMATIS VITALBA (varicose and other ulcers); SIL.; STAPH.; PETROL.; OLEAND.; SARSAP.; CANTH.; PHOS-AC.; PULSAT. Antidotes: BRYON.; CAMPH.",
+    "Modalities": [
+      "Worse: at night",
+      "Worse: and warmth of bed",
+      "Better: in open air"
+    ],
+    "Common names": "Virgin's Bower",
+    "details": "Scrofulous, rheumatic, gonorrheal, and syphilitic patients. Acts especially on skin, GLANDS and genitourinary organs, especially testicles. A remedy of much importance in disturbances of sleep, and neuralgic PAINS in various parts. Many of these pains are relieved by perspiration. Muscles relaxed or twitching. Great emaciation. GREAT SLEEPINESS. Distant pulsation in whole body.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

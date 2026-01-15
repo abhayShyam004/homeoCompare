@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Strontium nitricum", 
-  "details": "Morbid cravings; headache and eczema behind ears."
+  "symptoms": {
+    "details": "Morbid cravings; headache and eczema behind ears."
+  },
+  "name": "Strontium nitricum"
 }

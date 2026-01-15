@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Pyrarara", 
-  "details": "A fish caught in the Amazon, clinically used for various skin affections. Lepra, tuberculides, syphilides, varicosities, etc."
+  "symptoms": {
+    "details": "A fish caught in the Amazon, clinically used for various skin affections. Lepra, tuberculides, syphilides, varicosities, etc."
+  },
+  "name": "Pyrarara"
 }

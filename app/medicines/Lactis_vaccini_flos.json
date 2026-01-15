@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lactis vaccini flos", 
-  "details": "Cream - diphtheria, leucorrhoea, menorrhagia, dysphagia."
+  "symptoms": {
+    "details": "Cream - diphtheria, leucorrhoea, menorrhagia, dysphagia."
+  },
+  "name": "Lactis vaccini flos"
 }

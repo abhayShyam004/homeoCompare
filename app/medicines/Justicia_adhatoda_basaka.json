@@ -1,7 +1,5 @@
 {
   "name": "Justicia adhatoda basaka",
-  "Relationship": "Seems to come between CEPA and EUPHRASIA, which compare.",
-  "Common names": "An Indian Shrub, Singhee",
   "symptoms": {
     "Head": [
       "Irritable, sensitive to external impressions",
@@ -25,8 +23,10 @@
     "Throat": [
       "Dry, pain during empty swallowing, tenacious mucus",
       "Mouth dry"
-    ]
-  },
-  "details": "Highly efficacious medicine for acute catarrhal conditions of the respiratory tract (used in the beginning).",
-  "dosage": "Third potency and higher. Severe aggravation have been noticed from lower potencies."
+    ],
+    "Relationship": "Seems to come between CEPA and EUPHRASIA, which compare.",
+    "Common names": "An Indian Shrub, Singhee",
+    "details": "Highly efficacious medicine for acute catarrhal conditions of the respiratory tract (used in the beginning).",
+    "dosage": "Third potency and higher. Severe aggravation have been noticed from lower potencies."
+  }
 }

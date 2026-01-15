@@ -1,18 +1,18 @@
 {
   "symptoms": {
     "Stomach": [
-      "Vomiting of coffee-ground looking matter", 
-      "Frequent belching of offensive flatus", 
-      "Pains increased when food passes pyloric outlet", 
-      "Agonizing feeling in chest and stomach, starting from pylorus with flatus that rolls in balls from one side to the other, loss of appetite, phlegmy retchings and loss of flesh", 
-      "Tongue coated", 
-      "Painful sinking across epigastrium", 
-      "Gastric ulceration even with hemorrhage", 
+      "Vomiting of coffee-ground looking matter",
+      "Frequent belching of offensive flatus",
+      "Pains increased when food passes pyloric outlet",
+      "Agonizing feeling in chest and stomach, starting from pylorus with flatus that rolls in balls from one side to the other, loss of appetite, phlegmy retchings and loss of flesh",
+      "Tongue coated",
+      "Painful sinking across epigastrium",
+      "Gastric ulceration even with hemorrhage",
       "Distention of stomach"
-    ]
-  }, 
-  "details": "To be considered in chronic gastric and other abdominal indurations, possibly cancer of intestinal tract, especially of stomach and cecum. Center of action is the pylorus, causing painful contraction with duodenal distention. Depression of spirits. Complete prostration. Feeling of sickness keeps patient awake at night. FLATULENCE, swollen feeling across lower chest; whenever she turns in bed, FEELS AS IF A BAG OF WATER turned also; gastric ulcer and cancer.", 
-  "Common names": "Star of Bethlehem", 
-  "name": "Ornithogalum umbellatum", 
-  "dosage": "Single doses of mother tincture and await action."
+    ],
+    "details": "To be considered in chronic gastric and other abdominal indurations, possibly cancer of intestinal tract, especially of stomach and cecum. Center of action is the pylorus, causing painful contraction with duodenal distention. Depression of spirits. Complete prostration. Feeling of sickness keeps patient awake at night. FLATULENCE, swollen feeling across lower chest; whenever she turns in bed, FEELS AS IF A BAG OF WATER turned also; gastric ulcer and cancer.",
+    "Common names": "Star of Bethlehem",
+    "dosage": "Single doses of mother tincture and await action."
+  },
+  "name": "Ornithogalum umbellatum"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Matico", 
-  "details": "Artanthe or Piper augustifolia, Gonorrhoea, hemorrhage from lungs; catarrhal condition of genito-urinary organs and gastro-intestinal tract. Topically a hemostatic. Difficult, dry, deep, winter cough. Use tincture."
+  "symptoms": {
+    "details": "Artanthe or Piper augustifolia, Gonorrhoea, hemorrhage from lungs; catarrhal condition of genito-urinary organs and gastro-intestinal tract. Topically a hemostatic. Difficult, dry, deep, winter cough. Use tincture."
+  },
+  "name": "Matico"
 }

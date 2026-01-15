@@ -1,7 +1,5 @@
 {
   "name": "Leptandra",
-  "Relationship": "Compare: PODO.; IRIS; BRY.; MERC.; PTEL.; MYRICA.",
-  "Common names": "Culver's Root",
   "symptoms": {
     "Head": [
       "Smarting and aching in eyes",
@@ -20,8 +18,10 @@
       "Rectal hemorrhage",
       "Profuse, black, fetid stools, with pain at umbilicus",
       "Prolapse of rectum with hemorrhoids"
-    ]
-  },
-  "details": "A liver remedy, with jaundice and BLACK, TARRY STOOLS. Bilious states. Enfeebled portal circulation. Malarial conditions.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: PODO.; IRIS; BRY.; MERC.; PTEL.; MYRICA.",
+    "Common names": "Culver's Root",
+    "details": "A liver remedy, with jaundice and BLACK, TARRY STOOLS. Bilious states. Enfeebled portal circulation. Malarial conditions.",
+    "dosage": "Tincture, to third potency."
+  }
 }

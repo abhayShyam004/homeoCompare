@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Plumbago litteralis", 
-  "details": "Eczema of vulva. A Brazilian plant - Costive with red urine, pain in kidneys and joints and body generally; milky saliva, ulcerated mouth."
+  "symptoms": {
+    "details": "Eczema of vulva. A Brazilian plant - Costive with red urine, pain in kidneys and joints and body generally; milky saliva, ulcerated mouth."
+  },
+  "name": "Plumbago litteralis"
 }

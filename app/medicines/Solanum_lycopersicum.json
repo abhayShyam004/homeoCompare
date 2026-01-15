@@ -1,16 +1,5 @@
 {
   "name": "Solanum lycopersicum",
-  "Relationship": "Compare: BELL. (follows well); EUP. PERF.; RHUS; SANGUIN.; CAPS.",
-  "Modalities": [
-    "Worse: right side",
-    "Worse: open air",
-    "Worse: continued motion",
-    "Worse: jar",
-    "Worse: noises",
-    "Better: warm room",
-    "Better: tobacco"
-  ],
-  "Common names": "Lycopersicum Esculentum Tomato",
   "symptoms": {
     "Heart": [
       "Decided decrease in pulse rate with anxiety and apprehensiveness"
@@ -55,8 +44,19 @@
       "Aching through back",
       "Tingling along right ulnar nerve",
       "Right crural neuralgia"
-    ]
-  },
-  "details": "Marked symptoms of rheumatism and influenza. Severe aching pains all over body. PAINS LEFT AFTER INFLUENZA. Head always shows signs of acute congestion. Hay-fever, with marked aggravation from breathing the least dust. Frequent urination and profuse watery diarrhoea.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: BELL. (follows well); EUP. PERF.; RHUS; SANGUIN.; CAPS.",
+    "Modalities": [
+      "Worse: right side",
+      "Worse: open air",
+      "Worse: continued motion",
+      "Worse: jar",
+      "Worse: noises",
+      "Better: warm room",
+      "Better: tobacco"
+    ],
+    "Common names": "Lycopersicum Esculentum Tomato",
+    "details": "Marked symptoms of rheumatism and influenza. Severe aching pains all over body. PAINS LEFT AFTER INFLUENZA. Head always shows signs of acute congestion. Hay-fever, with marked aggravation from breathing the least dust. Frequent urination and profuse watery diarrhoea.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

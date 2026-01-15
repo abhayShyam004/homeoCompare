@@ -39,10 +39,10 @@
     "Throat": [
       "Sore, feels raw, burns",
       "Burning pain in tonsils"
-    ]
+    ],
+    "details": "Sensation of burning and pressure everywhere.",
+    "Common names": "Black Pepper",
+    "dosage": "Low attenuations."
   },
-  "details": "Sensation of burning and pressure everywhere.",
-  "Common names": "Black Pepper",
-  "name": "Piper nigrum",
-  "dosage": "Low attenuations."
+  "name": "Piper nigrum"
 }

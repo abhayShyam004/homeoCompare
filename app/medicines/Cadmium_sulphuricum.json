@@ -1,12 +1,5 @@
 {
   "name": "Cadmium sulphuricum",
-  "Relationship": "Compare: Cadmium oxide; Cad. brom. (pain and burning in stomach and vomiting); Cadmium jodat. (Itching of anus and rectum felt during the day only; constipation, frequent desire, tenesmus, abdomen bloated); Zinc.; Ars.; Carbo; Verat.",
-  "Modalities": [
-    "Worse: walking or carrying burdens; after sleep; from open air",
-    "Worse: stimulants",
-    "Better: eating and rest"
-  ],
-  "Common names": "Cadmic Sulphate",
   "symptoms": {
     "Mind": [
       "Vertigo",
@@ -95,8 +88,15 @@
       "Sore throat, constant tickling",
       "gagging and nausea, worse deep breathing",
       "chilliness and aching"
-    ]
-  },
-  "details": "Its pathogenesis gives symptoms corresponding to very low forms of disease, as in cholera, YELLOW FEVER, where, with exhaustion, vomiting, and EXTREME PROSTRATION, the disease runs death ward. Important gastric symptoms. Carcinoma ventriculi; persistent vomiting. The attack is upon the stomach more especially. Patients must keep quiet. CHILLINESS AND COLDNESS even when near the fire.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: Cadmium oxide; Cad. brom. (pain and burning in stomach and vomiting); Cadmium jodat. (Itching of anus and rectum felt during the day only; constipation, frequent desire, tenesmus, abdomen bloated); Zinc.; Ars.; Carbo; Verat.",
+    "Modalities": [
+      "Worse: walking or carrying burdens; after sleep; from open air",
+      "Worse: stimulants",
+      "Better: eating and rest"
+    ],
+    "Common names": "Cadmic Sulphate",
+    "details": "Its pathogenesis gives symptoms corresponding to very low forms of disease, as in cholera, YELLOW FEVER, where, with exhaustion, vomiting, and EXTREME PROSTRATION, the disease runs death ward. Important gastric symptoms. Carcinoma ventriculi; persistent vomiting. The attack is upon the stomach more especially. Patients must keep quiet. CHILLINESS AND COLDNESS even when near the fire.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

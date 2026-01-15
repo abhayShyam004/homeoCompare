@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ceanothus thrysiflorus", 
-  "details": "California Lilac - Pharyngitis, tonsillitis, nasal catarrh, diphtheria. Tincture internally and as a gargle."
+  "symptoms": {
+    "details": "California Lilac - Pharyngitis, tonsillitis, nasal catarrh, diphtheria. Tincture internally and as a gargle."
+  },
+  "name": "Ceanothus thrysiflorus"
 }

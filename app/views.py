@@ -311,10 +311,60 @@ def privacy(request):
 from django.db.models import Count
 from django.db.models.functions import TruncDate
 from django.utils import timezone
-from datetime import timedelta
+from datetime import timedelta, datetime
 from .models import PageView, SearchQuery
 
-ADMIN_PASSWORD = 'admin@homeocompare'
+# JWT Authentication helpers
+def get_admin_credentials():
+    """Load admin credentials from .env file"""
+    import os
+    from dotenv import load_dotenv
+    env_path = Path(os.path.dirname(__file__)).parent / '.env'
+    load_dotenv(env_path)
+    return {
+        'username': os.environ.get('ADMIN_USERNAME', ''),
+        'password_hash': os.environ.get('ADMIN_PASSWORD_HASH', ''),
+        'jwt_secret': os.environ.get('JWT_SECRET', 'fallback-secret-change-this')
+    }
+
+def verify_password(plain_password, hashed_password):
+    """Verify a password against its bcrypt hash"""
+    import bcrypt
+    try:
+        return bcrypt.checkpw(plain_password.encode(), hashed_password.encode())
+    except:
+        return False
+
+def create_jwt_token(username):
+    """Create a JWT token for authenticated user"""
+    import jwt
+    creds = get_admin_credentials()
+    payload = {
+        'sub': username,
+        'iat': datetime.utcnow(),
+        'exp': datetime.utcnow() + timedelta(hours=24)
+    }
+    return jwt.encode(payload, creds['jwt_secret'], algorithm='HS256')
+
+def verify_jwt_token(token):
+    """Verify JWT token and return payload if valid"""
+    import jwt
+    creds = get_admin_credentials()
+    try:
+        payload = jwt.decode(token, creds['jwt_secret'], algorithms=['HS256'])
+        return payload
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidTokenError:
+        return None
+
+def is_admin_authenticated(request):
+    """Check if request has valid admin JWT token"""
+    token = request.COOKIES.get('admin_token', '')
+    if not token:
+        return False
+    payload = verify_jwt_token(token)
+    return payload is not None
 
 
 def track_page_view(request, page_name):
@@ -349,23 +399,42 @@ def track_search(remedies, category, source='boericke'):
 
 
 def admin_panel(request):
-    """Admin panel with login and analytics dashboard"""
+    """Admin panel with secure JWT login and analytics dashboard"""
     error = None
     
-    # Check if already logged in
-    is_authenticated = request.session.get('admin_authenticated', False)
+    # Check if already logged in via JWT cookie
+    authenticated = is_admin_authenticated(request)
     
     # Handle login
-    if request.method == 'POST' and not is_authenticated:
+    if request.method == 'POST' and not authenticated:
+        username = request.POST.get('username', '').strip()
         password = request.POST.get('password', '')
-        if password == ADMIN_PASSWORD:
-            request.session['admin_authenticated'] = True
-            is_authenticated = True
+        
+        creds = get_admin_credentials()
+        
+        # Verify credentials
+        if username == creds['username'] and verify_password(password, creds['password_hash']):
+            # Create JWT token
+            token = create_jwt_token(username)
+            
+            # Post-login redirect to avoid form resubmission and ensure cookie is set
+            from django.shortcuts import redirect
+            response = redirect('admin_panel')
+            response.set_cookie(
+                'admin_token',
+                token,
+                httponly=True,
+                secure=request.is_secure(),
+                samesite='Lax',  # Changed to Lax to be more permissive with navigation
+                max_age=60 * 60 * 24  # 24 hours
+            )
+            return response
+            
         else:
-            error = 'Invalid password'
+            error = 'Invalid username or password'
     
     # If not authenticated, show login form
-    if not is_authenticated:
+    if not authenticated:
         return render(request, 'app/admin_panel.html', {'authenticated': False, 'error': error})
     
     import json
@@ -446,10 +515,11 @@ def admin_panel(request):
 
 
 def admin_logout(request):
-    """Logout from admin panel"""
-    request.session['admin_authenticated'] = False
+    """Logout from admin panel - clear JWT cookie"""
     from django.shortcuts import redirect
-    return redirect('admin_panel')
+    response = redirect('admin_panel')
+    response.delete_cookie('admin_token')
+    return response
 
 
 def track_search_api(request):
@@ -476,3 +546,206 @@ def track_search_api(request):
             print(f"Track search error: {e}")
     
     return JsonResponse({'status': 'error'}, status=400)
+
+
+# === MEDICINE MANAGEMENT ===
+
+def require_admin(view_func):
+    """Decorator to require admin JWT authentication"""
+    def wrapper(request, *args, **kwargs):
+        if not is_admin_authenticated(request):
+            from django.shortcuts import redirect
+            return redirect('admin_panel')
+        return view_func(request, *args, **kwargs)
+    return wrapper
+
+
+@require_admin
+def admin_boericke_list(request):
+    """List all Boericke medicines"""
+    json_dir_path = Path(os.path.dirname(__file__)) / 'medicines'
+    
+    # Fields to exclude from category count
+    skip_fields = {'name', '_filename'}
+    
+    medicines = []
+    if json_dir_path.exists():
+        for json_file in sorted(json_dir_path.glob('*.json')):
+            # Skip allens_keynotes.json
+            if json_file.name == 'allens_keynotes.json':
+                continue
+            try:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    name = data.get('name', json_file.stem)
+                    
+                    # Count all data categories (symptoms + top-level fields)
+                    symptoms = data.get('symptoms', {})
+                    all_categories = list(symptoms.keys())
+                    
+                    # Add top-level fields like Modalities, details, Relationship, etc.
+                    for key in data.keys():
+                        if key not in skip_fields and key != 'symptoms':
+                            all_categories.append(key)
+                    
+                    medicines.append({
+                        'name': name,
+                        'filename': json_file.name,
+                        'category_count': len(all_categories),
+                        'categories': all_categories[:5]
+                    })
+            except:
+                continue
+    
+    # Group by first letter
+    by_letter = {}
+    for m in medicines:
+        letter = m['name'][0].upper() if m['name'] else 'A'
+        if letter not in by_letter:
+            by_letter[letter] = []
+        by_letter[letter].append(m)
+    
+    context = {
+        'authenticated': True,
+        'source': 'boericke',
+        'source_title': "Boericke's Materia Medica",
+        'medicines': medicines,
+        'by_letter': dict(sorted(by_letter.items())),
+        'total_count': len(medicines),
+    }
+    return render(request, 'app/admin_medicines.html', context)
+
+
+@require_admin
+def admin_allen_list(request):
+    """List all Allen medicines"""
+    json_file_path = Path(os.path.dirname(__file__)) / 'medicines' / 'allens_keynotes.json'
+    
+    medicines = []
+    if json_file_path.exists():
+        with open(json_file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            for name, info in sorted(data.items()):
+                categories = [k for k in info.keys() if k not in ['name', 'source']]
+                medicines.append({
+                    'name': name,
+                    'category_count': len(categories),
+                    'categories': categories[:5]
+                })
+    
+    # Group by first letter
+    by_letter = {}
+    for m in medicines:
+        letter = m['name'][0].upper() if m['name'] else 'A'
+        if letter not in by_letter:
+            by_letter[letter] = []
+        by_letter[letter].append(m)
+    
+    context = {
+        'authenticated': True,
+        'source': 'allen',
+        'source_title': "Allen's Keynotes",
+        'medicines': medicines,
+        'by_letter': dict(sorted(by_letter.items())),
+        'total_count': len(medicines),
+    }
+    return render(request, 'app/admin_medicines.html', context)
+
+
+@require_admin
+def admin_medicine_detail(request, source, name):
+    """View/edit a specific medicine"""
+    medicine_data = {}
+    
+    if source == 'boericke':
+        # Find the file
+        json_dir_path = Path(os.path.dirname(__file__)) / 'medicines'
+        for json_file in json_dir_path.glob('*.json'):
+            try:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if data.get('name', '').lower() == name.lower():
+                        medicine_data = data
+                        medicine_data['_filename'] = json_file.name
+                        break
+            except:
+                continue
+    elif source == 'allen':
+        json_file_path = Path(os.path.dirname(__file__)) / 'medicines' / 'allens_keynotes.json'
+        if json_file_path.exists():
+            with open(json_file_path, 'r', encoding='utf-8') as f:
+                all_data = json.load(f)
+                for med_name, info in all_data.items():
+                    if med_name.lower() == name.lower():
+                        medicine_data = {'name': med_name, **info}
+                        break
+    
+    # Convert list values to semicolon-separated strings for template display
+    processed_symptoms = {}
+    if 'symptoms' in medicine_data:
+        for key, value in medicine_data['symptoms'].items():
+            if isinstance(value, list):
+                processed_symptoms[key] = '; '.join(str(v) for v in value)
+            else:
+                processed_symptoms[key] = str(value) if value else ''
+        medicine_data['symptoms'] = processed_symptoms
+    
+    context = {
+        'authenticated': True,
+        'source': source,
+        'source_title': "Boericke's" if source == 'boericke' else "Allen's",
+        'medicine': medicine_data,
+        'medicine_json': json.dumps(medicine_data, indent=2),
+    }
+    return render(request, 'app/admin_medicine_detail.html', context)
+
+
+@require_admin  
+def admin_medicine_save(request):
+    """Save edited medicine data"""
+    from django.http import JsonResponse
+    
+    if request.method != 'POST':
+        return JsonResponse({'status': 'error', 'message': 'POST required'}, status=400)
+    
+    try:
+        data = json.loads(request.body)
+        source = data.get('source')
+        name = data.get('name')
+        content = data.get('content')
+        
+        if source == 'boericke':
+            # Find and update the file
+            json_dir_path = Path(os.path.dirname(__file__)) / 'medicines'
+            for json_file in json_dir_path.glob('*.json'):
+                try:
+                    with open(json_file, 'r', encoding='utf-8') as f:
+                        file_data = json.load(f)
+                        if file_data.get('name', '').lower() == name.lower():
+                            # Update the file
+                            with open(json_file, 'w', encoding='utf-8') as fw:
+                                json.dump(content, fw, indent=2, ensure_ascii=False)
+                            return JsonResponse({'status': 'ok'})
+                except:
+                    continue
+                    
+        elif source == 'allen':
+            json_file_path = Path(os.path.dirname(__file__)) / 'medicines' / 'allens_keynotes.json'
+            if json_file_path.exists():
+                with open(json_file_path, 'r', encoding='utf-8') as f:
+                    all_data = json.load(f)
+                
+                # Find and update
+                for med_name in list(all_data.keys()):
+                    if med_name.lower() == name.lower():
+                        all_data[med_name] = content
+                        break
+                
+                with open(json_file_path, 'w', encoding='utf-8') as f:
+                    json.dump(all_data, f, indent=2, ensure_ascii=False)
+                return JsonResponse({'status': 'ok'})
+        
+        return JsonResponse({'status': 'error', 'message': 'Medicine not found'}, status=404)
+        
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)

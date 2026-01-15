@@ -1,7 +1,5 @@
 {
   "name": "Palladium",
-  "Relationship": "Complementary: ARG.; HELON.; LIL.; APIS.",
-  "Common names": "The Metal",
   "symptoms": {
     "Head": [
       "Pain across top of head from ear to ear",
@@ -49,8 +47,10 @@
       "in right hip",
       "Sciatica",
       "Darting pains from toes to hips"
-    ]
-  },
-  "details": "An ovarian remedy; produces the symptom-complex of chronic Oophoritis. Useful where the parenchyma of the gland is not totally destroyed. Acts also on mind and skin. Motor weakness, averse to exercise.",
-  "dosage": "Sixth to thirtieth potency."
+    ],
+    "Relationship": "Complementary: ARG.; HELON.; LIL.; APIS.",
+    "Common names": "The Metal",
+    "details": "An ovarian remedy; produces the symptom-complex of chronic Oophoritis. Useful where the parenchyma of the gland is not totally destroyed. Acts also on mind and skin. Motor weakness, averse to exercise.",
+    "dosage": "Sixth to thirtieth potency."
+  }
 }

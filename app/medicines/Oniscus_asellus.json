@@ -1,7 +1,5 @@
 {
   "name": "Oniscus asellus",
-  "Relationship": "Compare: POTHOS. CANTH.",
-  "Common names": "Millepede Wood-louse",
   "symptoms": {
     "Head": [
       "Painful pressure above the root of nose",
@@ -20,8 +18,10 @@
       "Distended",
       "meteorism",
       "very severe colic"
-    ]
-  },
-  "details": "Has distinct diuretic properties; hence its use in dropsies. Asthmatic conditions, with bronchial catarrh.",
-  "dosage": "Sixth potency."
+    ],
+    "Relationship": "Compare: POTHOS. CANTH.",
+    "Common names": "Millepede Wood-louse",
+    "details": "Has distinct diuretic properties; hence its use in dropsies. Asthmatic conditions, with bronchial catarrh.",
+    "dosage": "Sixth potency."
+  }
 }

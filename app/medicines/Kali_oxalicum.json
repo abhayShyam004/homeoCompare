@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Kali oxalicum", 
-  "details": "Lumbago, convulsions"
+  "symptoms": {
+    "details": "Lumbago, convulsions"
+  },
+  "name": "Kali oxalicum"
 }

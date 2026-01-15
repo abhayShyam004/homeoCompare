@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Anthoxanthum odoratum", 
-  "details": "Sweet vernal grass. A popular medicine for hay-fever and coryza."
+  "symptoms": {
+    "details": "Sweet vernal grass. A popular medicine for hay-fever and coryza."
+  },
+  "name": "Anthoxanthum odoratum"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Chininum salicylicum", 
-  "details": "Deafness, tinnitus, and Meniere's disease."
+  "symptoms": {
+    "details": "Deafness, tinnitus, and Meniere's disease."
+  },
+  "name": "Chininum salicylicum"
 }

@@ -1,0 +1,392 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ source_title }} | Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+    <style>
+        :root {
+            --sidebar-width: 280px;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --success: #10b981;
+            --bg-dark: #0f172a;
+            --bg-sidebar: #1e293b;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --bg-hover: #334155;
+            --text-white: #ffffff;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #334155;
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+        .logo-text h1 { font-size: 1rem; font-weight: 700; color: var(--text-white); }
+        .logo-text span { font-size: 0.7rem; color: var(--text-muted); }
+        .sidebar-nav { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .nav-section { padding: 0 1rem; margin-bottom: 1.5rem; }
+        .nav-section-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.15s;
+            margin-bottom: 4px;
+        }
+        .nav-link:hover { background: var(--bg-hover); color: var(--text-primary); }
+        .nav-link.active { background: rgba(99, 102, 241, 0.15); color: var(--primary-light); }
+        .nav-link i { width: 20px; text-align: center; color: var(--text-muted); }
+        .nav-link.active i { color: var(--primary-light); }
+        .sidebar-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+        .logout-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 0.75rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .logout-btn:hover { background: rgba(239, 68, 68, 0.1); border-color: #ef4444; color: #ef4444; }
+
+        /* Main */
+        .main-wrapper {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .topbar {
+            height: 64px;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .topbar-title { font-size: 1.25rem; font-weight: 700; }
+        .topbar-badge {
+            padding: 6px 14px;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--success);
+        }
+        .main-content { padding: 2rem; }
+
+        /* Search & Filters */
+        .search-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .search-input {
+            flex: 1;
+            height: 48px;
+            padding: 0 1rem 0 3rem;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+        .search-input:focus { outline: none; border-color: var(--primary); }
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+        }
+        .search-wrapper i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        /* Alphabet bar */
+        .alphabet-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+        }
+        .alpha-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-input);
+            border: none;
+            border-radius: var(--radius);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .alpha-btn:hover { background: var(--primary); color: white; }
+        .alpha-btn.disabled { opacity: 0.3; cursor: not-allowed; }
+
+        /* Medicine Grid */
+        .letter-section {
+            margin-bottom: 2rem;
+        }
+        .letter-header {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        .medicine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        .medicine-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.15s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .medicine-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .medicine-name {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-white);
+        }
+        .medicine-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .medicine-cats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 0.75rem;
+        }
+        .cat-tag {
+            padding: 3px 8px;
+            background: var(--bg-input);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="{% url 'home' %}" class="logo">
+                <div class="logo-icon">Hc</div>
+                <div class="logo-text">
+                    <h1>HomeoCompare</h1>
+                    <span>Admin Panel</span>
+                </div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Dashboard</div>
+                <a href="{% url 'admin_panel' %}" class="nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Manage Medicines</div>
+                <a href="{% url 'admin_boericke' %}" class="nav-link {% if source == 'boericke' %}active{% endif %}">
+                    <i class="fas fa-book"></i>
+                    <span>Boericke's</span>
+                </a>
+                <a href="{% url 'admin_allen' %}" class="nav-link {% if source == 'allen' %}active{% endif %}">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Allen's Keynotes</span>
+                </a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Quick Links</div>
+                <a href="{% url 'home' %}" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home Page</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="{% url 'admin_logout' %}" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="topbar">
+            <h1 class="topbar-title">{{ source_title }}</h1>
+            <span class="topbar-badge">{{ total_count }} Medicines</span>
+        </header>
+
+        <main class="main-content">
+            <!-- Search -->
+            <div class="search-bar">
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search medicines...">
+                </div>
+            </div>
+
+            <!-- Alphabet -->
+            <div class="alphabet-bar">
+                {% for letter, meds in by_letter.items %}
+                <button class="alpha-btn" data-letter="{{ letter }}">{{ letter }}</button>
+                {% endfor %}
+            </div>
+
+            <!-- Medicine list -->
+            {% for letter, meds in by_letter.items %}
+            <div class="letter-section" id="letter-{{ letter }}">
+                <h2 class="letter-header">{{ letter }}</h2>
+                <div class="medicine-grid">
+                    {% for med in meds %}
+                    <a href="{% url 'admin_medicine_detail' source med.name %}" class="medicine-card" data-name="{{ med.name|lower }}">
+                        <div class="medicine-name">{{ med.name }}</div>
+                        <div class="medicine-meta">{{ med.category_count }} categories</div>
+                        <div class="medicine-cats">
+                            {% for cat in med.categories %}
+                            <span class="cat-tag">{{ cat }}</span>
+                            {% endfor %}
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </main>
+    </div>
+
+    <script>
+        // Search
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const q = this.value.toLowerCase();
+            document.querySelectorAll('.medicine-card').forEach(card => {
+                const name = card.dataset.name;
+                card.style.display = name.includes(q) ? '' : 'none';
+            });
+            // Hide empty sections
+            document.querySelectorAll('.letter-section').forEach(sec => {
+                const visibleCards = sec.querySelectorAll('.medicine-card[style=""], .medicine-card:not([style])');
+                sec.style.display = visibleCards.length ? '' : 'none';
+            });
+        });
+
+        // Alphabet jump
+        document.querySelectorAll('.alpha-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const letter = this.dataset.letter;
+                const section = document.getElementById('letter-' + letter);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

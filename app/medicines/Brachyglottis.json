@@ -1,7 +1,5 @@
 {
   "name": "Brachyglottis",
-  "Relationship": "Compare: Apis; Helonias; Merc. cor.; Plumbum.",
-  "Common names": "Pukapuka",
   "symptoms": {
     "Urine": [
       "Soreness in urethra",
@@ -17,8 +15,10 @@
     ],
     "Extremities": [
       "Cramp in fingers, thumb, and wrist when writing - soreness extending along flexor carpi ulnaris"
-    ]
-  },
-  "details": "FLUTTERING SENSATION. (Caladium.) Kidney and bladder symptoms predominate. Produces symptoms of albuminuria. Itching in ears and nostrils. BRIGHT'S DISEASE. Oppression of chest. Writer's cramp.",
-  "dosage": "Third potency."
+    ],
+    "Relationship": "Compare: Apis; Helonias; Merc. cor.; Plumbum.",
+    "Common names": "Pukapuka",
+    "details": "FLUTTERING SENSATION. (Caladium.) Kidney and bladder symptoms predominate. Produces symptoms of albuminuria. Itching in ears and nostrils. BRIGHT'S DISEASE. Oppression of chest. Writer's cramp.",
+    "dosage": "Third potency."
+  }
 }

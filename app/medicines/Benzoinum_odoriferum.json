@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Benzoinum odoriferum", 
-  "details": "Spice-wood night sweats."
+  "symptoms": {
+    "details": "Spice-wood night sweats."
+  },
+  "name": "Benzoinum odoriferum"
 }

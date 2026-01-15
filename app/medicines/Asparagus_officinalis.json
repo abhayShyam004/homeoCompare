@@ -1,7 +1,5 @@
 {
   "name": "Asparagus officinalis",
-  "Relationship": "Antidote: Acon.; Apis. Compare: Althaea - Marshmallow - (contains asparagine; irritable bladder, throat and bronchi.) Physalis Alkekengi. Digital.; Sarsap.; Spigelia",
-  "Common names": "Common Garden Asparagus",
   "symptoms": {
     "Heart": [
       "Hydrothorax",
@@ -26,8 +24,10 @@
     "Extremities": [
       "Pain at acromion process of left scapula under clavicle and down arm, with feeble pulse",
       "Rheumatic pain in back, especially near shoulder and limbs"
-    ]
-  },
-  "details": "Its marked and immediate action on the urinary secretion is well known. It causes weakness and cardia depression with dropsy. Rheumatic pains. Especially about left shoulder and heart.",
-  "dosage": "Sixth potency"
+    ],
+    "Relationship": "Antidote: Acon.; Apis. Compare: Althaea - Marshmallow - (contains asparagine; irritable bladder, throat and bronchi.) Physalis Alkekengi. Digital.; Sarsap.; Spigelia",
+    "Common names": "Common Garden Asparagus",
+    "details": "Its marked and immediate action on the urinary secretion is well known. It causes weakness and cardia depression with dropsy. Rheumatic pains. Especially about left shoulder and heart.",
+    "dosage": "Sixth potency"
+  }
 }

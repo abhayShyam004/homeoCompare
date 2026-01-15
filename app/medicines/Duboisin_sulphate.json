@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Duboisin sulphate", 
-  "details": "SEDATIVE IN MANIA. 2-4 Milligrams a day. Hysteroepilepsy. Motor restlessness of insane. HAS BEEN USED AS A SUBSTITUTE FOR ATROPHIA in doses of 1-20 of a grain hypodermically."
+  "symptoms": {
+    "details": "SEDATIVE IN MANIA. 2-4 Milligrams a day. Hysteroepilepsy. Motor restlessness of insane. HAS BEEN USED AS A SUBSTITUTE FOR ATROPHIA in doses of 1-20 of a grain hypodermically."
+  },
+  "name": "Duboisin sulphate"
 }

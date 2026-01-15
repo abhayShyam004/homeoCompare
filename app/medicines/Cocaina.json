@@ -1,7 +1,5 @@
 {
   "name": "Cocaina",
-  "Relationship": "Compare: STOVAIN (an analgesic, a vasomotor dilator.) Antidote to disagreeable effects occasionally resulting from injection of cocaine into skin or gums, drop doses of nitro-glycer. 1% sol.",
-  "Common names": "An Alkaloid from Erythroxylon Coca",
   "symptoms": {
     "Eyes": [
       "Eyes staring, expressionless",
@@ -47,8 +45,10 @@
       "Chorea",
       "paralysis agitans",
       "alcoholic tremors and senile trembling"
-    ]
-  },
-  "details": "Besides the great usefulness of Cocaine as a local anaesthetic, it has specific homeopathic uses, though the symptoms are mainly clinical only. Sensation AS IF SMALL FOREIGN BODIES OR WORMS WERE UNDER THE SKIN.",
-  "dosage": "Lower potencies. As a local application to mucous membranes, 2-4%."
+    ],
+    "Relationship": "Compare: STOVAIN (an analgesic, a vasomotor dilator.) Antidote to disagreeable effects occasionally resulting from injection of cocaine into skin or gums, drop doses of nitro-glycer. 1% sol.",
+    "Common names": "An Alkaloid from Erythroxylon Coca",
+    "details": "Besides the great usefulness of Cocaine as a local anaesthetic, it has specific homeopathic uses, though the symptoms are mainly clinical only. Sensation AS IF SMALL FOREIGN BODIES OR WORMS WERE UNDER THE SKIN.",
+    "dosage": "Lower potencies. As a local application to mucous membranes, 2-4%."
+  }
 }

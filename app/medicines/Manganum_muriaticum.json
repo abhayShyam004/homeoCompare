@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Manganum muriaticum", 
-  "details": "Painful ankles, bone-pains."
+  "symptoms": {
+    "details": "Painful ankles, bone-pains."
+  },
+  "name": "Manganum muriaticum"
 }

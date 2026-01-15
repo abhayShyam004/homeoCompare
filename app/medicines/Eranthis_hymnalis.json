@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Eranthis hymnalis", 
-  "details": "Winter Aconite - acts on solar plexus and works upwards causing dyspnoea. Pain in occiput and neck."
+  "symptoms": {
+    "details": "Winter Aconite - acts on solar plexus and works upwards causing dyspnoea. Pain in occiput and neck."
+  },
+  "name": "Eranthis hymnalis"
 }

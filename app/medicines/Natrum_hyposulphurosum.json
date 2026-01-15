@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Natrum hyposulphurosum", 
-  "details": "Liver-spots, locally and internally."
+  "symptoms": {
+    "details": "Liver-spots, locally and internally."
+  },
+  "name": "Natrum hyposulphurosum"
 }

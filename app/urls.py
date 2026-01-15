@@ -11,5 +11,10 @@ urlpatterns = [
     path('privacy/', views.privacy, name='privacy'),
     path('admin-panel/', views.admin_panel, name='admin_panel'),
     path('admin-panel/logout/', views.admin_logout, name='admin_logout'),
+    path('admin-panel/boericke/', views.admin_boericke_list, name='admin_boericke'),
+    path('admin-panel/allen/', views.admin_allen_list, name='admin_allen'),
+    path('admin-panel/medicine/<str:source>/<str:name>/', views.admin_medicine_detail, name='admin_medicine_detail'),
+    path('admin-panel/medicine/save/', views.admin_medicine_save, name='admin_medicine_save'),
     path('api/track-search/', views.track_search_api, name='track_search_api'),
 ]
+

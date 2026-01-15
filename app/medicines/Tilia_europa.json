@@ -1,13 +1,5 @@
 {
   "name": "Tilia europa",
-  "Relationship": "Compare: LILIUM; BELLAD.",
-  "Modalities": [
-    "Worse: in afternoon and evening; in warm room",
-    "Worse: heat of bed",
-    "Better: cool room",
-    "Better: motion"
-  ],
-  "Common names": "Linden",
   "symptoms": {
     "Eyes": [
       "Sensation as of gauze before eyes",
@@ -32,8 +24,16 @@
       "Eruption of small, red itching pimples",
       "Urticaria",
       "Violent itching, and burning like fire after scratching"
-    ]
-  },
-  "details": "Of value in muscular weakness of the eye; hemorrhage to thin, pale blood. Puerperal metritis. Disease of the antrum. (KALI HYD.; CHELID.)",
-  "dosage": "Tincture, to sixth potency."
+    ],
+    "Relationship": "Compare: LILIUM; BELLAD.",
+    "Modalities": [
+      "Worse: in afternoon and evening; in warm room",
+      "Worse: heat of bed",
+      "Better: cool room",
+      "Better: motion"
+    ],
+    "Common names": "Linden",
+    "details": "Of value in muscular weakness of the eye; hemorrhage to thin, pale blood. Puerperal metritis. Disease of the antrum. (KALI HYD.; CHELID.)",
+    "dosage": "Tincture, to sixth potency."
+  }
 }

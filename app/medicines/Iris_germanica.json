@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Iris germanica", 
-  "details": "Blue Garden Iris - dropsy and freckles"
+  "symptoms": {
+    "details": "Blue Garden Iris - dropsy and freckles"
+  },
+  "name": "Iris germanica"
 }

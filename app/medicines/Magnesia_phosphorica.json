@@ -1,17 +1,5 @@
 {
   "name": "Magnesia phosphorica",
-  "Relationship": "Compare: KALI-PHOS.; COLOCY.; SILICA; ZINC.; DIOS. Antidotes: BELL.; GELS.; LACH.",
-  "Modalities": [
-    "Worse: right side",
-    "Worse: cold",
-    "Worse: touch",
-    "Worse: night",
-    "Better: warmth",
-    "Better: bending double",
-    "Better: pressure",
-    "Better: friction"
-  ],
-  "Common names": "Phosphate of Magnesia",
   "symptoms": {
     "Heart": [
       "Constricting pains around heart",
@@ -100,8 +88,20 @@
       "Severe neuralgic pain",
       "worse behind right ear",
       "worse, by going into cold air, and washing face and neck with cold water"
-    ]
-  },
-  "details": "The great anti-spasmodic remedy. Cramping of muscles with radiating pains. Neuralgic pains RELIEVED BY WARMTH. Especially suited to tired, languid, exhausted subjects. Indisposition for mental exertion. Goitre.",
-  "dosage": "First to twelfth potency. Sometimes the highest potencies are preferable. Acts especially well, given in hot water."
+    ],
+    "Relationship": "Compare: KALI-PHOS.; COLOCY.; SILICA; ZINC.; DIOS. Antidotes: BELL.; GELS.; LACH.",
+    "Modalities": [
+      "Worse: right side",
+      "Worse: cold",
+      "Worse: touch",
+      "Worse: night",
+      "Better: warmth",
+      "Better: bending double",
+      "Better: pressure",
+      "Better: friction"
+    ],
+    "Common names": "Phosphate of Magnesia",
+    "details": "The great anti-spasmodic remedy. Cramping of muscles with radiating pains. Neuralgic pains RELIEVED BY WARMTH. Especially suited to tired, languid, exhausted subjects. Indisposition for mental exertion. Goitre.",
+    "dosage": "First to twelfth potency. Sometimes the highest potencies are preferable. Acts especially well, given in hot water."
+  }
 }

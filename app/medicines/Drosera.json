@@ -1,15 +1,5 @@
 {
   "name": "Drosera",
-  "Relationship": "Antidote: CAMPH. Compare; FLUOROFORM (2 per cent. watery solution, 2-4 drops, after paroxysms, considered specific for whooping-cough.) OUABAIN from leaves of Carissa schimperi - arrow poison. (Respiratory spasm - Whooping cough is cut short in first stage and reduced in frequency of attacks and hastens convalescence.) CHELID.; CORAL.; CUPR.; CASTANEA; ARGENT.; MENYANTH.",
-  "Modalities": [
-    "Worse: after midnight",
-    "Worse: lying down",
-    "Worse: on getting warm in bed",
-    "Worse: drinking",
-    "Worse: singing",
-    "Worse: laughing"
-  ],
-  "Common names": "Sundew",
   "symptoms": {
     "Head": [
       "Vertigo when walking in open air, with inclination to fall to the left side",
@@ -48,8 +38,18 @@
       "All limbs feel lame",
       "Stiffness in joints of feet",
       "Paralytic pains in the coxofemoral joint and thighs"
-    ]
-  },
-  "details": "Affects markedly the respiratory organs and was pointed out by Hahnemann as the principal remedy for whooping-cough. Drosera can break down resistance to tubercle and should therefore be capable of raising it (Dr. Tyler). Laryngeal phthisis is benefited by it. Phthisis pulmonum; vomiting of food from coughing with gastric irritation and profuse expectoration. Pains about hip-joint. Tubercular glands.",
-  "dosage": "First to twelfth attenuation."
+    ],
+    "Relationship": "Antidote: CAMPH. Compare; FLUOROFORM (2 per cent. watery solution, 2-4 drops, after paroxysms, considered specific for whooping-cough.) OUABAIN from leaves of Carissa schimperi - arrow poison. (Respiratory spasm - Whooping cough is cut short in first stage and reduced in frequency of attacks and hastens convalescence.) CHELID.; CORAL.; CUPR.; CASTANEA; ARGENT.; MENYANTH.",
+    "Modalities": [
+      "Worse: after midnight",
+      "Worse: lying down",
+      "Worse: on getting warm in bed",
+      "Worse: drinking",
+      "Worse: singing",
+      "Worse: laughing"
+    ],
+    "Common names": "Sundew",
+    "details": "Affects markedly the respiratory organs and was pointed out by Hahnemann as the principal remedy for whooping-cough. Drosera can break down resistance to tubercle and should therefore be capable of raising it (Dr. Tyler). Laryngeal phthisis is benefited by it. Phthisis pulmonum; vomiting of food from coughing with gastric irritation and profuse expectoration. Pains about hip-joint. Tubercular glands.",
+    "dosage": "First to twelfth attenuation."
+  }
 }

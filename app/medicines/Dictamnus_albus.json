@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Dictamnus albus", 
-  "details": "Burning Bush. Soothes labor pains; metrorrhagia, leucorrhoea, and constipation; also somnambulism."
+  "symptoms": {
+    "details": "Burning Bush. Soothes labor pains; metrorrhagia, leucorrhoea, and constipation; also somnambulism."
+  },
+  "name": "Dictamnus albus"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Urinum", 
-  "details": "Acne, boils, scurvy, dropsy."
+  "symptoms": {
+    "details": "Acne, boils, scurvy, dropsy."
+  },
+  "name": "Urinum"
 }

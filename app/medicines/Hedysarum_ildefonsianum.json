@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Hedysarum ildefonsianum", 
-  "details": "Brazilian Burdock - Gonorrhoea and inflammation of penis."
+  "symptoms": {
+    "details": "Brazilian Burdock - Gonorrhoea and inflammation of penis."
+  },
+  "name": "Hedysarum ildefonsianum"
 }

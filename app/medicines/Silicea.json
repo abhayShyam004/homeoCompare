@@ -1,21 +1,5 @@
 {
   "name": "Silicea",
-  "Relationship": "Complementary: THUJA; SANIC.; PULS.; FLUOR-AC. Mercurius and Silica do not follow each other well. Compare: BLACK GUNPOWDER 3X. (Abscesses, boils, carbuncles, limb purple. Wounds that refuse to heal; accident from bad food or water. Clarke.) HEP.; KALI-PHOS.; PIC-AC.; CALC.; PHOS.; TABASHEER; NATRUM SILICUM (tumors, hemophilia, arthritis; dose, three drops three times daily, in milk); FERRUM CYANATUM (epilepsy; neuroses, with irritable weakness and hypersensitiveness, especially of a periodical character). SILICA MARINA - Sea-sand - (Silica and Natrum mur. symptoms. INFLAMED GLANDS and commencing suppuration. Constipation. Use for some time 3X trit.) VITRUM - CROWN GLASS - (Potts; disease, after Silica, necrosis, discharge thin, watery, fetid. Much pain, fine GRINDING AND GRATING like grit.) ARUNDO DONAX (acts on excretory and generative organs; suppuration, especially chronic, and where the ulceration is fistulous, especially in long bones. Itching eruption on chest, upper extremities and behind ears).",
-  "Modalities": [
-    "Worse: new moon",
-    "Worse: in morning",
-    "Worse: from washing",
-    "Worse: during menses",
-    "Worse: uncovering",
-    "Worse: lying down",
-    "Worse: damp",
-    "Worse: lying on left side",
-    "Worse: cold",
-    "Better: warmth",
-    "Better: wrapping up head",
-    "Better: summer; in wet or humid weather"
-  ],
-  "Common names": "Silica. Pure Flint",
   "symptoms": {
     "Urine": [
       "Nocturnal enuresis in children with worms",
@@ -226,8 +210,24 @@
       "Calves tense and contacted",
       "Sciatica, pains through the hips, legs and feet",
       "Panaritium"
-    ]
-  },
-  "details": "Imperfect assimilation and consequent defective nutrition. It goes further and produces neurasthenic states in consequence, and increased susceptibility to nervous stimuli and exaggerated reflexes. Diseases of bones, caries and necrosis. Silica can stimulate the organism to re-absorb fibrotic conditions and scar-tissue. In phthisis must be used with care, for here it may cause the absorption of scar-tissue, liberate the disease, walled in, to new activities. (J. Weir.) Organic changes; it is deep and slow in action. Periodical states; abscesses, quinsy, headaches, spasms, epilepsy, feeling of coldness before an attack. Keloid growth. Scrofulous, rachitic children, with large head, open fontanelles and sutures, distended abdomen, slow in walking. ILL EFFECTS OF VACCINATION. SUPPURATIVE PROCESSES. It is related to all pustulous burrowings. Ripens abscesses since it promotes suppuration. Silica patient is cold, chilly, hugs the fire, wants plenty warm clothing, hates drafts, hands and feet cold, worse in winter. Lack of vital heat. Prostration of mind and body. Great sensitiveness to taking cold. INTOLERANCE OF ALCOHOLIC STIMULANTS. Ailments attended with PUS FORMATION. Epilepsy. WANT OF GRIT, moral or physical.",
-  "dosage": "Sixth to thirtieth potency. The 200th and higher of unquestioned activity. In malignant affections, the lowest potencies needed at times."
+    ],
+    "Relationship": "Complementary: THUJA; SANIC.; PULS.; FLUOR-AC. Mercurius and Silica do not follow each other well. Compare: BLACK GUNPOWDER 3X. (Abscesses, boils, carbuncles, limb purple. Wounds that refuse to heal; accident from bad food or water. Clarke.) HEP.; KALI-PHOS.; PIC-AC.; CALC.; PHOS.; TABASHEER; NATRUM SILICUM (tumors, hemophilia, arthritis; dose, three drops three times daily, in milk); FERRUM CYANATUM (epilepsy; neuroses, with irritable weakness and hypersensitiveness, especially of a periodical character). SILICA MARINA - Sea-sand - (Silica and Natrum mur. symptoms. INFLAMED GLANDS and commencing suppuration. Constipation. Use for some time 3X trit.) VITRUM - CROWN GLASS - (Potts; disease, after Silica, necrosis, discharge thin, watery, fetid. Much pain, fine GRINDING AND GRATING like grit.) ARUNDO DONAX (acts on excretory and generative organs; suppuration, especially chronic, and where the ulceration is fistulous, especially in long bones. Itching eruption on chest, upper extremities and behind ears).",
+    "Modalities": [
+      "Worse: new moon",
+      "Worse: in morning",
+      "Worse: from washing",
+      "Worse: during menses",
+      "Worse: uncovering",
+      "Worse: lying down",
+      "Worse: damp",
+      "Worse: lying on left side",
+      "Worse: cold",
+      "Better: warmth",
+      "Better: wrapping up head",
+      "Better: summer; in wet or humid weather"
+    ],
+    "Common names": "Silica. Pure Flint",
+    "details": "Imperfect assimilation and consequent defective nutrition. It goes further and produces neurasthenic states in consequence, and increased susceptibility to nervous stimuli and exaggerated reflexes. Diseases of bones, caries and necrosis. Silica can stimulate the organism to re-absorb fibrotic conditions and scar-tissue. In phthisis must be used with care, for here it may cause the absorption of scar-tissue, liberate the disease, walled in, to new activities. (J. Weir.) Organic changes; it is deep and slow in action. Periodical states; abscesses, quinsy, headaches, spasms, epilepsy, feeling of coldness before an attack. Keloid growth. Scrofulous, rachitic children, with large head, open fontanelles and sutures, distended abdomen, slow in walking. ILL EFFECTS OF VACCINATION. SUPPURATIVE PROCESSES. It is related to all pustulous burrowings. Ripens abscesses since it promotes suppuration. Silica patient is cold, chilly, hugs the fire, wants plenty warm clothing, hates drafts, hands and feet cold, worse in winter. Lack of vital heat. Prostration of mind and body. Great sensitiveness to taking cold. INTOLERANCE OF ALCOHOLIC STIMULANTS. Ailments attended with PUS FORMATION. Epilepsy. WANT OF GRIT, moral or physical.",
+    "dosage": "Sixth to thirtieth potency. The 200th and higher of unquestioned activity. In malignant affections, the lowest potencies needed at times."
+  }
 }

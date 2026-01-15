@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Euphorbia prostata", 
-  "details": "Used by Indians as an infallible remedy against bites of poisonous insects and snakes, especially the rattle-"
+  "symptoms": {
+    "details": "Used by Indians as an infallible remedy against bites of poisonous insects and snakes, especially the rattle-"
+  },
+  "name": "Euphorbia prostata"
 }

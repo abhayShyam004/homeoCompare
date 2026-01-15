@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Natrum silicofluoricum", 
-  "details": "A cancer remedy; tumors, bone affection, caries, lupus, ethmoiditis. Must be used carefully."
+  "symptoms": {
+    "details": "A cancer remedy; tumors, bone affection, caries, lupus, ethmoiditis. Must be used carefully."
+  },
+  "name": "Natrum silicofluoricum"
 }

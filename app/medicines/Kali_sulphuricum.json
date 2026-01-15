@@ -1,13 +1,5 @@
 {
   "name": "Kali sulphuricum",
-  "Relationship": "Compare: KALI-SULPH. CHROMIC. ALUM OF CHROME - 3X. (Produces in the nasal passages very fine threads from the septum to external wall; affections of nasal fossae and hay-fever. Chronic colds. Sneezing, red, watery eyes, irritation of mucous membrane). PULSAT.; KALI-BICH.; NAT-M.",
-  "Modalities": [
-    "Worse: in evening",
-    "Worse: heated room",
-    "Better: cool",
-    "Better: open air"
-  ],
-  "Common names": "Potassium Sulphate",
   "symptoms": {
     "Head": [
       "Dandruff and scaldhead",
@@ -80,8 +72,16 @@
     "Ears": [
       "Discharge of yellow matter",
       "Eustachian deafness"
-    ]
-  },
-  "details": "Ailments accompanied by profuse desquamation. Applicable to the later stages of inflammation. YELLOW, mucous and serous discharges, profuse and intermittent. Has been found of much use in oxaluria.",
-  "dosage": "Third to twelfth potency."
+    ],
+    "Relationship": "Compare: KALI-SULPH. CHROMIC. ALUM OF CHROME - 3X. (Produces in the nasal passages very fine threads from the septum to external wall; affections of nasal fossae and hay-fever. Chronic colds. Sneezing, red, watery eyes, irritation of mucous membrane). PULSAT.; KALI-BICH.; NAT-M.",
+    "Modalities": [
+      "Worse: in evening",
+      "Worse: heated room",
+      "Better: cool",
+      "Better: open air"
+    ],
+    "Common names": "Potassium Sulphate",
+    "details": "Ailments accompanied by profuse desquamation. Applicable to the later stages of inflammation. YELLOW, mucous and serous discharges, profuse and intermittent. Has been found of much use in oxaluria.",
+    "dosage": "Third to twelfth potency."
+  }
 }

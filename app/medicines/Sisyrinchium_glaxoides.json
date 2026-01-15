@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Sisyrinchium glaxoides", 
-  "details": "Blue-eyed grass - Ten to fifteen drop doses of tincture rattlesnake bites."
+  "symptoms": {
+    "details": "Blue-eyed grass - Ten to fifteen drop doses of tincture rattlesnake bites."
+  },
+  "name": "Sisyrinchium glaxoides"
 }

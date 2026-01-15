@@ -1,15 +1,15 @@
 {
-  "name": "Myrtus communis", 
-  "Relationship": "Compare: MYRTUS CHEKAN (Chronic bronchitis with dense, yellowish sputum, difficult to detach. Copious expectoration keeps patient distressed and coughing).", 
-  "Common names": "Myrtle", 
+  "name": "Myrtus communis",
   "symptoms": {
     "Chest": [
-      "Worse in the morning", 
-      "Dry, hollow cough, with tickling in chest", 
-      "Stitching pain in left breast, running through to shoulder-blade", 
+      "Worse in the morning",
+      "Dry, hollow cough, with tickling in chest",
+      "Stitching pain in left breast, running through to shoulder-blade",
       "Sensation of burning in left chest"
-    ]
-  }, 
-  "details": "The leaves contain Myrtol, and active antiseptic. Chest pains, as found often in consumptives, call for this remedy. Incipient phthisis. Nerve sedative and stimulant to mucous membranes, bronchitis, cystitis and pyelitis.", 
-  "dosage": "Third potency."
+    ],
+    "Relationship": "Compare: MYRTUS CHEKAN (Chronic bronchitis with dense, yellowish sputum, difficult to detach. Copious expectoration keeps patient distressed and coughing).",
+    "Common names": "Myrtle",
+    "details": "The leaves contain Myrtol, and active antiseptic. Chest pains, as found often in consumptives, call for this remedy. Incipient phthisis. Nerve sedative and stimulant to mucous membranes, bronchitis, cystitis and pyelitis.",
+    "dosage": "Third potency."
+  }
 }

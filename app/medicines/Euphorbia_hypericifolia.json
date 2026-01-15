@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Euphorbia hypericifolia", 
-  "details": "Garden Spurge - Very similar to Ipecac. Irritation of the respiratory and gastro-intestinal tracts and female organs."
+  "symptoms": {
+    "details": "Garden Spurge - Very similar to Ipecac. Irritation of the respiratory and gastro-intestinal tracts and female organs."
+  },
+  "name": "Euphorbia hypericifolia"
 }

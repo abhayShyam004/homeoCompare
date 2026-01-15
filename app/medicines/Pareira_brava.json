@@ -1,7 +1,5 @@
 {
   "name": "Pareira brava",
-  "Relationship": "Compare: PARIETARIA (renal calculi; nightmare, patient dreaming of being buried alive); CHIMAPHILA (chronic catarrhal congestion following cystitis; acute prostatitis; feeling of a ball in perineum when sitting); FABIANA, see PICHI (dysuria; post-gonorrhoeal complications; gravel; vesical catarrh); UVA.; HYDRANG.; BERBER.; OCIM.; HEDEOM.",
-  "Common names": "Chondrodendron Tomentosum Virgin-vine",
   "symptoms": {
     "Urine": [
       "Violent pain in glans penis",
@@ -16,8 +14,10 @@
       "Itching along urethra",
       "urethritis, with prostatic trouble",
       "Can emit urine only when he goes on his knees, pressing head firmly against the floor"
-    ]
-  },
-  "details": "The urinary symptoms are most important. Useful in renal colic, prostatic affections, and catarrh of bladder. Sensation as if bladder were distended, with pain. PAIN GOING DOWN THIGH.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: PARIETARIA (renal calculi; nightmare, patient dreaming of being buried alive); CHIMAPHILA (chronic catarrhal congestion following cystitis; acute prostatitis; feeling of a ball in perineum when sitting); FABIANA, see PICHI (dysuria; post-gonorrhoeal complications; gravel; vesical catarrh); UVA.; HYDRANG.; BERBER.; OCIM.; HEDEOM.",
+    "Common names": "Chondrodendron Tomentosum Virgin-vine",
+    "details": "The urinary symptoms are most important. Useful in renal colic, prostatic affections, and catarrh of bladder. Sensation as if bladder were distended, with pain. PAIN GOING DOWN THIGH.",
+    "dosage": "Tincture, to third potency."
+  }
 }

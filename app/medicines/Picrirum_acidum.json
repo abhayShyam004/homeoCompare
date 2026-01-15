@@ -1,16 +1,5 @@
 {
   "name": "Picrirum acidum",
-  "Relationship": "Compare: OXAL-AC.; GELS.; PHOS.; SIL.; ARG. NIT. Compare: ZINC. PIC. (facial palsy and paralysis agitans); FERR. PIC. (buzzing in ears, deafness; chronic gout; epistaxis; prostatic troubles); CALC. PIC. (boils in and around ears).",
-  "Modalities": [
-    "Worse: least exertion",
-    "Worse: especially mental",
-    "Worse: after sleep",
-    "Worse: wet weather",
-    "Better: from cold air",
-    "Better: cold water",
-    "Better: tight pressure"
-  ],
-  "Common names": "(Picric Acid) (Trinitrophenol)",
   "symptoms": {
     "Eyes": [
       "Chronic catarrhal conjunctivitis with copious, thick yellow discharge"
@@ -62,8 +51,19 @@
       "Priapism",
       "satyriasis",
       "Prostatic hypertrophy, especially in cases not too far advanced"
-    ]
-  },
-  "details": "Causes degeneration of the spinal cord, with paralysis. Brain-fag and sexual excitement. Acts upon the generative organs probably through the lumbar centers of the spinal cord; prostration, weakness and pain of back, pins and needle sensation in extremities. NEURASTHENIA. (OXAL-AC.) Muscular debility. Heavy tired feeling. Myelitis with spasms and prostration. Writer's palsy. Progressive, pernicious anaemia. URAEMIA with complete anuria. A one per cent solution applied on lint, is the best application for burns until granulations begin to form. Sallow complexion.",
-  "dosage": "Sixth potency."
+    ],
+    "Relationship": "Compare: OXAL-AC.; GELS.; PHOS.; SIL.; ARG. NIT. Compare: ZINC. PIC. (facial palsy and paralysis agitans); FERR. PIC. (buzzing in ears, deafness; chronic gout; epistaxis; prostatic troubles); CALC. PIC. (boils in and around ears).",
+    "Modalities": [
+      "Worse: least exertion",
+      "Worse: especially mental",
+      "Worse: after sleep",
+      "Worse: wet weather",
+      "Better: from cold air",
+      "Better: cold water",
+      "Better: tight pressure"
+    ],
+    "Common names": "(Picric Acid) (Trinitrophenol)",
+    "details": "Causes degeneration of the spinal cord, with paralysis. Brain-fag and sexual excitement. Acts upon the generative organs probably through the lumbar centers of the spinal cord; prostration, weakness and pain of back, pins and needle sensation in extremities. NEURASTHENIA. (OXAL-AC.) Muscular debility. Heavy tired feeling. Myelitis with spasms and prostration. Writer's palsy. Progressive, pernicious anaemia. URAEMIA with complete anuria. A one per cent solution applied on lint, is the best application for burns until granulations begin to form. Sallow complexion.",
+    "dosage": "Sixth potency."
+  }
 }

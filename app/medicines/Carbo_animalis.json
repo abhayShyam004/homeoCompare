@@ -1,11 +1,5 @@
 {
   "name": "Carbo animalis",
-  "Relationship": "The Carbon group all have putrid discharges and exhalations. All act on the skin, causing intertrigo and excoriations. Glandular enlargements and catarrhal states, flatulency and asphyxiation. Carbon Tetrachloride is said to cause fatty liver. (Phosph.; Rs; Chloroform.) Paralysis of interosseus muscles of feet and hands. Wonderful clinical results in the treatment of Hook worm disease. See Thymol (Relationship). Complementary: Calc. phos. Antidotes: Ars.; Nux. Compare: Badiaga; Sepia; Sulph.; Plumb. iod.",
-  "Modalities": [
-    "Worse: after shaving",
-    "Worse: loss of animal fluids"
-  ],
-  "Common names": "Animal Charcoal",
   "symptoms": {
     "Head": [
       "Vertigo followed by nose-bleed",
@@ -69,8 +63,14 @@
       "Easy discoloration",
       "Straining and over-lifting produce great debility",
       "Joints weak"
-    ]
-  },
-  "details": "Seems to be especially adapted to scrofulous and venous constitutions, old people, and after debilitating disease, with feeble circulation and lowered vitality. GLANDS ARE INDURATED, veins distended, skin blue. STITCH REMAINING AFTER PLEURISY. Easily strained from lifting. Weakness of nursing women. Ulceration and decomposition. All its secretions are offensive. Causes local congestions WITHOUT heat.",
-  "dosage": "Third to thirtieth potency. The third trituration for insufflation in aural polypi."
+    ],
+    "Relationship": "The Carbon group all have putrid discharges and exhalations. All act on the skin, causing intertrigo and excoriations. Glandular enlargements and catarrhal states, flatulency and asphyxiation. Carbon Tetrachloride is said to cause fatty liver. (Phosph.; Rs; Chloroform.) Paralysis of interosseus muscles of feet and hands. Wonderful clinical results in the treatment of Hook worm disease. See Thymol (Relationship). Complementary: Calc. phos. Antidotes: Ars.; Nux. Compare: Badiaga; Sepia; Sulph.; Plumb. iod.",
+    "Modalities": [
+      "Worse: after shaving",
+      "Worse: loss of animal fluids"
+    ],
+    "Common names": "Animal Charcoal",
+    "details": "Seems to be especially adapted to scrofulous and venous constitutions, old people, and after debilitating disease, with feeble circulation and lowered vitality. GLANDS ARE INDURATED, veins distended, skin blue. STITCH REMAINING AFTER PLEURISY. Easily strained from lifting. Weakness of nursing women. Ulceration and decomposition. All its secretions are offensive. Causes local congestions WITHOUT heat.",
+    "dosage": "Third to thirtieth potency. The third trituration for insufflation in aural polypi."
+  }
 }

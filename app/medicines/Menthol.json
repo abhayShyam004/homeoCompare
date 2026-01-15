@@ -1,28 +1,28 @@
 {
   "symptoms": {
     "Head": [
-      "Pain in eyeballs", 
-      "Cold sensation in nose", 
-      "Pain in face above zygoma with numbness", 
-      "Coryza with post-nasal dripping", 
-      "Frontal headache, pain over frontal sinus, descends to eyeballs", 
-      "Supra orbital pain over left eye", 
-      "Mental confusion", 
+      "Pain in eyeballs",
+      "Cold sensation in nose",
+      "Pain in face above zygoma with numbness",
+      "Coryza with post-nasal dripping",
+      "Frontal headache, pain over frontal sinus, descends to eyeballs",
+      "Supra orbital pain over left eye",
+      "Mental confusion",
       "Eustachian tubes feel blocked and some deafness"
-    ], 
+    ],
     "Respiratory": [
-      "Asthmatic breathing, with congestive headache", 
-      "Stabbing pains in the precordia, radiating over entire chest", 
-      "Short, dry cough, worse smoking", 
+      "Asthmatic breathing, with congestive headache",
+      "Stabbing pains in the precordia, radiating over entire chest",
+      "Short, dry cough, worse smoking",
       "Tickling in the fauces"
-    ], 
+    ],
     "Extremities": [
-      "Soreness of lumbar muscles", 
+      "Soreness of lumbar muscles",
       "Muscular pain in cervical region"
-    ]
-  }, 
-  "details": "The stearopten from the essential oil of Mentha. Mucous membrane of nasopharynx and spinal nerve plexus, producing neuritic pains and paresthesia. Menthol has proved curative in acute nasal catarrh; in acute eustachian catarrh; pharyngitis; laryngitis; neuralgias, etc. (W. B. Griggs, M.D.) Itching, especially PRURITUS vulvae.", 
-  "name": "Menthol", 
-  "Relationship": "Compare: KALI-BICH.; SPIGEL.", 
-  "dosage": "Sixth potency. Externally for itching, use 1 per cent. solution or ointment."
+    ],
+    "details": "The stearopten from the essential oil of Mentha. Mucous membrane of nasopharynx and spinal nerve plexus, producing neuritic pains and paresthesia. Menthol has proved curative in acute nasal catarrh; in acute eustachian catarrh; pharyngitis; laryngitis; neuralgias, etc. (W. B. Griggs, M.D.) Itching, especially PRURITUS vulvae.",
+    "Relationship": "Compare: KALI-BICH.; SPIGEL.",
+    "dosage": "Sixth potency. Externally for itching, use 1 per cent. solution or ointment."
+  },
+  "name": "Menthol"
 }

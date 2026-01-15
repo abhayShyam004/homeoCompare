@@ -1,14 +1,5 @@
 {
   "name": "Oleum animale",
-  "Relationship": "Compare: PULS.; ARS.; SILIC.; SEPIA. Antidotes: CAMPH.; OP.",
-  "Modalities": [
-    "Worse: after eating",
-    "Worse: from 2 to nine pm",
-    "Better: by rubbing",
-    "Better: eructation",
-    "Better: open air"
-  ],
-  "Common names": "Dippel's Animal Oil",
   "symptoms": {
     "Eyes": [
       "Short-sighted",
@@ -87,8 +78,17 @@
       "ejaculation too soon",
       "Pressure in the perineum",
       "Prostatic hypertrophy"
-    ]
-  },
-  "details": "Acts on the nervous system, especially on pneumogastric region. Useful in migraine and neuralgia of spermatic cord. Burning pains and stitches. \"PULLED UPWARD\" AND \"FROM BEHIND FORWARD\" PAINS.",
-  "dosage": "Third to thirtieth potency and higher."
+    ],
+    "Relationship": "Compare: PULS.; ARS.; SILIC.; SEPIA. Antidotes: CAMPH.; OP.",
+    "Modalities": [
+      "Worse: after eating",
+      "Worse: from 2 to nine pm",
+      "Better: by rubbing",
+      "Better: eructation",
+      "Better: open air"
+    ],
+    "Common names": "Dippel's Animal Oil",
+    "details": "Acts on the nervous system, especially on pneumogastric region. Useful in migraine and neuralgia of spermatic cord. Burning pains and stitches. \"PULLED UPWARD\" AND \"FROM BEHIND FORWARD\" PAINS.",
+    "dosage": "Third to thirtieth potency and higher."
+  }
 }

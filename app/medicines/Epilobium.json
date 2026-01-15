@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Epilobium", 
-  "details": "Willow herb - chronic diarrhoea with tenesmus and mucous discharges; ptyalism, dysphagia; wasting of body and much debility; cholera infantum."
+  "symptoms": {
+    "details": "Willow herb - chronic diarrhoea with tenesmus and mucous discharges; ptyalism, dysphagia; wasting of body and much debility; cholera infantum."
+  },
+  "name": "Epilobium"
 }

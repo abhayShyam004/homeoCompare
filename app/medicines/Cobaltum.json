@@ -1,7 +1,5 @@
 {
   "name": "Cobaltum",
-  "Relationship": "Compare: CANNAB. IND.; SEPIA; ZINC.; AGNUS; SELEN.",
-  "Common names": "The Metal Cobalt",
   "symptoms": {
     "Head": [
       "Aches",
@@ -57,8 +55,10 @@
       "brown spots on genitals and abdomen",
       "Lewd dreams",
       "Impotence"
-    ]
-  },
-  "details": "Adapted to neurasthenic spinal states. Sexual disturbances. Fatigue, agitation, and bone pains, worse in morning.",
-  "dosage": "Sixth to thirtieth potency."
+    ],
+    "Relationship": "Compare: CANNAB. IND.; SEPIA; ZINC.; AGNUS; SELEN.",
+    "Common names": "The Metal Cobalt",
+    "details": "Adapted to neurasthenic spinal states. Sexual disturbances. Fatigue, agitation, and bone pains, worse in morning.",
+    "dosage": "Sixth to thirtieth potency."
+  }
 }

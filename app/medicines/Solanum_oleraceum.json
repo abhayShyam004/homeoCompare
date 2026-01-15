@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Solanum oleraceum", 
-  "details": "Swelling of mammary gland, with profuse secretion of milk."
+  "symptoms": {
+    "details": "Swelling of mammary gland, with profuse secretion of milk."
+  },
+  "name": "Solanum oleraceum"
 }

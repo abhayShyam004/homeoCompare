@@ -1,12 +1,5 @@
 {
   "name": "Veratrum album",
-  "Relationship": "Compare: VERATRINUM - alkaloid from seed of Sabadilla. - (electric pains, electric shocks in muscles, fibrillary twitchings); CHOLOS TERRAPINA (cramps in calves); CAMPH.; CUPR.; ARS.; CUPRUM ARS. (INTERMITTENT, COLD, CLAMMY SWEAT); NARCISSUS POETICUS (gastroenteritis with much griping and cutting pain in bowels. Fainting, trembling, cold limbs, small and irregular pulse); TRICHOSANTHES - (diarrhoea, pain in liver, dizziness after every stool); AGARIC. EMETIC. (Vertigo; longing for ice-cold water; burning pains in stomach); AGARIC PHALLOIDES (cholera, cramps in stomach, cold extremities, urine suppressed). VERATRINE (Increased vascular tension. It relaxes it and stimulates the elimination of toxins by skin, kidneys, and liver).",
-  "Modalities": [
-    "Worse: at night; wet",
-    "Worse: cold weather",
-    "Better: walking and warmth"
-  ],
-  "Common names": "White Hellebore",
   "symptoms": {
     "Rectum": [
       "Constipation from inactivity of rectum, with heat and headache",
@@ -118,8 +111,15 @@
       "pains like electric flashes",
       "Soreness and tenderness of joints",
       "Cramps in calves"
-    ]
-  },
-  "details": "A perfect picture of COLLAPSE, WITH EXTREME COLDNESS, BLUENESS, AND WEAKNESS, is offered by this drug. Post-operative shock with cold sweat on forehead, pale face, rapid, feeble pulse. COLD PERSPIRATION ON THE FOREHEAD, with nearly all complaints. VOMITING, PURGING, AND CRAMPS IN EXTREMITIES. The PROFUSE, violent retching and vomiting is most characteristic. Surgical shock. Excessive dryness of all mucous surfaces. \"COPROPHAGIA\" violent mania alternates with silence and refusal to talk.",
-  "dosage": "First to thirtieth potency. In diarrhoea, not below the sixth."
+    ],
+    "Relationship": "Compare: VERATRINUM - alkaloid from seed of Sabadilla. - (electric pains, electric shocks in muscles, fibrillary twitchings); CHOLOS TERRAPINA (cramps in calves); CAMPH.; CUPR.; ARS.; CUPRUM ARS. (INTERMITTENT, COLD, CLAMMY SWEAT); NARCISSUS POETICUS (gastroenteritis with much griping and cutting pain in bowels. Fainting, trembling, cold limbs, small and irregular pulse); TRICHOSANTHES - (diarrhoea, pain in liver, dizziness after every stool); AGARIC. EMETIC. (Vertigo; longing for ice-cold water; burning pains in stomach); AGARIC PHALLOIDES (cholera, cramps in stomach, cold extremities, urine suppressed). VERATRINE (Increased vascular tension. It relaxes it and stimulates the elimination of toxins by skin, kidneys, and liver).",
+    "Modalities": [
+      "Worse: at night; wet",
+      "Worse: cold weather",
+      "Better: walking and warmth"
+    ],
+    "Common names": "White Hellebore",
+    "details": "A perfect picture of COLLAPSE, WITH EXTREME COLDNESS, BLUENESS, AND WEAKNESS, is offered by this drug. Post-operative shock with cold sweat on forehead, pale face, rapid, feeble pulse. COLD PERSPIRATION ON THE FOREHEAD, with nearly all complaints. VOMITING, PURGING, AND CRAMPS IN EXTREMITIES. The PROFUSE, violent retching and vomiting is most characteristic. Surgical shock. Excessive dryness of all mucous surfaces. \"COPROPHAGIA\" violent mania alternates with silence and refusal to talk.",
+    "dosage": "First to thirtieth potency. In diarrhoea, not below the sixth."
+  }
 }

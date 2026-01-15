@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Stovain", 
-  "details": "An analgesic, a vasomotor dilator. Antidote to disagreeable effects occasionally resulting from injection of cocaine into skin or gums, drop doses of nitro-glycer. 1% Sol."
+  "symptoms": {
+    "details": "An analgesic, a vasomotor dilator. Antidote to disagreeable effects occasionally resulting from injection of cocaine into skin or gums, drop doses of nitro-glycer. 1% Sol."
+  },
+  "name": "Stovain"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Kali tartaricum", 
-  "details": "Paraplegia."
+  "symptoms": {
+    "details": "Paraplegia."
+  },
+  "name": "Kali tartaricum"
 }

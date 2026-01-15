@@ -1,13 +1,5 @@
 {
   "name": "Aloe",
-  "Relationship": "Complementary: Sulphur; compare: Kali-bich.; Lycop.; Allium sat.",
-  "Modalities": [
-    "Worse: early morning; summer; heat; in hot",
-    "Worse: dry weather; after eating or drinking",
-    "Better: from cold",
-    "Better: open air"
-  ],
-  "Common names": "Socotrine Aloes",
   "symptoms": {
     "Head": [
       "Headache alternates with lumbago, with intestinal and uterine affections",
@@ -105,8 +97,16 @@
       "Lameness in all limbs",
       "Soles pain when walking",
       "Drawing pains in joints"
-    ]
-  },
-  "details": "An excellent remedy to aid in re-establishing physiological equilibrium after much dosing, where disease and drug symptoms are much mixed. There is no remedy richer in symptoms of portal congestion and none that has given better clinical results, both for the primary pathological condition and secondary phenomena. Bad effects from sedentary life or habits. Especially suitable to lymphatic and hypochondriacal patients. The rectal symptoms usually determine the choice. Adapted to weary people, the aged, and phlegmatic, old beer-drinkers. Dissatisfied and angry about himself, alternating with lumbago. Heat internally and externally. Has been used successfully in the treatment of consumption by giving the pure juice.",
-  "dosage": "Sixth potency and higher. In rectal conditions, a few doses of the third, then wait."
+    ],
+    "Relationship": "Complementary: Sulphur; compare: Kali-bich.; Lycop.; Allium sat.",
+    "Modalities": [
+      "Worse: early morning; summer; heat; in hot",
+      "Worse: dry weather; after eating or drinking",
+      "Better: from cold",
+      "Better: open air"
+    ],
+    "Common names": "Socotrine Aloes",
+    "details": "An excellent remedy to aid in re-establishing physiological equilibrium after much dosing, where disease and drug symptoms are much mixed. There is no remedy richer in symptoms of portal congestion and none that has given better clinical results, both for the primary pathological condition and secondary phenomena. Bad effects from sedentary life or habits. Especially suitable to lymphatic and hypochondriacal patients. The rectal symptoms usually determine the choice. Adapted to weary people, the aged, and phlegmatic, old beer-drinkers. Dissatisfied and angry about himself, alternating with lumbago. Heat internally and externally. Has been used successfully in the treatment of consumption by giving the pure juice.",
+    "dosage": "Sixth potency and higher. In rectal conditions, a few doses of the third, then wait."
+  }
 }

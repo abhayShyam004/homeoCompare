@@ -1,10 +1,5 @@
 {
   "name": "Erigeron",
-  "Relationship": "Terebinthina similar.",
-  "Modalities": [
-    "Worse: left side"
-  ],
-  "Common names": "Leptilon Canadense Fleabane",
   "symptoms": {
     "Female": [
       "Bright-red flow",
@@ -17,7 +12,12 @@
       "a bloody discharge on slight exertion",
       "Bleeding hemorrhoids",
       "nosebleed instead of menses"
-    ]
-  },
-  "details": "Hemorrhages are caused and cured by this remedy. Persistent hemorrhage from the bladder. Hemorrhage from the uterus, with painful micturition. PROFUSE BRIGHT-RED BLOOD. Pain in left ovary and hip. Chronic gonorrhea, with burning micturition; continual dribbling. DYSENTERY, with soreness and burning in bladder. TYMPANITES."
+    ],
+    "Relationship": "Terebinthina similar.",
+    "Modalities": [
+      "Worse: left side"
+    ],
+    "Common names": "Leptilon Canadense Fleabane",
+    "details": "Hemorrhages are caused and cured by this remedy. Persistent hemorrhage from the bladder. Hemorrhage from the uterus, with painful micturition. PROFUSE BRIGHT-RED BLOOD. Pain in left ovary and hip. Chronic gonorrhea, with burning micturition; continual dribbling. DYSENTERY, with soreness and burning in bladder. TYMPANITES."
+  }
 }

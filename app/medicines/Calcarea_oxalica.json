@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Calcarea oxalica", 
-  "details": "Excruciating pains of open cancer."
+  "symptoms": {
+    "details": "Excruciating pains of open cancer."
+  },
+  "name": "Calcarea oxalica"
 }

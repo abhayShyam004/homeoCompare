@@ -1,15 +1,15 @@
 {
   "symptoms": {
     "Extremities": [
-      "Wrist drops", 
-      "Pain in right popliteal space down leg, which feels paralyzed", 
+      "Wrist drops",
+      "Pain in right popliteal space down leg, which feels paralyzed",
       "Shooting pain in back of both wrist joints"
-    ], 
+    ],
     "Abdomen": [
       "Pains in abdomen, hepatic region and of transverse colon, also in gall-bladder and right inguinal region and spermatic cords"
-    ]
-  }, 
-  "Common names": "Betony Wood", 
-  "name": "Betonica", 
-  "details": "Produces pains in various parts. Stitches in right temple. Inability to concentrate mind."
+    ],
+    "Common names": "Betony Wood",
+    "details": "Produces pains in various parts. Stitches in right temple. Inability to concentrate mind."
+  },
+  "name": "Betonica"
 }

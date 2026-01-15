@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Mercurius phosphoricus", 
-  "details": "Nervous diseases from syphilis; exostoses."
+  "symptoms": {
+    "details": "Nervous diseases from syphilis; exostoses."
+  },
+  "name": "Mercurius phosphoricus"
 }

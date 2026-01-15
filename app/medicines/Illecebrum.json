@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Illecebrum", 
-  "details": "A Mexican drug. Fever with catarrhal symptoms, gastric and typhoid fever symptoms."
+  "symptoms": {
+    "details": "A Mexican drug. Fever with catarrhal symptoms, gastric and typhoid fever symptoms."
+  },
+  "name": "Illecebrum"
 }

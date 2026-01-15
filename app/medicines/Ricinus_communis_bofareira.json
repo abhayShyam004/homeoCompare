@@ -1,27 +1,27 @@
 {
-  "name": "Ricinus communis bofareira", 
-  "Relationship": "Compare: RESORCIN (summer complaint with vomiting); destroys organic germs of putrefaction; CHOLOS TERRAPINA (cramps of muscles). ARS.; VERAT.", 
-  "Common names": "Castor-oil", 
+  "name": "Ricinus communis bofareira",
   "symptoms": {
     "Head": [
-      "Vertigo, occipital pain, congestive symptoms, burning in ears", 
+      "Vertigo, occipital pain, congestive symptoms, burning in ears",
       "Face pale, twitching of mouth"
-    ], 
+    ],
     "Stomach": [
-      "Anorexia with great thirst, burning in stomach, pyrosis, nausea, profuse vomiting, pit of stomach sensitive", 
+      "Anorexia with great thirst, burning in stomach, pyrosis, nausea, profuse vomiting, pit of stomach sensitive",
       "Mouth dry"
-    ], 
+    ],
     "Stool": [
-      "Anus inflamed", 
-      "Stools green, slimy, and bloody", 
-      "Loose, incessant, painless, with painful cramps in muscles of extremities", 
+      "Anus inflamed",
+      "Stools green, slimy, and bloody",
+      "Loose, incessant, painless, with painful cramps in muscles of extremities",
       "Fever, emaciation, somnolence"
-    ], 
+    ],
     "Abdomen": [
-      "Rumbling with contraction of recti muscles, colic, incessant diarrhoea with purging", 
+      "Rumbling with contraction of recti muscles, colic, incessant diarrhoea with purging",
       "Rice water stools with cramps and chilliness"
-    ]
-  }, 
-  "details": "Has marked action on gastrointestinal tract. INCREASES THE QUANTITY OF MILK in nursing women. Vomiting and purging. Languor and weakness. Diminished mammary secretion", 
-  "dosage": "Third potency. Five drops every four hours for increasing flow of milk; also locally a poultice of the leaves."
+    ],
+    "Relationship": "Compare: RESORCIN (summer complaint with vomiting); destroys organic germs of putrefaction; CHOLOS TERRAPINA (cramps of muscles). ARS.; VERAT.",
+    "Common names": "Castor-oil",
+    "details": "Has marked action on gastrointestinal tract. INCREASES THE QUANTITY OF MILK in nursing women. Vomiting and purging. Languor and weakness. Diminished mammary secretion",
+    "dosage": "Third potency. Five drops every four hours for increasing flow of milk; also locally a poultice of the leaves."
+  }
 }

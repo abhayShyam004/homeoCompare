@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lithium benzoicum", 
-  "details": "Deep-seated pains in loins; in small of back; uneasiness in bladder. Cystic irritation. Gallstones. Frequent desire. Diminishing uric acid deposit."
+  "symptoms": {
+    "details": "Deep-seated pains in loins; in small of back; uneasiness in bladder. Cystic irritation. Gallstones. Frequent desire. Diminishing uric acid deposit."
+  },
+  "name": "Lithium benzoicum"
 }

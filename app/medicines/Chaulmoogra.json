@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Chaulmoogra", 
-  "details": "TARAKTOGENOS - The oil and its derivatives are to a certain extent effective in the treatment of LEPROSY, especially in early cases."
+  "symptoms": {
+    "details": "TARAKTOGENOS - The oil and its derivatives are to a certain extent effective in the treatment of LEPROSY, especially in early cases."
+  },
+  "name": "Chaulmoogra"
 }

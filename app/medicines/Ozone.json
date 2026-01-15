@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ozone", 
-  "details": "SACRAL pain; tired feeling through pelvic viscera and perineum."
+  "symptoms": {
+    "details": "SACRAL pain; tired feeling through pelvic viscera and perineum."
+  },
+  "name": "Ozone"
 }

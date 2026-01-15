@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Solanum mammosum", 
-  "details": "Apple of Sodom - pain in left hip-joint."
+  "symptoms": {
+    "details": "Apple of Sodom - pain in left hip-joint."
+  },
+  "name": "Solanum mammosum"
 }

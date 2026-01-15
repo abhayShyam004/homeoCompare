@@ -1,7 +1,5 @@
 {
   "name": "Lonicera xylosteum",
-  "Relationship": "Compare: LONICERA PERICYLMENUM - Honeysuckle - (irritability of temper, with violent outburst (CROCUS.)",
-  "Common names": "Fly-woodbine",
   "symptoms": {
     "Head": [
       "Contraction of one pupil and dilatation of the other",
@@ -16,8 +14,10 @@
       "Trembling of whole body",
       "Extremities cold",
       "Cold perspiration"
-    ]
-  },
-  "details": "Convulsive symptoms. Uraemic convulsions. Albuminuria. Syphilis.",
-  "dosage": "Third to sixth potency."
+    ],
+    "Relationship": "Compare: LONICERA PERICYLMENUM - Honeysuckle - (irritability of temper, with violent outburst (CROCUS.)",
+    "Common names": "Fly-woodbine",
+    "details": "Convulsive symptoms. Uraemic convulsions. Albuminuria. Syphilis.",
+    "dosage": "Third to sixth potency."
+  }
 }

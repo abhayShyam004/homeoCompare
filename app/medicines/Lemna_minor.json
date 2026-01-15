@@ -1,12 +1,5 @@
 {
   "name": "Lemna minor",
-  "Relationship": "Compare: DULC. (damp surroundings and foggy weather). CALC.; TEUCR.; CALEN.; NAT-SULPH.",
-  "Modalities": [
-    "Worse: in damp",
-    "Worse: rainy weather",
-    "Worse: especially heavy rains"
-  ],
-  "Common names": "Duckweed",
   "symptoms": {
     "Abdomen": [
       "Disposition to noisy diarrhoea"
@@ -23,8 +16,15 @@
       "Crusts and mucopurulent discharge very abundant",
       "Putrid smell",
       "loss of smell"
-    ]
-  },
-  "details": "A catarrhal remedy. Acts especially upon the nostrils. NASAL POLYPI; SWOLLEN TURBINATES. ATROPHIC RHINITIS. Asthma from nasal obstruction; worse in wet weather.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: DULC. (damp surroundings and foggy weather). CALC.; TEUCR.; CALEN.; NAT-SULPH.",
+    "Modalities": [
+      "Worse: in damp",
+      "Worse: rainy weather",
+      "Worse: especially heavy rains"
+    ],
+    "Common names": "Duckweed",
+    "details": "A catarrhal remedy. Acts especially upon the nostrils. NASAL POLYPI; SWOLLEN TURBINATES. ATROPHIC RHINITIS. Asthma from nasal obstruction; worse in wet weather.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

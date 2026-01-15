@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cadmium bromatum", 
-  "details": "Pain and burning in stomach and vomiting"
+  "symptoms": {
+    "details": "Pain and burning in stomach and vomiting"
+  },
+  "name": "Cadmium bromatum"
 }

@@ -1,24 +1,24 @@
 {
-  "name": "Ammonium benzoicum", 
-  "Relationship": "Compare: Terebinth.; Benz-ac.; Ammonia salts, Caust. In albuminuria compare: Kalmia; Helon; Merc. cor.; Berb.; Canth.", 
-  "Common names": "Benzoate of Ammonia", 
+  "name": "Ammonium benzoicum",
   "symptoms": {
     "Head": [
       "Heavy, stupid"
-    ], 
+    ],
     "Urine": [
-      "Smoky, scanty", 
+      "Smoky, scanty",
       "Albuminous and thick deposits"
-    ], 
+    ],
     "Back": [
-      "Pain across sacrum, with urgency to stool", 
+      "Pain across sacrum, with urgency to stool",
       "Soreness in region of right kidney"
-    ], 
+    ],
     "Face": [
-      "Bloated, swollen eyelids", 
+      "Bloated, swollen eyelids",
       "Swelling under tongue like ranula"
-    ]
-  }, 
-  "details": "One of the remedies for albuminuria, especially in the gouty. Gout, with deposits in joints. Urinary incontinence in the aged.", 
-  "dosage": "Second trituration."
+    ],
+    "Relationship": "Compare: Terebinth.; Benz-ac.; Ammonia salts, Caust. In albuminuria compare: Kalmia; Helon; Merc. cor.; Berb.; Canth.",
+    "Common names": "Benzoate of Ammonia",
+    "details": "One of the remedies for albuminuria, especially in the gouty. Gout, with deposits in joints. Urinary incontinence in the aged.",
+    "dosage": "Second trituration."
+  }
 }

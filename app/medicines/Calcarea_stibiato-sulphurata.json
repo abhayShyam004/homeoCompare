@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Calcarea stibiato-sulphurata", 
-  "details": "Acts as an hemostatic and absorptive in uterine myoma."
+  "symptoms": {
+    "details": "Acts as an hemostatic and absorptive in uterine myoma."
+  },
+  "name": "Calcarea stibiato-sulphurata"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Manganum sulphuricum", 
-  "details": "Liver affections, excess of bile; a powerful intestinal stimulant."
+  "symptoms": {
+    "details": "Liver affections, excess of bile; a powerful intestinal stimulant."
+  },
+  "name": "Manganum sulphuricum"
 }

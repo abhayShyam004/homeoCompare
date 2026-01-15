@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Kamala", 
-  "details": "An efficient remedy for tape-worm in 30-60 minims of tincture taken in cinnamon water."
+  "symptoms": {
+    "details": "An efficient remedy for tape-worm in 30-60 minims of tincture taken in cinnamon water."
+  },
+  "name": "Kamala"
 }

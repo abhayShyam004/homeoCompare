@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Eserin salicylate", 
-  "details": "Post-operative intestinal paralysis; meteorism. Hypodermically 1/60-1/40 gr."
+  "symptoms": {
+    "details": "Post-operative intestinal paralysis; meteorism. Hypodermically 1/60-1/40 gr."
+  },
+  "name": "Eserin salicylate"
 }

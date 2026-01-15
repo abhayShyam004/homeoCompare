@@ -1,11 +1,5 @@
 {
   "name": "Squilla maritima",
-  "Relationship": "Compare: DIGIT.; STROPHANT.; APOCYN. CAN.; BRY.; KALI-CARB. Squilla follows DIGITALIS, if this fails to relieve water-logged cases.",
-  "Modalities": [
-    "Better: rest; worse",
-    "Better: motion"
-  ],
-  "Common names": "Sea-onion",
   "symptoms": {
     "Heart": [
       "A cardiac stimulant affecting the peripheral vessels and coronary arteries"
@@ -46,8 +40,14 @@
       "Icy cold hands and feet, with warmth of the rest of the body",
       "Tender feet with shop girls",
       "Feet get sore from standing"
-    ]
-  },
-  "details": "A slow acting remedy. Corresponds to ailments requiring several days to reach their maximum. Persistent, dull, rheumatic pains permeate the body. A spleen medicine; stitches under left free ribs. Important heart and kidney medicine. BRONCHOPNEUMONIA. Acts especially on mucous membranes of the respiratory and digestive tracts, and also upon the kidneys. Valuable in chronic bronchitis of old people with mucous rales, dyspnoea, and scanty urine.",
-  "dosage": "First to third potency."
+    ],
+    "Relationship": "Compare: DIGIT.; STROPHANT.; APOCYN. CAN.; BRY.; KALI-CARB. Squilla follows DIGITALIS, if this fails to relieve water-logged cases.",
+    "Modalities": [
+      "Better: rest; worse",
+      "Better: motion"
+    ],
+    "Common names": "Sea-onion",
+    "details": "A slow acting remedy. Corresponds to ailments requiring several days to reach their maximum. Persistent, dull, rheumatic pains permeate the body. A spleen medicine; stitches under left free ribs. Important heart and kidney medicine. BRONCHOPNEUMONIA. Acts especially on mucous membranes of the respiratory and digestive tracts, and also upon the kidneys. Valuable in chronic bronchitis of old people with mucous rales, dyspnoea, and scanty urine.",
+    "dosage": "First to third potency."
+  }
 }

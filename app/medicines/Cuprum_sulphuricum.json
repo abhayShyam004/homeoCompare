@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cuprum sulphuricum", 
-  "details": "BURNING AT VERTEX; incessant, spasmodic cough, worse at night; tongue and lips bluish; locally, CUPR. SULPH. In 1-3 per cent. Sol. In inoperable sarcoma."
+  "symptoms": {
+    "details": "BURNING AT VERTEX; incessant, spasmodic cough, worse at night; tongue and lips bluish; locally, CUPR. SULPH. In 1-3 per cent. Sol. In inoperable sarcoma."
+  },
+  "name": "Cuprum sulphuricum"
 }

@@ -1,13 +1,5 @@
 {
   "name": "Rhododendron",
-  "Relationship": "Compare: AMPELOPSIS (hydrocele and renal dropsy); DULC.; RHUS; NAT-SULPH.",
-  "Modalities": [
-    "Worse: before a storm",
-    "Better: after the storm breaks",
-    "Better: warmth",
-    "Better: and eating"
-  ],
-  "Common names": "Snow-rose",
   "symptoms": {
     "Eyes": [
       "Muscular asthenopia",
@@ -62,8 +54,16 @@
       "Difficult hearing, with whizzing and ringing in ears",
       "Hearing better in the morning",
       "noises come on after patient has been up a few hours"
-    ]
-  },
-  "details": "Rheumatic and gouty symptoms well marked. Rheumatism in the hot season. The modality (worse before a storm) is a true guiding symptom.",
-  "dosage": "First to sixth potency."
+    ],
+    "Relationship": "Compare: AMPELOPSIS (hydrocele and renal dropsy); DULC.; RHUS; NAT-SULPH.",
+    "Modalities": [
+      "Worse: before a storm",
+      "Better: after the storm breaks",
+      "Better: warmth",
+      "Better: and eating"
+    ],
+    "Common names": "Snow-rose",
+    "details": "Rheumatic and gouty symptoms well marked. Rheumatism in the hot season. The modality (worse before a storm) is a true guiding symptom.",
+    "dosage": "First to sixth potency."
+  }
 }

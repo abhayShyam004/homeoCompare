@@ -1,7 +1,5 @@
 {
   "name": "Granatum",
-  "Relationship": "Compare: PELLETIERINE (one of its constituents - an anthelmintic, especially for tapeworm); CINA; KOUSSO.",
-  "Common names": "Pomegranate",
   "symptoms": {
     "Head": [
       "Vertigo very persistent",
@@ -39,8 +37,10 @@
       "Tearing in knee-joint",
       "Pain around shoulders, as if heavy load had been carried",
       "Pain in all finger-joints"
-    ]
-  },
-  "details": "As a vermifuge for the expulsion of tapeworm, and homeopathically for the following symptomatic indications. SALIVATION, with nausea, and vertigo. Spasm of the glottis.",
-  "dosage": "First to third potency."
+    ],
+    "Relationship": "Compare: PELLETIERINE (one of its constituents - an anthelmintic, especially for tapeworm); CINA; KOUSSO.",
+    "Common names": "Pomegranate",
+    "details": "As a vermifuge for the expulsion of tapeworm, and homeopathically for the following symptomatic indications. SALIVATION, with nausea, and vertigo. Spasm of the glottis.",
+    "dosage": "First to third potency."
+  }
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Mucuna urens", 
-  "details": "Hemorrhoidal diathesis and diseases depending thereon."
+  "symptoms": {
+    "details": "Hemorrhoidal diathesis and diseases depending thereon."
+  },
+  "name": "Mucuna urens"
 }

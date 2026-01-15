@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Aurum arsenicicum", 
-  "details": "Chronic aortitis, lupus, phthisis in syphilitic headaches; also in anaemia and chlorosis. It causes rapid increase of appetite."
+  "symptoms": {
+    "details": "Chronic aortitis, lupus, phthisis in syphilitic headaches; also in anaemia and chlorosis. It causes rapid increase of appetite."
+  },
+  "name": "Aurum arsenicicum"
 }

@@ -1,10 +1,5 @@
 {
   "name": "Murex",
-  "Relationship": "Compare: PLAT.; LIL.; SEP. (the latter lacks sexual erethism of MUREX.)",
-  "Modalities": [
-    "Worse: least touch"
-  ],
-  "Common names": "Purple Fish",
   "symptoms": {
     "Stomach": [
       "Sinking, all-gone sensation in stomach",
@@ -38,8 +33,13 @@
       "Least contact of parts causes violent sexual excitement",
       "Pain from right side of womb to right or left breast",
       "Pulsation in neck of womb"
-    ]
-  },
-  "details": "The symptoms of the female sexual organs are most prominent, and have been clinically verified. Especially adapted to nervous, lively, affectionate women. Patient weak and run down.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: PLAT.; LIL.; SEP. (the latter lacks sexual erethism of MUREX.)",
+    "Modalities": [
+      "Worse: least touch"
+    ],
+    "Common names": "Purple Fish",
+    "details": "The symptoms of the female sexual organs are most prominent, and have been clinically verified. Especially adapted to nervous, lively, affectionate women. Patient weak and run down.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

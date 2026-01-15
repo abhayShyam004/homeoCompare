@@ -1,7 +1,8 @@
 {
-  "symptoms": {}, 
-  "details": "Chronic diarrhoea. Tenderness over liver. Stools little pain, but with much mucus. Dysentery. Acts as atonic and anti-periodic. Compare: Kali-carb.; Cup, Ars.; Caps.", 
-  "Common names": "Goat-bush", 
-  "name": "Chaparro amargoso", 
-  "dosage": "Third attenuation."
+  "symptoms": {
+    "details": "Chronic diarrhoea. Tenderness over liver. Stools little pain, but with much mucus. Dysentery. Acts as atonic and anti-periodic. Compare: Kali-carb.; Cup, Ars.; Caps.",
+    "Common names": "Goat-bush",
+    "dosage": "Third attenuation."
+  },
+  "name": "Chaparro amargoso"
 }

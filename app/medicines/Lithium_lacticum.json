@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lithium lacticum", 
-  "details": "Rheumatism of shoulder, and small joints relieved by moving about; worse, resting."
+  "symptoms": {
+    "details": "Rheumatism of shoulder, and small joints relieved by moving about; worse, resting."
+  },
+  "name": "Lithium lacticum"
 }

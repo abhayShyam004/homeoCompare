@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cicer arietinum", 
-  "details": "Chick-pea - Lithiasis, jaundice, liver affections; diuretic."
+  "symptoms": {
+    "details": "Chick-pea - Lithiasis, jaundice, liver affections; diuretic."
+  },
+  "name": "Cicer arietinum"
 }

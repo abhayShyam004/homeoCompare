@@ -1,13 +1,5 @@
 {
   "name": "Indigo",
-  "Relationship": "Compare: CUPRUM; OESTRUS CAMELI, an Indian medicine for epilepsy.",
-  "Modalities": [
-    "Worse: during rest and sitting",
-    "Better: pressure",
-    "Better: rubbing",
-    "Better: motion"
-  ],
-  "Common names": "Indigo-Dye-stuff",
   "symptoms": {
     "Head": [
       "Undulating sensation through whole head",
@@ -56,8 +48,16 @@
     ],
     "Ears": [
       "Pressure and roaring"
-    ]
-  },
-  "details": "Marked action on the nervous system, and of undoubted benefit in the treatment of epilepsy with great sadness. Excited mood and desire to be busy. Neurasthenia and hysteria. Pure powdered Indigo placed on the wound cures snake and spider poison. (KALI-PERMANG.; GOLONDRINA; CEDRON.) Stricture of oesophagus; blue color. (CUPR.)",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: CUPRUM; OESTRUS CAMELI, an Indian medicine for epilepsy.",
+    "Modalities": [
+      "Worse: during rest and sitting",
+      "Better: pressure",
+      "Better: rubbing",
+      "Better: motion"
+    ],
+    "Common names": "Indigo-Dye-stuff",
+    "details": "Marked action on the nervous system, and of undoubted benefit in the treatment of epilepsy with great sadness. Excited mood and desire to be busy. Neurasthenia and hysteria. Pure powdered Indigo placed on the wound cures snake and spider poison. (KALI-PERMANG.; GOLONDRINA; CEDRON.) Stricture of oesophagus; blue color. (CUPR.)",
+    "dosage": "Third to thirtieth potency."
+  }
 }

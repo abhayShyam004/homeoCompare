@@ -1,16 +1,5 @@
 {
   "name": "Cuprum aceticum",
-  "Relationship": "Acts similarly to CUPRUM MET. but is more violent in action.",
-  "Modalities": [
-    "Worse: mental emotions",
-    "Worse: touch",
-    "Better: chewing",
-    "Better: pressure",
-    "Better: night",
-    "Better: lying on affected side",
-    "Better: and warmth"
-  ],
-  "Common names": "Acetate of Copper",
   "symptoms": {
     "Head": [
       "Constant protrusion and retraction of tongue",
@@ -43,8 +32,19 @@
     ],
     "Skin": [
       "Leprous-like eruption, without itching, over whole body, in spots of various sizes"
-    ]
-  },
-  "details": "Hay-fever, with burning excoriation, paroxysmal cough; tough, tenacious mucus, and fear of suffocation. PROTRACTED LABOR. Chronic psoriasis and lepra.",
-  "dosage": "Third to sixth trituration."
+    ],
+    "Relationship": "Acts similarly to CUPRUM MET. but is more violent in action.",
+    "Modalities": [
+      "Worse: mental emotions",
+      "Worse: touch",
+      "Better: chewing",
+      "Better: pressure",
+      "Better: night",
+      "Better: lying on affected side",
+      "Better: and warmth"
+    ],
+    "Common names": "Acetate of Copper",
+    "details": "Hay-fever, with burning excoriation, paroxysmal cough; tough, tenacious mucus, and fear of suffocation. PROTRACTED LABOR. Chronic psoriasis and lepra.",
+    "dosage": "Third to sixth trituration."
+  }
 }

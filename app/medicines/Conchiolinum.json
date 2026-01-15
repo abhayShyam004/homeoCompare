@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Conchiolinum", 
-  "details": "Mater perlarum. Mother of pearl Osteitis. Has a wide range of action in bone affections, especially when the growing ends are affected. Petechiae. Diaphysis of bone affected; parts extremely sensitive to touch."
+  "symptoms": {
+    "details": "Mater perlarum. Mother of pearl Osteitis. Has a wide range of action in bone affections, especially when the growing ends are affected. Petechiae. Diaphysis of bone affected; parts extremely sensitive to touch."
+  },
+  "name": "Conchiolinum"
 }

@@ -1,7 +1,5 @@
 {
   "name": "Menispermum",
-  "Relationship": "Compare: COCCULUS; BRYON.",
-  "Common names": "Moon seed",
   "symptoms": {
     "Head": [
       "Sick headache",
@@ -12,8 +10,10 @@
     "Extremities": [
       "Pain in back, thighs, elbows, shoulders",
       "Legs sore, as if bruised"
-    ]
-  },
-  "details": "A remedy for megrim, associated with restlessness and dreams. Pain in spine. Dryness, itching all over. Dry mouth and throat.",
-  "dosage": "Third potency."
+    ],
+    "Relationship": "Compare: COCCULUS; BRYON.",
+    "Common names": "Moon seed",
+    "details": "A remedy for megrim, associated with restlessness and dreams. Pain in spine. Dryness, itching all over. Dry mouth and throat.",
+    "dosage": "Third potency."
+  }
 }

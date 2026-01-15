@@ -1,8 +1,9 @@
 {
-  "name": "Barosma crenata", 
-  "Relationship": "Compare: Copaiva; Thuja; Populus; Chimaph. See Diosma.", 
-  "Common names": "Buchu", 
-  "symptoms": {}, 
-  "details": "Marked specific effects on genitourinary system; MUCOPURULENT DISCHARGES. Irritable bladder, with vesical catarrh; prostatic disorders. Gravel. Leucorrhoea.", 
-  "dosage": "Tincture or tea from leaves."
+  "name": "Barosma crenata",
+  "symptoms": {
+    "Relationship": "Compare: Copaiva; Thuja; Populus; Chimaph. See Diosma.",
+    "Common names": "Buchu",
+    "details": "Marked specific effects on genitourinary system; MUCOPURULENT DISCHARGES. Irritable bladder, with vesical catarrh; prostatic disorders. Gravel. Leucorrhoea.",
+    "dosage": "Tincture or tea from leaves."
+  }
 }

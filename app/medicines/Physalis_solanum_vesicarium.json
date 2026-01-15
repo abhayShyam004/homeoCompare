@@ -1,9 +1,5 @@
 {
   "name": "Physalis solanum vesicarium",
-  "Modalities": [
-    "Worse: cold camp evening"
-  ],
-  "Common names": "Alkekengi - Winter Cherry",
   "symptoms": {
     "Head": [
       "Dryness of mouth",
@@ -43,8 +39,12 @@
       "Paralysis",
       "Stiff limbs",
       "tonic cramps"
-    ]
-  },
-  "details": "Marked urinary symptoms confirming its ancient uses in gravel, etc. Lithiasis; marked diuretic action. Languor and muscular weakness. Recommended in facial paralysis.",
-  "dosage": "Tincture to third attenuation. The juice of the berries is used in dropsical conditions and irritable bladder."
+    ],
+    "Modalities": [
+      "Worse: cold camp evening"
+    ],
+    "Common names": "Alkekengi - Winter Cherry",
+    "details": "Marked urinary symptoms confirming its ancient uses in gravel, etc. Lithiasis; marked diuretic action. Languor and muscular weakness. Recommended in facial paralysis.",
+    "dosage": "Tincture to third attenuation. The juice of the berries is used in dropsical conditions and irritable bladder."
+  }
 }

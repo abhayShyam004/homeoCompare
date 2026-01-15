@@ -1,7 +1,5 @@
 {
   "name": "Coccinella septempunctata",
-  "Relationship": "Compare: CANTH.; MANG. C.",
-  "Common names": "Lady Bug",
   "symptoms": {
     "Head": [
       "Cannot open eyes during paroxysm",
@@ -21,8 +19,10 @@
     "Back": [
       "Icy cold extremities",
       "Pain in region of kidneys and loins"
-    ]
-  },
-  "details": "This remedy ought to be remembered in neuralgias, teeth, gums, mouth, etc. Is awakened by profuse accumulation of saliva. Uvula feels too long. Symptoms of hydrophobia; worse, by any bright object.",
-  "dosage": "Third potency."
+    ],
+    "Relationship": "Compare: CANTH.; MANG. C.",
+    "Common names": "Lady Bug",
+    "details": "This remedy ought to be remembered in neuralgias, teeth, gums, mouth, etc. Is awakened by profuse accumulation of saliva. Uvula feels too long. Symptoms of hydrophobia; worse, by any bright object.",
+    "dosage": "Third potency."
+  }
 }

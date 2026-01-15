@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cymarinum", 
-  "details": "The active principle of Apocyn., lowers pulse rate and increases blood-pressure."
+  "symptoms": {
+    "details": "The active principle of Apocyn., lowers pulse rate and increases blood-pressure."
+  },
+  "name": "Cymarinum"
 }

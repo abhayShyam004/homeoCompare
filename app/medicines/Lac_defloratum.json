@@ -1,7 +1,5 @@
 {
   "name": "Lac defloratum",
-  "Relationship": "Compare: COLOSTRUM. (Diarrhoea in infants. Whole body smells sour. Colic.) NAT-MUR.",
-  "Common names": "Skimmed Milk",
   "symptoms": {
     "Head": [
       "Pain begins in forehead to occiput, in morning on rising",
@@ -13,8 +11,10 @@
       "Stools hard, large, with great straining",
       "painful, lacerating anus",
       "Constipation"
-    ]
-  },
-  "details": "A remedy for diseases with faulty nutrition; sick headaches; with profuse flow of urine DURING pain. CAR SICKNESS.",
-  "dosage": "Sixth, to thirtieth potency and higher."
+    ],
+    "Relationship": "Compare: COLOSTRUM. (Diarrhoea in infants. Whole body smells sour. Colic.) NAT-MUR.",
+    "Common names": "Skimmed Milk",
+    "details": "A remedy for diseases with faulty nutrition; sick headaches; with profuse flow of urine DURING pain. CAR SICKNESS.",
+    "dosage": "Sixth, to thirtieth potency and higher."
+  }
 }

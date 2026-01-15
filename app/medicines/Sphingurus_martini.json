@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Sphingurus martini", 
-  "details": "Falling out of hair from beard; pain in jaw-joint and zygoma. Pain in zygoma."
+  "symptoms": {
+    "details": "Falling out of hair from beard; pain in jaw-joint and zygoma. Pain in zygoma."
+  },
+  "name": "Sphingurus martini"
 }

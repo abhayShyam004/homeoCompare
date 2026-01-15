@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Helminthochortos", 
-  "details": "Worm-moss acts very powerfully on intestinal worms, especially the lumbricoid."
+  "symptoms": {
+    "details": "Worm-moss acts very powerfully on intestinal worms, especially the lumbricoid."
+  },
+  "name": "Helminthochortos"
 }

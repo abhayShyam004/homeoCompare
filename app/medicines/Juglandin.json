@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Juglandin", 
-  "details": "Duodenal catarrh; bilious diarrhoea."
+  "symptoms": {
+    "details": "Duodenal catarrh; bilious diarrhoea."
+  },
+  "name": "Juglandin"
 }

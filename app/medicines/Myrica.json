@@ -1,7 +1,5 @@
 {
   "name": "Myrica",
-  "Relationship": "Compare: PTEL.; CORNUS.; CHELID.; LEPT.; FAGOP. Antidote: DIGIT. (JAUNDICE).",
-  "Common names": "Bayberry",
   "symptoms": {
     "Head": [
       "Scalp feels tight",
@@ -67,8 +65,10 @@
     "Extremities": [
       "Staggering gait",
       "Pain under shoulder-blades and back of neck, in all muscles, in hollow of right foot"
-    ]
-  },
-  "details": "Marked action on the liver, with jaundice and mucous membranes. Persistent sleeplessness. JAUNDICE.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: PTEL.; CORNUS.; CHELID.; LEPT.; FAGOP. Antidote: DIGIT. (JAUNDICE).",
+    "Common names": "Bayberry",
+    "details": "Marked action on the liver, with jaundice and mucous membranes. Persistent sleeplessness. JAUNDICE.",
+    "dosage": "Tincture, to third potency."
+  }
 }

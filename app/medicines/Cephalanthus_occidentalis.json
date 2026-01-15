@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cephalanthus occidentalis", 
-  "details": "Button Bush - Intermittent fever, sore throat, rheumatic symptoms, vivid dreams."
+  "symptoms": {
+    "details": "Button Bush - Intermittent fever, sore throat, rheumatic symptoms, vivid dreams."
+  },
+  "name": "Cephalanthus occidentalis"
 }

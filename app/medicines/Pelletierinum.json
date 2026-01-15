@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Pelletierinum", 
-  "details": "An anthelmintic, especially for tapeworm."
+  "symptoms": {
+    "details": "An anthelmintic, especially for tapeworm."
+  },
+  "name": "Pelletierinum"
 }

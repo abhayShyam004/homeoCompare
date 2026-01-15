@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Plumbum phosphoricum", 
-  "details": "Loss of sexual power; LOCOMOTOR ATAXIA."
+  "symptoms": {
+    "details": "Loss of sexual power; LOCOMOTOR ATAXIA."
+  },
+  "name": "Plumbum phosphoricum"
 }

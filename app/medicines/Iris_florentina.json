@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Iris florentina", 
-  "details": "Oris-root - delirium, convulsions, and paralysis."
+  "symptoms": {
+    "details": "Oris-root - delirium, convulsions, and paralysis."
+  },
+  "name": "Iris florentina"
 }

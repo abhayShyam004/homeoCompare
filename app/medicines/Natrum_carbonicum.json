@@ -1,16 +1,5 @@
 {
   "name": "Natrum carbonicum",
-  "Relationship": "Compare: SODII BICARBONAS (in vomiting of pregnancy with acetonuria, 30 grains in water spread over twenty-four hours); NAT-SULPH.; CAUST.; NAT. CACODYL. (Foul breath and mouth with bad odor. Dry dermatitis of the skin of abdomen. Malignant growths. (In phthisis, 5 centigrams hypodermically, daily. Increase number of red blood corpuscles to double. Also in MALIGNANT DISEASE). ARSENAL - (Disodium methyl arsenate). Introduced by M.A. Gautier, for phthisis in the second stage 4 to 6 centigrammes per day for one week followed by a week's intermission. But much smaller doses, i.e., 1x to 3X are followed by improvement, lessened fever, night sweat and hemoptysis ceasing. Antidote: ARS.; CAMPH.",
-  "Modalities": [
-    "Worse: sitting",
-    "Worse: from music",
-    "Worse: summer heat",
-    "Worse: mental exertion",
-    "Worse: thunder storm",
-    "Better: by moving",
-    "Better: by boring in ears and nose"
-  ],
-  "Common names": "Carbonate of Sodium",
   "symptoms": {
     "Head": [
       "Head aches with return of hot weather",
@@ -100,8 +89,19 @@
       "Old sprains",
       "Easy dislocation and spraining of ankles",
       "The hollow of the knee is painful on motion"
-    ]
-  },
-  "details": "All the Natrums stimulate cellular activity and increase oxidation and metabolism. Great debility CAUSED BY SUMMER HEAT; chronic effects of sunstroke; exhaustion; anaemic; milky, watery skin; very weak ankles, are all peculiar Natrum carbonicum conditions.",
-  "dosage": "Sixth potency."
+    ],
+    "Relationship": "Compare: SODII BICARBONAS (in vomiting of pregnancy with acetonuria, 30 grains in water spread over twenty-four hours); NAT-SULPH.; CAUST.; NAT. CACODYL. (Foul breath and mouth with bad odor. Dry dermatitis of the skin of abdomen. Malignant growths. (In phthisis, 5 centigrams hypodermically, daily. Increase number of red blood corpuscles to double. Also in MALIGNANT DISEASE). ARSENAL - (Disodium methyl arsenate). Introduced by M.A. Gautier, for phthisis in the second stage 4 to 6 centigrammes per day for one week followed by a week's intermission. But much smaller doses, i.e., 1x to 3X are followed by improvement, lessened fever, night sweat and hemoptysis ceasing. Antidote: ARS.; CAMPH.",
+    "Modalities": [
+      "Worse: sitting",
+      "Worse: from music",
+      "Worse: summer heat",
+      "Worse: mental exertion",
+      "Worse: thunder storm",
+      "Better: by moving",
+      "Better: by boring in ears and nose"
+    ],
+    "Common names": "Carbonate of Sodium",
+    "details": "All the Natrums stimulate cellular activity and increase oxidation and metabolism. Great debility CAUSED BY SUMMER HEAT; chronic effects of sunstroke; exhaustion; anaemic; milky, watery skin; very weak ankles, are all peculiar Natrum carbonicum conditions.",
+    "dosage": "Sixth potency."
+  }
 }

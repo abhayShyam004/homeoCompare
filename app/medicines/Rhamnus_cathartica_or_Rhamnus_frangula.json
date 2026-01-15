@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Rhamnus cathartica or Rhamnus frangula", 
-  "details": "European Buckthorn - a rheumatic remedy - abdominal symptoms, colic; diarrhoea; hemorrhoids, especially chronic."
+  "symptoms": {
+    "details": "European Buckthorn - a rheumatic remedy - abdominal symptoms, colic; diarrhoea; hemorrhoids, especially chronic."
+  },
+  "name": "Rhamnus cathartica or Rhamnus frangula"
 }

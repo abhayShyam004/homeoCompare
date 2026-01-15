@@ -1,7 +1,5 @@
 {
   "name": "Ammoniacum dorema",
-  "Relationship": "Antidotes: Bry.; Arnica. Compare: Senega.; Tart. emet.; Balsam Peru.",
-  "Common names": "Gum Ammoniac",
   "symptoms": {
     "Eyes": [
       "Easily fatigued from reading",
@@ -25,8 +23,10 @@
       "worse inhaling fresh air",
       "Immediately after eating, sensation as if something stuck in oesophagus, causing swallowing",
       "Full feeling, burning and scraping sensation"
-    ]
-  },
-  "details": "A remedy for the aged and feeble, especially in chronic bronchitis. Ill humor. Sensitive to cold. Sensation of burning and scratching in neck and oesophagus.",
-  "dosage": "Third trituration."
+    ],
+    "Relationship": "Antidotes: Bry.; Arnica. Compare: Senega.; Tart. emet.; Balsam Peru.",
+    "Common names": "Gum Ammoniac",
+    "details": "A remedy for the aged and feeble, especially in chronic bronchitis. Ill humor. Sensitive to cold. Sensation of burning and scratching in neck and oesophagus.",
+    "dosage": "Third trituration."
+  }
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Triatoma", 
-  "details": "Kissing bug - Swelling with violent itching of fingers and toes. Smothering sensation and difficult breathing succeeded by fainting and rapid pulse."
+  "symptoms": {
+    "details": "Kissing bug - Swelling with violent itching of fingers and toes. Smothering sensation and difficult breathing succeeded by fainting and rapid pulse."
+  },
+  "name": "Triatoma"
 }

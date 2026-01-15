@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Chimaphila maculata", 
-  "details": "Intense gnawing hunger; burning fever; sensation of swelling in arm pits."
+  "symptoms": {
+    "details": "Intense gnawing hunger; burning fever; sensation of swelling in arm pits."
+  },
+  "name": "Chimaphila maculata"
 }

@@ -1,30 +1,30 @@
 {
   "symptoms": {
     "Skin": [
-      "Skin symptoms accompanied by febrile symptoms", 
-      "Tumefied", 
-      "Small papules on a raised base", 
+      "Skin symptoms accompanied by febrile symptoms",
+      "Tumefied",
+      "Small papules on a raised base",
       "Great itching, worse at night, red and swollen like erysipelas"
-    ], 
+    ],
     "Extremities": [
-      "Rheumatic pain around shoulder", 
-      "Blisters on fingers", 
-      "Eruption between fingers", 
-      "Purple blotches on back of hands, palmar surface stiff", 
-      "Palms dry and hot", 
-      "Cracking over joints and fingers", 
+      "Rheumatic pain around shoulder",
+      "Blisters on fingers",
+      "Eruption between fingers",
+      "Purple blotches on back of hands, palmar surface stiff",
+      "Palms dry and hot",
+      "Cracking over joints and fingers",
       "Eczema on arms, wrists, forearms, hands, papular and excoriated"
-    ], 
+    ],
     "Face": [
-      "Moist eczema", 
-      "Urticaria-like eruption", 
-      "Eyelids swollen", 
-      "Papular eruption on chin", 
+      "Moist eczema",
+      "Urticaria-like eruption",
+      "Eyelids swollen",
+      "Papular eruption on chin",
       "Burns at night"
-    ]
-  }, 
-  "Common names": "Primrose", 
-  "name": "Primula obconica", 
-  "Relationship": "Compare: RHUS; FAGOPYRUM (Antidotal). HUMEA ELEGANS, similar skin symptoms.", 
-  "details": "The poison of the Primrose occurs in its GLANDULAR HAIRS, which break easily and discharge an irritating fluid which is absorbed into the skin. But skin symptoms of poisoning appear in sensitive patients even without coming in direct contact with the plant, mere nearness begin sufficient, just like Poison Ivy. Intermittency of symptoms; worse right side. Pain in liver and spleen. Deep infiltration and tension of tissue; blisters. PARALYZED SENSATION. WEAKNESS. Pharyngeal soreness alternates with diminished facial irritation."
+    ],
+    "Common names": "Primrose",
+    "Relationship": "Compare: RHUS; FAGOPYRUM (Antidotal). HUMEA ELEGANS, similar skin symptoms.",
+    "details": "The poison of the Primrose occurs in its GLANDULAR HAIRS, which break easily and discharge an irritating fluid which is absorbed into the skin. But skin symptoms of poisoning appear in sensitive patients even without coming in direct contact with the plant, mere nearness begin sufficient, just like Poison Ivy. Intermittency of symptoms; worse right side. Pain in liver and spleen. Deep infiltration and tension of tissue; blisters. PARALYZED SENSATION. WEAKNESS. Pharyngeal soreness alternates with diminished facial irritation."
+  },
+  "name": "Primula obconica"
 }

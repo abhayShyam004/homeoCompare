@@ -1,14 +1,5 @@
 {
   "name": "Stillingia",
-  "Relationship": "Compare: STAPHIS.; MERC.; SYPHIL.; AUR.; CORYDALIS (syphilitic nodes).",
-  "Modalities": [
-    "Worse: in afternoon",
-    "Worse: damp air",
-    "Worse: motion",
-    "Better: in morning",
-    "Better: dry air"
-  ],
-  "Common names": "Queen's Root",
   "symptoms": {
     "Respiratory": [
       "Hoarseness and chronic laryngeal affections of public speakers",
@@ -38,8 +29,17 @@
     ],
     "Extremities": [
       "Aching pains in bones of extremities and back"
-    ]
-  },
-  "details": "Chronic periosteal rheumatism, syphilitic and scrofulous affections. Respiratory symptoms well marked. Torpor of lymphatics; torpid liver, with jaundice and constipation.",
-  "dosage": "Tincture and first potency."
+    ],
+    "Relationship": "Compare: STAPHIS.; MERC.; SYPHIL.; AUR.; CORYDALIS (syphilitic nodes).",
+    "Modalities": [
+      "Worse: in afternoon",
+      "Worse: damp air",
+      "Worse: motion",
+      "Better: in morning",
+      "Better: dry air"
+    ],
+    "Common names": "Queen's Root",
+    "details": "Chronic periosteal rheumatism, syphilitic and scrofulous affections. Respiratory symptoms well marked. Torpor of lymphatics; torpid liver, with jaundice and constipation.",
+    "dosage": "Tincture and first potency."
+  }
 }

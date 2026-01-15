@@ -1,7 +1,5 @@
 {
   "name": "Jalapa",
-  "Relationship": "Antidotes: ELATER.; CANN. SAT. Compare: CAMPH.; COLCY.",
-  "Common names": "Exogonium Purga Jalap",
   "symptoms": {
     "Stomach": [
       "Tongue, smooth, glazed, dry, smarting",
@@ -19,8 +17,10 @@
       "Aching in arms and legs",
       "Pain in large joint of great toe",
       "Smarting at root of nail"
-    ]
-  },
-  "details": "Causes and cures colic and diarrhoea. The child is good all day, but screams and is restless and troublesome at night.",
-  "dosage": "Third to twelfth potency."
+    ],
+    "Relationship": "Antidotes: ELATER.; CANN. SAT. Compare: CAMPH.; COLCY.",
+    "Common names": "Exogonium Purga Jalap",
+    "details": "Causes and cures colic and diarrhoea. The child is good all day, but screams and is restless and troublesome at night.",
+    "dosage": "Third to twelfth potency."
+  }
 }

@@ -1,7 +1,5 @@
 {
   "name": "Wyethia",
-  "Relationship": "Compare: ARUM; SANG.; LACH.",
-  "Common names": "Poison-weed",
   "symptoms": {
     "Head": [
       "Dizzy",
@@ -63,8 +61,10 @@
     "Extremities": [
       "Pain right arm, stiffness of wrist and hand",
       "Aching pains all over"
-    ]
-  },
-  "details": "Has marked effects on the throat, and has proven an excellent remedy in PHARYNGITIS, especially the follicular form. Irritable throats of singers and public speakers. Useful also in hemorrhoids. Hay-fever symptoms; ITCHING IN POSTERIOR NARES.",
-  "dosage": "First to sixth potency."
+    ],
+    "Relationship": "Compare: ARUM; SANG.; LACH.",
+    "Common names": "Poison-weed",
+    "details": "Has marked effects on the throat, and has proven an excellent remedy in PHARYNGITIS, especially the follicular form. Irritable throats of singers and public speakers. Useful also in hemorrhoids. Hay-fever symptoms; ITCHING IN POSTERIOR NARES.",
+    "dosage": "First to sixth potency."
+  }
 }

@@ -1,16 +1,5 @@
 {
   "name": "Petroleum",
-  "Relationship": "Compare: CARBO; GRAPH.; SULPH.; PHOS. Complementary: SEPIA. Antidotes: NUX; COCCUL.",
-  "Modalities": [
-    "Worse: dampness",
-    "Worse: before and during a thunderstorm",
-    "Worse: from riding in cars",
-    "Worse: passive motion; in winter",
-    "Worse: eating",
-    "Worse: from mental states",
-    "Better: warm air; lying with head high; dry weather"
-  ],
-  "Common names": "Crude Rock-oil",
   "symptoms": {
     "Head": [
       "Sensitive, as of a cold breeze blowing on it",
@@ -140,8 +129,19 @@
       "Chronic sprains",
       "Scalding sensation in knee",
       "Fetid sweat in axillae"
-    ]
-  },
-  "details": "Strumous diathesis, especially the dark type, who suffer from catarrhal conditions of the mucous membranes, gastric acidity and cutaneous eruptions. Very marked skin symptoms, acting on sweat and oil glands. Ailments are worse during the winter season. Ailments from riding in cars, carriages, or ships; lingering gastric and lung troubles; chronic diarrhoea. LONG-LASTING COMPLAINTS follow mental states - fright, vexation, etc. Chlorosis in young girls with or without ulceration of the stomach.",
-  "dosage": "Third to thirtieth and higher potencies. Material doses often better."
+    ],
+    "Relationship": "Compare: CARBO; GRAPH.; SULPH.; PHOS. Complementary: SEPIA. Antidotes: NUX; COCCUL.",
+    "Modalities": [
+      "Worse: dampness",
+      "Worse: before and during a thunderstorm",
+      "Worse: from riding in cars",
+      "Worse: passive motion; in winter",
+      "Worse: eating",
+      "Worse: from mental states",
+      "Better: warm air; lying with head high; dry weather"
+    ],
+    "Common names": "Crude Rock-oil",
+    "details": "Strumous diathesis, especially the dark type, who suffer from catarrhal conditions of the mucous membranes, gastric acidity and cutaneous eruptions. Very marked skin symptoms, acting on sweat and oil glands. Ailments are worse during the winter season. Ailments from riding in cars, carriages, or ships; lingering gastric and lung troubles; chronic diarrhoea. LONG-LASTING COMPLAINTS follow mental states - fright, vexation, etc. Chlorosis in young girls with or without ulceration of the stomach.",
+    "dosage": "Third to thirtieth and higher potencies. Material doses often better."
+  }
 }

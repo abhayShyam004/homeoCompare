@@ -1,7 +1,5 @@
 {
   "name": "Ustilago maydis",
-  "Relationship": "Compare: SECALE; SABIN.; ZEA ITALICA. (Possess curative properties in skin diseases, particularly in psoriasis and eczema rubrum. Mania for bathing. Impulse to suicide, particularly by drowning. Easily angered. Appetite increased, voracious, alternating with disgust for food. Pyrosis, nausea, vomiting, better drinking wine.)",
-  "Common names": "Corn-smut",
   "symptoms": {
     "Head": [
       "Full feeling",
@@ -48,8 +46,10 @@
       "Dull pain in lumbar region, with great despondency and mental irritability",
       "Spermatorrhoea, with erotic fancies and amorous dreams",
       "Emissions, with irresistible tendency to masturbation"
-    ]
-  },
-  "details": "Flabby condition of uterus. Hemorrhage. Congestion to various parts, especially at climacteric. Crusta lactea. (VIOL TRICH.)",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: SECALE; SABIN.; ZEA ITALICA. (Possess curative properties in skin diseases, particularly in psoriasis and eczema rubrum. Mania for bathing. Impulse to suicide, particularly by drowning. Easily angered. Appetite increased, voracious, alternating with disgust for food. Pyrosis, nausea, vomiting, better drinking wine.)",
+    "Common names": "Corn-smut",
+    "details": "Flabby condition of uterus. Hemorrhage. Congestion to various parts, especially at climacteric. Crusta lactea. (VIOL TRICH.)",
+    "dosage": "Tincture, to third potency."
+  }
 }

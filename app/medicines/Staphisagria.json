@@ -1,20 +1,5 @@
 {
   "name": "Staphisagria",
-  "Relationship": "Inimical: RANUNC. BULB. Complementary: CAUST.; COLOCY. Compare: FERRUM PYROPHOS. (tarsal cysts); COLOCY.; CAUST.; IGN.; PHOS-AC.; CALAD. Antidote: CAMPH.",
-  "Modalities": [
-    "Worse: anger",
-    "Worse: indignation",
-    "Worse: grief",
-    "Worse: mortification",
-    "Worse: loss of fluids",
-    "Worse: onanism",
-    "Worse: sexual excesses",
-    "Worse: tobacco; least touch on affected parts",
-    "Better: after breakfast",
-    "Better: warmth",
-    "Better: rest at night"
-  ],
-  "Common names": "Stavesacre",
   "symptoms": {
     "Eyes": [
       "Heat in eyeballs, dims spectacles",
@@ -115,8 +100,23 @@
       "emissions, with backache and weakness and sexual neurasthenia",
       "Especially after self-abuse",
       "persistent dwelling on sexual subjects"
-    ]
-  },
-  "details": "Nervous affections with marked irritability, diseases of the genitourinary tract and skin, most frequently give symptoms calling for this drug. Acts on teeth and alveolar periosteum. Ill effects of anger and insults. SEXUAL SINS AND EXCESSES. VERY SENSITIVE. Lacerated tissues. Pain and nervousness after extraction of teeth. Sphincters lacerated or stretched.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Inimical: RANUNC. BULB. Complementary: CAUST.; COLOCY. Compare: FERRUM PYROPHOS. (tarsal cysts); COLOCY.; CAUST.; IGN.; PHOS-AC.; CALAD. Antidote: CAMPH.",
+    "Modalities": [
+      "Worse: anger",
+      "Worse: indignation",
+      "Worse: grief",
+      "Worse: mortification",
+      "Worse: loss of fluids",
+      "Worse: onanism",
+      "Worse: sexual excesses",
+      "Worse: tobacco; least touch on affected parts",
+      "Better: after breakfast",
+      "Better: warmth",
+      "Better: rest at night"
+    ],
+    "Common names": "Stavesacre",
+    "details": "Nervous affections with marked irritability, diseases of the genitourinary tract and skin, most frequently give symptoms calling for this drug. Acts on teeth and alveolar periosteum. Ill effects of anger and insults. SEXUAL SINS AND EXCESSES. VERY SENSITIVE. Lacerated tissues. Pain and nervousness after extraction of teeth. Sphincters lacerated or stretched.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

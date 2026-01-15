@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ferrum tartaricum", 
-  "details": "Cardialgia; heat at cardiac orifice of stomach."
+  "symptoms": {
+    "details": "Cardialgia; heat at cardiac orifice of stomach."
+  },
+  "name": "Ferrum tartaricum"
 }

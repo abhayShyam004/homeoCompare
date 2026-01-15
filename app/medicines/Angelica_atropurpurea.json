@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Angelica atropurpurea", 
-  "details": "In tincture, five drops, three times daily, produces disgust for liquor; also for atony of different organs, dyspepsia, nervous headache, etc.; chronic bronchitis to increase expectoration."
+  "symptoms": {
+    "details": "In tincture, five drops, three times daily, produces disgust for liquor; also for atony of different organs, dyspepsia, nervous headache, etc.; chronic bronchitis to increase expectoration."
+  },
+  "name": "Angelica atropurpurea"
 }

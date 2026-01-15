@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Sedum telephium", 
-  "details": "Uterine hemorrhages, also for bowels and rectum; MENORRHAGIA, ESPECIALLY AT CLIMACTERIC."
+  "symptoms": {
+    "details": "Uterine hemorrhages, also for bowels and rectum; MENORRHAGIA, ESPECIALLY AT CLIMACTERIC."
+  },
+  "name": "Sedum telephium"
 }

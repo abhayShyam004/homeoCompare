@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Tinospora cordifolia", 
-  "details": "A Hindu medicine for chronic cases of fever with enlarged spleen."
+  "symptoms": {
+    "details": "A Hindu medicine for chronic cases of fever with enlarged spleen."
+  },
+  "name": "Tinospora cordifolia"
 }

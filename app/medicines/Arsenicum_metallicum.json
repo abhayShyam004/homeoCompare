@@ -1,31 +1,31 @@
 {
   "symptoms": {
     "Head": [
-      "Annoyed by visions, causing her to cry", 
-      "Left-sided headache up to eyes and into ears", 
-      "Desire to be alone", 
-      "Low spirited, memory weak", 
-      "Headaches worse stooping and lying down oedematous swelling of forehead", 
+      "Annoyed by visions, causing her to cry",
+      "Left-sided headache up to eyes and into ears",
+      "Desire to be alone",
+      "Low spirited, memory weak",
+      "Headaches worse stooping and lying down oedematous swelling of forehead",
       "Head feels too large"
-    ], 
+    ],
     "Abdomen": [
-      "Pain in breast extends to hip and spleen", 
-      "Sore pain in liver goes through to shoulders and spine", 
-      "Diarrhoea, burning watery stools with relief of pain", 
+      "Pain in breast extends to hip and spleen",
+      "Sore pain in liver goes through to shoulders and spine",
+      "Diarrhoea, burning watery stools with relief of pain",
       "Pain in spleen down to groin"
-    ], 
+    ],
     "Mouth": [
-      "The tongue coated white, and shows imprint of the teeth", 
+      "The tongue coated white, and shows imprint of the teeth",
       "Mouth sore and ulcerated"
-    ], 
+    ],
     "Face": [
-      "Red, itching, burning and bloated", 
-      "Eyes swelled and watery, burn with coryza", 
+      "Red, itching, burning and bloated",
+      "Eyes swelled and watery, burn with coryza",
       "Eyes weak, day and gas light unpleasant"
-    ]
-  }, 
-  "details": "Arouses latent syphilis. Periodicity very marked; symptoms recur every two and three weeks. Weakness. Swollen feeling of parts.", 
-  "Common names": "Metallic Arsenic", 
-  "name": "Arsenicum metallicum", 
-  "dosage": "Sixth potency."
+    ],
+    "details": "Arouses latent syphilis. Periodicity very marked; symptoms recur every two and three weeks. Weakness. Swollen feeling of parts.",
+    "Common names": "Metallic Arsenic",
+    "dosage": "Sixth potency."
+  },
+  "name": "Arsenicum metallicum"
 }

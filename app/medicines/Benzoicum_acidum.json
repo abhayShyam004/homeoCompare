@@ -1,10 +1,5 @@
 {
   "name": "Benzoicum acidum",
-  "Relationship": "Useful after Colchic. fails in gout; after Copaiva in gonorrhea. Compare: Nitric acid; Ammon. benz.; Sabina; Tropoeleum - Garden Nasturtium - (fetid urine). Antidote: Copaiva. Incompatible: Wine.",
-  "Modalities": [
-    "Worse: in open air; by uncovering"
-  ],
-  "Common names": "Benzoic Acid",
   "symptoms": {
     "Head": [
       "Ulceration of tongue",
@@ -93,8 +88,13 @@
       "Ganglion",
       "swelling of the wrist",
       "Pain in tendo achills"
-    ]
-  },
-  "details": "The most marked characteristic pertains to the odor and color of the urine. It has a marked action on metabolism. It produces and cures symptoms of a uric acid diathesis, with urine highly colored and very offensive, and gouty symptoms. Renal insufficiency. Child wants to be nursed in the arms, will not be laid down. Pains suddenly change their locality. Anti-sycotic. Gouty and asthmatic.",
-  "dosage": "Third to sixth potency."
+    ],
+    "Relationship": "Useful after Colchic. fails in gout; after Copaiva in gonorrhea. Compare: Nitric acid; Ammon. benz.; Sabina; Tropoeleum - Garden Nasturtium - (fetid urine). Antidote: Copaiva. Incompatible: Wine.",
+    "Modalities": [
+      "Worse: in open air; by uncovering"
+    ],
+    "Common names": "Benzoic Acid",
+    "details": "The most marked characteristic pertains to the odor and color of the urine. It has a marked action on metabolism. It produces and cures symptoms of a uric acid diathesis, with urine highly colored and very offensive, and gouty symptoms. Renal insufficiency. Child wants to be nursed in the arms, will not be laid down. Pains suddenly change their locality. Anti-sycotic. Gouty and asthmatic.",
+    "dosage": "Third to sixth potency."
+  }
 }

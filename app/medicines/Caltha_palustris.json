@@ -1,17 +1,17 @@
 {
   "symptoms": {
     "Skin": [
-      "Bullae are surrounded by a ring", 
-      "Uterine cancer", 
-      "Pustules", 
-      "Itching eruption on thighs", 
-      "Pemphigus", 
-      "Face much swollen, especially around the eyes", 
+      "Bullae are surrounded by a ring",
+      "Uterine cancer",
+      "Pustules",
+      "Itching eruption on thighs",
+      "Pemphigus",
+      "Face much swollen, especially around the eyes",
       "Much itching"
-    ]
-  }, 
-  "details": "Pain in abdomen, vomiting, headache, singing in ears, dysuria and diarrhoea. Anasarca.", 
-  "Common names": "Cowslip", 
-  "name": "Caltha palustris", 
-  "dosage": "Tincture."
+    ],
+    "details": "Pain in abdomen, vomiting, headache, singing in ears, dysuria and diarrhoea. Anasarca.",
+    "Common names": "Cowslip",
+    "dosage": "Tincture."
+  },
+  "name": "Caltha palustris"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Luminal", 
-  "details": "Sleeplessness with skin symptoms in migraine; lethargy like epidemic encephalitis. Dr. Royal."
+  "symptoms": {
+    "details": "Sleeplessness with skin symptoms in migraine; lethargy like epidemic encephalitis. Dr. Royal."
+  },
+  "name": "Luminal"
 }

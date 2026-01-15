@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ferrum pernitricum", 
-  "details": "Cough, with florid complexion."
+  "symptoms": {
+    "details": "Cough, with florid complexion."
+  },
+  "name": "Ferrum pernitricum"
 }

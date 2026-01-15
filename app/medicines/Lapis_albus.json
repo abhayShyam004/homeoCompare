@@ -1,23 +1,23 @@
 {
-  "name": "Lapis albus", 
-  "Relationship": "Compare: SILICA.; BADIAGA; ARS. IOD.; CALC. IOD.; CON.; KAL. IOD.; ASTERIAS.", 
-  "Common names": "Silicofluoride of Calcium", 
+  "name": "Lapis albus",
   "symptoms": {
     "Chest": [
-      "Persistent pains in mammary region", 
+      "Persistent pains in mammary region",
       "Glandular hardening"
-    ], 
+    ],
     "Skin": [
-      "Scrofulous abscesses and sores", 
-      "Lipoma, sarcoma, carcinoma", 
-      "Pruritus", 
+      "Scrofulous abscesses and sores",
+      "Lipoma, sarcoma, carcinoma",
+      "Pruritus",
       "Enlargement and induration of glands, especially cervical"
-    ], 
+    ],
     "Ears": [
-      "Otitis media suppurative", 
+      "Otitis media suppurative",
       "Where silica is indicated progress is hastened by lapis"
-    ]
-  }, 
-  "details": "Affections of glands, GOITRE, pre-ulcerative stage of carcinoma. Burning, stinging pain in breast, stomach and uterus. Connective tissue about glands specially affected. Fat anaemic babies with Iodine appetite. Ravenous appetite. Remarkably successful in scrofulous affections, except in malarial cases. UTERINE CARCINOMA. Fibroid tumors with INTENSE BURNING pains through the part with PROFUSE HEMORRHAGE. Glands have a certain elasticity and pliability about them rather than the stony hardness of CALC. FLUOR AND CISTUS.", 
-  "dosage": "First to sixth potency."
+    ],
+    "Relationship": "Compare: SILICA.; BADIAGA; ARS. IOD.; CALC. IOD.; CON.; KAL. IOD.; ASTERIAS.",
+    "Common names": "Silicofluoride of Calcium",
+    "details": "Affections of glands, GOITRE, pre-ulcerative stage of carcinoma. Burning, stinging pain in breast, stomach and uterus. Connective tissue about glands specially affected. Fat anaemic babies with Iodine appetite. Ravenous appetite. Remarkably successful in scrofulous affections, except in malarial cases. UTERINE CARCINOMA. Fibroid tumors with INTENSE BURNING pains through the part with PROFUSE HEMORRHAGE. Glands have a certain elasticity and pliability about them rather than the stony hardness of CALC. FLUOR AND CISTUS.",
+    "dosage": "First to sixth potency."
+  }
 }

@@ -1,7 +1,5 @@
 {
   "name": "Actea spicata",
-  "Relationship": "Compare: Cimic.; Caul.; Led.",
-  "Common names": "Bane berry",
   "symptoms": {
     "Head": [
       "Itching of scalp alternating with heat",
@@ -40,8 +38,10 @@
       "Lame feeling in arms",
       "Sudden lassitude after talking or eating",
       "Rheumatic pains in small joints, wrist,  fingers, ankles, toes"
-    ]
-  },
-  "details": "Is a rheumatic remedy, especially of the SMALL JOINTS; tearing, tingling pains characterize it. WRIST-RHEUMATISM. Pulsations over whole body, especially liver and renal region. Cardiovascular spasm. Pains worse from touch and motion.",
-  "dosage": "Third potency."
+    ],
+    "Relationship": "Compare: Cimic.; Caul.; Led.",
+    "Common names": "Bane berry",
+    "details": "Is a rheumatic remedy, especially of the SMALL JOINTS; tearing, tingling pains characterize it. WRIST-RHEUMATISM. Pulsations over whole body, especially liver and renal region. Cardiovascular spasm. Pains worse from touch and motion.",
+    "dosage": "Third potency."
+  }
 }

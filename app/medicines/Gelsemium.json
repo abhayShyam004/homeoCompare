@@ -1,22 +1,5 @@
 {
   "name": "Gelsemium",
-  "Relationship": "Compare: IGNATIA (gastric affections of cigar makers); BAPTISA; IPECAC.; ACON.; BELL.; CIMICIF.; MANGES. PHOS. (Gels contains some Magnes. phos.) CULEX - (vertigo on blowing the nose with fullness of the ears.) ANTIDOTES: China; Coffea; Dig. Alcoholic stimulants relieve all complaints where Gels. Is useful.",
-  "Modalities": [
-    "Worse: damp weather",
-    "Worse: fog",
-    "Worse: before a thunderstorm",
-    "Worse: emotion",
-    "Worse: or excitement",
-    "Worse: bad news",
-    "Worse: tobacco-smoking",
-    "Worse: when thinking of his ailments; at ten am",
-    "Better: bending forward",
-    "Better: by profuse urination",
-    "Better: open air",
-    "Better: continued motion",
-    "Better: stimulants"
-  ],
-  "Common names": "Yellow Jasmine",
   "symptoms": {
     "Urine": [
       "Dysuria",
@@ -202,8 +185,25 @@
       "Excessive trembling and weakness of all limbs",
       "Cramp in muscles of forearm",
       "Hysteric convulsions"
-    ]
-  },
-  "details": "Centers its action upon the nervous system, causing various degree of MOTOR PARALYSIS. General prostration. DIZZINESS, DROWSINESS, DULLNESS, AND TREMBLING. Slow pulse, tired feeling, mental apathy. PARALYSIS of various groups of muscles about the eyes, throat, chest, larynx, sphincter, extremities, etc. Post-diphtheritic paralysis. MUSCULAR WEAKNESS. Complete relaxation and prostration. Lack of muscular coordination. General depression from heat of sun. Sensitive to a falling barometer; cold and dampness brings on many complaints. Children fear falling, grab nurse or crib. Sluggish circulation. Nervous affections of cigar makers. INFLUENZA. Measles. Pellagra.",
-  "dosage": "Tincture, to thirtieth attenuation; first to third most often used."
+    ],
+    "Relationship": "Compare: IGNATIA (gastric affections of cigar makers); BAPTISA; IPECAC.; ACON.; BELL.; CIMICIF.; MANGES. PHOS. (Gels contains some Magnes. phos.) CULEX - (vertigo on blowing the nose with fullness of the ears.) ANTIDOTES: China; Coffea; Dig. Alcoholic stimulants relieve all complaints where Gels. Is useful.",
+    "Modalities": [
+      "Worse: damp weather",
+      "Worse: fog",
+      "Worse: before a thunderstorm",
+      "Worse: emotion",
+      "Worse: or excitement",
+      "Worse: bad news",
+      "Worse: tobacco-smoking",
+      "Worse: when thinking of his ailments; at ten am",
+      "Better: bending forward",
+      "Better: by profuse urination",
+      "Better: open air",
+      "Better: continued motion",
+      "Better: stimulants"
+    ],
+    "Common names": "Yellow Jasmine",
+    "details": "Centers its action upon the nervous system, causing various degree of MOTOR PARALYSIS. General prostration. DIZZINESS, DROWSINESS, DULLNESS, AND TREMBLING. Slow pulse, tired feeling, mental apathy. PARALYSIS of various groups of muscles about the eyes, throat, chest, larynx, sphincter, extremities, etc. Post-diphtheritic paralysis. MUSCULAR WEAKNESS. Complete relaxation and prostration. Lack of muscular coordination. General depression from heat of sun. Sensitive to a falling barometer; cold and dampness brings on many complaints. Children fear falling, grab nurse or crib. Sluggish circulation. Nervous affections of cigar makers. INFLUENZA. Measles. Pellagra.",
+    "dosage": "Tincture, to thirtieth attenuation; first to third most often used."
+  }
 }

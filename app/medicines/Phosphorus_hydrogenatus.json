@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Phosphorus hydrogenatus", 
-  "details": "Crumbling teeth; hyperesthesia; locomotor ataxia."
+  "symptoms": {
+    "details": "Crumbling teeth; hyperesthesia; locomotor ataxia."
+  },
+  "name": "Phosphorus hydrogenatus"
 }

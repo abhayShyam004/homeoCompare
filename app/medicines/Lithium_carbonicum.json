@@ -1,12 +1,5 @@
 {
   "name": "Lithium carbonicum",
-  "Relationship": "Compare: LYC.; AMMON. PHOS.; BENZ-AC.; CALC.; LITHIUM CHLOR. (symptoms of cinchonism, viz.: DIZZY head, full, BLURRING OF VISION. Ringing in ears; marked tremors; GENERAL WEAKNESS; marked muscular and general prostration; no gastrointestinal effects. Nose sore, heartburn, pain in teeth). LITHIUM LACTICUM (rheumatism of shoulder, and small joints relieved by moving about; worse, resting). LITHIUM BENZOICUM (deep-seated pains in loins; in small of back; uneasiness in bladder. Cystic irritation. Gallstones. Frequent desire. Diminishing uric acid deposit). LITHIUM BROMATUM (cerebral congestion, threatened apoplexy, insomnia and epilepsy).",
-  "Modalities": [
-    "Worse: in morning",
-    "Worse: right side",
-    "Better: rising and moving about"
-  ],
-  "Common names": "Carbonate of Lithium",
   "symptoms": {
     "Heart": [
       "Sudden shock in heart",
@@ -72,8 +65,15 @@
       "Itching about joints",
       "Nodular swellings in joints",
       "Ankles pain when walking"
-    ]
-  },
-  "details": "Chronic RHEUMATISM CONNECTED WITH HEART LESIONS and asthenopia offer a field for this remedy. Rheumatic nodes. Uric acid diathesis. Whole body is SORE. Gout and tophi.",
-  "dosage": "First to third trituration."
+    ],
+    "Relationship": "Compare: LYC.; AMMON. PHOS.; BENZ-AC.; CALC.; LITHIUM CHLOR. (symptoms of cinchonism, viz.: DIZZY head, full, BLURRING OF VISION. Ringing in ears; marked tremors; GENERAL WEAKNESS; marked muscular and general prostration; no gastrointestinal effects. Nose sore, heartburn, pain in teeth). LITHIUM LACTICUM (rheumatism of shoulder, and small joints relieved by moving about; worse, resting). LITHIUM BENZOICUM (deep-seated pains in loins; in small of back; uneasiness in bladder. Cystic irritation. Gallstones. Frequent desire. Diminishing uric acid deposit). LITHIUM BROMATUM (cerebral congestion, threatened apoplexy, insomnia and epilepsy).",
+    "Modalities": [
+      "Worse: in morning",
+      "Worse: right side",
+      "Better: rising and moving about"
+    ],
+    "Common names": "Carbonate of Lithium",
+    "details": "Chronic RHEUMATISM CONNECTED WITH HEART LESIONS and asthenopia offer a field for this remedy. Rheumatic nodes. Uric acid diathesis. Whole body is SORE. Gout and tophi.",
+    "dosage": "First to third trituration."
+  }
 }

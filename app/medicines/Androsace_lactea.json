@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Androsace lactea", 
-  "details": "Urinary troubles, diuretic; dropsy."
+  "symptoms": {
+    "details": "Urinary troubles, diuretic; dropsy."
+  },
+  "name": "Androsace lactea"
 }

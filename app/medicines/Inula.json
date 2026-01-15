@@ -1,7 +1,5 @@
 {
   "name": "Inula",
-  "Relationship": "Compare: CROCUS; IGNATIA; ARUM DRACONTIUM (loose cough worse at night on lying down).",
-  "Common names": "Scab wort",
   "symptoms": {
     "Head": [
       "Vertigo on stooping",
@@ -38,8 +36,10 @@
       "Pain in right shoulder and wrist",
       "tearing in left palm, unable to double fingers",
       "pain in lower limbs, feet and ankles"
-    ]
-  },
-  "details": "A mucous membrane medicine. Bearing-down sensation in pelvic organs and bronchial symptoms are most marked. Substernal pain. Diabetes.",
-  "dosage": "First to third potency."
+    ],
+    "Relationship": "Compare: CROCUS; IGNATIA; ARUM DRACONTIUM (loose cough worse at night on lying down).",
+    "Common names": "Scab wort",
+    "details": "A mucous membrane medicine. Bearing-down sensation in pelvic organs and bronchial symptoms are most marked. Substernal pain. Diabetes.",
+    "dosage": "First to third potency."
+  }
 }

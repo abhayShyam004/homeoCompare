@@ -1,7 +1,5 @@
 {
   "name": "Eupatorium purpureum",
-  "Relationship": "Compare: Senecio; Cannab. sat.; Helon.; Phos-ac.; Triticum; Epigea.",
-  "Common names": "Queen of the Meadow",
   "symptoms": {
     "Head": [
       "Left-sided headache with vertigo",
@@ -34,8 +32,10 @@
       "Threatened abortion",
       "External genitals feel as though wet",
       "Pain around left ovary"
-    ]
-  },
-  "details": "Albuminuria, diabetes, strangury, IRRITABLE BLADDER, enlarged prostate are a special field for this remedy. Excellent in renal dropsy. Chills and pains run upwards. Impotency and sterility. Homesickness.",
-  "dosage": "First potency."
+    ],
+    "Relationship": "Compare: Senecio; Cannab. sat.; Helon.; Phos-ac.; Triticum; Epigea.",
+    "Common names": "Queen of the Meadow",
+    "details": "Albuminuria, diabetes, strangury, IRRITABLE BLADDER, enlarged prostate are a special field for this remedy. Excellent in renal dropsy. Chills and pains run upwards. Impotency and sterility. Homesickness.",
+    "dosage": "First potency."
+  }
 }

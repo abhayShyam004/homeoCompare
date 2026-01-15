@@ -1,7 +1,5 @@
 {
   "name": "Indium",
-  "Relationship": "Compare: SELENIUM; TITANIUM (male sexual organs).",
-  "Common names": "The Metal Indium",
   "symptoms": {
     "Head": [
       "Dull pains in temples and forehead, with nausea, weakness, sleepiness",
@@ -31,8 +29,10 @@
       "Emissions too frequent",
       "Horribly offensive smell of urine after standing a short time",
       "Diminished power"
-    ]
-  },
-  "details": "Headaches and migraine. Seminal emissions. BACKACHE.",
-  "dosage": "Sixth to 200th potency."
+    ],
+    "Relationship": "Compare: SELENIUM; TITANIUM (male sexual organs).",
+    "Common names": "The Metal Indium",
+    "details": "Headaches and migraine. Seminal emissions. BACKACHE.",
+    "dosage": "Sixth to 200th potency."
+  }
 }

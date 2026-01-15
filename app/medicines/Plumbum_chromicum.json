@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Plumbum chromicum", 
-  "details": "Convulsions, with terrible pains; pupils greatly dilated; retracted abdomen."
+  "symptoms": {
+    "details": "Convulsions, with terrible pains; pupils greatly dilated; retracted abdomen."
+  },
+  "name": "Plumbum chromicum"
 }

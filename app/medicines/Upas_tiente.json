@@ -1,7 +1,5 @@
 {
   "name": "Upas tiente",
-  "Relationship": "Compare: UPAS ANTIARIS - resinous exudation of ANTIARIS TOXIEARIA, (a deadly poison to the muscular system. It suspends both voluntary muscular action and that of the heart without causing convulsions. Used in Java as an arrow poison (Merrell). Differs in producing CLONIC SPASMS, violent vomiting, diarrhoea, great prostration). OXAL-AC. UPAS when Bryonia fails (typhoid). Antidote: CURARE.",
-  "Common names": "Upas-tree - Strychnos Tiente",
   "symptoms": {
     "Eyes": [
       "Dull sunken eyes",
@@ -31,8 +29,10 @@
     "Male": [
       "Desire increased, with loss of power",
       "Dull backache, as after excessive coitus"
-    ]
-  },
-  "details": "Produces TONIC SPASMS, TETANUS, AND ASPHYXIA.",
-  "dosage": "Third to sixth potency."
+    ],
+    "Relationship": "Compare: UPAS ANTIARIS - resinous exudation of ANTIARIS TOXIEARIA, (a deadly poison to the muscular system. It suspends both voluntary muscular action and that of the heart without causing convulsions. Used in Java as an arrow poison (Merrell). Differs in producing CLONIC SPASMS, violent vomiting, diarrhoea, great prostration). OXAL-AC. UPAS when Bryonia fails (typhoid). Antidote: CURARE.",
+    "Common names": "Upas-tree - Strychnos Tiente",
+    "details": "Produces TONIC SPASMS, TETANUS, AND ASPHYXIA.",
+    "dosage": "Third to sixth potency."
+  }
 }

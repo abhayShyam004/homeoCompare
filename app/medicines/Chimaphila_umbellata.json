@@ -1,53 +1,53 @@
 {
-  "name": "Chimaphila umbellata", 
-  "Relationship": "Compare: Chimaph. maculata (intense gnawing hunger; burning fever; sensation of swelling in arm pits); Uva.; Ledum; Epigea.", 
-  "Modalities": [
-    "Worse: in damp weather; from sitting on cold stones or pavements; left side"
-  ], 
-  "Common names": "Pipsissewa", 
+  "name": "Chimaphila umbellata",
   "symptoms": {
     "Head": [
-      "Halo about the light", 
-      "Pain in left frontal protuberance", 
-      "Itching of eyelids", 
+      "Halo about the light",
+      "Pain in left frontal protuberance",
+      "Itching of eyelids",
       "Stabbing pain in left eye with lachrymation"
-    ], 
+    ],
     "Urine": [
-      "Sugar in urine", 
-      "Must strain before flow comes", 
-      "Burning and scalding during micturition, and straining afterwards", 
-      "Urine turbid, offensive, containing ropy or bloody mucus, and depositing a copious sediment", 
-      "Urging to urinate", 
-      "Fluttering in region of kidney", 
-      "Scanty urine", 
-      "Unable to urinate without standing with feet wide apart and body inclined forward", 
+      "Sugar in urine",
+      "Must strain before flow comes",
+      "Burning and scalding during micturition, and straining afterwards",
+      "Urine turbid, offensive, containing ropy or bloody mucus, and depositing a copious sediment",
+      "Urging to urinate",
+      "Fluttering in region of kidney",
+      "Scanty urine",
+      "Unable to urinate without standing with feet wide apart and body inclined forward",
       "Acute prostatitis, retention, and feeling of a ball in perineum"
-    ], 
+    ],
     "Mouth": [
-      "Toothache, worse after eating and exertion, better cool water", 
+      "Toothache, worse after eating and exertion, better cool water",
       "Pain as if tooth was being gently pulled"
-    ], 
+    ],
     "Female": [
-      "Hot flashes", 
-      "Pain in vagina", 
-      "Labia inflamed, swollen", 
-      "Women with very large breasts and tumor in the mammary gland with sharp pain through it", 
+      "Hot flashes",
+      "Pain in vagina",
+      "Labia inflamed, swollen",
+      "Women with very large breasts and tumor in the mammary gland with sharp pain through it",
       "Painful tumor of mammae, not ulcerated, with undue secretion of milk, rapid atrophy of breasts"
-    ], 
+    ],
     "Skin": [
-      "Glandular enlargements", 
+      "Glandular enlargements",
       "Scrofulous ulcers"
-    ], 
+    ],
     "Extremities": [
       "Feeling of a band above left knee"
-    ], 
+    ],
     "Male": [
-      "Smarting in urethra from neck of bladder to meatus", 
-      "Prostatic enlargement and irritation", 
-      "Gleet", 
+      "Smarting in urethra from neck of bladder to meatus",
+      "Prostatic enlargement and irritation",
+      "Gleet",
       "Loss of prostatic fluid"
-    ]
-  }, 
-  "details": "Acts principally on kidneys, and genitourinary tract; affects also lymphatic and mesenteric glands and female mammae. Plethoric young women with dysuria. Women with large breasts. Hepatic and renal dropsies; chronic alcoholics. Incipient and progressive cataracts. One of the remedies whose symptoms point to its employment in bladder affections, notably catarrh, acute and chronic. SCANTY URINE, AND LOADED WITH ROPY, MUCOPURULENT SEDIMENT. PROSTATIC ENLARGEMENT.", 
-  "dosage": "Tincture, to third attenuation."
+    ],
+    "Relationship": "Compare: Chimaph. maculata (intense gnawing hunger; burning fever; sensation of swelling in arm pits); Uva.; Ledum; Epigea.",
+    "Modalities": [
+      "Worse: in damp weather; from sitting on cold stones or pavements; left side"
+    ],
+    "Common names": "Pipsissewa",
+    "details": "Acts principally on kidneys, and genitourinary tract; affects also lymphatic and mesenteric glands and female mammae. Plethoric young women with dysuria. Women with large breasts. Hepatic and renal dropsies; chronic alcoholics. Incipient and progressive cataracts. One of the remedies whose symptoms point to its employment in bladder affections, notably catarrh, acute and chronic. SCANTY URINE, AND LOADED WITH ROPY, MUCOPURULENT SEDIMENT. PROSTATIC ENLARGEMENT.",
+    "dosage": "Tincture, to third attenuation."
+  }
 }

@@ -1,10 +1,5 @@
 {
   "name": "Jatropha",
-  "Relationship": "Compare: CAMPH.; VERAT.; GAMBOGE.; CROTON.; JATROPHA URENS - Sponge-nettle - (oedema and cardiac paresis).",
-  "Modalities": [
-    "Better: by placing hands in cold water"
-  ],
-  "Common names": "Purging Nut",
   "symptoms": {
     "Stomach": [
       "Hiccough, followed by copious vomiting",
@@ -30,8 +25,13 @@
       "Heels sensitive",
       "Pain in ankles, feet and toes",
       "Coldness of whole body"
-    ]
-  },
-  "details": "Of value in cholera and diarrhoea. The abdominal symptoms are mot important. Suppressed measles (H. Farrington).",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: CAMPH.; VERAT.; GAMBOGE.; CROTON.; JATROPHA URENS - Sponge-nettle - (oedema and cardiac paresis).",
+    "Modalities": [
+      "Better: by placing hands in cold water"
+    ],
+    "Common names": "Purging Nut",
+    "details": "Of value in cholera and diarrhoea. The abdominal symptoms are mot important. Suppressed measles (H. Farrington).",
+    "dosage": "Third to thirtieth potency."
+  }
 }

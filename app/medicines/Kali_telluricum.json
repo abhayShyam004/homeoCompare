@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Kali telluricum", 
-  "details": "Garlicky odor of breath, salivation, swollen tongue."
+  "symptoms": {
+    "details": "Garlicky odor of breath, salivation, swollen tongue."
+  },
+  "name": "Kali telluricum"
 }

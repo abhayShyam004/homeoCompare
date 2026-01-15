@@ -1,12 +1,5 @@
 {
   "name": "Viscum album",
-  "Relationship": "Compare: SECALE; CONVALLAR.; BRY.; PULS.; RHODOD. GUIPSINE - active principle - (exalts the hypotensive properties of Viscum). HEDERA HELIX - Ivy - (Inter cranial pressure).",
-  "Modalities": [
-    "Worse: winter",
-    "Worse: cold",
-    "Worse: stormy weather; in bed"
-  ],
-  "Common names": "Mistletoe",
   "symptoms": {
     "Heart": [
       "Palpitation during coitus",
@@ -57,8 +50,15 @@
       "A glow rises from the feet to the head",
       "seems to be on fire",
       "Itching all over"
-    ]
-  },
-  "details": "Lowered blood pressure. Dilated blood vessels but does not act on the centers in the medulla. Pulse is slow due to central irritation of the vagus. The symptoms point especially to rheumatic and gouty complaints; neuralgia, especially sciatica. Epilepsy, CHOREA, and metrorrhagia. RHEUMATIC DEAFNESS. ASTHMA. Spinal pains, due to uterine causes. Rheumatism with TEARING PAINS. Hypertensive albuminuria. Valvular disease, with disturbances in sexual sphere. Symptoms like epileptic aura and petit mal.",
-  "dosage": "Tincture and lower potencies."
+    ],
+    "Relationship": "Compare: SECALE; CONVALLAR.; BRY.; PULS.; RHODOD. GUIPSINE - active principle - (exalts the hypotensive properties of Viscum). HEDERA HELIX - Ivy - (Inter cranial pressure).",
+    "Modalities": [
+      "Worse: winter",
+      "Worse: cold",
+      "Worse: stormy weather; in bed"
+    ],
+    "Common names": "Mistletoe",
+    "details": "Lowered blood pressure. Dilated blood vessels but does not act on the centers in the medulla. Pulse is slow due to central irritation of the vagus. The symptoms point especially to rheumatic and gouty complaints; neuralgia, especially sciatica. Epilepsy, CHOREA, and metrorrhagia. RHEUMATIC DEAFNESS. ASTHMA. Spinal pains, due to uterine causes. Rheumatism with TEARING PAINS. Hypertensive albuminuria. Valvular disease, with disturbances in sexual sphere. Symptoms like epileptic aura and petit mal.",
+    "dosage": "Tincture and lower potencies."
+  }
 }

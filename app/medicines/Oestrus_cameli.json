@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Oestrus cameli", 
-  "details": "An Indian medicine for epilepsy."
+  "symptoms": {
+    "details": "An Indian medicine for epilepsy."
+  },
+  "name": "Oestrus cameli"
 }

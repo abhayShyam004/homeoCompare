@@ -1,7 +1,5 @@
 {
   "name": "Phaseolus",
-  "Relationship": "Compare: CRATAEG; LACH.",
-  "Common names": "Dwarf-bean",
   "symptoms": {
     "Heart": [
       "Fearful palpitation and feeling that death is approaching"
@@ -24,8 +22,10 @@
       "Pulse rapid",
       "Sick feeling about heart, with weak pulse",
       "Right ribs sore"
-    ]
-  },
-  "details": "Heart symptoms quite pronounced. Diabetes.",
-  "dosage": "Sixth and higher. A decoction of the shells as a drink for diabetes, but look out for severe headache."
+    ],
+    "Relationship": "Compare: CRATAEG; LACH.",
+    "Common names": "Dwarf-bean",
+    "details": "Heart symptoms quite pronounced. Diabetes.",
+    "dosage": "Sixth and higher. A decoction of the shells as a drink for diabetes, but look out for severe headache."
+  }
 }

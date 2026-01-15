@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cupressus australis", 
-  "details": "Sharp, prickling pain; general feeling of warmth; rheumatism and gonorrhoea."
+  "symptoms": {
+    "details": "Sharp, prickling pain; general feeling of warmth; rheumatism and gonorrhoea."
+  },
+  "name": "Cupressus australis"
 }

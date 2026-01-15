@@ -1,12 +1,5 @@
 {
   "name": "Caladium seguinum",
-  "Relationship": "Incompatible: Arum triph. Complementary: Nit-ac. Compare: Capsic.; Phosph.; Caust.; Selen.; Lyc. Ikshugandha (sexual weakness, emissions, prostatic enlargement.",
-  "Modalities": [
-    "Better: after sweat",
-    "Better: after sleeping in daytime",
-    "Worse: motion"
-  ],
-  "Common names": "American Arum",
   "symptoms": {
     "Head": [
       "Very forgetful, does not know about the occurrence of things",
@@ -50,8 +43,15 @@
       "cease when fully awake",
       "Impotency",
       "relaxation of penis during excitement"
-    ]
-  },
-  "details": "This remedy has a marked action on the genital organs, and pruritus of this region. Coldness of single parts and inclination to lie down, with aggravation on lying on left side. Slightest noise startles from sleep. DREAD FROM MOTION. Modifies craving for tobacco. Tobacco heart. Asthmatic complaints.",
-  "dosage": "Third to sixth attenuation."
+    ],
+    "Relationship": "Incompatible: Arum triph. Complementary: Nit-ac. Compare: Capsic.; Phosph.; Caust.; Selen.; Lyc. Ikshugandha (sexual weakness, emissions, prostatic enlargement.",
+    "Modalities": [
+      "Better: after sweat",
+      "Better: after sleeping in daytime",
+      "Worse: motion"
+    ],
+    "Common names": "American Arum",
+    "details": "This remedy has a marked action on the genital organs, and pruritus of this region. Coldness of single parts and inclination to lie down, with aggravation on lying on left side. Slightest noise startles from sleep. DREAD FROM MOTION. Modifies craving for tobacco. Tobacco heart. Asthmatic complaints.",
+    "dosage": "Third to sixth attenuation."
+  }
 }

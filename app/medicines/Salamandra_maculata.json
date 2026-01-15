@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Salamandra maculata", 
-  "details": "Epilepsy and softening of brain."
+  "symptoms": {
+    "details": "Epilepsy and softening of brain."
+  },
+  "name": "Salamandra maculata"
 }

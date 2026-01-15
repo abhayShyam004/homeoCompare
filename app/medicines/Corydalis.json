@@ -1,13 +1,13 @@
 {
-  "name": "Corydalis", 
-  "Relationship": "NIT-AC.; KALI-IOD.; FLUOR-AC.", 
-  "Common names": "Dicentra Canadensis Turkey-pea", 
+  "name": "Corydalis",
   "symptoms": {
     "Skin": [
-      "Dry, scaly scabs on face of old people", 
+      "Dry, scaly scabs on face of old people",
       "Lymphatic glands swollen"
-    ]
-  }, 
-  "details": "Syphilitic affections. Ulcers of mouth and fauces. Cancer cachexia pronounced. Gummata and night-pains. Chronic diseases, with atony. Tongue clean, broad, and full. Tissues flabby, doughy, cold. Gastric catarrh. (HYDRAST.)", 
-  "dosage": "Tincture, twenty drops three times a day."
+    ],
+    "Relationship": "NIT-AC.; KALI-IOD.; FLUOR-AC.",
+    "Common names": "Dicentra Canadensis Turkey-pea",
+    "details": "Syphilitic affections. Ulcers of mouth and fauces. Cancer cachexia pronounced. Gummata and night-pains. Chronic diseases, with atony. Tongue clean, broad, and full. Tissues flabby, doughy, cold. Gastric catarrh. (HYDRAST.)",
+    "dosage": "Tincture, twenty drops three times a day."
+  }
 }

@@ -1,11 +1,5 @@
 {
   "name": "Cinchona officinalis",
-  "Relationship": "Antidotes: ARN.; ARS.; NUX; IPEC. Compare: QUINIDINE - (Paroxysmal tachycardia and AURICULAR FIBRILLATION. Heart is slowed, and the auriculoventricular conduction time is lengthened. Dose 1/2 grain t.i.d. CEPHALANTHUS - Button Bush - Intermittent fever, sore throat, rheumatic symptoms, vivid dreams). ARS.; CEDRON.; NAT-SULPH. CYDONIA VULGARIS - Quince (supposed to be of use to strengthen the sexual organs and stomach). Complementary: FERRUM; CALC. PHOS.",
-  "Modalities": [
-    "Worse: slightest touch",
-    "Better: bending double; hard pressure; open air; warmth"
-  ],
-  "Common names": "Peruvian Bark - China",
   "symptoms": {
     "Stool": [
       "Difficult even when soft",
@@ -179,8 +173,14 @@
       "hard pressure relieves",
       "Joints swollen",
       "very sensitive, with dread or open air"
-    ]
-  },
-  "details": "DEBILITY from exhausting discharges, from loss of vital fluids, together with a NERVOUS ERETHISM, calls for this remedy. Periodicity is most marked. Sensitive to drafts. Seldom indicated in the earlier stages of acute disease. Chronic gout. Chronic suppurative pyelitis. Post operative gas pains, no relief from passing it.",
-  "dosage": "Tincture, to thirtieth potency."
+    ],
+    "Relationship": "Antidotes: ARN.; ARS.; NUX; IPEC. Compare: QUINIDINE - (Paroxysmal tachycardia and AURICULAR FIBRILLATION. Heart is slowed, and the auriculoventricular conduction time is lengthened. Dose 1/2 grain t.i.d. CEPHALANTHUS - Button Bush - Intermittent fever, sore throat, rheumatic symptoms, vivid dreams). ARS.; CEDRON.; NAT-SULPH. CYDONIA VULGARIS - Quince (supposed to be of use to strengthen the sexual organs and stomach). Complementary: FERRUM; CALC. PHOS.",
+    "Modalities": [
+      "Worse: slightest touch",
+      "Better: bending double; hard pressure; open air; warmth"
+    ],
+    "Common names": "Peruvian Bark - China",
+    "details": "DEBILITY from exhausting discharges, from loss of vital fluids, together with a NERVOUS ERETHISM, calls for this remedy. Periodicity is most marked. Sensitive to drafts. Seldom indicated in the earlier stages of acute disease. Chronic gout. Chronic suppurative pyelitis. Post operative gas pains, no relief from passing it.",
+    "dosage": "Tincture, to thirtieth potency."
+  }
 }

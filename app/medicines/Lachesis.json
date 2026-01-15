@@ -1,12 +1,5 @@
 {
   "name": "Lachesis",
-  "Relationship": "Antidotes: ARS.; MERC.; HEAT; ALCOHOL; SALT. Complementary: CROTALUS CASCAVELLA often completes curative work of Lachesis. (MURE.) LYCOP.; HEP.; SALAMANDRA. Incompatible: ACET-AC.; CARB-AC. Compare: COTYLEDON (climacteric troubles); NAT-M.; NIT-AC.; CROTAL.; Amphisbena - snake lizard - (right jaw swollen and painful, lancinating pains; headaches, lancinating pains. Eruption of vesicles and pimples); NAJA; LEPIDIUM.",
-  "Modalities": [
-    "Worse: after sleep",
-    "Better: appearance of discharges",
-    "Better: warm applications"
-  ],
-  "Common names": "Bush master or Surucucu",
   "symptoms": {
     "Stool": [
       "Hemorrhoids protrude, become constricted, purplish",
@@ -179,8 +172,15 @@
     "Extremities": [
       "Sciatica, right side, better lying down",
       "Pain in tibia  shortening of tendons"
-    ]
-  },
-  "details": "Like all snake poisons, Lachesis decomposes the blood, rendering it more fluid; hence a hemorrhagic tendency is marked. Purpura, septic states, diphtheria, and other low forms of disease, when the system is thoroughly poisoned and the prostration is profound. The modalities are most important in guiding to the remedy. Delirium tremens with much trembling and confusion. Very important during the climacteric and for patients of a melancholic disposition. Ill effects of suppressed discharges. Diphtheritic paralysis. (BOTULINUM.) Diphtheria carriers. Sensation of tension in various parts. Cannot bear anything tight anywhere.",
-  "dosage": "Eighth to 200th potency. Doses ought not be repeated too frequently. If well indicated, a single dose should be allowed to exhaust its action."
+    ],
+    "Relationship": "Antidotes: ARS.; MERC.; HEAT; ALCOHOL; SALT. Complementary: CROTALUS CASCAVELLA often completes curative work of Lachesis. (MURE.) LYCOP.; HEP.; SALAMANDRA. Incompatible: ACET-AC.; CARB-AC. Compare: COTYLEDON (climacteric troubles); NAT-M.; NIT-AC.; CROTAL.; Amphisbena - snake lizard - (right jaw swollen and painful, lancinating pains; headaches, lancinating pains. Eruption of vesicles and pimples); NAJA; LEPIDIUM.",
+    "Modalities": [
+      "Worse: after sleep",
+      "Better: appearance of discharges",
+      "Better: warm applications"
+    ],
+    "Common names": "Bush master or Surucucu",
+    "details": "Like all snake poisons, Lachesis decomposes the blood, rendering it more fluid; hence a hemorrhagic tendency is marked. Purpura, septic states, diphtheria, and other low forms of disease, when the system is thoroughly poisoned and the prostration is profound. The modalities are most important in guiding to the remedy. Delirium tremens with much trembling and confusion. Very important during the climacteric and for patients of a melancholic disposition. Ill effects of suppressed discharges. Diphtheritic paralysis. (BOTULINUM.) Diphtheria carriers. Sensation of tension in various parts. Cannot bear anything tight anywhere.",
+    "dosage": "Eighth to 200th potency. Doses ought not be repeated too frequently. If well indicated, a single dose should be allowed to exhaust its action."
+  }
 }

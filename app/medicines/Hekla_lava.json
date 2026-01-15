@@ -1,17 +1,17 @@
 {
-  "name": "Hekla lava", 
-  "Relationship": "Compare: SILICA; MERCUR.; PHOS.; CONCHIOLINUM - Mother of pearl (diaphysis of bone affected; parts extremely sensitive to touch). AMPHISBAENA - Snail-like lizard (great affinity for the jaw bones, worse by air and dampness.) SLAG - (Great itching of parts).", 
-  "Common names": "Lava Scoriae from Mt. Hecla.", 
+  "name": "Hekla lava",
   "symptoms": {
     "Face": [
-      "Abscess of gums", 
-      "Facial neuralgia from carious teeth and after extraction", 
-      "Cervical glands enlarged and indurated", 
-      "Toothache, with swelling about jaws", 
-      "Ulceration of nasal bones", 
+      "Abscess of gums",
+      "Facial neuralgia from carious teeth and after extraction",
+      "Cervical glands enlarged and indurated",
+      "Toothache, with swelling about jaws",
+      "Ulceration of nasal bones",
       "Enlargement of maxillary bone"
-    ]
-  }, 
-  "details": "Marked action upon THE JAWS. Of great use in exostosis, gum abscess, difficult teething. Nodosities, caries of bone, etc. Osteitis, periostitis, osteosarcoma; rachitis. TUMORS in general. Bone necrosis. Necrosis and sinus after mastoid operation.", 
-  "dosage": "Lower triturations"
+    ],
+    "Relationship": "Compare: SILICA; MERCUR.; PHOS.; CONCHIOLINUM - Mother of pearl (diaphysis of bone affected; parts extremely sensitive to touch). AMPHISBAENA - Snail-like lizard (great affinity for the jaw bones, worse by air and dampness.) SLAG - (Great itching of parts).",
+    "Common names": "Lava Scoriae from Mt. Hecla.",
+    "details": "Marked action upon THE JAWS. Of great use in exostosis, gum abscess, difficult teething. Nodosities, caries of bone, etc. Osteitis, periostitis, osteosarcoma; rachitis. TUMORS in general. Bone necrosis. Necrosis and sinus after mastoid operation.",
+    "dosage": "Lower triturations"
+  }
 }

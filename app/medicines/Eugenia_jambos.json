@@ -1,19 +1,19 @@
 {
   "symptoms": {
     "Extremities": [
-      "Nightly cramp in soles of feet", 
-      "Skin cracks about toes", 
-      "Fissures between toes", 
+      "Nightly cramp in soles of feet",
+      "Skin cracks about toes",
+      "Fissures between toes",
       "Skin recedes from the nails, forming pus"
-    ], 
+    ],
     "Head": [
-      "Headache as if a board were lying on right side", 
-      "Hot lachrymation", 
+      "Headache as if a board were lying on right side",
+      "Hot lachrymation",
       "Talkative"
-    ]
-  }, 
-  "Common names": "Jambosa Vulgaris Rose-apple", 
-  "name": "Eugenia jambos", 
-  "Relationship": "Compare: Eugenia cheken-Myrtus cheken (chronic Bronchitis); Antim.; Berb. aquif.", 
-  "details": "EUGENIA produces a state of intoxication like alcohol. Everything appears beautiful and larger; excitement soon changing to depression. Acne, simple and indurated. The pimples are painful for some distance around. Acne rosacea. NAUSEA. BETTER SMOKING. COMEDONES."
+    ],
+    "Common names": "Jambosa Vulgaris Rose-apple",
+    "Relationship": "Compare: Eugenia cheken-Myrtus cheken (chronic Bronchitis); Antim.; Berb. aquif.",
+    "details": "EUGENIA produces a state of intoxication like alcohol. Everything appears beautiful and larger; excitement soon changing to depression. Acne, simple and indurated. The pimples are painful for some distance around. Acne rosacea. NAUSEA. BETTER SMOKING. COMEDONES."
+  },
+  "name": "Eugenia jambos"
 }

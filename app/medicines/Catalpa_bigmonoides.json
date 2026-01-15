@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Catalpa bigmonoides", 
-  "details": "Difficult respiration."
+  "symptoms": {
+    "details": "Difficult respiration."
+  },
+  "name": "Catalpa bigmonoides"
 }

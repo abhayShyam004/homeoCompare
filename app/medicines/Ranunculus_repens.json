@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Ranunculus repens", 
-  "details": "Crawling sensation in forehead and scalp in evening in bed."
+  "symptoms": {
+    "details": "Crawling sensation in forehead and scalp in evening in bed."
+  },
+  "name": "Ranunculus repens"
 }

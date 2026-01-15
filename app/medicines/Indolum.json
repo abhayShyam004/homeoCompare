@@ -1,29 +1,29 @@
 {
   "symptoms": {
     "Head": [
-      "Dull occipital and frontal headache in afternoon", 
-      "Pupils dilated with headache", 
-      "Dull sensation over eyes", 
+      "Dull occipital and frontal headache in afternoon",
+      "Pupils dilated with headache",
+      "Dull sensation over eyes",
       "Eyeballs hot and hurt when moved"
-    ], 
+    ],
     "Stomach": [
-      "Constipation", 
-      "Hungry sensation after full meal", 
-      "Bloated feeling", 
+      "Constipation",
+      "Hungry sensation after full meal",
+      "Bloated feeling",
       "Great thirst"
-    ], 
+    ],
     "Sleep": [
-      "Continuous dreaming", 
+      "Continuous dreaming",
       "Sleepiness"
-    ], 
+    ],
     "Extremities": [
-      "Very tired and sore in lower limbs", 
-      "Feet burn", 
+      "Very tired and sore in lower limbs",
+      "Feet burn",
       "Knee-joints sore"
-    ]
-  }, 
-  "details": "Primary action is to increase the elimination of Indican. Auto-intoxication. Compare: SKATOL. Persistent desire to sleep, dull, discontented mental state, hideous delusions and nervousness, constant motion of fingers and feet. Intestinal putrefaction.", 
-  "Common names": "(A Crystalline Compound Derivable from Indigo, but also a product of Putrefaction of Proteids)", 
-  "name": "Indolum", 
-  "dosage": "Sixth attenuation."
+    ],
+    "details": "Primary action is to increase the elimination of Indican. Auto-intoxication. Compare: SKATOL. Persistent desire to sleep, dull, discontented mental state, hideous delusions and nervousness, constant motion of fingers and feet. Intestinal putrefaction.",
+    "Common names": "(A Crystalline Compound Derivable from Indigo, but also a product of Putrefaction of Proteids)",
+    "dosage": "Sixth attenuation."
+  },
+  "name": "Indolum"
 }

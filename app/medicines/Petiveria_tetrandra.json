@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Petiveria tetrandra", 
-  "details": "South American plant. Paralysis; paraplegia with numbness. Sensation of internal coldness."
+  "symptoms": {
+    "details": "South American plant. Paralysis; paraplegia with numbness. Sensation of internal coldness."
+  },
+  "name": "Petiveria tetrandra"
 }

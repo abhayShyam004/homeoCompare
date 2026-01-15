@@ -1,10 +1,5 @@
 {
   "name": "Kali cyanatum",
-  "Relationship": "Compare: PLATIN.; STANN.; CEDRON; MEZER.; MUR-AC.",
-  "Modalities": [
-    "Worse: from four am to four pm"
-  ],
-  "Common names": "Potassium Cyanide",
   "symptoms": {
     "Respiratory": [
       "Cough prevents sleep",
@@ -19,8 +14,13 @@
     "Face": [
       "Pain in orbital and supramaxillary region, with screaming and loss of consciousness",
       "Severe neuralgia in temporal region, recurring daily at same hour"
-    ]
-  },
-  "details": "Sudden sinking sensation. Cancer of tongue and agonizing neuralgia have been benefited by this drug. Sick headache; sciatica; epilepsy.",
-  "dosage": "Sixth potency and 200th."
+    ],
+    "Relationship": "Compare: PLATIN.; STANN.; CEDRON; MEZER.; MUR-AC.",
+    "Modalities": [
+      "Worse: from four am to four pm"
+    ],
+    "Common names": "Potassium Cyanide",
+    "details": "Sudden sinking sensation. Cancer of tongue and agonizing neuralgia have been benefited by this drug. Sick headache; sciatica; epilepsy.",
+    "dosage": "Sixth potency and 200th."
+  }
 }

@@ -1,7 +1,5 @@
 {
   "name": "Cinnamomum",
-  "Relationship": "Compare: IPEC.; SIL.; TRILL. Antidote: ACON.",
-  "Common names": "Cinnamon",
   "symptoms": {
     "Female": [
       "Menses early, profuse, prolonged, bright red",
@@ -11,8 +9,10 @@
       "menorrhagia",
       "No desire for anything",
       "Fingers seem swollen"
-    ]
-  },
-  "details": "Cancer where pain and fetor are present. Bets when skin is intact. Its use in Hemorrhages has abundant clinical verification. Nosebleed. Hemorrhages from bowels, hemoptysis, etc. A strain in loins or false step brings on a profuse flow of bright blood. POSTPARTUM HEMORRHAGE. Flatulency and diarrhoea. Feeble patients with languid circulation.",
-  "dosage": "Tincture to third potency. For cancer, strong decoction, one-half pint a day. OIL OF CINNAMON in aqueous solution best local disinfectant. 3-4 drops in two quarts of water as a douche, wherever a germicide and disinfectant is needed. Three drops on sugar for hiccough."
+    ],
+    "Relationship": "Compare: IPEC.; SIL.; TRILL. Antidote: ACON.",
+    "Common names": "Cinnamon",
+    "details": "Cancer where pain and fetor are present. Bets when skin is intact. Its use in Hemorrhages has abundant clinical verification. Nosebleed. Hemorrhages from bowels, hemoptysis, etc. A strain in loins or false step brings on a profuse flow of bright blood. POSTPARTUM HEMORRHAGE. Flatulency and diarrhoea. Feeble patients with languid circulation.",
+    "dosage": "Tincture to third potency. For cancer, strong decoction, one-half pint a day. OIL OF CINNAMON in aqueous solution best local disinfectant. 3-4 drops in two quarts of water as a douche, wherever a germicide and disinfectant is needed. Three drops on sugar for hiccough."
+  }
 }

@@ -35,10 +35,10 @@
       "Difficult swallowing",
       "Ulcers",
       "Frequent hawking"
-    ]
+    ],
+    "Common names": "Lesser Periwinkle",
+    "Relationship": "Compare: OLEAND.; STAPH.",
+    "details": "A remedy for skin affections, eczema, and especially plica polonica; also for hemorrhages and diphtheria."
   },
-  "Common names": "Lesser Periwinkle",
-  "name": "Vinca minor",
-  "Relationship": "Compare: OLEAND.; STAPH.",
-  "details": "A remedy for skin affections, eczema, and especially plica polonica; also for hemorrhages and diphtheria."
+  "name": "Vinca minor"
 }

@@ -1,7 +1,5 @@
 {
   "name": "Hedeoma",
-  "Relationship": "Compare; MENTHA; SEPIA; LILIUM; OCIMUM (uric acid diathesis, pain in ureters. HEDERA HELIX - Common Ivy - (Delirium and chronic convulsions. Chronic hydrocephalus Rhinorrhoea, cerebro-spinalis. Cataract. Acts on blood vessels, menorrhagia.) GLECHOMA HEDERACEA - Ground Ivy - (Hemorrhoids with RECTAL IRRITATION and bleeding. Diarrhoea. Anus feels raw and sore. Cough with laryngeal and tracheal irritation. Glandula sub-mentalis inflamed.)",
-  "Common names": "Penny royal",
   "symptoms": {
     "Head": [
       "Dull, heavy feeling in morning",
@@ -38,8 +36,10 @@
       "Tendo-achilles painful, as if sprained and swollen",
       "walking painful",
       "Twitchings jerkings, soreness"
-    ]
-  },
-  "details": "Female symptoms are most marked; usually associated with nervous disturbances. Red sand in urine. PAIN ALONG URETER. Flatulent colic. Antidotes effects of Poison-oak. (GRINDELIA.)",
-  "dosage": "First potency."
+    ],
+    "Relationship": "Compare; MENTHA; SEPIA; LILIUM; OCIMUM (uric acid diathesis, pain in ureters. HEDERA HELIX - Common Ivy - (Delirium and chronic convulsions. Chronic hydrocephalus Rhinorrhoea, cerebro-spinalis. Cataract. Acts on blood vessels, menorrhagia.) GLECHOMA HEDERACEA - Ground Ivy - (Hemorrhoids with RECTAL IRRITATION and bleeding. Diarrhoea. Anus feels raw and sore. Cough with laryngeal and tracheal irritation. Glandula sub-mentalis inflamed.)",
+    "Common names": "Penny royal",
+    "details": "Female symptoms are most marked; usually associated with nervous disturbances. Red sand in urine. PAIN ALONG URETER. Flatulent colic. Antidotes effects of Poison-oak. (GRINDELIA.)",
+    "dosage": "First potency."
+  }
 }

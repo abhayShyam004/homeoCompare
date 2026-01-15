@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Sulphur hydrogenisatum", 
-  "details": "Chronic rheumatic arthritis; chorea."
+  "symptoms": {
+    "details": "Chronic rheumatic arthritis; chorea."
+  },
+  "name": "Sulphur hydrogenisatum"
 }

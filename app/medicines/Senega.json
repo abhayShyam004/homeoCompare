@@ -1,12 +1,5 @@
 {
   "name": "Senega",
-  "Relationship": "Compare: CAUST.; PHOS.; SAPONIN; AMMON.; CALC.; NEPETA CATARIA - Catnip (to break up a cold; infantile colic; hysteria).",
-  "Modalities": [
-    "Worse: walking in open air",
-    "Worse: during rest",
-    "Better: from sweat; bending head backwards"
-  ],
-  "Common names": "Snake wort",
   "symptoms": {
     "Eyes": [
       "Acts on the rectus superior",
@@ -77,8 +70,15 @@
       "Catarrhal inflammation of throat and fauces, with scraping hoarseness",
       "Burning and rawness",
       "Sensation as if membrane had been abraded"
-    ]
-  },
-  "details": "Catarrhal symptoms, especially of the respiratory tract, and distinct eye symptoms of a paralytic type, are most characteristic. Circumscribed spots in chest left after inflammations.",
-  "dosage": "Tincture, to thirtieth potency."
+    ],
+    "Relationship": "Compare: CAUST.; PHOS.; SAPONIN; AMMON.; CALC.; NEPETA CATARIA - Catnip (to break up a cold; infantile colic; hysteria).",
+    "Modalities": [
+      "Worse: walking in open air",
+      "Worse: during rest",
+      "Better: from sweat; bending head backwards"
+    ],
+    "Common names": "Snake wort",
+    "details": "Catarrhal symptoms, especially of the respiratory tract, and distinct eye symptoms of a paralytic type, are most characteristic. Circumscribed spots in chest left after inflammations.",
+    "dosage": "Tincture, to thirtieth potency."
+  }
 }

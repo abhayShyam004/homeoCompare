@@ -1,11 +1,5 @@
 {
   "name": "Platina",
-  "Relationship": "Compare: RHODIUM; STANN.; VALER.; SEP. Compare, also: PLATINUM MURIATICUM (this remedy has achieved beneficial results after Iodine of Potash failed to cure in syphilitic affection; violent occipital headaches, dysphagia, and syphilitic throat and bone affections; caries of bones of feet); PLAT. MUR. NAT. (polyuria and salivation); SEDUM ACRE (sexual irritability, relieves irritation of nerve centers and gives rest). Antidote: PULS. Platina antidotes the bad effects of lead.",
-  "Modalities": [
-    "Worse: sitting and standing; evening",
-    "Better: walking"
-  ],
-  "Common names": "The Metal",
   "symptoms": {
     "Eyes": [
       "Eyes feel cold",
@@ -81,8 +75,14 @@
       "Feels numb",
       "Cramp-like twinges",
       "Roaring and rumbling"
-    ]
-  },
-  "details": "Is pre-eminently a woman's remedy. Strong tendency to paralysis, anaesthesia, localized NUMBNESS AND COLDNESS are shown. Hysterical spasms; pains increase and decrease gradually. (STANNUM.) Tremulousness.",
-  "dosage": "Sixth trituration to thirtieth potency."
+    ],
+    "Relationship": "Compare: RHODIUM; STANN.; VALER.; SEP. Compare, also: PLATINUM MURIATICUM (this remedy has achieved beneficial results after Iodine of Potash failed to cure in syphilitic affection; violent occipital headaches, dysphagia, and syphilitic throat and bone affections; caries of bones of feet); PLAT. MUR. NAT. (polyuria and salivation); SEDUM ACRE (sexual irritability, relieves irritation of nerve centers and gives rest). Antidote: PULS. Platina antidotes the bad effects of lead.",
+    "Modalities": [
+      "Worse: sitting and standing; evening",
+      "Better: walking"
+    ],
+    "Common names": "The Metal",
+    "details": "Is pre-eminently a woman's remedy. Strong tendency to paralysis, anaesthesia, localized NUMBNESS AND COLDNESS are shown. Hysterical spasms; pains increase and decrease gradually. (STANNUM.) Tremulousness.",
+    "dosage": "Sixth trituration to thirtieth potency."
+  }
 }

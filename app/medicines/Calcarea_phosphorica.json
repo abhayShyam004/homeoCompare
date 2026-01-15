@@ -1,12 +1,5 @@
 {
   "name": "Calcarea phosphorica",
-  "Relationship": "Complementary: Ruta.; Hepar. Compare: Calcar. hypophosporosa (is to be preferred when it seems necessary to furnish the organism with liberal doses of phosphorus in consequence of continued abscesses having reduced the vitality Give first and second decimal trit. Loss of appetite, rapid debility, night sweats; Acne pustulosa. Pallor of skin, habitually COLD EXTREMITIES. Phthisis - diarrhoea and cough; acute pains in chest. Mesenteric tuberculosis. Bleeding from lungs; angina pectoris; asthma; affection of arteries. Veins stand out like whipcords. Attacks of pain occurring two hours after meals (relieved by a cup of milk or light food). Cheiranthus (effects of cutting wisdom teeth). Calcarea renalis - Lapis renalis - (arthritic nodosities. Riggs disease; lessens tendency to accumulation of tartar on teeth; gravel and renal calculi). Conchiolin. Mater perlarum. Mother of pearl (Osteitis. Has a wide range of action in bone affections, especially when the growing ends are affected. Petechiae). Silica; Psorin.; Sulph.",
-  "Modalities": [
-    "Worse: exposure to damp",
-    "Worse: cold weather",
-    "Worse: melting snow"
-  ],
-  "Common names": "Phosphate of Lime",
   "symptoms": {
     "Eyes": [
       "Diffused opacity in cornea following abscess"
@@ -87,8 +80,15 @@
       "Complaints during teething",
       "teeth develop slowly",
       "rapid decay of teeth"
-    ]
-  },
-  "details": "One of the most important tissue remedies, and while it has many symptoms in common with CALCAREA CARB., there are some differences and characteristic features of its own. It is especially indicated in tardy dentition and troubles incident to that period, bone disease, non-union of fractured bones, and the anemias after acute diseases and chronic wasting diseases. ANAEMIC CHILDREN WHO ARE PEEVISH, FLABBY, HAVE COLD EXTREMITIES AND FEEBLE DIGESTION. It has a special affinity where bones form sutures or symphyses, and all its symptoms are worse from any change of weather. NUMBNESS AND CRAWLING are characteristic sensations, and tendency to perspiration and glandular enlargement are symptoms it shares with the carbonate. Scrofulosis, chlorosis and phthisis.",
-  "dosage": "First to third trituration. Higher potencies often more effective."
+    ],
+    "Relationship": "Complementary: Ruta.; Hepar. Compare: Calcar. hypophosporosa (is to be preferred when it seems necessary to furnish the organism with liberal doses of phosphorus in consequence of continued abscesses having reduced the vitality Give first and second decimal trit. Loss of appetite, rapid debility, night sweats; Acne pustulosa. Pallor of skin, habitually COLD EXTREMITIES. Phthisis - diarrhoea and cough; acute pains in chest. Mesenteric tuberculosis. Bleeding from lungs; angina pectoris; asthma; affection of arteries. Veins stand out like whipcords. Attacks of pain occurring two hours after meals (relieved by a cup of milk or light food). Cheiranthus (effects of cutting wisdom teeth). Calcarea renalis - Lapis renalis - (arthritic nodosities. Riggs disease; lessens tendency to accumulation of tartar on teeth; gravel and renal calculi). Conchiolin. Mater perlarum. Mother of pearl (Osteitis. Has a wide range of action in bone affections, especially when the growing ends are affected. Petechiae). Silica; Psorin.; Sulph.",
+    "Modalities": [
+      "Worse: exposure to damp",
+      "Worse: cold weather",
+      "Worse: melting snow"
+    ],
+    "Common names": "Phosphate of Lime",
+    "details": "One of the most important tissue remedies, and while it has many symptoms in common with CALCAREA CARB., there are some differences and characteristic features of its own. It is especially indicated in tardy dentition and troubles incident to that period, bone disease, non-union of fractured bones, and the anemias after acute diseases and chronic wasting diseases. ANAEMIC CHILDREN WHO ARE PEEVISH, FLABBY, HAVE COLD EXTREMITIES AND FEEBLE DIGESTION. It has a special affinity where bones form sutures or symphyses, and all its symptoms are worse from any change of weather. NUMBNESS AND CRAWLING are characteristic sensations, and tendency to perspiration and glandular enlargement are symptoms it shares with the carbonate. Scrofulosis, chlorosis and phthisis.",
+    "dosage": "First to third trituration. Higher potencies often more effective."
+  }
 }

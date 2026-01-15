@@ -1,7 +1,5 @@
 {
   "name": "Thlaspi bursa pastoris",
-  "Relationship": "Compare: URTICA; CROC.; TRILL.; MILLEFOL.",
-  "Common names": "Capsella Shepherd's Purse",
   "symptoms": {
     "Head": [
       "Frequent epistaxis",
@@ -45,8 +43,10 @@
     ],
     "Male": [
       "Spermatic cord sensitive to concussion of walking or riding"
-    ]
-  },
-  "details": "Is an anti-hemorrhagic and anti-uric acid remedy. Albuminuria during gestation. Chronic neuralgia. Renal and vesical irritation. Hemorrhage from uterine fibroid with aching in back or general bruised soreness. Aching between scapulae. Uterine hemorrhage, with cramps and expulsion of clots. Craves buttermilk. Effects of suppressed uterine disease. (Burnett.)",
-  "dosage": "Tincture, to sixth potency."
+    ],
+    "Relationship": "Compare: URTICA; CROC.; TRILL.; MILLEFOL.",
+    "Common names": "Capsella Shepherd's Purse",
+    "details": "Is an anti-hemorrhagic and anti-uric acid remedy. Albuminuria during gestation. Chronic neuralgia. Renal and vesical irritation. Hemorrhage from uterine fibroid with aching in back or general bruised soreness. Aching between scapulae. Uterine hemorrhage, with cramps and expulsion of clots. Craves buttermilk. Effects of suppressed uterine disease. (Burnett.)",
+    "dosage": "Tincture, to sixth potency."
+  }
 }

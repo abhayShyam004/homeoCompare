@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Kalagua", 
-  "details": "Tuberculosis; garlicky odor of all secretions and breath. TEUCRIUM SCORADONIA."
+  "symptoms": {
+    "details": "Tuberculosis; garlicky odor of all secretions and breath. TEUCRIUM SCORADONIA."
+  },
+  "name": "Kalagua"
 }

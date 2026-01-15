@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lac vaccinum", 
-  "details": "Cow's Milk - headache, rheumatic pains, constipation."
+  "symptoms": {
+    "details": "Cow's Milk - headache, rheumatic pains, constipation."
+  },
+  "name": "Lac vaccinum"
 }

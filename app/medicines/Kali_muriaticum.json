@@ -1,12 +1,5 @@
 {
   "name": "Kali muriaticum",
-  "Relationship": "Compare: BELLAD. Which Kali-m. follows well in catarrhal and hypertrophic conditions. KINO (otorrhoea, with stitches in right ear); BRY.; MERCUR.; PULS.; SULPH.",
-  "Modalities": [
-    "Worse: rich food",
-    "Worse: fats",
-    "Worse: motion"
-  ],
-  "Common names": "Chloride of Potassium - (KCl.)",
   "symptoms": {
     "Eyes": [
       "White mucus, purulent scabs",
@@ -112,8 +105,15 @@
       "Great effusion about the auricle",
       "Snapping and noises in the ear",
       "Threatened mastoid"
-    ]
-  },
-  "details": "Although not proven, this remedy has a wide clinical use, through its introduction by Schuessler. It certainly is of great value in catarrhal affections, in sub-acute inflammatory states, fibrinous exudations, and glandular swellings. WHITE OR GRAY COATING OF BASE OF TONGUE, and expectoration of thick, white phlegm, seem to be special guiding symptoms. Bursitis praepatellaris.",
-  "dosage": "Third to twelfth potency. External use in skin affections with burning sensation."
+    ],
+    "Relationship": "Compare: BELLAD. Which Kali-m. follows well in catarrhal and hypertrophic conditions. KINO (otorrhoea, with stitches in right ear); BRY.; MERCUR.; PULS.; SULPH.",
+    "Modalities": [
+      "Worse: rich food",
+      "Worse: fats",
+      "Worse: motion"
+    ],
+    "Common names": "Chloride of Potassium - (KCl.)",
+    "details": "Although not proven, this remedy has a wide clinical use, through its introduction by Schuessler. It certainly is of great value in catarrhal affections, in sub-acute inflammatory states, fibrinous exudations, and glandular swellings. WHITE OR GRAY COATING OF BASE OF TONGUE, and expectoration of thick, white phlegm, seem to be special guiding symptoms. Bursitis praepatellaris.",
+    "dosage": "Third to twelfth potency. External use in skin affections with burning sensation."
+  }
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Senecio jacobaea", 
-  "details": "Cerebrospinal irritation, rigid muscles, chiefly of neck and shoulders; also, in cancer."
+  "symptoms": {
+    "details": "Cerebrospinal irritation, rigid muscles, chiefly of neck and shoulders; also, in cancer."
+  },
+  "name": "Senecio jacobaea"
 }

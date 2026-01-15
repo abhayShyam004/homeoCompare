@@ -1,7 +1,5 @@
 {
   "name": "Copaiva",
-  "Relationship": "Antidote: BELL.; MERC. Compare: SANTALUM - (aching in kidneys); CANNAB.; CANTH.; BAROSMA; CUBEB; APIS; VESPA; ERIG.; SENECIO; SEPIA.",
-  "Common names": "Balsam of Copaiva",
   "symptoms": {
     "Head": [
       "Sensitive to sharp sounds",
@@ -60,8 +58,10 @@
     ],
     "Male": [
       "Testicles sensitive and swollen"
-    ]
-  },
-  "details": "Acts powerfully on mucous membranes, especially that of the urinary tract, the respiratory organs, and the skin, here producing a well-marked nettle-rash. Colds and catarrhs.",
-  "dosage": "First to third attenuation."
+    ],
+    "Relationship": "Antidote: BELL.; MERC. Compare: SANTALUM - (aching in kidneys); CANNAB.; CANTH.; BAROSMA; CUBEB; APIS; VESPA; ERIG.; SENECIO; SEPIA.",
+    "Common names": "Balsam of Copaiva",
+    "details": "Acts powerfully on mucous membranes, especially that of the urinary tract, the respiratory organs, and the skin, here producing a well-marked nettle-rash. Colds and catarrhs.",
+    "dosage": "First to third attenuation."
+  }
 }

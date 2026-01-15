@@ -1,7 +1,5 @@
 {
   "name": "Carduus marianus",
-  "Relationship": "Compare: Card. benedictus (strong action on eyes, and sensation of contraction in many parts; stomach symptoms similar); Chelidonium; Chionanthus; Merc.; Podophyl.; Bry.; Aloe.",
-  "Common names": "St. Mary's Thistle",
   "symptoms": {
     "Head": [
       "Nosebleed",
@@ -60,8 +58,10 @@
       "Pain in hip-joint, spreading through buttocks and down thigh",
       "worse from stooping",
       "Weakness felt in feet, especially after sitting"
-    ]
-  },
-  "details": "The action of this drug is centered in the liver, and portal system, causing soreness, pain, jaundice. Has specific relation to the vascular system. Abuse of alcoholic beverages, especially beer. VARICOSE VEINS and ulcers. Diseases of miners, associated with asthma. Dropsical conditions depending on liver disease, and when due to pelvic congestion and hepatic disease. Disturbs sugar metabolism. Influenza when liver is affected. Debility. Hemorrhages, especially connected with hepatic disease.",
-  "dosage": "Tincture and lower potencies."
+    ],
+    "Relationship": "Compare: Card. benedictus (strong action on eyes, and sensation of contraction in many parts; stomach symptoms similar); Chelidonium; Chionanthus; Merc.; Podophyl.; Bry.; Aloe.",
+    "Common names": "St. Mary's Thistle",
+    "details": "The action of this drug is centered in the liver, and portal system, causing soreness, pain, jaundice. Has specific relation to the vascular system. Abuse of alcoholic beverages, especially beer. VARICOSE VEINS and ulcers. Diseases of miners, associated with asthma. Dropsical conditions depending on liver disease, and when due to pelvic congestion and hepatic disease. Disturbs sugar metabolism. Influenza when liver is affected. Debility. Hemorrhages, especially connected with hepatic disease.",
+    "dosage": "Tincture and lower potencies."
+  }
 }

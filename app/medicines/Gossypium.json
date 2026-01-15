@@ -1,27 +1,27 @@
 {
-  "name": "Gossypium", 
-  "Relationship": "Compare: Action similar to Ergot when made from fresh green root. LILIUM; CIMICIF.; SABINA.", 
-  "Common names": "Cotton-plant", 
+  "name": "Gossypium",
   "symptoms": {
     "Head": [
       "Pain in cervical region with tendency for head to draw backward with nervousness"
-    ], 
+    ],
     "Stomach": [
-      "Anorexia, with uneasy feeling at scrobiculum at time of menses", 
+      "Anorexia, with uneasy feeling at scrobiculum at time of menses",
       "Nausea, with inclination to vomit before breakfast"
-    ], 
+    ],
     "Female": [
-      "Morning sickness, with sensitive uterine region", 
-      "Intermittent pain in ovaries", 
-      "Labia swollen and itching", 
-      "Suppressed menstruation", 
-      "Backache, weight and dragging in pelvis", 
-      "Tumor of the breast with swelling of axillary glands", 
-      "Menses too watery", 
-      "Uterine sub-involution and fibroids, with gastric pain and debility", 
+      "Morning sickness, with sensitive uterine region",
+      "Intermittent pain in ovaries",
+      "Labia swollen and itching",
+      "Suppressed menstruation",
+      "Backache, weight and dragging in pelvis",
+      "Tumor of the breast with swelling of axillary glands",
+      "Menses too watery",
+      "Uterine sub-involution and fibroids, with gastric pain and debility",
       "Retained placenta"
-    ]
-  }, 
-  "details": "A powerful emmenagogue, used in physiological doses. Homeopathically, it corresponds to many reflex conditions, depending on disturbed uterine function and pregnancy. Gossypium will relieve tardy menses, especially with sensation that the flow is about to start and yet does not do so. Tall, bloodless patients, with nervous chills.", 
-  "dosage": "Tincture, to sixth attenuation."
+    ],
+    "Relationship": "Compare: Action similar to Ergot when made from fresh green root. LILIUM; CIMICIF.; SABINA.",
+    "Common names": "Cotton-plant",
+    "details": "A powerful emmenagogue, used in physiological doses. Homeopathically, it corresponds to many reflex conditions, depending on disturbed uterine function and pregnancy. Gossypium will relieve tardy menses, especially with sensation that the flow is about to start and yet does not do so. Tall, bloodless patients, with nervous chills.",
+    "dosage": "Tincture, to sixth attenuation."
+  }
 }

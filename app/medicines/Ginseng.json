@@ -1,7 +1,5 @@
 {
   "name": "Ginseng",
-  "Relationship": "Compare: ARAL.; COCA. HEDERA - Ivy - mental depression and skin irritation antidoted by Gunpowder.",
-  "Common names": "Aralia Quinquefolia - Wild Ginseng - Panax",
   "symptoms": {
     "Head": [
       "Vertigo, with gray spots before eyes",
@@ -38,8 +36,10 @@
       "Voluptuous tickling at end of urethra",
       "Weakness of genital organs",
       "Pressure in testicles"
-    ]
-  },
-  "details": "Said to be a stimulant to the secretory glands, especially salivary. Acts on the lower part of the spinal cord. LUMBAGO, SCIATICA, AND RHEUMATISM. Paralytic weakness. HICCOUGH. Skin symptoms, itching pimples on neck and chest.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "Compare: ARAL.; COCA. HEDERA - Ivy - mental depression and skin irritation antidoted by Gunpowder.",
+    "Common names": "Aralia Quinquefolia - Wild Ginseng - Panax",
+    "details": "Said to be a stimulant to the secretory glands, especially salivary. Acts on the lower part of the spinal cord. LUMBAGO, SCIATICA, AND RHEUMATISM. Paralytic weakness. HICCOUGH. Skin symptoms, itching pimples on neck and chest.",
+    "dosage": "Tincture, to third potency."
+  }
 }

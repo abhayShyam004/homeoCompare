@@ -1,12 +1,5 @@
 {
   "name": "Saponaria",
-  "Relationship": "Compare: SAPONIN - a glucosidal principle found in Quillaya, Yucca, Senega, Dioscorea and other plants. (Tired, indifferent. PAIN IN LEFT TEMPLE, EYE, photophobia, hot stitches deep in eye. Fifth nerve affections. Migraine. Much pain BEFORE the menstrual flow; severe sore throat, worse right side; tonsils swollen, worse in warm room. Sharp burning taste and violent sneezing. Compare, also: VERBASC.; COCCUL. (both containing Saponin). QUILLAYA; (Anagallis, AGROSTEMA, Helonias, Sarsaparilla, Paris, Cyclamen and others contain Saponin).",
-  "Modalities": [
-    "Worse: at night",
-    "Worse: mental exertion",
-    "Worse: left side"
-  ],
-  "Common names": "Soap Root",
   "symptoms": {
     "Heart": [
       "Palpitation with anxiety",
@@ -42,7 +35,14 @@
       "Violent eye pains",
       "Hot stitches deep in eyeball",
       "Exophthalmos, worse reading and writing"
-    ]
-  },
-  "details": "Of great use in the treatment of acute colds, coryza, sore throat, etc. Will often \"break up\" a cold. Sore throat, involuntary urination"
+    ],
+    "Relationship": "Compare: SAPONIN - a glucosidal principle found in Quillaya, Yucca, Senega, Dioscorea and other plants. (Tired, indifferent. PAIN IN LEFT TEMPLE, EYE, photophobia, hot stitches deep in eye. Fifth nerve affections. Migraine. Much pain BEFORE the menstrual flow; severe sore throat, worse right side; tonsils swollen, worse in warm room. Sharp burning taste and violent sneezing. Compare, also: VERBASC.; COCCUL. (both containing Saponin). QUILLAYA; (Anagallis, AGROSTEMA, Helonias, Sarsaparilla, Paris, Cyclamen and others contain Saponin).",
+    "Modalities": [
+      "Worse: at night",
+      "Worse: mental exertion",
+      "Worse: left side"
+    ],
+    "Common names": "Soap Root",
+    "details": "Of great use in the treatment of acute colds, coryza, sore throat, etc. Will often \"break up\" a cold. Sore throat, involuntary urination"
+  }
 }

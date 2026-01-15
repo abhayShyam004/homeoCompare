@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lobelia cardinalis", 
-  "details": "Debility, especially of lower extremities; oppressed breathing, pleurisy, STICKING pain in chest on taking a long breath. Pain in LEFT lung, intermitting pricking during the day."
+  "symptoms": {
+    "details": "Debility, especially of lower extremities; oppressed breathing, pleurisy, STICKING pain in chest on taking a long breath. Pain in LEFT lung, intermitting pricking during the day."
+  },
+  "name": "Lobelia cardinalis"
 }

@@ -1,14 +1,5 @@
 {
   "name": "Spongia tosta",
-  "Relationship": "Compare: ACON.; HEP.; BROM.; LACH.; MERC. PROT.; IOD. (Goitre.)",
-  "Modalities": [
-    "Worse: ascending",
-    "Worse: wind",
-    "Worse: before midnight",
-    "Better: descending",
-    "Better: lying with head low"
-  ],
-  "Common names": "Roasted Sponge",
   "symptoms": {
     "Heart": [
       "Awakened suddenly after midnight with pain and suffocation",
@@ -106,8 +97,17 @@
       "Epididymitis",
       "Swelling of spermatic cord and testicles, with pain and tenderness",
       "Orchitis"
-    ]
-  },
-  "details": "A remedy especially marked in the symptoms of the respiratory organs, cough, croup, etc. Heart affections and often indicated for the tubercular diathesis. Children with fair complexion, lax fiber; swollen glands. EXHAUSTION AND HEAVINESS OF THE BODY AFTER SLIGHT EXERTION, WITH ORGASM OF BLOOD TO CHEST, FACE. ANXIETY AND DIFFICULT BREATHING.",
-  "dosage": "Second trituration, or tincture to third potency."
+    ],
+    "Relationship": "Compare: ACON.; HEP.; BROM.; LACH.; MERC. PROT.; IOD. (Goitre.)",
+    "Modalities": [
+      "Worse: ascending",
+      "Worse: wind",
+      "Worse: before midnight",
+      "Better: descending",
+      "Better: lying with head low"
+    ],
+    "Common names": "Roasted Sponge",
+    "details": "A remedy especially marked in the symptoms of the respiratory organs, cough, croup, etc. Heart affections and often indicated for the tubercular diathesis. Children with fair complexion, lax fiber; swollen glands. EXHAUSTION AND HEAVINESS OF THE BODY AFTER SLIGHT EXERTION, WITH ORGASM OF BLOOD TO CHEST, FACE. ANXIETY AND DIFFICULT BREATHING.",
+    "dosage": "Second trituration, or tincture to third potency."
+  }
 }

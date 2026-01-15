@@ -1,12 +1,5 @@
 {
   "name": "Moschus",
-  "Relationship": "Compare: NUX MOSCH.; ASAF.; VALER.; SUMBUL.; IGN.; CASTOR. Compatible: AMBRA. Antidotes: CAMPH.; COFF.",
-  "Modalities": [
-    "Worse: cold",
-    "Better: in open air",
-    "Better: rubbing"
-  ],
-  "Common names": "Musk",
   "symptoms": {
     "Heart": [
       "Hysterical palpitation",
@@ -67,8 +60,15 @@
       "involuntary emissions",
       "Impotence, associated with diabetes",
       "Nausea and vomiting after coition"
-    ]
-  },
-  "details": "A remedy for hysteria and nervous paroxysms, FAINTING FITS and convulsions, catalepsy, etc. The characteristic condition begin aggravation by cold; there is great sensitiveness to air. Much nervous trembling and frequent fainting. Great flatulence. Diseases do not follow a normal course. COLDNESS. Tension in muscles, skin and mind.",
-  "dosage": "First to third potency."
+    ],
+    "Relationship": "Compare: NUX MOSCH.; ASAF.; VALER.; SUMBUL.; IGN.; CASTOR. Compatible: AMBRA. Antidotes: CAMPH.; COFF.",
+    "Modalities": [
+      "Worse: cold",
+      "Better: in open air",
+      "Better: rubbing"
+    ],
+    "Common names": "Musk",
+    "details": "A remedy for hysteria and nervous paroxysms, FAINTING FITS and convulsions, catalepsy, etc. The characteristic condition begin aggravation by cold; there is great sensitiveness to air. Much nervous trembling and frequent fainting. Great flatulence. Diseases do not follow a normal course. COLDNESS. Tension in muscles, skin and mind.",
+    "dosage": "First to third potency."
+  }
 }

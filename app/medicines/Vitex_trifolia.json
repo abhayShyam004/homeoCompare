@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Vitex trifolia", 
-  "details": "Indian Arnica. Sprains and pains, headache in temples, pain in joints; pain in abdomen; pain in testicles."
+  "symptoms": {
+    "details": "Indian Arnica. Sprains and pains, headache in temples, pain in joints; pain in abdomen; pain in testicles."
+  },
+  "name": "Vitex trifolia"
 }

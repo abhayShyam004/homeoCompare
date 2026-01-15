@@ -1,7 +1,5 @@
 {
   "name": "Salix nigra",
-  "Relationship": "Compare: YOHIMBINE.; CANTH.",
-  "Common names": "Black-willow",
   "symptoms": {
     "Back": [
       "Unable to step out quickly",
@@ -22,8 +20,10 @@
     ],
     "Male": [
       "Painful movement of the testicles"
-    ]
-  },
-  "details": "Has a positive action on the generative organs of both sexes. Hysteria and nervousness. Libidinous thoughts and lascivious dreams. Controls genital irritability. Moderates sexual passion. Satyriasis and erotomania. In acute gonorrhea, with much erotic trouble; chordee. After masturbation; spermatorrhoea.",
-  "dosage": "Material doses of the tincture, thirty drops."
+    ],
+    "Relationship": "Compare: YOHIMBINE.; CANTH.",
+    "Common names": "Black-willow",
+    "details": "Has a positive action on the generative organs of both sexes. Hysteria and nervousness. Libidinous thoughts and lascivious dreams. Controls genital irritability. Moderates sexual passion. Satyriasis and erotomania. In acute gonorrhea, with much erotic trouble; chordee. After masturbation; spermatorrhoea.",
+    "dosage": "Material doses of the tincture, thirty drops."
+  }
 }

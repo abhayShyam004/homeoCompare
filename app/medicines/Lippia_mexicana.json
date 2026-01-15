@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Lippia mexicana", 
-  "details": "Persistent dry, hard, bronchial cough - asthma and chronic bronchitis."
+  "symptoms": {
+    "details": "Persistent dry, hard, bronchial cough - asthma and chronic bronchitis."
+  },
+  "name": "Lippia mexicana"
 }

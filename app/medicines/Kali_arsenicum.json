@@ -1,7 +1,5 @@
 {
   "name": "Kali arsenicum",
-  "Relationship": "RADIUM.",
-  "Common names": "Fowler's Solution",
   "symptoms": {
     "Female": [
       "Cauliflower excrescences of os uteri, with flying pains, foul smelling discharge, and pressure below pubis"
@@ -20,8 +18,10 @@
       "pustules worse during menses",
       "Dry, scaly, wilted",
       "Numerous small nodules under skin"
-    ]
-  },
-  "details": "The KALI-ARS. patient tends towards malignancy, and inveterate skin diseases. He is restless, nervous and anemic.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "RADIUM.",
+    "Common names": "Fowler's Solution",
+    "details": "The KALI-ARS. patient tends towards malignancy, and inveterate skin diseases. He is restless, nervous and anemic.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

@@ -1,20 +1,20 @@
 {
   "symptoms": {
     "Head": [
-      "Much fatty perspiration on head and violent itching", 
-      "Sick headache", 
-      "Seborrhoea capitis", 
+      "Much fatty perspiration on head and violent itching",
+      "Sick headache",
+      "Seborrhoea capitis",
       "Aches, with drowsiness, worse moving in open air, better tying up head with cloth"
-    ], 
+    ],
     "Stomach": [
-      "Bitter risings and taste", 
-      "Hungry but unable to eat", 
-      "Pain with inclination to vomit", 
+      "Bitter risings and taste",
+      "Hungry but unable to eat",
+      "Pain with inclination to vomit",
       "Abdominal and splenic pain"
-    ]
-  }, 
-  "details": "Recommended as a spinal stimulant; in epilepsy with flatulency, gouty and skin symptoms.", 
-  "Common names": "Branca Ursina Hog weed", 
-  "name": "Heracleum", 
-  "dosage": "Third potency."
+    ],
+    "details": "Recommended as a spinal stimulant; in epilepsy with flatulency, gouty and skin symptoms.",
+    "Common names": "Branca Ursina Hog weed",
+    "dosage": "Third potency."
+  },
+  "name": "Heracleum"
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Apium virus", 
-  "details": "Auto-toxaemia, with pus products; Zinc.; Canth.; Vespa; Lachesis."
+  "symptoms": {
+    "details": "Auto-toxaemia, with pus products; Zinc.; Canth.; Vespa; Lachesis."
+  },
+  "name": "Apium virus"
 }

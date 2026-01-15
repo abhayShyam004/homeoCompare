@@ -1,7 +1,5 @@
 {
   "name": "Juglans regia",
-  "Relationship": "Compare: JUGLANS CINEREA.",
-  "Common names": "Walnut",
   "symptoms": {
     "Head": [
       "Styes",
@@ -20,8 +18,10 @@
       "Comedones and acne of the face",
       "Chancre-like ulcer",
       "Crusta lactea, with soreness around ears"
-    ]
-  },
-  "details": "Skin eruptions are prominent.",
-  "dosage": "Tincture, and lower potencies."
+    ],
+    "Relationship": "Compare: JUGLANS CINEREA.",
+    "Common names": "Walnut",
+    "details": "Skin eruptions are prominent.",
+    "dosage": "Tincture, and lower potencies."
+  }
 }

@@ -1,13 +1,5 @@
 {
   "name": "Cicuta virosa",
-  "Relationship": "Antidotes: OPIUM; ARN. Compare: CICUTA MACULATA - Water Hemlock - (Effects very similar; the most prominent symptoms being: Falls unconscious, tetanic or clonic convulsions. Body covered with sweat. Consider in epilepsy and tetanus. Tincture and lower potencies.) HYDROCY. ACID; CON.; Oenanthe.; STRYCHNIA; BELLAD.",
-  "Modalities": [
-    "Worse: from touch",
-    "Worse: drafts",
-    "Worse: concussion",
-    "Worse: tobacco smoke"
-  ],
-  "Common names": "Water Hemlock",
   "symptoms": {
     "Eyes": [
       "Eyes stare",
@@ -98,8 +90,16 @@
       "Sudden detonations especially on swallowing",
       "Difficult hearing",
       "Hemorrhage from ears"
-    ]
-  },
-  "details": "The action on the nervous system, producing spasmodic affections, viz., hiccough, trismus, tetanus, and convulsions, give the pathological picture calling especially for this remedy, whenever this is further characterized, by the more individual symptoms of the drug. Among these, are the BENDING OF THE HEAD, NECK, AND SPINE BACKWARDS, and the general action of the patient is VIOLENT, with frightful distortions. Violent, strange desires. Sensation of internal chill. Moaning and howling. Does absurd things. Marked action on the skin.",
-  "dosage": "Sixth to two hundredth attenuation."
+    ],
+    "Relationship": "Antidotes: OPIUM; ARN. Compare: CICUTA MACULATA - Water Hemlock - (Effects very similar; the most prominent symptoms being: Falls unconscious, tetanic or clonic convulsions. Body covered with sweat. Consider in epilepsy and tetanus. Tincture and lower potencies.) HYDROCY. ACID; CON.; Oenanthe.; STRYCHNIA; BELLAD.",
+    "Modalities": [
+      "Worse: from touch",
+      "Worse: drafts",
+      "Worse: concussion",
+      "Worse: tobacco smoke"
+    ],
+    "Common names": "Water Hemlock",
+    "details": "The action on the nervous system, producing spasmodic affections, viz., hiccough, trismus, tetanus, and convulsions, give the pathological picture calling especially for this remedy, whenever this is further characterized, by the more individual symptoms of the drug. Among these, are the BENDING OF THE HEAD, NECK, AND SPINE BACKWARDS, and the general action of the patient is VIOLENT, with frightful distortions. Violent, strange desires. Sensation of internal chill. Moaning and howling. Does absurd things. Marked action on the skin.",
+    "dosage": "Sixth to two hundredth attenuation."
+  }
 }

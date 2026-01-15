@@ -1,23 +1,5 @@
 {
   "name": "Natrum muriaticum",
-  "Relationship": "Complementary to APIS; SEPIA; IGN. Compare: AQUA MARINA - Isotonic plasma. Marine plasma is a sea water taken some miles from shore and some depth below surface, filtered and diluted with twice as much pure fresh water. It acts primarily on the blood, as in intoxications, scrofulous conditions, enteritis. It disintoxicate in cancer (administered subcutaneously in the treatment of diseases of skin, kidneys and intestines, GASTROENTERITIS, AND TUBERCULOSIS). SCROFULOUS AFFECTIONS OF CHILDREN. Lymphadenitis. Lupus, eczema, varicose ulcers. A great \"blood purifier and vitalizer.\" Potentized sea-water in weakness, lack of reaction; symptoms worse seaside. Goitre.) SAL MARINUM sea salt, (indicated in chronic enlargements of glands, especially cervical. Suppurating glands. It appears likely to become a most useful remedy as an auxiliary, if not as a principal, in the treatment of diseases in patients of a strumous diathesis. Also useful in constipation.) NATRUM SELENICUM (laryngeal phthisis with expectoration of small lumps of bloody mucus and slight hoarseness.) NATRUM SILICUM (hemophilia; scrofulous bone affections; given intravenously every 3 days for SENILE PRURITUS); (DOLICHOS. FAGOPYR.) IGNAT.; SEP.; THUJA; GRAPH.; ALUM. Antidotes: ARS.; PHOS.; SPIR. NIT. DULC.",
-  "Modalities": [
-    "Worse: noise",
-    "Worse: music",
-    "Worse: warm room",
-    "Worse: lying down; about ten am",
-    "Worse: at seashore",
-    "Worse: mental exertion",
-    "Worse: consolation",
-    "Worse: heat",
-    "Worse: talking",
-    "Better: open air",
-    "Better: cold bathing",
-    "Better: going without regular meals",
-    "Better: lying on right side; pressure against back",
-    "Better: tight clothing"
-  ],
-  "Common names": "Chloride of Sodium",
   "symptoms": {
     "Urine": [
       "Increased, involuntary when walking, coughing, etc. has to wait a long time for it to pass if others are present",
@@ -197,8 +179,26 @@
       "Cracking in joints on motion",
       "Hangnails",
       "Pain in back, with desire for some firm support"
-    ]
-  },
-  "details": "The prolonged taking of excessive salt causes profound nutritive changes to take place in the system, and there arise not only the symptoms of salt retention as evidenced by dropsies and oedemas, but also an alteration in the blood causing a condition of anaemia and leucocytosis. There seems also to be a retention in the tissues of effete materials giving rise to symptoms loosely described as gouty or rheumatic gout. The provings are full of such symptoms. (Dr. Stonham.) A great remedy for certain forms of intermittent fever, anaemia, chlorosis, many disturbances of the alimentary tract and skin. Great debility; most weakness felt in the morning in bed. COLDNESS. Emaciation most notable in neck. Great liability to take cold. DRY MUCOUS MEMBRANES. Constrictive sensation throughout the body. GREAT WEAKNESS AND WEARINESS. Oversensitive to all sorts of influences. Hyperthyroidism. Goitre. Addison's disease. Diabetes.",
-  "dosage": "Twelfth to thirtieth and higher. The very highest potencies often yield most brilliant results. And in infrequent dosage."
+    ],
+    "Relationship": "Complementary to APIS; SEPIA; IGN. Compare: AQUA MARINA - Isotonic plasma. Marine plasma is a sea water taken some miles from shore and some depth below surface, filtered and diluted with twice as much pure fresh water. It acts primarily on the blood, as in intoxications, scrofulous conditions, enteritis. It disintoxicate in cancer (administered subcutaneously in the treatment of diseases of skin, kidneys and intestines, GASTROENTERITIS, AND TUBERCULOSIS). SCROFULOUS AFFECTIONS OF CHILDREN. Lymphadenitis. Lupus, eczema, varicose ulcers. A great \"blood purifier and vitalizer.\" Potentized sea-water in weakness, lack of reaction; symptoms worse seaside. Goitre.) SAL MARINUM sea salt, (indicated in chronic enlargements of glands, especially cervical. Suppurating glands. It appears likely to become a most useful remedy as an auxiliary, if not as a principal, in the treatment of diseases in patients of a strumous diathesis. Also useful in constipation.) NATRUM SELENICUM (laryngeal phthisis with expectoration of small lumps of bloody mucus and slight hoarseness.) NATRUM SILICUM (hemophilia; scrofulous bone affections; given intravenously every 3 days for SENILE PRURITUS); (DOLICHOS. FAGOPYR.) IGNAT.; SEP.; THUJA; GRAPH.; ALUM. Antidotes: ARS.; PHOS.; SPIR. NIT. DULC.",
+    "Modalities": [
+      "Worse: noise",
+      "Worse: music",
+      "Worse: warm room",
+      "Worse: lying down; about ten am",
+      "Worse: at seashore",
+      "Worse: mental exertion",
+      "Worse: consolation",
+      "Worse: heat",
+      "Worse: talking",
+      "Better: open air",
+      "Better: cold bathing",
+      "Better: going without regular meals",
+      "Better: lying on right side; pressure against back",
+      "Better: tight clothing"
+    ],
+    "Common names": "Chloride of Sodium",
+    "details": "The prolonged taking of excessive salt causes profound nutritive changes to take place in the system, and there arise not only the symptoms of salt retention as evidenced by dropsies and oedemas, but also an alteration in the blood causing a condition of anaemia and leucocytosis. There seems also to be a retention in the tissues of effete materials giving rise to symptoms loosely described as gouty or rheumatic gout. The provings are full of such symptoms. (Dr. Stonham.) A great remedy for certain forms of intermittent fever, anaemia, chlorosis, many disturbances of the alimentary tract and skin. Great debility; most weakness felt in the morning in bed. COLDNESS. Emaciation most notable in neck. Great liability to take cold. DRY MUCOUS MEMBRANES. Constrictive sensation throughout the body. GREAT WEAKNESS AND WEARINESS. Oversensitive to all sorts of influences. Hyperthyroidism. Goitre. Addison's disease. Diabetes.",
+    "dosage": "Twelfth to thirtieth and higher. The very highest potencies often yield most brilliant results. And in infrequent dosage."
+  }
 }

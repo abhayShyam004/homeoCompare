@@ -1,15 +1,5 @@
 {
   "name": "Radium",
-  "Relationship": "Compare: ANACARDIUM (the ulceration produced by it is like RADIUM. It may appear elsewhere than on place of contact and appear late). Compare: X-RAY; RHUS; SEPIA; URANIUM; ARS.; PULSAT.; CAUSTIC. Antidotes: RHUS VEN.; TELLUR.",
-  "Modalities": [
-    "Worse: getting up",
-    "Better: open air",
-    "Better: continued motion",
-    "Better: hot bath",
-    "Better: lying down",
-    "Better: pressure"
-  ],
-  "Common names": "Radium Bromide",
   "symptoms": {
     "Head": [
       "Both eyes ache",
@@ -96,8 +86,18 @@
       "Dryness of mouth",
       "Prickling sensation on end of tongue",
       "Metallic taste"
-    ]
-  },
-  "details": "An important addition to the Materia Medica, especially since the provings by Diffenbach have precisionized its use. Radium brom. of 1, 800, 000 radio-activity was employed. Found effective in the treatment of rheumatism and gout, in skin affections generally, acne rosacea, naevi, moles, ulcers and cancers. Lowered blood pressure. SEVERE ACHING PAINS ALL OVER, with restlessness, better moving about. Chronic rheumatic arthritis. Lateness in appearance of symptoms. Ulcers due to Radium burns, take a long time to heal. Marked increase in the polymorphonuclear neurophiles. Great weakness.",
-  "dosage": "Thirtieth and twelfth trituration."
+    ],
+    "Relationship": "Compare: ANACARDIUM (the ulceration produced by it is like RADIUM. It may appear elsewhere than on place of contact and appear late). Compare: X-RAY; RHUS; SEPIA; URANIUM; ARS.; PULSAT.; CAUSTIC. Antidotes: RHUS VEN.; TELLUR.",
+    "Modalities": [
+      "Worse: getting up",
+      "Better: open air",
+      "Better: continued motion",
+      "Better: hot bath",
+      "Better: lying down",
+      "Better: pressure"
+    ],
+    "Common names": "Radium Bromide",
+    "details": "An important addition to the Materia Medica, especially since the provings by Diffenbach have precisionized its use. Radium brom. of 1, 800, 000 radio-activity was employed. Found effective in the treatment of rheumatism and gout, in skin affections generally, acne rosacea, naevi, moles, ulcers and cancers. Lowered blood pressure. SEVERE ACHING PAINS ALL OVER, with restlessness, better moving about. Chronic rheumatic arthritis. Lateness in appearance of symptoms. Ulcers due to Radium burns, take a long time to heal. Marked increase in the polymorphonuclear neurophiles. Great weakness.",
+    "dosage": "Thirtieth and twelfth trituration."
+  }
 }

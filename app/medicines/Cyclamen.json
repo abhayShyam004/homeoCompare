@@ -1,17 +1,5 @@
 {
   "name": "Cyclamen",
-  "Relationship": "Compare: AMBRA; PULSAT.; CINCHONA; FERR. CIT. ET. CHIN.",
-  "Modalities": [
-    "Worse: open air",
-    "Worse: evenings",
-    "Worse: sitting",
-    "Worse: standing and cold water",
-    "Better: during menstrual flow",
-    "Better: by moving about",
-    "Better: rubbing parts; in warm room",
-    "Better: lemonade"
-  ],
-  "Common names": "Sow-Bread",
   "symptoms": {
     "Eyes": [
       "Diplopia",
@@ -64,8 +52,20 @@
       "Burning, sore pain in heels",
       "Pains in parts where bones lie near surface",
       "Cramp-like contraction of right thumb and index finger"
-    ]
-  },
-  "details": "Large doses produce violent purging and vomiting; disturbed digestion with very salty saliva. Anaemic and chlorotic conditions. Affections of uterus. Gastrointestinal and genitourinary tracts affected, inducing secondary anaemia and various reflexes. SLEEPINESS, MOROSENESS, AND LASSITUDE. Cough at night while asleep without waking, especially in children. (CHAM.; NIT-AC.)",
-  "dosage": "Third attenuation."
+    ],
+    "Relationship": "Compare: AMBRA; PULSAT.; CINCHONA; FERR. CIT. ET. CHIN.",
+    "Modalities": [
+      "Worse: open air",
+      "Worse: evenings",
+      "Worse: sitting",
+      "Worse: standing and cold water",
+      "Better: during menstrual flow",
+      "Better: by moving about",
+      "Better: rubbing parts; in warm room",
+      "Better: lemonade"
+    ],
+    "Common names": "Sow-Bread",
+    "details": "Large doses produce violent purging and vomiting; disturbed digestion with very salty saliva. Anaemic and chlorotic conditions. Affections of uterus. Gastrointestinal and genitourinary tracts affected, inducing secondary anaemia and various reflexes. SLEEPINESS, MOROSENESS, AND LASSITUDE. Cough at night while asleep without waking, especially in children. (CHAM.; NIT-AC.)",
+    "dosage": "Third attenuation."
+  }
 }

@@ -1,37 +1,37 @@
 {
-  "name": "Alumina silicata", 
-  "Modalities": [
-    "Worse: cold air", 
-    "Worse: after eating", 
-    "Worse: standing", 
-    "Better: warmth", 
-    "Better: fasting", 
-    "Better: resting in bed"
-  ], 
-  "Common names": "Andalasite rock - Alumina 63, Silica 37 parts", 
+  "name": "Alumina silicata",
   "symptoms": {
     "Head": [
-      "Constriction of scalp", 
-      "Swelling and ulceration of nose", 
-      "Frequent coryzas", 
-      "Pain in head, better heat, perspires", 
-      "Pain in eyes, flickering", 
+      "Constriction of scalp",
+      "Swelling and ulceration of nose",
+      "Frequent coryzas",
+      "Pain in head, better heat, perspires",
+      "Pain in eyes, flickering",
       "Congestion of brain"
-    ], 
+    ],
     "Respiratory": [
-      "Stitching pains", 
-      "Feeling of great weakness in chest", 
-      "Catarrh of chest, pain, raw feeling", 
+      "Stitching pains",
+      "Feeling of great weakness in chest",
+      "Catarrh of chest, pain, raw feeling",
       "Spasmodic cough with purulent viscid expectoration"
-    ], 
+    ],
     "Skin": [
-      "Sore to touch and pressure", 
+      "Sore to touch and pressure",
       "Formication along course of nerves, veins feel full and distended"
-    ], 
+    ],
     "Extremities": [
       "Heaviness, jerking, numbness, aching and pains"
-    ]
-  }, 
-  "details": "Deep acting remedy for chronic complaints of brain, spine and nerves. Constriction is a marked general symptom, also constriction of orifices. Venous distention. Weakness, especially spinal. Aching and burning in spine. Formication, numbness, pain in all limbs. Epileptiform convulsion. Coldness during pains. Seems to be the same as Kaolin - Bolus alba (China Clay) Alumina Silicate: A remedy for croup and bronchitis. Nose itching and burning. Discharge YELLOW. SORE, SCABBY, stopped up. SORENESS OF CHEST along trachea; cannot stand percussion. Gray sputa. Capillary bronchitis. Larynx and chest sore. Membranous croup - extends down trachea.", 
-  "dosage": "Higher potencies."
+    ],
+    "Modalities": [
+      "Worse: cold air",
+      "Worse: after eating",
+      "Worse: standing",
+      "Better: warmth",
+      "Better: fasting",
+      "Better: resting in bed"
+    ],
+    "Common names": "Andalasite rock - Alumina 63, Silica 37 parts",
+    "details": "Deep acting remedy for chronic complaints of brain, spine and nerves. Constriction is a marked general symptom, also constriction of orifices. Venous distention. Weakness, especially spinal. Aching and burning in spine. Formication, numbness, pain in all limbs. Epileptiform convulsion. Coldness during pains. Seems to be the same as Kaolin - Bolus alba (China Clay) Alumina Silicate: A remedy for croup and bronchitis. Nose itching and burning. Discharge YELLOW. SORE, SCABBY, stopped up. SORENESS OF CHEST along trachea; cannot stand percussion. Gray sputa. Capillary bronchitis. Larynx and chest sore. Membranous croup - extends down trachea.",
+    "dosage": "Higher potencies."
+  }
 }

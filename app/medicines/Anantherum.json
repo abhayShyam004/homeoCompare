@@ -1,7 +1,5 @@
 {
   "name": "Anantherum",
-  "Relationship": "Compare: Staphisag.; Mercur.; Thuja.",
-  "Common names": "Cuscus - An East Indian Grass",
   "symptoms": {
     "Head": [
       "Boils and tumors on tip of nose",
@@ -30,8 +28,10 @@
       "Erysipelas",
       "Pruritus, herpes",
       "Diseased and deformed nails"
-    ]
-  },
-  "details": "A skin remedy of high order. Painful swelling of various parts, going on to suppuration. Glandular inflammation.",
-  "dosage": "Third potency"
+    ],
+    "Relationship": "Compare: Staphisag.; Mercur.; Thuja.",
+    "Common names": "Cuscus - An East Indian Grass",
+    "details": "A skin remedy of high order. Painful swelling of various parts, going on to suppuration. Glandular inflammation.",
+    "dosage": "Third potency"
+  }
 }

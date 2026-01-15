@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Oxalis acetosella", 
-  "details": "Wood sorrel - The inspissated juice used as a cautery to remove cancerous growths of the lips."
+  "symptoms": {
+    "details": "Wood sorrel - The inspissated juice used as a cautery to remove cancerous growths of the lips."
+  },
+  "name": "Oxalis acetosella"
 }

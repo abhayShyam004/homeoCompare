@@ -1,7 +1,5 @@
 {
   "name": "Osmium",
-  "Relationship": "Compare: ARGENT.; IRIDIUM; SELEN.; MANGAN.",
-  "Common names": "The Element",
   "symptoms": {
     "Eyes": [
       "Conjunctivitis",
@@ -39,8 +37,10 @@
       "Bromidrosis, sweat in axilla smelling of garlic, worse evening and night",
       "Fold remains attached to growing nail",
       "Irritated skin"
-    ]
-  },
-  "details": "Irritation and catarrh of respiratory organs. Eczema. Albuminuria. PAIN IN TRACHEA. Increases and gives odor to local perspiration. Causes ADHESION OF THE NAIL FOLD.",
-  "dosage": "Sixth potency."
+    ],
+    "Relationship": "Compare: ARGENT.; IRIDIUM; SELEN.; MANGAN.",
+    "Common names": "The Element",
+    "details": "Irritation and catarrh of respiratory organs. Eczema. Albuminuria. PAIN IN TRACHEA. Increases and gives odor to local perspiration. Causes ADHESION OF THE NAIL FOLD.",
+    "dosage": "Sixth potency."
+  }
 }

@@ -1,17 +1,17 @@
 {
-  "name": "Succinum", 
-  "Relationship": "Compare: Do not confound with Ambergris (Ambra). SUCCINIC ACID. (Hay-fever. Paroxysmal sneezing, dropping of watery mucus from nostrils; asthma. Inflammation through respiratory tract; causing asthma, chest pains, etc.; itching of eyelids and canthi and nose worse drafts. Use 6 to 30th potency). Compare: ARUNDO, WYETHIA, SABADILLA, SINAPIS.", 
-  "Common names": "(Electron. Amber) - (A Fossil Resin)", 
+  "name": "Succinum",
   "symptoms": {
     "Head": [
-      "Fear of trains and close places", 
+      "Fear of trains and close places",
       "Headache, lachrymation, sneezing"
-    ], 
+    ],
     "Respiratory": [
-      "Whooping-cough", 
+      "Whooping-cough",
       "Asthma, incipient phthisis, chronic bronchitis, pains in chest"
-    ]
-  }, 
-  "details": "Nervous and hysterical symptoms. Asthma. Affections of spleen.", 
-  "dosage": "Third trituration. Five drop doses of the oil."
+    ],
+    "Relationship": "Compare: Do not confound with Ambergris (Ambra). SUCCINIC ACID. (Hay-fever. Paroxysmal sneezing, dropping of watery mucus from nostrils; asthma. Inflammation through respiratory tract; causing asthma, chest pains, etc.; itching of eyelids and canthi and nose worse drafts. Use 6 to 30th potency). Compare: ARUNDO, WYETHIA, SABADILLA, SINAPIS.",
+    "Common names": "(Electron. Amber) - (A Fossil Resin)",
+    "details": "Nervous and hysterical symptoms. Asthma. Affections of spleen.",
+    "dosage": "Third trituration. Five drop doses of the oil."
+  }
 }

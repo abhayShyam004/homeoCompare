@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Aurum iodatum", 
-  "details": "Chronic pericarditis, valvular diseases, arteriosclerosis, ozaena, lupus, osteitis, ovarian cysts, myomata uteri, are pathological lesions, that offer favorable ground for the action of this powerful drug. Senile paresis."
+  "symptoms": {
+    "details": "Chronic pericarditis, valvular diseases, arteriosclerosis, ozaena, lupus, osteitis, ovarian cysts, myomata uteri, are pathological lesions, that offer favorable ground for the action of this powerful drug. Senile paresis."
+  },
+  "name": "Aurum iodatum"
 }

@@ -1,12 +1,5 @@
 {
   "name": "Rheum",
-  "Relationship": "Compare: MAG. PHOS.; HEP.; POD.; CHAM.; IPEC. Antidotes: CAMPH.; CHAM. Complementary: MAG. CARB.",
-  "Modalities": [
-    "Worse: uncovering",
-    "Worse: after eating",
-    "Worse: moving about"
-  ],
-  "Common names": "Rhubarb",
   "symptoms": {
     "Head": [
       "Cool sweat on the face, especially about mouth and nose",
@@ -39,8 +32,15 @@
       "Before stool, unsuccessful urging to urinate",
       "Stools smell sour, pasty, with shivering and tenesmus, and burning in anus",
       "Sour diarrhoea during dentition"
-    ]
-  },
-  "details": "Of frequent use in children with sour diarrhoea; difficult dentition. WHOLE CHILD SMELLS SOUR.",
-  "dosage": "Third to sixth potency."
+    ],
+    "Relationship": "Compare: MAG. PHOS.; HEP.; POD.; CHAM.; IPEC. Antidotes: CAMPH.; CHAM. Complementary: MAG. CARB.",
+    "Modalities": [
+      "Worse: uncovering",
+      "Worse: after eating",
+      "Worse: moving about"
+    ],
+    "Common names": "Rhubarb",
+    "details": "Of frequent use in children with sour diarrhoea; difficult dentition. WHOLE CHILD SMELLS SOUR.",
+    "dosage": "Third to sixth potency."
+  }
 }

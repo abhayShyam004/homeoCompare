@@ -1,25 +1,25 @@
 {
   "symptoms": {
     "Throat": [
-      "Parotid hypertrophied", 
-      "Tongue thick", 
-      "Uvula and tonsils enlarged and reddened", 
+      "Parotid hypertrophied",
+      "Tongue thick",
+      "Uvula and tonsils enlarged and reddened",
       "Swollen"
-    ], 
+    ],
     "Skin": [
-      "Papular eruption on face", 
-      "Lichen planus", 
-      "Arms covered with itching rash", 
-      "Acne", 
-      "Itching on ears, nose, and in urethra", 
-      "Barber's itch", 
-      "Hair feels as if erect", 
-      "Cold-sores on lips", 
+      "Papular eruption on face",
+      "Lichen planus",
+      "Arms covered with itching rash",
+      "Acne",
+      "Itching on ears, nose, and in urethra",
+      "Barber's itch",
+      "Hair feels as if erect",
+      "Cold-sores on lips",
       "Boils on neck"
-    ]
-  }, 
-  "details": "Obstinate skin affections, notably in BARBER'S ITCH AND ACNE. Weeping eczema.", 
-  "Common names": "Iodide of Sulphur", 
-  "name": "Sulphur iodatum", 
-  "dosage": "Third trituration."
+    ],
+    "details": "Obstinate skin affections, notably in BARBER'S ITCH AND ACNE. Weeping eczema.",
+    "Common names": "Iodide of Sulphur",
+    "dosage": "Third trituration."
+  },
+  "name": "Sulphur iodatum"
 }

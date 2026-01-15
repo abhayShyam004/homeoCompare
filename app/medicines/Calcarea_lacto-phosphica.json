@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Calcarea lacto-phosphica", 
-  "details": "5 Grains 3 times a day in cyclic vomiting and migraine."
+  "symptoms": {
+    "details": "5 Grains 3 times a day in cyclic vomiting and migraine."
+  },
+  "name": "Calcarea lacto-phosphica"
 }

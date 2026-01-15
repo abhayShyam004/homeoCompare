@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Calcarea bromata", 
-  "details": "Removes inflammatory products from uterus; children of lax fiber, nervous and irritable, with gastric and cerebral irritation. TENDENCY TO BRAIN DISEASE. Insomnia and cerebral congestion. Give 1x trituration."
+  "symptoms": {
+    "details": "Removes inflammatory products from uterus; children of lax fiber, nervous and irritable, with gastric and cerebral irritation. TENDENCY TO BRAIN DISEASE. Insomnia and cerebral congestion. Give 1x trituration."
+  },
+  "name": "Calcarea bromata"
 }

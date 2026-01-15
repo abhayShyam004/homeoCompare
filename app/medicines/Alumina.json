@@ -1,13 +1,5 @@
 {
   "name": "Alumina",
-  "Relationship": "Compare: ALUMINUM CHLORIDUM. (Pains of loco-motor ataxia. Lower trit. in water. SLAG SILICO-SULPHOCALCITE OF ALUMINA 3x (anal itching, piles, constipation, flatulent distention); SECALE; LATHYR.; PLUMB. ALUMINUM ACETATE solution. (Externally a lotion for putrid wounds and skin infections. Arrests hemorrhage from inertia of uterus. Parenchymatous hemorrhage from various organs 2-3% solution. Hemorrhage following tonsillectomy is controlled by rinsing out nasopharynx with a 10% sol. Complementary: Bryonia. Antidotes: Ipecac.; Chamomile.",
-  "Modalities": [
-    "Worse: periodically; in afternoon; from potatoes",
-    "Worse: in morning on awakening; warm room",
-    "Better: in open air; from cold washing; in evening and on alternate days",
-    "Better: damp weather"
-  ],
-  "Common names": "Oxide of Aluminum - Argilla",
   "symptoms": {
     "Urine": [
       "Frequent desire to urinate in old people",
@@ -159,8 +151,16 @@
       "Heels feel numb",
       "Pain in arms and fingers, as if hot iron penetrated",
       "Pain in shoulder and upper arm"
-    ]
-  },
-  "details": "A very general condition corresponding to this drug is DRYNESS of mucous membranes and skin, and TENDENCY TO PARETIC MUSCULAR STATES. Old people, with lack of vital heat, or prematurely old, with debility. Sluggish functions, heaviness, numbness, and staggering, and the characteristic constipation find an excellent remedy in Alumina. Disposition to colds in the head, and eructations in spare, dry, thin subjects. Delicate children, products of artificial baby foods.",
-  "dosage": "Sixth to thirtieth and higher. Action slow in developing."
+    ],
+    "Relationship": "Compare: ALUMINUM CHLORIDUM. (Pains of loco-motor ataxia. Lower trit. in water. SLAG SILICO-SULPHOCALCITE OF ALUMINA 3x (anal itching, piles, constipation, flatulent distention); SECALE; LATHYR.; PLUMB. ALUMINUM ACETATE solution. (Externally a lotion for putrid wounds and skin infections. Arrests hemorrhage from inertia of uterus. Parenchymatous hemorrhage from various organs 2-3% solution. Hemorrhage following tonsillectomy is controlled by rinsing out nasopharynx with a 10% sol. Complementary: Bryonia. Antidotes: Ipecac.; Chamomile.",
+    "Modalities": [
+      "Worse: periodically; in afternoon; from potatoes",
+      "Worse: in morning on awakening; warm room",
+      "Better: in open air; from cold washing; in evening and on alternate days",
+      "Better: damp weather"
+    ],
+    "Common names": "Oxide of Aluminum - Argilla",
+    "details": "A very general condition corresponding to this drug is DRYNESS of mucous membranes and skin, and TENDENCY TO PARETIC MUSCULAR STATES. Old people, with lack of vital heat, or prematurely old, with debility. Sluggish functions, heaviness, numbness, and staggering, and the characteristic constipation find an excellent remedy in Alumina. Disposition to colds in the head, and eructations in spare, dry, thin subjects. Delicate children, products of artificial baby foods.",
+    "dosage": "Sixth to thirtieth and higher. Action slow in developing."
+  }
 }

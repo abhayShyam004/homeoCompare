@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cupressus lawsoniana", 
-  "details": "Acts like Thuja; TERRIBLE PAINS IN THE STOMACH."
+  "symptoms": {
+    "details": "Acts like Thuja; TERRIBLE PAINS IN THE STOMACH."
+  },
+  "name": "Cupressus lawsoniana"
 }

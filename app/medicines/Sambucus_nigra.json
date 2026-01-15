@@ -1,13 +1,5 @@
 {
   "name": "Sambucus nigra",
-  "Modalities": [
-    "Worse: sleep",
-    "Worse: during rest",
-    "Worse: after eating fruit",
-    "Better: sitting up in bed",
-    "Better: motion"
-  ],
-  "Common names": "Elder",
   "symptoms": {
     "Respiratory": [
       "Child awakes suddenly, nearly suffocating, sits up, turns blue",
@@ -61,8 +53,16 @@
       "Heat and perspiration of face",
       "Red, burning spots on cheeks",
       "Turns blue with cough"
-    ]
-  },
-  "details": "Acts especially on the respiratory organs. Dry coryza of infants, snuffles, edematous swellings. PROFUSE SWEAT accompanies many affections.",
-  "dosage": "Tincture, to sixth potency."
+    ],
+    "Modalities": [
+      "Worse: sleep",
+      "Worse: during rest",
+      "Worse: after eating fruit",
+      "Better: sitting up in bed",
+      "Better: motion"
+    ],
+    "Common names": "Elder",
+    "details": "Acts especially on the respiratory organs. Dry coryza of infants, snuffles, edematous swellings. PROFUSE SWEAT accompanies many affections.",
+    "dosage": "Tincture, to sixth potency."
+  }
 }

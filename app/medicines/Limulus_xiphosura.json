@@ -1,44 +1,44 @@
 {
-  "name": "Limulus xiphosura", 
-  "Relationship": "Compare: ASTERIAS; HOMARUS; CUPRUM.", 
-  "Common names": "Horse-foot - King-crab", 
+  "name": "Limulus xiphosura",
   "symptoms": {
     "Head": [
-      "Mental depression", 
-      "Difficult to remember names, confused with heat of face, rush of blood to face, worse when meditating", 
+      "Mental depression",
+      "Difficult to remember names, confused with heat of face, rush of blood to face, worse when meditating",
       "Pain behind left eye-ball"
-    ], 
+    ],
     "Respiratory": [
-      "Husky voice", 
-      "Oppression of chest", 
+      "Husky voice",
+      "Oppression of chest",
       "Dyspnoea after drinking water"
-    ], 
+    ],
     "Stomach": [
       "Painful fullness of whole right side of body"
-    ], 
+    ],
     "Abdomen": [
-      "Abdomen hot and constricted", 
-      "Colic with heat", 
-      "Cramp-like pain with watery stools", 
+      "Abdomen hot and constricted",
+      "Colic with heat",
+      "Cramp-like pain with watery stools",
       "Piles, constriction of anus"
-    ], 
+    ],
     "Nose": [
-      "Fluent coryza", 
-      "Sneezing worse drinking water", 
-      "Constant nasal dropping", 
+      "Fluent coryza",
+      "Sneezing worse drinking water",
+      "Constant nasal dropping",
       "Pressure above nose and behind eyes"
-    ], 
+    ],
     "Skin": [
-      "Burning in palms", 
+      "Burning in palms",
       "Itching spots and vesicles on face and hands"
-    ], 
+    ],
     "Extremities": [
-      "Pain in right hip-joint", 
-      "Heels sore", 
-      "Soles of feet ache, feel numb", 
+      "Pain in right hip-joint",
+      "Heels sore",
+      "Soles of feet ache, feel numb",
       "Crural neuralgia"
-    ]
-  }, 
-  "details": "Limulus was introduced by C. Hering and partially proved by him and Lippe. Hering was surprised to see the blood of the King crab that he dissected, blue, which on investigation, was found to contain copper as he had surmised and which he thought would prove to be another medicine for Cholera. Further provings are necessary to establish this, though symptoms so far observed make this probable. Hering's fertile mind always lead him to pioneer paths into practical therapeutics. Bodily and mental exhaustion; drowsiness AFTER SEA BATHING.", 
-  "dosage": "Sixth potency."
+    ],
+    "Relationship": "Compare: ASTERIAS; HOMARUS; CUPRUM.",
+    "Common names": "Horse-foot - King-crab",
+    "details": "Limulus was introduced by C. Hering and partially proved by him and Lippe. Hering was surprised to see the blood of the King crab that he dissected, blue, which on investigation, was found to contain copper as he had surmised and which he thought would prove to be another medicine for Cholera. Further provings are necessary to establish this, though symptoms so far observed make this probable. Hering's fertile mind always lead him to pioneer paths into practical therapeutics. Bodily and mental exhaustion; drowsiness AFTER SEA BATHING.",
+    "dosage": "Sixth potency."
+  }
 }

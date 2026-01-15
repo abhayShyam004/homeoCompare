@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Caesium metallicum", 
-  "details": "Pain in lumbar region and testicle. Headache, darting through temples. Diarrhoea and colic. Languor."
+  "symptoms": {
+    "details": "Pain in lumbar region and testicle. Headache, darting through temples. Diarrhoea and colic. Languor."
+  },
+  "name": "Caesium metallicum"
 }

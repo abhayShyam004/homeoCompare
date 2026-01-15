@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Cuprum oxydatum nigrum", 
-  "details": "All kinds of worms, including tape-worms and trichinosis according to Zopfy's 60 years' experience."
+  "symptoms": {
+    "details": "All kinds of worms, including tape-worms and trichinosis according to Zopfy's 60 years' experience."
+  },
+  "name": "Cuprum oxydatum nigrum"
 }

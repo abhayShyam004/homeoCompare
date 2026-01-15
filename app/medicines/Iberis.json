@@ -1,11 +1,5 @@
 {
   "name": "Iberis",
-  "Relationship": "Compare: CACT.; DIG.; AMYL.; BELL.",
-  "Modalities": [
-    "Worse: lying down; on left side; motion",
-    "Worse: exertion; warm room"
-  ],
-  "Common names": "Bitter Candy tuft",
   "symptoms": {
     "Heart": [
       "Violent palpitation induced by slightest exertion, or by laughing, or coughing",
@@ -38,8 +32,14 @@
     "Extremities": [
       "Numbness and tingling in left hand and arm",
       "Whole body sore, lame and trembling"
-    ]
-  },
-  "details": "State of nervous excitement. Has marked action upon the heart. Possesses great efficacy in cardiac diseases. Controls vascular excitement in hypertrophy with thickening of the heart's walls. Cardiac debility after influenza. Liver region full and painful. White stools.",
-  "dosage": "Tincture and first potency."
+    ],
+    "Relationship": "Compare: CACT.; DIG.; AMYL.; BELL.",
+    "Modalities": [
+      "Worse: lying down; on left side; motion",
+      "Worse: exertion; warm room"
+    ],
+    "Common names": "Bitter Candy tuft",
+    "details": "State of nervous excitement. Has marked action upon the heart. Possesses great efficacy in cardiac diseases. Controls vascular excitement in hypertrophy with thickening of the heart's walls. Cardiac debility after influenza. Liver region full and painful. White stools.",
+    "dosage": "Tincture and first potency."
+  }
 }

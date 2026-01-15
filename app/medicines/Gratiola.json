@@ -1,10 +1,5 @@
 {
   "name": "Gratiola",
-  "Relationship": "Compare: DIG.; EUPH.; TAB.; CHAM.; AMMON. PIC.; NUX-VOM.",
-  "Modalities": [
-    "Worse: drinking too much water"
-  ],
-  "Common names": "Hedge Hyssop",
   "symptoms": {
     "Head": [
       "Eyes dry, burn",
@@ -35,8 +30,13 @@
       "Menses too profuse, premature, and too long",
       "Leucorrhoea",
       "Nymphomania"
-    ]
-  },
-  "details": "Acts especially on gastrointestinal tract. Chronic catarrhal conditions, leucorrhoea and gonorrhea. Obstinate ulcers. Useful in mental troubles from overweening pride. Especially useful in females. Nux symptoms in females often met by Gratiola.",
-  "dosage": "Second to third potency."
+    ],
+    "Relationship": "Compare: DIG.; EUPH.; TAB.; CHAM.; AMMON. PIC.; NUX-VOM.",
+    "Modalities": [
+      "Worse: drinking too much water"
+    ],
+    "Common names": "Hedge Hyssop",
+    "details": "Acts especially on gastrointestinal tract. Chronic catarrhal conditions, leucorrhoea and gonorrhea. Obstinate ulcers. Useful in mental troubles from overweening pride. Especially useful in females. Nux symptoms in females often met by Gratiola.",
+    "dosage": "Second to third potency."
+  }
 }

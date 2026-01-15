@@ -1,7 +1,8 @@
 {
-  "symptoms": {}, 
-  "details": "Ascites. Various forms of dropsy. Yellow complexion. Extreme weariness. Pain in urethra on urinating. Weariness on going upstairs.", 
-  "Common names": "Cockroach", 
-  "name": "Blatta americana", 
-  "dosage": "Sixth potency."
+  "symptoms": {
+    "details": "Ascites. Various forms of dropsy. Yellow complexion. Extreme weariness. Pain in urethra on urinating. Weariness on going upstairs.",
+    "Common names": "Cockroach",
+    "dosage": "Sixth potency."
+  },
+  "name": "Blatta americana"
 }

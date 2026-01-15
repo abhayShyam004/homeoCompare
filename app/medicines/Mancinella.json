@@ -1,7 +1,5 @@
 {
   "name": "Mancinella",
-  "Relationship": "Compare: CROTON; JATROPHA; CANTH.; ANACARD.",
-  "Common names": "Hippomane - Manganeel Apple",
   "symptoms": {
     "Head": [
       "Vertigo",
@@ -44,8 +42,10 @@
     "Extremities": [
       "Icy coldness of hands and feet",
       "Pain in thumb"
-    ]
-  },
-  "details": "Skin symptoms most marked. Dermatitis, with excessive vesiculation, oozing of sticky serum and formation of crusts. To be remembered in mental depressed states at puberty and at climacteric, with exalted sexuality. (HERING.) LOSS OF VISION. Pain in the THUMB.",
-  "dosage": "Sixth, to thirtieth potency."
+    ],
+    "Relationship": "Compare: CROTON; JATROPHA; CANTH.; ANACARD.",
+    "Common names": "Hippomane - Manganeel Apple",
+    "details": "Skin symptoms most marked. Dermatitis, with excessive vesiculation, oozing of sticky serum and formation of crusts. To be remembered in mental depressed states at puberty and at climacteric, with exalted sexuality. (HERING.) LOSS OF VISION. Pain in the THUMB.",
+    "dosage": "Sixth, to thirtieth potency."
+  }
 }

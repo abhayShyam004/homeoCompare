@@ -1,10 +1,5 @@
 {
   "name": "Cinnabaris mercurius sulphuratus ruber",
-  "Relationship": "Compare: HEPAR; NIT-AC.; THUJA; SEP. Antidotes: HEPAR; SULPH.",
-  "Modalities": [
-    "Worse: lying on right side"
-  ],
-  "Common names": "Mercuric Sulphide",
   "symptoms": {
     "Eyes": [
       "Lids granulated",
@@ -49,8 +44,13 @@
       "buboes",
       "angry-looking chancres",
       "Syphilides, squamous and vesicular"
-    ]
-  },
-  "details": "For certain forms of ciliary neuralgia and ulceration upon a syphilitic base, this remedy is most effective. Sleepless during night.",
-  "dosage": "First to third trituration."
+    ],
+    "Relationship": "Compare: HEPAR; NIT-AC.; THUJA; SEP. Antidotes: HEPAR; SULPH.",
+    "Modalities": [
+      "Worse: lying on right side"
+    ],
+    "Common names": "Mercuric Sulphide",
+    "details": "For certain forms of ciliary neuralgia and ulceration upon a syphilitic base, this remedy is most effective. Sleepless during night.",
+    "dosage": "First to third trituration."
+  }
 }

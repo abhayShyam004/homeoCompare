@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Stropanthus sarmentosus", 
-  "details": "Extreme cardiac depression with intense gastric disturbance; dropsy."
+  "symptoms": {
+    "details": "Extreme cardiac depression with intense gastric disturbance; dropsy."
+  },
+  "name": "Stropanthus sarmentosus"
 }

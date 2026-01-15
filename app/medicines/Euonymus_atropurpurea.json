@@ -1,7 +1,5 @@
 {
   "name": "Euonymus atropurpurea",
-  "Relationship": "Euonymus Europea-Spindle-tree (liver disorders, biliousness, lumbago, gastric derangements with albuminuria. Cutting pains in malar bones, tongue, penis up to bladder); Podophyl; Ammon. pic.; Chel.; Euonymin 1x trit. (albuminuria).",
-  "Common names": "Wahoo. Burning Bush",
   "symptoms": {
     "Head": [
       "Pain over right eye extending back through the head",
@@ -40,8 +38,10 @@
     "Extremities": [
       "Feet feel swollen and tired",
       "Aching in all joints, especially ankles"
-    ]
-  },
-  "details": "Brunettes more easily affected, producing headache, mental disturbances and much distress in hepatic and renal region; albuminuria. Migraine. Passive Congestion and torpor of liver; chronic catarrhal affections of stomach and intestines. Weak heart. Chronic rheumatism and gout.",
-  "dosage": "Tincture and lower attenuations."
+    ],
+    "Relationship": "Euonymus Europea-Spindle-tree (liver disorders, biliousness, lumbago, gastric derangements with albuminuria. Cutting pains in malar bones, tongue, penis up to bladder); Podophyl; Ammon. pic.; Chel.; Euonymin 1x trit. (albuminuria).",
+    "Common names": "Wahoo. Burning Bush",
+    "details": "Brunettes more easily affected, producing headache, mental disturbances and much distress in hepatic and renal region; albuminuria. Migraine. Passive Congestion and torpor of liver; chronic catarrhal affections of stomach and intestines. Weak heart. Chronic rheumatism and gout.",
+    "dosage": "Tincture and lower attenuations."
+  }
 }

@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Kali salicylicum", 
-  "details": "Vomiting, especially of pregnancy; arteriosclerosis, with chronic rheumatism."
+  "symptoms": {
+    "details": "Vomiting, especially of pregnancy; arteriosclerosis, with chronic rheumatism."
+  },
+  "name": "Kali salicylicum"
 }

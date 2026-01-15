@@ -1,21 +1,21 @@
 {
-  "name": "Cubeba", 
-  "Relationship": "Compare: CUCURBITA; COPAIVA; PIPER METH.; SANDAL.", 
-  "Common names": "Cubeb", 
+  "name": "Cubeba",
   "symptoms": {
     "Respiratory": [
-      "Mucus trickles from posterior nares", 
-      "Rawness of throat and hoarseness", 
+      "Mucus trickles from posterior nares",
+      "Rawness of throat and hoarseness",
       "Catarrh of nose and throat, with fetid odor and expectoration"
-    ], 
+    ],
     "Urine": [
-      "Prostatitis, with thick yellow discharge", 
-      "Cystitis", 
-      "Hematuria", 
-      "Cutting after urination, with constriction", 
+      "Prostatitis, with thick yellow discharge",
+      "Cystitis",
+      "Hematuria",
+      "Cutting after urination, with constriction",
       "Urethritis, with much mucus, especially in women"
-    ]
-  }, 
-  "details": "Mucous membranes generally, but especially that of the urinary tract, are chiefly affected by this remedy. Frequent urination of a nervous origin. Leucorrhoea in little girls.", 
-  "dosage": "Second and third attenuation."
+    ],
+    "Relationship": "Compare: CUCURBITA; COPAIVA; PIPER METH.; SANDAL.",
+    "Common names": "Cubeb",
+    "details": "Mucous membranes generally, but especially that of the urinary tract, are chiefly affected by this remedy. Frequent urination of a nervous origin. Leucorrhoea in little girls.",
+    "dosage": "Second and third attenuation."
+  }
 }

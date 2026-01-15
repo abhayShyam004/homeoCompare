@@ -1,17 +1,5 @@
 {
   "name": "Tarentula hispania",
-  "Relationship": "Compare: AGAR.; ARS.; CUPR.; MAG. PHOS. Antidotes: LACH.",
-  "Modalities": [
-    "Worse: seeing others in trouble",
-    "Worse: motion",
-    "Worse: contact",
-    "Worse: noises",
-    "Better: in open air",
-    "Better: music",
-    "Better: bright colors",
-    "Better: rubbing affected parts"
-  ],
-  "Common names": "Spanish Spider",
   "symptoms": {
     "Heart": [
       "Palpitation",
@@ -52,8 +40,20 @@
       "Sexual excitement",
       "lasciviousness reaching almost to insanity",
       "seminal emissions"
-    ]
-  },
-  "details": "Remarkable nervous phenomena; hysteria with chlorosis; CHOREA, dysmenorrhoea, spinal irritability. Bladder tenesmus. CONSTRICTION sensation. Formication. EXTREME RESTLESSNESS; must keep in constant motion even though walking aggravates. Hysterical epilepsy. Intense sexual excitement.",
-  "dosage": "Sixth to thirtieth potency."
+    ],
+    "Relationship": "Compare: AGAR.; ARS.; CUPR.; MAG. PHOS. Antidotes: LACH.",
+    "Modalities": [
+      "Worse: seeing others in trouble",
+      "Worse: motion",
+      "Worse: contact",
+      "Worse: noises",
+      "Better: in open air",
+      "Better: music",
+      "Better: bright colors",
+      "Better: rubbing affected parts"
+    ],
+    "Common names": "Spanish Spider",
+    "details": "Remarkable nervous phenomena; hysteria with chlorosis; CHOREA, dysmenorrhoea, spinal irritability. Bladder tenesmus. CONSTRICTION sensation. Formication. EXTREME RESTLESSNESS; must keep in constant motion even though walking aggravates. Hysterical epilepsy. Intense sexual excitement.",
+    "dosage": "Sixth to thirtieth potency."
+  }
 }

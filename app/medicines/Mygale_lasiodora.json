@@ -1,11 +1,5 @@
 {
   "name": "Mygale lasiodora",
-  "Relationship": "Compare: AGAR.; TARENT.; CUPR.; ZIZIA.",
-  "Modalities": [
-    "Worse: in morning",
-    "Better: during sleep"
-  ],
-  "Common names": "Black Cuban Spider",
   "symptoms": {
     "Stomach": [
       "Aversion to food",
@@ -39,8 +33,14 @@
     "Male": [
       "Violent erections",
       "Chordee"
-    ]
-  },
-  "details": "Weakness, palpitation, nervousness, fear, like other spider preparations. Chorea is the principal therapeutic field of this. Sexual symptoms are important.",
-  "dosage": "Third to thirtieth potency."
+    ],
+    "Relationship": "Compare: AGAR.; TARENT.; CUPR.; ZIZIA.",
+    "Modalities": [
+      "Worse: in morning",
+      "Better: during sleep"
+    ],
+    "Common names": "Black Cuban Spider",
+    "details": "Weakness, palpitation, nervousness, fear, like other spider preparations. Chorea is the principal therapeutic field of this. Sexual symptoms are important.",
+    "dosage": "Third to thirtieth potency."
+  }
 }

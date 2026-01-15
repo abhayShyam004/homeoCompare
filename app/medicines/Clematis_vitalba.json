@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Clematis vitalba", 
-  "details": "Varicose and other ulcers."
+  "symptoms": {
+    "details": "Varicose and other ulcers."
+  },
+  "name": "Clematis vitalba"
 }

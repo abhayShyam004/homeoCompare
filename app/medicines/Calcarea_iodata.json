@@ -1,7 +1,5 @@
 {
   "name": "Calcarea iodata",
-  "Relationship": "Compare: Agraphis - Bluebell (adenoids with enlarged tonsils). Here Sulph. iod. follows both Agraphis and Calc. iod. Acon. lycoctonum (swelling of glands, Hodgkin's disease). Compare also: Calc. fluor; Sil.; Merc. iod.",
-  "Common names": "Iodide of Lime",
   "symptoms": {
     "Head": [
       "Polypi of nose and ear",
@@ -27,8 +25,10 @@
     ],
     "Throat": [
       "Enlarged tonsils are filled with little crypts"
-    ]
-  },
-  "details": "It is in the treatment of scrofulous affections, especially enlarged glands, tonsils, etc., that this remedy has gained marked beneficial results. Thyroid enlargements about time of puberty. Flabby children subject to colds. Secretions inclined to be profuse and yellow. Adenoids. Uterine fibroids. CROUP.",
-  "dosage": "Second and third trituration."
+    ],
+    "Relationship": "Compare: Agraphis - Bluebell (adenoids with enlarged tonsils). Here Sulph. iod. follows both Agraphis and Calc. iod. Acon. lycoctonum (swelling of glands, Hodgkin's disease). Compare also: Calc. fluor; Sil.; Merc. iod.",
+    "Common names": "Iodide of Lime",
+    "details": "It is in the treatment of scrofulous affections, especially enlarged glands, tonsils, etc., that this remedy has gained marked beneficial results. Thyroid enlargements about time of puberty. Flabby children subject to colds. Secretions inclined to be profuse and yellow. Adenoids. Uterine fibroids. CROUP.",
+    "dosage": "Second and third trituration."
+  }
 }

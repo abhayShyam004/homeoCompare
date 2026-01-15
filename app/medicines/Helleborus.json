@@ -1,11 +1,5 @@
 {
   "name": "Helleborus",
-  "Relationship": "(HELLEBOR. FOETIDUS or, POLYMNIA - Bear's foot - Acts especially on spleen (CEANOTHUS); also rectum and sciatic nerve. Splenic pains extend to scapula, neck and head, worse left side and evening; chronic ague cake; hypertrophied uterus; glandular enlargements; hair and nails falling off; skin peeling.) HELLEBOR. ORIENTALIS (salivation). Antidote: CAMPHOR; CINCH. Compare: Threatening effusion; TUBERC.; APIS; ZINC.; OPIUM; CINCH.; CICUTA; IODOFORM.",
-  "Modalities": [
-    "Worse: from evening until morning",
-    "Worse: from uncovering"
-  ],
-  "Common names": "Snow-rose",
   "symptoms": {
     "Eyes": [
       "Eyeballs turn upwards",
@@ -100,8 +94,14 @@
       "Thumb drawn into palm",
       "Vesicular eruption between fingers and toes",
       "Limbs heavy and painful"
-    ]
-  },
-  "details": "Produces a condition of SENSORIAL DEPRESSION. Sees, hears, tastes imperfectly, and general MUSCULAR WEAKNESS, which may go on to complete paralysis, accompanied by dropsical effusions. Hence, a remedy in low states of vitality and serious disease. Characteristic aggravation from 4 to eight PM (LYCOP.) SINKING SENSATION. State of effusion in hydrocephalus. Mania of a melancholy type.",
-  "dosage": "Tincture, to third potency."
+    ],
+    "Relationship": "(HELLEBOR. FOETIDUS or, POLYMNIA - Bear's foot - Acts especially on spleen (CEANOTHUS); also rectum and sciatic nerve. Splenic pains extend to scapula, neck and head, worse left side and evening; chronic ague cake; hypertrophied uterus; glandular enlargements; hair and nails falling off; skin peeling.) HELLEBOR. ORIENTALIS (salivation). Antidote: CAMPHOR; CINCH. Compare: Threatening effusion; TUBERC.; APIS; ZINC.; OPIUM; CINCH.; CICUTA; IODOFORM.",
+    "Modalities": [
+      "Worse: from evening until morning",
+      "Worse: from uncovering"
+    ],
+    "Common names": "Snow-rose",
+    "details": "Produces a condition of SENSORIAL DEPRESSION. Sees, hears, tastes imperfectly, and general MUSCULAR WEAKNESS, which may go on to complete paralysis, accompanied by dropsical effusions. Hence, a remedy in low states of vitality and serious disease. Characteristic aggravation from 4 to eight PM (LYCOP.) SINKING SENSATION. State of effusion in hydrocephalus. Mania of a melancholy type.",
+    "dosage": "Tincture, to third potency."
+  }
 }

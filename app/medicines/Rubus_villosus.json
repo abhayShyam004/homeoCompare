@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Rubus villosus", 
-  "details": "Blackberry - diarrhoea of infancy; stools watery and clay colored."
+  "symptoms": {
+    "details": "Blackberry - diarrhoea of infancy; stools watery and clay colored."
+  },
+  "name": "Rubus villosus"
 }

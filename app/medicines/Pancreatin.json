@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Pancreatin", 
-  "details": "A combination of several enzymes - Indicated in intestinal indigestion; pain an hour or more after eating. Lienteric diarrhoea. Dose - 3-5 grains, better not given during the active period of stomachic digestion."
+  "symptoms": {
+    "details": "A combination of several enzymes - Indicated in intestinal indigestion; pain an hour or more after eating. Lienteric diarrhoea. Dose - 3-5 grains, better not given during the active period of stomachic digestion."
+  },
+  "name": "Pancreatin"
 }

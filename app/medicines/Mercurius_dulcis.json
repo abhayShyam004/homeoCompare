@@ -1,7 +1,5 @@
 {
   "name": "Mercurius dulcis",
-  "Relationship": "Compare: KALI-MUR.",
-  "Common names": "Calomel",
   "symptoms": {
     "Stomach": [
       "Nausea and vomiting",
@@ -35,8 +33,10 @@
       "closure of eustachian tube",
       "ear troubles of scrofulous children",
       "membrana tympani retracted, thickened and immovable"
-    ]
-  },
-  "details": "Has marked effect on catarrhal inflammation of ear, and useful in Eustachian catarrh, deafness. Diarrhoea, with soreness of anus. PROSTATITIS. Remittent bilious attacks. PALLOR, FLABBY BLOATEDNESS, and turgid flaccidity. Inflammation with plastic exudate. Especially indicated in systems disposed to remittent bilious fevers; in peritonitis and meningitis WITH PLASTIC EXUDATE. Dropsies due to combined renal and cardiac diseases, especially with jaundice. (Hale). Cirrhosis of the liver, especially in the hypertrophic form. Use 1x (Jousset)",
-  "dosage": "Third to sixth trituration. For palliative (non-homeopathic) purposes, to secure evacuation of bowels, two or three-grain doses of first decimal trituration, repeated several times every hour."
+    ],
+    "Relationship": "Compare: KALI-MUR.",
+    "Common names": "Calomel",
+    "details": "Has marked effect on catarrhal inflammation of ear, and useful in Eustachian catarrh, deafness. Diarrhoea, with soreness of anus. PROSTATITIS. Remittent bilious attacks. PALLOR, FLABBY BLOATEDNESS, and turgid flaccidity. Inflammation with plastic exudate. Especially indicated in systems disposed to remittent bilious fevers; in peritonitis and meningitis WITH PLASTIC EXUDATE. Dropsies due to combined renal and cardiac diseases, especially with jaundice. (Hale). Cirrhosis of the liver, especially in the hypertrophic form. Use 1x (Jousset)",
+    "dosage": "Third to sixth trituration. For palliative (non-homeopathic) purposes, to secure evacuation of bowels, two or three-grain doses of first decimal trituration, repeated several times every hour."
+  }
 }

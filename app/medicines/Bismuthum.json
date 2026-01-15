@@ -1,7 +1,5 @@
 {
   "name": "Bismuthum",
-  "Relationship": "Antidotes: Nux; Capsic.; Calc.",
-  "Common names": "Precipitated Sub-Nitrate of Bismuth",
   "symptoms": {
     "Head": [
       "Neuralgic pain, as if torn by pincers",
@@ -71,8 +69,10 @@
       "Tearing in wrist",
       "Paralytic weakness, especially right arm",
       "Cold limbs"
-    ]
-  },
-  "details": "Irritation and catarrhal inflammation of the alimentary canal, is the chief action of this drug.",
-  "dosage": "First to sixth potency."
+    ],
+    "Relationship": "Antidotes: Nux; Capsic.; Calc.",
+    "Common names": "Precipitated Sub-Nitrate of Bismuth",
+    "details": "Irritation and catarrhal inflammation of the alimentary canal, is the chief action of this drug.",
+    "dosage": "First to sixth potency."
+  }
 }

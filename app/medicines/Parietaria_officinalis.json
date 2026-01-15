@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Parietaria officinalis", 
-  "details": "Renal calculi; nightmare, patient dreaming of being buried alive."
+  "symptoms": {
+    "details": "Renal calculi; nightmare, patient dreaming of being buried alive."
+  },
+  "name": "Parietaria officinalis"
 }

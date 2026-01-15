@@ -1,15 +1,5 @@
 {
   "name": "Comocladia dentata",
-  "Relationship": "Compare: RHUS; ANACARD.; EUPHORB.",
-  "Modalities": [
-    "Worse: touch",
-    "Worse: warmth",
-    "Worse: rest; night",
-    "Better: open air",
-    "Better: scratching",
-    "Better: by motion"
-  ],
-  "Common names": "Guao",
   "symptoms": {
     "Eyes": [
       "Worse, near warm stove",
@@ -37,8 +27,18 @@
       "Eczema  of the trunk and extremities",
       "also pustular type",
       "Redness all over, like scarlatina"
-    ]
-  },
-  "details": "Important eye and skin symptoms. Affections of antrum. Sacroiliac and abdominal pain. THROBBING PAINS WORSE BY HEAT. Pain in joints and ankles.",
-  "dosage": "First to thirtieth potency."
+    ],
+    "Relationship": "Compare: RHUS; ANACARD.; EUPHORB.",
+    "Modalities": [
+      "Worse: touch",
+      "Worse: warmth",
+      "Worse: rest; night",
+      "Better: open air",
+      "Better: scratching",
+      "Better: by motion"
+    ],
+    "Common names": "Guao",
+    "details": "Important eye and skin symptoms. Affections of antrum. Sacroiliac and abdominal pain. THROBBING PAINS WORSE BY HEAT. Pain in joints and ankles.",
+    "dosage": "First to thirtieth potency."
+  }
 }

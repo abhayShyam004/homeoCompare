@@ -1,5 +1,6 @@
 {
-  "symptoms": {}, 
-  "name": "Selaginella", 
-  "details": "Macerate in milk, locally and internally for bites of snakes and spiders."
+  "symptoms": {
+    "details": "Macerate in milk, locally and internally for bites of snakes and spiders."
+  },
+  "name": "Selaginella"
 }
