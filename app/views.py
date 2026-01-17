@@ -287,7 +287,11 @@ def home(request):
         ip = x_forwarded_for.split(',')[0] if x_forwarded_for else request.META.get('REMOTE_ADDR')
         PageView.objects.create(page='home', ip_address=ip, user_agent=request.META.get('HTTP_USER_AGENT', '')[:500])
     except: pass
-    return render(request, 'landing.html')
+    # Get Remedy of the Day
+    from .models import RemedyOfTheDay
+    remedy_of_day = RemedyOfTheDay.objects.filter(is_active=True).first()
+    
+    return render(request, 'landing.html', {'remedy_of_day': remedy_of_day})
 
 
 def about(request):
@@ -304,6 +308,36 @@ def thanks(request):
 
 def privacy(request):
     return render(request, 'app/privacy.html')
+
+
+def remedy_history(request, remedy_id=None):
+    from .models import RemedyOfTheDay, PageView
+    
+    # Track page view
+    try:
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        ip = x_forwarded_for.split(',')[0] if x_forwarded_for else request.META.get('REMOTE_ADDR')
+        PageView.objects.create(page='remedy_history', ip_address=ip, user_agent=request.META.get('HTTP_USER_AGENT', '')[:500])
+    except: pass
+
+    # Get all remedies ordered by newest first
+    history_list = RemedyOfTheDay.objects.all().order_by('-created_at')
+    
+    selected_remedy = None
+    if remedy_id:
+        selected_remedy = history_list.filter(id=remedy_id).first()
+    
+    # If no specific ID or not found, show the latest active one, or just the first in list
+    if not selected_remedy:
+        selected_remedy = history_list.filter(is_active=True).first()
+        if not selected_remedy and history_list.exists():
+            selected_remedy = history_list.first()
+            
+    context = {
+        'history_list': history_list,
+        'selected_remedy': selected_remedy
+    }
+    return render(request, 'app/remedy_history.html', context)
 
 
 # === ADMIN PANEL ===
@@ -448,12 +482,12 @@ def admin_panel(request):
     ninety_days_ago = today - timedelta(days=90)
     year_start = today.replace(month=1, day=1)
     
-    # Visitor stats (total page views, not individual pages)
-    visits_today = PageView.objects.filter(timestamp__date=today).count()
-    visits_week = PageView.objects.filter(timestamp__date__gte=week_ago).count()
-    visits_month = PageView.objects.filter(timestamp__date__gte=month_ago).count()
-    visits_90days = PageView.objects.filter(timestamp__date__gte=ninety_days_ago).count()
-    visits_year = PageView.objects.filter(timestamp__date__gte=year_start).count()
+    # Visitor stats (unique visitors by IP)
+    visits_today = PageView.objects.filter(timestamp__date=today).values('ip_address').distinct().count()
+    visits_week = PageView.objects.filter(timestamp__date__gte=week_ago).values('ip_address').distinct().count()
+    visits_month = PageView.objects.filter(timestamp__date__gte=month_ago).values('ip_address').distinct().count()
+    visits_90days = PageView.objects.filter(timestamp__date__gte=ninety_days_ago).values('ip_address').distinct().count()
+    visits_year = PageView.objects.filter(timestamp__date__gte=year_start).values('ip_address').distinct().count()
     
     # Popular remedies
     all_remedies = []
@@ -474,7 +508,7 @@ def admin_panel(request):
         ).annotate(
             date=TruncDate('timestamp')
         ).values('date').annotate(
-            count=Count('id')
+            count=Count('ip_address', distinct=True)
         ).order_by('date')
         
         # Create dict for easy lookup
@@ -808,3 +842,134 @@ def admin_feedback_list(request):
         'feedback_items': feedback_items
     }
     return render(request, 'app/admin_feedback.html', context)
+
+
+# === REMEDY OF THE DAY ===
+
+@require_admin
+def admin_remedy_day(request):
+    """Admin interface for Remedy of the Day"""
+    from .models import RemedyOfTheDay
+    from django.http import JsonResponse
+    from django.shortcuts import redirect
+    import json
+    import os
+    from pathlib import Path
+
+    # === AJAX API HANDLERS ===
+    if request.method == 'GET' and request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        action = request.GET.get('action')
+        
+        if action == 'get_medicines':
+            source = request.GET.get('source', 'boericke')
+            letter = request.GET.get('letter', '').upper()
+            medicines = []
+            
+            if source == 'boericke':
+                json_dir = Path(os.path.dirname(__file__)) / 'medicines'
+                if json_dir.exists():
+                    for f in json_dir.glob('*.json'):
+                        if f.name == 'allens_keynotes.json': continue
+                        name = f.stem.split('.')[0].replace('_', ' ').title()
+                        if letter and not name.upper().startswith(letter):
+                            continue
+                        medicines.append(name)
+            
+            elif source == 'allen':
+                json_path = Path(os.path.dirname(__file__)) / 'medicines' / 'allens_keynotes.json'
+                if json_path.exists():
+                    try:
+                        with open(json_path, 'r', encoding='utf-8') as f:
+                            data = json.load(f)
+                            for name in data.keys():
+                                if letter and not name.upper().startswith(letter):
+                                    continue
+                                medicines.append(name)
+                    except: pass
+            
+            return JsonResponse({'medicines': sorted(medicines)})
+
+        if action == 'get_content':
+            source = request.GET.get('source')
+            medicine = request.GET.get('medicine')
+            content = {}
+            
+            if source == 'boericke':
+                json_dir = Path(os.path.dirname(__file__)) / 'medicines'
+                if json_dir.exists():
+                    for f in json_dir.glob('*.json'):
+                        if f.name == 'allens_keynotes.json': continue
+                        try:
+                            with open(f, 'r', encoding='utf-8') as file_obj:
+                                data = json.load(file_obj)
+                                if data.get('name', '').lower() == medicine.lower() or f.stem.lower() == medicine.lower():
+                                    symptoms = data.get('symptoms', {})
+                                    content = symptoms
+                                    for k, v in data.items():
+                                        if k not in ['name', 'symptoms', '_filename'] and isinstance(v, str):
+                                            content[k] = v
+                                    break
+                        except: pass
+            
+            elif source == 'allen':
+                json_path = Path(os.path.dirname(__file__)) / 'medicines' / 'allens_keynotes.json'
+                if json_path.exists():
+                    with open(json_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        if medicine in data:
+                            raw_data = data[medicine]
+                            for k, v in raw_data.items():
+                                if k not in ['name', 'page']:
+                                    if isinstance(v, list):
+                                        content[k] = " ".join(v)
+                                    else:
+                                        content[k] = v
+
+            return JsonResponse({'content': content})
+
+    # === POST HANDLERS ===
+    if request.method == 'POST':
+        action = request.POST.get('action')
+        
+        if action == 'create':
+            name = request.POST.get('medicine_name')
+            desc = request.POST.get('description')
+            source = request.POST.get('source', 'boericke')
+            image = request.FILES.get('image')
+            
+            if name and desc:
+                RemedyOfTheDay.objects.create(
+                    medicine_name=name,
+                    description=desc,
+                    source=source,
+                    image=image,
+                    is_active=True
+                )
+                
+        elif action == 'toggle':
+            remedy_id = request.POST.get('remedy_id')
+            try:
+                remedy = RemedyOfTheDay.objects.get(id=remedy_id)
+                remedy.is_active = True
+                remedy.save()
+            except: pass
+            
+        elif action == 'delete':
+            remedy_id = request.POST.get('remedy_id')
+            try:
+                RemedyOfTheDay.objects.get(id=remedy_id).delete()
+            except: pass
+            
+        return redirect('admin_remedy_day')
+    
+    # Get active and history
+    active_remedy = RemedyOfTheDay.objects.filter(is_active=True).first()
+    history = RemedyOfTheDay.objects.order_by('-created_at')
+    
+    # Render view (legacy medicine_list is no longer needed for new UI)
+    context = {
+        'active_remedy': active_remedy,
+        'history': history, 
+    }
+    return render(request, 'app/admin_remedy_day.html', context)
+

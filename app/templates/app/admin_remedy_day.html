@@ -1,0 +1,625 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedy of the Day - Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+    <style>
+        :root {
+            --sidebar-width: 280px;
+            --header-height: 85px;
+            
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #3b82f6;
+            
+            --bg-dark: #0f172a;
+            --bg-sidebar: #1e293b;
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --bg-hover: #334155;
+            
+            --text-white: #ffffff;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --border: #334155;
+            --radius: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            display: flex;
+        }
+
+        /* Sidebar - Exact Copy from Admin Panel */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            position: fixed;
+            left: 0; top: 0;
+            display: flex; flex-direction: column;
+            z-index: 10;
+        }
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .logo {
+            display: flex; align-items: center; gap: 12px; text-decoration: none;
+        }
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+        .logo-text h1 {
+            font-size: 1rem; font-weight: 700; color: var(--text-white);
+        }
+        .logo-text span {
+            font-size: 0.7rem; color: var(--text-muted);
+        }
+        .sidebar-nav {
+            flex: 1; padding: 1rem 0; overflow-y: auto;
+        }
+        .nav-section {
+            padding: 0 1rem; margin-bottom: 1.5rem;
+        }
+        .nav-section-title {
+            font-size: 0.7rem; font-weight: 600; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 0.08em;
+            padding: 0 0.75rem; margin-bottom: 0.5rem;
+        }
+        .nav-link {
+            display: flex; align-items: center; gap: 12px;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-size: 0.9rem; font-weight: 500;
+            transition: all 0.15s; margin-bottom: 4px;
+        }
+        .nav-link:hover {
+            background: var(--bg-hover); color: var(--text-primary);
+        }
+        .nav-link.active {
+            background: rgba(99, 102, 241, 0.15); color: var(--primary-light);
+        }
+        .nav-link.active i { color: var(--primary-light); }
+        .nav-link i {
+            width: 20px; text-align: center; color: var(--text-muted);
+        }
+        .sidebar-footer {
+            padding: 1rem 1.5rem; border-top: 1px solid var(--border);
+        }
+        .logout-btn {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            width: 100%; padding: 0.75rem;
+            background: transparent; border: 1px solid var(--border);
+            border-radius: var(--radius); color: var(--text-secondary);
+            font-size: 0.9rem; font-weight: 500; text-decoration: none;
+            cursor: pointer; transition: all 0.15s;
+        }
+        .logout-btn:hover {
+            background: rgba(239, 68, 68, 0.1); border-color: var(--danger); color: var(--danger);
+        }
+
+
+        /* Main Content */
+        .main-wrapper {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+        }
+        .topbar {
+            height: var(--header-height);
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 2rem;
+            position: sticky; top: 0; z-index: 5;
+        }
+        .page-title { font-size: 1.25rem; font-weight: 700; color: var(--text-white); }
+        .content { padding: 2rem; }
+
+        /* UI Components */
+        .step-label {
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;
+            color: var(--text-muted); margin-bottom: 1rem; font-weight: 600;
+        }
+
+        /* Source Cards */
+        .source-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;
+        }
+        .source-card {
+            background: var(--bg-hover); border: 2px solid var(--border);
+            border-radius: var(--radius-lg); padding: 1.5rem;
+            cursor: pointer; transition: all 0.2s; text-align: center;
+        }
+        .source-card:hover { border-color: var(--primary); }
+        .source-card.active {
+            background: rgba(99, 102, 241, 0.1); border-color: var(--primary);
+        }
+        .source-card h3 { color: var(--text-primary); margin-bottom: 0.5rem; }
+        .source-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Alpha Filter */
+        .alpha-grid {
+            display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;
+            display: none; /* Hidden initially */
+        }
+        .alpha-btn {
+            width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+            background: var(--bg-input); border: 1px solid var(--border);
+            border-radius: var(--radius); color: var(--text-secondary);
+            cursor: pointer; font-weight: 600; transition: all 0.2s;
+        }
+        .alpha-btn:hover, .alpha-btn.active {
+            background: var(--primary); color: white; border-color: var(--primary);
+        }
+
+        /* Medicine List */
+        .medicine-list {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem; margin-bottom: 2rem;
+            max-height: 300px; overflow-y: auto;
+            border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius);
+            display: none; /* Hidden initially */
+        }
+        .medicine-item {
+            padding: 0.75rem; background: var(--bg-hover); border-radius: var(--radius);
+            cursor: pointer; text-align: center; border: 1px solid transparent;
+            font-size: 0.9rem;
+        }
+        .medicine-item:hover, .medicine-item.active {
+            background: rgba(99, 102, 241, 0.2); border-color: var(--primary);
+            color: white;
+        }
+
+        /* Content Picker */
+        .content-picker {
+            display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;
+            display: none; /* Hidden initially */
+        }
+        .content-chip {
+            padding: 0.4rem 1rem; background: var(--bg-input); border-radius: 50px;
+            font-size: 0.85rem; color: var(--text-secondary); cursor: pointer;
+            border: 1px solid var(--border); transition: 0.2s;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .content-chip:hover { background: var(--border); color: white; }
+        .content-chip.added {
+            background: var(--success); color: white; border-color: var(--success);
+        }
+
+        /* Form Layout */
+        .form-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-label { display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem; }
+        .form-input, .form-textarea, .form-select {
+            width: 100%; background: var(--bg-input); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 0.75rem; color: var(--text-primary);
+            font-family: inherit;
+        }
+        .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--primary); }
+        .btn {
+            padding: 0.75rem 1.5rem; border-radius: var(--radius); border: none;
+            cursor: pointer; font-weight: 600; color: white; transition: all 0.2s;
+        }
+        .btn-primary { background: var(--primary); }
+        .btn-primary:hover { background: var(--primary-dark); }
+        
+        /* Loading Spinner */
+        .spinner {
+            border: 3px solid rgba(255,255,255,0.1); border-top-color: var(--primary);
+            border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite;
+            display: none; margin: 0 auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        @media (max-width: 1200px) {
+            .sidebar { transform: translateX(-100%); }
+            .main-wrapper { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="{% url 'home' %}" class="logo">
+                <div class="logo-icon">HC</div>
+                <div class="logo-text">
+                    <h1>HomeoCompare</h1>
+                    <span>Admin Panel</span>
+                </div>
+            </a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Dashboard</div>
+                <a href="{% url 'admin_panel' %}" class="nav-link">
+                    <i class="fas fa-chart-line"></i><span>Analytics</span>
+                </a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Manage Medicines</div>
+                <a href="{% url 'admin_boericke' %}" class="nav-link"><i class="fas fa-book"></i><span>Boericke's</span></a>
+                <a href="{% url 'admin_allen' %}" class="nav-link"><i class="fas fa-book-medical"></i><span>Allen's Keynotes</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Management</div>
+                <a href="{% url 'admin_feedback' %}" class="nav-link"><i class="fas fa-envelope-open-text"></i><span>User Feedback</span></a>
+                <a href="{% url 'admin_remedy_day' %}" class="nav-link active"><i class="fas fa-star"></i><span>Remedy of the Day</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Quick Links</div>
+                <a href="{% url 'home' %}" class="nav-link"><i class="fas fa-home"></i><span>Home Page</span></a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+             <a href="{% url 'admin_logout' %}" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="topbar">
+            <h1 class="page-title">Remedy of the Day</h1>
+        </header>
+
+        <div class="content">
+            
+            <div class="form-card">
+                <h2 style="margin-bottom: 1.5rem;">Select & Publish</h2>
+                
+                <!-- Step 1: Source -->
+                <div class="step-label">1. Choose Source Book</div>
+                <div class="source-grid">
+                    <div class="source-card" onclick="selectSource('boericke', this)">
+                        <i class="fas fa-book fa-2x" style="color: var(--primary); margin-bottom: 0.5rem;"></i>
+                        <h3>Boericke's Materia Medica</h3>
+                        <p>Comprehensive clinical details</p>
+                    </div>
+                    <div class="source-card" onclick="selectSource('allen', this)">
+                        <i class="fas fa-book-medical fa-2x" style="color: var(--success); margin-bottom: 0.5rem;"></i>
+                        <h3>Allen's Keynotes</h3>
+                        <p>Specific keynote symptoms</p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Alphabet -->
+                <div id="alphaContainer" style="display: none;">
+                    <div class="step-label">2. Filter by Alphabet</div>
+                    <div class="alpha-grid" id="alphaGrid">
+                        <!-- Generated by JS -->
+                    </div>
+                </div>
+
+                <!-- Loader -->
+                <div class="spinner" id="loadingSpinner"></div>
+
+                <!-- Step 3: Medicine List -->
+                <div id="medicineContainer" style="display: none;">
+                    <div class="step-label">3. Select Medicine</div>
+                    <div class="medicine-list" id="medicineList">
+                        <!-- Generated by JS -->
+                    </div>
+                </div>
+
+                <!-- Step 4: Final Form -->
+                <form method="POST" enctype="multipart/form-data" id="finalForm" style="display: none;">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="create">
+                    <input type="hidden" name="source" id="formSource">
+                    
+                    <!-- Hidden medicine input -->
+                    <input type="hidden" name="medicine_name" id="medicineInput">
+                    
+                    <div style="background: var(--bg-hover); padding: 1rem; border-radius: var(--radius); margin-bottom: 2rem;">
+                        <span style="color:var(--text-muted); font-size:0.9rem;">Selected Medicine:</span>
+                        <h3 id="selectedMedicineLabel" style="color: var(--primary); margin-top: 5px;">None</h3>
+                    </div>
+
+                    <!-- Step 5: Content -->
+                    <div id="contentContainer" style="display: none;">
+                        <div class="step-label">4. Select Content to Include</div>
+                        <div class="content-picker" id="contentPicker">
+                            <!-- Chips generated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 0.5rem;">
+                            <label class="form-label" style="margin-bottom: 0;">Description / Insight</label>
+                            <button type="button" onclick="addCustomCard()" style="background: var(--bg-hover); border: 1px solid var(--border); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; cursor: pointer;">
+                                <i class="fas fa-plus"></i> Add Custom Card
+                            </button>
+                        </div>
+                        <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+                            <i class="fas fa-info-circle"></i> Tip: Use the format <code>[TITLE]: Content</code> to create separate cards.
+                        </div>
+                        <textarea name="description" id="descriptionInput" class="form-textarea" rows="8" placeholder="Select content above or write your own..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Image (Optional)</label>
+                        <input type="file" name="image" class="form-input" accept="image/*">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-check"></i> Publish Active Remedy
+                    </button>
+                </form>
+            </div>
+
+            <!-- History -->
+            <h3 style="margin-bottom: 1rem; color: var(--text-muted);">History</h3>
+            <div style="display: grid; gap: 1rem;">
+                {% for item in history %}
+                <div class="history-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; display: flex; align-items: center; justify-content: space-between; {% if item.is_active %}border-color: var(--primary); background: rgba(99, 102, 241, 0.1);{% endif %}">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        {% if item.image %}
+                        <img src="{{ item.image.url }}" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover;">
+                        {% else %}
+                        <div style="width: 40px; height: 40px; background: var(--bg-input); border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-pills" style="color: var(--text-muted);"></i>
+                        </div>
+                        {% endif %}
+                        <div>
+                            <div style="font-weight: 600;">{{ item.medicine_name }}</div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">{{ item.created_at|date:"M d, Y" }} - {{ item.source|title }}</div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        {% if item.is_active %}
+                        <span style="padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; background: rgba(16, 185, 129, 0.2); color: var(--success);">Active</span>
+                        {% else %}
+                        <form method="POST" style="display: inline;">
+                            {% csrf_token %}
+                            <input type="hidden" name="action" value="toggle">
+                            <input type="hidden" name="remedy_id" value="{{ item.id }}">
+                            <button class="btn" style="background: var(--bg-input); padding: 4px 10px; font-size: 0.8rem;">Make Active</button>
+                        </form>
+                        {% endif %}
+                        
+                        <!-- Share Button -->
+                        <button onclick="shareRemedy('{{ item.id }}', this)" title="Copy Link" style="background: none; border: none; color: var(--text-secondary); cursor: pointer; transition: color 0.2s;">
+                            <i class="fas fa-link"></i>
+                        </button>
+
+                        <form method="POST" style="display: inline;" onsubmit="return confirm('Delete this entry?');">
+                            {% csrf_token %}
+                            <input type="hidden" name="action" value="delete">
+                            <input type="hidden" name="remedy_id" value="{{ item.id }}">
+                            <button style="background: none; border: none; color: var(--danger); cursor: pointer;">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                {% empty %}
+                <p style="color: var(--text-muted);">No history yet.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedSource = null;
+        let selectedLetter = null;
+
+        // Initialize Alphabet
+        const alphaGrid = document.getElementById('alphaGrid');
+        const alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        alphabets.forEach(char => {
+            const btn = document.createElement('div');
+            btn.className = 'alpha-btn';
+            btn.textContent = char;
+            btn.onclick = () => selectLetter(char, btn);
+            alphaGrid.appendChild(btn);
+        });
+
+        // 1. Select Source
+        function selectSource(source, card) {
+            selectedSource = source;
+            document.getElementById('formSource').value = source;
+            
+            // UI Update
+            document.querySelectorAll('.source-card').forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
+            
+            // Show Alpha
+            document.getElementById('alphaContainer').style.display = 'block';
+            document.querySelector('.alpha-grid').style.display = 'flex';
+            
+            // Reset subsequent
+            document.getElementById('medicineContainer').style.display = 'none';
+            document.getElementById('contentContainer').style.display = 'none';
+            document.getElementById('finalForm').style.display = 'none';
+            
+            // Auto fetch all or wait for letter? Let's wait for letter to save bandwidth
+            // Or maybe fetch 'A' by default? No, let user choose.
+            // Reset Alpha selection
+            document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+            selectedLetter = null;
+        }
+
+        // 2. Select Letter
+        async function selectLetter(letter, btn) {
+            if (!selectedSource) return alert('Please select a source first.');
+            selectedLetter = letter;
+            
+            // UI Update
+            document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            document.getElementById('loadingSpinner').style.display = 'block';
+            document.getElementById('medicineList').innerHTML = '';
+            
+            try {
+                const url = `?action=get_medicines&source=${selectedSource}&letter=${letter}`;
+                const response = await fetch(url, { headers: {'X-Requested-With': 'XMLHttpRequest'} });
+                const data = await response.json();
+                
+                renderMedicines(data.medicines);
+            } catch (e) {
+                console.error(e);
+            } finally {
+                document.getElementById('loadingSpinner').style.display = 'none';
+            }
+        }
+
+        function renderMedicines(list) {
+            const container = document.getElementById('medicineContainer');
+            const listEl = document.getElementById('medicineList');
+            container.style.display = 'block';
+            listEl.style.display = 'grid';
+            
+            if (list.length === 0) {
+                listEl.innerHTML = '<p style="color:var(--text-muted); padding:1rem;">No medicines found.</p>';
+                return;
+            }
+
+            list.forEach(name => {
+                const div = document.createElement('div');
+                div.className = 'medicine-item';
+                div.textContent = name;
+                div.onclick = () => selectMedicine(name, div);
+                listEl.appendChild(div);
+            });
+        }
+
+        // 3. Select Medicine
+        async function selectMedicine(name, div) {
+            // UI Update
+            document.querySelectorAll('.medicine-item').forEach(i => i.classList.remove('active'));
+            div.classList.add('active');
+            
+            // Set values and show form
+            document.getElementById('medicineInput').value = name;
+            document.getElementById('selectedMedicineLabel').textContent = name;
+            document.getElementById('finalForm').style.display = 'block';
+            
+            // Fetch content
+            document.getElementById('loadingSpinner').style.display = 'block';
+            
+            try {
+                const url = `?action=get_content&source=${selectedSource}&medicine=${encodeURIComponent(name)}`;
+                const response = await fetch(url, { headers: {'X-Requested-With': 'XMLHttpRequest'} });
+                const data = await response.json();
+                
+                renderContentPicker(data.content);
+            } catch (e) {
+                console.error(e);
+            } finally {
+                document.getElementById('loadingSpinner').style.display = 'none';
+            }
+        }
+
+        function renderContentPicker(content) {
+            const picker = document.getElementById('contentPicker');
+            const container = document.getElementById('contentContainer');
+            
+            container.style.display = 'block';
+            picker.style.display = 'flex';
+            picker.innerHTML = '';
+            
+            // Clear textarea
+            document.getElementById('descriptionInput').value = '';
+
+            for (const [key, text] of Object.entries(content)) {
+                if (!text) continue;
+                
+                const chip = document.createElement('div');
+                chip.className = 'content-chip';
+                chip.innerHTML = `<i class="fas fa-plus"></i> ${key.replace(/_/g, ' ').toUpperCase()}`;
+                
+                chip.onclick = () => {
+                    toggleContent(key, text, chip);
+                };
+                
+                picker.appendChild(chip);
+            }
+        }
+
+        function toggleContent(key, text, chip) {
+            const textarea = document.getElementById('descriptionInput');
+            const currentVal = textarea.value;
+            const block = `[${key.toUpperCase()}]: ${text}\n\n`;
+            
+            if (chip.classList.contains('added')) {
+                // Remove (simple replace)
+                textarea.value = currentVal.replace(block, '').trim();
+                chip.classList.remove('added');
+                chip.innerHTML = `<i class="fas fa-plus"></i> ${key.replace(/_/g, ' ').toUpperCase()}`;
+            } else {
+                // Add
+                textarea.value = (currentVal + '\n' + block).trim();
+                chip.classList.add('added');
+                chip.innerHTML = `<i class="fas fa-check"></i> ${key.replace(/_/g, ' ').toUpperCase()}`;
+            }
+        }
+
+        function addCustomCard() {
+            const textarea = document.getElementById('descriptionInput');
+            const currentVal = textarea.value;
+            const template = `\n\n[NEW SECTION TITLE]: Your content here...`;
+            textarea.value = (currentVal + template).trim();
+            textarea.focus();
+        }
+
+        function shareRemedy(id, btn) {
+            const url = `${window.location.origin}/remedy-history/${id}/`;
+            
+            navigator.clipboard.writeText(url).then(() => {
+                const icon = btn.querySelector('i');
+                icon.className = 'fas fa-check';
+                btn.style.color = '#10b981'; // Success color
+                
+                setTimeout(() => {
+                    icon.className = 'fas fa-link';
+                    btn.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+    </script>
+</body>
+</html>

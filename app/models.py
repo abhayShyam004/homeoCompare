@@ -43,3 +43,26 @@ class Feedback(models.Model):
     
     def __str__(self):
         return f"{self.email} - {self.timestamp.strftime('%Y-%m-%d %H:%M')}"
+
+
+class RemedyOfTheDay(models.Model):
+    """Store the curated remedy of the day"""
+    medicine_name = models.CharField(max_length=200)
+    source = models.CharField(max_length=20, default='boericke')
+    description = models.TextField(help_text="Short daily insight or keynotes about this remedy.")
+    image = models.ImageField(upload_to='remedies/', null=True, blank=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name_plural = 'Remedies of the Day'
+    
+    def __str__(self):
+        return f"{self.medicine_name} ({self.created_at.date()})"
+    
+    def save(self, *args, **kwargs):
+        # If this one is active, deactivate all others
+        if self.is_active:
+            RemedyOfTheDay.objects.filter(is_active=True).update(is_active=False)
+        super().save(*args, **kwargs)

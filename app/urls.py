@@ -20,5 +20,10 @@ urlpatterns = [
     # Feedback
     path('submit-feedback/', views.submit_feedback, name='submit_feedback'),
     path('admin-panel/feedback/', views.admin_feedback_list, name='admin_feedback'),
+    
+    # Remedy of the Day
+    path('admin-panel/remedy-of-day/', views.admin_remedy_day, name='admin_remedy_day'),
+    path('remedy-history/', views.remedy_history, name='remedy_history'),
+    path('remedy-history/<int:remedy_id>/', views.remedy_history, name='remedy_history_detail'),
 ]
 

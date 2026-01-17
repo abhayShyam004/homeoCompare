@@ -1,0 +1,440 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedy of the Day History | HomeoCompare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #059669;
+            --primary-light: #10b981;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --text-white: #ffffff;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #334155;
+            --radius: 8px;
+            --radius-lg: 12px;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+            --warning: #f59e0b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+        }
+
+        /* Hamburger Button (Mobile Only) */
+        .hamburger-btn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 101;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius);
+            font-size: 1.2rem;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 90;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .overlay.active { opacity: 1; visibility: visible; }
+
+        /* Sidebar */
+        .sidebar {
+            width: 300px;
+            background: var(--bg-card);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .home-btn {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+        .home-btn:hover { color: var(--text-white); }
+
+        .history-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .history-item {
+            display: block;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--text-secondary);
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .history-item:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .history-item.active {
+            background: var(--bg-hover);
+            border-color: var(--primary);
+            color: var(--text-white);
+        }
+
+        .history-name { font-weight: 600; margin-bottom: 4px; }
+        .history-date { font-size: 0.8rem; opacity: 0.7; }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            background: var(--bg-dark);
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .remedy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 4rem;
+        }
+
+        .remedy-header { text-align: center; margin-bottom: 2.5rem; }
+
+        .date-badge {
+            display: inline-block;
+            background: var(--warning);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .remedy-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .remedy-source { color: var(--text-muted); font-style: italic; }
+
+        .remedy-image {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .remedy-image img {
+            max-height: 350px;
+            max-width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .content-card:hover { transform: translateY(-2px); }
+
+        .card-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-light);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .card-title::before {
+            content: ''; display: block; width: 6px; height: 6px; 
+            background: currentColor; border-radius: 50%;
+        }
+
+        .card-text {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .empty-state {
+            display: flex; flex-direction: column; align-items: center; 
+            justify-content: center; height: 100%; color: var(--text-muted);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body { position: relative; } /* Needed for absolute positioning context if any */
+            
+            .hamburger-btn { display: flex; }
+            
+            .sidebar { 
+                position: fixed;
+                top: 0; left: 0;
+                width: 280px;
+                transform: translateX(-100%);
+                border-right: none;
+                box-shadow: 2px 0 20px rgba(0,0,0,0.5);
+            }
+            .sidebar.active { transform: translateX(0); }
+            
+            .main-content { 
+                padding: 4rem 1.5rem 2rem; /* Add top padding for hamburger */
+                width: 100%;
+            }
+            
+            .remedy-title { font-size: 2rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            
+            /* Adjust home button and header in sidebar */
+            .sidebar-header { 
+                padding-top: 5rem; /* Push down below hamburger */
+                align-items: flex-start;
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger-btn" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Overlay -->
+    <div class="overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3 style="margin: 0; font-size: 1.1rem; color: var(--text-white); font-weight: 700;">
+                <i class="fas fa-history" style="color: var(--primary); margin-right: 8px;"></i> History
+            </h3>
+            <a href="{% url 'home' %}" class="home-btn">
+                <i class="fas fa-arrow-left"></i> Home
+            </a>
+        </div>
+        
+        <div class="history-list">
+            {% for item in history_list %}
+            <a href="{% url 'remedy_history_detail' item.id %}" class="history-item {% if selected_remedy.id == item.id %}active{% endif %}">
+                <div class="history-name">{{ item.medicine_name }}</div>
+                <div class="history-date">{{ item.created_at|date:"M d, Y" }}</div>
+            </a>
+            {% empty %}
+            <div style="padding: 1rem; text-align: center; color: var(--text-muted);">No history available.</div>
+            {% endfor %}
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% if selected_remedy %}
+        <div class="remedy-container">
+            
+            <div class="remedy-header">
+                <div class="date-badge">{{ selected_remedy.created_at|date:"F d, Y" }}</div>
+                <h1 class="remedy-title">{{ selected_remedy.medicine_name }}</h1>
+                <div class="remedy-source">
+                    Source: {% if selected_remedy.source == 'boericke' %}Boericke's Materia Medica{% else %}Allen's Keynotes{% endif %}
+                </div>
+                <!-- Share Button -->
+                <button onclick="shareRemedy('{{ selected_remedy.id }}')" style="margin-top: 1rem; background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 16px; border-radius: 50px; cursor: pointer; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+                    <i class="fas fa-share-alt"></i> Share Link
+                </button>
+            </div>
+
+            {% if selected_remedy.image %}
+            <div class="remedy-image">
+                <img src="{{ selected_remedy.image.url }}" alt="{{ selected_remedy.medicine_name }}">
+            </div>
+            {% endif %}
+
+            <!-- JS Parsed Content -->
+            <div id="rawDescription" style="display: none;">{{ selected_remedy.description }}</div>
+            <div id="remedyContentGrid" class="content-grid">
+                <!-- Content injected here -->
+            </div>
+
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <i class="fas fa-book-open" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+            <p>Select a remedy from the history to view details.</p>
+        </div>
+        {% endif %}
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar Toggle Logic
+            const toggle = document.getElementById('sidebarToggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                   sidebar.classList.add('active');
+                   overlay.classList.add('active');
+                });
+            }
+            
+            if (overlay) {
+                overlay.addEventListener('click', closeSidebar);
+            }
+
+            // Close when clicking a link on mobile
+            document.querySelectorAll('.history-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        closeSidebar();
+                    }
+                });
+            });
+
+
+            // Content Parsing Logic
+            const rawTextContainer = document.getElementById('rawDescription');
+            if (!rawTextContainer) return;
+            
+            const rawText = rawTextContainer.textContent;
+            const grid = document.getElementById('remedyContentGrid');
+            
+            // Regex to match [SECTION]: Content
+            const regex = /\[(.*?)\]:\s*([\s\S]*?)(?=\[|$)/g;
+            let match;
+            let hasMatches = false;
+
+            while ((match = regex.exec(rawText)) !== null) {
+                hasMatches = true;
+                const section = match[1].trim();
+                const content = match[2].trim();
+                
+                if (section && content) {
+                    const card = document.createElement('div');
+                    card.className = 'content-card';
+                    card.innerHTML = `
+                        <div class="card-title">${section.replace(/_/g, ' ')}</div>
+                        <div class="card-text">${content}</div>
+                    `;
+                    grid.appendChild(card);
+                }
+            }
+            
+            // Fallback for plain text
+            if (!hasMatches && rawText.trim()) {
+                grid.style.display = 'block';
+                grid.innerHTML = `
+                    <div class="content-card">
+                        <div class="card-text">${rawText.trim().replace(/\n/g, '<br>')}</div>
+                    </div>
+                `;
+            }
+        });
+
+        function shareRemedy(id) {
+            // Construct URL - adjust base URL dynamically
+            const url = `${window.location.origin}/remedy-history/${id}/`;
+            
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.querySelector('button[onclick*="' + id + '"]');
+                const originalHTML = btn.innerHTML;
+                
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.color = '#10b981';
+                btn.style.borderColor = '#10b981';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+                alert('Failed to copy link.');
+            });
+        }
+    </script>
+</body>
+</html>

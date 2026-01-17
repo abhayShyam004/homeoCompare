@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['homeocompare.life', 'localhost', '127.0.0.1']
 
@@ -126,4 +126,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'            # where collectstatic will dum
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Media files (User uploaded images)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
