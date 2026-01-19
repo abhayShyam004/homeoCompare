@@ -16609,8 +16609,8 @@
     "modalities": "",
     "relation": ""
   },
-  "PROVINGS OF THE X--RAY": {
-    "name": "PROVINGS OF THE X--RAY",
+  "PROVINGS OF THE X-RAY": {
+    "name": "PROVINGS OF THE X-RAY",
     "page": 517,
     "family": "",
     "description": "",
@@ -16793,5 +16793,47 @@
       "electric storms, thunder storms, Agar., Med., Nat-- c., Phos., Psor., Rhod., Sep., Sil., Syph., Thuj.",
       "Antidotes: Nux--v., Sulph. and the dynamic potencies of the remedy."
     ]
+  },
+  "ZINCUM METALLICUM": {
+    "name": "ZINCUM METALLICUM",
+    "page": 517,
+    "family": "",
+    "description": "Zinc",
+    "constitution": "Defective vitality. Brain and nerve power wanting; too weak to develop exanthemata or menstrual function; to expectorate, to urinate, to comprehend, to memorize. Cerebral and nervous exhaustion; defective vitality; brain or nerve power wanting.",
+    "mental generals": "Child repeats everything said to it. Screams during sleep; body jerks; wakes frightened, stares. Nervous, letharic. Automatic motion of hands and head, or one hand and head (Apoc., Bry., Hell.).",
+    "physical generals": "Incessant and violent fidgety feeling in feet or lower extremities; must move them constantly (legs, Tarent.). Ravenous hunger about 11 or 12 a.m. (Sulph.). Great greediness when eating; cannot eat fast enough. Feet sweaty and sore about toes; fetid; suppressed foot-sweat; very nervous. Chilblains, painful, < rubbing. Varicose veins of legs.",
+    "head": "Rolls head from side to side. Face alternately pale and red.",
+    "eyes": "Rolling of eyes. Squinting (Apis, Bell., Hell.).",
+    "vision": "",
+    "ears": "",
+    "hearing": "",
+    "nose": "",
+    "face": "",
+    "mouth": "Gnashing of teeth.",
+    "teeth": "",
+    "throat": "",
+    "appetite": "Ravenous hunger about 11 or 12 a.m. (Sulph.).",
+    "stomach": "",
+    "stool": "",
+    "abdomen": "",
+    "urinary system": "Can only void urine while sitting bent backwards. Hysterical retention.",
+    "gastro intestinal system": "",
+    "upper limbs": "",
+    "lower limbs": "Incessant and violent fidgety feeling in feet or lower extremities; must move them constantly. Varicose veins on lower extremities (puls.).",
+    "limbs in general": "",
+    "sleep": "Cries out during sleep; body jerks; wakes frightened.",
+    "injuries": "",
+    "female reproductive system": "Symptoms of the chest are > by expectoration; of the bladder, by urinating; of the back by emissions (< by, Cobalt, Kali c.); general, by menstrual flow.",
+    "male reproductive system": "",
+    "respiratory system": "Symptoms of chest > by expectoration.",
+    "cardio vascular system": "",
+    "neck": "",
+    "back": "Burning along whole length of spine (Phos., Pic-ac.). Backache much < from sitting, > walking about (Cobalt, Puls., Rhus-t., Sep.). Spinal irritation; great prostration of strength. Cannot bear back touched (Chin-s., Tarent., Ther.).",
+    "extremities": "Weakness and trembling of extremities; of hands while writing; during menses.",
+    "nervous system": "Chorea; from suppressed eruption; from fright. Twitching and jerking of single muscles (Agar., Ign.). Convulsions: During dentition, with pale face; no heat, except perhaps in occiput; no increase of temperature (rev. of Bell.).",
+    "skin": "Retrocession of eruptions (latter stages, Sulph.).",
+    "fever": "",
+    "modalities": "Aggravation: Of many symptoms from drinking wine, even a small quantity (Alum., Con., Glon.). Amelioration: Symptoms of chest by expectoration; of bladder by urinating; of back by emissions; general, by menstrual flow.",
+    "relation": "Inimical: Cham., Nux-v.; should not be used before or after. Ign. follows well in hiccough, hysterical spasms, etc."
   }
 }
