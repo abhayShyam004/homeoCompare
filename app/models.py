@@ -67,14 +67,13 @@ class RemedyOfTheDay(models.Model):
 class RemedyRelationship(models.Model):
     """
     Stores Dr. Gibson Miller's remedy relationships.
-    Columns: Remedy, Complements, Follows Well, Antidotes, Inimical, Duration.
+    Columns: Remedy, Complements, Follows Well, Antidotes, Inimical.
     """
     remedy = models.CharField(max_length=200, unique=True, help_text="Name of the primary remedy")
     complements = models.TextField(blank=True, help_text="Remedies that act as complements")
     follows = models.TextField(blank=True, help_text="Remedies that operate well after this")
     antidotes = models.TextField(blank=True, help_text="Remedies that antidote this one")
     inimical = models.TextField(blank=True, help_text="Incompatible remedies")
-    duration = models.CharField(max_length=100, blank=True, help_text="Duration of action")
     
     class Meta:
         verbose_name = "Remedy Relationship"
@@ -83,3 +82,19 @@ class RemedyRelationship(models.Model):
 
     def __str__(self):
         return self.remedy
+
+
+class RemedyDuration(models.Model):
+    """
+    Stores duration of action for remedies.
+    """
+    remedy = models.CharField(max_length=200, unique=True, help_text="Name of the remedy")
+    duration = models.CharField(max_length=100, help_text="Duration of action (e.g., '30-40 days')")
+    
+    class Meta:
+        verbose_name = "Remedy Duration"
+        verbose_name_plural = "Remedy Durations"
+        ordering = ['remedy']
+
+    def __str__(self):
+        return f"{self.remedy} - {self.duration}"

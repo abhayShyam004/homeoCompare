@@ -327,8 +327,7 @@ def relationships_view(request):
             'complements': r.complements,
             'follows': r.follows,
             'antidotes': r.antidotes,
-            'inimical': r.inimical,
-            'duration': r.duration
+            'inimical': r.inimical
         })
 
     # Group data alphabetically for the view (simulating multiple tables)
@@ -1084,7 +1083,6 @@ def admin_relationship_save(request):
                 'follows': data.get('follows'),
                 'antidotes': data.get('antidotes'),
                 'inimical': data.get('inimical'),
-                'duration': data.get('duration'),
             }
             
             if pid:
@@ -1101,3 +1099,93 @@ def admin_relationship_save(request):
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
+
+# === DURATIONS ===
+
+def durations_view(request):
+    """Public page showing remedy durations"""
+    from .models import RemedyDuration
+    
+    durations = RemedyDuration.objects.all().order_by('remedy')
+    
+    # Group by first letter
+    by_letter = {}
+    for d in durations:
+        letter = d.remedy[0].upper() if d.remedy else 'A'
+        if letter not in by_letter:
+            by_letter[letter] = []
+        by_letter[letter].append(d)
+    
+    context = {
+        'durations': durations,
+        'by_letter': dict(sorted(by_letter.items())),
+        'total_count': durations.count(),
+    }
+    return render(request, 'app/durations.html', context)
+
+
+@require_admin
+def admin_durations_list(request):
+    """Admin page for managing remedy durations"""
+    from .models import RemedyDuration
+    
+    durations = RemedyDuration.objects.all().order_by('remedy')
+    
+    # Group by letter
+    by_letter = {}
+    for d in durations:
+        letter = d.remedy[0].upper() if d.remedy else 'A'
+        if letter not in by_letter:
+            by_letter[letter] = []
+        by_letter[letter].append(d)
+        
+    context = {
+        'authenticated': True,
+        'source': 'durations',
+        'source_title': "Remedy Durations",
+        'durations': durations,
+        'by_letter': dict(sorted(by_letter.items())),
+        'total_count': durations.count(),
+    }
+    return render(request, 'app/admin_durations.html', context)
+
+
+@require_admin
+def admin_duration_save(request):
+    """Save/delete duration data via AJAX"""
+    from django.http import JsonResponse
+    from .models import RemedyDuration
+    
+    if request.method != 'POST':
+        return JsonResponse({'status': 'error', 'message': 'POST required'}, status=400)
+    
+    try:
+        data = json.loads(request.body)
+        action = data.get('action')
+        
+        if action == 'delete':
+            pid = data.get('id')
+            RemedyDuration.objects.filter(id=pid).delete()
+            return JsonResponse({'status': 'ok'})
+            
+        elif action == 'save':
+            pid = data.get('id')
+            
+            defaults = {
+                'remedy': data.get('remedy'),
+                'duration': data.get('duration'),
+            }
+            
+            if pid:
+                # Update
+                RemedyDuration.objects.update_or_create(id=pid, defaults=defaults)
+            else:
+                # Create
+                RemedyDuration.objects.create(**defaults)
+                
+            return JsonResponse({'status': 'ok'})
+            
+        return JsonResponse({'status': 'error', 'message': 'Invalid action'}, status=400)
+        
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)

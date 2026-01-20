@@ -6,7 +6,7 @@ import django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "medicomp.settings")
 django.setup()
 
-from app.models import RemedyRelationship
+from app.models import RemedyRelationship, RemedyDuration
 from django.conf import settings
 
 def run():
@@ -46,28 +46,51 @@ def run():
 
     print(f"Found {len(data)} records. Importing...")
     
-    count = 0
+    count_rel = 0
+    count_dur = 0
     errors = 0
+    
     for item in data:
+        remedy_name = item.get('remedy')
+        if not remedy_name:
+            continue
+
+        # 1. Update/Create Relationship
         try:
-            # Update or create to avoid duplicates
             obj, created = RemedyRelationship.objects.update_or_create(
-                remedy=item.get('remedy'),
+                remedy=remedy_name,
                 defaults={
                     'complements': item.get('complements', ''),
                     'follows': item.get('follows', ''),
                     'antidotes': item.get('antidotes', ''),
                     'inimical': item.get('inimical', ''),
-                    'duration': item.get('duration', '')
+                    # Duration removed from this model
                 }
             )
-            if created: count += 1
+            if created: count_rel += 1
         except Exception as e:
-            print(f"Error saving {item.get('remedy')}: {e}")
+            print(f"Error saving Relationship {remedy_name}: {e}")
             errors += 1
 
-    print(f"Import complete. {count} new records created. {errors} errors.")
-    print(f"Total records in DB: {RemedyRelationship.objects.count()}")
+        # 2. Update/Create Duration
+        duration_val = item.get('duration', '')
+        if duration_val:
+            try:
+                obj, created = RemedyDuration.objects.update_or_create(
+                    remedy=remedy_name,
+                    defaults={
+                        'duration': duration_val
+                    }
+                )
+                if created: count_dur += 1
+            except Exception as e:
+                print(f"Error saving Duration {remedy_name}: {e}")
+                errors += 1
+
+    print(f"Import complete.")
+    print(f"RemedyRelationship: {count_rel} new, Total: {RemedyRelationship.objects.count()}")
+    print(f"RemedyDuration: {count_dur} new, Total: {RemedyDuration.objects.count()}")
+    print(f"Errors: {errors}")
 
 if __name__ == "__main__":
     run()

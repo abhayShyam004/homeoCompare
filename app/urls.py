@@ -22,6 +22,11 @@ urlpatterns = [
     path('admin-panel/relationships/', views.admin_relationships_list, name='admin_relationships'),
     path('admin-panel/relationships/save/', views.admin_relationship_save, name='admin_relationship_save'),
 
+    # Durations
+    path('durations/', views.durations_view, name='durations'),
+    path('admin-panel/durations/', views.admin_durations_list, name='admin_durations'),
+    path('admin-panel/durations/save/', views.admin_duration_save, name='admin_duration_save'),
+
     path('api/track-search/', views.track_search_api, name='track_search_api'),
     
     # Feedback

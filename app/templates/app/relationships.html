@@ -114,7 +114,7 @@
                 transition: left 0.3s ease;
                 width: 250px; /* Smaller sidebar on mobile */
             }
-            content-area {
+            .content-area {
                 padding: 1rem;
             }
             .sidebar.active {
@@ -139,14 +139,30 @@
                 cursor: pointer;
             }
 
-            /* Table Scroll */
+            /* Table - Keep tabular format but allow text wrapping */
             .rel-table-container {
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
             }
+            
             .rel-table th, .rel-table td {
-                white-space: nowrap; /* Prevent wrapping for better reading */
-                min-width: 120px;
+                white-space: normal; /* Allow text wrapping */
+                word-wrap: break-word;
+                min-width: 150px; /* Wider cells to fit ~5 remedies before wrap */
+                padding: 0.75rem 0.5rem;
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+            
+            .rel-table th {
+                font-size: 0.7rem;
+                min-width: 100px;
+            }
+            
+            /* First column (Remedy name) can be narrower */
+            .rel-table td:first-child,
+            .rel-table th:first-child {
+                min-width: 90px;
             }
         }
 
@@ -192,7 +208,7 @@
             <button class="mobile-toggle" id="toggleBtn">
                 <i class="fas fa-bars"></i>
             </button>
-            <h2 style="font-size: 1.1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Relationship of Remedies</h2>
+            <h2 style="font-size: 1.1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; text-align: center;">Relationship of Remedies</h2>
         </header>
         
         <div class="content-area">
@@ -208,22 +224,20 @@
                         <thead>
                             <tr>
                                 <th width="15%">Remedy</th>
-                                <th width="20%">Complements</th>
-                                <th width="20%">Remedies that Follow</th>
-                                <th width="20%">Antidotes</th>
-                                <th width="15%">Inimical</th>
-                                <th width="10%">Duration</th>
+                                <th width="22%">Complements</th>
+                                <th width="23%">Remedies that Follow</th>
+                                <th width="22%">Antidotes</th>
+                                <th width="18%">Inimical</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for item in items %}
                             <tr class="searchable-row">
-                                <td style="font-weight:600; color:var(--primary);">{{ item.remedy }}</td>
-                                <td>{{ item.complements }}</td>
-                                <td>{{ item.follows }}</td>
-                                <td>{{ item.antidotes }}</td>
-                                <td style="color:#ef4444;">{{ item.inimical }}</td>
-                                <td>{{ item.duration }}</td>
+                                <td data-label="Remedy" style="font-weight:600; color:var(--primary);">{{ item.remedy }}</td>
+                                <td data-label="Complements">{{ item.complements }}</td>
+                                <td data-label="Follows Well">{{ item.follows }}</td>
+                                <td data-label="Antidotes">{{ item.antidotes }}</td>
+                                <td data-label="Inimical" style="color:#ef4444;">{{ item.inimical }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>

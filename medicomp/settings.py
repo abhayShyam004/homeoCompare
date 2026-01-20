@@ -90,9 +90,17 @@ DATABASES = {
 }
 
 # Override with PostgreSQL if DATABASE_URL is present and valid
-database_url = os.environ.get('DATABASE_URL', '')
+# Use decouple's config() to read from .env file
+database_url = config('DATABASE_URL', default='')
 if database_url and database_url.startswith(('postgres://', 'postgresql://')):
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+    # Use conn_max_age=0 for Neon serverless (connections are closed after each request)
+    # This prevents "server closed the connection unexpectedly" errors
+    DATABASES['default'] = dj_database_url.config(
+        default=database_url, 
+        conn_max_age=0,  # Don't persist connections (Neon closes idle connections)
+        conn_health_checks=True,  # Check connection health before reuse
+        ssl_require=True
+    )
 
 
 # Password validation

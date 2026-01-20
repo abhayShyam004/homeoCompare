@@ -137,20 +137,18 @@
         }
         .alpha-btn:hover, .alpha-btn.active { background: var(--primary); color: white; }
 
-        /* Table Desktop */
+        /* Table */
         .data-table-wrapper {
             background: var(--bg-card); border: 1px solid var(--border);
             border-radius: var(--radius-lg); overflow: hidden;
         }
         .data-table {
-            width: 100%; border-collapse: collapse; 
-            table-layout: fixed;
+            width: 100%; border-collapse: collapse;
         }
         .data-table th, .data-table td {
             text-align: left; padding: 0.75rem 1rem;
             border-bottom: 1px solid var(--border);
             vertical-align: top;
-            word-wrap: break-word;
         }
         .data-table th {
             background: var(--bg-input); color: var(--text-muted);
@@ -159,8 +157,8 @@
         }
         .data-table tr:hover { background: var(--bg-hover); }
         
-        .cell-remedy { font-weight: 600; color: var(--primary-light); width: 15%; }
-        .cell-text { font-size: 0.9rem; color: var(--text-secondary); white-space: normal; }
+        .cell-remedy { font-weight: 600; color: var(--primary-light); }
+        .cell-duration { color: var(--text-secondary); }
         .cell-actions { white-space: nowrap; width: 100px; text-align: right; }
 
         .action-btn {
@@ -179,29 +177,23 @@
         }
         .modal-card {
             background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); width: 95%; max-width: 1100px;
-            max-height: 90vh; overflow-y: auto; overflow-x: hidden;
-            position: relative;
+            border-radius: var(--radius-lg); width: 95%; max-width: 500px;
+            max-height: 90vh; overflow-y: auto;
         }
         .modal-header { padding: 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .modal-body { padding: 1.5rem; }
         .modal-footer { padding: 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 1rem; }
         
-        /* Modal Table (Edit) */
-        .modal-table {
-            width: 100%; min-width: 900px; border-collapse: collapse;
+        .form-group { margin-bottom: 1rem; }
+        .form-label { display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem; font-weight: 500; }
+        .form-input { 
+            width: 100%; padding: 10px 12px;
+            background: var(--bg-input); border: 1px solid var(--border);
+            color: var(--text-primary); border-radius: var(--radius);
         }
-        .modal-table th { text-align: left; padding: 0.5rem; color: var(--text-secondary); font-size: 0.8rem; }
-        .modal-table td { padding: 0.5rem; vertical-align: top; }
-        .modal-input { width: 100%; background: var(--bg-input); border: 1px solid var(--border); color: var(--text-primary); padding: 8px; border-radius: 4px; }
-        .modal-textarea { width: 100%; background: var(--bg-input); border: 1px solid var(--border); color: var(--text-primary); padding: 8px; border-radius: 4px; resize: vertical; min-height: 100px; }
-        
-        /* View Detail Table (Mobile) */
-        .detail-table { width: 100%; border-collapse: collapse; }
-        .detail-table th { width: 120px; color: var(--text-muted); padding: 8px 0; vertical-align: top; }
-        .detail-table td { color: var(--text-primary); padding: 8px 0; }
+        .form-input:focus { outline: none; border-color: var(--primary); }
 
-        /* Mobile Responsive */
+        /* Mobile */
         .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
         
         @media (max-width: 1000px) {
@@ -209,31 +201,84 @@
             .sidebar.active { transform: translateX(0); }
             .main-wrapper { margin-left: 0; }
             .mobile-menu-btn { display: block; }
-            .topbar { padding: 0 1rem; } /* Reduced padding */
+            .topbar { padding: 0 1rem; }
         }
 
-        /* Mobile List View */
         @media (max-width: 768px) {
             .data-table thead { display: none; }
-            .data-table, .data-table tbody, .data-table tr, .data-table td { display: block; width: 100%; }
+            .data-table, .data-table tbody { display: block; width: 100%; }
+            
             .data-table tr { 
-                margin-bottom: 1rem; border: 1px solid var(--border); 
-                border-radius: var(--radius); padding: 0.5rem; 
-                cursor: pointer; position: relative;
+                display: flex; 
+                flex-wrap: wrap;
+                align-items: center; /* Vertically center the header items */
+                margin-bottom: 1rem; 
+                border: 1px solid var(--border); 
+                border-radius: var(--radius); 
+                padding: 1rem; 
+                background: var(--bg-card);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             }
-            .data-table tr:hover { background: var(--primary-dark); }
+            .data-table td { border-bottom: none; padding: 0; display: block; }
             
-            /* Hide columns except Remedy */
-            .data-table td { border-bottom: none; padding: 0.5rem; }
-            .cell-remedy { font-size: 1.1rem; width: 100%; }
-            .cell-text, .cell-actions { display: none; } /* Hide details & actions */
+            /* Order 1: Remedy Name (Left Side) */
+            .cell-remedy {
+                order: 1;
+                flex: 1; /* Takes available space */
+                min-width: 0; /* Allows text truncation if needed */
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: var(--text-white) !important;
+                margin-right: 0.5rem;
+            }
+            .cell-remedy::before { display: none !important; }
             
-            /* Add chevron prompt */
-            .item-row::after {
-                content: '\f054'; font-family: 'Font Awesome 5 Free'; font-weight: 900;
-                position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+            /* Order 2: Actions (Right Side) */
+            .cell-actions {
+                order: 2;
+                width: auto;
+                text-align: right;
+                white-space: nowrap;
+            }
+            .action-btn {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 4px;
+                width: 36px; height: 36px; /* Slightly larger */
+                display: inline-flex; align-items: center; justify-content: center;
+                margin-left: 8px;
+            }
+            
+            /* Order 3: Duration (New Line) */
+            .cell-duration {
+                order: 3;
+                width: 100%;
+                margin-top: 0.75rem;
+                padding-top: 0.75rem !important;
+                border-top: 1px solid var(--border);
+                color: var(--text-secondary);
+                font-size: 0.95rem;
+            }
+            .cell-duration::before {
+                content: "Duration";
+                text-transform: uppercase;
+                font-size: 0.7rem;
+                font-weight: 600;
                 color: var(--text-muted);
+                display: block;
+                margin-bottom: 4px;
             }
+
+            .desktop-inline { display: none; }
+            
+            /* Alpha bar scrolling */
+            .alpha-bar {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                -webkit-overflow-scrolling: touch;
+            }
+            .alpha-btn { flex: 0 0 auto; }
         }
     </style>
 </head>
@@ -259,8 +304,8 @@
                 <div class="nav-section-title">Manage Medicines</div>
                 <a href="{% url 'admin_boericke' %}" class="nav-link"><i class="fas fa-book"></i><span>Boericke's</span></a>
                 <a href="{% url 'admin_allen' %}" class="nav-link"><i class="fas fa-book-medical"></i><span>Allen's Keynotes</span></a>
-                <a href="{% url 'admin_relationships' %}" class="nav-link active"><i class="fas fa-project-diagram"></i><span>Relationship Table</span></a>
-                <a href="{% url 'admin_durations' %}" class="nav-link"><i class="fas fa-clock"></i><span>Durations</span></a>
+                <a href="{% url 'admin_relationships' %}" class="nav-link"><i class="fas fa-project-diagram"></i><span>Relationship Table</span></a>
+                <a href="{% url 'admin_durations' %}" class="nav-link active"><i class="fas fa-clock"></i><span>Durations</span></a>
             </div>
             <div class="nav-section">
                 <div class="nav-section-title">Management</div>
@@ -272,14 +317,12 @@
 
     <div class="main-wrapper">
         <header class="topbar">
-            <!-- Left: Burger & Title -->
             <div class="topbar-left">
                 <button class="mobile-menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
-                <h1 class="topbar-title">Relationship Table</h1>
+                <h1 class="topbar-title">Remedy Durations</h1>
             </div>
-            <!-- Right: Actions -->
             <div class="topbar-actions">
-                <button class="btn btn-primary" onclick="openModal()"><i class="fas fa-plus"></i><span style="display:none;" class="desktop-inline"> Add New</span></button>
+                <button class="btn btn-primary" onclick="openModal()"><i class="fas fa-plus"></i><span class="desktop-inline"> Add New</span></button>
             </div>
         </header>
 
@@ -304,35 +347,33 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th style="width: 15%;">Remedy</th>
-                            <th style="width: 20%;">Complements</th>
-                            <th style="width: 20%;">Follows Well</th>
-                            <th style="width: 20%;">Antidotes</th>
-                            <th style="width: 18%;">Inimical</th>
-                            <th style="width: 7%;">Actions</th>
+                            <th style="width: 50%;">Remedy</th>
+                            <th style="width: 35%;">Duration</th>
+                            <th style="width: 15%;">Actions</th>
                         </tr>
                     </thead>
                     <tbody id="tableBody">
                         {% for letter, items in by_letter.items %}
-                            {% for r in items %}
-                            <tr class="item-row" id="row-{{ r.id }}" data-letter="{{ letter }}" data-name="{{ r.remedy|lower }}" onclick="viewDetails({{ r.id }}, '{{ r.remedy }}')">
-                                <td class="cell-remedy">{{ r.remedy }}</td>
-                                <div style="display:none;" id="data-{{ r.id }}" 
-                                     data-remedy="{{ r.remedy }}"
-                                     data-complements="{{ r.complements }}"
-                                     data-follows="{{ r.follows }}"
-                                     data-antidotes="{{ r.antidotes }}"
-                                     data-inimical="{{ r.inimical }}"></div>
-                                <td class="cell-text">{{ r.complements }}</td>
-                                <td class="cell-text">{{ r.follows }}</td>
-                                <td class="cell-text">{{ r.antidotes }}</td>
-                                <td class="cell-text">{{ r.inimical }}</td>
-                                <td class="cell-actions" onclick="event.stopPropagation()">
-                                    <button class="action-btn" onclick='editItem({{ r.id }})' title="Edit"><i class="fas fa-edit"></i></button>
-                                    <button class="action-btn delete" onclick="deleteItem({{ r.id }})" title="Delete"><i class="fas fa-trash"></i></button>
+                            {% for d in items %}
+                            <tr class="item-row" id="row-{{ d.id }}" data-letter="{{ letter }}" data-name="{{ d.remedy|lower }}">
+                                <td class="cell-remedy" data-label="Remedy">{{ d.remedy }}</td>
+                                <td class="cell-duration" data-label="Duration">{{ d.duration }}</td>
+                                <div style="display:none;" id="data-{{ d.id }}" 
+                                     data-remedy="{{ d.remedy }}"
+                                     data-duration="{{ d.duration }}"></div>
+                                <td class="cell-actions">
+                                    <button class="action-btn" onclick='editItem({{ d.id }})' title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="action-btn delete" onclick="deleteItem({{ d.id }})" title="Delete"><i class="fas fa-trash"></i></button>
                                 </td>
                             </tr>
                             {% endfor %}
+                        {% empty %}
+                        <tr>
+                            <td colspan="3" style="text-align:center; padding:3rem; color: var(--text-muted);">
+                                <i class="fas fa-clock" style="font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+                                No duration data yet. Click "Add New" to add remedies.
+                            </td>
+                        </tr>
                         {% endfor %}
                     </tbody>
                 </table>
@@ -340,61 +381,27 @@
         </main>
     </div>
 
-    <!-- View Detail Modal (Mobile) -->
-    <div class="modal-overlay" id="viewModal">
-        <div class="modal-card" style="max-width: 500px;">
-            <div class="modal-header">
-                <h3 id="viewTitle">Remedy Details</h3>
-                <button class="action-btn" onclick="closeViewModal()"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <table class="detail-table">
-                    <tr><th>Complements</th><td id="viewComplements"></td></tr>
-                    <tr><th>Follows Well</th><td id="viewFollows"></td></tr>
-                    <tr><th>Antidotes</th><td id="viewAntidotes"></td></tr>
-                    <tr><th>Inimical</th><td id="viewInimical"></td></tr>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger" id="viewDeleteBtn"><i class="fas fa-trash"></i> Delete</button>
-                <button class="btn btn-primary" id="viewEditBtn"><i class="fas fa-edit"></i> Edit</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Edit/Add Modal (Tabular Layout for Desktop, adapted for scrolling) -->
+    <!-- Edit/Add Modal -->
     <div class="modal-overlay" id="editModal">
         <div class="modal-card">
             <div class="modal-header">
-                <h3 id="modalTitle">Edit Relationship</h3>
+                <h3 id="modalTitle">Add Duration</h3>
                 <button class="action-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
             </div>
-            <div class="modal-body" style="overflow-x: auto;">
+            <div class="modal-body">
                 <input type="hidden" id="editId">
-                <table class="modal-table">
-                    <thead>
-                        <tr>
-                            <th style="min-width:150px">Remedy</th>
-                            <th style="min-width:200px">Complements</th>
-                            <th style="min-width:200px">Follows Well</th>
-                            <th style="min-width:200px">Antidotes</th>
-                            <th style="min-width:200px">Inimical</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="text" class="modal-input" id="editRemedy" placeholder="Name"></td>
-                            <td><textarea class="modal-textarea" id="editComplements" rows="3"></textarea></td>
-                            <td><textarea class="modal-textarea" id="editFollows" rows="3"></textarea></td>
-                            <td><textarea class="modal-textarea" id="editAntidotes" rows="3"></textarea></td>
-                            <td><textarea class="modal-textarea" id="editInimical" rows="3"></textarea></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="form-group">
+                    <label class="form-label">Remedy Name</label>
+                    <input type="text" class="form-input" id="editRemedy" placeholder="e.g., Aconitum Napellus">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Duration of Action</label>
+                    <input type="text" class="form-input" id="editDuration" placeholder="e.g., 1-7 days">
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
-                <button class="btn btn-primary" onclick="saveItem()">Save Changes</button>
+                <button class="btn btn-primary" onclick="saveItem()">Save</button>
             </div>
         </div>
     </div>
@@ -425,53 +432,20 @@
             overlay.classList.toggle('active');
         }
 
-        // View Detail Logic
-        function viewDetails(id, remedy) {
-            if (window.innerWidth > 768) return; // Only for mobile
-            
-            const d = document.getElementById('data-' + id).dataset;
-            document.getElementById('viewTitle').innerText = remedy;
-            document.getElementById('viewComplements').innerText = d.complements;
-            document.getElementById('viewFollows').innerText = d.follows;
-            document.getElementById('viewAntidotes').innerText = d.antidotes;
-            document.getElementById('viewInimical').innerText = d.inimical;
-            
-            // Setup buttons
-            document.getElementById('viewEditBtn').onclick = function() { closeViewModal(); editItem(id); };
-            document.getElementById('viewDeleteBtn').onclick = function() { deleteItem(id); };
-            
-            document.getElementById('viewModal').style.display = 'flex';
-        }
-
-        function closeViewModal() {
-            document.getElementById('viewModal').style.display = 'none';
-        }
-
-        // Edit/Add Modal
+        // Modal
         function openModal() {
-            const id = 'edit'; // helper
-            // Reset fields
             document.getElementById('editId').value = '';
             document.getElementById('editRemedy').value = '';
-            document.getElementById('editComplements').value = '';
-            document.getElementById('editFollows').value = '';
-            document.getElementById('editAntidotes').value = '';
-            document.getElementById('editInimical').value = '';
-            document.getElementById('modalTitle').textContent = 'Add Relationship';
+            document.getElementById('editDuration').value = '';
+            document.getElementById('modalTitle').textContent = 'Add Duration';
             document.getElementById('editModal').style.display = 'flex';
         }
 
         function editItem(id) {
-            // Get data from DOM
             const d = document.getElementById('data-' + id).dataset;
-            
             document.getElementById('editId').value = id;
             document.getElementById('editRemedy').value = d.remedy;
-            document.getElementById('editComplements').value = d.complements;
-            document.getElementById('editFollows').value = d.follows;
-            document.getElementById('editAntidotes').value = d.antidotes;
-            document.getElementById('editInimical').value = d.inimical;
-            
+            document.getElementById('editDuration').value = d.duration;
             document.getElementById('modalTitle').textContent = 'Edit ' + d.remedy;
             document.getElementById('editModal').style.display = 'flex';
         }
@@ -481,19 +455,15 @@
         }
 
         async function saveItem() {
-            // ... same save logic ...
-             const id = document.getElementById('editId').value;
+            const id = document.getElementById('editId').value;
             const data = {
                 action: 'save',
                 id: id || null,
                 remedy: document.getElementById('editRemedy').value,
-                complements: document.getElementById('editComplements').value,
-                follows: document.getElementById('editFollows').value,
-                antidotes: document.getElementById('editAntidotes').value,
-                inimical: document.getElementById('editInimical').value,
+                duration: document.getElementById('editDuration').value,
             };
             try {
-                const resp = await fetch('{% url "admin_relationship_save" %}', {
+                const resp = await fetch('{% url "admin_duration_save" %}', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}' },
                     body: JSON.stringify(data)
@@ -505,7 +475,7 @@
         async function deleteItem(id) {
             if (!confirm('Are you sure you want to delete this?')) return;
             try {
-                const resp = await fetch('{% url "admin_relationship_save" %}', {
+                const resp = await fetch('{% url "admin_duration_save" %}', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}' },
                     body: JSON.stringify({ action: 'delete', id: id })

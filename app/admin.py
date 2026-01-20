@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PageView, SearchQuery, Feedback, RemedyOfTheDay, RemedyRelationship
+from .models import PageView, SearchQuery, Feedback, RemedyOfTheDay, RemedyRelationship, RemedyDuration
 
 @admin.register(PageView)
 class PageViewAdmin(admin.ModelAdmin):
@@ -26,6 +26,12 @@ class RemedyOfTheDayAdmin(admin.ModelAdmin):
 
 @admin.register(RemedyRelationship)
 class RelationAdmin(admin.ModelAdmin):
-    list_display = ('remedy', 'duration')
+    list_display = ('remedy',)
     search_fields = ('remedy', 'complements', 'follows', 'antidotes', 'inimical')
-    list_filter = ('duration',)
+
+@admin.register(RemedyDuration)
+class DurationAdmin(admin.ModelAdmin):
+    list_display = ('remedy', 'duration')
+    search_fields = ('remedy', 'duration')
+    ordering = ('remedy',)
+
