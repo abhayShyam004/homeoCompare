@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'medicomp.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 import dj_database_url
+import os
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -88,9 +89,10 @@ DATABASES = {
     }
 }
 
-# Override with PostgreSQL if DATABASE_URL is present
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+# Override with PostgreSQL if DATABASE_URL is present and valid
+database_url = os.environ.get('DATABASE_URL', '')
+if database_url and database_url.startswith(('postgres://', 'postgresql://')):
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
