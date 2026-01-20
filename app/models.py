@@ -61,8 +61,25 @@ class RemedyOfTheDay(models.Model):
     def __str__(self):
         return f"{self.medicine_name} ({self.created_at.date()})"
     
-    def save(self, *args, **kwargs):
-        # If this one is active, deactivate all others
-        if self.is_active:
-            RemedyOfTheDay.objects.filter(is_active=True).update(is_active=False)
         super().save(*args, **kwargs)
+
+
+class RemedyRelationship(models.Model):
+    """
+    Stores Dr. Gibson Miller's remedy relationships.
+    Columns: Remedy, Complements, Follows Well, Antidotes, Inimical, Duration.
+    """
+    remedy = models.CharField(max_length=200, unique=True, help_text="Name of the primary remedy")
+    complements = models.TextField(blank=True, help_text="Remedies that act as complements")
+    follows = models.TextField(blank=True, help_text="Remedies that operate well after this")
+    antidotes = models.TextField(blank=True, help_text="Remedies that antidote this one")
+    inimical = models.TextField(blank=True, help_text="Incompatible remedies")
+    duration = models.CharField(max_length=100, blank=True, help_text="Duration of action")
+    
+    class Meta:
+        verbose_name = "Remedy Relationship"
+        verbose_name_plural = "Relationship Table (Gibson Miller)"
+        ordering = ['remedy']
+
+    def __str__(self):
+        return self.remedy

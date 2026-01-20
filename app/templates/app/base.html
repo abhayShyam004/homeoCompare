@@ -1062,6 +1062,44 @@
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
 
+        /* Bookmarks */
+        .bookmark-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 4px;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+        .bookmark-btn:hover {
+            color: var(--warning);
+            transform: scale(1.1);
+        }
+        .bookmark-btn.active {
+            color: var(--warning);
+        }
+        .sidebar-section .count-badge {
+            background: var(--primary);
+            color: white;
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 100px;
+            margin-left: auto;
+            font-weight: 600;
+        }
+        .browser-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         /* Mobile */
         @media (max-width: 1024px) {
             .sidebar { transform: translateX(-100%); }
@@ -1148,6 +1186,11 @@
                         <i class="fas fa-eraser"></i>
                         Clear Form
                     </button>
+                    <a href="{% url 'saved_remedies' %}" class="action-btn">
+                        <i class="fas fa-star" style="color: var(--warning);"></i>
+                        My Saved Remedies
+                        <span class="count-badge saved-count-badge" style="display:none">0</span>
+                    </a>
                     <a href="{% url 'allen_compare' %}" class="action-btn">
                         <i class="fas fa-exchange-alt"></i>
                         Switch to Allen's
@@ -1332,8 +1375,15 @@
                 matches.forEach(m => {
                     const div = document.createElement('div');
                     div.className = 'search-result-item';
-                    div.innerHTML = `<i class="fas fa-leaf"></i> ${m}`;
-                    div.onclick = () => addRemedyToForm(m);
+                    // Use span for text to allow flexbox spacing
+                    div.innerHTML = `
+                        <span onclick="addRemedyToForm('${m}')" style="display:flex; align-items:center; gap:8px; flex:1;">
+                            <i class="fas fa-leaf"></i> ${m}
+                        </span>
+                        <button class="bookmark-btn" data-name="${m}" data-source="boericke" onclick="event.stopPropagation(); BookmarksManager.toggle('${m}', 'boericke', '${m}')">
+                            <i class="far fa-star"></i>
+                        </button>
+                    `;
                     sidebarResults.appendChild(div);
                 });
                 sidebarResults.style.display = 'block';
@@ -1384,8 +1434,12 @@
                         <div class="recent-name">${r}</div>
                         <div class="recent-time">Click to add</div>
                     </div>
+                    <button class="bookmark-btn" data-name="${r}" data-source="boericke" onclick="event.stopPropagation(); BookmarksManager.toggle('${r}', 'boericke', '${r}')">
+                        <i class="far fa-star"></i>
+                    </button>
                 </div>
             `).join('');
+            if(window.BookmarksManager) BookmarksManager.updateUI();
         }
         document.getElementById('clearRecent').addEventListener('click', () => {
             localStorage.removeItem('recentRemediesBoericke');
@@ -1437,8 +1491,14 @@
             const list = document.getElementById('browserList');
             document.getElementById('browserTitle').textContent = `Remedies: ${letter}`;
             list.innerHTML = remedyByLetter[letter].map(r => `
-                <div class="browser-item" onclick="addRemedyToForm('${r}')">${r}</div>
+                <div class="browser-item">
+                    <span onclick="addRemedyToForm('${r}')" style="flex:1; cursor:pointer;">${r}</span>
+                    <button class="bookmark-btn" data-name="${r}" data-source="boericke" onclick="event.stopPropagation(); BookmarksManager.toggle('${r}', 'boericke', '${r}')">
+                        <i class="far fa-star"></i>
+                    </button>
+                </div>
             `).join('');
+            if(window.BookmarksManager) BookmarksManager.updateUI();
             browser.classList.add('visible');
         }
 
@@ -1598,6 +1658,7 @@
         // Format on page load
         formatSymptomContent();
     </script>
+    <script src="{% static 'js/bookmarks.js' %}"></script>
 </body>
 
 </html>

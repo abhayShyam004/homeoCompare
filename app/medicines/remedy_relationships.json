@@ -1,0 +1,178 @@
+[
+    {
+        "remedy": "Aconitum Napellus",
+        "complements": "Arn., Coff., Sulph.",
+        "follows": "Abrot., Arn., Ars., Bell., Bry., Cact., Calc., Canth., Cham., Cimic., Coff., Ferr., Hep., Ipec., Kali-bi., Lyc., Merc., Mill., Nux-v., Op., Phos., Puls., Rhus-t., Sep., Spong., Sulph., Sil.",
+        "antidotes": "Acet-ac., Par., Cimic., Calc.",
+        "inimical": "Glonoine",
+        "duration": "Short"
+    },
+    {
+        "remedy": "Apis Mellifica",
+        "complements": "Nat-m.",
+        "follows": "Ars., Puls., Lyc., Sulph., Hep., Iod., Kali-bi., Merc., Phos., Sil.",
+        "antidotes": "Canth., Lach., Led., Nat-m.",
+        "inimical": "Rhus-t.",
+        "duration": "Short"
+    },
+    {
+        "remedy": "Arnica Montana",
+        "complements": "Acon., Ipec.",
+        "follows": "Acon., Ipec., Verat., Apis, Ars., Bry., Cact., Calc., Cimic., Chin., Con., Hep., Lyc., Merc., Nux-v., Phos., Puls., Rhus-t., Sep., Sil., Sulph.",
+        "antidotes": "Camph., Ipec., Cic., Cimic., Ign.",
+        "inimical": "",
+        "duration": "Short"
+    },
+    {
+        "remedy": "Arsenicum Album",
+        "complements": "All-s., Carbo-v., Phos., Pyrog., Rhus-t., Sec., Thuja",
+        "follows": "Acon., Arn., Bell., Bry., Calc., Carbo-v., Cham., Chin., Ferr., Hep., Ipec., Kali-bi., Lyc., Merc., Nux-v., Phos., Puls., Rhus-t., Sep., Sil., Sulph., Verat.",
+        "antidotes": "Camph., Chin., Ferr., Graph., Hep., Iod., Ipec., Merc., Nux-v., Samb., Tab., Verat.",
+        "inimical": "",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Belladonna",
+        "complements": "Calc.",
+        "follows": "Acon., Arn., Ars., Bry., Cact., Calc., Cham., Chin., Con., Ferr., Hep., Hyos., Lach., Merc., Mosch., Nit-ac., Nux-v., Op., Phos., Puls., Rhus-t., Seneg., Sep., Sil., Stram., Sulph., Valer., Verat.",
+        "antidotes": "Acet-ac., Acon., Camph., Canth., Coff., Ferr., Hyos., Merc., Op., Phyt., Puls.",
+        "inimical": "Dulcamara, Vinegar",
+        "duration": "Short"
+    },
+    {
+        "remedy": "Bryonia Alba",
+        "complements": "Alum., Rhus-t.",
+        "follows": "Acon., Alum., Ars., Bell., Calc., Con., Kali-c., Lyc., Merc., Nux-v., Op., Phos., Puls., Rhus-t., Sep., Sil., Sulph.",
+        "antidotes": "Acon., Alum., Camph., Cham., Chel., Chin., Clem., Coff., Ign., Mur-ac., Nux-v., Puls., Rhus-t., Seneg.",
+        "inimical": "",
+        "duration": "Medium"
+    },
+    {
+        "remedy": "Calcarea Carbonica",
+        "complements": "Bell., Rhus-t.",
+        "follows": "Bell., Cham., Chin., Con., Cupr., Kali-c., Lyc., Nit-ac., Nux-v., Phos., Puls., Rhus-t., Sep., Sil., Spong., Sulph.",
+        "antidotes": "Bry., Camph., Chin., Nit-ac., Nux-v., Sulph.",
+        "inimical": "Bryonia (before)",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Chamomilla",
+        "complements": "Bell., Mag-c.",
+        "follows": "Acon., Arn., Bell., Bry., Cact., Calc., Hep., Ign., Merc., Nux-v., Puls., Rhus-t., Sep., Sil., Sulph.",
+        "antidotes": "Acon., Alum., Bor., Camph., Cocc., Coff., Coloc., Con., Ign., Nux-v., Puls.",
+        "inimical": "Zincum",
+        "duration": "Short"
+    },
+    {
+        "remedy": "China Officinalis",
+        "complements": "Ferr.",
+        "follows": "Ars., Bell., Calc., Carb-v., Ferr., Graph., Hep., Ipec., Lach., Lyc., Merc., Nux-v., Phos., Puls., Sep., Sil., Sulph., Verat.",
+        "antidotes": "Aran., Arn., Ars., Bell., Calc., Carb-v., Ferr., Hep., Ipec., Lach., Merc., Nat-m., Nux-v., Puls., Sep., Sulph., Verat.",
+        "inimical": "Digitalis, Selenium",
+        "duration": "Medium"
+    },
+    {
+        "remedy": "Hepar Sulphuris",
+        "complements": "Calend.",
+        "follows": "Acon., Arn., Bell., Bry., Iod., Lach., Merc., Nit-ac., Rhus-t., Sep., Sil., Spong., Sulph., Zinc.",
+        "antidotes": "Acet-ac., Bell., Cham., Sil.",
+        "inimical": "",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Ignatia Amara",
+        "complements": "Nat-m.",
+        "follows": "Ars., Bell., Calc., Chin., Lyc., Nux-v., Puls., Rhus-t., Sep., Sil., Sulph., Zinc.",
+        "antidotes": "Arn., Cham., Cocc., Coff., Nux-v., Puls., Tab., Zinc.",
+        "inimical": "Coffea, Nux Vomica, Tabacum",
+        "duration": "Short"
+    },
+    {
+        "remedy": "Lachesis Mutus",
+        "complements": "Hep., Lyc., Nit-ac.",
+        "follows": "Acon., Ars., Bell., Bry., Carb-v., Chin., Hep., Hyos., Kali-bi., Lyc., Merc., Nit-ac., Nux-v., Olean., Phos., Puls., Rhu-t., Sep., Sil., Sulph., Verat.",
+        "antidotes": "Alum., Ars., Bell., Cham., Coff., Crot-h., Graph., Hep., Merc., Nit-ac., Nux-v., Phos-ac., Sep.",
+        "inimical": "Acet-ac., Am-c., Dulc., Nit-ac., Psor., Sep.",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Lycopodium Clavatum",
+        "complements": "Iod., Chel., Graph., Lach., Kal-c.",
+        "follows": "Bell., Bry., Calc., Carb-v., Graph., Hyos., Lach., Led., Merc., Nux-v., Phos., Puls., Rhus-t., Sep., Sil., Stram., Sulph., Verat.",
+        "antidotes": "Acon., Camph., Caust., Cham., Coff., Graph., Nux-v., Puls., Rhus-t.",
+        "inimical": "Coffee",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Mercurius Solubilis",
+        "complements": "Bell., Sil., Hep.",
+        "follows": "Acon., Bell., Bry., Calc., Cimic., Chin., Graph., Hep., Lach., Lyc., Nit-ac., Nux-v., Op., Phos., Puls., Rhus-t., Sep., Sil., Sulph., Thuja",
+        "antidotes": "Ant-c., Psor., Aur., Bell., Calad., Calc., Carb-v., Chin., Clem., Dulc., Ferr., Guai., Hep., Iod., Kali-bi., Kali-c., Kali-chl., Lach., Mez., Nit-ac., Op., Phyt., Pod., Sars., Sep., Sil., Staph., Sulph., Thuja, Valer.",
+        "inimical": "Silicea",
+        "duration": "Medium"
+    },
+    {
+        "remedy": "Nux Vomica",
+        "complements": "Sulph.",
+        "follows": "Ars., Bell., Bry., Calc., Carb-v., Chin., Ipec., Lach., Lyc., Merc., Phos., Puls., Rhus-t., Sep., Sil., Sulph.",
+        "antidotes": "Acon., Bell., Camph., Cham., Cocc., Coff., Ign., Op., Pali., Phos., Puls., Stram.",
+        "inimical": "Zincum, Ignatia",
+        "duration": "Short"
+    },
+    {
+        "remedy": "Phosphorus",
+        "complements": "Ars., All-c., Carb-v., Lyc., Sep.",
+        "follows": "Ars., Bell., Bry., Calc., Carb-v., Chin., Kali-c., Lyc., Merc., Nux-v., Puls., Rhus-t., Sep., Sil., Sulph.",
+        "antidotes": "Camph., Coff., Nux-v., Ter.",
+        "inimical": "Causticum",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Pulsatilla Nigricans",
+        "complements": "Lyc., Sil., Sulph-ac.",
+        "follows": "Acon., Ars., Bell., Bry., Calc., Cham., Chin., Euphr., Graph., Ham., Ign., Kali-bi., Lyc., Merc., Nux-v., Phos., Rhus-t., Sep., Sil., Spong., Sulph.",
+        "antidotes": "Ant-t., Bell., Cham., Chin., Coff., Colch., Ferr., Ign., Lyc., Plat., Ran-b., Rhus-t., Sabad., Stram., Sulph., Sulph-ac.",
+        "inimical": "Chamomilla",
+        "duration": "Short"
+    },
+    {
+        "remedy": "Rhus Toxicodendron",
+        "complements": "Bry.",
+        "follows": "Arn., Ars., Bell., Bry., Cact., Calc., Cham., Chin., Coff., Con., Euphr., Hep., Ipec., Kali-bi., Lyc., Merc., Nux-v., Phos., Phyt., Puls., Sep., Sil., Sulph.",
+        "antidotes": "Anac., Bell., Bry., Camph., Coff., Crot-t., Graph., Grind., Guai., Lach., Merc., Ran-b., Sang., Sep., Sil., Sulph., Verb., Virgin.",
+        "inimical": "Apis",
+        "duration": "Medium"
+    },
+    {
+        "remedy": "Sepia Officinalis",
+        "complements": "Nat-m.",
+        "follows": "Bell., Bry., Calc., Chin., Lyc., Merc., Nat-m., Nux-v., Phos., Puls., Rhus-t., Sil., Sulph.",
+        "antidotes": "Acon., Ant-c., Ant-t., Calc., Chin., Merc., Nat-m., Nat-p., Phos., Sars., Sulph.",
+        "inimical": "Lachesis, Bryonia",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Silicea",
+        "complements": "Thuja, Puls.",
+        "follows": "Bell., Bry., Calc., Cina, Graph., Hep., Ign., Ip., Kali-c., Lach., Lyc., Merc., Nit-ac., Nux-v., Phos., Puls., Rhus-t., Sep., Sulph., Verat.",
+        "antidotes": "Camph., Fl-ac., Hell., Merc., Puls., Sulph.",
+        "inimical": "Mercury",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Sulphur",
+        "complements": "Aloe, Acon., Nux-v., Puls.",
+        "follows": "Acon., Ars., Bell., Bry., Calc., Chin., Co., Hep., Kreos., Lach., Lyc., Merc., Nit-ac., Nux-v., Phos., Puls., Rhus-t., Sep., Sil.",
+        "antidotes": "Acon., Camph., Cham., Chin., Merc., Nux-v., Puls., Rhus-t., Sep.",
+        "inimical": "",
+        "duration": "Long"
+    },
+    {
+        "remedy": "Thuja Occidentalis",
+        "complements": "Med., Sabina, Sil.",
+        "follows": "Calc., Graph., Hep., Kali-c., Lyc., Merc., Nit-ac., Phos., Puls., Sil., Sulph.",
+        "antidotes": "Camph., Cham., Cocc., Iod., Merc., Nux-v., Puls., Sulph.",
+        "inimical": "",
+        "duration": "Long"
+    }
+]

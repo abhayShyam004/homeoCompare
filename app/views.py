@@ -22,6 +22,10 @@ def remedy_compare(request):
             try:
                 with open(json_file, 'r', encoding='utf-8') as file:
                     medicine_data = json.load(file)
+                    # Skip if not a dictionary (e.g. relationship data which is a list)
+                    if not isinstance(medicine_data, dict):
+                        continue
+                        
                     medicine_name = medicine_data.get('name', json_file.stem)
                     data[medicine_name] = medicine_data
             except (UnicodeDecodeError, json.JSONDecodeError) as e:
@@ -296,6 +300,59 @@ def home(request):
 
 def about(request):
     return render(request, 'app/about.html')
+
+
+def saved_remedies(request):
+    # Track page view
+    from .models import PageView
+    try:
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        ip = x_forwarded_for.split(',')[0] if x_forwarded_for else request.META.get('REMOTE_ADDR')
+        PageView.objects.create(page='saved_remedies', ip_address=ip, user_agent=request.META.get('HTTP_USER_AGENT', '')[:500])
+    except: pass
+    return render(request, 'app/saved_remedies.html')
+
+
+def relationships_view(request):
+    from .models import RemedyRelationship
+    
+    # Query database instead of reading JSON
+    relationships = RemedyRelationship.objects.all().order_by('remedy')
+    
+    # Convert queryset to list of dicts for the grouping logic
+    data = []
+    for r in relationships:
+        data.append({
+            'remedy': r.remedy,
+            'complements': r.complements,
+            'follows': r.follows,
+            'antidotes': r.antidotes,
+            'inimical': r.inimical,
+            'duration': r.duration
+        })
+
+    # Group data alphabetically for the view (simulating multiple tables)
+    sorted_data = sorted(data, key=lambda x: x['remedy'])
+    groups = {
+        'A-C': [],
+        'D-K': [],
+        'L-P': [],
+        'R-S': [],
+        'T-Z': []
+    }
+    
+    for item in sorted_data:
+        first_char = item['remedy'][0].upper()
+        if first_char <= 'C': groups['A-C'].append(item)
+        elif first_char <= 'K': groups['D-K'].append(item)
+        elif first_char <= 'P': groups['L-P'].append(item)
+        elif first_char <= 'S': groups['R-S'].append(item)
+        else: groups['T-Z'].append(item)
+        
+    # Filter out empty groups
+    active_groups = {k: v for k, v in groups.items() if v}
+    
+    return render(request, 'app/relationships.html', {'grouped_relationships': active_groups})
 
 
 def suggestion(request):
@@ -972,4 +1029,75 @@ def admin_remedy_day(request):
         'history': history, 
     }
     return render(request, 'app/admin_remedy_day.html', context)
+
+
+@require_admin
+def admin_relationships_list(request):
+    """List all Remedy Relationships from DB"""
+    from .models import RemedyRelationship
+    
+    # Fetch all records
+    relationships = RemedyRelationship.objects.all().order_by('remedy')
+    
+    # Group by letter
+    by_letter = {}
+    for r in relationships:
+        letter = r.remedy[0].upper() if r.remedy else 'A'
+        if letter not in by_letter:
+            by_letter[letter] = []
+        by_letter[letter].append(r)
+        
+    context = {
+        'authenticated': True,
+        'source': 'relationships',
+        'source_title': "Relationship Table",
+        'relationships': relationships,
+        'by_letter': dict(sorted(by_letter.items())),
+        'total_count': relationships.count(),
+    }
+    return render(request, 'app/admin_relationships.html', context)
+
+@require_admin
+def admin_relationship_save(request):
+    """Save edited relationship data via AJAX"""
+    from django.http import JsonResponse
+    from .models import RemedyRelationship
+    
+    if request.method != 'POST':
+        return JsonResponse({'status': 'error', 'message': 'POST required'}, status=400)
+    
+    try:
+        data = json.loads(request.body)
+        action = data.get('action')
+        
+        if action == 'delete':
+            pid = data.get('id')
+            RemedyRelationship.objects.filter(id=pid).delete()
+            return JsonResponse({'status': 'ok'})
+            
+        elif action == 'save':
+            pid = data.get('id')
+            
+            defaults = {
+                'remedy': data.get('remedy'),
+                'complements': data.get('complements'),
+                'follows': data.get('follows'),
+                'antidotes': data.get('antidotes'),
+                'inimical': data.get('inimical'),
+                'duration': data.get('duration'),
+            }
+            
+            if pid:
+                # Update
+                RemedyRelationship.objects.update_or_create(id=pid, defaults=defaults)
+            else:
+                # Create
+                RemedyRelationship.objects.create(**defaults)
+                
+            return JsonResponse({'status': 'ok'})
+            
+        return JsonResponse({'status': 'error', 'message': 'Invalid action'}, status=400)
+        
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
