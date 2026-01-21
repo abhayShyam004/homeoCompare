@@ -7,11 +7,8 @@ sitemaps = {
     'static': StaticSitemap,
 }
 
-from app.views_import_temp import trigger_import
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('import-data-temp/', trigger_import, name='import_data_temp'),
     path('', include('app.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap'),
