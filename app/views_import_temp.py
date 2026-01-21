@@ -18,10 +18,10 @@ def trigger_import(request):
     }
     
     try:
-        # Try multiple possible paths
+        # Use the new remedies_table.json file
         possible_paths = [
-            os.path.join(settings.BASE_DIR, 'app', 'medicines', 'remedy_relationships.json'),
-            'app/medicines/remedy_relationships.json'
+            os.path.join(settings.BASE_DIR, 'remedies_table.json'),
+            'remedies_table.json'
         ]
         
         json_path = None
@@ -34,7 +34,10 @@ def trigger_import(request):
             return JsonResponse({"error": "JSON file not found on server"}, status=404)
             
         with open(json_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+            raw_data = json.load(f)
+        
+        # The new format has a "relationships" key
+        data = raw_data.get('relationships', [])
             
         count_rel = 0
         count_dur = 0
@@ -44,15 +47,27 @@ def trigger_import(request):
             if not remedy_name:
                 continue
 
+            # Map new field names to model fields
+            # complementary -> complements (join array to string)
+            # follows_well -> follows (join array to string)
+            # inimicals -> inimical (join array to string)
+            # antidotes -> antidotes (join array to string)
+            
+            complements = ', '.join(item.get('complementary', []))
+            follows = ', '.join(item.get('follows_well', []))
+            inimical = ', '.join(item.get('inimicals', []))
+            antidotes = ', '.join(item.get('antidotes', []))
+            duration_val = item.get('duration', '')
+
             # 1. Update/Create Relationship
             try:
                 obj, created = RemedyRelationship.objects.update_or_create(
                     remedy=remedy_name,
                     defaults={
-                        'complements': item.get('complements', ''),
-                        'follows': item.get('follows', ''),
-                        'antidotes': item.get('antidotes', ''),
-                        'inimical': item.get('inimical', ''),
+                        'complements': complements,
+                        'follows': follows,
+                        'antidotes': antidotes,
+                        'inimical': inimical,
                     }
                 )
                 if created: count_rel += 1
@@ -60,7 +75,6 @@ def trigger_import(request):
                 results["errors"].append(f"Rel Error {remedy_name}: {str(e)}")
 
             # 2. Update/Create Duration
-            duration_val = item.get('duration', '')
             if duration_val:
                 try:
                     obj, created = RemedyDuration.objects.update_or_create(
@@ -84,3 +98,4 @@ def trigger_import(request):
         results["critical_error"] = str(e)
 
     return JsonResponse(results)
+

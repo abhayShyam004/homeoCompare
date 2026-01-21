@@ -1,0 +1,4158 @@
+{
+  "relationships": [
+    {
+      "remedy": "Acet-ac.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "14-20 d."
+    },
+    {
+      "remedy": "Acon.",
+      "complementary": [
+        "Arn.",
+        "Coff.",
+        "Sulph."
+      ],
+      "follows_well": [
+        "Abrot.",
+        "Arn.",
+        "Ars.",
+        "Bell.",
+        "Bry.",
+        "Cact.",
+        "Calc.",
+        "Canth.",
+        "Cocc.",
+        "Coff.",
+        "Hep.",
+        "Ip.",
+        "Kali-br.",
+        "Merc.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Spig.",
+        "Spong.",
+        "Sulph.",
+        "Sil."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acet-ac.",
+        "Bell.",
+        "Berb.",
+        "Coff.",
+        "Nux-v.",
+        "Par.",
+        "Sulph.",
+        "Vinum",
+        "Wine."
+      ],
+      "duration": "1 hour to several weeks."
+    },
+    {
+      "remedy": "Aesc.",
+      "complementary": [],
+      "follows_well": [
+        "Ars.",
+        "Nux-v.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Nux-v."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Aeth.",
+      "complementary": [
+        "Calc."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Vegetable acids"
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Agar.",
+      "complementary": [
+        "Calc."
+      ],
+      "follows_well": [
+        "Bell.",
+        "Calc.",
+        "Cupr.",
+        "Merc.",
+        "Op.",
+        "Puls.",
+        "Rhus-t.",
+        "Sil.",
+        "Tub."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Calc.",
+        "Puls.",
+        "Rhus-t.",
+        "Vinum."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Agn.",
+      "complementary": [],
+      "follows_well": [
+        "Ars.",
+        "Bry.",
+        "Calad.",
+        "Ign.",
+        "Lyc.",
+        "Puls.",
+        "Sel.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Nat-m.",
+        "Nux-v."
+      ],
+      "duration": "8-14 d."
+    },
+    {
+      "remedy": "All-c.",
+      "complementary": [
+        "Phos.",
+        "Puls.",
+        "Sars.",
+        "Thuj."
+      ],
+      "follows_well": [
+        "Calc.",
+        "Sil."
+      ],
+      "inimicals": [
+        "All-s.",
+        "Aloe",
+        "Squil."
+      ],
+      "antidotes": [
+        "Arn.",
+        "Cham.",
+        "Nux-v.",
+        "Thuj.",
+        "Verat."
+      ],
+      "duration": "1 d."
+    },
+    {
+      "remedy": "All-s.",
+      "complementary": [
+        "Ars."
+      ],
+      "follows_well": [],
+      "inimicals": [
+        "All-c.",
+        "Aloe",
+        "Squil."
+      ],
+      "antidotes": [],
+      "duration": ""
+    },
+    {
+      "remedy": "Aloe",
+      "complementary": [
+        "Sulph."
+      ],
+      "follows_well": [
+        "Kali-bi.",
+        "Sep.",
+        "Sulph.",
+        "Sul-ac."
+      ],
+      "inimicals": [
+        "All-s."
+      ],
+      "antidotes": [
+        "Camph.",
+        "Lyc.",
+        "Nux-v.",
+        "Sulph."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Alum.",
+      "complementary": [
+        "Bry."
+      ],
+      "follows_well": [
+        "Arg-met.",
+        "Bry."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Bry.",
+        "Camph.",
+        "Cham.",
+        "Ip."
+      ],
+      "duration": "40-60 d."
+    },
+    {
+      "remedy": "Alumn.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Cham.",
+        "Nux-v.",
+        "Ip.",
+        "Sulph."
+      ],
+      "duration": "Long acting."
+    },
+    {
+      "remedy": "Ambr.",
+      "complementary": [],
+      "follows_well": [
+        "Lyc.",
+        "Puls.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Coff.",
+        "Nux-v.",
+        "Puls.",
+        "Staph."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Am-c.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Bry.",
+        "Calc.",
+        "Lyc.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Lach."
+      ],
+      "antidotes": [
+        "Arn.",
+        "Camph.",
+        "Hep."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Am-m.",
+      "complementary": [],
+      "follows_well": [
+        "Ant-c.",
+        "Coff.",
+        "Merc.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sanic."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Coff.",
+        "Hep.",
+        "Nux-v."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Anac.",
+      "complementary": [
+        "Lyc.",
+        "Puls.",
+        "Plat."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Clem.",
+        "Crot-t.",
+        "Coff.",
+        "Jug.",
+        "Ran-b.",
+        "Rhus-t."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Ang.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Ign.",
+        "Lyc.",
+        "Sep."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Coff."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Ant-c.",
+      "complementary": [
+        "Squil."
+      ],
+      "follows_well": [
+        "Calc.",
+        "Lach.",
+        "Merc.",
+        "Puls.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Calc.",
+        "Hep.",
+        "Merc."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Ant-t.",
+      "complementary": [
+        "Ip."
+      ],
+      "follows_well": [
+        "Bar-c.",
+        "Camph.",
+        "Carb-v.",
+        "Cina",
+        "Ip.",
+        "Puls.",
+        "Sep.",
+        "Sulph.",
+        "Ter."
+      ],
+      "inimicals": [
+        "Phos."
+      ],
+      "antidotes": [
+        "Asaf.",
+        "Chin.",
+        "Cocc.",
+        "Ip.",
+        "Laur.",
+        "Op.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Apis",
+      "complementary": [
+        "Nat-m."
+      ],
+      "follows_well": [
+        "Arn.",
+        "Ars.",
+        "Graph.",
+        "Iod.",
+        "Lyc.",
+        "Puls.",
+        "Nat-m.",
+        "Stram.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Rhus-t."
+      ],
+      "antidotes": [
+        "Canth.",
+        "Carb-ac.",
+        "Ip.",
+        "Lac-ac.",
+        "Lach.",
+        "Led.",
+        "Nat-m.",
+        "Plan."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Arg-met.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Puls.",
+        "Sep."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Merc.",
+        "Puls."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Arg-n.",
+      "complementary": [
+        "Calc."
+      ],
+      "follows_well": [
+        "Bry.",
+        "Calc.",
+        "Kali-c.",
+        "Lyc.",
+        "Lyss.",
+        "Merc.",
+        "Puls.",
+        "Sep.",
+        "Sil.",
+        "Spig.",
+        "Spong.",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Ars.",
+        "Calc.",
+        "Iod.",
+        "Lyc.",
+        "Merc.",
+        "Nat-m.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Arn.",
+      "complementary": [
+        "Acon.",
+        "Hyper.",
+        "Ip.",
+        "Rhus-t.",
+        "Verat."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Ars.",
+        "Bar-m.",
+        "Bell.",
+        "Berb.",
+        "Bry.",
+        "Cact.",
+        "Calc.",
+        "Calen.",
+        "Cham.",
+        "Chin.",
+        "Con.",
+        "Cur.",
+        "Hep.",
+        "Iod.",
+        "Ip.",
+        "Nux-v.",
+        "Phos.",
+        "Led.",
+        "Puls.",
+        "Psor.",
+        "Rhus-t.",
+        "Ruta",
+        "Sul-ac.",
+        "Sulph.",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Ars.",
+        "Camph.",
+        "Chin.",
+        "Ign.",
+        "Ip."
+      ],
+      "duration": "6-10 d."
+    },
+    {
+      "remedy": "Ars.",
+      "complementary": [
+        "All-s.",
+        "Carb-v.",
+        "Phos.",
+        "Pyrog.",
+        "Thuj."
+      ],
+      "follows_well": [
+        "Apis",
+        "Aran.",
+        "Arn.",
+        "Bar-c.",
+        "Bell.",
+        "Cact.",
+        "Calc-p.",
+        "Cham.",
+        "Chel.",
+        "Chin.",
+        "Cic.",
+        "Ferr.",
+        "Hep.",
+        "Iod.",
+        "Ip.",
+        "Kali-bi.",
+        "Lach.",
+        "Lyc.",
+        "Merc.",
+        "Nat-s.",
+        "Nux-v.",
+        "Phos.",
+        "Ran-s.",
+        "Sulph.",
+        "Thuj",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Carb-ac.",
+        "Chin.",
+        "Chinin-s.",
+        "Euph.",
+        "Ferr.",
+        "Graph.",
+        "Hep.",
+        "Iod.",
+        "Ip.",
+        "Kali-bi.",
+        "Merc.",
+        "Nux-m.",
+        "Nux-v.",
+        "Op.",
+        "Samb.",
+        "Sulph.",
+        "Tab.",
+        "Verat."
+      ],
+      "duration": "60-90 d."
+    },
+    {
+      "remedy": "Arum-t.",
+      "complementary": [
+        "Caust."
+      ],
+      "follows_well": [],
+      "inimicals": [
+        "Calad."
+      ],
+      "antidotes": [
+        "Acet-ac.",
+        "Bell.",
+        "Lac-ac.",
+        "Puls."
+      ],
+      "duration": "1-2 d."
+    },
+    {
+      "remedy": "Asaf.",
+      "complementary": [
+        "Caust."
+      ],
+      "follows_well": [
+        "Chin.",
+        "Merc.",
+        "Puls."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Chin.",
+        "Merc.",
+        "Puls.",
+        "Valer."
+      ],
+      "duration": "20-40 d."
+    },
+    {
+      "remedy": "Asar.",
+      "complementary": [],
+      "follows_well": [
+        "Bism.",
+        "Caust.",
+        "Puls.",
+        "Sil.",
+        "Sul-ac."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acet-ac.",
+        "Camph."
+      ],
+      "duration": "8-14 d."
+    },
+    {
+      "remedy": "Asc-t.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "40-60 d."
+    },
+    {
+      "remedy": "Aster.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [
+        "Coff.",
+        "Nux-v."
+      ],
+      "antidotes": [
+        "Plb.",
+        "Zinc."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Aur.",
+      "complementary": [
+        "Aur-m-n."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Bell.",
+        "Calc.",
+        "Chin.",
+        "Lyc.",
+        "Merc.",
+        "Nit-ac.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph.",
+        "Syph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Bell.",
+        "Chin.",
+        "Cocc.",
+        "Coff.",
+        "Cupr.",
+        "Merc.",
+        "Puls.",
+        "Sol-ni.",
+        "Spig."
+      ],
+      "duration": "50-60 d."
+    },
+    {
+      "remedy": "Bad.",
+      "complementary": [
+        "Sulph."
+      ],
+      "follows_well": [
+        "Lach."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Iod.",
+        "Merc."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Bapt.",
+      "complementary": [],
+      "follows_well": [
+        "Crot.",
+        "Ham.",
+        "Nit-ac.",
+        "Pyrog.",
+        "Ter."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "6-8 d."
+    },
+    {
+      "remedy": "Bar-c.",
+      "complementary": [
+        "Dulc."
+      ],
+      "follows_well": [
+        "Ant-t.",
+        "Calc.",
+        "Con.",
+        "Chin.",
+        "Lyc.",
+        "Merc.",
+        "Nit-ac.",
+        "Phos.",
+        "Psor.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph.",
+        "Tub.",
+        "Acon.",
+        "Ars.",
+        "Cact.",
+        "Calc.",
+        "Carb-v.",
+        "Cham.",
+        "Chin.",
+        "Con.",
+        "Cur."
+      ],
+      "inimicals": [
+        "Calc."
+      ],
+      "antidotes": [
+        "Ant-t.",
+        "Bell.",
+        "Camph.",
+        "Dulc.",
+        "Merc.",
+        "Zinc."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Bell.",
+      "complementary": [
+        "Calc."
+      ],
+      "follows_well": [
+        "Dulc.",
+        "Hep.",
+        "Hyos.",
+        "Lach.",
+        "Merc.",
+        "Merc-i-r.",
+        "Mosch.",
+        "Mur-ac.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Seneg.",
+        "Sep.",
+        "Sil.",
+        "Stram.",
+        "Sulph.",
+        "Valer.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Acet-ac.",
+        "Dulc."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Camph.",
+        "Coff.",
+        "Hep.",
+        "Hyos.",
+        "Merc.",
+        "Op.",
+        "Puls.",
+        "Sabad.",
+        "Vinum."
+      ],
+      "duration": "1-7 d."
+    },
+    {
+      "remedy": "Berb.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Bell.",
+        "Camph."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Bism.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Calc.",
+        "Puls.",
+        "Sep."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Calc.",
+        "Caps.",
+        "Coff.",
+        "Nux-v."
+      ],
+      "duration": "20-50 d."
+    },
+    {
+      "remedy": "Borx.",
+      "complementary": [
+        "Bry."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Bry.",
+        "Calc.",
+        "Lyc.",
+        "Nux-v.",
+        "Phos.",
+        "Sil."
+      ],
+      "inimicals": [
+        "Acet-ac.",
+        "Wine."
+      ],
+      "antidotes": [
+        "Cham.",
+        "Coff."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Bov.",
+      "complementary": [],
+      "follows_well": [
+        "Alum.",
+        "Calc.",
+        "Rhus-t.",
+        "Sep.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Coff."
+      ],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "7-14 d."
+    },
+    {
+      "remedy": "Brom.",
+      "complementary": [
+        "Arg-n."
+      ],
+      "follows_well": [
+        "Arg-n.",
+        "Kali-c."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Am-c.",
+        "Camph.",
+        "Mag-c.",
+        "Op."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Bry.",
+      "complementary": [
+        "Alum.",
+        "Rhus-t."
+      ],
+      "follows_well": [
+        "Alum.",
+        "Ars.",
+        "Abrot.",
+        "Ant-t.",
+        "Bell.",
+        "Berb.",
+        "Cact.",
+        "Carb-v.",
+        "Dros.",
+        "Dulc.",
+        "Hyos.",
+        "Kali-c.",
+        "Mur-ac.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sabad.",
+        "Sep.",
+        "Sil.",
+        "Squil.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Alum.",
+        "Camph.",
+        "Cham.",
+        "Chel.",
+        "Clem.",
+        "Coff.",
+        "Ign",
+        "Mur-ac.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Seneg."
+      ],
+      "duration": "7-21 d."
+    },
+    {
+      "remedy": "Cact.",
+      "complementary": [],
+      "follows_well": [
+        "Dig.",
+        "Eup-per.",
+        "Lach.",
+        "Nux-v.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Camph.",
+        "Chin."
+      ],
+      "duration": "7-10 d."
+    },
+    {
+      "remedy": "Cadm.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Carb-v.",
+        "Lob."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": ""
+    },
+    {
+      "remedy": "Calad.",
+      "complementary": [
+        "Nit-ac."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Canth.",
+        "Caust.",
+        "Puls.",
+        "Sep.",
+        "Sel."
+      ],
+      "inimicals": [
+        "Arum-t."
+      ],
+      "antidotes": [
+        "Camph.",
+        "Caps."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Calc-ar.",
+      "complementary": [],
+      "follows_well": [
+        "Carb-v.",
+        "Ign.",
+        "Con.",
+        "Glon.",
+        "Op.",
+        "Puls."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Carb-v.",
+        "Glon.",
+        "Puls."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Calc.",
+      "complementary": [
+        "Bell.",
+        "Rhus-t."
+      ],
+      "follows_well": [
+        "Aran.",
+        "Agar.",
+        "Bell.",
+        "Bry.",
+        "Camph.",
+        "Chin.",
+        "Iod.",
+        "Ip.",
+        "Dulc.",
+        "Graph.",
+        "Ip.",
+        "Kali-bi.",
+        "Lyc.",
+        "Nat-c.",
+        "Nit-ac.",
+        "Nux-v.",
+        "Phos.",
+        "Plat.",
+        "Podo.",
+        "Puls.",
+        "Rhus-t.",
+        "Sars.",
+        "Sep.",
+        "Sil.",
+        "Ther.",
+        "Tub."
+      ],
+      "inimicals": [
+        "Bar-c.",
+        "Borx.",
+        "Bism.",
+        "Dros.",
+        "Nit-ac.",
+        "Nit-s-d.",
+        "Sulph.",
+        "Kali-bi."
+      ],
+      "antidotes": [
+        "Bry.",
+        "Camph.",
+        "Chin.",
+        "Ip.",
+        "Nit-ac.",
+        "Nux-v.",
+        "Phos.",
+        "Sep.",
+        "Sulph."
+      ],
+      "duration": "60 d."
+    },
+    {
+      "remedy": "Calc-f.",
+      "complementary": [],
+      "follows_well": [
+        "Calc-p.",
+        "Nat-m.",
+        "Ph-ac.",
+        "Sil."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": ""
+    },
+    {
+      "remedy": "Calc-p.",
+      "complementary": [
+        "Ruta",
+        "Sulph.",
+        "Zinc."
+      ],
+      "follows_well": [
+        "Hep.",
+        "Iod.",
+        "Psor.",
+        "Rhus-t.",
+        "Sanic.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Coff."
+      ],
+      "duration": "60 d."
+    },
+    {
+      "remedy": "Calen.",
+      "complementary": [
+        "Hep."
+      ],
+      "follows_well": [
+        "Arn.",
+        "Ars.",
+        "Bry.",
+        "Nit-ac.",
+        "Phos.",
+        "Rhus-t."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Arn.",
+        "Camph."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Camph.",
+      "complementary": [
+        "Canth."
+      ],
+      "follows_well": [
+        "Ant-t.",
+        "Ars.",
+        "Bell.",
+        "Cocc.",
+        "Nux-v.",
+        "Rhus-t.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Kali-n."
+      ],
+      "antidotes": [
+        "Canth.",
+        "Dulc.",
+        "Nit-s-d.",
+        "Op.",
+        "Phos."
+      ],
+      "duration": "1 d."
+    },
+    {
+      "remedy": "Cann-s.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Hyos.",
+        "Lyc.",
+        "Nux-v.",
+        "Op.",
+        "Puls.",
+        "Rhus-t.",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Merc."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Canth.",
+      "complementary": [
+        "Camph."
+      ],
+      "follows_well": [
+        "Bell.",
+        "Kali-bi.",
+        "Kali-i.",
+        "Merc.",
+        "Phos.",
+        "Puls.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Coff."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Apis",
+        "Camph.",
+        "Kali-n.",
+        "Laur.",
+        "Puls.",
+        "Rheum."
+      ],
+      "duration": "1-10 d."
+    },
+    {
+      "remedy": "Caps.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Cina",
+        "Lyc.",
+        "Puls.",
+        "Sil."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Calad.",
+        "Camph.",
+        "Chin.",
+        "Cina",
+        "Sul-ac."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Carb-an.",
+      "complementary": [
+        "Calc-p."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Bry.",
+        "Nit-ac.",
+        "Phos.",
+        "Puls.",
+        "Sep.",
+        "Sil.",
+        "Sulph.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Carb-v."
+      ],
+      "antidotes": [
+        "Ars.",
+        "Camph.",
+        "Nux-v.",
+        "Vinum."
+      ],
+      "duration": "60 d."
+    },
+    {
+      "remedy": "Carb-v.",
+      "complementary": [
+        "Dros.",
+        "Kali-c."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Ars.",
+        "Chin.",
+        "Dros.",
+        "Kali-c.",
+        "Lyc.",
+        "Merc.",
+        "Nux-v.",
+        "Ph-ac.",
+        "Puls.",
+        "Sep.",
+        "Sulph.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Carb-an.",
+        "Kreos."
+      ],
+      "antidotes": [
+        "Ars.",
+        "Camph.",
+        "Coff.",
+        "Lach.",
+        "Nit-s-d."
+      ],
+      "duration": "60 d."
+    },
+    {
+      "remedy": "Caul.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Coff."
+      ],
+      "duration": "7 d."
+    },
+    {
+      "remedy": "Caust.",
+      "complementary": [
+        "Carb-v.",
+        "Petros."
+      ],
+      "follows_well": [
+        "Ant-t.",
+        "Arum-t.",
+        "Coloc.",
+        "Calc.",
+        "Guaj.",
+        "Kali-i.",
+        "Lyc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Ruta",
+        "Sep.",
+        "Sil.",
+        "Stann.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Acet-ac.",
+        "Coff.",
+        "Ph-ac.",
+        "Phos."
+      ],
+      "antidotes": [
+        "Asaf.",
+        "Coff.",
+        "Coloc.",
+        "Dulc.",
+        "Guaj.",
+        "Nit-s-d.",
+        "Nux-v."
+      ],
+      "duration": "50 d."
+    },
+    {
+      "remedy": "Cham.",
+      "complementary": [
+        "Bell.",
+        "Mag-c."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Arn.",
+        "Bell.",
+        "Bry.",
+        "Cact.",
+        "Calc.",
+        "Cocc.",
+        "Form.",
+        "Merc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Zinc."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Alum.",
+        "Borx.",
+        "Camph.",
+        "Chin.",
+        "Cocc.",
+        "Coff.",
+        "Coloc.",
+        "Con.",
+        "Ign.",
+        "Nux-v.",
+        "Puls.",
+        "Valer."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Chel.",
+      "complementary": [],
+      "follows_well": [
+        "Acon.",
+        "Ars.",
+        "Bry.",
+        "Cor-r.",
+        "Ip.",
+        "Led.",
+        "Lyc.",
+        "Nux-v.",
+        "Sep.",
+        "Spig.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Acids",
+        "Cham.",
+        "Coff.",
+        "Wine."
+      ],
+      "duration": "7-14 d."
+    },
+    {
+      "remedy": "Chin.",
+      "complementary": [
+        "Ferr."
+      ],
+      "follows_well": [
+        "Acet-ac.",
+        "Arn.",
+        "Ars.",
+        "Asaf.",
+        "Bell.",
+        "Calc.",
+        "Calc-p.",
+        "Carb-v.",
+        "Ferr.",
+        "Lach.",
+        "Merc.",
+        "Ph-ac.",
+        "Phos.",
+        "Puls.",
+        "Sulph.",
+        "Verat."
+      ],
+      "inimicals": [
+        "After Dig. and Sel."
+      ],
+      "antidotes": [
+        "Arn.",
+        "Ars.",
+        "Asaf.",
+        "Bell.",
+        "Bry.",
+        "Calc.",
+        "Caps.",
+        "Carb-an.",
+        "Carb-v.",
+        "Caust.",
+        "Cedr.",
+        "Cina",
+        "Eup-per.",
+        "Ferr.",
+        "Ip.",
+        "Lach.",
+        "Led.",
+        "Lyc.",
+        "Meny.",
+        "Merc.",
+        "Nat-c.",
+        "Nat-m.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph.",
+        "Verat."
+      ],
+      "duration": "14-21 d."
+    },
+    {
+      "remedy": "Cic.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Hep.",
+        "Op.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Arn.",
+        "Op.",
+        "Tab."
+      ],
+      "duration": "35-40 d."
+    },
+    {
+      "remedy": "Cimic.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Bapt."
+      ],
+      "duration": "8-12 d."
+    },
+    {
+      "remedy": "Cina.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Chin.",
+        "Ign.",
+        "Nux-v.",
+        "Plat.",
+        "Puls.",
+        "Rhus-t.",
+        "Sil.",
+        "Stann."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Arn.",
+        "Camph.",
+        "Caps.",
+        "Chin.",
+        "Pip-n."
+      ],
+      "duration": "14-20 d."
+    },
+    {
+      "remedy": "Cist.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Carb-v.",
+        "Mag-c.",
+        "Phos."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Rhus-t.",
+        "Sep."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Clem.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Anac.",
+        "Bry.",
+        "Camph.",
+        "Cham.",
+        "Crot-t.",
+        "Ran-b.",
+        "Rhus-t."
+      ],
+      "duration": "14-20 d."
+    },
+    {
+      "remedy": "Cob.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Cocc.",
+      "complementary": [],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Hep.",
+        "Ign.",
+        "Lyc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Coff."
+      ],
+      "antidotes": [
+        "Camph.",
+        "Cham.",
+        "Cupr.",
+        "Ign.",
+        "Nux-v."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Coff.",
+      "complementary": [
+        "Acon."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Aur.",
+        "Bell.",
+        "Fl-ac.",
+        "Lyc.",
+        "Nux-v.",
+        "Op.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Canth.",
+        "Caust.",
+        "Cocc.",
+        "Ign."
+      ],
+      "antidotes": [
+        "Acet-ac.",
+        "Acon.",
+        "Cham.",
+        "Chin.",
+        "Grat.",
+        "Ign.",
+        "Merc.",
+        "Nux-v.",
+        "Puls.",
+        "Sulph."
+      ],
+      "duration": "1-10 d."
+    },
+    {
+      "remedy": "Colch.",
+      "complementary": [],
+      "follows_well": [
+        "Carb-v.",
+        "Merc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Bell.",
+        "Camph.",
+        "Cocc.",
+        "Led.",
+        "Nux-v.",
+        "Puls.",
+        "Spig."
+      ],
+      "duration": "14-20 d."
+    },
+    {
+      "remedy": "Coll.",
+      "complementary": [],
+      "follows_well": [
+        "Aesc.",
+        "Aloe",
+        "Con."
+      ],
+      "inimicals": [
+        "Nux-v."
+      ],
+      "antidotes": [],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Coloc.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Bry.",
+        "Caust.",
+        "Cham.",
+        "Merc.",
+        "Nux-v.",
+        "Puls.",
+        "Spig.",
+        "Staph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Caust.",
+        "Cham.",
+        "Coff.",
+        "Op.",
+        "Staph."
+      ],
+      "duration": "1-7 d."
+    },
+    {
+      "remedy": "Con.",
+      "complementary": [
+        "Bar-m."
+      ],
+      "follows_well": [
+        "Arn.",
+        "Ars.",
+        "Bell.",
+        "Calc.",
+        "Calc-ar.",
+        "Cic.",
+        "Dros.",
+        "Lyc.",
+        "Nux-v.",
+        "Phos.",
+        "Psor.",
+        "Puls.",
+        "Rhus-t.",
+        "Stram.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Coff.",
+        "Dulc.",
+        "Nit-ac.",
+        "Nit-s-d."
+      ],
+      "duration": "30-50 d."
+    },
+    {
+      "remedy": "Cor-r.",
+      "complementary": [
+        "Sulph."
+      ],
+      "follows_well": [
+        "Calc.",
+        "Merc."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": ""
+    },
+    {
+      "remedy": "Croc.",
+      "complementary": [],
+      "follows_well": [
+        "Chin.",
+        "Nux-v.",
+        "Puls.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Bell.",
+        "Op."
+      ],
+      "duration": "8 d."
+    },
+    {
+      "remedy": "Crot-h.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Lach."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Crot-t.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Ant-t."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Cupr.",
+      "complementary": [
+        "Calc."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Calc.",
+        "Caust.",
+        "Cic.",
+        "Hyos.",
+        "Kali-n.",
+        "Puls.",
+        "Stram.",
+        "Verat.",
+        "Zinc."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Bell.",
+        "Camph.",
+        "Cic.",
+        "Chin.",
+        "Cocc.",
+        "Con.",
+        "Dulc.",
+        "Hep.",
+        "Ip.",
+        "Merc.",
+        "Nux-v.",
+        "Puls.",
+        "Verat."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Cycl.",
+      "complementary": [],
+      "follows_well": [
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Coff.",
+        "Puls."
+      ],
+      "duration": "14-20 d."
+    },
+    {
+      "remedy": "Dig.",
+      "complementary": [],
+      "follows_well": [
+        "Acet-ac.",
+        "Bell.",
+        "Bry.",
+        "Cham.",
+        "Chin.",
+        "Lyc.",
+        "Nux-v.",
+        "Op.",
+        "Phos.",
+        "Sep.",
+        "Sulph.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Chin.",
+        "Nit-s-d."
+      ],
+      "antidotes": [
+        "Apis",
+        "Camph.",
+        "Calc.",
+        "(Colch.)",
+        "Nit-ac.",
+        "Nux-v.",
+        "Op."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Dios.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Cham."
+      ],
+      "duration": "1-7 d."
+    },
+    {
+      "remedy": "Dros.",
+      "complementary": [
+        "Nux-v."
+      ],
+      "follows_well": [
+        "Calc.",
+        "Cina",
+        "Con.",
+        "Puls.",
+        "Sulph.",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Dulc.",
+      "complementary": [
+        "Bar-c."
+      ],
+      "follows_well": [
+        "Bell.",
+        "Calc.",
+        "Lyc.",
+        "Rhus-t.",
+        "Sep."
+      ],
+      "inimicals": [
+        "Bell.",
+        "Lach."
+      ],
+      "antidotes": [
+        "Camph.",
+        "Cupr.",
+        "Ip.",
+        "Kali-c.",
+        "Merc."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Eup-per.",
+      "complementary": [],
+      "follows_well": [
+        "Nat-m.",
+        "Sep.",
+        "Tub."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "1-7 d."
+    },
+    {
+      "remedy": "Euph.",
+      "complementary": [],
+      "follows_well": [
+        "Ferr.",
+        "Lach.",
+        "Puls.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acet-ac.",
+        "Camph."
+      ],
+      "duration": "50 d."
+    },
+    {
+      "remedy": "Euphr.",
+      "complementary": [],
+      "follows_well": [
+        "Acon.",
+        "Alum.",
+        "Calc.",
+        "Con.",
+        "Lyc.",
+        "Merc.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Puls."
+      ],
+      "duration": "7 d."
+    },
+    {
+      "remedy": "Ferr.",
+      "complementary": [
+        "Alum.",
+        "Chin.",
+        "Ham."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Arn.",
+        "Bell.",
+        "Chin.",
+        "Con.",
+        "Lyc.",
+        "Merc.",
+        "Phos.",
+        "Puls.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Acet-ac."
+      ],
+      "antidotes": [
+        "Arn.",
+        "Ars.",
+        "Bell.",
+        "Chin.",
+        "Hep.",
+        "Ip.",
+        "Puls.",
+        "Sulph.",
+        "Thea",
+        "Verat.",
+        "Beer."
+      ],
+      "duration": "50 d."
+    },
+    {
+      "remedy": "Fl-ac.",
+      "complementary": [
+        "Coca",
+        "Sil."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Sil."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Gamb.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Coff.",
+        "Coloc.",
+        "Kali-c.",
+        "Op."
+      ],
+      "duration": "1-7 d."
+    },
+    {
+      "remedy": "Gels.",
+      "complementary": [],
+      "follows_well": [
+        "Bapt.",
+        "Cact.",
+        "Ip."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Atro.",
+        "Chin.",
+        "Coff.",
+        "Dig.",
+        "Nat-m."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Glon.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Camph.",
+        "Coff.",
+        "Nux-v."
+      ],
+      "duration": "1 d."
+    },
+    {
+      "remedy": "Graph.",
+      "complementary": [
+        "Ars.",
+        "Caust.",
+        "Ferr.",
+        "Hep.",
+        "Lyc."
+      ],
+      "follows_well": [
+        "Euphr.",
+        "Nat-s.",
+        "Sil."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Ars.",
+        "Nux-v."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Guaj.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Merc."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Nux-v."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Ham.",
+      "complementary": [
+        "Ferr."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Arn.",
+        "Camph.",
+        "Chin.",
+        "Puls."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Hell.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Bry.",
+        "Chin.",
+        "Lyc.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Sulph.",
+        "Zinc."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Chin."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Hep.",
+      "complementary": [
+        "Calen."
+      ],
+      "follows_well": [
+        "Abrot.",
+        "Acon.",
+        "Arn.",
+        "Arum-t.",
+        "Bell.",
+        "Bry.",
+        "Calen.",
+        "Hell.",
+        "Iod.",
+        "Lach.",
+        "Merc.",
+        "Nit-ac.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Spong.",
+        "Sulph.",
+        "Zinc."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acet-ac.",
+        "Ars.",
+        "Bell.",
+        "Cham.",
+        "Sil."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Hyos.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Puls.",
+        "Stram.",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acet-ac.",
+        "Bell.",
+        "Chin.",
+        "Cit-ac.",
+        "Stram."
+      ],
+      "duration": "6-14 d."
+    },
+    {
+      "remedy": "Hyper.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Ars.",
+        "Cham.",
+        "Sulph."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Ign.",
+      "complementary": [
+        "Nat-m."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Calc.",
+        "Chin.",
+        "Cocc.",
+        "Lyc.",
+        "Nux-v.",
+        "Ph-ac.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Coff.",
+        "Nux-v.",
+        "Tab."
+      ],
+      "antidotes": [
+        "Acet-ac.",
+        "Arn.",
+        "Camph.",
+        "Cham.",
+        "Cocc.",
+        "Coff.",
+        "Nux-v.",
+        "Puls."
+      ],
+      "duration": "9 d."
+    },
+    {
+      "remedy": "Iod.",
+      "complementary": [
+        "Bad.",
+        "Lyc."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Arg-n.",
+        "Calc.",
+        "Calc-p.",
+        "Kali-bi.",
+        "Lyc.",
+        "Merc.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Ant-t.",
+        "Ars.",
+        "Bell.",
+        "Camph.",
+        "Chin.",
+        "Chinin-s.",
+        "Coff.",
+        "Ferr.",
+        "Graph.",
+        "Grat.",
+        "Hep.",
+        "Op.",
+        "Phos.",
+        "Spong.",
+        "Sulph.",
+        "Thuj."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Ip.",
+      "complementary": [
+        "Arn.",
+        "Cupr."
+      ],
+      "follows_well": [
+        "Ant-c.",
+        "Ant-t.",
+        "Apis",
+        "Aran.",
+        "Arn.",
+        "Ars.",
+        "Bell.",
+        "Bry.",
+        "Cact.",
+        "Cadm.",
+        "Calc.",
+        "Cham.",
+        "Chin.",
+        "Cupr.",
+        "Ign.",
+        "Nux-v.",
+        "Phos.",
+        "Podo.",
+        "Puls.",
+        "Rheum",
+        "Sep.",
+        "Sulph.",
+        "Tab.",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Arn.",
+        "Ars.",
+        "Chin.",
+        "Nux-v.",
+        "Tab."
+      ],
+      "duration": "7-10 d."
+    },
+    {
+      "remedy": "Kali-bi.",
+      "complementary": [
+        "Ars."
+      ],
+      "follows_well": [
+        "Ant-t.",
+        "Berb.",
+        "Puls."
+      ],
+      "inimicals": [
+        "Calc."
+      ],
+      "antidotes": [
+        "Ars.",
+        "Lach.",
+        "Puls."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Kali-br.",
+      "complementary": [],
+      "follows_well": [
+        "Cact."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Helon.",
+        "Nux-v.",
+        "Zinc."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Kali-c.",
+      "complementary": [
+        "Carb-v.",
+        "Nux-v."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Carb-v.",
+        "Fl-ac.",
+        "Lyc.",
+        "Nit-ac.",
+        "Phos.",
+        "Puls.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Coff.",
+        "Dulc.",
+        "Helon.",
+        "Nit-s-d."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Kali-i.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Am-m.",
+        "Ars.",
+        "Chin.",
+        "Merc.",
+        "Rhus-t.",
+        "Sulph.",
+        "Valer."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Kali-n.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Calc.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Camph."
+      ],
+      "antidotes": [
+        "Nit-s-d."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Kali-s.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": ""
+    },
+    {
+      "remedy": "Kalm.",
+      "complementary": [
+        "Benz-ac."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "7-14 d."
+    },
+    {
+      "remedy": "Kreos.",
+      "complementary": [],
+      "follows_well": [
+        "Sulph."
+      ],
+      "inimicals": [
+        "Carb-v."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Nux-v."
+      ],
+      "duration": "15-20 d."
+    },
+    {
+      "remedy": "Lac-ac.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Bry."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Lach.",
+      "complementary": [
+        "Hep.",
+        "Lyc.",
+        "Nit-ac."
+      ],
+      "follows_well": [
+        "Acet-ac.",
+        "Ars.",
+        "Calc.",
+        "Hep.",
+        "Kali-c.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Acet-ac.",
+        "Am-c.",
+        "Carb-ac.",
+        "Dulc.",
+        "Nit-ac.",
+        "Psor.",
+        "Sep."
+      ],
+      "antidotes": [
+        "Alum.",
+        "Ars.",
+        "Bell.",
+        "Calc.",
+        "Cham.",
+        "Carb-v.",
+        "Cocc.",
+        "Coff.",
+        "Hell.",
+        "Hep.",
+        "Led.",
+        "Merc.",
+        "Nit-ac.",
+        "Nux-v.",
+        "Op.",
+        "Ph-ac."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Laur.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Coff.",
+        "Ip.",
+        "Nux-m.",
+        "Op."
+      ],
+      "duration": "4-8 d."
+    },
+    {
+      "remedy": "Led.",
+      "complementary": [],
+      "follows_well": [
+        "Chinin-s.",
+        "Rhus-t.",
+        "Sep."
+      ],
+      "inimicals": [
+        "Chin."
+      ],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Lil-t.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Helon.",
+        "Nux-v.",
+        "Plat.",
+        "Puls."
+      ],
+      "duration": "14-20 d."
+    },
+    {
+      "remedy": "Lyc.",
+      "complementary": [
+        "Iod.",
+        "Lach.",
+        "Puls."
+      ],
+      "follows_well": [
+        "Anac.",
+        "Bell.",
+        "Bry.",
+        "Calc.",
+        "Carb-v.",
+        "Colch.",
+        "Dros.",
+        "Dulc.",
+        "Graph.",
+        "Hyos.",
+        "Kali-c.",
+        "Lach.",
+        "Led.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Sep.",
+        "Sil",
+        "Ther.",
+        "Stram.",
+        "Verat."
+      ],
+      "inimicals": [
+        "Coff."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Camph.",
+        "Caust.",
+        "Cham.",
+        "Coff.",
+        "Graph.",
+        "Puls."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Mag-c.",
+      "complementary": [
+        "Cham."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Ars.",
+        "Cham.",
+        "Merc.",
+        "Nux-v.",
+        "Puls.",
+        "Rheum."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Mag-m.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Ars.",
+        "Camph.",
+        "Cham.",
+        "Nux-v."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Manc.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Mang.",
+      "complementary": [],
+      "follows_well": [
+        "Puls.",
+        "Rhus-t.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Coff."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Med.",
+      "complementary": [],
+      "follows_well": [
+        "Sulph.",
+        "Thuj."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Ip."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Meny.",
+      "complementary": [],
+      "follows_well": [
+        "Caps.",
+        "Lyc.",
+        "Puls.",
+        "Rhus-t."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "14-20 d."
+    },
+    {
+      "remedy": "Meph.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "1 d."
+    },
+    {
+      "remedy": "Merc.",
+      "complementary": [
+        "Bad."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Asaf.",
+        "Bell.",
+        "Calc.",
+        "Calc-p.",
+        "Carb-v.",
+        "Chin.",
+        "Dulc.",
+        "Guaj.",
+        "Hep.",
+        "Iod.",
+        "Lach.",
+        "Lyc.",
+        "Mur-ac.",
+        "Nit-ac.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph.",
+        "Thuj."
+      ],
+      "inimicals": [
+        "Acet-ac.",
+        "Sil."
+      ],
+      "antidotes": [
+        "Aran.",
+        "Ars.",
+        "Asaf.",
+        "Aur.",
+        "Bell.",
+        "Bry.",
+        "Calad.",
+        "Calc.",
+        "Carb-v.",
+        "Chin.",
+        "Clem.",
+        "Con.",
+        "Cor-r.",
+        "Cupr.",
+        "Daph.",
+        "Dulc.",
+        "Ferr.",
+        "Guaj.",
+        "Hep.",
+        "Iod.",
+        "Kali-bi.",
+        "Kali-chl.",
+        "Kali-i.",
+        "Lach.",
+        "Mez.",
+        "Nit-ac.",
+        "Nux-m.",
+        "Op.",
+        "Phyt.",
+        "Podo.",
+        "Rat.",
+        "Ruta.",
+        "Sars.",
+        "Sep.",
+        "Spig.",
+        "Staph.",
+        "Still.",
+        "Stram.",
+        "Sulph.",
+        "Thuj.",
+        "Valer."
+      ],
+      "duration": "30-60 d."
+    },
+    {
+      "remedy": "Mez.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Caust.",
+        "Ign.",
+        "Lyc.",
+        "Merc.",
+        "Nux-v.",
+        "Phos.",
+        "Puls."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acids",
+        "Acon.",
+        "Bry.",
+        "Calc.",
+        "Kali-i.",
+        "Merc.",
+        "Nux-v."
+      ],
+      "duration": "30-60 d."
+    },
+    {
+      "remedy": "Mill.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Coff."
+      ],
+      "duration": "1-3 d."
+    },
+    {
+      "remedy": "Mosch.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Arum-m.",
+        "Camph.",
+        "Coff."
+      ],
+      "duration": "1 d."
+    },
+    {
+      "remedy": "Mur-ac.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Kali-c.",
+        "Nux-v.",
+        "Puls.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Bry.",
+        "Camph."
+      ],
+      "antidotes": [],
+      "duration": "35 d."
+    },
+    {
+      "remedy": "Nat-c.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Nit-ac.",
+        "Nux-v.",
+        "Puls.",
+        "Sel.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Camph.",
+        "Nit-s-d."
+      ],
+      "antidotes": [],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Nat-m.",
+      "complementary": [
+        "Apis",
+        "Ign.",
+        "Sep."
+      ],
+      "follows_well": [
+        "Apis",
+        "Bry.",
+        "Calc.",
+        "Hep.",
+        "Kali-c.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph.",
+        "Thuj."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Ars.",
+        "Camph.",
+        "Phos.",
+        "Nit-s-d.",
+        "Nux-v.",
+        "Sep."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Nat-s.",
+      "complementary": [
+        "Ars.",
+        "Thuj."
+      ],
+      "follows_well": [
+        "Bell.",
+        "Thuj."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Nit-ac.",
+      "complementary": [
+        "Ars.",
+        "Calad."
+      ],
+      "follows_well": [
+        "Arn.",
+        "Arum-t.",
+        "Bell.",
+        "Calc.",
+        "Carb-v.",
+        "Kali-c.",
+        "Kreos.",
+        "Merc.",
+        "Phos.",
+        "Puls.",
+        "Sec.",
+        "Sep.",
+        "Sil.",
+        "Sulph.",
+        "Thuj."
+      ],
+      "inimicals": [
+        "Lach."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Calc.",
+        "Con.",
+        "Hep.",
+        "Merc.",
+        "Mez.",
+        "Sulph."
+      ],
+      "duration": "40-60 d."
+    },
+    {
+      "remedy": "Nux-m.",
+      "complementary": [],
+      "follows_well": [
+        "Ant-t.",
+        "Lyc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Stram."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Gels.",
+        "Laur.",
+        "Nux-v.",
+        "Op.",
+        "Valer.",
+        "Zinc."
+      ],
+      "duration": "60 d."
+    },
+    {
+      "remedy": "Nux-v.",
+      "complementary": [
+        "Kali-c.",
+        "Sep.",
+        "Sulph."
+      ],
+      "follows_well": [
+        "Act-sp.",
+        "Aesc.",
+        "Aran.",
+        "Ars.",
+        "Bell.",
+        "Bry.",
+        "Cact.",
+        "Calc.",
+        "Carb-v.",
+        "Cob.",
+        "Cocc.",
+        "Colch.",
+        "Hyos.",
+        "Lyc.",
+        "Ph-ac.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Acet-ac.",
+        "Ign.",
+        "Zinc."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Ars.",
+        "Bell.",
+        "Camph.",
+        "Cham.",
+        "Cocc.",
+        "Coff.",
+        "Euphr.",
+        "Ign.",
+        "Op.",
+        "Puls.",
+        "Thuj."
+      ],
+      "duration": "1-7 d. or 15-21 d."
+    },
+    {
+      "remedy": "Olnd.",
+      "complementary": [],
+      "follows_well": [
+        "Con.",
+        "Lyc.",
+        "Nat-m.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Spig."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Sulph."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Op.",
+      "complementary": [],
+      "follows_well": [
+        "Acon.",
+        "Ant-t.",
+        "Bell.",
+        "Bry.",
+        "Hyos.",
+        "Nux-m.",
+        "Nux-v.",
+        "Samb."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acet-ac.",
+        "Bell.",
+        "Cham.",
+        "Cic.",
+        "Coff.",
+        "Cupr.",
+        "Gels.",
+        "Ip.",
+        "Merc.",
+        "Mur-ac.",
+        "Nux-v.",
+        "Puls.",
+        "Verat.",
+        "Wine",
+        "Zinc."
+      ],
+      "duration": "7 d."
+    },
+    {
+      "remedy": "Pall.",
+      "complementary": [
+        "Plat."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Bell.",
+        "Chin.",
+        "Glon.",
+        "Coff."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Par.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Led.",
+        "Lyc.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Ferr-p."
+      ],
+      "antidotes": [
+        "Coff."
+      ],
+      "duration": "2-4 d."
+    },
+    {
+      "remedy": "Petr.",
+      "complementary": [],
+      "follows_well": [
+        "Bry.",
+        "Calc.",
+        "Lyc.",
+        "Nit-ac.",
+        "Nux-v.",
+        "Puls.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Apis",
+        "Caust."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Ph-ac.",
+      "complementary": [
+        "Chin."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Caust.",
+        "Chin.",
+        "Ferr.",
+        "Fl-ac.",
+        "Lyc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sel.",
+        "Sep.",
+        "Sulph.",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Coff.",
+        "Staph."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Phos.",
+      "complementary": [
+        "All-c.",
+        "Ars.",
+        "Carb-v."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Bry.",
+        "Calc.",
+        "Carb-v.",
+        "Chin.",
+        "Kali-c.",
+        "Lyc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Caust."
+      ],
+      "antidotes": [
+        "Calc.",
+        "Chlf.",
+        "Coff.",
+        "Mez.",
+        "Nux-v.",
+        "Sep.",
+        "Ter."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Plat.",
+      "complementary": [
+        "Pall."
+      ],
+      "follows_well": [
+        "Anac.",
+        "Arg-met.",
+        "Bell.",
+        "Ign.",
+        "Lyc.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Verat."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Bell.",
+        "Nit-s-d.",
+        "Puls."
+      ],
+      "duration": "35-40 d."
+    },
+    {
+      "remedy": "Plb.",
+      "complementary": [],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Lyc.",
+        "Merc.",
+        "Phos.",
+        "Puls.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Alum.",
+        "Alumn.",
+        "Ant-c.",
+        "Ars.",
+        "Bell.",
+        "Caust.",
+        "Cocc.",
+        "Hep.",
+        "Hyos.",
+        "Kali-br.",
+        "Kreos.",
+        "Nux-m.",
+        "Nux-v.",
+        "Op.",
+        "Petr.",
+        "Plat.",
+        "Stram.",
+        "Sul-ac.",
+        "Zinc."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Podo.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Ip.",
+        "Nux-v.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Coloc.",
+        "Lac-ac.",
+        "Lept.",
+        "Nux-v."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Psor.",
+      "complementary": [],
+      "follows_well": [
+        "Alum.",
+        "Bar-c.",
+        "Borx.",
+        "Carb-v.",
+        "Chin.",
+        "Sulph.",
+        "Tub."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Coff."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Puls.",
+      "complementary": [
+        "Lyc.",
+        "Sil.",
+        "Kali-s.",
+        "Stann.",
+        "Sul-ac.",
+        "Tub."
+      ],
+      "follows_well": [
+        "All-c.",
+        "Anac.",
+        "Ant-c.",
+        "Ant-t.",
+        "Ars.",
+        "Asaf.",
+        "Bell.",
+        "Bry.",
+        "Calc.",
+        "Euphr.",
+        "Graph.",
+        "Ign.",
+        "Kali-bi.",
+        "Kali-m.",
+        "Kali-s.",
+        "Lyc.",
+        "Nit-ac.",
+        "Nux-v.",
+        "Phos.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Cham."
+      ],
+      "antidotes": [
+        "Asaf.",
+        "Cham.",
+        "Coff.",
+        "Ign.",
+        "Nux-v.",
+        "Stann."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Ran-b.",
+      "complementary": [],
+      "follows_well": [
+        "Bry.",
+        "Ign.",
+        "Kali-c.",
+        "Nux-v.",
+        "Rhus-t.",
+        "Sep.",
+        "Sabad."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acet-ac.",
+        "Nit-s-d.",
+        "Staph.",
+        "Sulph.",
+        "Vinegar",
+        "Wine."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Ran-s.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Rheum",
+      "complementary": [
+        "Mag-c."
+      ],
+      "follows_well": [
+        "Bell.",
+        "Lach.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sil."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": "2-3 d."
+    },
+    {
+      "remedy": "Rhod.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Puls.",
+        "Rhus-t.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Clem.",
+        "Rhus-t."
+      ],
+      "duration": "35-40 d."
+    },
+    {
+      "remedy": "Rhus-t.",
+      "complementary": [
+        "Bry.",
+        "Calc."
+      ],
+      "follows_well": [
+        "Arn.",
+        "Ars.",
+        "Calc.",
+        "Con.",
+        "Lyc.",
+        "Merc.",
+        "Nux-v.",
+        "Puls.",
+        "Sep.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Apis"
+      ],
+      "antidotes": [
+        "Acon.",
+        "Anac.",
+        "Am-c.",
+        "Bell.",
+        "Bry.",
+        "Camph.",
+        "Clem.",
+        "Coff.",
+        "Crot-t.",
+        "Graph.",
+        "Grind.",
+        "Guaj.",
+        "Lach.",
+        "Ran-b.",
+        "Sep.",
+        "Sulph."
+      ],
+      "duration": "1-7 d or 20-30 d."
+    },
+    {
+      "remedy": "Rumx.",
+      "complementary": [
+        "Calc-p."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Ruta",
+      "complementary": [
+        "Calc-p."
+      ],
+      "follows_well": [
+        "Calc.",
+        "Caust.",
+        "Lyc.",
+        "Ph-ac.",
+        "Puls.",
+        "Sep.",
+        "Sulph.",
+        "Sul-ac."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Sabad.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Puls."
+      ],
+      "duration": "1 d."
+    },
+    {
+      "remedy": "Sabin.",
+      "complementary": [
+        "Thuj."
+      ],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Puls."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Samb.",
+      "complementary": [],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Merc.",
+        "Nux-v.",
+        "Puls."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Ars.",
+        "Camph."
+      ],
+      "duration": "1 d."
+    },
+    {
+      "remedy": "Sang.",
+      "complementary": [],
+      "follows_well": [
+        "Ars.",
+        "Bell.",
+        "Puls.",
+        "Rhus-t.",
+        "Spong.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": ""
+    },
+    {
+      "remedy": "Sars.",
+      "complementary": [
+        "Merc.",
+        "Sep."
+      ],
+      "follows_well": [
+        "All-c.",
+        "Bell.",
+        "Hep.",
+        "Merc.",
+        "Phos.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Acet-ac."
+      ],
+      "antidotes": [
+        "Bell.",
+        "Merc.",
+        "Sep."
+      ],
+      "duration": "35 d."
+    },
+    {
+      "remedy": "Sec.",
+      "complementary": [],
+      "follows_well": [
+        "Acon.",
+        "Ars.",
+        "Bell.",
+        "Chin.",
+        "Merc.",
+        "Puls."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Op."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Sel.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Merc.",
+        "Nux-v.",
+        "Sep."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Chin.",
+        "Wine."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Seneg.",
+      "complementary": [],
+      "follows_well": [
+        "Arum-t.",
+        "Calc.",
+        "Lyc.",
+        "Phos.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Arn.",
+        "Bell.",
+        "Bry.",
+        "Camph."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Sep.",
+      "complementary": [
+        "Nat-m.",
+        "Nux-v.",
+        "Sabad."
+      ],
+      "follows_well": [
+        "Bell.",
+        "Calc.",
+        "Carb-v.",
+        "Con.",
+        "Dros.",
+        "Dulc.",
+        "Euphr.",
+        "Graph.",
+        "Lyc.",
+        "Nat-c.",
+        "Nux-v.",
+        "Petr.",
+        "Puls.",
+        "Rhus-t.",
+        "Sars.",
+        "Sil.",
+        "Sulph.",
+        "Tarent."
+      ],
+      "inimicals": [
+        "Bry.",
+        "Lach."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Ant-c.",
+        "Ant-t.",
+        "Nit-s-d.",
+        "Sulph.",
+        "Vegetable acids."
+      ],
+      "duration": "40-50 d."
+    },
+    {
+      "remedy": "Sil.",
+      "complementary": [
+        "Puls.",
+        "Sanic.",
+        "Thuj."
+      ],
+      "follows_well": [
+        "Aran.",
+        "Ars.",
+        "Asaf.",
+        "Bell.",
+        "Calc.",
+        "Clem.",
+        "Fl-ac.",
+        "Graph.",
+        "Hep.",
+        "Lach.",
+        "Lyc.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph.",
+        "Thuj.",
+        "Tub"
+      ],
+      "inimicals": [
+        "Merc."
+      ],
+      "antidotes": [
+        "Camph.",
+        "Fl-ac.",
+        "Hep."
+      ],
+      "duration": "40-60 d."
+    },
+    {
+      "remedy": "Spig.",
+      "complementary": [],
+      "follows_well": [
+        "Acon.",
+        "Arn.",
+        "Ars.",
+        "Bell.",
+        "Calc.",
+        "Cimic.",
+        "Dig.",
+        "Iris",
+        "Kali-c.",
+        "Kalm.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph.",
+        "Zinc."
+      ],
+      "inimicals": [
+        "Aur.",
+        "Camph.",
+        "Cocc.",
+        "Puls."
+      ],
+      "antidotes": [],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Spong.",
+      "complementary": [],
+      "follows_well": [
+        "Brom.",
+        "Bry.",
+        "Carb-v.",
+        "Con.",
+        "Fl-ac.",
+        "Hep.",
+        "Kali-br.",
+        "Nux-v.",
+        "Phos.",
+        "Puls."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Squil.",
+      "complementary": [
+        "Ant-c."
+      ],
+      "follows_well": [
+        "Ars.",
+        "Bar-c.",
+        "Ign.",
+        "Nux-v.",
+        "Rhus-t.",
+        "Sil."
+      ],
+      "inimicals": [
+        "All-s."
+      ],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "14-20 d."
+    },
+    {
+      "remedy": "Stann.",
+      "complementary": [
+        "Puls."
+      ],
+      "follows_well": [
+        "Calc.",
+        "Kali-c.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Rhus-t.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Puls."
+      ],
+      "duration": "35 d."
+    },
+    {
+      "remedy": "Staph.",
+      "complementary": [],
+      "follows_well": [
+        "Calc.",
+        "Caust.",
+        "Coloc.",
+        "Fl-ac.",
+        "Kali-c.",
+        "Ign.",
+        "Lyc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sel.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Ran-b."
+      ],
+      "antidotes": [
+        "Ambr.",
+        "Camph."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Stram.",
+      "complementary": [],
+      "follows_well": [
+        "Acon.",
+        "Bell.",
+        "Bry.",
+        "Cupr.",
+        "Hyos.",
+        "Nux-v."
+      ],
+      "inimicals": [
+        "Coff."
+      ],
+      "antidotes": [
+        "Acet-ac.",
+        "Bell.",
+        "Hyos.",
+        "Nux-v.",
+        "Op.",
+        "Puls.",
+        "Tab."
+      ],
+      "duration": "40 d."
+    },
+    {
+      "remedy": "Stront-c.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Caust.",
+        "Kali-c.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "40-60 d."
+    },
+    {
+      "remedy": "Sulph.",
+      "complementary": [
+        "Aloe",
+        "Acon.",
+        "Ars.",
+        "Nux-v.",
+        "Psor.",
+        "Puls.",
+        "Tub."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Aesc.",
+        "Alum.",
+        "Apis",
+        "Ars.",
+        "Bar-c.",
+        "Bell.",
+        "Berb.",
+        "Borx.",
+        "Bry.",
+        "Calc.",
+        "Carb-v.",
+        "Euphr.",
+        "Graph.",
+        "Guaj.",
+        "Kali-c.",
+        "Merc.",
+        "Nit-ac.",
+        "Nux-v.",
+        "Phos.",
+        "Podo.",
+        "Puls.",
+        "Rhus-t.",
+        "Samb.",
+        "Sars.",
+        "Sep."
+      ],
+      "inimicals": [
+        "Ran-b."
+      ],
+      "antidotes": [
+        "Acon.",
+        "Ars.",
+        "Camph.",
+        "Caust.",
+        "Cham.",
+        "Chin.",
+        "Con.",
+        "Merc.",
+        "Nux-v.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Sil.",
+        "Thuj."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Sul-ac.",
+      "complementary": [
+        "Puls."
+      ],
+      "follows_well": [
+        "Arn.",
+        "Calc.",
+        "Con.",
+        "Lyc.",
+        "Plat.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Puls."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Tab.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Acet-ac.",
+        "Ars.",
+        "Clem.",
+        "Cocc.",
+        "Ign.",
+        "Ip.",
+        "Lyc.",
+        "Nux-v.",
+        "Phos.",
+        "Puls.",
+        "Sep.",
+        "Staph.",
+        "Verat."
+      ],
+      "duration": "14-21 d."
+    },
+    {
+      "remedy": "Tarax.",
+      "complementary": [],
+      "follows_well": [
+        "Ars.",
+        "Asaf.",
+        "Bell.",
+        "Chin.",
+        "Lyc.",
+        "Rhus-t.",
+        "Staph.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Tell.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [],
+      "antidotes": [
+        "Nux-v."
+      ],
+      "duration": "30-40 d."
+    },
+    {
+      "remedy": "Teucr.",
+      "complementary": [],
+      "follows_well": [
+        "Chin.",
+        "Puls.",
+        "Sil."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "14-21 d."
+    },
+    {
+      "remedy": "Ther.",
+      "complementary": [],
+      "follows_well": [
+        "Ars.",
+        "Med.",
+        "Nat-s.",
+        "Sabin.",
+        "Sil."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Graph.",
+        "Mosch."
+      ],
+      "duration": "30 d."
+    },
+    {
+      "remedy": "Thuj.",
+      "complementary": [
+        "Med.",
+        "Sabin.",
+        "Sil."
+      ],
+      "follows_well": [
+        "Bell.",
+        "Calc.",
+        "Hydr.",
+        "Psor.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Cham.",
+        "Cocc.",
+        "Merc.",
+        "Puls.",
+        "Staph.",
+        "Sulph."
+      ],
+      "duration": "60 d."
+    },
+    {
+      "remedy": "Tub.",
+      "complementary": [],
+      "follows_well": [
+        "Asaf.",
+        "Calc.",
+        "Ign.",
+        "Kali-c.",
+        "Lyc.",
+        "Merc.",
+        "Nit-ac.",
+        "Puls.",
+        "Sabin.",
+        "Sil.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [],
+      "duration": ""
+    },
+    {
+      "remedy": "Valer.",
+      "complementary": [],
+      "follows_well": [
+        "Phos.",
+        "Puls."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Bell.",
+        "Camph.",
+        "Coff.",
+        "Merc.",
+        "Puls."
+      ],
+      "duration": "8-10 d."
+    },
+    {
+      "remedy": "Verat.",
+      "complementary": [
+        "Arn."
+      ],
+      "follows_well": [
+        "Acon.",
+        "Arg-n.",
+        "Arn.",
+        "Ars.",
+        "Bell.",
+        "Carb-v.",
+        "Cham.",
+        "Chin.",
+        "Cupr.",
+        "Dros.",
+        "Dulc.",
+        "Ip.",
+        "Puls.",
+        "Rhus-t.",
+        "Samb.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Acon.",
+        "Ars.",
+        "Camph.",
+        "Chin.",
+        "Coff."
+      ],
+      "duration": "20-30 d."
+    },
+    {
+      "remedy": "Verb.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Chin.",
+        "Lyc.",
+        "Puls.",
+        "Rhus-t.",
+        "Sep.",
+        "Stram.",
+        "Sulph."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "8-10 d."
+    },
+    {
+      "remedy": "Vesp.",
+      "complementary": [],
+      "follows_well": [],
+      "inimicals": [
+        "Arg-n."
+      ],
+      "antidotes": [
+        "Acet-ac.",
+        "Apis."
+      ],
+      "duration": ""
+    },
+    {
+      "remedy": "Viol-o.",
+      "complementary": [],
+      "follows_well": [
+        "Bell.",
+        "Cina",
+        "Cor-r.",
+        "Nux-v.",
+        "Puls."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph."
+      ],
+      "duration": "2-4 d."
+    },
+    {
+      "remedy": "Viol-t.",
+      "complementary": [],
+      "follows_well": [
+        "Puls.",
+        "Rhus-t.",
+        "Sep."
+      ],
+      "inimicals": [],
+      "antidotes": [
+        "Camph.",
+        "Merc.",
+        "Puls.",
+        "Rhus-t."
+      ],
+      "duration": "8-14 d."
+    },
+    {
+      "remedy": "Zinc.",
+      "complementary": [],
+      "follows_well": [
+        "Ign.",
+        "Puls.",
+        "Sep.",
+        "Sulph."
+      ],
+      "inimicals": [
+        "Cham.",
+        "Nux-v."
+      ],
+      "antidotes": [
+        "Camph.",
+        "Hep.",
+        "Ign.",
+        "Wine."
+      ],
+      "duration": "30-40 d."
+    }
+  ]
+}
