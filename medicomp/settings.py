@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'cloudinary_storage',
+    'cloudinary',
     'app',
 ]
 
@@ -147,5 +149,23 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'            # where collectstatic will dum
 
 
 # Media files (User uploaded images)
+# Media files (User uploaded images)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# Cloudinary configuration
+# Cloudinary configuration
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME', default='dw0indoik'),
+    'API_KEY': config('CLOUDINARY_API_KEY', default='786614795445738'),
+    'API_SECRET': config('CLOUDINARY_API_SECRET', default=''),
+}
+
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
