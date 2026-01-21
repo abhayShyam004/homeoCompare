@@ -1,7 +1,7 @@
 import psycopg2
 import os
 
-dsn = "postgresql://neondb_owner:npg_mSCE5by2wsjx@ep-dawn-darkness-afhvjp11-pooler.c-2.us-west-2.aws.neon.tech/neondb?sslmode=require"
+dsn = "postgresql://neondb_owner:npg_mSCE5by2wsjx@ep-dawn-darkness-afhvjp11.us-west-2.aws.neon.tech/neondb?sslmode=require"
 
 try:
     print(f"Attempting to connect to: {dsn}")
