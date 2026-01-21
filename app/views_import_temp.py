@@ -3,13 +3,12 @@ from django.conf import settings
 import json
 import os
 from app.models import RemedyRelationship, RemedyDuration
+from app.views import is_admin_authenticated
 
 def trigger_import(request):
-    # Basic security: Check for superuser or a secret header/param could be added here
-    # For now, relying on obscurity and user action
-    
-    if not request.user.is_superuser:
-        return JsonResponse({"error": "Unauthorized. Please login as superuser."}, status=403)
+    # Use the same JWT auth as admin panel
+    if not is_admin_authenticated(request):
+        return JsonResponse({"error": "Unauthorized. Please login to admin panel first."}, status=403)
 
     results = {
         "status": "started",
