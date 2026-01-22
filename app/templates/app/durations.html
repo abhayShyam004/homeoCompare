@@ -71,6 +71,9 @@
             border: 1px solid #334155;
             overflow: hidden;
             margin-bottom: 2rem;
+            /* Scrollable container for sticky header */
+            overflow-y: auto;
+            max-height: 70vh;
         }
         .duration-table {
             width: 100%;
@@ -87,6 +90,10 @@
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.8rem;
+            /* Sticky header */
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
         .duration-table tr:hover { background: rgba(255,255,255,0.02); }
         .remedy-name { font-weight: 600; color: var(--primary); }

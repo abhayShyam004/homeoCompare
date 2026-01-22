@@ -317,7 +317,7 @@
         }
 
         .topbar {
-            height: 85px !important; /* Force override */
+            height: 85px !important;
             min-height: 85px;
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
@@ -374,32 +374,23 @@
             transition: all 0.2s;
         }
 
-        /* Responsive: Matrix Layout (2x2 + 1) for Tablet/Mobile */
         @media (max-width: 1400px) {
             .stats-row { 
                 grid-template-columns: repeat(2, 1fr); 
             }
             .stat-card:last-child { 
-                grid-column: span 2; /* The 5th card spans full width */
+                grid-column: span 2;
             }
         }
 
-        /* Very small screens: Stack all vertically if needed, or keep matrix? 
-           User asked for distinct matrix logic. A 2-col grid works on most phones.
-           Let's keep the matrix logic down to the smallest size unless it breaks.
-        */
-        /* Phone (< 480px) */
         @media (max-width: 480px) {
-            /* Force Matrix Layout on Mobile */
             .stats-row { 
                 grid-template-columns: repeat(2, 1fr); 
-                gap: 0.5rem; /* Smaller gap */
+                gap: 0.5rem;
             }
             .stat-card:last-child { 
                 grid-column: span 2; 
             }
-            
-            /* Compact Cards for 2-col logic */
             .stat-card {
                 padding: 1rem;
             }
@@ -409,7 +400,7 @@
                 font-size: 0.9rem;
             }
             .stat-value {
-                font-size: 1.5rem; /* Smaller number */
+                font-size: 1.5rem;
                 margin-bottom: 0.25rem;
             }
             .stat-label {
@@ -619,11 +610,10 @@
             opacity: 0.3;
         }
 
-        /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-        /* Mobile Menu Button */
+
         .mobile-menu-btn {
             display: none;
             width: 48px;
@@ -644,7 +634,6 @@
             color: var(--primary);
         }
 
-        /* Sidebar Overlay */
         .sidebar-overlay {
             position: fixed;
             top: 0;
@@ -659,7 +648,6 @@
             backdrop-filter: blur(2px);
         }
 
-        /* Responsive: Tablet & Mobile (< 1200px) */
         @media (max-width: 1200px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -687,7 +675,6 @@
             }
         }
 
-        /* Responsive: Phone (< 768px) */
         @media (max-width: 768px) {
             .topbar { padding: 0 1rem; }
             .chart-header {

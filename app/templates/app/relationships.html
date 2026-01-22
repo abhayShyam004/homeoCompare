@@ -50,15 +50,18 @@
         .sidebar { width: var(--sidebar-width); background: var(--bg-sidebar); border-right: 1px solid #334155; height: 100%; display: flex; flex-direction: column; overflow-y:auto; flex-shrink: 0;}
         .main-wrapper { flex: 1; display: flex; flex-direction: column; height: 100%; overflow: hidden; }
         .topbar { height: 70px; border-bottom: 1px solid #334155; background: var(--bg-card); display: flex; align-items: center; padding: 0 2rem; flex-shrink: 0;}
-        .content-area { flex: 1; overflow-y: auto; padding: 2rem; }
+        .content-area { flex: 1; overflow-y: auto; padding: 2rem; padding-top: 0; }
 
         /* Table Styles */
         .rel-table-container {
             background: var(--bg-card);
             border-radius: var(--radius);
             border: 1px solid #334155;
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: auto;
+            max-height: 80vh;
             width: 100%;
+            position: relative;
         }
         .rel-table {
             width: 100%;
@@ -70,11 +73,31 @@
             border-bottom: 1px solid #334155;
         }
         .rel-table th {
-            background: rgba(5, 150, 105, 0.1);
-            color: var(--primary);
-            font-weight: 600;
+            background: #0f172a;
+            color: #10b981;
+            font-weight: 900;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 2px solid #10b981;
+            border-top: none;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+            padding: 2rem 1rem;
+            min-height: 60px;
+        }
+        
+        [data-theme="light"] .rel-table th {
+            background: #1e293b;
+            color: #ffffff;
+        }
+        
+        /* Ensure the content area allows sticky to work */
+        .content-area {
+            overflow-y: auto;
+            position: relative;
         }
         .rel-table tr:hover {
             background: rgba(255,255,255,0.02);
@@ -89,6 +112,7 @@
             margin: 2px;
         }
         .search-box {
+            margin-top: 1.5rem;
             margin-bottom: 1.5rem;
             width: 100%;
             padding: 1rem;
@@ -116,6 +140,8 @@
             }
             .content-area {
                 padding: 1rem;
+                /* Let the whole page (body) scroll on mobile so sticky headers use the viewport */
+                overflow-y: visible;
             }
             .sidebar.active {
                 left: 0;
@@ -142,7 +168,9 @@
             /* Table - Keep tabular format but allow text wrapping */
             .rel-table-container {
                 overflow-x: auto;
+                overflow-y: visible;
                 -webkit-overflow-scrolling: touch;
+                position: relative;
             }
             
             .rel-table th, .rel-table td {
@@ -157,12 +185,33 @@
             .rel-table th {
                 font-size: 0.7rem;
                 min-width: 100px;
+                min-height: 50px;
+                padding: 1.5rem 0.5rem;
+                position: sticky;
+                /* Sticky within the table container, not the viewport */
+                top: 0;
+                z-index: 100;
+                background: #0f172a !important;
+                box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+            }
+            
+            [data-theme="light"] .rel-table th {
+                background: #1e293b !important;
             }
             
             /* First column (Remedy name) can be narrower */
             .rel-table td:first-child,
             .rel-table th:first-child {
                 min-width: 90px;
+            }
+            
+            /* Restore container scrolling on mobile for sticky to work */
+            .rel-table-container {
+                overflow-x: auto;
+                overflow-y: auto;
+                max-height: 70vh;
+                -webkit-overflow-scrolling: touch;
+                position: relative;
             }
         }
 
