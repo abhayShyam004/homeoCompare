@@ -1,22 +1,12 @@
 {
   "ABROTANUM": {
-    "name": "ABROTANUM",
-    "page": 517,
+    "page": "517",
     "family": "Compositae",
     "description": "Southernwood",
-    "constitution": [
-      "Marasmus of children with marked emaciation, especially of legs (Iod., Sanic., Tub.)",
-      "the skin is flabby and hangs loose in folds (of neck, Natm., Sanic.)."
-    ],
-    "mental generals": [
-      "Child is ill-natured, irritable, cross and despondent",
-      "violent, inhuman, would like to do something cruel."
-    ],
-    "physical generals": [
-      "Ravenous hunger",
-      "losing flesh while eating well (Iod., Nat-m., Sanic., Tub.)."
-    ],
-    "head": "In marasmus, head weak, cannot hold it up (Aeth.).",
+    "constitution": "['Marasmus of children with marked emaciation, especially of legs (Iod., Sanic., Tub.)', 'the skin is flabby and hangs loose in folds (of neck, Natm., Sanic.).']",
+    "mental generals": "['Child is ill-natured, irritable, cross and despondent', 'violent, inhuman, would like to do something cruel.']",
+    "physical generals": "['Ravenous hunger', 'losing flesh while eating well (Iod., Nat-m., Sanic., Tub.).']",
+    "head": "In marasmus, head weak, cannot hold it up (Aeth.),",
     "eyes": "",
     "vision": "",
     "ears": "",
@@ -31,10 +21,7 @@
     "stool": "",
     "abdomen": "",
     "urinary system": "",
-    "gastro-intestinal system": [
-      "Alternate constipation and diarrhea",
-      "lienteria."
-    ],
+    "gastro-intestinal system": "['Alternate constipation and diarrhea', 'lienteria.']",
     "upper limbs": "",
     "lower limbs": "",
     "limbs in general": "",
@@ -46,27 +33,12 @@
     "cardio-vascular system": "",
     "neck": "",
     "back": "",
-    "extremities": [
-      "Painful contractions of the limbs from cramps or following colic.",
-      "Rheumatism: For the excessive pain before the swelling commences",
-      "from suddenly checked diarrhea or other secretions",
-      "alternates with hemorrhoids, with dysentery.",
-      "Gout: Joints stiff, swollen, with pricking sensation",
-      "wrists and ankle joints painful and inflammed.",
-      "Very lame and sore all over.",
-      "Marasmus of lower extremities only."
-    ],
+    "extremities": "['Painful contractions of the limbs from cramps or following colic.', 'Rheumatism: For the excessive pain before the swelling commences', 'from suddenly checked diarrhea or other secretions', 'alternates with hemorrhoids, with dysentery.', 'Gout: Joints stiff, swollen, with pricking sensation', 'wrists and ankle joints painful and inflammed.', 'Very lame and sore all over.', 'Marasmus of lower extremities only.']",
     "nervous system": "",
     "skin": "Itching chilblains (Agar.).",
-    "fever": [
-      "Great weakness and prostration and a kind of hectic fever with children",
-      "unable to stand."
-    ],
+    "fever": "['Great weakness and prostration and a kind of hectic fever with children', 'unable to stand.']",
     "modalities": "",
-    "relation": [
-      "After Hepar in furuncle",
-      "after Acon. and Bry. in pleurisy, when a pressing sensation remains in affected side impeding respiration."
-    ]
+    "relation": "['After Hepar in furuncle', 'after Acon. and Bry. in pleurisy, when a pressing sensation remains in affected side impeding respiration.']"
   },
   "ACETICUM ACIDUM": {
     "name": "ACETICUM ACIDUM",

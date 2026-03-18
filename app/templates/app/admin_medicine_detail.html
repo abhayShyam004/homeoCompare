@@ -162,6 +162,7 @@
     </style>
 </head>
 <body>
+    {% csrf_token %}
 <body>
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <aside class="sidebar" id="sidebar">
@@ -299,7 +300,10 @@
             try {
                 const resp = await fetch('{% url "admin_medicine_save" %}', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
                     body: JSON.stringify({
                         source: '{{ source }}',
                         name: '{{ medicine.name }}',

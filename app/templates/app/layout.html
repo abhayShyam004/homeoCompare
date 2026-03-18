@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HomeoCompare | Premium Materia Medica Comparison{% endblock %}</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="{% block description %}Compare homeopathy medicines and remedies easily using trusted Materia Medica sources (Boericke, Allen).{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}homeo compare, homeopathy compare, homeopathic medicine comparison, boericke, allen keynotes{% endblock %}">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Static Assets -->
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'app/premium.css' %}">
+    
+    {% block head %}{% endblock %}
+</head>
+
+<body class="app-layout">
+    <!-- Mobile Navigation Toggle -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Sidebar">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times" style="display:none"></i>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-logo">
+                <i class="fas fa-mortar-pestle"></i>
+            </div>
+            <div class="brand-text">
+                <h1>Homeo<span>Compare</span></h1>
+                <p>Pure Medicine Platform</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <div class="menu-group">
+                <span class="menu-label">Main Modules</span>
+                <a href="{% url 'remedy_compare' %}" class="menu-item {% if '/boericke/' in request.path %}active{% endif %}">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Boericke's MM</span>
+                </a>
+                <a href="{% url 'allen_compare' %}" class="menu-item {% if '/allen/' in request.path %}active{% endif %}">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Allen's Keynotes</span>
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <span class="menu-label">Resources</span>
+                <a href="{% url 'relationships' %}" class="menu-item {% if '/relationships/' in request.path %}active{% endif %}">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Relationships</span>
+                </a>
+                <a href="{% url 'durations' %}" class="menu-item {% if '/durations/' in request.path %}active{% endif %}">
+                    <i class="fas fa-clock"></i>
+                    <span>Durations</span>
+                </a>
+                <a href="{% url 'remedy_history' %}" class="menu-item {% if '/remedy-history/' in request.path %}active{% endif %}">
+                    <i class="fas fa-calendar-day"></i>
+                    <span>Remedy History</span>
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <span class="menu-label">My Space</span>
+                <a href="{% url 'saved_remedies' %}" class="menu-item {% if '/saved-remedies/' in request.path %}active{% endif %}">
+                    <i class="fas fa-star"></i>
+                    <span>Saved Remedies</span>
+                    <span class="badge" id="savedCount">0</span>
+                </a>
+            </div>
+            
+            <hr class="sidebar-divider">
+            
+            <div class="menu-group">
+                <a href="{% url 'suggestion' %}" class="menu-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Feedback</span>
+                </a>
+                <a href="{% url 'about' %}" class="menu-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="{% url 'privacy' %}" class="menu-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Privacy</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="themeToggle" class="theme-toggle">
+                <span><i class="fas fa-moon"></i> Dark Mode</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <div class="nav-left">
+                <button class="nav-toggle" id="sidebarToggle">
+                    <i class="fas fa-outdent"></i>
+                </button>
+                <div class="breadcrumb">
+                    <a href="{% url 'home' %}">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>{% block module_name %}Dashboard{% endblock %}</span>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="nav-time" id="currentClock">00:00</div>
+                <div class="nav-profile">
+                    <div class="profile-info">
+                        <span class="user-name">Guest Explorer</span>
+                        <span class="user-role">Community User</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dynamic Content -->
+        <main class="content-area">
+            {% block content %}{% endblock %}
+        </main>
+
+        <!-- Static Footer (optional, already in sidebar or landing) -->
+        <footer class="app-footer">
+            <p>&copy; 2025 HomeoCompare. Built for Precision Learning.</p>
+            <div class="footer-links">
+                <a href="mailto:abhay31204@gmail.com">Contact Developer</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'app/main.js' %}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>
