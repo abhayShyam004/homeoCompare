@@ -1,0 +1,906 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Case Paper - HomeoCompare</title>
+    <link rel="stylesheet" href="{% static 'css/case_paper.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+</head>
+<body data-theme="dark">
+    {% include 'navbar.html' %}
+    
+    <div class="cp-form-wrapper">
+        <!-- Sidebar -->
+        <div class="cp-sidebar">
+            <div class="cp-sidebar-top">
+                <div class="cp-sidebar-label">CASE PAPER</div>
+                <div class="cp-sidebar-case-id">{{ case.case_id }}</div>
+                <div class="cp-sidebar-status">
+                    <span class="cp-status-dot {% if case.status == 'draft' %}draft{% else %}complete{% endif %}"></span>
+                    <span class="cp-status-text">{{ case.status|upper }}</span>
+                </div>
+            </div>
+
+            <!-- Progress Block -->
+            <div class="cp-progress-block">
+                <div class="cp-progress-percent">100%</div>
+                <div class="cp-progress-text">10 of 10 Sections</div>
+                <div class="cp-progress-bar-wrapper">
+                    <div class="cp-progress-bar-large">
+                        <div class="cp-progress-fill-large" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Navigation -->
+            <nav class="cp-section-nav">
+                <a href="#section-1" class="cp-nav-item" data-section="1">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Patient Profile</span>
+                </a>
+                <a href="#section-2" class="cp-nav-item" data-section="2">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Chief Complaints</span>
+                </a>
+                <a href="#section-3" class="cp-nav-item" data-section="3">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Associated Complaints</span>
+                </a>
+                <a href="#section-4" class="cp-nav-item" data-section="4">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Case History</span>
+                </a>
+                <a href="#section-5" class="cp-nav-item" data-section="5">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Generals</span>
+                </a>
+                <a href="#section-6" class="cp-nav-item" data-section="6">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Examination</span>
+                </a>
+                <a href="#section-7" class="cp-nav-item" data-section="7">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Diagnosis</span>
+                </a>
+                <a href="#section-8" class="cp-nav-item" data-section="8">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Prescription</span>
+                </a>
+                <a href="#section-9" class="cp-nav-item" data-section="9">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Follow-Up</span>
+                </a>
+                <a href="#section-10" class="cp-nav-item" data-section="10">
+                    <span class="cp-nav-circle">✓</span>
+                    <span class="cp-nav-text">Case Summary</span>
+                </a>
+            </nav>
+
+            <!-- Sidebar Bottom Buttons -->
+            <div class="cp-sidebar-bottom">
+                <a href="{% url 'case_paper_edit' case.case_id %}" class="cp-sidebar-btn outline">
+                    <i class="fas fa-pen"></i> Edit Case
+                </a>
+                <a href="{% url 'case_paper_dashboard' %}" class="cp-sidebar-btn primary">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+            </div>
+        </div>
+
+        <!-- Main View Area -->
+        <div class="cp-main">
+            <!-- Breadcrumb & Meta -->
+            <div class="cp-form-header">
+                <div class="cp-breadcrumb">
+                    <a href="{% url 'case_paper_dashboard' %}">Case Papers</a>
+                    <span class="cp-breadcrumb-sep">/</span>
+                    <span class="cp-breadcrumb-current">View Case</span>
+                </div>
+                <div class="cp-view-actions">
+                    <button onclick="window.print()" class="cp-print-btn">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                </div>
+            </div>
+
+            <!-- Print Header (hidden on screen, shown on print) -->
+            <div class="cp-print-header">
+                <h1>Homeopathic Case Paper Report</h1>
+                <div class="cp-print-meta">
+                    <p><strong>Case ID:</strong> {{ case.case_id }}</p>
+                    <p><strong>Date:</strong> <span id="printDate"></span></p>
+                </div>
+            </div>
+
+            <div class="cp-form-container">
+                <!-- Section 1: Patient Profile (Read-only) -->
+                <div class="cp-section-block" id="section-1" style="animation-delay: 0.05s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-user"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Patient Profile</h2>
+                            <p class="cp-section-subtitle">Basic patient information</p>
+                        </div>
+                        <div class="cp-section-number">1</div>
+                    </div>
+                    <div class="cp-section-body">
+                        <div class="cp-grid-3">
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Physician Name</div>
+                                <div class="cp-value">{{ case.preliminary.physician_name }}</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Consultation Date</div>
+                                <div class="cp-value">{% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date|date:"M d, Y" }}{% else %}{{ case.created_at|date:"M d, Y" }}{% endif %}</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Consultation Time</div>
+                                <div class="cp-value">{{ case.preliminary.consultation_time|default:"—" }}</div>
+                            </div>
+                        </div>
+
+                        <div class="cp-grid-3">
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Patient Name</div>
+                                <div class="cp-value">{{ case.preliminary.patient_name }}</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Age</div>
+                                <div class="cp-value">{{ case.preliminary.age|default:"—" }} years</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Sex</div>
+                                <div class="cp-value">{{ case.preliminary.get_sex_display|default:"—" }}</div>
+                            </div>
+                        </div>
+
+                        <div class="cp-grid-3">
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Occupation</div>
+                                <div class="cp-value">{{ case.preliminary.occupation|default:"—" }}</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Contact Number</div>
+                                <div class="cp-value">{{ case.preliminary.contact_number|default:"—" }}</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Email Address</div>
+                                <div class="cp-value">{{ case.preliminary.email|default:"—" }}</div>
+                            </div>
+                        </div>
+
+                        <div class="cp-grid-2">
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Address</div>
+                                <div class="cp-value">{{ case.preliminary.address|default:"—" }}</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Remarks</div>
+                                <div class="cp-value">{{ case.preliminary.remarks|default:"—" }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Chief Complaints (Read-only) -->
+                <div class="cp-section-block" id="section-2" style="animation-delay: 0.10s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-list"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Chief Complaints</h2>
+                            <p class="cp-section-subtitle">Primary concerns</p>
+                        </div>
+                        <div class="cp-section-number">2</div>
+                    </div>
+                    <div class="cp-section-body">
+                        {% if case.chief_complaints %}
+                            {% for complaint in case.chief_complaints %}
+                                <div class="cp-view-item">
+                                    <div class="cp-grid-2">
+                                        <div class="cp-field-readonly">
+                                            <div class="cp-label">Complaint</div>
+                                            <div class="cp-value">{{ complaint.complaint }}</div>
+                                        </div>
+                                        <div class="cp-field-readonly">
+                                            <div class="cp-label">Duration</div>
+                                            <div class="cp-value">{{ complaint.duration|default:"—" }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="cp-field-readonly">
+                                        <div class="cp-label">Detailed Description</div>
+                                        <div class="cp-value">{{ complaint.description|default:"—" }}</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="cp-no-data">No chief complaints recorded</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Section 3: Associated Complaints (Read-only) -->
+                <div class="cp-section-block" id="section-3" style="animation-delay: 0.15s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-stream"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Associated Complaints</h2>
+                            <p class="cp-section-subtitle">Secondary symptoms</p>
+                        </div>
+                        <div class="cp-section-number">3</div>
+                    </div>
+                    <div class="cp-section-body">
+                        {% if case.associated_complaints %}
+                            {% for complaint in case.associated_complaints %}
+                                <div class="cp-view-item">
+                                    <div class="cp-field-readonly">
+                                        <div class="cp-label">Associated Symptom</div>
+                                        <div class="cp-value">{{ complaint.symptom }}</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="cp-no-data">No associated complaints recorded</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Section 4: Case History (Read-only) -->
+                <div class="cp-section-block" id="section-4" style="animation-delay: 0.20s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-history"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Case History</h2>
+                            <p class="cp-section-subtitle">Chronological history</p>
+                        </div>
+                        <div class="cp-section-number">4</div>
+                    </div>
+                    <div class="cp-section-body">
+                        <div class="cp-subsection">
+                            <h3 class="cp-subsection-title">History of Present Illness</h3>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">HPI Details</div>
+                                <div class="cp-value">{{ case.case_history.hpi|default:"—"|linebreaks }}</div>
+                            </div>
+                        </div>
+
+                        <hr class="cp-subsection-divider">
+
+                        <div class="cp-subsection">
+                            <h3 class="cp-subsection-title">Past Medical History</h3>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Past Medical History</div>
+                                <div class="cp-value">{{ case.case_history.past_medical_history|default:"—"|linebreaks }}</div>
+                            </div>
+                        </div>
+
+                        <hr class="cp-subsection-divider">
+
+                        <div class="cp-subsection">
+                            <h3 class="cp-subsection-title">Family History</h3>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Family History</div>
+                                <div class="cp-value">{{ case.case_history.family_history|default:"—"|linebreaks }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Generals (Read-only) -->
+                <div class="cp-section-block" id="section-5" style="animation-delay: 0.25s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-heart-pulse"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Generals</h2>
+                            <p class="cp-section-subtitle">General characteristics</p>
+                        </div>
+                        <div class="cp-section-number">5</div>
+                    </div>
+                    <div class="cp-section-body">
+                        <div class="cp-subsection">
+                            <h3 class="cp-subsection-title">Personal History</h3>
+                            <div class="cp-grid-2">
+                                <div class="cp-field-readonly">
+                                    <div class="cp-label">Appetite</div>
+                                    <div class="cp-value">{{ case.generals.get_appetite_display|default:"—" }}</div>
+                                </div>
+                                <div class="cp-field-readonly">
+                                    <div class="cp-label">Thirst</div>
+                                    <div class="cp-value">{{ case.generals.get_thirst_display|default:"—" }}</div>
+                                </div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Digestion & Bowels</div>
+                                <div class="cp-value">{{ case.generals.digestion|default:"—"|linebreaks }}</div>
+                            </div>
+                        </div>
+
+                        <hr class="cp-subsection-divider">
+
+                        <div class="cp-subsection">
+                            <h3 class="cp-subsection-title">Mental & Emotional State</h3>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Mental State</div>
+                                <div class="cp-value">{{ case.generals.mental_state|default:"—"|linebreaks }}</div>
+                            </div>
+                        </div>
+
+                        <hr class="cp-subsection-divider">
+
+                        <div class="cp-subsection">
+                            <h3 class="cp-subsection-title">Physical General Observations</h3>
+                            <div class="cp-grid-2">
+                                <div class="cp-field-readonly">
+                                    <div class="cp-label">Build & Complexion</div>
+                                    <div class="cp-value">{{ case.generals.build_complexion|default:"—" }}</div>
+                                </div>
+                                <div class="cp-field-readonly">
+                                    <div class="cp-label">Sleep Pattern</div>
+                                    <div class="cp-value">{{ case.generals.sleep_pattern|default:"—" }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 6: Examination & Investigations (Read-only) -->
+                <div class="cp-section-block" id="section-6" style="animation-delay: 0.30s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-stethoscope"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Examination & Investigations</h2>
+                            <p class="cp-section-subtitle">Clinical findings</p>
+                        </div>
+                        <div class="cp-section-number">6</div>
+                    </div>
+                    <div class="cp-section-body">
+                        <div class="cp-grid-3">
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">BP (mmHg)</div>
+                                <div class="cp-value">{{ case.examination.bp|default:"—" }}</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Pulse (bpm)</div>
+                                <div class="cp-value">{{ case.examination.pulse|default:"—" }}</div>
+                            </div>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Temperature (°F)</div>
+                                <div class="cp-value">{{ case.examination.temperature|default:"—" }}</div>
+                            </div>
+                        </div>
+
+                        <div class="cp-field-readonly">
+                            <div class="cp-label">Physical Examination Findings</div>
+                            <div class="cp-value">{{ case.examination.physical_examination|default:"—"|linebreaks }}</div>
+                        </div>
+
+                        <div class="cp-field-readonly">
+                            <div class="cp-label">Investigations & Reports</div>
+                            <div class="cp-value">{{ case.examination.investigations|default:"—"|linebreaks }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 7: Diagnosis & Repertorization (Read-only) -->
+                <div class="cp-section-block" id="section-7" style="animation-delay: 0.35s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-microscope"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Diagnosis & Repertorization</h2>
+                            <p class="cp-section-subtitle">Homoeopathic analysis</p>
+                        </div>
+                        <div class="cp-section-number">7</div>
+                    </div>
+                    <div class="cp-section-body">
+                        <div class="cp-field-readonly">
+                            <div class="cp-label">Provisional Diagnosis (Allopathic)</div>
+                            <div class="cp-value">{{ case.diagnosis.provisional_diagnosis|default:"—" }}</div>
+                        </div>
+
+                        <div class="cp-field-readonly">
+                            <div class="cp-label">Miasmatic Background</div>
+                            <div class="cp-value">{{ case.diagnosis.miasmatic|default:"—"|linebreaks }}</div>
+                        </div>
+
+                        <div class="cp-field-readonly">
+                            <div class="cp-label">Rubrics & Repertorization</div>
+                            <div class="cp-value">{{ case.diagnosis.rubrics|default:"—"|linebreaks }}</div>
+                        </div>
+
+                        <div class="cp-field-readonly">
+                            <div class="cp-label">Differential Diagnosis (Medicines)</div>
+                            <div class="cp-value">{{ case.diagnosis.differential_medicines|default:"—"|linebreaks }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 8: Prescription & Advice (Read-only) -->
+                <div class="cp-section-block" id="section-8" style="animation-delay: 0.40s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-pills"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Prescription & Advice</h2>
+                            <p class="cp-section-subtitle">Treatment plan</p>
+                        </div>
+                        <div class="cp-section-number">8</div>
+                    </div>
+                    <div class="cp-section-body">
+                        <div class="cp-subsection">
+                            <h3 class="cp-subsection-title">Prescription</h3>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Remedy & Potency</div>
+                                <div class="cp-value">{{ case.prescription.remedy_potency|default:"—"|linebreaks }}</div>
+                            </div>
+                            <div class="cp-grid-2">
+                                <div class="cp-field-readonly">
+                                    <div class="cp-label">Dosage & Duration</div>
+                                    <div class="cp-value">{{ case.prescription.dosage|default:"—" }}</div>
+                                </div>
+                                <div class="cp-field-readonly">
+                                    <div class="cp-label">Course Duration</div>
+                                    <div class="cp-value">{{ case.prescription.duration|default:"—" }}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="cp-subsection-divider">
+
+                        <div class="cp-subsection">
+                            <h3 class="cp-subsection-title">Advice & Lifestyle</h3>
+                            <div class="cp-field-readonly">
+                                <div class="cp-label">Lifestyle Advice</div>
+                                <div class="cp-value">{{ case.prescription.lifestyle_advice|default:"—"|linebreaks }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 9: Follow-Up (Read-only) -->
+                <div class="cp-section-block" id="section-9" style="animation-delay: 0.45s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-calendar-check"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Follow-Up</h2>
+                            <p class="cp-section-subtitle">Scheduled consultations</p>
+                        </div>
+                        <div class="cp-section-number">9</div>
+                    </div>
+                    <div class="cp-section-body">
+                        {% if case.followups %}
+                            {% for followup in case.followups %}
+                                <div class="cp-view-item">
+                                    <div class="cp-grid-2">
+                                        <div class="cp-field-readonly">
+                                            <div class="cp-label">Follow-Up Date</div>
+                                            <div class="cp-value">{{ followup.date|date:"M d, Y" }}</div>
+                                        </div>
+                                        <div class="cp-field-readonly">
+                                            <div class="cp-label">Notes</div>
+                                            <div class="cp-value">{{ followup.notes|default:"—" }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="cp-no-data">No follow-ups scheduled</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Section 10: Case Summary (Read-only) -->
+                <div class="cp-section-block" id="section-10" style="animation-delay: 0.50s;">
+                    <div class="cp-section-header">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="cp-section-title-group">
+                            <h2 class="cp-section-title">Case Summary</h2>
+                            <p class="cp-section-subtitle">Executive summary</p>
+                        </div>
+                        <div class="cp-section-number">10</div>
+                    </div>
+                    <div class="cp-section-body">
+                        <div class="cp-field-readonly">
+                            <div class="cp-label">Executive Summary</div>
+                            <div class="cp-value">{{ case.summary.executive_summary|default:"—"|linebreaks }}</div>
+                        </div>
+                        <div class="cp-field-readonly">
+                            <div class="cp-label">Clinical Outcome & Observations</div>
+                            <div class="cp-value">{{ case.summary.clinical_outcome|default:"—"|linebreaks }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set print date
+        document.getElementById('printDate').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Smooth scroll to sections
+        document.querySelectorAll('.cp-nav-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Print functionality
+        function printCase() {
+            window.print();
+        }
+
+        // Auto-trigger print if coming from dashboard print button
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('autoPrint') === 'true') {
+                sessionStorage.removeItem('autoPrint');
+                setTimeout(function() {
+                    window.print();
+                }, 300);
+            }
+        });
+    </script>
+
+<!-- PRINT LAYOUT — hidden on screen, shown on print only -->
+<div class="cp-print-layout-wrapper">
+<div class="cp-print-layout">
+
+  <!-- ═══════════════════════════════════════════════════════
+       DOCUMENT HEADER
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-header">
+    <div class="cpl-header-left">
+      <div class="cpl-clinic-name">HomeoCompare</div>
+      <div class="cpl-clinic-sub">Digital Homoeopathic Case Paper</div>
+      <div class="cpl-header-details" style="margin-top: 4pt;">
+        <div style="font-size: 7.5pt; margin-bottom: 1pt;"><strong>Patient:</strong> {{ case.preliminary.patient_name|default:"—" }}</div>
+        <div style="font-size: 7.5pt;"><strong>Physician:</strong> {{ case.preliminary.physician_name|default:"—" }}</div>
+      </div>
+    </div>
+    <div class="cpl-header-right">
+      <div class="cpl-case-id">{{ case.case_id }}</div>
+      <div class="cpl-date">Consultation Date: {% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date|date:"d M Y" }}{% else %}{{ case.created_at|date:"d M Y" }}{% endif %}</div>
+      <div class="cpl-date" style="margin-top: 2pt;">Time: {{ case.preliminary.consultation_time|default:"—" }}</div>
+      <div class="cpl-status" style="margin-top: 3pt;">Status: {{ case.status|title }}</div>
+    </div>
+  </div>
+
+  <!-- Thick top border line -->
+  <div class="cpl-header-rule"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 1 — PATIENT PROFILE (3-column grid)
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-section">
+    <div class="cpl-section-heading">
+      <span class="cpl-section-num">01</span>
+      Patient Profile
+    </div>
+    <div class="cpl-grid-3">
+      <div class="cpl-field">
+        <div class="cpl-label">Patient Name</div>
+        <div class="cpl-value">{{ case.preliminary.patient_name|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Age / Sex</div>
+        <div class="cpl-value">{{ case.preliminary.age|default:"—" }} yrs / {{ case.preliminary.get_sex_display|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Occupation</div>
+        <div class="cpl-value">{{ case.preliminary.occupation|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Contact</div>
+        <div class="cpl-value">{{ case.preliminary.contact_number|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Email</div>
+        <div class="cpl-value">{{ case.preliminary.email|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Remarks</div>
+        <div class="cpl-value">{{ case.preliminary.remarks|default:"—" }}</div>
+      </div>
+    </div>
+    <div class="cpl-grid-1" style="margin-top:3pt;">
+      <div class="cpl-field">
+        <div class="cpl-label">Address</div>
+        <div class="cpl-value">{{ case.preliminary.address|default:"—" }}</div>
+      </div>
+    </div>
+    <div class="cpl-grid-2" style="margin-top:3pt;">
+      <div class="cpl-field">
+        <div class="cpl-label">Physician</div>
+        <div class="cpl-value">{{ case.preliminary.physician_name|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Consultation Date & Time</div>
+        <div class="cpl-value">{% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date|date:"d M Y" }}{% else %}{{ case.created_at|date:"d M Y" }}{% endif %} {{ case.preliminary.consultation_time|default:"—" }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 2 — CHIEF COMPLAINTS
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-section">
+    <div class="cpl-section-heading">
+      <span class="cpl-section-num">02</span>
+      Chief Complaints
+    </div>
+    {% if case.chief_complaints %}
+      {% for complaint in case.chief_complaints %}
+      <div class="cpl-complaint-block {% if not forloop.last %}cpl-complaint-sep{% endif %}">
+        <div class="cpl-complaint-title">Complaint {{ forloop.counter }}: {{ complaint.complaint|default:"—" }}</div>
+        <div class="cpl-grid-3">
+          <div class="cpl-field">
+            <div class="cpl-label">Duration</div>
+            <div class="cpl-value">{{ complaint.duration|default:"—" }}</div>
+          </div>
+          <div class="cpl-field">
+            <div class="cpl-label">Location</div>
+            <div class="cpl-value">{{ complaint.location|default:"—" }}</div>
+          </div>
+          <div class="cpl-field">
+            <div class="cpl-label">Intensity</div>
+            <div class="cpl-value">{{ complaint.intensity|default:"—" }}</div>
+          </div>
+        </div>
+        {% if complaint.description %}
+        <div class="cpl-field" style="margin-top:3pt;">
+          <div class="cpl-label">Description</div>
+          <div class="cpl-value">{{ complaint.description }}</div>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    {% else %}
+      <div class="cpl-empty">No chief complaints recorded.</div>
+    {% endif %}
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 3 + 4 — ASSOCIATED COMPLAINTS & HISTORY (side by side)
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-two-col-sections">
+
+    <div class="cpl-section cpl-section-half">
+      <div class="cpl-section-heading">
+        <span class="cpl-section-num">03</span>
+        Associated Complaints
+      </div>
+      {% if case.associated_complaints %}
+        {% for ac in case.associated_complaints %}
+        <div class="cpl-field">
+          <div class="cpl-label">{{ ac.symptom|default:"Symptom" }}</div>
+          <div class="cpl-value">{{ ac.duration|default:""  }}{% if ac.characteristics %} — {{ ac.characteristics }}{% endif %}</div>
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="cpl-empty">None recorded.</div>
+      {% endif %}
+    </div>
+
+    <div class="cpl-section cpl-section-half">
+      <div class="cpl-section-heading">
+        <span class="cpl-section-num">04</span>
+        Case History
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">History of Present Illness</div>
+        <div class="cpl-value">{{ case.case_history.hpi|default:"—" }}</div>
+      </div>
+      <div class="cpl-field" style="margin-top:3pt;">
+        <div class="cpl-label">Past Medical History</div>
+        <div class="cpl-value">{{ case.case_history.past_medical_history|default:"—" }}</div>
+      </div>
+      <div class="cpl-field" style="margin-top:3pt;">
+        <div class="cpl-label">Family History</div>
+        <div class="cpl-value">{{ case.case_history.family_history|default:"—" }}</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 5 — GENERALS (3-column compact grid)
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-section">
+    <div class="cpl-section-heading">
+      <span class="cpl-section-num">05</span>
+      Generals
+    </div>
+    <div class="cpl-subsection-label">Personal History</div>
+    <div class="cpl-grid-3">
+      <div class="cpl-field">
+        <div class="cpl-label">Appetite</div>
+        <div class="cpl-value">{{ case.generals.get_appetite_display|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Thirst</div>
+        <div class="cpl-value">{{ case.generals.get_thirst_display|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Sleep</div>
+        <div class="cpl-value">{{ case.generals.sleep_pattern|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Build & Complexion</div>
+        <div class="cpl-value">{{ case.generals.build_complexion|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Digestion & Bowels</div>
+        <div class="cpl-value">{{ case.generals.digestion|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Perspiration</div>
+        <div class="cpl-value">—</div>
+      </div>
+    </div>
+    <div class="cpl-subsection-label" style="margin-top:4pt;">Mental Generals</div>
+    <div class="cpl-grid-1">
+      <div class="cpl-field">
+        <div class="cpl-label">Mental & Emotional State</div>
+        <div class="cpl-value">{{ case.generals.mental_state|default:"—" }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 6 — EXAMINATION (2 col)
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-section">
+    <div class="cpl-section-heading">
+      <span class="cpl-section-num">06</span>
+      Examination & Investigations
+    </div>
+    <div class="cpl-grid-3">
+      <div class="cpl-field">
+        <div class="cpl-label">BP (mmHg)</div>
+        <div class="cpl-value">{{ case.examination.bp|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Pulse (bpm)</div>
+        <div class="cpl-value">{{ case.examination.pulse|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Temperature (°F)</div>
+        <div class="cpl-value">{{ case.examination.temperature|default:"—" }}</div>
+      </div>
+    </div>
+    <div class="cpl-grid-1" style="margin-top:3pt;">
+      <div class="cpl-field">
+        <div class="cpl-label">Physical Examination Findings</div>
+        <div class="cpl-value">{{ case.examination.physical_examination|default:"—" }}</div>
+      </div>
+    </div>
+    <div class="cpl-grid-1" style="margin-top:3pt;">
+      <div class="cpl-field">
+        <div class="cpl-label">Investigations & Reports</div>
+        <div class="cpl-value">{{ case.examination.investigations|default:"—" }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 7 — DIAGNOSIS & REPERTORIZATION
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-section">
+    <div class="cpl-section-heading">
+      <span class="cpl-section-num">07</span>
+      Diagnosis & Repertorization
+    </div>
+    <div class="cpl-grid-2">
+      <div class="cpl-field">
+        <div class="cpl-label">Provisional Diagnosis</div>
+        <div class="cpl-value">{{ case.diagnosis.provisional_diagnosis|default:"—" }}</div>
+      </div>
+      <div class="cpl-field">
+        <div class="cpl-label">Final Diagnosis</div>
+        <div class="cpl-value">{{ case.diagnosis.final_diagnosis|default:"—" }}</div>
+      </div>
+    </div>
+    <div class="cpl-grid-1" style="margin-top:3pt;">
+      <div class="cpl-field">
+        <div class="cpl-label">Totality of Symptoms</div>
+        <div class="cpl-value">{{ case.diagnosis.totality_of_symptoms|default:"—" }}</div>
+      </div>
+    </div>
+    <div class="cpl-grid-1" style="margin-top:3pt;">
+      <div class="cpl-field">
+        <div class="cpl-label">Rubrics & Repertorial Result</div>
+        <div class="cpl-value" style="white-space:pre-line;">{{ case.diagnosis.rubrics|default:"—" }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 8 — PRESCRIPTION (highlight box)
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-section cpl-prescription-section">
+    <div class="cpl-section-heading">
+      <span class="cpl-section-num">08</span>
+      Prescription & Advice
+    </div>
+    <!-- Prescription highlight box -->
+    <div class="cpl-rx-box">
+      <div class="cpl-rx-symbol">℞</div>
+      <div class="cpl-rx-content">
+        <div class="cpl-grid-4">
+          <div class="cpl-field">
+            <div class="cpl-label">Remedy</div>
+            <div class="cpl-value cpl-value-bold">{{ case.prescription.final_remedy|default:"—" }}</div>
+          </div>
+          <div class="cpl-field">
+            <div class="cpl-label">Potency</div>
+            <div class="cpl-value cpl-value-bold">{{ case.prescription.potency|default:"—" }}</div>
+          </div>
+          <div class="cpl-field">
+            <div class="cpl-label">Dose</div>
+            <div class="cpl-value">{{ case.prescription.dose|default:"—" }}</div>
+          </div>
+          <div class="cpl-field">
+            <div class="cpl-label">Repetition</div>
+            <div class="cpl-value">{{ case.prescription.repetition|default:"—" }}</div>
+          </div>
+        </div>
+        <div class="cpl-field" style="margin-top:3pt;">
+          <div class="cpl-label">Mode of Administration</div>
+          <div class="cpl-value">{{ case.prescription.mode_of_administration|default:"—" }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="cpl-grid-1" style="margin-top:4pt;">
+      <div class="cpl-field">
+        <div class="cpl-label">Diet & Lifestyle Advice</div>
+        <div class="cpl-value">{{ case.prescription.diet_advice|default:"—" }}</div>
+      </div>
+    </div>
+    <div class="cpl-grid-1" style="margin-top:3pt;">
+      <div class="cpl-field">
+        <div class="cpl-label">Restrictions & Instructions</div>
+        <div class="cpl-value">{{ case.prescription.restrictions|default:"—" }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 9 — CASE NOTES
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-section">
+    <div class="cpl-section-heading">
+      <span class="cpl-section-num">09</span>
+      Case Notes & Summary
+    </div>
+    <div class="cpl-grid-1">
+      <div class="cpl-field">
+        <div class="cpl-label">Executive Summary</div>
+        <div class="cpl-value">{{ case.notes|default:"—" }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <div class="cpl-footer">
+    <div class="cpl-footer-left">
+      Physician Signature: _______________________________
+    </div>
+    <div class="cpl-footer-right">
+      Generated by HomeoCompare &nbsp;·&nbsp; homeocompare.life &nbsp;·&nbsp;
+      <span class="cpl-footer-date">{{ case.created_at|date:"d M Y" }}</span>
+    </div>
+  </div>
+
+</div><!-- /.cp-print-layout -->
+</div><!-- /.cp-print-layout-wrapper -->
+
+</body>
+</html>

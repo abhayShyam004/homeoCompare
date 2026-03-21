@@ -1,0 +1,137 @@
+<style>
+    .cp-navbar {
+        height: 60px;
+        background-color: var(--bg-navbar, #0d1117);
+        border-bottom: 1px solid var(--border-navbar, #30363d);
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        gap: 16px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .cp-navbar-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+    }
+
+    .cp-navbar-logo {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-primary, #e6edf3);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .cp-navbar-logo i {
+        color: var(--green-primary, #3fb950);
+    }
+
+    .cp-navbar-breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        margin-left: 12px;
+        padding-left: 12px;
+        border-left: 1px solid var(--border-navbar, #30363d);
+    }
+
+    .cp-navbar-breadcrumb a {
+        color: var(--text-secondary, #8b949e);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .cp-navbar-breadcrumb a:hover {
+        color: var(--text-primary, #e6edf3);
+    }
+
+    .cp-navbar-breadcrumb-sep {
+        color: var(--text-muted, #484f58);
+    }
+
+    .cp-navbar-breadcrumb-current {
+        color: var(--text-primary, #e6edf3);
+    }
+
+    .cp-navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .cp-theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text-secondary, #8b949e);
+        font-size: 16px;
+        transition: color 0.2s;
+        padding: 4px 8px;
+    }
+
+    .cp-theme-toggle:hover {
+        color: var(--text-primary, #e6edf3);
+    }
+
+    @media (max-width: 768px) {
+        .cp-navbar-breadcrumb {
+            display: none;
+        }
+
+        .cp-navbar {
+            padding: 0 12px;
+        }
+    }
+</style>
+
+<nav class="cp-navbar">
+    <div class="cp-navbar-left">
+        <a href="{% url 'home' %}" class="cp-navbar-logo">
+            <i class="fas fa-mortar-pestle"></i>
+            <span>HomeoCompare</span>
+        </a>
+        <div class="cp-navbar-breadcrumb">
+            <a href="{% url 'case_paper_dashboard' %}">Case Papers</a>
+        </div>
+    </div>
+
+    <div class="cp-navbar-right">
+        <button class="cp-theme-toggle" id="cpThemeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+</nav>
+
+<script>
+    // Theme toggle
+    document.getElementById('cpThemeToggle')?.addEventListener('click', function() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('cp-theme', newTheme);
+        this.innerHTML = newTheme === 'dark' 
+            ? '<i class="fas fa-sun"></i>' 
+            : '<i class="fas fa-moon"></i>';
+    });
+
+    // Restore theme on load
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('cp-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        const icon = document.getElementById('cpThemeToggle')?.querySelector('i');
+        if (icon) {
+            icon.className = savedTheme === 'dark' 
+                ? 'fas fa-sun' 
+                : 'fas fa-moon';
+        }
+    });
+</script>

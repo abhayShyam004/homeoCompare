@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Paper Login - HomeoCompare</title>
+    <link rel="stylesheet" href="{% static 'css/case_paper.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .cp-login-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cp-login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cp-login-logo {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .cp-login-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .cp-login-subtitle {
+            font-size: 14px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .cp-login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cp-login-field {
+            margin-bottom: 20px;
+        }
+
+        .cp-login-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .cp-login-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .cp-login-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .cp-login-error {
+            background-color: #fee;
+            color: #c33;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: shake 0.3s ease-out;
+        }
+
+        .cp-login-error i {
+            font-size: 16px;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        .cp-login-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .cp-login-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .cp-login-button:active {
+            transform: translateY(0);
+        }
+
+        .cp-login-button i {
+            font-size: 16px;
+        }
+
+        .cp-login-info {
+            font-size: 13px;
+            color: #999;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        .cp-login-info strong {
+            color: #667eea;
+        }
+
+        .cp-login-back-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .cp-login-back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .cp-login-back-link a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .cp-login-container {
+                padding: 30px 20px;
+                margin: 15px;
+            }
+
+            .cp-login-title {
+                font-size: 20px;
+            }
+
+            .cp-login-logo {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-login-container">
+        <!-- Header -->
+        <div class="cp-login-header">
+            <div class="cp-login-logo">
+                <i class="fas fa-file-medical"></i>
+            </div>
+            <h1 class="cp-login-title">Case Papers</h1>
+            <p class="cp-login-subtitle">HomeoCompare Premium</p>
+        </div>
+
+        <!-- Error Alert -->
+        {% if error %}
+            <div class="cp-login-error">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>{{ error }}</span>
+            </div>
+        {% endif %}
+
+        <!-- Login Form -->
+        <form method="post" class="cp-login-form">
+            {% csrf_token %}
+
+            <div class="cp-login-field">
+                <label class="cp-login-label" for="username">
+                    <i class="fas fa-user"></i> Username
+                </label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    class="cp-login-input" 
+                    placeholder="Enter your username"
+                    value="{{ username }}"
+                    required 
+                    autofocus
+                >
+            </div>
+
+            <div class="cp-login-field">
+                <label class="cp-login-label" for="physician_name">
+                    <i class="fas fa-stethoscope"></i> Physician Name
+                </label>
+                <input 
+                    type="text" 
+                    id="physician_name" 
+                    name="physician_name" 
+                    class="cp-login-input" 
+                    placeholder="Your full name"
+                    value="{{ physician_name }}"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="cp-login-button">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </form>
+
+        <!-- Info Text -->
+        <div class="cp-login-info">
+            <p><strong>New user?</strong> Enter your username and physician name to create a profile automatically.</p>
+            <p>Your case papers and patient information will be <strong>private and secure</strong>.</p>
+        </div>
+
+        <!-- Back Link -->
+        <div class="cp-login-back-link">
+            <a href="{% url 'home' %}">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from . import case_paper_views
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -37,5 +38,17 @@ urlpatterns = [
     path('admin-panel/remedy-of-day/', views.admin_remedy_day, name='admin_remedy_day'),
     path('remedy-history/', views.remedy_history, name='remedy_history'),
     path('remedy-history/<int:remedy_id>/', views.remedy_history, name='remedy_history_detail'),
+    
+    # Case Paper (Premium Feature) - Hidden route
+    path('case_paper/login/', case_paper_views.case_paper_login, name='case_paper_login'),
+    path('case_paper/logout/', case_paper_views.case_paper_logout, name='case_paper_logout'),
+    path('case_paper/', case_paper_views.case_paper_dashboard, name='case_paper_dashboard'),
+    path('case_paper/new/', case_paper_views.case_paper_new, name='case_paper_new'),
+    path('case_paper/<str:case_id>/', case_paper_views.case_paper_view, name='case_paper_view'),
+    path('case_paper/<str:case_id>/edit/', case_paper_views.case_paper_form, name='case_paper_edit'),
+    path('api/case_paper/save/', case_paper_views.case_paper_save, name='case_paper_save'),
+    path('api/case_paper/full_save/', case_paper_views.case_paper_full_save, name='case_paper_full_save'),
+    path('api/case_paper/delete/', case_paper_views.case_paper_delete, name='case_paper_delete'),
+    path('api/case_paper/get/<str:case_id>/', case_paper_views.case_paper_get_data, name='case_paper_get_data'),
 ]
 
