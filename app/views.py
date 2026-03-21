@@ -4,6 +4,93 @@ from pathlib import Path
 import os
 from django.conf import settings
 from django.http import HttpResponse
+import re
+import ast
+
+
+def split_text_to_bullets(text):
+    """
+    Split Allen's keynotes text into bullet points.
+    Handles:
+    1. Lists already provided as JSON arrays
+    2. String representations of Python lists (e.g., "['item1', 'item2']")
+    3. Plain text with multiple sentences separated by periods, semicolons, or newlines
+    """
+    # If it's already a list, clean and return it
+    if isinstance(text, list):
+        return [str(item).strip() for item in text if item and str(item).strip()]
+    
+    # If not a string, return as-is
+    if not isinstance(text, str):
+        return text
+    
+    # Strip whitespace
+    text = text.strip()
+    if not text:
+        return text
+    
+    # Try to parse string representation of Python list (e.g., "['item1', 'item2']")
+    if text.startswith('[') and text.endswith(']'):
+        try:
+            parsed_list = ast.literal_eval(text)
+            if isinstance(parsed_list, list):
+                return [str(item).strip() for item in parsed_list if item and str(item).strip()]
+        except (ValueError, SyntaxError):
+            # If parsing fails, continue to text splitting below
+            pass
+    
+    # Split by semicolons first, then by periods followed by uppercase
+    final_bullets = []
+    
+    # Split by semicolons
+    parts = [p.strip() for p in text.split(';')]
+    
+    # Further split parts that contain periods followed by capitals
+    for part in parts:
+        if '.' in part:
+            # Split on periods followed by uppercase letters
+            sub_parts = re.split(r'(?<=[.])\s+(?=[A-Z])', part)
+            final_bullets.extend([p.strip() for p in sub_parts if p.strip()])
+        else:
+            if part.strip():
+                final_bullets.append(part.strip())
+    
+    # Capitalize first letter of each bullet if not already done
+    final_bullets = [b[0].upper() + b[1:] if b and b[0].isalpha() else b for b in final_bullets]
+    
+    # Return as array so template recognizes it as list
+    return final_bullets if final_bullets else text
+
+
+def process_allen_remedy_data(data):
+    """
+    Preprocess all Allen's Keynotes remedy data by applying split_text_to_bullets()
+    to all relevant fields. This ensures frontend JavaScript gets processed lists.
+    """
+    # Fields in Allen's Keynotes that should be converted to bullet points
+    bullet_fields = [
+        'constitution', 'mental generals', 'physical generals', 'head', 'eyes',
+        'vision', 'ears', 'hearing', 'nose', 'face', 'mouth', 'teeth', 'throat',
+        'appetite', 'stomach', 'stool', 'abdomen', 'urinary system',
+        'gastro-intestinal system', 'upper limbs', 'lower limbs', 'limbs in general',
+        'sleep', 'injuries', 'female reproductive system', 'male reproductive system',
+        'respiratory system', 'cardio-vascular system', 'neck', 'back', 'extremities',
+        'nervous system', 'skin', 'fever', 'modalities', 'relation'
+    ]
+    
+    processed_data = {}
+    
+    for remedy_name, remedy_info in data.items():
+        processed_remedy = dict(remedy_info)  # Shallow copy
+        
+        # Process each bullet field
+        for field in bullet_fields:
+            if field in processed_remedy:
+                processed_remedy[field] = split_text_to_bullets(processed_remedy[field])
+        
+        processed_data[remedy_name] = processed_remedy
+    
+    return processed_data
 
 
 def remedy_compare(request):
@@ -158,10 +245,13 @@ def allen_compare(request):
         data = json.load(file)
 
     remedy_names = list(data.keys())
+    
+    # Preprocess all remedy data to apply bullet point splitting
+    processed_data = process_allen_remedy_data(data)
 
     context = {
         'remedy_names': remedy_names,
-        'remedy_data': data,  # Pass the full data for client-side use
+        'remedy_data': processed_data,  # Pass processed data with bullet points
         'symptoms': {},
         'selected_remedies': [],
         'selected_symptom': '',
@@ -233,42 +323,42 @@ def allen_compare(request):
             if name in data:
                 remedy_info = data[name]
                 symptoms[name] = {
-                    'constitution': remedy_info.get('constitution', ''),
-                    'mental_generals': remedy_info.get('mental generals', ''),
-                    'physical_generals': remedy_info.get('physical generals', ''),
-                    'head': remedy_info.get('head', ''),
-                    'eyes': remedy_info.get('eyes', ''),
-                    'vision': remedy_info.get('vision', ''),
-                    'ears': remedy_info.get('ears', ''),
-                    'hearing': remedy_info.get('hearing', ''),
-                    'nose': remedy_info.get('nose', ''),
-                    'face': remedy_info.get('face', ''),
-                    'mouth': remedy_info.get('mouth', ''),
-                    'teeth': remedy_info.get('teeth', ''),
-                    'throat': remedy_info.get('throat', ''),
-                    'appetite': remedy_info.get('appetite', ''),
-                    'stomach': remedy_info.get('stomach', ''),
-                    'stool': remedy_info.get('stool', ''),
-                    'abdomen': remedy_info.get('abdomen', ''),
-                    'urinary_system': remedy_info.get('urinary system', ''),
-                    'gastro_intestinal_system': remedy_info.get('gastro-intestinal system', ''),
-                    'upper_limbs': remedy_info.get('upper limbs', ''),
-                    'lower_limbs': remedy_info.get('lower limbs', ''),
-                    'limbs_in_general': remedy_info.get('limbs in general', ''),
-                    'sleep': remedy_info.get('sleep', ''),
-                    'injuries': remedy_info.get('injuries', ''),
-                    'female_reproductive_system': remedy_info.get('female reproductive system', ''),
-                    'male_reproductive_system': remedy_info.get('male reproductive system', ''),
-                    'respiratory_system': remedy_info.get('respiratory system', ''),
-                    'cardio_vascular_system': remedy_info.get('cardio-vascular system', ''),
-                    'neck': remedy_info.get('neck', ''),
-                    'back': remedy_info.get('back', ''),
-                    'extremities': remedy_info.get('extremities', ''),
-                    'nervous_system': remedy_info.get('nervous system', ''),
-                    'skin': remedy_info.get('skin', ''),
-                    'fever': remedy_info.get('fever', ''),
-                    'modalities': remedy_info.get('modalities', ''),
-                    'relation': remedy_info.get('relation', '')
+                    'constitution': split_text_to_bullets(remedy_info.get('constitution', '')),
+                    'mental_generals': split_text_to_bullets(remedy_info.get('mental generals', '')),
+                    'physical_generals': split_text_to_bullets(remedy_info.get('physical generals', '')),
+                    'head': split_text_to_bullets(remedy_info.get('head', '')),
+                    'eyes': split_text_to_bullets(remedy_info.get('eyes', '')),
+                    'vision': split_text_to_bullets(remedy_info.get('vision', '')),
+                    'ears': split_text_to_bullets(remedy_info.get('ears', '')),
+                    'hearing': split_text_to_bullets(remedy_info.get('hearing', '')),
+                    'nose': split_text_to_bullets(remedy_info.get('nose', '')),
+                    'face': split_text_to_bullets(remedy_info.get('face', '')),
+                    'mouth': split_text_to_bullets(remedy_info.get('mouth', '')),
+                    'teeth': split_text_to_bullets(remedy_info.get('teeth', '')),
+                    'throat': split_text_to_bullets(remedy_info.get('throat', '')),
+                    'appetite': split_text_to_bullets(remedy_info.get('appetite', '')),
+                    'stomach': split_text_to_bullets(remedy_info.get('stomach', '')),
+                    'stool': split_text_to_bullets(remedy_info.get('stool', '')),
+                    'abdomen': split_text_to_bullets(remedy_info.get('abdomen', '')),
+                    'urinary_system': split_text_to_bullets(remedy_info.get('urinary system', '')),
+                    'gastro_intestinal_system': split_text_to_bullets(remedy_info.get('gastro-intestinal system', '')),
+                    'upper_limbs': split_text_to_bullets(remedy_info.get('upper limbs', '')),
+                    'lower_limbs': split_text_to_bullets(remedy_info.get('lower limbs', '')),
+                    'limbs_in_general': split_text_to_bullets(remedy_info.get('limbs in general', '')),
+                    'sleep': split_text_to_bullets(remedy_info.get('sleep', '')),
+                    'injuries': split_text_to_bullets(remedy_info.get('injuries', '')),
+                    'female_reproductive_system': split_text_to_bullets(remedy_info.get('female reproductive system', '')),
+                    'male_reproductive_system': split_text_to_bullets(remedy_info.get('male reproductive system', '')),
+                    'respiratory_system': split_text_to_bullets(remedy_info.get('respiratory system', '')),
+                    'cardio_vascular_system': split_text_to_bullets(remedy_info.get('cardio-vascular system', '')),
+                    'neck': split_text_to_bullets(remedy_info.get('neck', '')),
+                    'back': split_text_to_bullets(remedy_info.get('back', '')),
+                    'extremities': split_text_to_bullets(remedy_info.get('extremities', '')),
+                    'nervous_system': split_text_to_bullets(remedy_info.get('nervous system', '')),
+                    'skin': split_text_to_bullets(remedy_info.get('skin', '')),
+                    'fever': split_text_to_bullets(remedy_info.get('fever', '')),
+                    'modalities': split_text_to_bullets(remedy_info.get('modalities', '')),
+                    'relation': split_text_to_bullets(remedy_info.get('relation', ''))
                 }
         context['symptoms'] = symptoms
 
@@ -612,11 +702,12 @@ def admin_logout(request):
     return response
 
 
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+
+
+@csrf_exempt
 def track_search_api(request):
-    """API endpoint for tracking searches from JavaScript"""
-    from django.http import JsonResponse
-    from django.views.decorators.csrf import csrf_exempt
-    import json
     
     if request.method == 'POST':
         try:

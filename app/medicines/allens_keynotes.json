@@ -113,41 +113,12 @@
     ]
   },
   "ACONITUM NAPELLUS": {
-    "name": "ACONITUM NAPELLUS",
-    "page": 517,
+    "page": "517",
     "family": "",
     "description": "Monkshood",
-    "constitution": [
-      "Is generally indicated in acute or recent cases occurring in young persons, especially girls of a full, plethoric habit who lead a sedentary life",
-      "persons easily affected by atmospheric changes",
-      "dark hair and eyes, rigid muscular fibre."
-    ],
-    "mental generals": [
-      "Great fear and anxiety of mind, with great nervous excitability",
-      "afraid to go out, to go into a crowd where there is any excitement or many people",
-      "to cross the street.",
-      "The countenance is expressive of fear",
-      "the life is rendered miserable by fear",
-      "is sure his disease will prove fatal",
-      "predicts the day he will die",
-      "fear of death during pregnancy.",
-      "Restless, anxious, does everything in great haste",
-      "must change position often",
-      "everything startles him.",
-      "Hahnemann says: “Whenever Aconite is chosen homoeopathically, you must, above all, observe the moral symptoms, and be careful that it closely resembles them",
-      "the anguish of mind and body",
-      "the restlessness",
-      "the disquiet not to be allayed.” This mental anxiety, worry, fear accompanies the most trivial ailment.",
-      "Music is unbearable, makes her sad (Sab.--during menses, Nat--c.)."
-    ],
-    "physical generals": [
-      "Complaints caused by exposure to dry cold air, dry north or west winds, or exposure to draughts of cold air while in a perspiration",
-      "bad effects of checked perspiration.",
-      "For the congestive stage of inflammation before localization takes place.",
-      "Pains: Are intolerable, they drive him crazy",
-      "he becomes very restless",
-      "at night."
-    ],
+    "constitution": "['Is generally indicated in acute or recent cases occurring in young persons, especially girls of a full, plethoric habit who lead a sedentary life', 'persons easily affected by atmospheric changes', 'dark hair and eyes, rigid muscular fibre.']",
+    "mental generals": "['Great fear and anxiety of mind, with great nervous excitability', 'afraid to go out, to go into a crowd where there is any excitement or many people', 'to cross the street.', 'The countenance is expressive of fear', 'the life is rendered miserable by fear', 'is sure his disease will prove fatal', 'predicts the day he will die', 'fear of death during pregnancy.', 'Restless, anxious, does everything in great haste', 'must change position often', 'everything startles him.', 'Hahnemann says: “Whenever Aconite is chosen homoeopathically, you must, above all, observe the moral symptoms, and be careful that it closely resembles them', 'the anguish of mind and body', 'the restlessness', 'the disquiet not to be allayed.” This mental anxiety, worry, fear accompanies the most trivial ailment.', 'Music is unbearable, makes her sad (Sab.--during menses, Nat--c.).']",
+    "physical generals": "['Complaints caused by exposure to dry cold air, dry north or west winds, or exposure to draughts of cold air while in a perspiration', 'bad effects of checked perspiration.', 'For the congestive stage of inflammation before localization takes place.', 'Pains: Are intolerable, they drive him crazy', 'he becomes very restless', 'at night.']",
     "head": "",
     "eyes": "",
     "vision": "",
@@ -169,55 +140,18 @@
     "limbs in general": "",
     "sleep": "",
     "injuries": "",
-    "female reproductive system": [
-      "Amenorrhea in plethoric young girls",
-      "after fright, to prevent suppression of menses."
-    ],
+    "female reproductive system": "['Amenorrhea in plethoric young girls', 'after fright, to prevent suppression of menses.']",
     "male reproductive system": "",
-    "respiratory system": [
-      "Cough, croup",
-      "dry, hoarse, suffocating",
-      "loud, rough, croaking",
-      "hard, ringing, whistling",
-      "on expiration (Caust., on inhalation, Spong.)",
-      "from dry, cold winds or drafts of air."
-    ],
+    "respiratory system": "['Cough, croup', 'dry, hoarse, suffocating', 'loud, rough, croaking', 'hard, ringing, whistling', 'on expiration (Caust., on inhalation, Spong.)', 'from dry, cold winds or drafts of air.']",
     "cardio-vascular system": "",
     "neck": "",
     "back": "",
     "extremities": "",
-    "nervous system": [
-      "On rising from a recumbent position the red face becomes deathly pale, or he becomes faint or giddy and falls, and he fears to rise again",
-      "often accompanied by vanishing of sight and unconsciousness.",
-      "Convulsions: Of teething children",
-      "heat, jerks and twitches of single muscles",
-      "child gnaws its fist, frets and screams",
-      "skin hot and dry",
-      "high"
-    ],
+    "nervous system": "['On rising from a recumbent position the red face becomes deathly pale, or he becomes faint or giddy and falls, and he fears to rise again', 'often accompanied by vanishing of sight and unconsciousness.', 'Convulsions: Of teething children', 'heat, jerks and twitches of single muscles', 'child gnaws its fist, frets and screams', 'skin hot and dry', 'high fever']",
     "skin": "",
-    "fever": [
-      "thirst for large quantities of cold water",
-      "intense nervous restlessness, tossing about in agony",
-      "becomes intolerable towards evening and on going to sleep.",
-      "Aconite should never be given simply to control the fever, never alternated with other drugs for that purpose.",
-      "If it be a case requiring Aconite no other drug is needed",
-      "Aconite will cure the case.",
-      "Unless indicated by the exciting cause, is nearly always injurious in first stages of typhoid fever."
-    ],
-    "modalities": [
-      "Aggravation: Evening and night, pains are insupportable",
-      "in a warm room",
-      "when rising from bed",
-      "lying on affected side (Hep., Nux--m.). Amelioration: In the open air (Alum., Mag--c., Puls., Sab.)."
-    ],
-    "relation": [
-      "Complementary: To Coffea in fever, sleeplessness, intolerance of pain",
-      "to Arnica in traumatism",
-      "to Sulphur in all cases.",
-      "Rarely indicated in fevers which bring out eruptions.",
-      "Aconite is the acute of Sulphur, and both precede and follow it in acute inflammatory conditions."
-    ]
+    "fever": "['thirst for large quantities of cold water', 'intense nervous restlessness, tossing about in agony', 'becomes intolerable towards evening and on going to sleep.', 'Aconite should never be given simply to control the fever, never alternated with other drugs for that purpose.', 'If it be a case requiring Aconite no other drug is needed', 'Aconite will cure the case.', 'Unless indicated by the exciting cause, is nearly always injurious in first stages of typhoid fever.']",
+    "modalities": "['Aggravation: Evening and night, pains are insupportable', 'in a warm room', 'when rising from bed', 'lying on affected side (Hep., Nux--m.). Amelioration: In the open air (Alum., Mag--c., Puls., Sab.).']",
+    "relation": "['Complementary: To Coffea in fever, sleeplessness, intolerance of pain', 'to Arnica in traumatism', 'to Sulphur in all cases.', 'Rarely indicated in fevers which bring out eruptions.', 'Aconite is the acute of Sulphur, and both precede and follow it in acute inflammatory conditions.']"
   },
   "ACTAEA RACEMOSA": {
     "name": "ACTAEA RACEMOSA",
