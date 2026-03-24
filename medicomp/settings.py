@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-# ALLOWED_HOSTS = ['homeocompare.life', 'localhost', '127.0.0.1']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['homeocompare.life', 'localhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['*']
 
 
 
@@ -175,11 +175,15 @@ STORAGES = {
 }
 
 # ============= EMAIL CONFIGURATION =============
-# Development: Use console backend (prints to console)
-# Production: Switch to SMTP backend and configure credentials in .env
-if DEBUG:
+# Always use SMTP in production, console only in local development
+# To use console backend locally, set: EMAIL_USE_CONSOLE=True in .env
+USE_CONSOLE_EMAIL = config('EMAIL_USE_CONSOLE', default=DEBUG, cast=bool)
+
+if USE_CONSOLE_EMAIL and DEBUG:
+    # Only use console backend if explicitly requested AND in debug mode
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
+    # Production: Use SMTP backend
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
@@ -188,6 +192,15 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='abhay315204@gmail.com')
+
+# Verify email is configured in production
+if not DEBUG and (not EMAIL_HOST_USER or not EMAIL_HOST_PASSWORD):
+    import warnings
+    warnings.warn(
+        "⚠️  WARNING: Email credentials not configured. "
+        "Set EMAIL_HOST_USER and EMAIL_HOST_PASSWORD environment variables. "
+        "Verification codes will not be sent!"
+    )
 
 # ============= GOOGLE OAUTH CONFIGURATION =============
 GOOGLE_CLIENT_ID = config('GOOGLE_CLIENT_ID', default='')
