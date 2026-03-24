@@ -40,7 +40,9 @@ def generate_verification_code():
 
 
 def send_verification_email(email, code):
-    """Send verification code to user's email"""
+    """Send verification code to user's email asynchronously"""
+    from app.email_utils import send_email_async
+    
     try:
         subject = "HomeoCompare - Your Login Verification Code"
         message = f"""
@@ -71,15 +73,14 @@ def send_verification_email(email, code):
         </html>
         """
         
-        send_mail(
+        # Send email asynchronously in background thread
+        # This prevents blocking the request and causing worker timeouts
+        return send_email_async(
             subject,
             message,
-            settings.EMAIL_HOST_USER,
-            [email],
-            html_message=message,
-            fail_silently=False,
+            email,
+            html_message=message
         )
-        return True
     except Exception as e:
         print(f"Error sending verification email: {e}")
         return False
