@@ -1,221 +1,137 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Papers - HomeoCompare</title>
-    <link rel="stylesheet" href="{% static 'css/case_paper.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
-</head>
-<body data-theme="dark">
-    {% include 'navbar.html' %}
-    
-    <div class="cp-dashboard-wrapper">
-        <div class="cp-dashboard-container">
-            <!-- User Profile Section -->
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding: 0 20px; border-bottom: 1px solid var(--border-color, #e0e0e0); padding-bottom: 15px;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-user-circle" style="font-size: 24px; color: var(--primary-color, #667eea);"></i>
-                    <div>
-                        <div style="font-size: 12px; color: var(--text-secondary, #999);">Logged in as</div>
-                        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary, #333);">{{ user.physician_name }}</div>
-                        <div style="font-size: 12px; color: var(--text-secondary, #999);">@{{ user.username }}</div>
-                    </div>
-                </div>
-                <a href="{% url 'case_paper_logout' %}" style="padding: 8px 16px; background: var(--danger-color, #e74c3c); color: white; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </a>
+﻿{% extends 'case_paper/base.html' %}
+
+{% block main_content %}
+    <div class="stats-grid">
+        <div class="stat-card compact-stat">
+            <div class="stat-header">
+                <span class="stat-label mono">Total Archives</span>
+                <i class="fas fa-file-text"></i>
             </div>
-
-            <!-- Page Header -->
-            <div class="cp-dashboard-header">
-                <div class="cp-dashboard-header-left">
-                    <div class="cp-dashboard-label">Premium Feature</div>
-                    <h1 class="cp-dashboard-title">Case Papers</h1>
-                    <p class="cp-dashboard-subtitle">Digital homeopathic case documentation</p>
-                </div>
-                <a href="{% url 'case_paper_new' %}" class="cp-btn-new-case">New Case Paper</a>
+            <div class="stat-body">
+                <div class="stat-value serif">{{ total_count|default:"0" }}</div>
+                <div class="stat-subtext mono">Total case papers</div>
             </div>
+        </div>
 
-            <!-- Stats Row -->
-            <div class="cp-stats-row">
-                <div class="cp-stat-card">
-                    <div class="cp-stat-icon-box">
-                        <i class="fas fa-folder"></i>
-                    </div>
-                    <div class="cp-stat-content">
-                        <div class="cp-stat-number">{{ total_count }}</div>
-                        <div class="cp-stat-label">Total Cases</div>
-                    </div>
-                </div>
-
-                <div class="cp-stat-card">
-                    <div class="cp-stat-icon-box">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="cp-stat-content">
-                        <div class="cp-stat-number">{{ draft_count }}</div>
-                        <div class="cp-stat-label">Drafts</div>
-                    </div>
-                </div>
-
-                <div class="cp-stat-card">
-                    <div class="cp-stat-icon-box">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="cp-stat-content">
-                        <div class="cp-stat-number">{{ complete_count }}</div>
-                        <div class="cp-stat-label">Complete</div>
-                    </div>
-                </div>
+        <div class="stat-card compact-stat">
+            <div class="stat-header">
+                <span class="stat-label mono">Active Drafts</span>
+                <i class="fas fa-clock"></i>
             </div>
-
-            <!-- Search & Filter Bar -->
-            <div class="cp-search-filter-bar">
-                <div class="cp-search-wrapper">
-                    <i class="fas fa-magnifying-glass cp-search-icon"></i>
-                    <form method="get" style="display: contents;">
-                        <input 
-                            type="text" 
-                            name="search" 
-                            class="cp-search-input"
-                            placeholder="Search by case ID or patient name..."
-                            value="{{ search_query }}"
-                        >
-                    </form>
-                </div>
-
-                <form method="get" style="display: contents;">
-                    <select name="status" class="cp-filter-select" onchange="this.form.submit()">
-                        <option value="">All Cases</option>
-                        <option value="draft" {% if status_filter == 'draft' %}selected{% endif %}>Draft</option>
-                        <option value="complete" {% if status_filter == 'complete' %}selected{% endif %}>Complete</option>
-                    </select>
-                </form>
+            <div class="stat-body">
+                <div class="stat-value serif">{{ draft_count|default:"0" }}</div>
+                <div class="stat-subtext mono">Draft case papers</div>
             </div>
+        </div>
 
-            <!-- Cases Grid -->
-            {% if cases %}
-                <div class="cp-cases-grid">
-                    {% for case in cases %}
-                        <div class="cp-case-card">
-                            <!-- Row 1: ID + Status -->
-                            <div class="cp-case-card-header">
-                                <span class="cp-case-id">{{ case.case_id }}</span>
-                                <span class="cp-status-badge {% if case.status == 'draft' %}draft{% else %}complete{% endif %}">
-                                    {{ case.status }}
-                                </span>
-                            </div>
-
-                            <!-- Row 2: Patient Name -->
-                            <div class="cp-case-patient-name">
-                                {{ case.preliminary.patient_name|default:"Unknown" }}
-                            </div>
-
-                            <!-- Row 3: Meta Info -->
-                            <div class="cp-case-meta">
-                                <div class="cp-case-meta-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span>{{ case.created_at|date:"M d, Y" }}</span>
-                                </div>
-                                <div class="cp-case-meta-item">
-                                    <i class="fas fa-user-md"></i>
-                                    <span>{{ case.preliminary.physician_name|default:"—" }}</span>
-                                </div>
-                            </div>
-
-                            <!-- Row 4: Progress Bar -->
-                            <div class="cp-case-progress-label">
-                                <span>Completion</span>
-                                <span>0%</span>
-                            </div>
-                            <div class="cp-case-progress-bar">
-                                <div class="cp-case-progress-fill" style="width: 0%"></div>
-                            </div>
-
-                            <!-- Row 5: Action Buttons -->
-                            <div class="cp-case-actions">
-                                <a href="{% url 'case_paper_edit' case.case_id %}" class="cp-case-btn">
-                                    <i class="fas fa-pen"></i> Edit
-                                </a>
-                                <a href="{% url 'case_paper_view' case.case_id %}" class="cp-case-btn view">
-                                    <i class="fas fa-eye"></i> View
-                                </a>
-                                <button class="cp-case-btn print" onclick="printCase('{{ case.case_id }}')" aria-label="Print case">
-                                    <i class="fas fa-print"></i>
-                                </button>
-                                <button class="cp-case-btn delete" onclick="deleteCase('{{ case.case_id }}')" aria-label="Delete case">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            {% else %}
-                <div class="cp-empty-state">
-                    <div class="cp-empty-icon">
-                        <i class="fas fa-folder-open"></i>
-                    </div>
-                    <h3 class="cp-empty-title">No cases yet</h3>
-                    <p class="cp-empty-text">Create your first digital case paper</p>
-                    <a href="{% url 'case_paper_new' %}" class="cp-btn-new-case">New Case Paper</a>
-                </div>
-            {% endif %}
+        <div class="stat-card compact-stat">
+            <div class="stat-header">
+                <span class="stat-label mono">Finalized</span>
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-body">
+                <div class="stat-value serif">{{ complete_count|default:"0" }}</div>
+                <div class="stat-subtext mono">Completed case papers</div>
+            </div>
+        </div>
+        <div class="stat-card primary-action dashboard-primary-card">
+            <div class="stat-header">
+                <span class="stat-label mono">Primary Action</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="stat-body">
+                <h2 class="serif italic">Create New<br>Case Paper</h2>
+                <p class="mono small">Initialize_Clinical_Protocol</p>
+                <a href="{% url 'case_paper_new' %}" class="action-link">Start New →</a>
+            </div>
         </div>
     </div>
 
-    <!-- Toast Container -->
-    <div class="cp-toast-container"></div>
+    <div class="search-section">
+        <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <form method="get" style="display: contents;">
+                <input type="text" name="search" class="search-input mono" placeholder="SEARCH_BY_PATIENT_NAME_OR_REF_ID..." value="{{ search_query }}">
+            </form>
+        </div>
+        <button class="filter-btn mono" id="advancedFiltersToggle" type="button" aria-expanded="{% if status_filter or sort_filter != 'recent' %}true{% else %}false{% endif %}">
+            <i class="fas fa-sliders-h"></i> Advanced_Filters
+        </button>
+    </div>
+
+    <div class="advanced-filters-panel {% if status_filter or sort_filter != 'recent' %}is-open{% endif %}" id="advancedFiltersPanel">
+        <form method="get" class="advanced-filters-form">
+            <div class="advanced-filter-group">
+                <label class="mono" for="filterSearch">Search</label>
+                <input id="filterSearch" type="text" name="search" class="search-input mono" value="{{ search_query }}" placeholder="Patient name or reference ID">
+            </div>
+            <div class="advanced-filter-group">
+                <label class="mono" for="filterStatus">Status</label>
+                <select id="filterStatus" name="status" class="advanced-filter-select mono">
+                    <option value="">All statuses</option>
+                    <option value="draft" {% if status_filter == 'draft' %}selected{% endif %}>Draft</option>
+                    <option value="complete" {% if status_filter == 'complete' %}selected{% endif %}>Complete</option>
+                </select>
+            </div>
+            <div class="advanced-filter-group">
+                <label class="mono" for="filterSort">Sort</label>
+                <select id="filterSort" name="sort" class="advanced-filter-select mono">
+                    <option value="recent" {% if sort_filter == 'recent' %}selected{% endif %}>Recently updated</option>
+                    <option value="oldest" {% if sort_filter == 'oldest' %}selected{% endif %}>Oldest first</option>
+                    <option value="patient" {% if sort_filter == 'patient' %}selected{% endif %}>Patient name</option>
+                </select>
+            </div>
+            <div class="advanced-filter-actions">
+                <button type="submit" class="filter-btn mono filter-btn-primary">Apply Filters</button>
+                <a href="{% url 'case_paper_dashboard' %}" class="filter-btn mono filter-btn-secondary">Reset</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="table-header">
+        <div class="table-col-id">Ref_ID</div>
+        <div class="table-col-patient">Patient_Identity</div>
+        <div class="table-col-date">Archive_Date</div>
+        <div class="table-col-practitioner">Practitioner</div>
+        <div class="table-col-status">Status_Level</div>
+        <div class="table-col-actions"></div>
+    </div>
+
+    <div class="table-body">
+        {% for case in cases %}
+        <div class="table-row">
+            <div class="table-col-id mono">{{ case.case_id }}</div>
+            <div class="table-col-patient"><div class="serif">{{ case.preliminary.patient_name|default:"Unknown Patient" }}</div></div>
+            <div class="table-col-date mono">{{ case.created_at|date:"Y.m.d" }}</div>
+            <div class="table-col-practitioner mono">Dr. {{ user.physician_name }}</div>
+            <div class="table-col-status">
+                <span class="status-badge {% if case.status == 'complete' %}final{% else %}draft{% endif %}">{{ case.status|upper }}</span>
+            </div>
+            <div class="table-col-actions">
+                <a href="{% url 'case_paper_view' case.case_id %}" class="action-btn" title="View"><i class="fas fa-eye"></i></a>
+                <a href="{% url 'case_paper_view' case.case_id %}" class="action-btn action-btn-print" title="Print" target="_blank" rel="noopener noreferrer"><i class="fas fa-print"></i></a>
+            </div>
+        </div>
+        {% empty %}
+        <div class="table-row empty">
+            <div style="text-align: center; padding: 40px; color: var(--text-muted); grid-column: 1/-1;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; opacity: 0.3;"></i>
+                <p>No case papers found. Create one to get started.</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
     <script>
-        function printCase(caseId) {
-            sessionStorage.setItem('autoPrint', 'true');
-            window.location.href = `/case_paper/${caseId}/`;
-        }
+        (function() {
+            const toggle = document.getElementById('advancedFiltersToggle');
+            const panel = document.getElementById('advancedFiltersPanel');
+            if (!toggle || !panel) return;
 
-        function deleteCase(caseId) {
-            if (confirm('Are you sure you want to delete this case?')) {
-                fetch('/api/case_paper/delete/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]')?.value || ''
-                    },
-                    body: JSON.stringify({ case_id: caseId })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'ok') {
-                        showToast('Case deleted successfully', 'success');
-                        setTimeout(() => location.reload(), 1000);
-                    } else {
-                        showToast('Failed to delete case', 'error');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    showToast('Error deleting case', 'error');
-                });
-            }
-        }
-
-        function showToast(message, type = 'success') {
-            const container = document.querySelector('.cp-toast-container');
-            const toast = document.createElement('div');
-            toast.className = `cp-toast ${type}`;
-            toast.innerHTML = `
-                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-circle-xmark'} cp-toast-icon"></i>
-                <span class="cp-toast-message">${message}</span>
-            `;
-            container.appendChild(toast);
-            setTimeout(() => toast.classList.add('visible'), 10);
-            setTimeout(() => {
-                toast.classList.remove('visible');
-                setTimeout(() => toast.remove(), 250);
-            }, 3000);
-        }
+            toggle.addEventListener('click', function() {
+                const isOpen = panel.classList.toggle('is-open');
+                toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        })();
     </script>
-</body>
-</html>
+{% endblock %}

@@ -1,11 +1,12 @@
+{% load static %}
 <style>
     .cp-navbar {
-        height: 60px;
+        min-height: 92px;
         background-color: var(--bg-navbar, #0d1117);
         border-bottom: 1px solid var(--border-navbar, #30363d);
         display: flex;
         align-items: center;
-        padding: 0 20px;
+        padding: 18px 20px;
         gap: 16px;
         position: sticky;
         top: 0;
@@ -20,7 +21,7 @@
     }
 
     .cp-navbar-logo {
-        font-size: 18px;
+        font-size: 21px;
         font-weight: 700;
         color: var(--text-primary, #e6edf3);
         text-decoration: none;
@@ -29,9 +30,7 @@
         gap: 8px;
     }
 
-    .cp-navbar-logo i {
-        color: var(--green-primary, #3fb950);
-    }
+    .cp-navbar-logo-mark { width: 30px; height: 30px; object-fit: contain; display: block; }
 
     .cp-navbar-breadcrumb {
         display: flex;
@@ -67,18 +66,54 @@
         gap: 12px;
     }
 
+    .cp-navbar-quicknav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border: 1px solid var(--border-navbar, #30363d);
+        border-radius: 999px;
+        background: var(--bg-card, rgba(255,255,255,0.02));
+    }
+
+    .cp-navbar-quicknav-link {
+        width: 38px;
+        height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        color: var(--text-secondary, #8b949e);
+        text-decoration: none;
+        transition: color 0.2s, background-color 0.2s, transform 0.2s;
+    }
+
+    .cp-navbar-quicknav-link:hover {
+        color: var(--text-primary, #e6edf3);
+        background-color: var(--bg-hover, rgba(255,255,255,0.06));
+        transform: translateY(-1px);
+    }
+
+    .cp-navbar-quicknav-link.active {
+        color: var(--text-white, #ffffff);
+        background-color: var(--color-accent, #3fb950);
+    }
+
     .cp-theme-toggle {
-        background: none;
-        border: none;
+        background: transparent;
+        border: 1px solid var(--border-navbar, #30363d);
+        border-radius: 999px;
         cursor: pointer;
         color: var(--text-secondary, #8b949e);
         font-size: 16px;
-        transition: color 0.2s;
-        padding: 4px 8px;
+        transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+        padding: 8px 10px;
     }
 
     .cp-theme-toggle:hover {
         color: var(--text-primary, #e6edf3);
+        background-color: var(--bg-hover, rgba(255,255,255,0.06));
+        border-color: var(--color-accent, #3fb950);
     }
 
     @media (max-width: 768px) {
@@ -87,7 +122,51 @@
         }
 
         .cp-navbar {
-            padding: 0 12px;
+            padding: 10px 12px;
+            gap: 10px;
+        }
+
+        .cp-navbar-logo {
+            font-size: 16px;
+            min-width: 0;
+        }
+
+        .cp-navbar-left {
+            min-width: 0;
+        }
+
+        .cp-navbar-logo span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .cp-theme-toggle {
+            padding: 8px;
+            min-width: 38px;
+            min-height: 38px;
+        }
+
+        .cp-navbar-quicknav {
+            gap: 4px;
+            padding: 4px 6px;
+        }
+
+        .cp-navbar-quicknav-link {
+            width: 34px;
+            height: 34px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .cp-navbar-logo span {
+            font-size: 14px;
+        }
+
+        .cp-navbar-quicknav {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 4px;
         }
     }
 </style>
@@ -95,7 +174,7 @@
 <nav class="cp-navbar">
     <div class="cp-navbar-left">
         <a href="{% url 'home' %}" class="cp-navbar-logo">
-            <i class="fas fa-mortar-pestle"></i>
+            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="cp-navbar-logo-mark">
             <span>HomeoCompare</span>
         </a>
         <div class="cp-navbar-breadcrumb">
@@ -104,6 +183,28 @@
     </div>
 
     <div class="cp-navbar-right">
+        {% if show_casepaper_topnav %}
+        <div class="cp-navbar-quicknav" aria-label="Case paper navigation">
+            <a href="{% url 'case_paper_dashboard' %}" class="cp-navbar-quicknav-link {% if page_title == 'Dashboard' %}active{% endif %}" title="Dashboard">
+                <i class="fas fa-th-large"></i>
+            </a>
+            <a href="{% url 'case_paper_cases' %}" class="cp-navbar-quicknav-link {% if page_title == 'Cases' %}active{% endif %}" title="Cases">
+                <i class="fas fa-file-alt"></i>
+            </a>
+            <a href="{% url 'case_paper_patients' %}" class="cp-navbar-quicknav-link {% if page_title == 'Patients' %}active{% endif %}" title="Patients">
+                <i class="fas fa-users"></i>
+            </a>
+            <a href="{% url 'case_paper_calendar' %}" class="cp-navbar-quicknav-link {% if page_title == 'Calendar' %}active{% endif %}" title="Calendar">
+                <i class="fas fa-calendar"></i>
+            </a>
+            <a href="{% url 'case_paper_settings' %}" class="cp-navbar-quicknav-link {% if page_title == 'Settings' %}active{% endif %}" title="Settings">
+                <i class="fas fa-cog"></i>
+            </a>
+            <a href="{% url 'case_paper_logout' %}" class="cp-navbar-quicknav-link" title="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+        {% endif %}
         <button class="cp-theme-toggle" id="cpThemeToggle" aria-label="Toggle theme">
             <i class="fas fa-moon"></i>
         </button>
@@ -111,27 +212,45 @@
 </nav>
 
 <script>
-    // Theme toggle
-    document.getElementById('cpThemeToggle')?.addEventListener('click', function() {
-        const html = document.documentElement;
-        const currentTheme = html.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('cp-theme', newTheme);
-        this.innerHTML = newTheme === 'dark' 
-            ? '<i class="fas fa-sun"></i>' 
-            : '<i class="fas fa-moon"></i>';
-    });
+    (function() {
+        const storageKey = 'cp-theme';
+        let initialized = false;
 
-    // Restore theme on load
-    document.addEventListener('DOMContentLoaded', function() {
-        const savedTheme = localStorage.getItem('cp-theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        const icon = document.getElementById('cpThemeToggle')?.querySelector('i');
-        if (icon) {
-            icon.className = savedTheme === 'dark' 
-                ? 'fas fa-sun' 
-                : 'fas fa-moon';
+        function updateThemeToggle(theme) {
+            const toggle = document.getElementById('cpThemeToggle');
+            if (!toggle) return;
+
+            toggle.innerHTML = theme === 'dark'
+                ? '<i class="fas fa-sun"></i>'
+                : '<i class="fas fa-moon"></i>';
+            toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+            toggle.setAttribute('title', theme === 'dark' ? 'Light mode' : 'Dark mode');
         }
-    });
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            document.body?.setAttribute('data-theme', theme);
+            localStorage.setItem(storageKey, theme);
+            updateThemeToggle(theme);
+        }
+
+        function initThemeToggle() {
+            if (initialized) return;
+            initialized = true;
+
+            const savedTheme = localStorage.getItem(storageKey) || 'light';
+            applyTheme(savedTheme);
+
+            document.getElementById('cpThemeToggle')?.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initThemeToggle);
+        } else {
+            initThemeToggle();
+        }
+    })();
 </script>

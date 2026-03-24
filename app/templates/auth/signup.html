@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - HomeoCompare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% include 'auth/_auth_styles.html' %}
+    <style>
+        .auth-body {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <div class="auth-brand">
+                <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-brand-mark">
+                <span>HomeoCompare</span>
+            </div>
+            <div class="auth-header-copy">
+                <h1>Create your workspace</h1>
+                <p>Start a cleaner case-paper workflow with secure sign-in and a practice-ready digital record system.</p>
+            </div>
+            <ul class="auth-feature-list">
+                <li><i class="fas fa-user-plus"></i><span>Set up your account in a minute</span></li>
+                <li><i class="fas fa-notes-medical"></i><span>Organize every case in one place</span></li>
+                <li><i class="fas fa-cloud-check"></i><span>Continue seamlessly with email or Google</span></li>
+            </ul>
+        </div>
+
+        <div class="auth-body">
+            <div class="auth-panel-top">
+                <div class="auth-kicker"><i class="fas fa-user-shield"></i> New Account</div>
+                <h2>Join HomeoCompare</h2>
+                <p>Create your account to begin building case papers, managing patients, and keeping your workflow consistent.</p>
+            </div>
+
+            <div class="alert" id="errorAlert"></div>
+            <div class="alert" id="successAlert"></div>
+
+            <form id="signupForm" onsubmit="handleSignupSubmit(event)">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input 
+                        type="email" 
+                        class="form-input" 
+                        id="emailInput" 
+                        placeholder="Enter your email"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <button type="submit" class="btn-primary" id="signupBtn">
+                    <span>Create Account</span>
+                </button>
+            </form>
+
+            <div class="login-link">
+                Already have an account? <a href="{% url 'login' %}">Login here</a>
+            </div>
+
+            <div class="divider"><span>OR</span></div>
+
+            <div class="oauth-buttons">
+                <a href="{% url 'google_login' %}" class="btn-oauth btn-google">
+                    <i class="fab fa-google"></i> Sign up with Google
+                </a>
+            </div>
+
+            <div class="auth-footer">
+                <p>By signing up, you agree to our <a href="/privacy/">Privacy Policy</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAlert(message, type = 'error') {
+            const alertEl = document.getElementById(`${type}Alert`);
+            alertEl.textContent = message;
+            alertEl.style.display = 'block';
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    alertEl.style.display = 'none';
+                }, 3000);
+            }
+        }
+
+        function handleSignupSubmit(event) {
+            event.preventDefault();
+            const email = document.getElementById('emailInput').value.trim();
+            const btn = document.getElementById('signupBtn');
+            
+            if (!email) {
+                showAlert('Please enter your email', 'error');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> Creating account...';
+
+            fetch('{% url "signup" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showAlert('Account created! Check your email for the verification code.', 'success');
+                    setTimeout(() => {
+                        window.location.href = data.redirect_url || '/auth/verify-code/';
+                    }, 500);
+                } else {
+                    showAlert(data.message || 'Signup failed. Please try again.', 'error');
+                }
+            })
+            .catch(error => {
+                showAlert('An error occurred. Please try again.', 'error');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Create Account</span>';
+            });
+        }
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+</body>
+</html>

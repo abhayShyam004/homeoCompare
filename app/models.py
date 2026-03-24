@@ -101,25 +101,90 @@ class RemedyDuration(models.Model):
 
 
 class CasePaperUser(models.Model):
-    """User model for case paper authentication (passwordless, extensible)"""
-    # Authentication
-    username = models.CharField(max_length=150, unique=True, db_index=True)
+    """Extended user model for case paper authentication with OAuth and password"""
     
-    # Physician Profile (extensible for password auth later)
+    AUTH_METHOD_CHOICES = [
+        ('email', 'Email & Password'),
+        ('google', 'Google OAuth'),
+    ]
+    
+    # Core Identity
+    username = models.CharField(max_length=150, unique=True, db_index=True)
+    email = models.EmailField(unique=True, db_index=True, blank=True, null=True)
+    password = models.CharField(max_length=255, blank=True, default='')  # Hashed password
+    
+    # OAuth Fields
+    auth_method = models.CharField(max_length=20, choices=AUTH_METHOD_CHOICES, default='email')
+    google_id = models.CharField(max_length=255, unique=True, db_index=True, blank=True, null=True)
+    google_email = models.EmailField(blank=True, null=True)
+    
+    # User Profile
     physician_name = models.CharField(max_length=200, blank=True, default='')
+    specialization = models.CharField(max_length=200, blank=True, default='')
     contact_number = models.CharField(max_length=20, blank=True, default='')
+    address = models.TextField(blank=True, default='')
+    clinic_name = models.CharField(max_length=200, blank=True, default='')
+    
+    # Registration Status
+    is_registered = models.BooleanField(default=False, help_text="True if user completed profile setup")
     
     # Timestamps
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    last_login = models.DateTimeField(blank=True, null=True)
     
     class Meta:
-        ordering = ['username']
+        ordering = ['-created_at']
         verbose_name = 'Case Paper User'
         verbose_name_plural = 'Case Paper Users'
+        indexes = [
+            models.Index(fields=['email']),
+            models.Index(fields=['google_id']),
+            models.Index(fields=['-created_at']),
+        ]
     
     def __str__(self):
-        return f"{self.username} - {self.physician_name}" if self.physician_name else self.username
+        return f"{self.username} ({self.get_auth_method_display()})"
+
+
+class GoogleOAuthToken(models.Model):
+    """Store Google OAuth tokens for users"""
+    user = models.OneToOneField(CasePaperUser, on_delete=models.CASCADE, related_name='google_token')
+    access_token = models.TextField()
+    refresh_token = models.TextField(blank=True, null=True)
+    token_expiry = models.DateTimeField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = 'Google OAuth Token'
+        verbose_name_plural = 'Google OAuth Tokens'
+    
+    def __str__(self):
+        return f"Google Token for {self.user.username}"
+
+
+class EmailVerificationCode(models.Model):
+    """Store email verification codes for login"""
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='verification_codes')
+    email = models.EmailField(db_index=True)  # Email the code is sent to
+    code = models.CharField(max_length=6)  # 6-digit verification code
+    is_used = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    expires_at = models.DateTimeField()  # 10 minutes from creation
+    
+    class Meta:
+        verbose_name = 'Email Verification Code'
+        verbose_name_plural = 'Email Verification Codes'
+        ordering = ['-created_at']
+    
+    def is_valid(self):
+        """Check if the code is valid (not used and not expired)"""
+        from django.utils import timezone
+        return not self.is_used and timezone.now() < self.expires_at
+    
+    def __str__(self):
+        return f"Code for {self.email} - {'Valid' if self.is_valid() else 'Expired/Used'}"
 
 
 class CasePaper(models.Model):

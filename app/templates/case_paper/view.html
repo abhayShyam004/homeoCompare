@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
 </head>
-<body data-theme="dark">
-    {% include 'navbar.html' %}
+<body data-theme="light" class="cp-form-mode">
+    {% include 'navbar.html' with show_casepaper_topnav=True %}
     
+    <div class="cp-workspace">
     <div class="cp-form-wrapper">
         <!-- Sidebar -->
         <div class="cp-sidebar">
@@ -26,11 +27,11 @@
 
             <!-- Progress Block -->
             <div class="cp-progress-block">
-                <div class="cp-progress-percent">100%</div>
-                <div class="cp-progress-text">10 of 10 Sections</div>
+                <div class="cp-progress-percent" id="completionPercent">0%</div>
+                <div class="cp-progress-text"><span id="filledSections">0</span> of 10 Sections</div>
                 <div class="cp-progress-bar-wrapper">
                     <div class="cp-progress-bar-large">
-                        <div class="cp-progress-fill-large" style="width: 100%"></div>
+                        <div class="cp-progress-fill-large" id="completionBar" style="width: 0%"></div>
                     </div>
                 </div>
             </div>
@@ -134,7 +135,7 @@
                             </div>
                             <div class="cp-field-readonly">
                                 <div class="cp-label">Consultation Date</div>
-                                <div class="cp-value">{% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date|date:"M d, Y" }}{% else %}{{ case.created_at|date:"M d, Y" }}{% endif %}</div>
+                                <div class="cp-value">{% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date }}{% else %}{{ case.created_at|date:"M d, Y" }}{% endif %}</div>
                             </div>
                             <div class="cp-field-readonly">
                                 <div class="cp-label">Consultation Time</div>
@@ -513,6 +514,7 @@
             </div>
         </div>
     </div>
+    </div>
 
     <script>
         // Set print date
@@ -520,6 +522,59 @@
             year: 'numeric',
             month: 'long',
             day: 'numeric'
+        });
+
+        // Calculate completion percentage based on filled sections
+        function calculateCompletion() {
+            const sections = document.querySelectorAll('.cp-section-block');
+            let filledCount = 0;
+            const totalSections = sections.length;
+
+            sections.forEach(section => {
+                // Count non-empty read-only fields or non-empty items
+                const fields = section.querySelectorAll('.cp-field-readonly .cp-value, .cp-view-item, .cpl-field .cpl-value');
+                let hasContent = false;
+
+                fields.forEach(field => {
+                    const text = field.textContent.trim();
+                    if (text && text !== '—' && text.length > 0) {
+                        hasContent = true;
+                    }
+                });
+
+                if (hasContent) {
+                    filledCount++;
+                }
+            });
+
+            // Update progress bar
+            const percentage = totalSections > 0 ? Math.round((filledCount / totalSections) * 100) : 0;
+            const progressBar = document.getElementById('completionBar');
+            const progressText = document.getElementById('completionPercent');
+            const filledText = document.getElementById('filledSections');
+            const progressBarTop = document.getElementById('completionBarTop');
+            const progressTextTop = document.getElementById('completionPercentTop');
+            const filledTextTop = document.getElementById('filledSectionsTop');
+
+            if (progressBar) progressBar.style.width = percentage + '%';
+            if (progressText) progressText.textContent = percentage + '%';
+            if (filledText) filledText.textContent = filledCount;
+            if (progressBarTop) progressBarTop.style.width = percentage + '%';
+            if (progressTextTop) progressTextTop.textContent = percentage + '%';
+            if (filledTextTop) filledTextTop.textContent = filledCount;
+        }
+
+        // Run on page load
+        window.addEventListener('load', function() {
+            calculateCompletion();
+
+            // Auto-trigger print if coming from dashboard print button
+            if (sessionStorage.getItem('autoPrint') === 'true') {
+                sessionStorage.removeItem('autoPrint');
+                setTimeout(function() {
+                    window.print();
+                }, 300);
+            }
         });
 
         // Smooth scroll to sections
@@ -535,16 +590,6 @@
         function printCase() {
             window.print();
         }
-
-        // Auto-trigger print if coming from dashboard print button
-        window.addEventListener('load', function() {
-            if (sessionStorage.getItem('autoPrint') === 'true') {
-                sessionStorage.removeItem('autoPrint');
-                setTimeout(function() {
-                    window.print();
-                }, 300);
-            }
-        });
     </script>
 
 <!-- PRINT LAYOUT — hidden on screen, shown on print only -->
@@ -565,7 +610,7 @@
     </div>
     <div class="cpl-header-right">
       <div class="cpl-case-id">{{ case.case_id }}</div>
-      <div class="cpl-date">Consultation Date: {% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date|date:"d M Y" }}{% else %}{{ case.created_at|date:"d M Y" }}{% endif %}</div>
+      <div class="cpl-date">Consultation Date: {% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date }}{% else %}{{ case.created_at|date:"d M Y" }}{% endif %}</div>
       <div class="cpl-date" style="margin-top: 2pt;">Time: {{ case.preliminary.consultation_time|default:"—" }}</div>
       <div class="cpl-status" style="margin-top: 3pt;">Status: {{ case.status|title }}</div>
     </div>
@@ -621,7 +666,7 @@
       </div>
       <div class="cpl-field">
         <div class="cpl-label">Consultation Date & Time</div>
-        <div class="cpl-value">{% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date|date:"d M Y" }}{% else %}{{ case.created_at|date:"d M Y" }}{% endif %} {{ case.preliminary.consultation_time|default:"—" }}</div>
+        <div class="cpl-value">{% if case.preliminary.consultation_date %}{{ case.preliminary.consultation_date }}{% else %}{{ case.created_at|date:"d M Y" }}{% endif %} {{ case.preliminary.consultation_time|default:"—" }}</div>
       </div>
     </div>
   </div>

@@ -130,6 +130,7 @@
             font-weight: 800;
             font-size: 1.1rem;
         }
+        .logo-icon img { width: 26px; height: 26px; object-fit: contain; display: block; }
 
         .logo-text h1 {
             font-size: 1rem;
@@ -1117,7 +1118,7 @@
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="{% url 'home' %}" class="logo">
-                <div class="logo-icon">Hc</div>
+                <div class="logo-icon"><img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo"></div>
                 <div class="logo-text">
                     <h1>HomeoCompare</h1>
                     <span>Boericke's Edition</span>
@@ -1342,7 +1343,7 @@
         // === THEME ===
         const themeToggle = document.getElementById('themeToggle');
         function initTheme() {
-            const theme = localStorage.getItem('theme') || 'dark';
+const theme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', theme);
             updateThemeBtn(theme);
         }

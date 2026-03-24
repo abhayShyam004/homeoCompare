@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from . import case_paper_views
+from . import auth_views
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -44,11 +45,24 @@ urlpatterns = [
     path('case_paper/logout/', case_paper_views.case_paper_logout, name='case_paper_logout'),
     path('case_paper/', case_paper_views.case_paper_dashboard, name='case_paper_dashboard'),
     path('case_paper/new/', case_paper_views.case_paper_new, name='case_paper_new'),
+    path('case_paper/cases/', case_paper_views.case_paper_cases, name='case_paper_cases'),
+    path('case_paper/patients/', case_paper_views.case_paper_patients, name='case_paper_patients'),
+    path('case_paper/calendar/', case_paper_views.case_paper_calendar, name='case_paper_calendar'),
+    path('case_paper/settings/', case_paper_views.case_paper_settings, name='case_paper_settings'),
     path('case_paper/<str:case_id>/', case_paper_views.case_paper_view, name='case_paper_view'),
     path('case_paper/<str:case_id>/edit/', case_paper_views.case_paper_form, name='case_paper_edit'),
     path('api/case_paper/save/', case_paper_views.case_paper_save, name='case_paper_save'),
     path('api/case_paper/full_save/', case_paper_views.case_paper_full_save, name='case_paper_full_save'),
     path('api/case_paper/delete/', case_paper_views.case_paper_delete, name='case_paper_delete'),
     path('api/case_paper/get/<str:case_id>/', case_paper_views.case_paper_get_data, name='case_paper_get_data'),
+    
+    # Authentication Routes
+    path('auth/login/', auth_views.login, name='login'),
+    path('auth/verify-code/', auth_views.verify_code, name='verify_code'),
+    path('auth/signup/', auth_views.signup, name='signup'),
+    path('auth/google-login/', auth_views.google_login, name='google_login'),
+    path('auth/google/callback/', auth_views.google_callback, name='google_callback'),
+    path('auth/register/', auth_views.register, name='register'),
+    path('auth/logout/', auth_views.logout, name='logout'),
 ]
 

@@ -1,0 +1,46 @@
+{% extends 'case_paper/base.html' %}
+
+{% block main_content %}
+    <div style="max-width: 980px; margin:auto;">
+        <h2 class="page-title serif">Patients</h2>
+        <form method="get" style="margin-bottom: 18px; display: flex; gap: 12px; align-items: center;">
+            <input type="text" name="search" class="search-input mono" placeholder="Search by patient name..." value="{{ request.GET.search }}" style="flex:1; padding: 8px 12px; border-radius: 6px; border: 1px solid #ddd;">
+            <button type="submit" class="action-link" style="padding: 8px 18px;">Search</button>
+        </form>
+        <div class="stat-card">
+            <div class="stat-body">
+                <table style="width:100%; border-collapse:collapse;">
+                    <thead>
+                        <tr style="background:#f5f5f4;">
+                            <th class="mono" style="padding:8px; text-align:left;">Name</th>
+                            <th class="mono" style="padding:8px; text-align:left;">Age</th>
+                            <th class="mono" style="padding:8px; text-align:left;">Sex</th>
+                            <th class="mono" style="padding:8px; text-align:left;">Contact</th>
+                            <th class="mono" style="padding:8px; text-align:left;">Total Cases</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for patient in patients %}
+                        <tr style="border-bottom:1px solid #eee;">
+                            <td class="serif" style="padding:8px;">{{ patient.name }}</td>
+                            <td class="mono" style="padding:8px;">{{ patient.age|default:'-' }}</td>
+                            <td class="mono" style="padding:8px;">{{ patient.sex|default:'-' }}</td>
+                            <td class="mono" style="padding:8px;">{{ patient.contact|default:'-' }}</td>
+                            <td class="mono" style="padding:8px;">{{ patient.total_cases|default:'1' }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" style="text-align:center; color:var(--text-muted); padding:32px;">
+                                <i class="fas fa-users" style="font-size: 32px; margin-bottom: 10px; opacity: 0.3;"></i>
+                                <p>No patients found.</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p style="margin-top:16px;"><a href="{% url 'case_paper_dashboard' %}" class="action-link">Back to Dashboard</a></p>
+    </div>
+{% endblock %}
+

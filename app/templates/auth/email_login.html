@@ -1,0 +1,576 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HomeoCompare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .auth-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .auth-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .auth-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .auth-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .auth-body {
+            padding: 40px 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e0e0e0;
+        }
+
+        .divider span {
+            margin: 0 16px;
+        }
+
+        .oauth-buttons {
+            display: grid;
+            gap: 12px;
+        }
+
+        .btn-oauth {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-oauth:hover {
+            border-color: #667eea;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+        }
+
+        .btn-google {
+            border-color: #db4437;
+            color: #db4437;
+        }
+
+        .btn-google:hover {
+            background: linear-gradient(135deg, rgba(219, 68, 55, 0.05), rgba(219, 68, 55, 0.05));
+            border-color: #db4437;
+        }
+
+        .alert {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .alert-error {
+            background-color: #fee;
+            color: #c33;
+            border: 1px solid #fcc;
+            display: block;
+        }
+
+        .alert-success {
+            background-color: #efe;
+            color: #3c3;
+            border: 1px solid #cfc;
+            display: block;
+        }
+
+        .otp-step {
+            display: none;
+        }
+
+        .otp-step.active {
+            display: block;
+        }
+
+        .otp-input-wrapper {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .otp-input {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .otp-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .otp-resend {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .otp-resend a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .otp-timer {
+            color: #999;
+            font-size: 13px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .auth-footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .auth-footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .auth-container {
+                border-radius: 0;
+            }
+
+            .auth-header {
+                padding: 30px 20px;
+            }
+
+            .auth-body {
+                padding: 30px 20px;
+            }
+
+            .otp-input {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Header -->
+        <div class="auth-header">
+            <h1><i class="fas fa-heartbeat"></i> HomeoCompare</h1>
+            <p>Digital Homeopathic Case Paper System</p>
+        </div>
+
+        <!-- Body -->
+        <div class="auth-body">
+            <!-- Alert Messages -->
+            <div class="alert alert-error" id="errorAlert"></div>
+            <div class="alert alert-success" id="successAlert"></div>
+
+            <!-- Email Step -->
+            <div class="otp-step active" id="emailStep">
+                <form id="emailForm" onsubmit="handleEmailSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            id="emailInput" 
+                            placeholder="Enter your email"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                    <button type="submit" class="btn-primary" id="emailBtn">
+                        <span>Send OTP</span>
+                    </button>
+                </form>
+
+                <div class="divider"><span>OR</span></div>
+
+                <!-- OAuth Options -->
+                <div class="oauth-buttons">
+                    <a href="{% url 'google_login' %}" class="btn-oauth btn-google">
+                        <i class="fab fa-google"></i> Continue with Google
+                    </a>
+                </div>
+            </div>
+
+            <!-- OTP Step -->
+            <div class="otp-step" id="otpStep">
+                <p style="text-align: center; margin-bottom: 20px; color: #666; font-size: 14px;">
+                    OTP sent to <strong id="displayEmail"></strong>
+                </p>
+                
+                <form id="otpForm" onsubmit="handleOtpSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Enter 6-digit OTP</label>
+                        <div class="otp-input-wrapper" id="otpInputWrapper">
+                            <input type="text" class="otp-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="otp-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="otp-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="otp-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="otp-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="otp-input" maxlength="1" autocomplete="off">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary" id="otpBtn">
+                        <span>Verify & Login</span>
+                    </button>
+                </form>
+
+                <div class="otp-resend">
+                    Didn't receive the OTP? 
+                    <a onclick="handleResendOtp()">Resend OTP</a>
+                    <span class="otp-timer" id="otpTimer"></span>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="javascript:void(0);" onclick="resetToEmailStep()" style="color: #667eea; text-decoration: none; font-size: 13px;">
+                        <i class="fas fa-arrow-left"></i> Back to Email
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="auth-footer">
+                <p>By logging in, you agree to our <a href="/privacy/">Privacy Policy</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentEmail = '';
+        let otpTimer = null;
+
+        // OTP Input Handler - Auto-focus next input
+        document.querySelectorAll('.otp-input').forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                if (e.target.value && index < 5) {
+                    document.querySelectorAll('.otp-input')[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    document.querySelectorAll('.otp-input')[index - 1].focus();
+                }
+            });
+        });
+
+        function showAlert(message, type = 'error') {
+            const alertEl = document.getElementById(`${type}Alert`);
+            alertEl.textContent = message;
+            alertEl.style.display = 'block';
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    alertEl.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        function handleEmailSubmit(event) {
+            event.preventDefault();
+            const email = document.getElementById('emailInput').value.trim();
+            const btn = document.getElementById('emailBtn');
+            
+            if (!email) {
+                showAlert('Please enter your email', 'error');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> Sending...';
+
+            fetch('{% url "email_login" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    currentEmail = email;
+                    document.getElementById('displayEmail').textContent = email;
+                    document.getElementById('emailStep').classList.remove('active');
+                    document.getElementById('otpStep').classList.add('active');
+                    showAlert('OTP sent successfully!', 'success');
+                    startOtpTimer();
+                } else {
+                    showAlert(data.message || 'Failed to send OTP', 'error');
+                }
+            })
+            .catch(error => {
+                showAlert('An error occurred. Please try again.', 'error');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Send OTP</span>';
+            });
+        }
+
+        function handleOtpSubmit(event) {
+            event.preventDefault();
+            const otpInputs = document.querySelectorAll('.otp-input');
+            const otp = Array.from(otpInputs).map(input => input.value).join('');
+            const btn = document.getElementById('otpBtn');
+
+            if (otp.length !== 6) {
+                showAlert('Please enter a valid 6-digit OTP', 'error');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> Verifying...';
+
+            fetch('{% url "verify_otp" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ email: currentEmail, otp: otp })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showAlert('Login successful!', 'success');
+                    setTimeout(() => {
+                        if (data.need_registration) {
+                            window.location.href = `/auth/register/?user_id=${data.user_id}`;
+                        } else {
+                            window.location.href = data.redirect_url || '/case-paper/dashboard/';
+                        }
+                    }, 1000);
+                } else {
+                    showAlert(data.message || 'Failed to verify OTP', 'error');
+                }
+            })
+            .catch(error => {
+                showAlert('An error occurred. Please try again.', 'error');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Verify & Login</span>';
+            });
+        }
+
+        function handleResendOtp() {
+            const btn = document.querySelector('.otp-resend a');
+            btn.textContent = 'Sending...';
+            btn.style.cursor = 'not-allowed';
+            btn.style.opacity = '0.5';
+
+            fetch('{% url "email_login" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ email: currentEmail })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showAlert('OTP resent successfully!', 'success');
+                    startOtpTimer();
+                } else {
+                    showAlert(data.message || 'Failed to resend OTP', 'error');
+                }
+            })
+            .catch(error => {
+                showAlert('An error occurred. Please try again.', 'error');
+            })
+            .finally(() => {
+                btn.textContent = 'Resend OTP';
+                btn.style.cursor = 'pointer';
+                btn.style.opacity = '1';
+            });
+        }
+
+        function resetToEmailStep() {
+            document.getElementById('emailStep').classList.add('active');
+            document.getElementById('otpStep').classList.remove('active');
+            document.querySelectorAll('.otp-input').forEach(input => input.value = '');
+            if (otpTimer) clearInterval(otpTimer);
+        }
+
+        function startOtpTimer() {
+            let timeLeft = 300; // 5 minutes
+            const timerEl = document.getElementById('otpTimer');
+            
+            if (otpTimer) clearInterval(otpTimer);
+            
+            otpTimer = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerEl.textContent = `Expires in ${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(otpTimer);
+                    timerEl.textContent = 'OTP Expired';
+                }
+            }, 1000);
+        }
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+</body>
+</html>

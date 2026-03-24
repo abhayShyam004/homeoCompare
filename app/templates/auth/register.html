@@ -1,0 +1,394 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Profile - HomeoCompare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .register-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .register-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .register-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .register-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .register-body {
+            padding: 40px 30px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-row-full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-label .required {
+            color: #ff4444;
+        }
+
+        .form-input,
+        .form-textarea {
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-hint {
+            font-size: 12px;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        .alert {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .alert-error {
+            background-color: #fee;
+            color: #c33;
+            border: 1px solid #fcc;
+            display: block;
+        }
+
+        .alert-info {
+            background-color: #eef;
+            color: #33c;
+            border: 1px solid #ccf;
+            display: block;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+            border: 2px solid #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            background: #e8e8e8;
+        }
+
+        .privacy-notice {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+        }
+
+        .privacy-notice a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 600px) {
+            .register-container {
+                border-radius: 0;
+            }
+
+            .register-header {
+                padding: 30px 20px;
+            }
+
+            .register-body {
+                padding: 30px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <!-- Header -->
+        <div class="register-header">
+            <h1><i class="fas fa-user-md"></i> Complete Your Profile</h1>
+            <p>Welcome to HomeoCompare - Let's set up your account</p>
+        </div>
+
+        <!-- Body -->
+        <div class="register-body">
+            {% if error %}
+            <div class="alert alert-error">{{ error }}</div>
+            {% endif %}
+
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i> Please fill in your professional details to get started.
+            </div>
+
+            <form method="POST" onsubmit="handleFormSubmit(event)">
+                {% csrf_token %}
+                <input type="hidden" name="user_id" value="{{ user.id }}">
+
+                <!-- Name Section -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">
+                            Email Address
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            value="{{ user.email }}" 
+                            disabled
+                        >
+                        <span class="form-hint">Verified email address</span>
+                    </div>
+                </div>
+
+                <!-- Physician Information -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">
+                            Physician Name
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            name="physician_name" 
+                            class="form-input" 
+                            placeholder="Dr. John Doe"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Specialization
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            name="specialization" 
+                            class="form-input" 
+                            placeholder="e.g., General Practice, Surgery"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">
+                            Contact Number
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            name="contact_number" 
+                            class="form-input" 
+                            placeholder="+91 98765 43210"
+                            pattern="[0-9\s\-\+\(\)]+"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Clinic Name</label>
+                        <input 
+                            type="text" 
+                            name="clinic_name" 
+                            class="form-input" 
+                            placeholder="Your Clinic Name (Optional)"
+                        >
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-row form-row-full">
+                    <div class="form-group">
+                        <label class="form-label">Clinic Address</label>
+                        <textarea 
+                            name="address" 
+                            class="form-textarea" 
+                            placeholder="Enter your clinic address..."
+                        ></textarea>
+                        <span class="form-hint">This will be displayed on case papers</span>
+                    </div>
+                </div>
+
+                <!-- Privacy Notice -->
+                <div class="privacy-notice">
+                    <i class="fas fa-lock"></i> <strong>Your data is secure.</strong> We use industrial-grade encryption to protect your information. By registering, you agree to our <a href="/privacy/">Privacy Policy</a> and <a href="/">Terms of Service</a>.
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="window.history.back()">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <i class="fas fa-check"></i> Complete Registration
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Validate form
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner"></span> Completing Registration...';
+
+            // Submit form
+            form.submit();
+        }
+
+        // Prevent form submission on Enter key for text inputs (except textarea)
+        document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    document.querySelector('button[type="submit"]').focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

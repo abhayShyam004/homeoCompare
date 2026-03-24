@@ -1334,7 +1334,7 @@
         // === THEME ===
         const themeToggle = document.getElementById('themeToggle');
         function initTheme() {
-            const theme = localStorage.getItem('theme') || 'dark';
+const theme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', theme);
             updateThemeBtn(theme);
         }

@@ -1,0 +1,214 @@
+{% extends 'case_paper/base.html' %}
+
+{% block main_content %}
+    <style>
+        .calendar-shell { max-width: 1260px; margin: 0 auto; display: grid; gap: 20px; }
+        .calendar-top { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+        .calendar-controls { display: flex; align-items: center; gap: 12px; }
+        .calendar-nav { border: 0.5px solid var(--border-color); background: var(--color-paper); color: var(--text-primary); text-decoration: none; padding: 10px 14px; }
+        .calendar-nav:hover { border-color: var(--color-accent); color: var(--color-accent); }
+        .calendar-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.8fr); gap: 20px; align-items: start; }
+        .calendar-card { background: var(--color-paper); border: 0.5px solid var(--border-color); padding: 20px; box-shadow: var(--shadow-sm, 0 4px 10px rgba(0,0,0,0.08)); }
+        .calendar-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+        .calendar-stat { background: var(--surface-raised, var(--text-white)); border: 0.5px solid var(--border-color); padding: 16px; }
+        .calendar-stat-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+        .calendar-stat-value { font-size: 30px; line-height: 1; }
+        .calendar-month-scroll { overflow-x: auto; padding-bottom: 6px; }
+        .calendar-month-scroll::-webkit-scrollbar { height: 8px; }
+        .calendar-month-scroll::-webkit-scrollbar-thumb { background: var(--border-color); }
+        .calendar-mobile-days { display: none; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+        .calendar-weekday { text-align: center; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); padding-bottom: 6px; }
+        .calendar-day { min-height: 130px; border: 0.5px solid var(--border-color); background: var(--surface-raised, var(--text-white)); padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+        .calendar-day.is-other-month { opacity: 0.35; }
+        .calendar-day.is-today { border-color: var(--color-accent); box-shadow: 0 0 0 1px var(--color-accent) inset; }
+        .calendar-day-head { display: flex; justify-content: space-between; align-items: center; }
+        .calendar-day-number { font-weight: 700; }
+        .calendar-event-list { display: grid; gap: 6px; }
+        .calendar-event { display: block; padding: 8px; text-decoration: none; color: var(--text-primary); border-left: 3px solid var(--color-accent); background: rgba(45, 90, 39, 0.08); }
+        .calendar-event.followup { border-left-color: #3b82f6; background: rgba(59, 130, 246, 0.10); }
+        .calendar-event:hover { opacity: 0.9; }
+        .calendar-event-title { font-size: 12px; font-weight: 600; line-height: 1.2; }
+        .calendar-event-meta { font-size: 10px; color: var(--text-secondary); margin-top: 4px; }
+        .agenda-list { display: grid; gap: 12px; }
+        .agenda-item { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 0.5px solid var(--border-color); }
+        .agenda-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .agenda-date { min-width: 58px; text-align: center; border: 0.5px solid var(--border-color); padding: 8px 6px; }
+        .agenda-day { font-size: 22px; line-height: 1; }
+        .agenda-month { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-top: 6px; }
+        .agenda-title { font-weight: 600; }
+        .agenda-subtitle { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+        .agenda-link { text-decoration: none; color: var(--text-primary); border: 0.5px solid var(--border-color); padding: 8px 12px; }
+        .agenda-link:hover { color: var(--color-accent); border-color: var(--color-accent); }
+        .empty-state { color: var(--text-muted); text-align: center; padding: 28px 0; }
+        .calendar-mobile-day-card { border: 0.5px solid var(--border-color); background: var(--surface-raised, var(--text-white)); padding: 14px; display: grid; gap: 10px; }
+        .calendar-mobile-day-card.is-today { border-color: var(--color-accent); box-shadow: 0 0 0 1px var(--color-accent) inset; }
+        .calendar-mobile-day-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+        .calendar-mobile-date { font-size: 18px; }
+        .calendar-mobile-count { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+        .calendar-mobile-event { display: block; padding: 10px 12px; text-decoration: none; color: var(--text-primary); border-left: 3px solid var(--color-accent); background: rgba(45, 90, 39, 0.08); }
+        .calendar-mobile-event.followup { border-left-color: #3b82f6; background: rgba(59, 130, 246, 0.10); }
+        .calendar-mobile-event-title { font-weight: 600; }
+        .calendar-mobile-event-meta { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+        @media (max-width: 1080px) {
+            .calendar-layout, .calendar-stats { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 760px) {
+            .calendar-top { flex-direction: column; align-items: stretch; }
+            .calendar-controls { justify-content: space-between; }
+            .calendar-month-scroll { display: none; }
+            .calendar-mobile-days { display: grid; gap: 12px; }
+            .agenda-item {
+                grid-template-columns: auto 1fr;
+            }
+            .agenda-link {
+                grid-column: 2;
+                width: fit-content;
+            }
+        }
+        @media (max-width: 480px) {
+            .calendar-mobile-day-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+            .calendar-mobile-date { font-size: 16px; }
+            .calendar-mobile-event-meta { font-size: 10px; }
+        }
+    </style>
+
+    <div class="calendar-shell">
+        <div class="calendar-top">
+            <div>
+                <h2 class="page-title serif">Clinical Calendar</h2>
+                <p class="mono" style="color: var(--text-secondary);">Track consultation dates and scheduled follow-ups for {{ month_label }}.</p>
+            </div>
+            <div class="calendar-controls">
+                <a class="calendar-nav mono" href="?month={{ prev_month }}&year={{ prev_year }}"><i class="fas fa-chevron-left"></i> Previous</a>
+                <div class="mono" style="min-width: 130px; text-align: center;">{{ month_label }}</div>
+                <a class="calendar-nav mono" href="?month={{ next_month }}&year={{ next_year }}">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <div class="calendar-stats">
+            <div class="calendar-stat">
+                <div class="calendar-stat-label mono">Events This Month</div>
+                <div class="calendar-stat-value serif">{{ total_event_count }}</div>
+            </div>
+            <div class="calendar-stat">
+                <div class="calendar-stat-label mono">Consultations</div>
+                <div class="calendar-stat-value serif">{{ consultation_count }}</div>
+            </div>
+            <div class="calendar-stat">
+                <div class="calendar-stat-label mono">Follow-Ups</div>
+                <div class="calendar-stat-value serif">{{ followup_count }}</div>
+            </div>
+        </div>
+
+        <div class="calendar-layout">
+            <section class="calendar-card">
+                <div class="calendar-month-scroll">
+                    <div class="calendar-grid" style="margin-bottom: 12px;">
+                        <div class="calendar-weekday mono">Mon</div>
+                        <div class="calendar-weekday mono">Tue</div>
+                        <div class="calendar-weekday mono">Wed</div>
+                        <div class="calendar-weekday mono">Thu</div>
+                        <div class="calendar-weekday mono">Fri</div>
+                        <div class="calendar-weekday mono">Sat</div>
+                        <div class="calendar-weekday mono">Sun</div>
+                    </div>
+                    <div style="display: grid; gap: 10px;">
+                        {% for week in calendar_weeks %}
+                            <div class="calendar-grid">
+                                {% for day in week %}
+                                    <div class="calendar-day{% if not day.is_current_month %} is-other-month{% endif %}{% if day.is_today %} is-today{% endif %}">
+                                        <div class="calendar-day-head">
+                                            <span class="calendar-day-number mono">{{ day.day }}</span>
+                                            {% if day.events %}
+                                                <span class="mono" style="font-size: 10px; color: var(--text-muted);">{{ day.events|length }} item{{ day.events|length|pluralize }}</span>
+                                            {% endif %}
+                                        </div>
+                                        <div class="calendar-event-list">
+                                            {% for event in day.events %}
+                                                <a href="{% url 'case_paper_view' event.case_id %}" class="calendar-event {{ event.type }}">
+                                                    <div class="calendar-event-title">{{ event.title }}</div>
+                                                    <div class="calendar-event-meta mono">{{ event.subtitle }}</div>
+                                                </a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="calendar-mobile-days">
+                    {% for week in calendar_weeks %}
+                        {% for day in week %}
+                            {% if day.is_current_month and day.events %}
+                                <div class="calendar-mobile-day-card{% if day.is_today %} is-today{% endif %}">
+                                    <div class="calendar-mobile-day-head">
+                                        <div class="calendar-mobile-date serif">{{ day.date|date:"D, d M" }}</div>
+                                        <div class="calendar-mobile-count mono">{{ day.events|length }} item{{ day.events|length|pluralize }}</div>
+                                    </div>
+                                    <div class="calendar-event-list">
+                                        {% for event in day.events %}
+                                            <a href="{% url 'case_paper_view' event.case_id %}" class="calendar-mobile-event {{ event.type }}">
+                                                <div class="calendar-mobile-event-title">{{ event.title }}</div>
+                                                <div class="calendar-mobile-event-meta mono">{{ event.subtitle }}</div>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% empty %}
+                    {% endfor %}
+                    {% if not month_events %}
+                        <div class="empty-state mono">No dated case activity exists for this month yet.</div>
+                    {% endif %}
+                </div>
+            </section>
+
+            <div style="display: grid; gap: 20px;">
+                <section class="calendar-card">
+                    <h3 class="serif" style="margin-bottom: 14px;">Upcoming Agenda</h3>
+                    <div class="agenda-list">
+                        {% for event in upcoming_events %}
+                            <div class="agenda-item">
+                                <div class="agenda-date">
+                                    <div class="agenda-day serif">{{ event.date|date:"d" }}</div>
+                                    <div class="agenda-month mono">{{ event.date|date:"M" }}</div>
+                                </div>
+                                <div>
+                                    <div class="agenda-title">{{ event.title }}</div>
+                                    <div class="agenda-subtitle mono">{{ event.subtitle }}</div>
+                                </div>
+                                <a href="{% url 'case_paper_view' event.case_id %}" class="agenda-link mono">Open</a>
+                            </div>
+                        {% empty %}
+                            <div class="empty-state mono">No upcoming consultation or follow-up dates were found.</div>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="calendar-card">
+                    <h3 class="serif" style="margin-bottom: 14px;">Monthly Event Feed</h3>
+                    <div class="agenda-list">
+                        {% for event in month_events %}
+                            <div class="agenda-item">
+                                <div class="agenda-date">
+                                    <div class="agenda-day serif">{{ event.date|date:"d" }}</div>
+                                    <div class="agenda-month mono">{{ event.date|date:"M" }}</div>
+                                </div>
+                                <div>
+                                    <div class="agenda-title">{{ event.title }}</div>
+                                    <div class="agenda-subtitle mono">{{ event.subtitle }}</div>
+                                </div>
+                                <a href="{% url 'case_paper_view' event.case_id %}" class="agenda-link mono">View</a>
+                            </div>
+                        {% empty %}
+                            <div class="empty-state mono">No dated case activity exists for this month yet.</div>
+                        {% endfor %}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock %}

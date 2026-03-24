@@ -7,19 +7,43 @@ from django.db.models import Q
 from django.conf import settings
 from datetime import datetime
 import json
+from django.utils import timezone
 from .models import CasePaper, CasePaperUser
+
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    ZoneInfo = None
+
+
+def get_ist_now():
+    """Return India Standard Time datetime for dashboard status."""
+    try:
+        if ZoneInfo is not None:
+            return datetime.now(ZoneInfo('Asia/Kolkata'))
+    except Exception:
+        pass
+
+    try:
+        import pytz
+        return datetime.now(pytz.timezone('Asia/Kolkata'))
+    except Exception:
+        return timezone.localtime(timezone.now())
 
 
 # ============= AUTHENTICATION HELPERS =============
 
 def get_case_paper_user(request):
     """Get the current case paper user from session, or None if not logged in"""
-    user_id = request.session.get('case_paper_user_id')
+    # Check both new auth system (user_id) and old system (case_paper_user_id)
+    user_id = request.session.get('user_id') or request.session.get('case_paper_user_id')
     if user_id:
         try:
             return CasePaperUser.objects.get(id=user_id)
         except CasePaperUser.DoesNotExist:
             # Clear invalid session
+            if 'user_id' in request.session:
+                del request.session['user_id']
             if 'case_paper_user_id' in request.session:
                 del request.session['case_paper_user_id']
     return None
@@ -30,7 +54,7 @@ def require_case_paper_login(view_func):
     def wrapper(request, *args, **kwargs):
         user = get_case_paper_user(request)
         if not user:
-            return redirect('case_paper_login')
+            return redirect('login')  # Redirect to new auth system
         return view_func(request, *args, **kwargs)
     return wrapper
 
@@ -103,47 +127,20 @@ def _save_form_data_to_case(request, case):
 
 
 def case_paper_login(request):
-    """Login page: Prompt for username and physician name"""
-    if request.method == 'POST':
-        username = request.POST.get('username', '').strip()
-        physician_name = request.POST.get('physician_name', '').strip()
-        
-        if not username:
-            context = {'error': 'Please enter a username', 'username': '', 'physician_name': physician_name}
-            return render(request, 'case_paper/login.html', context)
-        
-        if not physician_name:
-            context = {'error': 'Please enter your physician name', 'username': username, 'physician_name': ''}
-            return render(request, 'case_paper/login.html', context)
-        
-        # Get or create user
-        user, created = CasePaperUser.objects.get_or_create(username=username)
-        
-        # Update physician name (allows updating on return login)
-        user.physician_name = physician_name
-        user.save()
-        
-        # Store user ID in session
-        request.session['case_paper_user_id'] = user.id
-        request.session.set_expiry(settings.SESSION_COOKIE_AGE)  # Session expires after set time
-        
-        # Redirect to dashboard
-        return redirect('case_paper_dashboard')
-    
-    # Check if already logged in
-    user = get_case_paper_user(request)
-    if user:
-        return redirect('case_paper_dashboard')
-    
-    return render(request, 'case_paper/login.html')
+    """Legacy login - redirects to new email login"""
+    return redirect('login')
 
 
 def case_paper_logout(request):
     """Logout: Clear session"""
+    if 'user_id' in request.session:
+        del request.session['user_id']
     if 'case_paper_user_id' in request.session:
         del request.session['case_paper_user_id']
+    if 'user_email' in request.session:
+        del request.session['user_email']
     request.session.modified = True
-    return redirect('case_paper_login')
+    return redirect('login')
 
 
 # ============= CASE PAPER VIEWS =============
@@ -175,10 +172,87 @@ def case_paper_dashboard(request):
         'total_count': CasePaper.objects.filter(user=user).count(),
         'draft_count': CasePaper.objects.filter(user=user, status='draft').count(),
         'complete_count': CasePaper.objects.filter(user=user, status='complete').count(),
+        'last_sync': get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST'),
         'user': user,
     }
     
     return render(request, 'case_paper/dashboard.html', context)
+
+
+@require_case_paper_login
+def case_paper_cases(request):
+    user = get_case_paper_user(request)
+    search_query = request.GET.get('search', '').strip()
+    cases = CasePaper.objects.filter(user=user)
+    if search_query:
+        cases = cases.filter(
+            Q(case_id__icontains=search_query) |
+            Q(preliminary__patient_name__icontains=search_query) |
+            Q(status__icontains=search_query)
+        )
+    context = {
+        'user': user,
+        'cases': cases,
+        'page_title': 'Case Papers',
+        'last_sync': get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST'),
+    }
+    return render(request, 'case_paper/cases.html', context)
+
+
+@require_case_paper_login
+def case_paper_patients(request):
+    user = get_case_paper_user(request)
+    search_query = request.GET.get('search', '').strip()
+    cases = CasePaper.objects.filter(user=user)
+    # Build patient details: name, age, sex, contact, total_cases
+    patient_map = {}
+    for case in cases:
+        prelim = case.preliminary if isinstance(case.preliminary, dict) else {}
+        name = prelim.get('patient_name', 'Unknown')
+        if not name:
+            name = 'Unknown'
+        if name not in patient_map:
+            patient_map[name] = {
+                'name': name,
+                'age': prelim.get('age', ''),
+                'sex': prelim.get('sex', ''),
+                'contact': prelim.get('contact_number', ''),
+                'total_cases': 1,
+            }
+        else:
+            patient_map[name]['total_cases'] += 1
+    patients = list(patient_map.values())
+    if search_query:
+        patients = [p for p in patients if search_query.lower() in p['name'].lower()]
+    context = {
+        'user': user,
+        'patients': patients,
+        'page_title': 'Patients',
+        'last_sync': get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST'),
+    }
+    return render(request, 'case_paper/patients.html', context)
+
+
+@require_case_paper_login
+def case_paper_calendar(request):
+    user = get_case_paper_user(request)
+    context = {
+        'user': user,
+        'page_title': 'Calendar',
+        'last_sync': get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST'),
+    }
+    return render(request, 'case_paper/calendar.html', context)
+
+
+@require_case_paper_login
+def case_paper_settings(request):
+    user = get_case_paper_user(request)
+    context = {
+        'user': user,
+        'page_title': 'Settings',
+        'last_sync': get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST'),
+    }
+    return render(request, 'case_paper/settings.html', context)
 
 
 @require_case_paper_login

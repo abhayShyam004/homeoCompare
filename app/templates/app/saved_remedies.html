@@ -212,7 +212,7 @@
             renderSavedPage();
             
             // Theme toggle logic duplication (simplification)
-            const theme = localStorage.getItem('theme') || 'dark';
+const theme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', theme);
             document.getElementById('themeToggle').onclick = () => {
                 const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
