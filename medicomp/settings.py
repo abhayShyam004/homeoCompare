@@ -184,6 +184,7 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='abhay315204@gmail.com')
+EMAIL_TIMEOUT = 30  # 30 second timeout for SMTP connections (Gmail can be slow)
 
 # Determine email backend
 USE_CONSOLE_EMAIL = config('EMAIL_USE_CONSOLE', default=False, cast=bool)
