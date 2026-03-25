@@ -1,17 +1,80 @@
 """
-Asynchronous email utilities
-Sends emails in background threads to prevent blocking request handlers
+Email utilities for production-safe delivery.
+
+Includes:
+- SMTP configuration checks
+- Retry-based synchronous send confirmation
+- Optional background-thread helper
 """
 import threading
-from django.core.mail import send_mail, get_connection, EmailMessage
-from django.conf import settings
+import time
 import logging
-import sys
+from smtplib import SMTPException
+
+from django.core.mail import send_mail
+from django.conf import settings
 
 logger = logging.getLogger(__name__)
 
-# Keep track of email threads to prevent premature termination
 _email_threads = []
+
+
+def is_email_service_configured():
+    """
+    Return True when required email settings are present.
+    """
+    backend = getattr(settings, 'EMAIL_BACKEND', '')
+    if backend == 'django.core.mail.backends.console.EmailBackend':
+        return True
+
+    host = getattr(settings, 'EMAIL_HOST', '')
+    user = getattr(settings, 'EMAIL_HOST_USER', '')
+    password = getattr(settings, 'EMAIL_HOST_PASSWORD', '')
+    port = getattr(settings, 'EMAIL_PORT', None)
+    return bool(host and user and password and port)
+
+
+def send_email_with_retry(subject, plain_message, recipient_email, html_message=None, max_retries=3, retry_delay_seconds=1.5):
+    """
+    Send an email synchronously with retry logic.
+
+    Returns True only when SMTP confirms a message was queued.
+    """
+    if not is_email_service_configured():
+        logger.error("Email service is not configured correctly")
+        return False
+
+    from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', '') or getattr(settings, 'EMAIL_HOST_USER', '')
+    if not from_email:
+        logger.error("No DEFAULT_FROM_EMAIL or EMAIL_HOST_USER configured")
+        return False
+
+    last_error = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            result = send_mail(
+                subject=subject,
+                message=plain_message,
+                from_email=from_email,
+                recipient_list=[recipient_email],
+                html_message=html_message,
+                fail_silently=False,
+            )
+            if result == 1:
+                logger.info("Verification email sent to %s on attempt %s", recipient_email, attempt)
+                return True
+
+            last_error = RuntimeError(f"Unexpected send_mail result={result}")
+            logger.warning("Email send returned result=%s for %s on attempt %s", result, recipient_email, attempt)
+        except (SMTPException, TimeoutError, OSError, Exception) as exc:
+            last_error = exc
+            logger.warning("Email send failed for %s on attempt %s: %s", recipient_email, attempt, exc)
+
+        if attempt < max_retries:
+            time.sleep(retry_delay_seconds)
+
+    logger.error("Failed to send email to %s after %s attempts: %s", recipient_email, max_retries, last_error)
+    return False
 
 
 def send_email_async(subject, message, recipient_email, html_message=None):
@@ -32,62 +95,19 @@ def send_email_async(subject, message, recipient_email, html_message=None):
     """
     
     def send_email_thread():
-        try:
-            print(f"📧 [EMAIL] Starting email send to {recipient_email}", file=sys.stderr)
-            print(f"📧 [EMAIL] Backend: {settings.EMAIL_BACKEND}", file=sys.stderr)
-            print(f"📧 [EMAIL] Host: {settings.EMAIL_HOST}:{settings.EMAIL_PORT}", file=sys.stderr)
-            
-            # Use connection with custom timeout
-            connection = get_connection(
-                backend=settings.EMAIL_BACKEND,
-                host=settings.EMAIL_HOST,
-                port=settings.EMAIL_PORT,
-                username=settings.EMAIL_HOST_USER,
-                password=settings.EMAIL_HOST_PASSWORD,
-                use_tls=settings.EMAIL_USE_TLS,
-                timeout=getattr(settings, 'EMAIL_TIMEOUT', 30),
-            )
-            
-            email = EmailMessage(
-                subject,
-                message,
-                settings.EMAIL_HOST_USER,
-                [recipient_email],
-                connection=connection,
-            )
-            if html_message:
-                email.attach_alternative(html_message, "text/html")
-            
-            email.send()
-            
-            print(f"✅ [EMAIL SUCCESS] Email sent to {recipient_email}", file=sys.stderr)
-            logger.info(f"✓ Verification email sent to {recipient_email}")
-            
-        except Exception as e:
-            error_msg = str(e)
-            print(f"❌ [EMAIL ERROR] Failed to send to {recipient_email}: {error_msg}", file=sys.stderr)
-            logger.error(f"✗ Error sending email: {error_msg}")
-    
+        send_email_with_retry(
+            subject=subject,
+            plain_message=message,
+            recipient_email=recipient_email,
+            html_message=html_message,
+        )
+
     try:
-        print(f"🔄 [EMAIL] Starting background thread for {recipient_email}", file=sys.stderr)
-        
-        # Use non-daemon thread so it completes even after request ends
         thread = threading.Thread(target=send_email_thread, daemon=False, name=f"email-{recipient_email}")
         thread.start()
-        
-        # Store thread reference to prevent garbage collection
         _email_threads.append(thread)
-        
-        # Clean up completed threads periodically
         _email_threads[:] = [t for t in _email_threads if t.is_alive()]
-        
-        print(f"✓ [EMAIL] Thread started - returning immediately (no wait)", file=sys.stderr)
-        
-        # IMPORTANT: Return immediately without waiting
-        # The thread will continue in background even after request completes
         return True
-        
-    except Exception as e:
-        print(f"❌ [EMAIL THREAD ERROR] Failed to start thread: {str(e)}", file=sys.stderr)
-        logger.error(f"✗ Error starting email thread: {str(e)}")
+    except Exception as exc:
+        logger.error("Error starting email thread: %s", exc)
         return False

@@ -5,323 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - HomeoCompare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .auth-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            max-width: 450px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .auth-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
-        }
-
-        .auth-header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .auth-header p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        .auth-body {
-            padding: 40px 30px;
-            max-height: 70vh;
-            overflow-y: auto;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .password-requirements {
-            font-size: 12px;
-            color: #666;
-            margin-top: 8px;
-            padding: 8px;
-            background: #f5f5f5;
-            border-radius: 4px;
-        }
-
-        .password-requirements li {
-            margin-left: 20px;
-        }
-
-        .btn-primary {
-            width: 100%;
-            padding: 12px 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
-        }
-
-        .btn-primary:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            margin: 30px 0;
-            color: #999;
-            font-size: 12px;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: #e0e0e0;
-        }
-
-        .divider span {
-            margin: 0 16px;
-        }
-
-        .oauth-buttons {
-            display: grid;
-            gap: 12px;
-        }
-
-        .btn-oauth {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 16px;
-            border: 2px solid #e0e0e0;
-            background: white;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #333;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .btn-oauth:hover {
-            border-color: #667eea;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-        }
-
-        .btn-google {
-            border-color: #db4437;
-            color: #db4437;
-        }
-
-        .btn-google:hover {
-            background: linear-gradient(135deg, rgba(219, 68, 55, 0.05), rgba(219, 68, 55, 0.05));
-            border-color: #db4437;
-        }
-
-        .alert {
-            padding: 12px 16px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            display: none;
-        }
-
-        .alert-error {
-            background-color: #fee;
-            color: #c33;
-            border: 1px solid #fcc;
-            display: block;
-        }
-
-        .alert-success {
-            background-color: #efe;
-            color: #3c3;
-            border: 1px solid #cfc;
-            display: block;
-        }
-
-        .spinner {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid #f3f3f3;
-            border-top: 2px solid #667eea;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .auth-footer {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            font-size: 13px;
-            color: #666;
-        }
-
-        .auth-footer a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .login-link {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 13px;
-            color: #666;
-        }
-
-        .login-link a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 480px) {
-            .auth-container {
-                border-radius: 0;
-            }
-
-            .auth-header {
-                padding: 30px 20px;
-            }
-
-            .auth-body {
-                padding: 30px 20px;
-            }
-        }
-    </style>
+    {% include 'auth/_auth_styles.html' %}
 </head>
-<body>
+<body class="auth-premium auth-preload">
+    <div class="auth-intro" id="authIntro" aria-hidden="true">
+        <div class="auth-intro-core">
+            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-intro-mark">
+            <div class="auth-intro-line mono">HOMEOCOMPARE PREMIUM CASE PAPER SUITE</div>
+            <h1 class="serif">Build Your Clinical Command Center.</h1>
+        </div>
+    </div>
+
     <div class="auth-container">
-        <!-- Header -->
         <div class="auth-header">
-            <h1><i class="fas fa-heartbeat"></i> HomeoCompare</h1>
-            <p>Digital Homeopathic Case Paper System</p>
+            <div class="auth-brand">
+                <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-brand-mark">
+                <span>HomeoCompare</span>
+            </div>
+            <div class="auth-header-copy">
+                <h1 class="serif">Activate Premium Access</h1>
+                <p>Register your account to enter a curated case-paper platform built for high-trust clinical operations.</p>
+            </div>
+            <ul class="auth-feature-list">
+                <li><i class="fas fa-user-shield"></i> Physician-authenticated private workspace</li>
+                <li><i class="fas fa-layer-group"></i> Intelligent timeline for each patient journey</li>
+                <li><i class="fas fa-chart-line"></i> Production-grade reliability for daily practice</li>
+            </ul>
         </div>
 
-        <!-- Body -->
         <div class="auth-body">
-            <!-- Alert Messages -->
-            <div class="alert alert-error" id="errorAlert"></div>
-            <div class="alert alert-success" id="successAlert"></div>
+            <div class="auth-panel-top">
+                <div class="auth-kicker mono"><i class="fas fa-crown"></i> Premium Onboarding</div>
+                <h2 class="serif">Create Your Account</h2>
+                <p>Use your professional email to start. We will send a secure verification step before access is granted.</p>
+            </div>
 
-            <!-- Signup Form -->
+            <!-- <div class="alert alert-error" id="errorAlert"></div>
+            <div class="alert alert-success" id="successAlert"></div> -->
+
             <form id="signupForm" onsubmit="handleSignupSubmit(event)">
                 {% csrf_token %}
                 <div class="form-group">
                     <label class="form-label">Email Address</label>
-                    <input 
-                        type="email" 
-                        class="form-input" 
-                        id="emailInput" 
-                        placeholder="Enter your email"
+                    <input
+                        type="email"
+                        class="form-input"
+                        id="emailInput"
+                        placeholder="doctor@clinic.com"
                         required
                         autocomplete="email"
                     >
                 </div>
 
                 <button type="submit" class="btn-primary" id="signupBtn">
-                    <span>Create Account</span>
+                    <span>Create Premium Account</span>
                 </button>
             </form>
 
-            <!-- Login Link -->
             <div class="login-link">
-                Already have an account? <a href="{% url 'login' %}">Login here</a>
+                Already registered? <a href="{% url 'login' %}">Sign in to your workspace</a>
             </div>
 
             <div class="divider"><span>OR</span></div>
 
-            <!-- OAuth Options -->
             <div class="oauth-buttons">
                 <a href="{% url 'google_login' %}" class="btn-oauth btn-google">
                     <i class="fab fa-google"></i> Sign up with Google
                 </a>
             </div>
 
-            <!-- Footer -->
             <div class="auth-footer">
-                <p>By signing up, you agree to our <a href="/privacy/">Privacy Policy</a></p>
+                <p>By signing up, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
             </div>
         </div>
     </div>
 
     <script>
+        function runAuthIntro() {
+            const intro = document.getElementById('authIntro');
+            if (!intro) return;
+
+            window.setTimeout(() => {
+                intro.classList.add('is-hidden');
+                document.body.classList.remove('auth-preload');
+            }, 1400);
+        }
+
         function showAlert(message, type = 'error') {
             const alertEl = document.getElementById(`${type}Alert`);
             alertEl.textContent = message;
             alertEl.style.display = 'block';
-            
+
             if (type === 'success') {
                 setTimeout(() => {
                     alertEl.style.display = 'none';
@@ -333,7 +111,7 @@
             event.preventDefault();
             const email = document.getElementById('emailInput').value.trim();
             const btn = document.getElementById('signupBtn');
-            
+
             if (!email) {
                 showAlert('Please enter your email', 'error');
                 return;
@@ -367,7 +145,7 @@
             })
             .finally(() => {
                 btn.disabled = false;
-                btn.innerHTML = '<span>Create Account</span>';
+                btn.innerHTML = '<span>Create Premium Account</span>';
             });
         }
 
@@ -384,6 +162,12 @@
                 }
             }
             return cookieValue;
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', runAuthIntro);
+        } else {
+            runAuthIntro();
         }
     </script>
 </body>

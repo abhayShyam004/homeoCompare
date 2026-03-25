@@ -1,829 +1,139 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeoCase Dashboard</title>
-    <link rel="stylesheet" href="{% static 'css/case_paper.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="dashboard-wrapper">
-        <!-- Sidebar Rail -->
-        <aside class="sidebar-rail">
-            <div class="sidebar-logo">
-                <i class="fas fa-file-medical"></i>
+{% extends 'case_paper/base.html' %}
+
+{% block main_content %}
+    <div class="stats-grid">
+        <div class="stat-card compact-stat">
+            <div class="stat-header">
+                <span class="stat-label mono">Total Archives</span>
+                <i class="fas fa-file-text"></i>
             </div>
-            <nav class="sidebar-nav">
-                <div class="nav-icon active">
-                    <i class="fas fa-th-large" title="Dashboard"></i>
-                </div>
-                <div class="nav-icon">
-                    <i class="fas fa-file-alt" title="Cases"></i>
-                </div>
-                <div class="nav-icon">
-                    <i class="fas fa-users" title="Patients"></i>
-                </div>
-                <div class="nav-icon">
-                    <i class="fas fa-calendar" title="Calendar"></i>
-                </div>
-            </nav>
-            <nav class="sidebar-nav sidebar-bottom">
-                <div class="nav-icon">
-                    <i class="fas fa-cog" title="Settings"></i>
-                </div>
-                <a href="{% url 'case_paper_logout' %}" class="nav-icon" title="Logout">
-                    <i class="fas fa-sign-out-alt"></i>
-                </a>
-            </nav>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="dashboard-main">
-            <!-- Header Bar -->
-            <header class="dashboard-header">
-                <div class="header-left">
-                    <div class="header-logo">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="header-title">
-                        <h1 class="serif">HomeoCase Dashboard</h1>
-                        <span class="mono">Medical_Records_Management_System</span>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <div class="header-status hidden-mobile">
-                        <div class="status-item">
-                            <span class="status-label mono">Last Sync</span>
-                            <span class="status-value mono">04:26:29 UTC</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-label mono">Database</span>
-                            <span class="status-value mono accent">CONNECTED</span>
-                        </div>
-                    </div>
-                    <div class="header-user">
-                        <div class="user-info">
-                            <span class="user-name mono">{{ user.physician_name|upper }}</span>
-                            <span class="user-role mono">Chief Practitioner</span>
-                        </div>
-                        <div class="user-avatar serif">
-                            {{ user.physician_name|first|upper }}{{ user.username|first|upper }}
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Dashboard Content -->
-            <div class="dashboard-content">
-                <!-- Stats Section -->
-                <div class="stats-grid">
-                    <!-- Total Archives Card -->
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <span class="stat-label mono">Total Archives</span>
-                            <i class="fas fa-file-text"></i>
-                        </div>
-                        <div class="stat-body">
-                            <div class="stat-value serif">{{ total_count|default:"0" }}</div>
-                            <div class="stat-subtext mono">Cumulative_Records</div>
-                            <div class="stat-trend mono">+2.4%</div>
-                        </div>
-                    </div>
-
-                    <!-- Active Drafts Card -->
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <span class="stat-label mono">Active Drafts</span>
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="stat-body">
-                            <div class="stat-value serif">{{ draft_count|default:"0" }}</div>
-                            <div class="stat-subtext mono">Pending_Finalization</div>
-                            <div class="stat-trend mono">STABLE</div>
-                        </div>
-                    </div>
-
-                    <!-- Finalized Card -->
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <span class="stat-label mono">Finalized</span>
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="stat-body">
-                            <div class="stat-value serif">{{ complete_count|default:"0" }}</div>
-                            <div class="stat-subtext mono">Verified_Reports</div>
-                            <div class="stat-trend mono">+12</div>
-                        </div>
-                    </div>
-
-                    <!-- Primary Action Card -->
-                    <div class="stat-card primary-action">
-                        <div class="stat-header">
-                            <span class="stat-label mono">Primary Action</span>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="stat-body">
-                            <h2 class="serif italic">Create New<br>Case Paper</h2>
-                            <p class="mono small">Initialize_Clinical_Protocol</p>
-                            <a href="{% url 'case_paper_new' %}" class="action-link">Start New →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Search & Filter Section -->
-                <div class="search-section">
-                    <div class="search-wrapper">
-                        <i class="fas fa-search"></i>
-                        <form method="get" style="display: contents;">
-                            <input 
-                                type="text" 
-                                name="search" 
-                                class="search-input mono" 
-                                placeholder="SEARCH_BY_PATIENT_NAME_OR_REF_ID..."
-                                value="{{ search_query }}"
-                            >
-                        </form>
-                    </div>
-                    <button class="filter-btn mono">
-                        <i class="fas fa-sliders-h"></i> Advanced_Filters
-                    </button>
-                </div>
-
-                <!-- Cases Table Header -->
-                <div class="table-header">
-                    <div class="table-col-id">Ref_ID</div>
-                    <div class="table-col-patient">Patient_Identity</div>
-                    <div class="table-col-date">Archive_Date</div>
-                    <div class="table-col-practitioner">Practitioner</div>
-                    <div class="table-col-status">Status_Level</div>
-                    <div class="table-col-actions"></div>
-                </div>
-
-                <!-- Cases Table Body -->
-                <div class="table-body">
-                    {% for case in cases %}
-                    <div class="table-row">
-                        <div class="table-col-id mono">{{ case.case_id }}</div>
-                        <div class="table-col-patient">
-                            <div class="serif">{{ case.patient_name }}</div>
-                            <div class="mono small-text">Patient_Record_Verified</div>
-                        </div>
-                        <div class="table-col-date mono">{{ case.created_at|date:"Y.m.d" }}</div>
-                        <div class="table-col-practitioner mono">Dr. {{ user.physician_name }}</div>
-                        <div class="table-col-status">
-                            <span class="status-badge {% if case.status == 'complete' %}final{% else %}draft{% endif %}">
-                                {{ case.status|upper }}
-                            </span>
-                        </div>
-                        <div class="table-col-actions">
-                            <a href="{% url 'case_paper_view' case.case_id %}" class="action-btn" title="View">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                    {% empty %}
-                    <div class="table-row empty">
-                        <div style="text-align: center; padding: 40px; color: var(--text-muted); grid-column: 1/-1;">
-                            <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; opacity: 0.3;"></i>
-                            <p>No case papers found. Create one to get started.</p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-
-                <!-- Activity & Alerts Section -->
-                <div class="activity-section">
-                    <div class="activity-box">
-                        <h3 class="serif italic">Recent System Activity</h3>
-                        <div class="activity-feed mono">
-                            <div class="activity-item">
-                                <i class="fas fa-circle-check"></i>
-                                <span>Case HC-002 finalized by Dr. Abhay</span>
-                                <span class="time">2h ago</span>
-                            </div>
-                            <div class="activity-item">
-                                <i class="fas fa-database"></i>
-                                <span>System backup completed successfully</span>
-                                <span class="time">12h ago</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="alerts-box">
-                        <h3 class="serif italic" style="color: var(--status-danger);">Clinical Alerts</h3>
-                        <div class="alert-item">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <div class="alert-content">
-                                <div class="alert-title mono">PENDING_FINALIZATION</div>
-                                <div class="mono small-text">4 Case Papers overdue (> 48h)</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="stat-body">
+                <div class="stat-value serif">{{ total_count|default:"0" }}</div>
+                <div class="stat-subtext mono">All case papers</div>
             </div>
-        </main>
+        </div>
+
+        <div class="stat-card compact-stat">
+            <div class="stat-header">
+                <span class="stat-label mono">Active Drafts</span>
+                <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-body">
+                <div class="stat-value serif">{{ draft_count|default:"0" }}</div>
+                <div class="stat-subtext mono">Draft case papers</div>
+            </div>
+        </div>
+
+        <div class="stat-card compact-stat">
+            <div class="stat-header">
+                <span class="stat-label mono">Finalized</span>
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-body">
+                <div class="stat-value serif">{{ complete_count|default:"0" }}</div>
+                <div class="stat-subtext mono">Completed case papers</div>
+            </div>
+        </div>
+
+        <div class="stat-card primary-action dashboard-primary-card">
+            <div class="stat-header">
+                <span class="stat-label mono">Primary Action</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="stat-body">
+                <h2 class="serif italic">Create New<br>Case Paper</h2>
+                <p class="mono small">Start a fresh patient record</p>
+                <a href="{% url 'case_paper_new' %}" class="action-link">Start New →</a>
+            </div>
+        </div>
     </div>
 
-    <style>
-        :root {
-            --color-paper:    #F5F5F4;
-            --color-ink:      #0A0A0A;
-            --color-accent:   #2D5A27;
-            --color-muted:    #8E8E8E;
-
-            --text-primary:   #0A0A0A;
-            --text-secondary: #5A5A5A;
-            --text-muted:     #8E8E8E;
-            --text-white:     #F5F5F4;
-
-            --border-color:   #E0E0DE;
-            --status-draft:   #F59E0B;
-            --status-danger:  #DC2626;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--color-paper);
-            color: var(--text-primary);
-        }
-
-        .serif { font-family: 'Cormorant Garamond', serif; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-
-        .dashboard-wrapper {
-            display: flex;
-            height: 100vh;
-            gap: 0;
-        }
-
-        /* SIDEBAR */
-        .sidebar-rail {
-            width: 56px;
-            background: var(--color-paper);
-            border-right: 0.5px solid var(--border-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0;
-        }
-
-        .sidebar-logo {
-            width: 56px;
-            height: 56px;
-            border-bottom: 0.5px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--color-accent);
-            color: var(--text-white);
-            font-size: 22px;
-        }
-
-        .sidebar-nav {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            padding: 0;
-        }
-
-        .sidebar-bottom {
-            margin-top: auto;
-            border-top: 0.5px solid var(--border-color);
-        }
-
-        .nav-icon {
-            width: 56px;
-            height: 56px;
-            border-bottom: 0.5px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 18px;
-            transition: all 0.2s;
-            color: var(--text-muted);
-            text-decoration: none;
-        }
-
-        .nav-icon:hover, .nav-icon.active {
-            background: var(--color-accent);
-            color: var(--text-white);
-        }
-
-        /* HEADER */
-        .dashboard-header {
-            height: 56px;
-            border-bottom: 0.5px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 24px;
-            background: var(--color-paper);
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .header-logo {
-            width: 32px;
-            height: 32px;
-            background: var(--color-ink);
-            color: var(--color-paper);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
-
-        .header-title h1 {
-            font-size: 20px;
-            font-weight: 500;
-            letter-spacing: -0.01em;
-            line-height: 1;
-        }
-
-        .header-title .mono {
-            display: block;
-            font-size: 8px;
-            opacity: 0.4;
-            letter-spacing: 0.2em;
-            margin-top: 4px;
-        }
-
-        .header-status {
-            display: flex;
-            gap: 24px;
-            border-right: 0.5px solid var(--border-color);
-            padding-right: 24px;
-            margin-right: 24px;
-        }
-
-        .status-item {
-            display: flex;
-            flex-direction: column;
-            text-align: right;
-        }
-
-        .status-label {
-            font-size: 9px;
-            opacity: 0.4;
-            letter-spacing: 0.1em;
-        }
-
-        .status-value {
-            font-size: 10px;
-            font-weight: 600;
-        }
-
-        .status-value.accent {
-            color: var(--color-accent);
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .header-user {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .user-info {
-            display: flex;
-            flex-direction: column;
-            text-align: right;
-        }
-
-        .user-name {
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-        }
-
-        .user-role {
-            font-size: 8px;
-            opacity: 0.4;
-            letter-spacing: 0.08em;
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            border: 0.5px solid var(--border-color);
-            background: var(--color-ink);
-            color: var(--color-paper);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .hidden-mobile {
-            display: none;
-        }
-
-        @media (min-width: 1024px) {
-            .hidden-mobile { display: flex; }
-        }
-
-        /* MAIN CONTENT */
-        .dashboard-main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .dashboard-content {
-            flex: 1;
-            overflow-y: auto;
-            padding: 24px;
-            background: #F0F0EF;
-        }
-
-        /* STATS GRID */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .stat-card {
-            background: var(--color-paper);
-            border: 0.5px solid var(--border-color);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 2px;
-            width: 0;
-            background: var(--color-accent);
-            transition: width 0.3s;
-        }
-
-        .stat-card:hover {
-            box-shadow: 0 4px 8px rgba(10, 10, 10, 0.12);
-            background: #FAFAF9;
-        }
-
-        .stat-card:hover::before {
-            width: 100%;
-        }
-
-        .stat-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            opacity: 0.5;
-        }
-
-        .stat-header i {
-            font-size: 14px;
-        }
-
-        .stat-body {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .stat-value {
-            font-size: 32px;
-            font-weight: 600;
-            line-height: 1;
-        }
-
-        .stat-subtext {
-            font-size: 9px;
-            letter-spacing: 0.08em;
-            opacity: 0.5;
-        }
-
-        .stat-trend {
-            font-size: 9px;
-            color: var(--color-accent);
-            font-weight: 600;
-        }
-
-        .primary-action {
-            background: var(--color-accent);
-            color: var(--text-white);
-            border-color: var(--color-accent);
-            box-shadow: 4px 4px 0 rgba(10, 10, 10, 0.3);
-        }
-
-        .primary-action:hover {
-            box-shadow: 2px 2px 0 rgba(10, 10, 10, 0.3);
-            transform: translate(2px, 2px);
-        }
-
-        .primary-action .stat-header,
-        .primary-action .stat-subtext {
-            opacity: 0.8;
-            color: var(--text-white);
-        }
-
-        .primary-action h2 {
-            font-size: 20px;
-            line-height: 1.2;
-            margin: 8px 0;
-        }
-
-        .action-link {
-            font-size: 9px;
-            color: var(--text-white);
-            text-decoration: none;
-            margin-top: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-
-        .action-link:hover {
-            opacity: 0.8;
-        }
-
-        /* SEARCH */
-        .search-section {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .search-wrapper {
-            flex: 1;
-            position: relative;
-        }
-
-        .search-wrapper i {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.3;
-            font-size: 14px;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 12px 12px 12px 38px;
-            border: 0.5px solid var(--border-color);
-            background: var(--color-paper);
-            font-size: 13px;
-            font-family: 'JetBrains Mono', monospace;
-            transition: all 0.2s;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: var(--color-accent);
-            box-shadow: 0 0 0 2px rgba(45, 90, 39, 0.1);
-        }
-
-        .filter-btn {
-            padding: 11px 16px;
-            border: 0.5px solid var(--border-color);
-            background: var(--color-paper);
-            cursor: pointer;
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .filter-btn:hover {
-            border-color: var(--color-accent);
-            background: #FAFAF9;
-        }
-
-        /* TABLE */
-        .table-header, .table-row {
-            display: grid;
-            grid-template-columns: 100px 1.5fr 1fr 1fr 140px 70px;
-            gap: 0;
-            border: 0.5px solid var(--border-color);
-            background: var(--color-paper);
-        }
-
-        .table-header {
-            background: var(--color-ink);
-            color: var(--text-white);
-            font-weight: 600;
-            font-size: 10px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .table-col-id, .table-col-patient, .table-col-date, .table-col-practitioner, .table-col-status, .table-col-actions {
-            padding: 16px 12px;
-            border-right: 0.5px solid var(--border-color);
-            display: flex;
-            align-items: center;
-        }
-
-        .table-header .table-col-id, .table-header .table-col-patient, .table-header .table-col-date, .table-header .table-col-practitioner, .table-header .table-col-status, .table-header .table-col-actions {
-            border-color: var(--color-ink);
-        }
-
-        .table-row {
-            border-top: none;
-            border-bottom: 0.5px solid var(--border-color);
-            transition: all 0.2s;
-            position: relative;
-        }
-
-        .table-row::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 3px;
-            background: transparent;
-            transition: background 0.2s;
-        }
-
-        .table-row:hover {
-            background: #FAFAF9;
-        }
-
-        .table-row:hover::before {
-            background: var(--color-accent);
-        }
-
-        .table-row .mono {
-            font-size: 10px;
-            opacity: 0.7;
-        }
-
-        .table-row .serif {
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: -0.01em;
-        }
-
-        .small-text {
-            font-size: 8px !important;
-            opacity: 0.4 !important;
-        }
-
-        .status-badge {
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 4px 8px;
-            border: 0.5px solid;
-            display: inline-block;
-        }
-
-        .status-badge.final {
-            background: var(--color-accent);
-            color: var(--text-white);
-            border-color: var(--color-accent);
-        }
-
-        .status-badge.draft {
-            background: transparent;
-            color: var(--status-draft);
-            border-color: var(--status-draft);
-        }
-
-        .action-btn {
-            width: 28px;
-            height: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 0.5px solid var(--border-color);
-            background: transparent;
-            cursor: pointer;
-            color: var(--text-muted);
-            transition: all 0.2s;
-            text-decoration: none;
-        }
-
-        .action-btn:hover {
-            background: var(--color-accent);
-            color: var(--text-white);
-            border-color: var(--color-accent);
-        }
-
-        /* ACTIVITY */
-        .activity-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .activity-box, .alerts-box {
-            background: var(--color-paper);
-            border: 0.5px solid var(--border-color);
-            padding: 20px;
-        }
-
-        .activity-box h3, .alerts-box h3 {
-            font-size: 16px;
-            margin-bottom: 16px;
-            font-style: italic;
-        }
-
-        .activity-feed {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .activity-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 10px;
-            padding: 8px 0;
-            border-bottom: 0.5px solid var(--border-color);
-        }
-
-        .activity-item i {
-            font-size: 12px;
-            color: var(--color-accent);
-        }
-
-        .activity-item .time {
-            margin-left: auto;
-            opacity: 0.5;
-        }
-
-        .alert-item {
-            display: flex;
-            gap: 12px;
-            padding: 12px;
-            background: rgba(220, 38, 38, 0.05);
-            border: 0.5px solid rgba(220, 38, 38, 0.1);
-        }
-
-        .alert-item i {
-            color: var(--status-danger);
-            margin-top: 2px;
-        }
-
-        .alert-content {
-            flex: 1;
-        }
-
-        .alert-title {
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        @media (max-width: 1024px) {
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .activity-section { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 640px) {
-            .sidebar-rail { display: none; }
-            .stats-grid { grid-template-columns: 1fr; }
-            .search-section { flex-direction: column; }
-            .table-header, .table-row {
-                grid-template-columns: 60px 1fr 60px;
-            }
-            .table-col-date, .table-col-practitioner {
-                display: none;
-            }
-        }
-    </style>
-</body>
-</html>
+    <div class="search-section">
+        <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <form method="get" style="display: contents;">
+                <input
+                    type="text"
+                    name="search"
+                    class="search-input mono"
+                    placeholder="SEARCH_BY_PATIENT_NAME_OR_REF_ID..."
+                    value="{{ search_query }}"
+                >
+            </form>
+        </div>
+        <button class="filter-btn mono" type="button" id="advancedFiltersToggle" aria-expanded="false" aria-controls="advancedFiltersPanel">
+            <i class="fas fa-sliders-h"></i> Advanced_Filters
+        </button>
+    </div>
+
+    <div class="advanced-filters-panel{% if status_filter %} is-open{% endif %}" id="advancedFiltersPanel">
+        <form method="get" class="advanced-filters-form">
+            <div class="advanced-filter-group">
+                <label class="mono" for="dashboardSearchFilter">Search</label>
+                <input
+                    id="dashboardSearchFilter"
+                    type="text"
+                    name="search"
+                    class="search-input mono"
+                    placeholder="Patient name or reference ID"
+                    value="{{ search_query }}"
+                >
+            </div>
+            <div class="advanced-filter-group">
+                <label class="mono" for="dashboardStatusFilter">Status</label>
+                <select id="dashboardStatusFilter" name="status" class="advanced-filter-select mono">
+                    <option value="">All statuses</option>
+                    <option value="draft" {% if status_filter == 'draft' %}selected{% endif %}>Draft</option>
+                    <option value="complete" {% if status_filter == 'complete' %}selected{% endif %}>Complete</option>
+                </select>
+            </div>
+            <div class="advanced-filter-group advanced-filter-actions">
+                <button type="submit" class="filter-btn filter-btn-primary mono">Apply Filters</button>
+                <a href="{% url 'case_paper_dashboard' %}" class="filter-btn filter-btn-secondary mono">Reset</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="table-header">
+        <div class="table-col-id">Ref_ID</div>
+        <div class="table-col-patient">Patient_Identity</div>
+        <div class="table-col-date">Archive_Date</div>
+        <div class="table-col-practitioner">Practitioner</div>
+        <div class="table-col-status">Status_Level</div>
+        <div class="table-col-actions"></div>
+    </div>
+
+    <div class="table-body">
+        {% for case in cases %}
+        <div class="table-row">
+            <div class="table-col-id mono">{{ case.case_id }}</div>
+            <div class="table-col-patient">
+                <div class="serif">{{ case.preliminary.patient_name|default:"Unknown Patient" }}</div>
+                <div class="mono small-text"></div>
+            </div>
+            <div class="table-col-date mono">{{ case.created_at|date:"Y.m.d" }}</div>
+            <div class="table-col-practitioner mono">Dr. {{ user.physician_name }}</div>
+            <div class="table-col-status">
+                <span class="status-badge {% if case.status == 'complete' %}final{% else %}draft{% endif %}">
+                    {{ case.status|upper }}
+                </span>
+            </div>
+            <div class="table-col-actions">
+                <a href="{% url 'case_paper_view' case.case_id %}" class="action-btn" title="View">
+                    <i class="fas fa-eye"></i>
+                </a>
+                <a href="{% url 'case_paper_view' case.case_id %}?print=1" class="action-btn action-btn-print" title="Print" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-print"></i>
+                </a>
+            </div>
+        </div>
+        {% empty %}
+        <div class="table-row empty">
+            <div style="text-align: center; padding: 40px; color: var(--text-muted); grid-column: 1/-1;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; opacity: 0.3;"></i>
+                <p>No case papers found. Create one to get started.</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

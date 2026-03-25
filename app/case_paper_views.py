@@ -172,6 +172,7 @@ def case_paper_dashboard(request):
         'total_count': CasePaper.objects.filter(user=user).count(),
         'draft_count': CasePaper.objects.filter(user=user, status='draft').count(),
         'complete_count': CasePaper.objects.filter(user=user, status='complete').count(),
+        'page_title': 'Dashboard',
         'last_sync': get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST'),
         'user': user,
     }
@@ -193,7 +194,11 @@ def case_paper_cases(request):
     context = {
         'user': user,
         'cases': cases,
-        'page_title': 'Case Papers',
+        'page_title': 'Cases',
+        'search_query': search_query,
+        'total_count': CasePaper.objects.filter(user=user).count(),
+        'draft_count': CasePaper.objects.filter(user=user, status='draft').count(),
+        'complete_count': CasePaper.objects.filter(user=user, status='complete').count(),
         'last_sync': get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST'),
     }
     return render(request, 'case_paper/cases.html', context)
@@ -228,6 +233,10 @@ def case_paper_patients(request):
         'user': user,
         'patients': patients,
         'page_title': 'Patients',
+        'search_query': search_query,
+        'total_patients': len(patients),
+        'total_cases': cases.count(),
+        'draft_count': cases.filter(status='draft').count(),
         'last_sync': get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST'),
     }
     return render(request, 'case_paper/patients.html', context)
@@ -286,6 +295,7 @@ def case_paper_new(request):
         'mode': 'new',
         'case': None,
         'user': user,
+        'page_title': 'New Case Paper',
     }
     return render(request, 'case_paper/form.html', context)
 
@@ -337,6 +347,7 @@ def case_paper_form(request, case_id=None):
         'case': case,
         'case_id': case_id,
         'user': user,
+        'page_title': 'Edit Case Paper' if mode == 'edit' else 'New Case Paper',
     }
     
     return render(request, 'case_paper/form.html', context)
@@ -356,6 +367,7 @@ def case_paper_view(request, case_id):
         'case': case,
         'mode': 'view',
         'user': user,
+        'page_title': 'View Case Paper',
     }
     
     return render(request, 'case_paper/view.html', context)

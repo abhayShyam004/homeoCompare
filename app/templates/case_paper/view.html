@@ -11,7 +11,8 @@
 </head>
 <body data-theme="light" class="cp-form-mode">
     {% include 'navbar.html' with show_casepaper_topnav=True %}
-    
+
+    <div class="cp-sidebar-overlay" id="cpSectionSidebarOverlay"></div>
     <div class="cp-workspace">
     <div class="cp-form-wrapper">
         <!-- Sidebar -->
@@ -95,6 +96,9 @@
         <div class="cp-main">
             <!-- Breadcrumb & Meta -->
             <div class="cp-form-header">
+                <button type="button" class="cp-sidebar-toggle" id="cpSectionSidebarToggle" aria-label="Open section navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="cp-breadcrumb">
                     <a href="{% url 'case_paper_dashboard' %}">Case Papers</a>
                     <span class="cp-breadcrumb-sep">/</span>
@@ -517,6 +521,32 @@
     </div>
 
     <script>
+        function setupMobileSectionSidebar() {
+            const sidebar = document.querySelector('.cp-sidebar');
+            const toggle = document.getElementById('cpSectionSidebarToggle');
+            const overlay = document.getElementById('cpSectionSidebarOverlay');
+            if (!sidebar || !toggle || !overlay) return;
+
+            const closeSidebar = () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+            };
+
+            toggle.addEventListener('click', function() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            });
+
+            overlay.addEventListener('click', closeSidebar);
+            sidebar.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 1024) {
+                        closeSidebar();
+                    }
+                });
+            });
+        }
+
         // Set print date
         document.getElementById('printDate').textContent = new Date().toLocaleDateString('en-US', {
             year: 'numeric',
@@ -566,11 +596,19 @@
 
         // Run on page load
         window.addEventListener('load', function() {
+            setupMobileSectionSidebar();
             calculateCompletion();
 
             // Auto-trigger print if coming from dashboard print button
             if (sessionStorage.getItem('autoPrint') === 'true') {
                 sessionStorage.removeItem('autoPrint');
+                setTimeout(function() {
+                    window.print();
+                }, 300);
+            }
+
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('print') === '1') {
                 setTimeout(function() {
                     window.print();
                 }, 300);

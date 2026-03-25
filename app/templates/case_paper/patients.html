@@ -1,46 +1,124 @@
 {% extends 'case_paper/base.html' %}
 
 {% block main_content %}
-    <div style="max-width: 980px; margin:auto;">
-        <h2 class="page-title serif">Patients</h2>
-        <form method="get" style="margin-bottom: 18px; display: flex; gap: 12px; align-items: center;">
-            <input type="text" name="search" class="search-input mono" placeholder="Search by patient name..." value="{{ request.GET.search }}" style="flex:1; padding: 8px 12px; border-radius: 6px; border: 1px solid #ddd;">
-            <button type="submit" class="action-link" style="padding: 8px 18px;">Search</button>
-        </form>
-        <div class="stat-card">
-            <div class="stat-body">
-                <table style="width:100%; border-collapse:collapse;">
-                    <thead>
-                        <tr style="background:#f5f5f4;">
-                            <th class="mono" style="padding:8px; text-align:left;">Name</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Age</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Sex</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Contact</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Total Cases</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for patient in patients %}
-                        <tr style="border-bottom:1px solid #eee;">
-                            <td class="serif" style="padding:8px;">{{ patient.name }}</td>
-                            <td class="mono" style="padding:8px;">{{ patient.age|default:'-' }}</td>
-                            <td class="mono" style="padding:8px;">{{ patient.sex|default:'-' }}</td>
-                            <td class="mono" style="padding:8px;">{{ patient.contact|default:'-' }}</td>
-                            <td class="mono" style="padding:8px;">{{ patient.total_cases|default:'1' }}</td>
-                        </tr>
-                        {% empty %}
-                        <tr>
-                            <td colspan="5" style="text-align:center; color:var(--text-muted); padding:32px;">
-                                <i class="fas fa-users" style="font-size: 32px; margin-bottom: 10px; opacity: 0.3;"></i>
-                                <p>No patients found.</p>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+    <style>
+        .patients-shell { max-width: 1240px; margin: 0 auto; display: grid; gap: 24px; }
+        .patients-hero { display: flex; justify-content: space-between; gap: 20px; align-items: flex-end; }
+        .patients-subtitle { max-width: 720px; color: var(--text-secondary); font-size: 13px; }
+        .patients-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+        .patients-search { display: flex; gap: 12px; align-items: center; }
+        .patient-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+        .patient-card { background: linear-gradient(135deg, rgba(45, 90, 39, 0.08), rgba(255,255,255,0.96)); border: 0.5px solid var(--border-color); padding: 22px; box-shadow: 0 12px 30px rgba(10, 10, 10, 0.06); display: grid; gap: 18px; }
+        .patient-card-head { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; }
+        .patient-name { font-size: 28px; line-height: 1; }
+        .patient-subline { color: var(--text-secondary); font-size: 12px; margin-top: 8px; }
+        .patient-count { min-width: 72px; text-align: center; border: 0.5px solid var(--border-color); background: var(--color-paper); padding: 10px; }
+        .patient-count-value { font-size: 28px; line-height: 1; }
+        .patient-count-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 8px; }
+        .patient-meta-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+        .patient-meta { background: var(--color-paper); border: 0.5px solid rgba(45, 90, 39, 0.14); padding: 12px; display: grid; gap: 6px; }
+        .patient-meta-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+        .patient-meta-value { font-size: 15px; }
+        .patients-empty { padding: 44px 24px; text-align: center; color: var(--text-muted); background: var(--color-paper); border: 0.5px solid var(--border-color); }
+        @media (max-width: 1100px) {
+            .patients-grid, .patient-card-grid { grid-template-columns: 1fr; }
+            .patients-hero, .patients-search { flex-direction: column; align-items: stretch; }
+        }
+        @media (max-width: 640px) {
+            .patient-meta-grid { grid-template-columns: 1fr; }
+            .patient-card-head { flex-direction: column; }
+            .patient-count { width: 100%; }
+        }
+    </style>
+
+    <div class="patients-shell">
+        <div class="patients-hero">
+            <div>
+                <h2 class="page-title serif">Patients</h2>
+                <p class="patients-subtitle mono">A cleaner view of your patient registry, with fast access to demographics and how many case papers are linked to each person.</p>
+            </div>
+            <a href="{% url 'case_paper_new' %}" class="filter-btn filter-btn-primary mono">
+                <i class="fas fa-user-plus"></i> Add New Record
+            </a>
+        </div>
+
+        <div class="patients-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label mono">Patients</span>
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value serif">{{ total_patients }}</div>
+                    <div class="stat-subtext mono">Distinct people in your register</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label mono">Case Papers</span>
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value serif">{{ total_cases }}</div>
+                    <div class="stat-subtext mono">All linked records</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label mono">Draft Cases</span>
+                    <i class="fas fa-pen"></i>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value serif">{{ draft_count }}</div>
+                    <div class="stat-subtext mono">Patients needing follow-up work</div>
+                </div>
             </div>
         </div>
-        <p style="margin-top:16px;"><a href="{% url 'case_paper_dashboard' %}" class="action-link">Back to Dashboard</a></p>
+
+        <form method="get" class="patients-search">
+            <div class="search-wrapper" style="flex:1;">
+                <i class="fas fa-search"></i>
+                <input type="text" name="search" class="search-input mono" placeholder="Search by patient name..." value="{{ search_query }}">
+            </div>
+            <button type="submit" class="filter-btn filter-btn-primary mono">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </form>
+
+        <div class="patient-card-grid">
+            {% for patient in patients %}
+                <article class="patient-card">
+                    <div class="patient-card-head">
+                        <div>
+                            <h3 class="patient-name serif">{{ patient.name }}</h3>
+                            <div class="patient-subline mono">Registered in your case paper workspace</div>
+                        </div>
+                        <div class="patient-count">
+                            <div class="patient-count-value serif">{{ patient.total_cases|default:'1' }}</div>
+                            <div class="patient-count-label mono">Case papers</div>
+                        </div>
+                    </div>
+                    <div class="patient-meta-grid">
+                        <div class="patient-meta">
+                            <div class="patient-meta-label mono">Age</div>
+                            <div class="patient-meta-value serif">{{ patient.age|default:'-' }}</div>
+                        </div>
+                        <div class="patient-meta">
+                            <div class="patient-meta-label mono">Sex</div>
+                            <div class="patient-meta-value serif">{{ patient.sex|default:'-' }}</div>
+                        </div>
+                        <div class="patient-meta">
+                            <div class="patient-meta-label mono">Contact</div>
+                            <div class="patient-meta-value serif">{{ patient.contact|default:'-' }}</div>
+                        </div>
+                    </div>
+                </article>
+            {% empty %}
+                <div class="patients-empty">
+                    <i class="fas fa-users" style="font-size:32px; opacity:0.3; margin-bottom:10px;"></i>
+                    <p class="mono">No patients found.</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
-

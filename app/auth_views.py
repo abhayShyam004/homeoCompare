@@ -4,6 +4,7 @@ Handles: Email/Password, Google OAuth, Registration, Logout
 """
 import random
 import json
+import logging
 from datetime import datetime, timedelta
 import requests
 from urllib.parse import urlencode, quote
@@ -12,13 +13,15 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from django.contrib.auth.hashers import make_password, check_password
-from django.core.mail import send_mail
 from django.conf import settings
 from django.utils import timezone
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 from decouple import config
 
 from .models import CasePaperUser, GoogleOAuthToken, EmailVerificationCode
 
+logger = logging.getLogger(__name__)
 
 # ============= PASSWORD HELPERS =============
 
@@ -40,12 +43,12 @@ def generate_verification_code():
 
 
 def send_verification_email(email, code):
-    """Send verification code to user's email asynchronously"""
-    from app.email_utils import send_email_async
-    
+    """Send verification code to user's email and return real delivery status."""
+    from app.email_utils import send_email_with_retry
+
     try:
         subject = "HomeoCompare - Your Login Verification Code"
-        message = f"""
+        html_message = f"""
         <html>
             <body style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
                 <div style="background-color: white; padding: 30px; border-radius: 8px; max-width: 500px; margin: 0 auto;">
@@ -72,17 +75,23 @@ def send_verification_email(email, code):
             </body>
         </html>
         """
-        
-        # Send email asynchronously in background thread
-        # This prevents blocking the request and causing worker timeouts
-        return send_email_async(
-            subject,
-            message,
-            email,
-            html_message=message
+
+        plain_message = (
+            f"Your HomeoCompare verification code is: {code}\n\n"
+            "This code is valid for 10 minutes.\n\n"
+            "If you did not request this login, please ignore this email."
+        )
+
+        return send_email_with_retry(
+            subject=subject,
+            plain_message=plain_message,
+            recipient_email=email,
+            html_message=html_message,
+            max_retries=3,
+            retry_delay_seconds=1.5,
         )
     except Exception as e:
-        print(f"Error sending verification email: {e}")
+        logger.exception("Error preparing verification email for %s: %s", email, e)
         return False
 
 
@@ -103,8 +112,14 @@ def login(request):
             return JsonResponse({'status': 'error', 'message': 'Email is required'}, status=400)
         
         # Validate email format
-        if '@' not in email:
+        try:
+            validate_email(email)
+        except ValidationError:
             return JsonResponse({'status': 'error', 'message': 'Invalid email format'}, status=400)
+
+        from app.email_utils import is_email_service_configured
+        if not is_email_service_configured():
+            return JsonResponse({'status': 'error', 'message': 'Email service is temporarily unavailable. Please try again shortly.'}, status=503)
         
         # Find user by email
         user = CasePaperUser.objects.filter(email=email).first()
@@ -115,6 +130,16 @@ def login(request):
         # Generate verification code
         code = generate_verification_code()
         expiry_time = timezone.now() + timedelta(minutes=10)
+
+        # Simple anti-spam throttle
+        recent_code = EmailVerificationCode.objects.filter(
+            user=user,
+            email=email,
+            created_at__gte=timezone.now() - timedelta(seconds=60),
+            is_used=False
+        ).first()
+        if recent_code:
+            return JsonResponse({'status': 'error', 'message': 'Please wait 60 seconds before requesting another code.'}, status=429)
         
         # Delete old unused codes
         EmailVerificationCode.objects.filter(user=user, email=email, is_used=False).delete()
@@ -137,12 +162,13 @@ def login(request):
                 'need_verification': True
             })
         else:
+            verification.delete()
             return JsonResponse({'status': 'error', 'message': 'Failed to send verification code. Please try again.'}, status=500)
     
     except json.JSONDecodeError:
         return JsonResponse({'status': 'error', 'message': 'Invalid request format'}, status=400)
     except Exception as e:
-        print(f"Error in login: {e}")
+        logger.exception("Error in login flow: %s", e)
         return JsonResponse({'status': 'error', 'message': 'An error occurred. Please try again.'}, status=500)
 
 
@@ -161,8 +187,14 @@ def signup(request):
             return JsonResponse({'status': 'error', 'message': 'Email is required'}, status=400)
         
         # Validate email format
-        if '@' not in email:
+        try:
+            validate_email(email)
+        except ValidationError:
             return JsonResponse({'status': 'error', 'message': 'Invalid email format'}, status=400)
+
+        from app.email_utils import is_email_service_configured
+        if not is_email_service_configured():
+            return JsonResponse({'status': 'error', 'message': 'Email service is temporarily unavailable. Please try again shortly.'}, status=503)
         
         # Check if email already exists
         if CasePaperUser.objects.filter(email=email).exists():
@@ -180,8 +212,17 @@ def signup(request):
         # Generate and send verification code
         code = generate_verification_code()
         expiry_time = timezone.now() + timedelta(minutes=10)
+
+        recent_code = EmailVerificationCode.objects.filter(
+            user=user,
+            email=email,
+            created_at__gte=timezone.now() - timedelta(seconds=60),
+            is_used=False
+        ).first()
+        if recent_code:
+            return JsonResponse({'status': 'error', 'message': 'Please wait 60 seconds before requesting another code.'}, status=429)
         
-        EmailVerificationCode.objects.create(
+        verification = EmailVerificationCode.objects.create(
             user=user,
             email=email,
             code=code,
@@ -197,12 +238,14 @@ def signup(request):
                 'redirect_url': f'/auth/verify-code/?user_id={user.id}'
             })
         else:
+            verification.delete()
+            user.delete()
             return JsonResponse({'status': 'error', 'message': 'Failed to send verification code. Please try again.'}, status=500)
     
     except json.JSONDecodeError:
         return JsonResponse({'status': 'error', 'message': 'Invalid request format'}, status=400)
     except Exception as e:
-        print(f"Error in signup: {e}")
+        logger.exception("Error in signup flow: %s", e)
         return JsonResponse({'status': 'error', 'message': 'An error occurred. Please try again.'}, status=500)
 
 
@@ -277,7 +320,7 @@ def verify_code(request):
     except json.JSONDecodeError:
         return JsonResponse({'status': 'error', 'message': 'Invalid request format'}, status=400)
     except Exception as e:
-        print(f"Error in verify_code: {e}")
+        logger.exception("Error in verify_code flow: %s", e)
         return JsonResponse({'status': 'error', 'message': 'An error occurred. Please try again.'}, status=500)
 
 

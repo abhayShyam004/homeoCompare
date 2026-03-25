@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
 </head>
-<body data-theme="dark">
+<body data-theme="light" class="cp-form-mode">
     {% include 'navbar.html' %}
-    
+
+    <div class="cp-sidebar-overlay" id="cpSectionSidebarOverlay"></div>
     <div class="cp-form-wrapper">
         <!-- Sidebar -->
         <div class="cp-sidebar">
@@ -94,6 +95,9 @@
         <div class="cp-main">
             <!-- Breadcrumb & Meta -->
             <div class="cp-form-header">
+                <button type="button" class="cp-sidebar-toggle" id="cpSectionSidebarToggle" aria-label="Open section navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="cp-last-saved" id="lastSavedIndicator" style="display: none;">Last saved: <span id="lastSavedTime">Just now</span></div>
             </div>
 
@@ -555,7 +559,34 @@
             updateProgress();
             setupFormTracking();
             autoFillConsultationDate();
+            setupMobileSectionSidebar();
         });
+
+        function setupMobileSectionSidebar() {
+            const sidebar = document.querySelector('.cp-sidebar');
+            const toggle = document.getElementById('cpSectionSidebarToggle');
+            const overlay = document.getElementById('cpSectionSidebarOverlay');
+            if (!sidebar || !toggle || !overlay) return;
+
+            const closeSidebar = () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+            };
+
+            toggle.addEventListener('click', function() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            });
+
+            overlay.addEventListener('click', closeSidebar);
+            sidebar.querySelectorAll('a, button').forEach(element => {
+                element.addEventListener('click', function() {
+                    if (window.innerWidth <= 1024 && element.classList.contains('cp-nav-item')) {
+                        closeSidebar();
+                    }
+                });
+            });
+        }
 
         function autoFillConsultationDate() {
             const consultationDateInput = document.getElementById('consultationDate');

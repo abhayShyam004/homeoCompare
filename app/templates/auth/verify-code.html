@@ -1,268 +1,130 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify Email Code - HomeoCompare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% include 'auth/_auth_styles.html' %}
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            padding: 40px;
-            max-width: 450px;
-            width: 100%;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            color: #2c3e50;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .code-inputs {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .code-input {
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            text-align: center;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-weight: bold;
-            color: #667eea;
-            transition: all 0.3s;
-        }
-
-        .code-input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .code-input.filled {
-            background-color: #f0f0f0;
-            border-color: #667eea;
-        }
-
-        .timer {
-            text-align: center;
-            font-size: 12px;
-            color: #e74c3c;
-            margin-bottom: 20px;
-        }
-
-        .timer.warning {
-            color: #e67e22;
-            font-weight: bold;
-        }
-
-        .btn-group {
-            display: flex;
+        .verify-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
-            margin-top: 24px;
+            margin-top: 18px;
         }
-
-        .btn {
-            flex: 1;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
+        .btn-secondary {
+            border: 1px solid var(--auth-border-strong);
+            background: rgba(255, 255, 255, 0.92);
+            color: var(--auth-text);
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s;
+            padding: 14px 16px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
-
-        .btn-verify {
-            background-color: #667eea;
-            color: white;
+        .btn-secondary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+            border-color: var(--auth-accent);
         }
-
-        .btn-verify:hover:not(:disabled) {
-            background-color: #5568d3;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-verify:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .btn-back {
-            background-color: #e8eef7;
-            color: #667eea;
-        }
-
-        .btn-back:hover {
-            background-color: #d8dff0;
-        }
-
-        .message {
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        .verify-loading {
+            display: none;
+            text-align: center;
+            margin-top: 16px;
+            color: var(--auth-text-soft);
             font-size: 14px;
-            display: none;
         }
-
-        .message.error {
-            background-color: #fadbd8;
-            color: #c0392b;
-            border-left: 4px solid #e74c3c;
-        }
-
-        .message.success {
-            background-color: #d5f4e6;
-            color: #27ae60;
-            border-left: 4px solid #2ecc71;
-        }
-
-        .message.show {
+        .verify-loading.show {
             display: block;
         }
-
-        .resend-link {
-            text-align: center;
-            margin-top: 12px;
-            font-size: 12px;
+        .verify-loading .spinner {
+            margin: 0 auto 10px;
         }
-
-        .resend-link a {
-            color: #667eea;
-            text-decoration: none;
-            cursor: pointer;
+        .timer.warning {
+            color: #b91c1c;
+            font-weight: 700;
         }
-
-        .resend-link a:hover {
-            text-decoration: underline;
-        }
-
-        .resend-link.disabled a {
-            color: #999;
-            cursor: not-allowed;
-            text-decoration: none;
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 24px;
+        @media (max-width: 640px) {
+            .verify-actions {
+                grid-template-columns: 1fr;
             }
-
-            .code-inputs {
-                gap: 6px;
-            }
-
-            .code-input {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-            }
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-        }
-
-        .spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #667eea;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .loading.show {
-            display: block;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Verify Your Email</h1>
-            <p>Enter the 6-digit code sent to {{ email }}</p>
+<body class="auth-premium auth-preload">
+    <div class="auth-intro" id="authIntro" aria-hidden="true">
+        <div class="auth-intro-core">
+            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-intro-mark">
+            <div class="auth-intro-line mono">HOMEOCOMPARE PREMIUM CASE PAPER SUITE</div>
+            <h1 class="serif">Secure Access Verification.</h1>
+        </div>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-header">
+            <div class="auth-brand">
+                <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-brand-mark">
+                <span>HomeoCompare</span>
+            </div>
+            <div class="auth-header-copy">
+                <h1 class="serif">Identity Confirmation</h1>
+                <p>Complete email verification to unlock your premium clinical workspace and secure physician session.</p>
+            </div>
+            <ul class="auth-feature-list">
+                <li><i class="fas fa-envelope-open-text"></i> One-time passcode delivered to your email</li>
+                <li><i class="fas fa-key"></i> Time-bound secure authentication process</li>
+                <li><i class="fas fa-shield"></i> Protected entry into case-paper operations</li>
+            </ul>
         </div>
 
-        <div class="message" id="message"></div>
+        <div class="auth-body">
+            <div class="auth-panel-top">
+                <div class="auth-kicker mono"><i class="fas fa-fingerprint"></i> Verify Access</div>
+                <h2 class="serif">Enter Verification Code</h2>
+                <p>We sent a 6-digit security code to <strong>{{ email }}</strong>. Enter it below to continue.</p>
+            </div>
 
-        <form id="verificationForm">
-            {% csrf_token %}
-            <input type="hidden" id="user_id" value="{{ user_id }}">
+            <div class="message alert" id="message"></div>
 
-            <div class="form-group">
-                <div class="code-inputs">
-                    <input type="text" class="code-input" id="code1" maxlength="1" inputmode="numeric">
-                    <input type="text" class="code-input" id="code2" maxlength="1" inputmode="numeric">
-                    <input type="text" class="code-input" id="code3" maxlength="1" inputmode="numeric">
-                    <input type="text" class="code-input" id="code4" maxlength="1" inputmode="numeric">
-                    <input type="text" class="code-input" id="code5" maxlength="1" inputmode="numeric">
-                    <input type="text" class="code-input" id="code6" maxlength="1" inputmode="numeric">
+            <form id="verificationForm">
+                {% csrf_token %}
+                <input type="hidden" id="user_id" value="{{ user_id }}">
+
+                <div class="form-group">
+                    <div class="code-input-wrapper">
+                        <input type="text" class="code-input" id="code1" maxlength="1" inputmode="numeric">
+                        <input type="text" class="code-input" id="code2" maxlength="1" inputmode="numeric">
+                        <input type="text" class="code-input" id="code3" maxlength="1" inputmode="numeric">
+                        <input type="text" class="code-input" id="code4" maxlength="1" inputmode="numeric">
+                        <input type="text" class="code-input" id="code5" maxlength="1" inputmode="numeric">
+                        <input type="text" class="code-input" id="code6" maxlength="1" inputmode="numeric">
+                    </div>
+                    <div class="code-timer timer" id="timer">
+                        Code expires in: <span id="timerValue">10:00</span>
+                    </div>
                 </div>
 
-                <div class="timer" id="timer">
-                    Code expires in: <span id="timerValue">10:00</span>
+                <div class="verify-actions">
+                    <button type="button" class="btn-secondary" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button type="submit" class="btn-primary" id="verifyBtn">Verify and Continue</button>
                 </div>
-            </div>
 
-            <div class="btn-group">
-                <button type="button" class="btn btn-back" onclick="goBack()">← Back</button>
-                <button type="submit" class="btn btn-verify" id="verifyBtn">Verify & Continue</button>
-            </div>
+                <div class="verify-loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Verifying...</p>
+                </div>
 
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
-                <p style="margin-top: 10px; color: #666; font-size: 14px;">Verifying...</p>
-            </div>
-
-            <div class="resend-link" id="resendLink">
-                Didn't receive the code? <a href="{% url 'login' %}">Request a new code</a>
-            </div>
-        </form>
+                <div class="resend-link" id="resendLink">
+                    Didn't receive the code? <a href="{% url 'login' %}">Request a new code</a>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
@@ -273,7 +135,15 @@
         const userId = document.getElementById('user_id').value;
         let timerInterval;
 
-        // Auto-focus and move between inputs
+        function runAuthIntro() {
+            const intro = document.getElementById('authIntro');
+            if (!intro) return;
+            window.setTimeout(() => {
+                intro.classList.add('is-hidden');
+                document.body.classList.remove('auth-preload');
+            }, 1400);
+        }
+
         codeInputs.forEach((input, index) => {
             input.addEventListener('input', (e) => {
                 if (e.target.value.length === 1 && index < codeInputs.length - 1) {
@@ -295,15 +165,13 @@
             });
         });
 
-        // Timer
         function startTimer() {
-            let timeLeft = 600; // 10 minutes in seconds
+            let timeLeft = 600;
 
             const updateTimer = () => {
                 const minutes = Math.floor(timeLeft / 60);
                 const seconds = timeLeft % 60;
-                const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-                document.getElementById('timerValue').textContent = formattedTime;
+                document.getElementById('timerValue').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
 
                 const timerEl = document.getElementById('timer');
                 if (timeLeft < 60) {
@@ -326,7 +194,6 @@
 
         startTimer();
 
-        // Handle verification
         verificationForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
@@ -365,7 +232,6 @@
                     showMessage(data.message, 'error');
                     loadingEl.classList.remove('show');
                     document.getElementById('verifyBtn').disabled = false;
-                    // Clear the code inputs on error
                     codeInputs.forEach(input => input.value = '');
                     codeInputs[0].focus();
                 }
@@ -378,7 +244,7 @@
 
         function showMessage(text, type) {
             messageEl.textContent = text;
-            messageEl.className = `message ${type} show`;
+            messageEl.className = `message alert alert-${type === 'error' ? 'error' : 'success'} show`;
             setTimeout(() => {
                 if (type === 'error') {
                     messageEl.classList.remove('show');
@@ -390,11 +256,9 @@
             window.location.href = '{% url "signup" %}';
         }
 
-        // Auto-submit when all 6 digits are entered
         const observeFullCode = () => {
             const allFilled = Array.from(codeInputs).every(input => input.value !== '');
             if (allFilled) {
-                // Optional: auto-submit after a brief delay for UX
                 setTimeout(() => {
                     verificationForm.dispatchEvent(new Event('submit'));
                 }, 300);
@@ -404,6 +268,12 @@
         codeInputs.forEach(input => {
             input.addEventListener('input', observeFullCode);
         });
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', runAuthIntro);
+        } else {
+            runAuthIntro();
+        }
     </script>
 </body>
 </html>

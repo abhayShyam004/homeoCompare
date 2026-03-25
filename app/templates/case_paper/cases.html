@@ -1,55 +1,144 @@
 {% extends 'case_paper/base.html' %}
 
 {% block main_content %}
-    <div style="max-width: 980px; margin:auto;">
-        <h2 class="page-title serif">Case Papers</h2>
-        <form method="get" style="margin-bottom: 18px; display: flex; gap: 12px; align-items: center;">
-            <input type="text" name="search" class="search-input mono" placeholder="Search by patient name, ref ID, or status..." value="{{ request.GET.search }}" style="flex:1; padding: 8px 12px; border-radius: 6px; border: 1px solid #ddd;">
-            <button type="submit" class="action-link" style="padding: 8px 18px;">Search</button>
-        </form>
-        <div class="stat-card">
-            <div class="stat-body">
-                <table style="width:100%; border-collapse:collapse;">
-                    <thead>
-                        <tr style="background:#f5f5f4;">
-                            <th class="mono" style="padding:8px; text-align:left;">Ref ID</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Patient</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Age</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Sex</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Date</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Status</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for case in cases %}
-                        <tr style="border-bottom:1px solid #eee;">
-                            <td class="mono" style="padding:8px;">{{ case.case_id }}</td>
-                            <td class="serif" style="padding:8px;">{{ case.preliminary.patient_name|default:'Unknown Patient' }}</td>
-                            <td class="mono" style="padding:8px;">{{ case.preliminary.age|default:'-' }}</td>
-                            <td class="mono" style="padding:8px;">{{ case.preliminary.sex|default:'-' }}</td>
-                            <td class="mono" style="padding:8px;">{{ case.created_at|date:'Y-m-d' }}</td>
-                            <td style="padding:8px;">
-                                <span class="status-badge {% if case.status == 'complete' %}final{% else %}draft{% endif %}">{{ case.status|upper }}</span>
-                            </td>
-                            <td style="padding:8px;">
-                                <a href="{% url 'case_paper_view' case.case_id %}" class="action-btn" title="View"><i class="fas fa-eye"></i></a>
-                                <a href="{% url 'case_paper_view' case.case_id %}" class="action-btn action-btn-print" title="Print" target="_blank" rel="noopener noreferrer"><i class="fas fa-print"></i></a>
-                            </td>
-                        </tr>
-                        {% empty %}
-                        <tr>
-                            <td colspan="7" style="text-align:center; color:var(--text-muted); padding:32px;">
-                                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; opacity: 0.3;"></i>
-                                <p>No case papers found. Create one to get started.</p>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+    <style>
+        .records-shell { max-width: 1240px; margin: 0 auto; display: grid; gap: 24px; }
+        .records-hero { display: flex; justify-content: space-between; gap: 20px; align-items: flex-end; }
+        .records-subtitle { max-width: 720px; color: var(--text-secondary); font-size: 13px; }
+        .records-actions { display: flex; gap: 12px; align-items: center; }
+        .records-search { display: flex; gap: 12px; align-items: center; }
+        .records-search .search-wrapper { min-width: 0; }
+        .records-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+        .records-table { display: grid; gap: 0; border: 0.5px solid var(--border-color); background: var(--border-color); }
+        .records-row { display: grid; grid-template-columns: 110px 1.6fr .8fr .8fr .9fr 120px; gap: 0; background: var(--color-paper); position: relative; }
+        .records-row::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: transparent; transition: background 0.2s ease; }
+        .records-row:hover::before { background: var(--color-accent); }
+        .records-row:hover { background: var(--surface-hover); }
+        .records-row.header { background: var(--color-ink); color: var(--text-white); text-transform: uppercase; letter-spacing: 0.08em; font-size: 10px; font-weight: 700; }
+        .records-row.header::before { display: none; }
+        .records-cell { padding: 16px 14px; border-bottom: 0.5px solid var(--border-color); display: flex; align-items: center; min-width: 0; }
+        .records-row.header .records-cell { border-color: var(--color-ink); }
+        .records-row:last-child .records-cell { border-bottom: none; }
+        .records-patient { display: grid; gap: 4px; }
+        .records-patient .serif { font-size: 18px; }
+        .records-meta { color: var(--text-muted); font-size: 10px; }
+        .records-actions-cell { justify-content: center; gap: 8px; }
+        .records-empty { padding: 44px 24px; text-align: center; color: var(--text-muted); background: var(--color-paper); }
+        @media (max-width: 1100px) {
+            .records-grid { grid-template-columns: 1fr; }
+            .records-hero, .records-search { flex-direction: column; align-items: stretch; }
+        }
+        @media (max-width: 780px) {
+            .records-row.header { display: none; }
+            .records-table { gap: 12px; border: none; background: transparent; }
+            .records-row { grid-template-columns: 1fr auto; grid-template-areas: "patient patient" "date actions"; border: 0.5px solid var(--border-color); }
+            .records-cell { border-bottom: 0.5px solid var(--border-color); }
+            .records-cell.ref { display: none; }
+            .records-cell.patient { grid-area: patient; }
+            .records-cell.date { grid-area: date; }
+            .records-cell.age, .records-cell.sex { display: none; }
+            .records-cell.patient .records-patient { width: 100%; }
+            .records-cell.actions { grid-area: actions; justify-content: flex-start; }
+            .records-row:last-child .records-cell { border-bottom: 0.5px solid var(--border-color); }
+            .records-row .records-cell.actions, .records-row .records-cell.date { border-bottom: none; }
+        }
+    </style>
+
+    <div class="records-shell">
+        <div class="records-hero">
+            <div>
+                <h2 class="page-title serif">Case Papers</h2>
+                <p class="records-subtitle mono">Review your active archive, open any record instantly, and print a patient-ready case paper directly from this workspace.</p>
+            </div>
+            <div class="records-actions">
+                <a href="{% url 'case_paper_new' %}" class="filter-btn filter-btn-primary mono">
+                    <i class="fas fa-plus"></i> New Case Paper
+                </a>
             </div>
         </div>
-        <p style="margin-top:16px;"><a href="{% url 'case_paper_dashboard' %}" class="action-link">Back to Dashboard</a></p>
+
+        <div class="records-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label mono">Total Records</span>
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value serif">{{ total_count }}</div>
+                    <div class="stat-subtext mono">All case papers in your archive</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label mono">Completed</span>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value serif">{{ complete_count }}</div>
+                    <div class="stat-subtext mono">Ready for follow-up and print</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label mono">Drafts</span>
+                    <i class="fas fa-pen"></i>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value serif">{{ draft_count }}</div>
+                    <div class="stat-subtext mono">Records needing more work</div>
+                </div>
+            </div>
+        </div>
+
+        <form method="get" class="records-search">
+            <div class="search-wrapper" style="flex:1;">
+                <i class="fas fa-search"></i>
+                <input type="text" name="search" class="search-input mono" placeholder="Search by patient name, ref ID, or status..." value="{{ search_query }}">
+            </div>
+            <button type="submit" class="filter-btn filter-btn-primary mono">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </form>
+
+        <div class="records-table">
+            <div class="records-row header">
+                <div class="records-cell ref">Ref ID</div>
+                <div class="records-cell">Patient</div>
+                <div class="records-cell">Age</div>
+                <div class="records-cell">Sex</div>
+                <div class="records-cell">Updated</div>
+                <div class="records-cell">Actions</div>
+            </div>
+            {% for case in cases %}
+                <div class="records-row">
+                    <div class="records-cell ref mono">{{ case.case_id }}</div>
+                    <div class="records-cell patient">
+                        <div class="records-patient">
+                            <div class="serif">{{ case.preliminary.patient_name|default:'Unknown Patient' }}</div>
+                            <div class="records-meta mono">{{ case.case_id }} · Dr. {{ user.physician_name }}</div>
+                            <div>
+                                <span class="status-badge {% if case.status == 'complete' %}final{% else %}draft{% endif %}">{{ case.status|upper }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="records-cell age mono">{{ case.preliminary.age|default:'-' }}</div>
+                    <div class="records-cell sex mono">{{ case.preliminary.sex|default:'-' }}</div>
+                    <div class="records-cell date mono">{{ case.updated_at|date:'Y-m-d' }}</div>
+                    <div class="records-cell actions records-actions-cell">
+                        <a href="{% url 'case_paper_view' case.case_id %}" class="action-btn" title="View">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        <a href="{% url 'case_paper_view' case.case_id %}?print=1" class="action-btn action-btn-print" title="Print" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="records-empty">
+                    <i class="fas fa-inbox" style="font-size:32px; opacity:0.3; margin-bottom:10px;"></i>
+                    <p class="mono">No case papers found. Create one to get started.</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
-
