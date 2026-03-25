@@ -64,7 +64,7 @@ def test_email_config(request):
             "status": "ok",
             "message": message,
             "config": config_info
-        }, indent=2)
+        })
         
     except Exception as e:
         return JsonResponse({
