@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
 </head>
-<body data-theme="light" class="cp-form-mode">
-    {% include 'navbar.html' with show_casepaper_topnav=True %}
+<body data-theme="dark">
+    {% include 'navbar.html' %}
     
-    <div class="cp-workspace">
     <div class="cp-form-wrapper">
         <!-- Sidebar -->
         <div class="cp-sidebar">
@@ -525,7 +524,6 @@
             </form>
         </div>
     </div>
-    </div>
 
     <!-- Toast Container -->
     <div class="cp-toast-container"></div>
@@ -618,14 +616,6 @@
             document.getElementById('progressPercent').textContent = percentage + '%';
             document.getElementById('progressFill').style.width = percentage + '%';
             document.getElementById('filledSections').textContent = Math.min(sections, 10);
-
-            const progressPercentTop = document.getElementById('progressPercentTop');
-            const progressFillTop = document.getElementById('progressFillTop');
-            const filledSectionsTop = document.getElementById('filledSectionsTop');
-
-            if (progressPercentTop) progressPercentTop.textContent = percentage + '%';
-            if (progressFillTop) progressFillTop.style.width = percentage + '%';
-            if (filledSectionsTop) filledSectionsTop.textContent = Math.min(sections, 10);
         }
 
         function saveDraft() {

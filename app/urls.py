@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from . import case_paper_views
 from . import auth_views
+from . import test_views
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -64,5 +65,8 @@ urlpatterns = [
     path('auth/google/callback/', auth_views.google_callback, name='google_callback'),
     path('auth/register/', auth_views.register, name='register'),
     path('auth/logout/', auth_views.logout, name='logout'),
+    
+    # Diagnostic endpoints
+    path('debug/email-config/', test_views.test_email_config, name='test_email_config'),
 ]
 

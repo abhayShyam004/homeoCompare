@@ -177,14 +177,6 @@ STORAGES = {
 # ============= EMAIL CONFIGURATION =============
 # Always use SMTP in production, console only in local development
 # To use console backend locally, set: EMAIL_USE_CONSOLE=True in .env
-USE_CONSOLE_EMAIL = config('EMAIL_USE_CONSOLE', default=DEBUG, cast=bool)
-
-if USE_CONSOLE_EMAIL and DEBUG:
-    # Only use console backend if explicitly requested AND in debug mode
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    # Production: Use SMTP backend
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
 EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
@@ -193,11 +185,30 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='abhay315204@gmail.com')
 
+# Determine email backend
+USE_CONSOLE_EMAIL = config('EMAIL_USE_CONSOLE', default=False, cast=bool)
+
+# Force SMTP in production (DEBUG=False)
+if DEBUG:
+    # Development mode - use console by default (can be overridden with EMAIL_USE_CONSOLE=False)
+    if USE_CONSOLE_EMAIL:
+        EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    else:
+        EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
+    # Production mode - ALWAYS use SMTP, never console
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# Debug logging
+import sys
+print(f"🔧 EMAIL CONFIG: DEBUG={DEBUG}, BACKEND={EMAIL_BACKEND}", file=sys.stderr)
+print(f"🔧 EMAIL CREDENTIALS: USER={EMAIL_HOST_USER[:20]+'...' if EMAIL_HOST_USER else 'NOT SET'}", file=sys.stderr)
+
 # Verify email is configured in production
 if not DEBUG and (not EMAIL_HOST_USER or not EMAIL_HOST_PASSWORD):
     import warnings
     warnings.warn(
-        "⚠️  WARNING: Email credentials not configured. "
+        "⚠️  WARNING: Email credentials not configured in production! "
         "Set EMAIL_HOST_USER and EMAIL_HOST_PASSWORD environment variables. "
         "Verification codes will not be sent!"
     )
