@@ -1,813 +1,124 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Paper - HomeoCompare</title>
-    <link rel="stylesheet" href="{% static 'css/case_paper.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
-</head>
-<body data-theme="light" class="cp-form-mode">
-    {% include 'navbar.html' %}
+{% extends 'case_paper/base.html' %}
 
-    <div class="cp-sidebar-overlay" id="cpSectionSidebarOverlay"></div>
-    <div class="cp-form-wrapper">
-        <!-- Sidebar -->
-        <div class="cp-sidebar">
-            <div class="cp-sidebar-top">
-                <div class="cp-sidebar-label">CASE PAPER</div>
-                <div class="cp-sidebar-case-id">{{ case.case_id }}</div>
-                <div class="cp-sidebar-status">
-                    <span class="cp-status-dot {% if case.status == 'draft' %}draft{% else %}complete{% endif %}"></span>
-                    <span class="cp-status-text">{{ case.status|upper }}</span>
-                </div>
-            </div>
+{% block page_title_header %}{{ page_title|default:"New Case Paper" }}{% endblock %}
 
-            <!-- Progress Block -->
-            <div class="cp-progress-block">
-                <div class="cp-progress-percent" id="progressPercent">0%</div>
-                <div class="cp-progress-text"><span id="filledSections">0</span> of 10 Sections</div>
-                <div class="cp-progress-bar-wrapper">
-                    <div class="cp-progress-bar-large">
-                        <div class="cp-progress-fill-large" id="progressFill" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
+{% block main_content %}
+<form id="casePaperForm" method="post" class="space-y-8" action="{% if case.case_id %}{% url 'case_paper_edit' case.case_id %}{% else %}{% url 'case_paper_new' %}{% endif %}">
+    {% csrf_token %}
 
-            <!-- Section Navigation -->
-            <nav class="cp-section-nav">
-                <a href="#section-1" class="cp-nav-item" data-section="1">
-                    <span class="cp-nav-circle">✓</span>
-                    <span class="cp-nav-text">Patient Profile</span>
-                </a>
-                <a href="#section-2" class="cp-nav-item" data-section="2">
-                    <span class="cp-nav-circle">2</span>
-                    <span class="cp-nav-text">Chief Complaints</span>
-                </a>
-                <a href="#section-3" class="cp-nav-item" data-section="3">
-                    <span class="cp-nav-circle">3</span>
-                    <span class="cp-nav-text">Associated Complaints</span>
-                </a>
-                <a href="#section-4" class="cp-nav-item" data-section="4">
-                    <span class="cp-nav-circle">4</span>
-                    <span class="cp-nav-text">Case History</span>
-                </a>
-                <a href="#section-5" class="cp-nav-item" data-section="5">
-                    <span class="cp-nav-circle">5</span>
-                    <span class="cp-nav-text">Generals</span>
-                </a>
-                <a href="#section-6" class="cp-nav-item" data-section="6">
-                    <span class="cp-nav-circle">6</span>
-                    <span class="cp-nav-text">Examination</span>
-                </a>
-                <a href="#section-7" class="cp-nav-item" data-section="7">
-                    <span class="cp-nav-circle">7</span>
-                    <span class="cp-nav-text">Diagnosis</span>
-                </a>
-                <a href="#section-8" class="cp-nav-item" data-section="8">
-                    <span class="cp-nav-circle">8</span>
-                    <span class="cp-nav-text">Prescription</span>
-                </a>
-                <a href="#section-9" class="cp-nav-item" data-section="9">
-                    <span class="cp-nav-circle">9</span>
-                    <span class="cp-nav-text">Follow-Up</span>
-                </a>
-                <a href="#section-10" class="cp-nav-item" data-section="10">
-                    <span class="cp-nav-circle">10</span>
-                    <span class="cp-nav-text">Case Summary</span>
-                </a>
-            </nav>
-
-            <!-- Sidebar Bottom Buttons -->
-            <div class="cp-sidebar-bottom">
-                <button class="cp-sidebar-btn outline" onclick="saveDraft()">
-                    <i class="fas fa-floppy-disk"></i> Save Draft
-                </button>
-                <button class="cp-sidebar-btn primary" onclick="markComplete()">
-                    <i class="fas fa-check"></i> Mark Complete
-                </button>
-            </div>
+    <!-- Section 1: Patient Profile -->
+    <div class="bg-paper border-2 border-ink p-6">
+        <div class="flex items-center justify-between border-b-2 border-ink pb-3 mb-6">
+            <h2 class="font-serif text-2xl font-bold">1. Patient Profile</h2>
         </div>
-
-        <!-- Main Form Area -->
-        <div class="cp-main">
-            <!-- Breadcrumb & Meta -->
-            <div class="cp-form-header">
-                <button type="button" class="cp-sidebar-toggle" id="cpSectionSidebarToggle" aria-label="Open section navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="cp-last-saved" id="lastSavedIndicator" style="display: none;">Last saved: <span id="lastSavedTime">Just now</span></div>
+        <div class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_physician_name">Physician Name *</label>
+                    <input type="text" name="physician_name" id="id_physician_name" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{% if case.preliminary.physician_name %}{{ case.preliminary.physician_name }}{% else %}{{ user.physician_name }}{% endif %}" required>
+                </div>
+                <div>
+                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_consultation_date">Consultation Date *</label>
+                    <input type="date" name="consultation_date" id="id_consultation_date" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{{ case.preliminary.consultation_date|date:'Y-m-d' }}" required>
+                </div>
+                <div>
+                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_consultation_time">Consultation Time</label>
+                    <input type="time" name="consultation_time" id="id_consultation_time" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{{ case.preliminary.consultation_time|time:'H:i' }}">
+                </div>
             </div>
-
-            <form id="casePaperForm" method="post" class="cp-form-container" action="{% if case_id %}{% url 'case_paper_edit' case_id %}{% else %}{% url 'case_paper_new' %}{% endif %}">
-                {% csrf_token %}
-
-                <!-- Section 1: Patient Profile -->
-                <div class="cp-section-block" id="section-1" style="animation-delay: 0.05s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-user"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Patient Profile</h2>
-                            <p class="cp-section-subtitle">Basic patient information</p>
-                        </div>
-                        <div class="cp-section-number">1</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <div class="cp-grid-3">
-                            <div class="cp-field">
-                                <label class="cp-label">Physician Name <span class="required">*</span></label>
-                                <input type="text" class="cp-input" name="physician_name" placeholder="Enter physician name" value="{% if case.preliminary.physician_name %}{{ case.preliminary.physician_name }}{% else %}{{ user.physician_name }}{% endif %}" required>
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Consultation Date <span class="required">*</span></label>
-                                <input type="date" class="cp-input" id="consultationDate" name="consultation_date" value="{{ case.preliminary.consultation_date }}" required>
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Consultation Time</label>
-                                <input type="time" class="cp-input" id="consultationTime" name="consultation_time" value="{{ case.preliminary.consultation_time }}">
-                            </div>
-                        </div>
-
-                        <div class="cp-grid-3">
-                            <div class="cp-field">
-                                <label class="cp-label">Patient Name <span class="required">*</span></label>
-                                <input type="text" class="cp-input" name="patient_name" placeholder="Full name" value="{{ case.preliminary.patient_name }}" required>
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Age</label>
-                                <input type="number" class="cp-input" name="age" min="0" max="150" placeholder="Age in years" value="{{ case.preliminary.age }}">
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Sex</label>
-                                <select class="cp-input" name="sex">
-                                    <option value="">Select</option>
-                                    <option value="M" {% if case.preliminary.sex == 'M' %}selected{% endif %}>Male</option>
-                                    <option value="F" {% if case.preliminary.sex == 'F' %}selected{% endif %}>Female</option>
-                                    <option value="O" {% if case.preliminary.sex == 'O' %}selected{% endif %}>Other</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="cp-grid-3">
-                            <div class="cp-field">
-                                <label class="cp-label">Occupation</label>
-                                <input type="text" class="cp-input" name="occupation" placeholder="Patient's occupation" value="{{ case.preliminary.occupation }}">
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Contact Number</label>
-                                <input type="tel" class="cp-input" name="contact_number" placeholder="Phone number" value="{{ case.preliminary.contact_number }}">
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Email Address</label>
-                                <input type="email" class="cp-input" name="email" placeholder="Email" value="{{ case.preliminary.email }}">
-                            </div>
-                        </div>
-
-                        <div class="cp-grid-2">
-                            <div class="cp-field">
-                                <label class="cp-label">Address</label>
-                                <textarea class="cp-textarea" name="address" placeholder="Full address" rows="3">{{ case.preliminary.address }}</textarea>
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Remarks</label>
-                                <textarea class="cp-textarea" name="preliminary_remarks" placeholder="Any additional remarks" rows="3">{{ case.preliminary.remarks }}</textarea>
-                            </div>
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_patient_name">Patient Name *</label>
+                    <input type="text" name="patient_name" id="id_patient_name" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{{ case.preliminary.patient_name }}" required>
                 </div>
-
-                <!-- Section 2: Chief Complaints -->
-                <div class="cp-section-block" id="section-2" style="animation-delay: 0.10s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-list"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Chief Complaints</h2>
-                            <p class="cp-section-subtitle">Primary concerns</p>
-                        </div>
-                        <div class="cp-section-number">2</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <p class="cp-section-instruction">Add the main complaints the patient is presenting with.</p>
-                        <div id="ccomplaintsContainer" class="cp-dynamic-container">
-                            <div class="cp-dynamic-item">
-                                <div class="cp-grid-2">
-                                    <div class="cp-field">
-                                        <label class="cp-label">Complaint <span class="required">*</span></label>
-                                        <input type="text" class="cp-input" placeholder="Describe complaint" required>
-                                    </div>
-                                    <div class="cp-field">
-                                        <label class="cp-label">Duration</label>
-                                        <input type="text" class="cp-input" placeholder="e.g., 2 weeks">
-                                    </div>
-                                </div>
-                                <div class="cp-field">
-                                    <label class="cp-label">Detailed Description</label>
-                                    <textarea class="cp-textarea" placeholder="Describe the complaint in detail" rows="3"></textarea>
-                                </div>
-                                <button type="button" class="cp-btn-remove-item" onclick="removeItem(this)">
-                                    <i class="fas fa-trash"></i> Remove
-                                </button>
-                            </div>
-                        </div>
-                        <button type="button" class="cp-btn-add-item" onclick="addComplaint()">
-                            <i class="fas fa-plus"></i> Add Complaint
-                        </button>
-                    </div>
+                <div>
+                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_age">Age</label>
+                    <input type="number" name="age" id="id_age" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{{ case.preliminary.age }}">
                 </div>
-
-                <!-- Section 3: Associated Complaints -->
-                <div class="cp-section-block" id="section-3" style="animation-delay: 0.15s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-stream"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Associated Complaints</h2>
-                            <p class="cp-section-subtitle">Secondary symptoms</p>
-                        </div>
-                        <div class="cp-section-number">3</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <p class="cp-section-instruction">Add associated symptoms accompanying the chief complaints.</p>
-                        <div id="acomplaintsContainer" class="cp-dynamic-container">
-                            <div class="cp-dynamic-item">
-                                <div class="cp-field">
-                                    <label class="cp-label">Associated Symptom</label>
-                                    <input type="text" class="cp-input" placeholder="Describe associated symptom">
-                                </div>
-                                <button type="button" class="cp-btn-remove-item" onclick="removeItem(this)">
-                                    <i class="fas fa-trash"></i> Remove
-                                </button>
-                            </div>
-                        </div>
-                        <button type="button" class="cp-btn-add-item" onclick="addAssociatedComplaint()">
-                            <i class="fas fa-plus"></i> Add Associated Complaint
-                        </button>
-                    </div>
+                <div>
+                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_sex">Sex</label>
+                    <select name="sex" id="id_sex" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all">
+                        <option value="">Select</option>
+                        <option value="M" {% if case.preliminary.sex == 'M' %}selected{% endif %}>Male</option>
+                        <option value="F" {% if case.preliminary.sex == 'F' %}selected{% endif %}>Female</option>
+                        <option value="O" {% if case.preliminary.sex == 'O' %}selected{% endif %}>Other</option>
+                    </select>
                 </div>
-
-                <!-- Section 4: Case History -->
-                <div class="cp-section-block" id="section-4" style="animation-delay: 0.20s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-history"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Case History</h2>
-                            <p class="cp-section-subtitle">Chronological history</p>
-                        </div>
-                        <div class="cp-section-number">4</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <div class="cp-subsection">
-                            <h3 class="cp-subsection-title">History of Present Illness</h3>
-                            <div class="cp-field">
-                                <label class="cp-label">HPI Details</label>
-                                <textarea class="cp-textarea" name="hpi" placeholder="Detailed history of present illness" rows="4">{{ case.case_history.hpi }}</textarea>
-                            </div>
-                        </div>
-
-                        <hr class="cp-subsection-divider">
-
-                        <div class="cp-subsection">
-                            <h3 class="cp-subsection-title">Past Medical History</h3>
-                            <div class="cp-field">
-                                <label class="cp-label">Past Medical History</label>
-                                <textarea class="cp-textarea" name="past_medical_history" placeholder="Previous illnesses and treatments" rows="4">{{ case.case_history.past_medical_history }}</textarea>
-                            </div>
-                        </div>
-
-                        <hr class="cp-subsection-divider">
-
-                        <div class="cp-subsection">
-                            <h3 class="cp-subsection-title">Family History</h3>
-                            <div class="cp-field">
-                                <label class="cp-label">Family History</label>
-                                <textarea class="cp-textarea" name="family_history" placeholder="Hereditary conditions and family diseases" rows="4">{{ case.case_history.family_history }}</textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section 5: Generals -->
-                <div class="cp-section-block" id="section-5" style="animation-delay: 0.25s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-heart-pulse"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Generals</h2>
-                            <p class="cp-section-subtitle">General characteristics</p>
-                        </div>
-                        <div class="cp-section-number">5</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <div class="cp-subsection">
-                            <h3 class="cp-subsection-title">Personal History</h3>
-                            <div class="cp-grid-2">
-                                <div class="cp-field">
-                                    <label class="cp-label">Appetite</label>
-                                    <select class="cp-input" name="appetite">
-                                        <option value="">Select</option>
-                                        <option value="good">Good</option>
-                                        <option value="poor">Poor</option>
-                                        <option value="variable">Variable</option>
-                                    </select>
-                                </div>
-                                <div class="cp-field">
-                                    <label class="cp-label">Thirst</label>
-                                    <select class="cp-input" name="thirst">
-                                        <option value="">Select</option>
-                                        <option value="normal">Normal</option>
-                                        <option value="increased">Increased</option>
-                                        <option value="decreased">Decreased</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Digestion & Bowels</label>
-                                <textarea class="cp-textarea" name="digestion" placeholder="Describe digestion status and bowel movements" rows="3">{{ case.generals.digestion }}</textarea>
-                            </div>
-                        </div>
-
-                        <hr class="cp-subsection-divider">
-
-                        <div class="cp-subsection">
-                            <h3 class="cp-subsection-title">Mental & Emotional State</h3>
-                            <div class="cp-field">
-                                <label class="cp-label">Mental State</label>
-                                <textarea class="cp-textarea" name="mental_state" placeholder="Mood, temperament, emotional state" rows="4">{{ case.generals.mental_state }}</textarea>
-                            </div>
-                        </div>
-
-                        <hr class="cp-subsection-divider">
-
-                        <div class="cp-subsection">
-                            <h3 class="cp-subsection-title">Physical General Observations</h3>
-                            <div class="cp-grid-2">
-                                <div class="cp-field">
-                                    <label class="cp-label">Build & Complexion</label>
-                                    <input type="text" class="cp-input" name="build_complexion" placeholder="e.g., Lean, Fair" value="{{ case.generals.build_complexion }}">
-                                </div>
-                                <div class="cp-field">
-                                    <label class="cp-label">Sleep Pattern</label>
-                                    <input type="text" class="cp-input" name="sleep_pattern" placeholder="e.g., Sound, Disturbed" value="{{ case.generals.sleep_pattern }}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section 6: Examination & Investigations -->
-                <div class="cp-section-block" id="section-6" style="animation-delay: 0.30s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-stethoscope"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Examination & Investigations</h2>
-                            <p class="cp-section-subtitle">Clinical findings</p>
-                        </div>
-                        <div class="cp-section-number">6</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <div class="cp-grid-3">
-                            <div class="cp-field">
-                                <label class="cp-label">BP (mmHg)</label>
-                                <input type="text" class="cp-input" name="bp" placeholder="120/80" value="{{ case.examination.bp }}">
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Pulse (bpm)</label>
-                                <input type="number" class="cp-input" name="pulse" placeholder="72" value="{{ case.examination.pulse }}">
-                            </div>
-                            <div class="cp-field">
-                                <label class="cp-label">Temperature (°F)</label>
-                                <input type="number" class="cp-input" name="temperature" step="0.1" placeholder="98.6" value="{{ case.examination.temperature }}">
-                            </div>
-                        </div>
-
-                        <div class="cp-field">
-                            <label class="cp-label">Physical Examination Findings</label>
-                            <textarea class="cp-textarea" name="physical_examination" placeholder="General appearance, skin, lymph nodes, etc." rows="4">{{ case.examination.physical_examination }}</textarea>
-                        </div>
-
-                        <div class="cp-field">
-                            <label class="cp-label">Investigations & Reports</label>
-                            <textarea class="cp-textarea" name="investigations" placeholder="Lab reports, imaging, other investigations" rows="4">{{ case.examination.investigations }}</textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section 7: Diagnosis & Repertorization -->
-                <div class="cp-section-block" id="section-7" style="animation-delay: 0.35s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-microscope"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Diagnosis & Repertorization</h2>
-                            <p class="cp-section-subtitle">Homoeopathic analysis</p>
-                        </div>
-                        <div class="cp-section-number">7</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <div class="cp-field">
-                            <label class="cp-label">Provisional Diagnosis (Allopathic)</label>
-                            <input type="text" class="cp-input" name="provisional_diagnosis" placeholder="Medical diagnosis" value="{{ case.diagnosis.provisional_diagnosis }}">
-                        </div>
-
-                        <div class="cp-field">
-                            <label class="cp-label">Miasmatic Background</label>
-                            <textarea class="cp-textarea" name="miasmatic" placeholder="Psoric, Sycotic, Syphilitic traits" rows="3">{{ case.diagnosis.miasmatic }}</textarea>
-                        </div>
-
-                        <div class="cp-field">
-                            <label class="cp-label">Rubrics & Repertorization</label>
-                            <textarea class="cp-textarea" name="rubrics" placeholder="Key rubrics identified from case" rows="4">{{ case.diagnosis.rubrics }}</textarea>
-                        </div>
-
-                        <div class="cp-field">
-                            <label class="cp-label">Differential Diagnosis (Medicines)</label>
-                            <textarea class="cp-textarea" name="differential_medicines" placeholder="Consider: Remedy1, Remedy2, Remedy3" rows="3">{{ case.diagnosis.differential_medicines }}</textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section 8: Prescription & Advice -->
-                <div class="cp-section-block" id="section-8" style="animation-delay: 0.40s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-pills"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Prescription & Advice</h2>
-                            <p class="cp-section-subtitle">Treatment plan</p>
-                        </div>
-                        <div class="cp-section-number">8</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <div class="cp-subsection">
-                            <h3 class="cp-subsection-title">Prescription</h3>
-                            <div class="cp-field">
-                                <label class="cp-label">Remedy & Potency</label>
-                                <textarea class="cp-textarea" name="remedy_potency" placeholder="e.g., Arnica Montana 30CH" rows="2">{{ case.prescription.remedy_potency }}</textarea>
-                            </div>
-                            <div class="cp-grid-2">
-                                <div class="cp-field">
-                                    <label class="cp-label">Dosage & Duration</label>
-                                    <input type="text" class="cp-input" name="dosage" placeholder="e.g., 5 pills, 3 times daily" value="{{ case.prescription.dosage }}">
-                                </div>
-                                <div class="cp-field">
-                                    <label class="cp-label">Course Duration</label>
-                                    <input type="text" class="cp-input" name="duration" placeholder="e.g., 2 weeks" value="{{ case.prescription.duration }}">
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr class="cp-subsection-divider">
-
-                        <div class="cp-subsection">
-                            <h3 class="cp-subsection-title">Advice & Lifestyle</h3>
-                            <div class="cp-field">
-                                <label class="cp-label">Lifestyle Advice</label>
-                                <textarea class="cp-textarea" name="lifestyle_advice" placeholder="Diet, activities, restrictions" rows="4">{{ case.prescription.lifestyle_advice }}</textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section 9: Follow-Up -->
-                <div class="cp-section-block" id="section-9" style="animation-delay: 0.45s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-calendar-check"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Follow-Up</h2>
-                            <p class="cp-section-subtitle">Scheduled consultations</p>
-                        </div>
-                        <div class="cp-section-number">9</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <p class="cp-section-instruction">Add scheduled follow-up appointments.</p>
-                        <div id="followupContainer" class="cp-dynamic-container">
-                            <div class="cp-dynamic-item">
-                                <div class="cp-grid-2">
-                                    <div class="cp-field">
-                                        <label class="cp-label">Follow-Up Date</label>
-                                        <input type="date" class="cp-input">
-                                    </div>
-                                    <div class="cp-field">
-                                        <label class="cp-label">Notes</label>
-                                        <input type="text" class="cp-input" placeholder="Follow-up notes or observations">
-                                    </div>
-                                </div>
-                                <button type="button" class="cp-btn-remove-item" onclick="removeItem(this)">
-                                    <i class="fas fa-trash"></i> Remove
-                                </button>
-                            </div>
-                        </div>
-                        <button type="button" class="cp-btn-add-item" onclick="addFollowup()">
-                            <i class="fas fa-plus"></i> Add Follow-Up
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Section 10: Case Summary -->
-                <div class="cp-section-block" id="section-10" style="animation-delay: 0.50s;">
-                    <div class="cp-section-header">
-                        <i class="fas fa-file-alt"></i>
-                        <div class="cp-section-title-group">
-                            <h2 class="cp-section-title">Case Summary</h2>
-                            <p class="cp-section-subtitle">Executive summary</p>
-                        </div>
-                        <div class="cp-section-number">10</div>
-                    </div>
-                    <div class="cp-section-body">
-                        <div class="cp-field">
-                            <label class="cp-label">Executive Summary <span class="required">*</span></label>
-                            <textarea class="cp-textarea" name="executive_summary" placeholder="Brief overview of the case, key findings, and management" rows="5">{{ case.summary.executive_summary }}</textarea>
-                        </div>
-                        <div class="cp-field">
-                            <label class="cp-label">Clinical Outcome & Observations</label>
-                            <textarea class="cp-textarea" name="clinical_outcome" placeholder="Results, improvements, and observations" rows="4">{{ case.summary.clinical_outcome }}</textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Form Submit Buttons (hidden, controlled by sidebar) -->
-                <input type="hidden" id="formAction" name="action" value="">
-            </form>
-        </div>
-    </div>
-
-    <!-- Toast Container -->
-    <div class="cp-toast-container"></div>
-
-    <!-- Unsaved Changes Modal -->
-    <div class="cp-modal" id="unsavedModal" style="display: none;">
-        <div class="cp-modal-overlay" onclick="closeUnsavedModal()"></div>
-        <div class="cp-modal-content">
-            <div class="cp-modal-header">
-                <h3 class="cp-modal-title"><i class="fas fa-exclamation-circle"></i> Unsaved Changes</h3>
-                <button class="cp-modal-close" onclick="closeUnsavedModal()">×</button>
             </div>
-            <div class="cp-modal-body">
-                <p>You have unsaved changes in this case paper. Would you like to save before leaving?</p>
-            </div>
-            <div class="cp-modal-footer">
-                <button class="cp-modal-btn cancel" onclick="closeUnsavedModal()">Don't Save</button>
-                <button class="cp-modal-btn primary" onclick="saveDraftAndLeave()"><i class="fas fa-floppy-disk"></i> Save & Leave</button>
+            <div>
+                <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_address">Address</label>
+                <textarea name="address" id="id_address" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" rows="2">{{ case.preliminary.address }}</textarea>
             </div>
         </div>
     </div>
 
-    <script>
-        let formHasChanges = false;
-        let isLeaving = false;
+    <!-- Section 4: Case History -->
+    <div class="bg-paper border-2 border-ink p-6">
+        <div class="flex items-center justify-between border-b-2 border-ink pb-3 mb-6">
+            <h2 class="font-serif text-2xl font-bold">4. Case History</h2>
+        </div>
+        <div class="space-y-4">
+            <div>
+                <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_hpi">History of Present Illness</label>
+                <textarea name="hpi" id="id_hpi" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" rows="3">{{ case.history.hpi }}</textarea>
+            </div>
+            <div>
+                <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_past_medical_history">Past Medical History</label>
+                <textarea name="past_medical_history" id="id_past_medical_history" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" rows="3">{{ case.history.past_medical_history }}</textarea>
+            </div>
+            <div>
+                <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_family_history">Family History</label>
+                <textarea name="family_history" id="id_family_history" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" rows="3">{{ case.history.family_history }}</textarea>
+            </div>
+        </div>
+    </div>
 
-        // Initialize form tracking
-        document.addEventListener('DOMContentLoaded', function() {
-            updateProgress();
-            setupFormTracking();
-            autoFillConsultationDate();
-            setupMobileSectionSidebar();
-        });
+    <!-- ... other sections would follow the same pattern ... -->
 
-        function setupMobileSectionSidebar() {
-            const sidebar = document.querySelector('.cp-sidebar');
-            const toggle = document.getElementById('cpSectionSidebarToggle');
-            const overlay = document.getElementById('cpSectionSidebarOverlay');
-            if (!sidebar || !toggle || !overlay) return;
+    <!-- Form Actions -->
+    <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 pt-6 mt-6 border-t-2 border-ink">
+        <div>
+            {% if case.case_id %}
+            <a href="{% url 'case_paper_delete' case.case_id %}" onclick="return confirm('Are you sure you want to delete this case paper? This action cannot be undone.');" class="w-full md:w-auto px-6 py-3 border-2 border-red-700 bg-red-700 text-paper font-mono text-xs uppercase font-bold flex items-center justify-center gap-2 hover:bg-red-800 transition-all">
+                Delete
+            </a>
+            {% endif %}
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+            <input type="hidden" id="formAction" name="action" value="save_draft">
+            <button type="submit" onclick="document.getElementById('formAction').value='save_draft';" class="w-full md:w-auto px-6 py-3 border-2 border-ink bg-paper font-mono text-xs uppercase font-bold flex items-center justify-center gap-2 hover:bg-ink hover:text-paper transition-all">
+                Save Draft
+            </button>
+            <button type="submit" onclick="document.getElementById('formAction').value='mark_complete';" class="w-full md:w-auto px-6 py-3 border-2 border-accent bg-accent text-paper font-mono text-xs uppercase font-bold flex items-center justify-center gap-2 hover:bg-accent/90 transition-all">
+                Mark as Complete
+            </button>
+        </div>
+    </div>
+</form>
+{% endblock %}
 
-            const closeSidebar = () => {
-                sidebar.classList.remove('open');
-                overlay.classList.remove('open');
-            };
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const consultationDateInput = document.getElementById('id_consultation_date');
+    const consultationTimeInput = document.getElementById('id_consultation_time');
 
-            toggle.addEventListener('click', function() {
-                sidebar.classList.toggle('open');
-                overlay.classList.toggle('open');
-            });
+    // Set today's date if creating a new record and date is empty
+    if (consultationDateInput && !consultationDateInput.value) {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        consultationDateInput.value = `${year}-${month}-${day}`;
+    }
 
-            overlay.addEventListener('click', closeSidebar);
-            sidebar.querySelectorAll('a, button').forEach(element => {
-                element.addEventListener('click', function() {
-                    if (window.innerWidth <= 1024 && element.classList.contains('cp-nav-item')) {
-                        closeSidebar();
-                    }
-                });
-            });
-        }
-
-        function autoFillConsultationDate() {
-            const consultationDateInput = document.getElementById('consultationDate');
-            const consultationTimeInput = document.getElementById('consultationTime');
-            const today = new Date();
-            
-            // Auto-fill consultation date if empty (new case)
-            if (consultationDateInput && !consultationDateInput.value) {
-                const year = today.getFullYear();
-                const month = String(today.getMonth() + 1).padStart(2, '0');
-                const day = String(today.getDate()).padStart(2, '0');
-                consultationDateInput.value = `${year}-${month}-${day}`;
-            }
-            
-            // Auto-fill consultation time if empty (new case)
-            if (consultationTimeInput && !consultationTimeInput.value) {
-                const hours = String(today.getHours()).padStart(2, '0');
-                const minutes = String(today.getMinutes()).padStart(2, '0');
-                consultationTimeInput.value = `${hours}:${minutes}`;
-            }
-        }
-
-        function setupFormTracking() {
-            const form = document.getElementById('casePaperForm');
-            const allInputs = form.querySelectorAll('input, textarea, select');
-            
-            allInputs.forEach(input => {
-                input.addEventListener('change', function() {
-                    formHasChanges = true;
-                    updateProgress();
-                });
-                input.addEventListener('input', function() {
-                    formHasChanges = true;
-                    updateProgress();
-                });
-            });
-        }
-
-        function updateProgress() {
-            const form = document.getElementById('casePaperForm');
-            const allInputs = form.querySelectorAll('input, textarea, select');
-            let filledCount = 0;
-            let totalCount = 0;
-
-            allInputs.forEach(input => {
-                // Only count non-CSRF fields
-                if (input.name && input.name !== 'csrfmiddlewaretoken' && input.type !== 'hidden') {
-                    totalCount++;
-                    if (input.value && input.value.trim()) {
-                        filledCount++;
-                    }
-                }
-            });
-
-            const percentage = totalCount > 0 ? Math.round((filledCount / totalCount) * 100) : 0;
-            const sections = Math.ceil((filledCount / totalCount) * 10);
-            
-            document.getElementById('progressPercent').textContent = percentage + '%';
-            document.getElementById('progressFill').style.width = percentage + '%';
-            document.getElementById('filledSections').textContent = Math.min(sections, 10);
-        }
-
-        function saveDraft() {
-            const form = document.getElementById('casePaperForm');
-            const action = document.getElementById('formAction');
-            action.value = 'save_draft';
-            isLeaving = true;
-            form.submit();
-            formHasChanges = false;
-        }
-
-        function saveDraftAndLeave() {
-            closeUnsavedModal();
-            saveDraft();
-        }
-
-        function markComplete() {
-            if (!validateForm()) {
-                showToast('Please fill in all required fields', 'error');
-                return;
-            }
-            const form = document.getElementById('casePaperForm');
-            const action = document.getElementById('formAction');
-            action.value = 'mark_complete';
-            isLeaving = true;
-            form.submit();
-            formHasChanges = false;
-        }
-
-        function validateForm() {
-            const form = document.getElementById('casePaperForm');
-            const required = form.querySelectorAll('[required]');
-            let isValid = true;
-            required.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.focus();
-                }
-            });
-            return isValid;
-        }
-
-        function closeUnsavedModal() {
-            document.getElementById('unsavedModal').style.display = 'none';
-        }
-
-        // Warn on page leave if changes exist
-        window.addEventListener('beforeunload', function(e) {
-            if (formHasChanges && !isLeaving) {
-                e.preventDefault();
-                e.returnValue = '';
-            }
-        });
-
-        // Intercept navigation links
-        document.querySelectorAll('a[href]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                if (formHasChanges && !isLeaving && !this.href.includes('#')) {
-                    e.preventDefault();
-                    showUnsavedWarning();
-                }
-            });
-        });
-
-        function showUnsavedWarning() {
-            const modal = document.getElementById('unsavedModal');
-            modal.style.display = 'flex';
-        }
-
-        function addComplaint() {
-            const container = document.getElementById('ccomplaintsContainer');
-            const newItem = document.createElement('div');
-            newItem.className = 'cp-dynamic-item';
-            newItem.innerHTML = `
-                <div class="cp-grid-2">
-                    <div class="cp-field">
-                        <label class="cp-label">Complaint <span class="required">*</span></label>
-                        <input type="text" class="cp-input" placeholder="Describe complaint" required>
-                    </div>
-                    <div class="cp-field">
-                        <label class="cp-label">Duration</label>
-                        <input type="text" class="cp-input" placeholder="e.g., 2 weeks">
-                    </div>
-                </div>
-                <div class="cp-field">
-                    <label class="cp-label">Detailed Description</label>
-                    <textarea class="cp-textarea" placeholder="Describe the complaint in detail" rows="3"></textarea>
-                </div>
-                <button type="button" class="cp-btn-remove-item" onclick="removeItem(this)">
-                    <i class="fas fa-trash"></i> Remove
-                </button>
-            `;
-            container.appendChild(newItem);
-        }
-
-        function addAssociatedComplaint() {
-            const container = document.getElementById('acomplaintsContainer');
-            const newItem = document.createElement('div');
-            newItem.className = 'cp-dynamic-item';
-            newItem.innerHTML = `
-                <div class="cp-field">
-                    <label class="cp-label">Associated Symptom</label>
-                    <input type="text" class="cp-input" placeholder="Describe associated symptom">
-                </div>
-                <button type="button" class="cp-btn-remove-item" onclick="removeItem(this)">
-                    <i class="fas fa-trash"></i> Remove
-                </button>
-            `;
-            container.appendChild(newItem);
-        }
-
-        function addFollowup() {
-            const container = document.getElementById('followupContainer');
-            const newItem = document.createElement('div');
-            newItem.className = 'cp-dynamic-item';
-            newItem.innerHTML = `
-                <div class="cp-grid-2">
-                    <div class="cp-field">
-                        <label class="cp-label">Follow-Up Date</label>
-                        <input type="date" class="cp-input">
-                    </div>
-                    <div class="cp-field">
-                        <label class="cp-label">Notes</label>
-                        <input type="text" class="cp-input" placeholder="Follow-up notes or observations">
-                    </div>
-                </div>
-                <button type="button" class="cp-btn-remove-item" onclick="removeItem(this)">
-                    <i class="fas fa-trash"></i> Remove
-                </button>
-            `;
-            container.appendChild(newItem);
-        }
-
-        function removeItem(button) {
-            button.closest('.cp-dynamic-item').remove();
-        }
-
-        function showToast(message, type = 'success') {
-            const container = document.querySelector('.cp-toast-container');
-            const toast = document.createElement('div');
-            toast.className = `cp-toast ${type}`;
-            toast.innerHTML = `
-                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-circle-xmark'} cp-toast-icon"></i>
-                <span class="cp-toast-message">${message}</span>
-            `;
-            container.appendChild(toast);
-            setTimeout(() => toast.classList.add('visible'), 10);
-            setTimeout(() => {
-                toast.classList.remove('visible');
-                setTimeout(() => toast.remove(), 250);
-            }, 3000);
-        }
-
-        // Smooth scroll to sections
-        document.querySelectorAll('.cp-nav-item').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-    </script>
-</body>
-</html>
+    // Set current time if creating a new record and time is empty
+    if (consultationTimeInput && !consultationTimeInput.value) {
+        const today = new Date();
+        const hours = String(today.getHours()).padStart(2, '0');
+        const minutes = String(today.getMinutes()).padStart(2, '0');
+        consultationTimeInput.value = `${hours}:${minutes}`;
+    }
+});
+</script>
+{% endblock %}
