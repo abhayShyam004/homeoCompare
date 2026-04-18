@@ -5,44 +5,47 @@
    CSS VARIABLES - Luxury Theme
    ======================================== */
 :root {
-  /* Luxury Paper & Ink Palette */
-  --color-paper:   #F5F5F4;     /* Cream/off-white background */
-  --color-ink:     #0A0A0A;     /* Deep charcoal/black text */
-  --color-accent:  #2D5A27;     /* Forest green - medical context */
-  --color-muted:   #8E8E8E;     /* Muted gray */
+  /* Neobrutalist Medical Palette */
+  --color-paper:   #FBFBF9;     /* Off-white Surface */
+  --color-ink:     #1C293C;     /* Dark Slate Text */
+  --color-accent:  #16A34A;     /* Success Green */
+  --color-secondary:#432DD7;    /* Medical Blue */
+  --color-muted:   #64748B;     /* Muted slate */
 
   /* Semantic Colors */
-  --bg-page:       #F5F5F4;
+  --bg-page:       #FBFBF9;
   --bg-card:       #FFFFFF;
   --bg-input:      #FAFAF9;
-  --bg-hover:      #F0F0EF;
+  --bg-hover:      #F1F5F9;
   --bg-sidebar:    #FFFFFF;
 
   /* Text */
-  --text-primary:  #0A0A0A;
-  --text-secondary:#5A5A5A;
-  --text-muted:    #8E8E8E;
-  --text-white:    #F5F5F4;
+  --text-primary:  #1C293C;
+  --text-secondary:#334155;
+  --text-muted:    #64748B;
+  --text-white:    #FBFBF9;
 
-  /* Borders */
-  --border-default:#E0E0DE;
-  --border-muted:  #F0F0EF;
-  --border-accent: #2D5A27;
+  /* Borders - THICK & DARK */
+  --border-default:#1C293C;
+  --border-muted:  #CBD5E1;
+  --border-accent: #1C293C;
+  --border-width:  2px;
 
   /* Status */
-  --status-draft:  #F59E0B;     /* Amber for draft */
-  --status-done:   #2D5A27;     /* Forest green for complete */
-  --status-danger: #DC2626;     /* Red for errors */
+  --status-draft:  #D97706;     /* Amber */
+  --status-done:   #16A34A;     /* Green */
+  --status-danger: #DC2626;     /* Red */
 
-  /* Shadows - subtle, sophisticated */
-  --shadow-sm:  0 1px 2px rgba(10, 10, 10, 0.08);
-  --shadow-md:  0 4px 8px rgba(10, 10, 10, 0.12);
-  --shadow-lg:  0 12px 24px rgba(10, 10, 10, 0.15);
-  --shadow-accent: 0 0 0 2px rgba(45, 90, 39, 0.1);
+  /* Shadows - SOLID & HARD */
+  --shadow-sm:  2px 2px 0px #1C293C;
+  --shadow-md:  4px 4px 0px #1C293C;
+  --shadow-lg:  8px 8px 0px #1C293C;
+  --shadow-accent: 0 0 0 2px #432DD7;
+  --shadow-green: 0 0 0 2px #16A34A;
 
   /* Navbar */
   --bg-navbar:     #FFFFFF;
-  --border-navbar: #E0E0DE;
+  --border-navbar: #1C293C;
 
   /* Fonts */
   --font-serif:    "Cormorant Garamond", serif;
