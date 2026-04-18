@@ -1,139 +1,145 @@
 {% extends 'case_paper/base.html' %}
+{% load static %}
+
+{% block page_title_header %}Dashboard{% endblock %}
+
+{% block header_icon %}
+<a href="{% url 'case_paper_new' %}" class="w-10 h-10 bg-ink flex items-center justify-center group">
+    <svg class="w-5 h-5 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+</a>
+{% endblock %}
 
 {% block main_content %}
-    <div class="stats-grid">
-        <div class="stat-card compact-stat">
-            <div class="stat-header">
-                <span class="stat-label mono">Total Archives</span>
-                <i class="fas fa-file-text"></i>
-            </div>
-            <div class="stat-body">
-                <div class="stat-value serif">{{ total_count|default:"0" }}</div>
-                <div class="stat-subtext mono">All case papers</div>
-            </div>
+{# Top Section: Stats & Quick Actions #}
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+    {# StatCard: Total Archives #}
+    <div class="p-6 border border-ink flex flex-col justify-between h-40 bg-paper hover:bg-ink/5 transition-colors">
+        <div class="flex justify-between items-start">
+            <span class="font-mono text-xs uppercase tracking-widest font-bold opacity-70">Total Archives</span>
+            <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
         </div>
-
-        <div class="stat-card compact-stat">
-            <div class="stat-header">
-                <span class="stat-label mono">Active Drafts</span>
-                <i class="fas fa-clock"></i>
-            </div>
-            <div class="stat-body">
-                <div class="stat-value serif">{{ draft_count|default:"0" }}</div>
-                <div class="stat-subtext mono">Draft case papers</div>
-            </div>
-        </div>
-
-        <div class="stat-card compact-stat">
-            <div class="stat-header">
-                <span class="stat-label mono">Finalized</span>
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <div class="stat-body">
-                <div class="stat-value serif">{{ complete_count|default:"0" }}</div>
-                <div class="stat-subtext mono">Completed case papers</div>
-            </div>
-        </div>
-
-        <div class="stat-card primary-action dashboard-primary-card">
-            <div class="stat-header">
-                <span class="stat-label mono">Primary Action</span>
-                <i class="fas fa-plus"></i>
-            </div>
-            <div class="stat-body">
-                <h2 class="serif italic">Create New<br>Case Paper</h2>
-                <p class="mono small">Start a fresh patient record</p>
-                <a href="{% url 'case_paper_new' %}" class="action-link">Start New →</a>
+        <div>
+            <div class="flex items-baseline gap-2">
+                <div class="font-serif text-6xl font-medium">{{ total_count|default:"0" }}</div>
             </div>
         </div>
     </div>
 
-    <div class="search-section">
-        <div class="search-wrapper">
-            <i class="fas fa-search"></i>
-            <form method="get" style="display: contents;">
-                <input
-                    type="text"
-                    name="search"
-                    class="search-input mono"
-                    placeholder="SEARCH_BY_PATIENT_NAME_OR_REF_ID..."
-                    value="{{ search_query }}"
-                >
-            </form>
+    {# StatCard: Active Drafts #}
+    <div class="p-6 border border-ink flex flex-col justify-between h-40 bg-paper hover:bg-ink/5 transition-colors">
+        <div class="flex justify-between items-start">
+            <span class="font-mono text-xs uppercase tracking-widest font-bold opacity-70">Active Drafts</span>
+            <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
-        <button class="filter-btn mono" type="button" id="advancedFiltersToggle" aria-expanded="false" aria-controls="advancedFiltersPanel">
-            <i class="fas fa-sliders-h"></i> Advanced_Filters
-        </button>
+        <div>
+            <div class="flex items-baseline gap-2">
+                <div class="font-serif text-6xl font-medium">{{ draft_count|default:"0" }}</div>
+            </div>
+        </div>
     </div>
 
-    <div class="advanced-filters-panel{% if status_filter %} is-open{% endif %}" id="advancedFiltersPanel">
-        <form method="get" class="advanced-filters-form">
-            <div class="advanced-filter-group">
-                <label class="mono" for="dashboardSearchFilter">Search</label>
-                <input
-                    id="dashboardSearchFilter"
-                    type="text"
-                    name="search"
-                    class="search-input mono"
-                    placeholder="Patient name or reference ID"
-                    value="{{ search_query }}"
-                >
+    {# StatCard: Finalized #}
+    <div class="p-6 border border-ink flex flex-col justify-between h-40 bg-paper hover:bg-ink/5 transition-colors">
+        <div class="flex justify-between items-start">
+            <span class="font-mono text-xs uppercase tracking-widest font-bold opacity-70">Finalized</span>
+            <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <div>
+            <div class="flex items-baseline gap-2">
+                <div class="font-serif text-6xl font-medium">{{ complete_count|default:"0" }}</div>
             </div>
-            <div class="advanced-filter-group">
-                <label class="mono" for="dashboardStatusFilter">Status</label>
-                <select id="dashboardStatusFilter" name="status" class="advanced-filter-select mono">
-                    <option value="">All statuses</option>
-                    <option value="draft" {% if status_filter == 'draft' %}selected{% endif %}>Draft</option>
-                    <option value="complete" {% if status_filter == 'complete' %}selected{% endif %}>Complete</option>
-                </select>
-            </div>
-            <div class="advanced-filter-group advanced-filter-actions">
-                <button type="submit" class="filter-btn filter-btn-primary mono">Apply Filters</button>
-                <a href="{% url 'case_paper_dashboard' %}" class="filter-btn filter-btn-secondary mono">Reset</a>
-            </div>
+        </div>
+    </div>
+
+    {# Primary Action Card #}
+    <a href="{% url 'case_paper_new' %}" class="p-6 border-2 border-ink flex flex-col justify-between h-40 bg-accent text-paper group cursor-pointer hover:bg-accent/90 transition-all shadow-[4px_4px_0px_0px_rgba(10,10,10,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
+        <div class="flex justify-between items-start">
+            <span class="font-mono text-xs uppercase tracking-widest font-bold">Primary Action</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+        </div>
+        <div>
+            <h2 class="font-serif text-3xl font-bold italic leading-tight">Create New<br/>Case Paper</h2>
+            <p class="font-mono text-[9px] uppercase mt-2 opacity-70 tracking-widest">Initialize Clinical Protocol</p>
+        </div>
+    </a>
+</div>
+
+{# Middle Section: Search & Filters #}
+<div class="flex flex-col md:flex-row gap-4 items-stretch">
+    <div class="relative flex-1">
+        <form method="get" class="h-full">
+            <svg class="absolute left-4 top-1/2 -translate-y-1/2 opacity-30 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <input
+              type="text"
+              name="search"
+              placeholder="SEARCH_BY_PATIENT_NAME_OR_REF_ID..."
+              class="w-full h-full bg-paper border-2 border-ink py-3 pl-12 pr-4 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent transition-all"
+              value="{{ search_query|default:'' }}"
+            />
         </form>
     </div>
+    <button class="px-6 border-2 border-ink bg-paper font-mono text-xs uppercase font-bold flex items-center gap-2 hover:bg-ink hover:text-paper transition-all">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L16 11.414V17l-4 4v-9.586L3.293 6.707A1 1 0 013 6V4z"></path></svg>
+        Advanced_Filters
+    </button>
+</div>
 
-    <div class="table-header">
-        <div class="table-col-id">Ref_ID</div>
-        <div class="table-col-patient">Patient_Identity</div>
-        <div class="table-col-date">Archive_Date</div>
-        <div class="table-col-practitioner">Practitioner</div>
-        <div class="table-col-status">Status_Level</div>
-        <div class="table-col-actions"></div>
+{# Main Data Grid #}
+<div class="border-2 border-ink bg-paper shadow-sm">
+    <div class="hidden md:grid md:grid-cols-[80px_1.8fr_1fr_1fr_120px_60px] border-b-2 border-ink bg-ink text-paper sticky top-0 z-10">
+        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Ref_ID</div>
+        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Patient_Identity</div>
+        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Archive_Date</div>
+        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Practitioner</div>
+        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Status_Level</div>
+        <div class="p-3"></div>
     </div>
 
-    <div class="table-body">
+    <div class="flex flex-col min-h-[400px]">
         {% for case in cases %}
-        <div class="table-row">
-            <div class="table-col-id mono">{{ case.case_id }}</div>
-            <div class="table-col-patient">
-                <div class="serif">{{ case.preliminary.patient_name|default:"Unknown Patient" }}</div>
-                <div class="mono small-text"></div>
+        <a href="{% url 'case_paper_view' case.case_id %}" class="group block md:grid md:grid-cols-[80px_1.8fr_1fr_1fr_120px_60px] border-b-2 border-ink hover:bg-accent/5 transition-all cursor-pointer relative p-4 md:p-0">
+            <div class="md:p-3 md:border-r border-ink font-mono text-[10px] flex items-center opacity-50 mb-1 md:mb-0"><span class="md:hidden font-bold mr-2 text-ink">REF:</span>{{ case.case_id }}</div>
+            <div class="md:p-3 md:border-r border-ink flex flex-col justify-center mb-2 md:mb-0 pr-6">
+                <span class="font-serif text-lg font-semibold tracking-tight group-hover:text-accent transition-colors">{{ case.preliminary.patient_name|default:"Unknown Patient" }}</span>
+                <span class="font-mono text-[8px] opacity-40 uppercase">Patient_Record_Verified</span>
             </div>
-            <div class="table-col-date mono">{{ case.created_at|date:"Y.m.d" }}</div>
-            <div class="table-col-practitioner mono">Dr. {{ user.physician_name }}</div>
-            <div class="table-col-status">
-                <span class="status-badge {% if case.status == 'complete' %}final{% else %}draft{% endif %}">
+            <div class="md:p-3 md:border-r border-ink font-mono text-[10px] flex items-center mb-1 md:mb-0"><span class="md:hidden font-bold mr-2 text-ink/70">DATE:</span>{{ case.created_at|date:"Y.m.d" }}</div>
+            <div class="md:p-3 md:border-r border-ink flex items-center text-[11px] opacity-70 italic mb-2 md:mb-0"><span class="md:hidden font-bold mr-2 not-italic text-ink/70">DR:</span>Dr. {{ case.physician.physician_name|default:"Abhay" }}</div>
+            <div class="md:p-3 md:border-r border-ink flex items-center gap-2 mb-2 md:mb-0">
+                <span class="font-mono text-[9px] px-2 py-0.5 border
+                    {% if case.status == 'complete' %}bg-accent text-paper border-accent
+                    {% elif case.status == 'pending' %}bg-ink text-paper border-ink
+                    {% else %}border-ink opacity-60{% endif %}">
                     {{ case.status|upper }}
                 </span>
+                {# You can add priority logic here if it exists in your model #}
             </div>
-            <div class="table-col-actions">
-                <a href="{% url 'case_paper_view' case.case_id %}" class="action-btn" title="View">
-                    <i class="fas fa-eye"></i>
-                </a>
-                <a href="{% url 'case_paper_view' case.case_id %}?print=1" class="action-btn action-btn-print" title="Print" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-print"></i>
-                </a>
+            <div class="absolute right-4 top-1/2 -translate-y-1/2 md:relative md:right-auto md:top-auto md:translate-y-0 md:p-3 flex items-center justify-center">
+                <svg class="w-5 h-5 md:w-3.5 md:h-3.5 opacity-50 md:opacity-20 group-hover:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </div>
-        </div>
+        </a>
         {% empty %}
-        <div class="table-row empty">
-            <div style="text-align: center; padding: 40px; color: var(--text-muted); grid-column: 1/-1;">
-                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; opacity: 0.3;"></i>
-                <p>No case papers found. Create one to get started.</p>
+        <div class="flex items-center justify-center text-center p-10 min-h-[400px]">
+             <div class="flex flex-col items-center justify-center text-center text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 mb-4">
+                    <path d="M22 10v6M2 10.21V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3.79"/>
+                    <path d="m22 10-8.29-7.24a2 2 0 0 0-2.82 0L2 10"/>
+                    <path d="M12 22V12"/>
+                </svg>
+                <h3 class="text-lg font-serif mb-2">No Case Papers Found</h3>
+                <p class="font-mono text-sm text-gray-500">Get started by creating a new case paper.</p>
+                <a href="{% url 'case_paper_new' %}" class="mt-4 px-4 py-2 bg-accent text-paper font-mono text-xs uppercase font-bold hover:bg-accent/90 transition-colors">
+                    Create New Case Paper
+                </a>
             </div>
         </div>
         {% endfor %}
     </div>
+
+    {# Table Footer / Pagination - Basic version #}
+    <div class="h-10 flex items-center justify-between px-4 bg-ink/5 border-t-2 border-ink">
+        <div class="font-mono text-[10px] opacity-60 font-bold uppercase tracking-tighter">Total_Records: {{ total_count|default:"0" }}</div>
+        {# Pagination logic would go here if needed #}
+    </div>
+</div>
 {% endblock %}
