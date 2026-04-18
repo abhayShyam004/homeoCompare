@@ -151,7 +151,7 @@ body {
   font-size: 13px;
   font-weight: 600;
   padding: 11px 24px;
-  border: 1px solid var(--color-accent);
+  border: var(--border-width) solid var(--border-default);
   border-radius: 2px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -219,7 +219,7 @@ body {
 .cp-stat-icon-box {
   width: 48px;
   height: 48px;
-  border: 1px solid var(--border-accent);
+  border: var(--border-width) solid var(--border-default);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -929,7 +929,7 @@ body {
 
 .cp-subsection-divider {
   border: none;
-  border-top: 1px solid var(--border-muted);
+  border-top: var(--border-width) solid var(--border-default);
   margin: 20px 0;
 }
 
@@ -1048,12 +1048,12 @@ body {
 
 .cp-btn-add-item {
   background-color: transparent;
-  border: 1px solid var(--border-accent);
+  border: var(--border-width) solid var(--border-default);
   color: var(--color-accent);
   font-size: 13px;
   font-weight: 500;
   padding: 6px 14px;
-  border-radius: 6px;
+  border-radius: 0 !important;
   cursor: pointer;
   transition: all 0.15s ease;
   display: inline-flex;
