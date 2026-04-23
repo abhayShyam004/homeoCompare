@@ -1,0 +1,532 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if not_found %}Clinic Not Found{% else %}{{ clinic_user.clinic_name|default:clinic_user.physician_name }}{% endif %} | HomeoCompare</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.04)',
+                        'float': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+                        'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.02)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, transparent 70%);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Glass Navbar */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        /* Cover & Avatar */
+        .cover-banner {
+            background: linear-gradient(120deg, #1e3a8a 0%, #3b82f6 50%, #0ea5e9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .cover-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h40v40H0V0zm20 20h20v20H20V20zM0 20h20v20H0V20z" fill="%23ffffff" fill-opacity="0.03"/></svg>');
+        }
+        .avatar-ring {
+            background: white;
+            padding: 6px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Form Inputs */
+        .input-field {
+            width: 100%;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #0f172a;
+            transition: all 0.2s;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.01);
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+        .input-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Booking Widget */
+        .booking-widget {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: var(--tw-shadow-float);
+            border: 1px solid #f1f5f9;
+            position: relative;
+            overflow: hidden;
+        }
+        .booking-widget::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 6px;
+            background: linear-gradient(90deg, #3b82f6, #0ea5e9);
+        }
+
+        /* Buttons */
+        .btn-premium {
+            background: #1e3a8a;
+            color: white;
+            font-weight: 600;
+            padding: 0.85rem 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            border: 1px solid #1e3a8a;
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+        }
+        .btn-premium:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(30, 58, 138, 0.3);
+        }
+        
+        /* Calendar UI */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .date-card {
+            min-width: 64px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 0.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #f8fafc;
+        }
+        .date-card.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+        }
+        .date-card:not(.active):hover {
+            border-color: #3b82f6;
+            background: #eff6ff;
+        }
+        .time-slot {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+            color: #475569;
+        }
+        .time-slot.active {
+            background: #0ea5e9;
+            border-color: #0ea5e9;
+            color: white;
+            box-shadow: 0 4px 10px rgba(14, 165, 233, 0.2);
+        }
+        .time-slot:not(.active):hover {
+            border-color: #0ea5e9;
+            color: #0ea5e9;
+            background: #f0f9ff;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+    
+    <!-- Glass Navbar -->
+    <nav class="glass-nav sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="{% static 'favicon_v4.ico' %}" alt="Logo" class="w-8 h-8 rounded-lg shadow-sm group-hover:scale-105 transition-transform">
+                <span class="font-bold text-xl tracking-tight text-slate-900">HomeoCompare</span>
+            </a>
+            <div class="flex items-center gap-4">
+                {% if user.is_authenticated %}
+                <a href="{% url 'clinic_dashboard' %}" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Go to Workspace</a>
+                {% else %}
+                <a href="{% url 'login' %}" class="text-sm font-semibold text-brand-600 bg-brand-50 px-4 py-2 rounded-lg hover:bg-brand-100 transition-colors">Sign In</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pb-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-8">
+            
+            {% if not_found %}
+                <!-- 404 State -->
+                <div class="bg-white rounded-3xl shadow-soft p-12 text-center max-w-2xl mx-auto mt-20 border border-slate-100">
+                    <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-slate-50 text-slate-300 mb-6 border border-slate-100 shadow-inner">
+                        <i class="fas fa-clinic-medical text-4xl"></i>
+                    </div>
+                    <h1 class="text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Clinic Not Available</h1>
+                    <p class="text-slate-500 text-lg mb-8 leading-relaxed max-w-md mx-auto">
+                        This public profile is currently disabled, hasn't been configured, or the link is invalid.
+                    </p>
+                    <a href="/" class="btn-premium inline-flex w-auto mx-auto">
+                        <i class="fas fa-arrow-left"></i> Return to HomeoCompare
+                    </a>
+                </div>
+            {% else %}
+                
+                <!-- Messages -->
+                {% if messages %}
+                    <div class="space-y-3 mb-6">
+                        {% for message in messages %}
+                        <div class="rounded-xl p-4 text-sm font-medium flex items-center gap-3 shadow-sm border
+                            {% if message.tags == 'success' %}bg-emerald-50 text-emerald-800 border-emerald-200
+                            {% elif message.tags == 'error' %}bg-rose-50 text-rose-800 border-rose-200
+                            {% else %}bg-blue-50 text-blue-800 border-blue-200{% endif %}">
+                            {% if message.tags == 'success' %}<i class="fas fa-check-circle text-lg"></i>
+                            {% elif message.tags == 'error' %}<i class="fas fa-exclamation-circle text-lg"></i>
+                            {% else %}<i class="fas fa-info-circle text-lg"></i>{% endif %}
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <!-- Profile Header Structure -->
+                <div class="bg-white rounded-3xl shadow-soft border border-slate-100 mb-8 overflow-hidden">
+                    <!-- Cover Banner -->
+                    <div class="cover-banner h-48 sm:h-56 w-full relative">
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
+                            <i class="fas fa-shield-check"></i> Verified Clinic
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Info -->
+                    <div class="px-6 sm:px-10 pb-8 relative">
+                        <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-end -mt-16 sm:-mt-20 mb-6">
+                            <!-- Avatar -->
+                            <div class="avatar-ring z-10 relative">
+                                <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden bg-gradient-to-br from-white to-slate-100">
+                                    {% if clinic_user.profile_photo %}
+                                    <img src="{{ clinic_user.profile_photo.url }}" alt="{{ clinic_user.physician_name }}" class="w-full h-full object-cover">
+                                    {% else %}
+                                    <i class="fas fa-user-md text-5xl sm:text-6xl text-slate-300 mt-4"></i>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <!-- Title & Name -->
+                            <div class="flex-1 pt-4 sm:pt-0 pb-2">
+                                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-1">
+                                    {{ clinic_user.clinic_name|default:'Clinic Profile' }}
+                                </h1>
+                                <h2 class="text-xl font-semibold text-brand-600 flex items-center gap-2">
+                                    Dr. {{ clinic_user.physician_name|default:clinic_user.username }}
+                                    <span class="text-slate-400 font-normal text-lg">· {{ clinic_user.specialization|default:'General Practice' }}</span>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <!-- Contact & Address Row -->
+                        <div class="grid md:grid-cols-2 gap-6 bg-slate-50/50 rounded-2xl p-6 border border-slate-100">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Location</h3>
+                                    <p class="text-slate-700 font-medium leading-relaxed font-inter">
+                                        {{ clinic_user.address|default:'Address will be updated soon.' }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3 justify-center">
+                                {% if workspace.show_phone_public %}
+                                <a href="tel:{{ clinic_user.contact_number }}" class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl hover:border-brand-300 hover:shadow-sm transition-all group">
+                                    <div class="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-slate-500 group-hover:text-brand-600 group-hover:bg-brand-50 transition-colors">
+                                        <i class="fas fa-phone-alt text-sm"></i>
+                                    </div>
+                                    <span class="font-semibold text-slate-700 font-inter">{{ clinic_user.contact_number|default:'N/A' }}</span>
+                                </a>
+                                {% endif %}
+                                {% if workspace.show_email_public %}
+                                <a href="mailto:{{ clinic_user.email }}" class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl hover:border-brand-300 hover:shadow-sm transition-all group">
+                                    <div class="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-slate-500 group-hover:text-brand-600 group-hover:bg-brand-50 transition-colors">
+                                        <i class="fas fa-envelope text-sm"></i>
+                                    </div>
+                                    <span class="font-semibold text-slate-700 font-inter">{{ clinic_user.email|default:'N/A' }}</span>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Split -->
+                <div class="grid lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Left: Services -->
+                    <div class="lg:col-span-4 xl:col-span-4">
+                        <div class="flex items-center gap-3 mb-6 px-2">
+                            <h2 class="text-2xl font-extrabold text-slate-900">Clinical Services</h2>
+                            <div class="h-px bg-slate-200 flex-1 ml-4"></div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 gap-4">
+                            {% for t in recent_templates %}
+                            <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all group cursor-default relative overflow-hidden">
+                                <div class="absolute top-0 left-0 w-1 h-full bg-brand-500 transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
+                                <div class="text-brand-600 mb-3 bg-brand-50 w-10 h-10 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-notes-medical text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg mb-1 group-hover:text-brand-700 transition-colors">{{ t.name }}</h3>
+                                <div class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-50 inline-block px-2 py-1 rounded-md">{{ t.specialty }}</div>
+                            </div>
+                            {% empty %}
+                            <div class="col-span-full text-center py-12 px-4 rounded-3xl border border-dashed border-slate-300 bg-white">
+                                <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mx-auto mb-4 text-slate-300 shadow-inner">
+                                    <i class="fas fa-clipboard-list text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-700 mb-1">No Services Listed</h3>
+                                <p class="text-slate-500 font-inter text-sm">Service list will be published soon by the clinic.</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Right: Booking Widget -->
+                    <div class="lg:col-span-8 xl:col-span-8 sticky top-24">
+                        <div class="booking-widget p-6 sm:p-8 lg:p-10">
+                            <div class="mb-8">
+                                <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Book Appointment</h2>
+                                <p class="text-base text-slate-500 font-inter">Request a consultation with Dr. {{ clinic_user.physician_name|default:clinic_user.username }}</p>
+                            </div>
+                            
+                            {% if workspace.allow_public_booking_requests %}
+                            <form method="post" class="space-y-6">
+                                {% csrf_token %}
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="input-label">Patient Name <span class="text-rose-500">*</span></label>
+                                        <div class="relative">
+                                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                                                <i class="fas fa-user text-sm"></i>
+                                            </div>
+                                            <input type="text" name="patient_name" required class="input-field pl-11 py-3" placeholder="Full name" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="input-label">Phone Number <span class="text-rose-500">*</span></label>
+                                        <div class="relative">
+                                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                                                <i class="fas fa-phone-alt text-sm"></i>
+                                            </div>
+                                            <input type="tel" name="phone" required class="input-field pl-11 py-3" placeholder="Contact number" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="pt-2 border-t border-slate-100">
+                                    <label class="input-label mb-3 text-[13px]">Select Date & Time <span class="text-rose-500">*</span></label>
+                                    
+                                    <!-- Date Strip -->
+                                    <div class="flex gap-3 overflow-x-auto pb-4 mb-4 hide-scrollbar" id="dateStrip">
+                                        <!-- Populated via JS -->
+                                    </div>
+                                    
+                                    <!-- Time Slots -->
+                                    <div id="timeSlotsContainer" class="hidden">
+                                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3" id="timeSlots">
+                                            <!-- Populated via JS -->
+                                        </div>
+                                    </div>
+                                    
+                                    <input type="hidden" name="requested_date" id="selectedDateTime" required>
+                                </div>
+                                
+                                <div class="pt-2 border-t border-slate-100">
+                                    <label class="input-label mb-2 text-[13px]">Main Concern</label>
+                                    <textarea name="concern" rows="3" class="input-field resize-none py-3" placeholder="Briefly describe your symptoms or reason for visit..."></textarea>
+                                </div>
+                                
+                                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6">
+                                    <div class="flex items-start gap-3 text-xs text-slate-500 font-inter bg-slate-50 p-4 rounded-xl border border-slate-100 max-w-sm">
+                                        <i class="fas fa-info-circle mt-0.5 text-brand-400 shrink-0 text-base"></i>
+                                        <p class="leading-relaxed">The clinic will contact you via phone or email to confirm the exact time and availability.</p>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn-premium w-full sm:w-auto px-10 py-4 text-base shadow-brand">
+                                        <i class="fas fa-calendar-check text-white/80 mr-2"></i> Send Request
+                                    </button>
+                                </div>
+                            </form>
+                            {% else %}
+                            <div class="text-center py-10 px-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <div class="inline-flex w-14 h-14 bg-white shadow-sm border border-slate-100 text-slate-400 rounded-2xl items-center justify-center mb-4">
+                                    <i class="fas fa-calendar-times text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-2">Booking Disabled</h3>
+                                <p class="text-sm text-slate-500 font-inter">Please contact the clinic directly via phone or email to schedule an appointment.</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <script>
+        // Calendar Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateStrip = document.getElementById('dateStrip');
+            const timeSlotsContainer = document.getElementById('timeSlotsContainer');
+            const timeSlots = document.getElementById('timeSlots');
+            const hiddenInput = document.getElementById('selectedDateTime');
+            
+            if (!dateStrip) return;
+
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            
+            // Standard slots for mockup
+            const slots = ['09:00 AM', '10:00 AM', '11:30 AM', '02:00 PM', '03:30 PM', '05:00 PM'];
+            
+            let selectedDateObj = null;
+            let selectedTimeString = null;
+
+            // Generate next 14 days
+            const today = new Date();
+            for (let i = 0; i < 14; i++) {
+                const d = new Date();
+                d.setDate(today.getDate() + i);
+                
+                // Skip Sundays (optional, but realistic for clinics)
+                if (d.getDay() === 0) continue;
+
+                const card = document.createElement('div');
+                card.className = 'date-card flex-shrink-0';
+                
+                const dayName = i === 0 ? 'Today' : (i === 1 ? 'Tmrw' : days[d.getDay()]);
+                const isSelected = i === 0;
+
+                card.innerHTML = `
+                    <div class="text-[10px] font-bold uppercase tracking-wider opacity-80 mb-1">${dayName}</div>
+                    <div class="text-xl font-extrabold">${d.getDate()}</div>
+                    <div class="text-[10px] font-bold uppercase">${months[d.getMonth()]}</div>
+                `;
+                
+                card.addEventListener('click', () => {
+                    document.querySelectorAll('.date-card').forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    selectedDateObj = d;
+                    renderTimeSlots();
+                });
+
+                dateStrip.appendChild(card);
+            }
+
+            function renderTimeSlots() {
+                timeSlotsContainer.classList.remove('hidden');
+                timeSlots.innerHTML = '';
+                
+                slots.forEach(time => {
+                    const slot = document.createElement('div');
+                    slot.className = 'time-slot';
+                    slot.textContent = time;
+                    
+                    if (time === selectedTimeString) {
+                        slot.classList.add('active');
+                    }
+                    
+                    slot.addEventListener('click', () => {
+                        document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
+                        slot.classList.add('active');
+                        selectedTimeString = time;
+                        updateHiddenInput();
+                    });
+                    
+                    timeSlots.appendChild(slot);
+                });
+                updateHiddenInput();
+            }
+
+            function updateHiddenInput() {
+                if (selectedDateObj && selectedTimeString) {
+                    const month = String(selectedDateObj.getMonth() + 1).padStart(2, '0');
+                    const day = String(selectedDateObj.getDate()).padStart(2, '0');
+                    const dateStr = `${selectedDateObj.getFullYear()}-${month}-${day}`;
+                    hiddenInput.value = `${dateStr} at ${selectedTimeString}`;
+                } else if (selectedDateObj) {
+                    const month = String(selectedDateObj.getMonth() + 1).padStart(2, '0');
+                    const day = String(selectedDateObj.getDate()).padStart(2, '0');
+                    hiddenInput.value = `${selectedDateObj.getFullYear()}-${month}-${day}`;
+                }
+            }
+            
+            // Initialize first card
+            const firstCard = dateStrip.querySelector('.date-card');
+            if (firstCard) {
+                firstCard.click();
+            }
+        });
+    </script>
+</body>
+</html>

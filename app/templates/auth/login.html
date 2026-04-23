@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     {% include 'auth/_auth_styles.html' %}
 </head>
-<body class="auth-premium auth-preload">
+<body class="auth-portal auth-preload">
     <div class="auth-intro" id="authIntro" aria-hidden="true">
         <div class="auth-intro-core">
             <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-intro-mark">
-            <div class="auth-intro-line mono">HOMEOCOMPARE PREMIUM CASE PAPER SUITE</div>
+            <div class="auth-intro-line mono">HOMEOCOMPARE CASE PAPER SUITE</div>
             <h1 class="serif">Clinical Precision, Elevated.</h1>
         </div>
     </div>
@@ -27,7 +27,7 @@
                 <span>HomeoCompare</span>
             </div>
             <div class="auth-header-copy">
-                <h1 class="serif">Premium Clinical Workspace</h1>
+                <h1 class="serif">Clinical Workspace</h1>
                 <p>Securely access your private case paper environment with enterprise-grade continuity and precision tooling.</p>
             </div>
             <ul class="auth-feature-list">
@@ -39,13 +39,12 @@
 
         <div class="auth-body">
             <div class="auth-panel-top">
-                <div class="auth-kicker mono"><i class="fas fa-lock"></i> Premium Access Portal</div>
                 <h2 class="serif">Welcome Back</h2>
                 <p>Enter your email to receive a verification code and continue to your professional dashboard.</p>
             </div>
 
-            <!-- <div class="alert alert-error" id="errorAlert"></div>
-            <div class="alert alert-success" id="successAlert"></div> -->
+            <div class="alert alert-error" id="errorAlert"></div>
+            <div class="alert alert-success" id="successAlert"></div>
 
             <div id="loginStep" class="login-step active">
                 <form id="loginForm" onsubmit="handleLoginSubmit(event)">
@@ -68,7 +67,7 @@
                 </form>
 
                 <div class="signup-link">
-                    New to HomeoCompare? <a href="{% url 'signup' %}">Create your premium access</a>
+                    New to HomeoCompare? <a href="{% url 'signup' %}">Create your access</a>
                 </div>
 
                 <div class="divider"><span>OR</span></div>
@@ -129,10 +128,27 @@
             }, 1400);
         }
 
-        // Code Input Handler - Auto-focus next input
+        function distributeCodeAcrossInputs(rawValue) {
+            const digits = (rawValue || '').replace(/\D/g, '').slice(0, 6).split('');
+            const inputs = Array.from(document.querySelectorAll('.code-input'));
+            inputs.forEach((input, idx) => {
+                input.value = digits[idx] || '';
+            });
+            const nextIndex = Math.min(digits.length, inputs.length - 1);
+            if (inputs[nextIndex]) {
+                inputs[nextIndex].focus();
+            }
+        }
+
+        // Code Input Handler - Auto-focus next input + OTP paste/autofill support
         document.querySelectorAll('.code-input').forEach((input, index) => {
             input.addEventListener('input', (e) => {
-                if (e.target.value && index < 5) {
+                const value = e.target.value || '';
+                if (value.length > 1) {
+                    distributeCodeAcrossInputs(value);
+                    return;
+                }
+                if (value && index < 5) {
                     document.querySelectorAll('.code-input')[index + 1].focus();
                 }
             });
@@ -143,6 +159,18 @@
                 }
             });
         });
+
+        const codeInputWrapper = document.getElementById('codeInputWrapper');
+        if (codeInputWrapper) {
+            codeInputWrapper.addEventListener('paste', function(e) {
+                const clipboard = e.clipboardData || window.clipboardData;
+                const pasted = clipboard ? clipboard.getData('text') : '';
+                if (/\d{4,6}/.test(pasted)) {
+                    e.preventDefault();
+                    distributeCodeAcrossInputs(pasted);
+                }
+            });
+        }
 
         function showAlert(message, type = 'error') {
             const alertEl = document.getElementById(`${type}Alert`);
@@ -202,9 +230,17 @@
 
         function handleVerificationSubmit(event) {
             event.preventDefault();
+            if (event && typeof event.stopPropagation === 'function') {
+                event.stopPropagation();
+            }
             const codeInputs = document.querySelectorAll('.code-input');
             const code = Array.from(codeInputs).map(input => input.value).join('');
             const btn = document.getElementById('verifyBtn');
+
+            if (!currentUserId) {
+                showAlert('Session expired. Please request a new code.', 'error');
+                return;
+            }
 
             if (code.length !== 6) {
                 showAlert('Please enter all 6 digits', 'error');
@@ -289,6 +325,40 @@
         } else {
             runAuthIntro();
         }
+    </script>
+    <!-- Floating Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+
+    <script>
+        // === THEME INITIALIZATION ===
+        function initTheme() {
+            const theme = localStorage.getItem('theme') || 'light'; // default to light for auth pages
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        }
+        initTheme();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    const next = isDark ? 'light' : 'dark';
+                    if (next === 'dark') {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                    }
+                    localStorage.setItem('theme', next);
+                });
+            }
+        });
     </script>
 </body>
 </html>

@@ -1,46 +1,438 @@
 {% extends 'case_paper/base.html' %}
+{% load static %}
 
-{% block main_content %}
-    <div style="max-width: 980px; margin:auto;">
-        <h2 class="page-title serif">Patients</h2>
-        <form method="get" style="margin-bottom: 18px; display: flex; gap: 12px; align-items: center;">
-            <input type="text" name="search" class="search-input mono" placeholder="Search by patient name..." value="{{ request.GET.search }}" style="flex:1; padding: 8px 12px; border-radius: 0; border: 2px solid var(--border-default); box-shadow: 2px 2px 0px var(--border-default);">
-            <button type="submit" class="action-link" style="padding: 8px 18px; border-radius: 0; border: 2px solid var(--border-default); box-shadow: 2px 2px 0px var(--border-default);">Search</button>
-        </form>
-        <div class="stat-card">
-            <div class="stat-body">
-                <div class="overflow-x-auto w-full border-2 border-ink shadow-[4px_4px_0px_0px_rgba(10,10,10,1)] mb-4"><table style="width:100%; border-collapse:collapse;">
-                    <thead>
-                        <tr style="background:#f5f5f4;">
-                            <th class="mono" style="padding:8px; text-align:left;">Name</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Age</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Sex</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Contact</th>
-                            <th class="mono" style="padding:8px; text-align:left;">Total Cases</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for patient in patients %}
-                        <tr style="border-bottom:1px solid #eee;">
-                            <td class="serif" style="padding:8px;">{{ patient.name }}</td>
-                            <td class="mono" style="padding:8px;">{{ patient.age|default:'-' }}</td>
-                            <td class="mono" style="padding:8px;">{{ patient.sex|default:'-' }}</td>
-                            <td class="mono" style="padding:8px;">{{ patient.contact|default:'-' }}</td>
-                            <td class="mono" style="padding:8px;">{{ patient.total_cases|default:'1' }}</td>
-                        </tr>
-                        {% empty %}
-                        <tr>
-                            <td colspan="5" style="text-align:center; color:var(--text-muted); padding:32px;">
-                                <i class="fas fa-users" style="font-size: 32px; margin-bottom: 10px; opacity: 0.3;"></i>
-                                <p>No patients found.</p>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table></div>
-            </div>
-        </div>
-        <p style="margin-top:16px;"><a href="{% url 'case_paper_dashboard' %}" class="action-link">Back to Dashboard</a></p>
-    </div>
+{% block page_title_header %}Registration_Desk{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'case_paper_new' %}" class="ui-btn-primary">
+    Initialize New Case
+</a>
 {% endblock %}
 
+{% block content %}
+<div class="space-y-6">
+    {% if messages %}
+    <div class="space-y-2">
+        {% for message in messages %}
+        <div class="border-2 border-ink p-3 font-mono text-xs uppercase font-bold {% if message.tags == 'success' %}bg-accent/10{% else %}bg-red-50 text-red-700{% endif %}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <section class="border-2 border-ink bg-gradient-to-r from-accent-light to-paper p-6">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+            <div>
+                <nav class="ui-breadcrumb" aria-label="Breadcrumb">
+                    <a href="{% url 'clinic_dashboard' %}" class="ui-breadcrumb-chip">Clinic Home</a>
+                    <span class="ui-breadcrumb-sep">▸</span>
+                    <a href="{% url 'case_paper_patients' %}" class="ui-breadcrumb-chip">Registration Desk</a>
+                    <span class="ui-breadcrumb-sep">▸</span>
+                    <span class="ui-breadcrumb-current">{{ section_title }}</span>
+                </nav>
+                <h2 class="font-serif text-4xl font-bold">Registration Desk Workspace</h2>
+                <p class="font-mono text-sm opacity-70 mt-2 max-w-3xl">{{ section_subtitle }}</p>
+            </div>
+            <div class="font-mono text-[10px] uppercase opacity-70">Last Sync: {{ last_sync }}</div>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="border-2 border-ink bg-white p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Total Patients</div>
+            <div class="font-serif text-3xl font-bold">{{ total_patients }}</div>
+        </div>
+        <div class="border-2 border-ink bg-white p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Queue Today</div>
+            <div class="font-serif text-3xl font-bold">{{ appointments_today }}</div>
+        </div>
+        <div class="border-2 border-ink bg-white p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Live Queue</div>
+            <div class="font-serif text-3xl font-bold text-accent">{{ queue_live_count }}</div>
+        </div>
+        <div class="border-2 border-ink bg-white p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Paid This Month</div>
+            <div class="font-serif text-3xl font-bold">₹{{ month_revenue|floatformat:2 }}</div>
+        </div>
+    </section>
+
+    <section class="border-2 border-ink bg-paper p-3">
+        <div class="flex flex-wrap gap-2">
+            <a href="{% url 'case_paper_patients_registration' %}" class="{% if active_section == 'registration' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Smart Registration</a>
+            <a href="{% url 'case_paper_patients_queue' %}" class="{% if active_section == 'queue' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Token Queue</a>
+            <a href="{% url 'case_paper_patients_directory' %}" class="{% if active_section == 'directory' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Patient Directory</a>
+            <a href="{% url 'case_paper_patients_billing' %}" class="{% if active_section == 'billing' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Fast Invoicing</a>
+        </div>
+    </section>
+
+    <section class="grid lg:grid-cols-3 gap-6 {% if active_section != 'registration' %}hidden{% endif %}">
+        <div class="lg:col-span-2 border-2 border-ink bg-white">
+            <div class="px-4 py-3 border-b-2 border-ink flex items-center justify-between">
+                <h3 class="font-serif text-2xl font-bold">Smart Registration</h3>
+                <span class="font-mono text-[10px] uppercase opacity-60">Health Card auto-generated</span>
+            </div>
+            {% if registration_enabled %}
+            <form method="post" class="p-4 grid md:grid-cols-2 gap-3">
+                {% csrf_token %}
+                <input type="hidden" name="desk_action" value="register_patient">
+
+                <div class="md:col-span-2">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Patient Full Name *</label>
+                    <input type="text" name="full_name" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="Patient Name">
+                </div>
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Age</label>
+                    <input type="number" min="0" name="age" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="Years">
+                </div>
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Sex</label>
+                    <select name="sex" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Phone</label>
+                    <input type="text" name="phone" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="Primary mobile">
+                </div>
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">WhatsApp</label>
+                    <input type="text" name="whatsapp_number" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="WhatsApp number">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Email</label>
+                    <input type="email" name="email" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="patient@example.com">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Address</label>
+                    <textarea name="address" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></textarea>
+                </div>
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Allergies</label>
+                    <textarea name="allergies" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="Drug / food allergies"></textarea>
+                </div>
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Notes</label>
+                    <textarea name="notes" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="Quick registration note"></textarea>
+                </div>
+
+                <div class="md:col-span-2 flex justify-end">
+                    <button type="submit" class="px-4 py-2 border-2 border-ink bg-accent text-paper font-mono text-xs uppercase font-bold">Register Patient</button>
+                </div>
+            </form>
+            {% else %}
+            <div class="p-4 font-mono text-xs uppercase opacity-60">Smart registration is currently disabled from settings.</div>
+            {% endif %}
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-2 border-ink bg-white p-4">
+                <h4 class="font-serif text-lg font-bold mb-2">Clinic Branding</h4>
+                {% if branding_enabled %}
+                <div class="space-y-2 font-mono text-xs">
+                    <div><span class="opacity-60 uppercase text-[10px]">Clinic</span><br>{{ user.clinic_name|default:'Not set' }}</div>
+                    <div><span class="opacity-60 uppercase text-[10px]">Practitioner</span><br>Dr. {{ user.physician_name|default:'Not set' }}</div>
+                    <div><span class="opacity-60 uppercase text-[10px]">Contact</span><br>{{ user.contact_number|default:'Not set' }}</div>
+                    <div><span class="opacity-60 uppercase text-[10px]">Email</span><br>{{ user.email|default:'Not set' }}</div>
+                </div>
+                <a href="{% url 'case_paper_settings' %}" class="inline-block mt-3 px-3 py-2 border border-ink font-mono text-[10px] uppercase">Update Branding</a>
+                {% else %}
+                <p class="font-mono text-xs uppercase opacity-60">Clinic branding widget is disabled by admin settings.</p>
+                {% endif %}
+            </div>
+
+            <div class="border-2 border-ink bg-white p-4">
+                <h4 class="font-serif text-lg font-bold mb-3">Upcoming Agenda</h4>
+                <div class="space-y-2 max-h-72 overflow-y-auto">
+                    {% for appt in upcoming_appointments %}
+                    <div class="border border-ink/20 p-2 bg-paper/60">
+                        <div class="font-mono text-[10px] uppercase opacity-60">{{ appt.appointment_date }} {% if appt.appointment_time %}· {{ appt.appointment_time|time:'H:i' }}{% endif %}</div>
+                        <div class="font-serif font-bold">#{{ appt.token_number }} {{ appt.patient.full_name }}</div>
+                        <div class="font-mono text-[10px]">{{ appt.get_visit_type_display }} · {{ appt.get_status_display }}</div>
+                    </div>
+                    {% empty %}
+                    <div class="font-mono text-xs opacity-50 uppercase">No upcoming appointments.</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="border-2 border-ink bg-white p-4">
+                <h4 class="font-serif text-lg font-bold mb-3">Communication Access</h4>
+                {% if communication_enabled or whatsapp_enabled %}
+                <p class="font-mono text-[11px] opacity-70 mb-2">Use patient rows below for instant Email / WhatsApp actions.</p>
+                <div class="font-mono text-[10px] uppercase opacity-50">Supports registration outreach + follow-up reminders.</div>
+                {% else %}
+                <div class="font-mono text-xs uppercase opacity-60">Communication actions are disabled by admin settings.</div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="border-2 border-ink bg-white {% if active_section != 'queue' %}hidden{% endif %}">
+        <div class="px-4 py-3 border-b-2 border-ink flex items-center justify-between">
+            <h3 class="font-serif text-2xl font-bold">Appointments & Token Queue</h3>
+            <span class="font-mono text-[10px] uppercase opacity-60">Real-time OPD flow</span>
+        </div>
+        {% if queue_enabled %}
+        <form method="post" class="p-4 grid md:grid-cols-2 gap-3 border-b border-ink/20 bg-paper/60">
+            {% csrf_token %}
+            <input type="hidden" name="desk_action" value="create_appointment">
+            <div class="md:col-span-2">
+                <label class="font-mono text-[10px] uppercase font-bold opacity-60">Patient *</label>
+                <select name="patient_id" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                    <option value="">Select patient</option>
+                    {% for p in patients %}
+                    <option value="{{ p.id }}">{{ p.patient_code }} — {{ p.full_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label class="font-mono text-[10px] uppercase font-bold opacity-60">Date *</label>
+                <input type="date" name="appointment_date" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+            </div>
+            <div>
+                <label class="font-mono text-[10px] uppercase font-bold opacity-60">Time</label>
+                <input type="time" name="appointment_time" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+            </div>
+            <div>
+                <label class="font-mono text-[10px] uppercase font-bold opacity-60">Visit Type</label>
+                <select name="visit_type" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                    {% for value, label in visit_type_choices %}
+                    <option value="{{ value }}">{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label class="font-mono text-[10px] uppercase font-bold opacity-60">Chief Complaint</label>
+                <input type="text" name="chief_complaint" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="Short reason for visit">
+            </div>
+            <div class="md:col-span-2 flex justify-end">
+                <button type="submit" class="px-4 py-2 border-2 border-ink bg-ink text-paper font-mono text-xs uppercase font-bold">Create Appointment</button>
+            </div>
+        </form>
+        {% else %}
+        <div class="p-4 border-b border-ink/20 font-mono text-xs uppercase opacity-60">Token queue scheduling is currently disabled.</div>
+        {% endif %}
+
+        <div class="p-4 overflow-x-auto">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr class="text-left border-b-2 border-ink">
+                        <th class="py-2 font-mono text-[10px] uppercase">Token</th>
+                        <th class="py-2 font-mono text-[10px] uppercase">Patient</th>
+                        <th class="py-2 font-mono text-[10px] uppercase">Type</th>
+                        <th class="py-2 font-mono text-[10px] uppercase">Status</th>
+                        <th class="py-2 font-mono text-[10px] uppercase">Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in today_queue %}
+                    <tr class="border-b border-ink/10 hover:bg-accent/5">
+                        <td class="py-2 font-mono text-xs font-bold">#{{ item.token_number|default:'-' }}</td>
+                        <td class="py-2">
+                            <div class="font-serif font-bold">{{ item.patient.full_name }}</div>
+                            <div class="font-mono text-[10px] opacity-60">{{ item.patient.patient_code }}</div>
+                        </td>
+                        <td class="py-2 font-mono text-xs uppercase">{{ item.get_visit_type_display }}</td>
+                        <td class="py-2 font-mono text-xs uppercase">{{ item.get_status_display }}</td>
+                        <td class="py-2">
+                            {% if queue_enabled %}
+                            <form method="post" class="flex items-center gap-2">
+                                {% csrf_token %}
+                                <input type="hidden" name="desk_action" value="update_queue_status">
+                                <input type="hidden" name="appointment_id" value="{{ item.id }}">
+                                <select name="queue_status" class="border border-ink p-1 bg-paper font-mono text-[10px]">
+                                    {% for value, label in queue_status_choices %}
+                                    <option value="{{ value }}" {% if item.status == value %}selected{% endif %}>{{ label }}</option>
+                                    {% endfor %}
+                                </select>
+                                <button type="submit" class="px-2 py-1 border border-ink font-mono text-[10px] uppercase hover:bg-ink hover:text-paper">Apply</button>
+                            </form>
+                            {% else %}
+                            <span class="font-mono text-[10px] opacity-40 uppercase">Locked</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="py-8 text-center font-mono text-xs opacity-50 uppercase">No queue entries for today.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="border-2 border-ink bg-white {% if active_section != 'directory' %}hidden{% endif %}">
+        <div class="px-4 py-3 border-b-2 border-ink flex flex-col md:flex-row md:items-center gap-2 md:justify-between">
+            <h3 class="font-serif text-2xl font-bold">Patient Management</h3>
+            <form method="get" class="flex items-center gap-2 w-full md:w-auto">
+                <input type="text" name="search" value="{{ search_query|default:'' }}" placeholder="Search by name / code / phone" class="border-2 border-ink bg-paper p-2 font-mono text-xs w-full md:w-72">
+                <button type="submit" class="px-3 py-2 border-2 border-ink font-mono text-[10px] uppercase font-bold">Filter</button>
+            </form>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr class="bg-ink text-paper text-left">
+                        <th class="p-3 font-mono text-[10px] uppercase tracking-widest">Health Card</th>
+                        <th class="p-3 font-mono text-[10px] uppercase tracking-widest">Patient</th>
+                        <th class="p-3 font-mono text-[10px] uppercase tracking-widest">Contact</th>
+                        <th class="p-3 font-mono text-[10px] uppercase tracking-widest">Alerts</th>
+                        <th class="p-3 font-mono text-[10px] uppercase tracking-widest text-center">Access</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-ink/10">
+                    {% for p in patients %}
+                    <tr class="hover:bg-accent/5">
+                        <td class="p-3">
+                            <div class="font-mono text-[11px] font-bold">{{ p.patient_code }}</div>
+                            <div class="font-mono text-[9px] opacity-60 uppercase">{{ p.created_at|date:'d M Y' }}</div>
+                        </td>
+                        <td class="p-3">
+                            <div class="font-serif font-bold">{{ p.full_name }}</div>
+                            <div class="font-mono text-[10px] opacity-60">{{ p.age|default:'-' }}y / {{ p.get_sex_display }}</div>
+                        </td>
+                        <td class="p-3 font-mono text-xs">
+                            <div>{{ p.phone|default:'-' }}</div>
+                            <div>{{ p.email|default:'-' }}</div>
+                            <div>{{ p.whatsapp_number|default:'-' }}</div>
+                        </td>
+                        <td class="p-3 font-mono text-xs">
+                            {% if p.allergies %}
+                                <span class="inline-block px-2 py-1 border border-red-700 text-red-700 text-[10px] uppercase">Allergy</span>
+                                <div class="mt-1 text-[10px] opacity-70 truncate max-w-[220px]">{{ p.allergies }}</div>
+                            {% else %}
+                                <span class="opacity-40">No alerts</span>
+                            {% endif %}
+                        </td>
+                        <td class="p-3 text-center">
+                            <div class="flex justify-center gap-2">
+                                {% if communication_enabled and p.email %}
+                                <a href="mailto:{{ p.email }}" class="px-2 py-1 border border-ink font-mono text-[9px] uppercase">Email</a>
+                                {% endif %}
+                                {% if whatsapp_enabled and p.whatsapp_number %}
+                                <a href="https://wa.me/{{ p.whatsapp_number|cut:'+'|cut:' ' }}" target="_blank" class="px-2 py-1 border border-accent text-accent font-mono text-[9px] uppercase">WhatsApp</a>
+                                {% endif %}
+                                <a href="{% url 'case_paper_new' %}?patient_name={{ p.full_name|urlencode }}" class="px-2 py-1 border border-ink font-mono text-[9px] uppercase">New Case</a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="p-10 text-center font-mono text-xs uppercase opacity-50">No patient profiles found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="grid lg:grid-cols-2 gap-6 {% if active_section != 'billing' %}hidden{% endif %}">
+        <div class="border-2 border-ink bg-white">
+            <div class="px-4 py-3 border-b-2 border-ink">
+                <h3 class="font-serif text-2xl font-bold">Fast Invoicing</h3>
+            </div>
+            {% if invoicing_enabled %}
+            <form method="post" class="p-4 grid gap-3">
+                {% csrf_token %}
+                <input type="hidden" name="desk_action" value="create_invoice">
+
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Patient *</label>
+                    <select name="invoice_patient_id" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                        <option value="">Select patient</option>
+                        {% for p in patients %}
+                        <option value="{{ p.id }}">{{ p.patient_code }} — {{ p.full_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Linked Appointment (optional)</label>
+                    <select name="invoice_appointment_id" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                        <option value="">None</option>
+                        {% for appt in upcoming_appointments %}
+                        <option value="{{ appt.id }}">#{{ appt.token_number }} — {{ appt.patient.full_name }} ({{ appt.appointment_date }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-2">
+                    <div>
+                        <label class="font-mono text-[10px] uppercase font-bold opacity-60">Amount *</label>
+                        <input type="number" step="0.01" min="0" name="invoice_amount" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="0.00">
+                    </div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase font-bold opacity-60">Tax %</label>
+                        <input type="number" step="0.01" min="0" name="invoice_tax_percent" value="0" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                    </div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase font-bold opacity-60">Discount</label>
+                        <input type="number" step="0.01" min="0" name="invoice_discount" value="0" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-2">
+                    <div>
+                        <label class="font-mono text-[10px] uppercase font-bold opacity-60">Payment Status</label>
+                        <select name="invoice_payment_status" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                            {% for value, label in invoice_status_choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase font-bold opacity-60">Payment Mode</label>
+                        <select name="invoice_payment_mode" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                            {% for value, label in invoice_mode_choices %}
+                            <option value="{{ value }}">{{ label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-60">Notes</label>
+                    <textarea name="invoice_notes" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="Invoice memo / remarks"></textarea>
+                </div>
+
+                <div class="flex justify-end">
+                    <button type="submit" class="px-4 py-2 border-2 border-ink bg-accent text-paper font-mono text-xs uppercase font-bold">Generate Invoice</button>
+                </div>
+            </form>
+            {% else %}
+            <div class="p-4 font-mono text-xs uppercase opacity-60">Fast invoicing is disabled by admin settings.</div>
+            {% endif %}
+        </div>
+
+        <div class="border-2 border-ink bg-white">
+            <div class="px-4 py-3 border-b-2 border-ink">
+                <h3 class="font-serif text-2xl font-bold">Recent Invoices</h3>
+            </div>
+            <div class="p-4 max-h-[480px] overflow-y-auto space-y-2">
+                {% for inv in recent_invoices %}
+                <div class="border border-ink/20 p-3 bg-paper/60">
+                    <div class="flex justify-between gap-2 items-start">
+                        <div>
+                            <div class="font-mono text-[10px] uppercase opacity-60">{{ inv.invoice_number }}</div>
+                            <div class="font-serif font-bold">{{ inv.patient.full_name }}</div>
+                            <div class="font-mono text-[10px] opacity-70">{{ inv.created_at|date:'d M Y · H:i' }}</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-mono text-xs font-bold">₹{{ inv.total_amount|floatformat:2 }}</div>
+                            <div class="font-mono text-[10px] uppercase {% if inv.payment_status == 'paid' %}text-accent{% else %}text-red-700{% endif %}">{{ inv.get_payment_status_display }}</div>
+                        </div>
+                    </div>
+                    <div class="mt-1 font-mono text-[10px] opacity-70">Mode: {{ inv.get_payment_mode_display }}{% if inv.appointment %} · Token #{{ inv.appointment.token_number }}{% endif %}</div>
+                </div>
+                {% empty %}
+                <div class="font-mono text-xs uppercase opacity-50">No invoices generated yet.</div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

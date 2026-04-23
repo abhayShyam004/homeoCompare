@@ -12,6 +12,7 @@ from urllib.parse import urlencode, quote
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib.auth.hashers import make_password, check_password
 from django.conf import settings
 from django.utils import timezone
@@ -97,6 +98,7 @@ def send_verification_email(email, code):
 
 # ============= LOGIN/SIGNUP VIEWS =============
 
+@ensure_csrf_cookie
 @require_http_methods(["GET", "POST"])
 def login(request):
     """Email login - GET: show form, POST: send verification code"""
@@ -117,7 +119,7 @@ def login(request):
         except ValidationError:
             return JsonResponse({'status': 'error', 'message': 'Invalid email format'}, status=400)
 
-        from app.email_utils import is_email_service_configured
+        from app.email_utils import is_email_service_configured, send_email_async
         if not is_email_service_configured():
             return JsonResponse({'status': 'error', 'message': 'Email service is temporarily unavailable. Please try again shortly.'}, status=503)
         
@@ -145,25 +147,54 @@ def login(request):
         EmailVerificationCode.objects.filter(user=user, email=email, is_used=False).delete()
         
         # Create new verification code
-        verification = EmailVerificationCode.objects.create(
+        EmailVerificationCode.objects.create(
             user=user,
             email=email,
             code=code,
             expires_at=expiry_time
         )
         
-        # Send verification email
-        if send_verification_email(email, code):
+        # Send verification email asynchronously to avoid timeouts
+        subject = "HomeoCompare - Your Login Verification Code"
+        html_message = f"""
+        <html>
+            <body style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
+                <div style="background-color: white; padding: 30px; border-radius: 8px; max-width: 500px; margin: 0 auto;">
+                    <h2 style="color: #2c3e50; margin-bottom: 20px;">Your Verification Code</h2>
+                    <p style="color: #555; font-size: 16px; margin-bottom: 20px;">
+                        Use the following 6-digit code to complete your login to HomeoCompare:
+                    </p>
+                    <div style="background-color: #f0f0f0; padding: 20px; border-radius: 6px; text-align: center; margin-bottom: 20px;">
+                        <p style="font-size: 32px; font-weight: bold; color: #007bff; margin: 0; letter-spacing: 5px;">
+                            {code}
+                        </p>
+                    </div>
+                    <p style="color: #777; font-size: 14px; margin-bottom: 10px;">
+                        <strong>Valid for 10 minutes only</strong>
+                    </p>
+                    <p style="color: #777; font-size: 14px; margin-bottom: 20px;">
+                        If you didn't attempt to log in, please ignore this email and ensure your password is secure.
+                    </p>
+                    <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
+                    <p style="color: #999; font-size: 12px; margin: 0;">
+                        © 2026 HomeoCompare. All rights reserved.
+                    </p>
+                </div>
+            </body>
+        </html>
+        """
+        plain_message = f"Your HomeoCompare verification code is: {code}\n\nValid for 10 minutes."
+
+        if send_email_async(subject, plain_message, email, html_message):
             return JsonResponse({
                 'status': 'success',
-                'message': f'Verification code sent to {email}',
+                'message': f'Verification code dispatched to {email}',
                 'email': email,
                 'user_id': user.id,
                 'need_verification': True
             })
         else:
-            verification.delete()
-            return JsonResponse({'status': 'error', 'message': 'Failed to send verification code. Please try again.'}, status=500)
+            return JsonResponse({'status': 'error', 'message': 'Failed to initiate email delivery. Please try again.'}, status=500)
     
     except json.JSONDecodeError:
         return JsonResponse({'status': 'error', 'message': 'Invalid request format'}, status=400)
@@ -172,6 +203,7 @@ def login(request):
         return JsonResponse({'status': 'error', 'message': 'An error occurred. Please try again.'}, status=500)
 
 
+@ensure_csrf_cookie
 @require_http_methods(["GET", "POST"])
 def signup(request):
     """Email registration - GET: show form, POST: create account with email"""
@@ -192,7 +224,7 @@ def signup(request):
         except ValidationError:
             return JsonResponse({'status': 'error', 'message': 'Invalid email format'}, status=400)
 
-        from app.email_utils import is_email_service_configured
+        from app.email_utils import is_email_service_configured, send_email_async
         if not is_email_service_configured():
             return JsonResponse({'status': 'error', 'message': 'Email service is temporarily unavailable. Please try again shortly.'}, status=503)
         
@@ -222,25 +254,46 @@ def signup(request):
         if recent_code:
             return JsonResponse({'status': 'error', 'message': 'Please wait 60 seconds before requesting another code.'}, status=429)
         
-        verification = EmailVerificationCode.objects.create(
+        EmailVerificationCode.objects.create(
             user=user,
             email=email,
             code=code,
             expires_at=expiry_time
         )
         
-        if send_verification_email(email, code):
+        # Send verification email asynchronously
+        subject = "HomeoCompare - Welcome and Verification"
+        html_message = f"""
+        <html>
+            <body style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
+                <div style="background-color: white; padding: 30px; border-radius: 8px; max-width: 500px; margin: 0 auto;">
+                    <h2 style="color: #2c3e50; margin-bottom: 20px;">Welcome to HomeoCompare</h2>
+                    <p style="color: #555; font-size: 16px; margin-bottom: 20px;">
+                        Thank you for registering. Use the following 6-digit code to verify your account:
+                    </p>
+                    <div style="background-color: #f0f0f0; padding: 20px; border-radius: 6px; text-align: center; margin-bottom: 20px;">
+                        <p style="font-size: 32px; font-weight: bold; color: #007bff; margin: 0; letter-spacing: 5px;">
+                            {code}
+                        </p>
+                    </div>
+                    <p style="color: #777; font-size: 14px;">Valid for 10 minutes.</p>
+                </div>
+            </body>
+        </html>
+        """
+        plain_message = f"Welcome to HomeoCompare! Your verification code is: {code}\n\nValid for 10 minutes."
+
+        if send_email_async(subject, plain_message, email, html_message):
             return JsonResponse({
                 'status': 'success',
-                'message': 'Account created! Verification code sent to your email.',
+                'message': 'Account created! Verification code dispatched to your email.',
                 'email': email,
                 'user_id': user.id,
                 'redirect_url': f'/auth/verify-code/?user_id={user.id}'
             })
         else:
-            verification.delete()
-            user.delete()
-            return JsonResponse({'status': 'error', 'message': 'Failed to send verification code. Please try again.'}, status=500)
+            user.delete() # Rollback user creation if email fails to initiate
+            return JsonResponse({'status': 'error', 'message': 'Failed to initiate verification email. Please try again.'}, status=500)
     
     except json.JSONDecodeError:
         return JsonResponse({'status': 'error', 'message': 'Invalid request format'}, status=400)
@@ -249,6 +302,7 @@ def signup(request):
         return JsonResponse({'status': 'error', 'message': 'An error occurred. Please try again.'}, status=500)
 
 
+@ensure_csrf_cookie
 @require_http_methods(["GET", "POST"])
 def verify_code(request):
     """Verify email code - GET: show form, POST: verify code"""
@@ -279,19 +333,16 @@ def verify_code(request):
         except CasePaperUser.DoesNotExist:
             return JsonResponse({'status': 'error', 'message': 'Invalid user'}, status=401)
         
-        # Find valid verification code
+        # Find valid verification code (must be unused and not expired)
         verification = EmailVerificationCode.objects.filter(
             user=user,
             code=code,
-            is_used=False
+            is_used=False,
+            expires_at__gt=timezone.now()
         ).first()
         
         if not verification:
-            return JsonResponse({'status': 'error', 'message': 'Invalid verification code'}, status=401)
-        
-        # Check if code is expired
-        if not verification.is_valid():
-            return JsonResponse({'status': 'error', 'message': 'Verification code has expired'}, status=401)
+            return JsonResponse({'status': 'error', 'message': 'Invalid or expired verification code'}, status=401)
         
         # Mark code as used
         verification.is_used = True
@@ -304,6 +355,7 @@ def verify_code(request):
         # Set session
         request.session['user_id'] = user.id
         request.session['user_email'] = user.email
+        request.session.modified = True  # Ensure session is saved
         
         # Determine redirect URL
         if not user.is_registered:
@@ -477,6 +529,10 @@ def register(request):
             user.contact_number = request.POST.get('contact_number', '').strip()
             user.clinic_name = request.POST.get('clinic_name', '').strip()
             user.address = request.POST.get('address', '').strip()
+            
+            if 'profile_photo' in request.FILES:
+                user.profile_photo = request.FILES['profile_photo']
+                
             user.is_registered = True
             user.save()
             

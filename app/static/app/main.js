@@ -1,5 +1,5 @@
 /**
- * HomeoCompare Main JS - Premium Features & Shared Logic
+ * HomeoCompare Main JS - Advanced Features & Shared Logic
  */
 
 const MainApp = {
@@ -16,37 +16,31 @@ const MainApp = {
         if (!themeToggle) return;
 
         const init = () => {
-const theme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', theme);
-            this.updateThemeBtn(theme);
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
         };
 
         themeToggle.addEventListener('click', () => {
-            const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const next = isLight ? 'dark' : 'light';
+            
+            if (next === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
             localStorage.setItem('theme', next);
-            this.updateThemeBtn(next);
         });
 
         init();
     },
 
     updateThemeBtn(theme) {
-        const btn = document.getElementById('themeToggle');
-        if (!btn) return;
-        
-        const isLanding = btn.classList.contains('landing-toggle'); // Special case for current landing
-        if (isLanding) {
-            btn.innerHTML = `
-                <span class="toggle-text">${theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
-                <i class="fas fa-${theme === 'dark' ? 'sun' : 'moon'}"></i>
-            `;
-        } else {
-             // Dashboard style toggle
-             const icon = theme === 'dark' ? 'sun' : 'moon';
-             const text = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
-             btn.innerHTML = `<span><i class="fas fa-${icon}"></i> ${text}</span><i class="fas fa-chevron-right"></i>`;
-        }
+        // No longer needed, handled beautifully by CSS!
     },
 
     initSidebar() {

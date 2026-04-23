@@ -1,145 +1,159 @@
 {% extends 'case_paper/base.html' %}
 {% load static %}
 
-{% block page_title_header %}Dashboard{% endblock %}
+{% block page_title_header %}Clinic_Home{% endblock %}
 
-{% block header_icon %}
-<a href="{% url 'case_paper_new' %}" class="w-10 h-10 bg-ink flex items-center justify-center group">
-    <svg class="w-5 h-5 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+{% block header_actions %}
+<a href="{% url 'case_paper_new' %}" class="ui-btn-primary">
+    New Case
 </a>
 {% endblock %}
 
-{% block main_content %}
-{# Top Section: Stats & Quick Actions #}
-<div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
-    {# StatCard: Total Archives #}
-    <div class="p-6 border border-ink flex flex-col justify-between h-40 bg-paper hover:bg-ink/5 transition-colors">
-        <div class="flex justify-between items-start">
-            <span class="font-mono text-xs uppercase tracking-widest font-bold opacity-70">Total Archives</span>
-            <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-        </div>
-        <div>
-            <div class="flex items-baseline gap-2">
-                <div class="font-serif text-6xl font-medium">{{ total_count|default:"0" }}</div>
-            </div>
-        </div>
-    </div>
-
-    {# StatCard: Active Drafts #}
-    <div class="p-6 border border-ink flex flex-col justify-between h-40 bg-paper hover:bg-ink/5 transition-colors">
-        <div class="flex justify-between items-start">
-            <span class="font-mono text-xs uppercase tracking-widest font-bold opacity-70">Active Drafts</span>
-            <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <div>
-            <div class="flex items-baseline gap-2">
-                <div class="font-serif text-6xl font-medium">{{ draft_count|default:"0" }}</div>
-            </div>
-        </div>
-    </div>
-
-    {# StatCard: Finalized #}
-    <div class="p-6 border border-ink flex flex-col justify-between h-40 bg-paper hover:bg-ink/5 transition-colors">
-        <div class="flex justify-between items-start">
-            <span class="font-mono text-xs uppercase tracking-widest font-bold opacity-70">Finalized</span>
-            <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <div>
-            <div class="flex items-baseline gap-2">
-                <div class="font-serif text-6xl font-medium">{{ complete_count|default:"0" }}</div>
-            </div>
-        </div>
-    </div>
-
-    {# Primary Action Card #}
-    <a href="{% url 'case_paper_new' %}" class="p-6 border-2 border-ink flex flex-col justify-between h-40 bg-accent text-paper group cursor-pointer hover:bg-accent/90 transition-all shadow-[4px_4px_0px_0px_rgba(10,10,10,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
-        <div class="flex justify-between items-start">
-            <span class="font-mono text-xs uppercase tracking-widest font-bold">Primary Action</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-        </div>
-        <div>
-            <h2 class="font-serif text-3xl font-bold italic leading-tight">Create New<br/>Case Paper</h2>
-            <p class="font-mono text-[9px] uppercase mt-2 opacity-70 tracking-widest">Initialize Clinical Protocol</p>
-        </div>
-    </a>
-</div>
-
-{# Middle Section: Search & Filters #}
-<div class="flex flex-col md:flex-row gap-4 items-stretch">
-    <div class="relative flex-1">
-        <form method="get" class="h-full">
-            <svg class="absolute left-4 top-1/2 -translate-y-1/2 opacity-30 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-            <input
-              type="text"
-              name="search"
-              placeholder="SEARCH_BY_PATIENT_NAME_OR_REF_ID..."
-              class="w-full h-full bg-paper border-2 border-ink py-3 pl-12 pr-4 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent transition-all"
-              value="{{ search_query|default:'' }}"
-            />
-        </form>
-    </div>
-    <button class="px-6 border-2 border-ink bg-paper font-mono text-xs uppercase font-bold flex items-center gap-2 hover:bg-ink hover:text-paper transition-all">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L16 11.414V17l-4 4v-9.586L3.293 6.707A1 1 0 013 6V4z"></path></svg>
-        Advanced_Filters
-    </button>
-</div>
-
-{# Main Data Grid #}
-<div class="border-2 border-ink bg-paper shadow-sm">
-    <div class="hidden md:grid md:grid-cols-[80px_1.8fr_1fr_1fr_120px_60px] border-b-2 border-ink bg-ink text-paper sticky top-0 z-10">
-        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Ref_ID</div>
-        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Patient_Identity</div>
-        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Archive_Date</div>
-        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Practitioner</div>
-        <div class="p-3 border-r border-paper/10 font-mono text-[10px] uppercase tracking-widest font-bold">Status_Level</div>
-        <div class="p-3"></div>
-    </div>
-
-    <div class="flex flex-col min-h-[400px]">
-        {% for case in cases %}
-        <a href="{% url 'case_paper_view' case.case_id %}" class="group block md:grid md:grid-cols-[80px_1.8fr_1fr_1fr_120px_60px] border-b-2 border-ink hover:bg-accent/5 transition-all cursor-pointer relative p-4 md:p-0">
-            <div class="md:p-3 md:border-r border-ink font-mono text-[10px] flex items-center opacity-50 mb-1 md:mb-0"><span class="md:hidden font-bold mr-2 text-ink">REF:</span>{{ case.case_id }}</div>
-            <div class="md:p-3 md:border-r border-ink flex flex-col justify-center mb-2 md:mb-0 pr-6">
-                <span class="font-serif text-lg font-semibold tracking-tight group-hover:text-accent transition-colors">{{ case.preliminary.patient_name|default:"Unknown Patient" }}</span>
-                <span class="font-mono text-[8px] opacity-40 uppercase">Patient_Record_Verified</span>
-            </div>
-            <div class="md:p-3 md:border-r border-ink font-mono text-[10px] flex items-center mb-1 md:mb-0"><span class="md:hidden font-bold mr-2 text-ink/70">DATE:</span>{{ case.created_at|date:"Y.m.d" }}</div>
-            <div class="md:p-3 md:border-r border-ink flex items-center text-[11px] opacity-70 italic mb-2 md:mb-0"><span class="md:hidden font-bold mr-2 not-italic text-ink/70">DR:</span>Dr. {{ case.physician.physician_name|default:"Abhay" }}</div>
-            <div class="md:p-3 md:border-r border-ink flex items-center gap-2 mb-2 md:mb-0">
-                <span class="font-mono text-[9px] px-2 py-0.5 border
-                    {% if case.status == 'complete' %}bg-accent text-paper border-accent
-                    {% elif case.status == 'pending' %}bg-ink text-paper border-ink
-                    {% else %}border-ink opacity-60{% endif %}">
-                    {{ case.status|upper }}
-                </span>
-                {# You can add priority logic here if it exists in your model #}
-            </div>
-            <div class="absolute right-4 top-1/2 -translate-y-1/2 md:relative md:right-auto md:top-auto md:translate-y-0 md:p-3 flex items-center justify-center">
-                <svg class="w-5 h-5 md:w-3.5 md:h-3.5 opacity-50 md:opacity-20 group-hover:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </div>
-        </a>
-        {% empty %}
-        <div class="flex items-center justify-center text-center p-10 min-h-[400px]">
-             <div class="flex flex-col items-center justify-center text-center text-gray-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 mb-4">
-                    <path d="M22 10v6M2 10.21V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3.79"/>
-                    <path d="m22 10-8.29-7.24a2 2 0 0 0-2.82 0L2 10"/>
-                    <path d="M12 22V12"/>
-                </svg>
-                <h3 class="text-lg font-serif mb-2">No Case Papers Found</h3>
-                <p class="font-mono text-sm text-gray-500">Get started by creating a new case paper.</p>
-                <a href="{% url 'case_paper_new' %}" class="mt-4 px-4 py-2 bg-accent text-paper font-mono text-xs uppercase font-bold hover:bg-accent/90 transition-colors">
-                    Create New Case Paper
-                </a>
-            </div>
+{% block content %}
+<div class="space-y-6">
+    {% if messages %}
+    <div class="space-y-2">
+        {% for message in messages %}
+        <div class="p-3 border-2 border-ink font-mono text-xs uppercase font-bold {% if message.tags == 'success' %}bg-accent/10{% else %}bg-red-50 text-red-700{% endif %}">
+            {{ message }}
         </div>
         {% endfor %}
     </div>
+    {% endif %}
 
-    {# Table Footer / Pagination - Basic version #}
-    <div class="h-10 flex items-center justify-between px-4 bg-ink/5 border-t-2 border-ink">
-        <div class="font-mono text-[10px] opacity-60 font-bold uppercase tracking-tighter">Total_Records: {{ total_count|default:"0" }}</div>
-        {# Pagination logic would go here if needed #}
-    </div>
+    <section class="border-2 border-ink bg-gradient-to-r from-accent-light to-paper p-6">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+            <div>
+                <h2 class="font-serif text-4xl font-bold">Welcome, Dr. {{ user.physician_name|default:user.username }}</h2>
+                <p class="font-mono text-sm opacity-70 mt-2 max-w-3xl">
+                    This is your clinic workspace home. Access every module from here — Registration Desk, Doctor Desk, Virtual OPD,
+                    Calendar, Case Records, and Settings.
+                </p>
+            </div>
+            <div class="font-mono text-[10px] uppercase opacity-70">
+                Last Sync: {{ last_sync }}
+            </div>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="border-2 border-ink bg-paper p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Total Cases</div>
+            <div class="font-serif text-3xl font-bold">{{ total_count|default:0 }}</div>
+        </div>
+        <div class="border-2 border-ink bg-paper p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Draft Cases</div>
+            <div class="font-serif text-3xl font-bold">{{ draft_count|default:0 }}</div>
+        </div>
+        <div class="border-2 border-ink bg-paper p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Completed</div>
+            <div class="font-serif text-3xl font-bold">{{ complete_count|default:0 }}</div>
+        </div>
+        <div class="border-2 border-ink bg-paper p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Active Modules</div>
+            <div class="font-serif text-3xl font-bold">6</div>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="font-serif text-2xl font-bold mb-3">Workspace Modules</h3>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <a href="{% url 'case_paper_patients' %}" class="border-2 border-ink bg-white p-5 hover:bg-accent/5 transition-all group">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-mono text-[10px] uppercase opacity-60">Registration Desk</span>
+                    <span class="text-accent">●</span>
+                </div>
+                <h4 class="font-serif text-xl font-bold">Smart Registration & Queue</h4>
+                <p class="font-mono text-xs opacity-70 mt-2">Patient profiles, token queue, healthcare cards, and fast invoicing.</p>
+                <div class="font-mono text-[10px] uppercase mt-3 opacity-60">Open Module →</div>
+            </a>
+
+            <a href="{% url 'case_paper_doctor_desk' %}" class="border-2 border-ink bg-white p-5 hover:bg-accent/5 transition-all group">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-mono text-[10px] uppercase opacity-60">Doctor's Desk</span>
+                    <span class="text-accent">●</span>
+                </div>
+                <h4 class="font-serif text-xl font-bold">Documentation + eRx + Lab</h4>
+                <p class="font-mono text-xs opacity-70 mt-2">Clinical templates, Virtual OPD, e-prescription, and 30-test requisition flow.</p>
+                <div class="font-mono text-[10px] uppercase mt-3 opacity-60">Open Module →</div>
+            </a>
+
+            <a href="{% url 'case_paper_calendar' %}" class="border-2 border-ink bg-white p-5 hover:bg-accent/5 transition-all group">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-mono text-[10px] uppercase opacity-60">Calendar</span>
+                    <span class="text-accent">●</span>
+                </div>
+                <h4 class="font-serif text-xl font-bold">Agenda & Follow-ups</h4>
+                <p class="font-mono text-xs opacity-70 mt-2">Track daily appointments, agenda entries, and follow-up timelines.</p>
+                <div class="font-mono text-[10px] uppercase mt-3 opacity-60">Open Module →</div>
+            </a>
+
+            <a href="{% url 'case_paper_cases' %}" class="border-2 border-ink bg-white p-5 hover:bg-accent/5 transition-all group">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-mono text-[10px] uppercase opacity-60">Case Paper</span>
+                    <span class="text-accent">●</span>
+                </div>
+                <h4 class="font-serif text-xl font-bold">Case Archive</h4>
+                <p class="font-mono text-xs opacity-70 mt-2">Search, review, filter, and open your clinical case papers.</p>
+                <div class="font-mono text-[10px] uppercase mt-3 opacity-60">Open Module →</div>
+            </a>
+
+            <a href="{% url 'case_paper_new' %}" class="border-2 border-ink bg-white p-5 hover:bg-accent/5 transition-all group">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-mono text-[10px] uppercase opacity-60">Create</span>
+                    <span class="text-accent">●</span>
+                </div>
+                <h4 class="font-serif text-xl font-bold">New Case Paper</h4>
+                <p class="font-mono text-xs opacity-70 mt-2">Start a fresh consultation and documentation workflow.</p>
+                <div class="font-mono text-[10px] uppercase mt-3 opacity-60">Open Module →</div>
+            </a>
+
+            <a href="{% url 'case_paper_settings' %}" class="border-2 border-ink bg-white p-5 hover:bg-accent/5 transition-all group">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-mono text-[10px] uppercase opacity-60">Settings</span>
+                    <span class="text-accent">●</span>
+                </div>
+                <h4 class="font-serif text-xl font-bold">Workspace Controls</h4>
+                <p class="font-mono text-xs opacity-70 mt-2">Control modules, public profile visibility, communication preferences, and branding.</p>
+                <div class="font-mono text-[10px] uppercase mt-3 opacity-60">Open Module →</div>
+            </a>
+        </div>
+    </section>
+
+    <section class="grid lg:grid-cols-2 gap-4">
+        <div class="border-2 border-ink bg-paper p-4">
+            <h3 class="font-serif text-xl font-bold mb-3">Recent Case Activity</h3>
+            <div class="space-y-2 max-h-72 overflow-y-auto">
+                {% for case in cases|slice:":8" %}
+                <a href="{% url 'case_paper_view' case.case_id %}" class="block border border-ink/20 p-3 hover:bg-accent/5 transition-colors">
+                    <div class="flex justify-between gap-2">
+                        <div>
+                            <div class="font-serif font-bold">{{ case.preliminary.patient_name|default:'Unknown Patient' }}</div>
+                            <div class="font-mono text-[10px] uppercase opacity-60">{{ case.case_id }} · {{ case.created_at|date:'d M Y' }}</div>
+                        </div>
+                        <span class="font-mono text-[10px] uppercase {% if case.status == 'complete' %}text-accent{% else %}opacity-60{% endif %}">{{ case.status }}</span>
+                    </div>
+                </a>
+                {% empty %}
+                <div class="font-mono text-xs uppercase opacity-50">No case activity yet.</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="border-2 border-ink bg-paper p-4">
+            <h3 class="font-serif text-xl font-bold mb-3">Clinical Trend (Last 14 Days)</h3>
+            <div class="space-y-2">
+                {% for day in analytics.volume_trend %}
+                <div class="flex items-center gap-3">
+                    <div class="font-mono text-[10px] uppercase w-14 opacity-60">{{ day.date }}</div>
+                    <div class="flex-1 bg-ink/10 h-2">
+                        <div class="bg-accent h-2" style="width: {{ day.count|add:1 }}0%; max-width:100%;"></div>
+                    </div>
+                    <div class="font-mono text-[10px] w-6 text-right">{{ day.count }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}

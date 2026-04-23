@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}HomeoCompare | Premium Materia Medica Comparison{% endblock %}</title>
+    <title>{% block title %}HomeoCompare | Materia Medica Comparison{% endblock %}</title>
     
     <!-- SEO & Metadata -->
     <meta name="description" content="{% block description %}Compare homeopathy medicines and remedies easily using trusted Materia Medica sources (Boericke, Allen).{% endblock %}">
@@ -15,7 +15,7 @@
     {% load static %}
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'app/premium.css' %}">
+    <link rel="stylesheet" href="{% static 'app/access.css' %}">
     
     {% block head %}{% endblock %}
 </head>
@@ -45,11 +45,11 @@
         <nav class="sidebar-menu">
             <div class="menu-group">
                 <span class="menu-label">Main Modules</span>
-                <a href="{% url 'remedy_compare' %}" class="menu-item {% if '/boericke/' in request.path %}active{% endif %}">
+                <a href="{% url 'boericke_comparison' %}" class="menu-item {% if '/boericke/' in request.path %}active{% endif %}">
                     <i class="fas fa-book-medical"></i>
                     <span>Boericke's MM</span>
                 </a>
-                <a href="{% url 'allen_compare' %}" class="menu-item {% if '/allen/' in request.path %}active{% endif %}">
+                <a href="{% url 'allen_comparison' %}" class="menu-item {% if '/allen/' in request.path %}active{% endif %}">
                     <i class="fas fa-book-medical"></i>
                     <span>Allen's Keynotes</span>
                 </a>
@@ -99,9 +99,10 @@
         </nav>
 
         <div class="sidebar-footer">
-            <button id="themeToggle" class="theme-toggle">
-                <span><i class="fas fa-moon"></i> Dark Mode</span>
-                <i class="fas fa-chevron-right"></i>
+            <!-- Circular Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
             </button>
         </div>
     </aside>

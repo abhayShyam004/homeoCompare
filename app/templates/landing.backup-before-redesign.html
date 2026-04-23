@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeoCompare | Compare Homeopathy Medicines & Remedies Online</title>
+    <meta name="description" content="Compare homeopathy medicines and remedies easily with HomeoCompare. Find the right remedy by symptoms using trusted Materia Medica sources. Compare symptoms side-by-side.">
+    <meta name="keywords" content="homeo compare, homeopathy compare, homeopathic medicine comparison, boericke materia medica, compare homeopathic remedies, homeocompare, homeopathy symptoms search">
+
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8576247474633181"
+        crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+    <meta name="google-site-verification" content="-B6Un3M-rn1rVvfvS6StTGzr0V7Zwhm-jhwOwSZFs_Q" />
+    <script>
+        (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "2Y3GWvOFW-d-ysXVvcJyI"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+    </script>
+
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --bg-color: #f5f7fa;
+            --text-color: #333;
+            --card-bg: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+            z-index: 100;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+        .brand-title { display: flex; align-items: center; gap: 12px; }
+        .brand-title img { width: 34px; height: 34px; object-fit: contain; display: block; }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            flex: 1;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            right: 3rem;
+            top: 20%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        @media (max-width: 600px) {
+            .theme-toggle {
+                right: 1rem;
+                top: 0.4rem;
+                transform: none;
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .theme-toggle:hover {
+            background: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--light-color);
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            top: 1.5rem;
+            left: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        .sidebar ul {
+            padding: 1rem;
+            list-style: none;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 0.8rem 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100vh;
+            background-color: #121a24 !important;
+            color: #e0e6ed !important;
+            z-index: 1001;
+            transition: all 0.3s ease;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Add this to debug the sidebar position */
+        #sidebar {
+            border: 2px solid #121a24 !important;
+            /* Temporary debug border */
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            z-index: 999;
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+                padding: 0 1rem;
+            }
+
+            .brand-title {
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .theme-toggle {
+                position: static;
+                transform: none;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #4a89dc;
+            --secondary-color: #3b7dd8;
+            --accent-color: #e74c3c;
+            --light-color: #2c3e50;
+            --dark-color: #ecf0f1;
+            --bg-color: #121a24;
+            --card-bg: #1e2a3a;
+            --text-color: #e0e6ed;
+            --border-color: #2d3e50;
+            --header-bg: #0d1520;
+            --input-bg: #1a2634;
+        }
+
+        [data-theme="dark"] header {
+            background-color: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        [data-theme="dark"] .card {
+            border: 1px solid var(--border-color);
+        }
+
+        [data-theme="dark"] .subtitle {
+            color: #a0d2ff;
+            opacity: 0.95;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            font-weight: 350;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .resource-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            text-align: center;
+            padding: 2rem;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            position: relative;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent-color);
+        }
+
+        .resource-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .resource-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .resource-description {
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .resource-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            width: auto;
+            display: inline-block;
+        }
+
+        .resource-btn:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .welcome-message h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .welcome-message p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resource-card {
+                min-height: 250px;
+                padding: 1.5rem;
+            }
+
+            .resource-title {
+                font-size: 1.5rem;
+            }
+
+            .welcome-message h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-title {
+                gap: 8px;
+            }
+
+            .brand-title img {
+                width: 28px;
+                height: 28px;
+            }
+
+            .toggle-text {
+                display: none;
+            }
+
+            .theme-toggle {
+                width: 2.5rem;
+                justify-content: center;
+                padding: 0.55rem;
+            }
+        }
+
+        /* Hamburger Button */
+        .hamburger-btn {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            background: #4a89dc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            width: 60px;
+            height: 60px;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 1002;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-btn:hover {
+            background: #3b7dd8;
+            transform: scale(1.05);
+        }
+
+        /* Hamburger Button Animation */
+        .hamburger-btn .fa-bars,
+        .hamburger-btn .fa-times {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hamburger-btn .fa-times {
+            position: absolute;
+            transform: rotate(-180deg);
+            opacity: 0;
+        }
+
+        .hamburger-btn.active .fa-bars {
+            transform: rotate(180deg);
+            opacity: 0;
+        }
+
+        .hamburger-btn.active .fa-times {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+
+
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -350px;
+            width: 350px;
+            height: 100vh;
+            background: #121a24;
+            color: #e0e6ed;
+            z-index: 1001;
+            transition: all 0.7s ease;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            padding: 80px 20px 20px;
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Open State */
+        .sidebar.open {
+            left: 0;
+        }
+
+        /* Overlay */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .sidebar-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Sidebar Content Styling */
+        .sidebar-content {
+            height: 100%;
+            display: flex;
+            padding-top: 60px;
+            flex-direction: column;
+        }
+
+        .sidebar-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border: none;
+            color: #e0e6ed !important;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1003;
+            /* Higher than sidebar */
+        }
+
+        .sidebar-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            color: #e0e6ed !important;
+            text-decoration: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1) !important;
+            transition: all 1s ease;
+        }
+
+        .sidebar-link:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            transform: translateX(5px);
+            transform: translateX(10px);
+            /* Increased from 5px */
+            margin-left: 5px;
+            /* Additional gap */
+        }
+
+        .sidebar-link i {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .sidebar-link span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .clients-link {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 226, 142, 0.4);
+            background: linear-gradient(120deg, rgba(234, 179, 8, 0.22), rgba(250, 204, 21, 0.16), rgba(14, 165, 233, 0.2)) !important;
+            box-shadow: 0 0 0 rgba(250, 204, 21, 0.45);
+            animation: clientsGlowPulse 2.6s ease-in-out infinite;
+        }
+
+        .clients-link::before {
+            content: "";
+            position: absolute;
+            top: -30%;
+            left: -120%;
+            width: 70%;
+            height: 160%;
+            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.35), rgba(255,255,255,0));
+            transform: rotate(18deg);
+            animation: clientsShimmer 2.8s linear infinite;
+            pointer-events: none;
+        }
+
+        .clients-link::after {
+            content: "✦";
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+            color: #fef08a;
+            text-shadow: 0 0 10px rgba(250, 204, 21, 0.95);
+            animation: clientsSparkle 1.5s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .clients-link i {
+            color: #fde68a;
+            animation: clientsIconTwinkle 1.8s ease-in-out infinite;
+        }
+
+        .clients-link span {
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .clients-link:hover {
+            background: linear-gradient(120deg, rgba(250, 204, 21, 0.33), rgba(253, 224, 71, 0.24), rgba(56, 189, 248, 0.26)) !important;
+            transform: translateX(12px) scale(1.02);
+            margin-left: 5px;
+        }
+
+        @keyframes clientsGlowPulse {
+            0%, 100% { box-shadow: 0 0 0 rgba(250, 204, 21, 0.2); }
+            50% { box-shadow: 0 0 18px rgba(250, 204, 21, 0.45); }
+        }
+
+        @keyframes clientsShimmer {
+            0% { left: -120%; }
+            100% { left: 150%; }
+        }
+
+        @keyframes clientsSparkle {
+            0%, 100% { opacity: 0.55; transform: translateY(-50%) scale(0.9) rotate(0deg); }
+            50% { opacity: 1; transform: translateY(-50%) scale(1.25) rotate(18deg); }
+        }
+
+        @keyframes clientsIconTwinkle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.16); }
+        }
+
+        /* Coffee Link Special Styling */
+        #coffeeLink {
+            background: rgba(198, 124, 78, 0.2) !important;
+            color: #f8de7e !important;
+        }
+
+        #coffeeLink:hover {
+            background: rgba(198, 124, 78, 0.3) !important;
+        }
+
+
+
+        /* Footer with Contact Link */
+        .sidebar-footer {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px 15px;
+            color: #7bed9f !important;
+            /* softer green */
+            text-decoration: none;
+            border-radius: 8px;
+            background: rgba(46, 204, 113, 0.05) !important;
+            /* lighter background */
+            transition: background 0.3s ease, color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+
+        .contact-link:hover {
+            background: rgba(46, 204, 113, 0.15) !important;
+            color: #2ecc71 !important;
+        }
+
+        .sidebar-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 1rem 0;
+        }
+
+        .trial-peek {
+            position: fixed;
+            right: -130px;
+            bottom: 20px;
+            width: 250px;
+            background: #ffffff;
+            border: 1px solid rgba(44, 62, 80, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+            z-index: 1400;
+            padding: 12px 12px 12px 14px;
+            cursor: pointer;
+            transition: right 0.25s ease;
+        }
+
+        .trial-peek:hover { right: 10px; }
+
+        .trial-peek-title {
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .trial-peek-text {
+            font-size: 0.76rem;
+            color: #64748b;
+        }
+
+        .trial-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.58);
+            z-index: 1500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.22s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .trial-modal-overlay.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .trial-modal-card {
+            width: min(520px, 100%);
+            background: #ffffff;
+            border: 1px solid rgba(44, 62, 80, 0.16);
+            border-radius: 14px;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.24);
+            padding: 20px;
+            transform: translateY(16px) scale(0.98);
+            transition: transform 0.22s ease;
+        }
+
+        .trial-modal-overlay.show .trial-modal-card {
+            transform: translateY(0) scale(1);
+        }
+
+        .trial-modal-note {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #0f766e;
+            background: #ecfeff;
+            border: 1px solid #a5f3fc;
+            border-radius: 999px;
+            padding: 4px 10px;
+            margin-bottom: 10px;
+        }
+
+        .trial-modal-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 6px;
+        }
+
+        .trial-modal-text {
+            font-size: 0.98rem;
+            color: #475569;
+            line-height: 1.55;
+            margin-bottom: 14px;
+        }
+
+        .trial-modal-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .trial-btn {
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 13px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .trial-btn.primary { background: #2563eb; color: #fff; }
+        .trial-btn.secondary { background: #e2e8f0; color: #334155; }
+
+        [data-theme="dark"] .trial-peek,
+        [data-theme="dark"] .trial-modal-card {
+            background: #0f172a;
+            border-color: #334155;
+        }
+
+        [data-theme="dark"] .trial-peek-title,
+        [data-theme="dark"] .trial-modal-title { color: #f8fafc; }
+
+        [data-theme="dark"] .trial-peek-text,
+        [data-theme="dark"] .trial-modal-text { color: #cbd5e1; }
+
+        [data-theme="dark"] .trial-btn.secondary { background: #1e293b; color: #cbd5e1; }
+    </style>
+    
+</head>
+
+<body data-theme="light">
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <!-- Navigation Links -->
+            <nav class="sidebar-nav">
+                <a href="boericke/" class="sidebar-link">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Boericke's</span>
+                </a>
+
+                <a href="allen/" class="sidebar-link">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Allen's</span>
+                </a>
+
+                <a href="{% url 'clinic_dashboard' %}" class="sidebar-link clients-link">
+                    <i class="fas fa-users"></i>
+                    <span>Clients</span>
+                </a>
+
+                <a href="{% url 'relationships' %}" class="sidebar-link">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Remedy Relationships</span>
+                </a>
+
+                <a href="{% url 'durations' %}" class="sidebar-link">
+                    <i class="fas fa-clock"></i>
+                    <span>Remedy Durations</span>
+                </a>
+
+                <a href="{% url 'remedy_history' %}" class="sidebar-link">
+                    <i class="fas fa-calendar-day"></i>
+                    <span>Remedy of the Day</span>
+                </a>
+
+                <hr class="sidebar-divider">
+
+                <a href="suggestion/" class="sidebar-link">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Feedback</span>
+                </a>
+
+                <a href="about/" class="sidebar-link">
+                    <i class="fas fa-circle-info"></i>
+                    <span>More info</span>
+                </a>
+
+                <a href="privacy/" class="sidebar-link">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Privacy</span>
+                </a>
+
+                <a href="admin-panel/" class="sidebar-link" style="opacity: 0.6;">
+                    <i class="fas fa-cog"></i>
+                    <span>Admin</span>
+                </a>
+
+
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhay31204@gmail.com&subject=MediCompare&body=Write%20your%20mail%20here"
+                    class="contact-link" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Me</span>
+                </a>
+
+            </nav>
+            <!-- Contact Me Section at Bottom -->
+            <div class="sidebar-footer">
+                <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhay31204@gmail.com&subject=MediCompare&body=Write%20your%20mail%20here"
+                    class="contact-link" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Me</span>
+                </a> -->
+            </div>
+        </div>
+    </aside>
+
+
+    <header>
+        <div class="header-content">
+            <div>
+                <div class="brand-title">
+                    <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo">
+                    <h1>HomeoCompare</h1>
+                </div>
+                <p class="subtitle">Compare. Cure. Trust.</p>
+            </div>
+            <div class="nav-links">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="toggle-text">Light Mode</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                    </svg>
+                </button>
+
+
+
+
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="welcome-message">
+            <h2>Explore Classic Homeopathic References</h2>
+        </div>
+
+        <div class="resource-grid">
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                    </svg>
+                </div>
+                <h3 class="resource-title">Boericke's Materia Medica</h3>
+                <p class="resource-description">William Boericke’s Homeopathy Materia Medica – Compare Remedies by Key
+                    Symptoms, Remedy Profiles, and Clinical Use for Study and Learning</p>
+                <button class="resource-btn" onclick="location.href='{% url 'boericke_comparison' %}'">Explore
+                    Boericke</button>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                    </svg>
+                </div>
+                <h3 class="resource-title">Allen's Keynotes</h3>
+                <p class="resource-description">Study H.C. Allen’s Homeopathy Materia Medica – Quick Access to Key
+                    Symptoms, Remedy Profiles, and Essential Characteristics for Fast Learning and Clinical Use.</p>
+                <button class="resource-btn" onclick="location.href='{% url 'allen_comparison' %}'">Explore
+                    Allen's</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 HomeoCompare. All rights reserved.</p>
+    </footer>
+
+    <div id="trialPeek" class="trial-peek" role="button" tabindex="0" aria-label="Open free offer">
+        <div class="trial-peek-title">Try it free</div>
+        <div class="trial-peek-text">Limited-time. No cards needed.</div>
+    </div>
+
+    <div id="trialModal" class="trial-modal-overlay" role="dialog" aria-label="Try service offer" aria-live="polite">
+        <div class="trial-modal-card">
+            <div class="trial-modal-note">Limited-time offer</div>
+            <div class="trial-modal-title">Try our case-paper service</div>
+            <div class="trial-modal-text">For a limited period, you can use it free — no cards needed.</div>
+            <div class="trial-modal-actions">
+                <a href="{% url 'signup' %}" class="trial-btn primary" id="trialModalTry">Try it free</a>
+                <button type="button" class="trial-btn secondary" id="trialModalLater">Later</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('themeToggle');
+            const toggleText = document.querySelector('.toggle-text');
+            const body = document.body;
+
+            // Set dark mode as default
+            body.setAttribute('data-theme', 'dark');
+            toggleText.textContent = 'Light Mode';
+
+            themeToggle.addEventListener('click', function () {
+                if (body.getAttribute('data-theme') === 'dark') {
+                    body.removeAttribute('data-theme');
+                    toggleText.textContent = 'Dark Mode';
+                } else {
+                    body.setAttribute('data-theme', 'dark');
+                    toggleText.textContent = 'Light Mode';
+                }
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const sidebarClose = document.getElementById('sidebarClose');
+
+            // Toggle sidebar (open/close) when hamburger is clicked
+            hamburgerBtn.addEventListener('click', function () {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+                hamburgerBtn.classList.toggle('active');
+
+            });
+
+            // Close sidebar methods
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                // Ensure hamburger icon shows bars when closed
+                hamburgerBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                hamburgerBtn.classList.remove('active');
+
+            }
+
+            overlay.addEventListener('click', closeSidebar);
+            sidebarClose.addEventListener('click', closeSidebar);
+
+            // Close when clicking navigation links (except external ones)
+            document.querySelectorAll('.sidebar-link').forEach(link => {
+                if (!link.hasAttribute('target')) {
+                    link.addEventListener('click', closeSidebar);
+                }
+            });
+        });
+        // Add this to your existing theme toggle handler
+        if (document.getElementById('themeToggle')) {
+            document.getElementById('themeToggle').addEventListener('click', function () {
+                // This ensures the sidebar stays dark
+                document.getElementById('sidebar').classList.add('force-dark');
+            });
+        }
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const peek = document.getElementById('trialPeek');
+            const modal = document.getElementById('trialModal');
+            const laterBtn = document.getElementById('trialModalLater');
+            const tryBtn = document.getElementById('trialModalTry');
+            if (!peek || !modal || !laterBtn || !tryBtn) return;
+
+            const key = 'trial_offer_hide_until';
+            const hideUntil = parseInt(localStorage.getItem(key) || '0', 10);
+            const now = Date.now();
+
+            const openModal = () => modal.classList.add('show');
+            const closeModal = () => modal.classList.remove('show');
+            const setHideForDays = (days) => {
+                const ttl = Date.now() + (days * 24 * 60 * 60 * 1000);
+                localStorage.setItem(key, String(ttl));
+            };
+
+            peek.addEventListener('click', openModal);
+            peek.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal();
+                }
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            laterBtn.addEventListener('click', () => {
+                closeModal();
+                setHideForDays(3);
+            });
+
+            tryBtn.addEventListener('click', () => {
+                setHideForDays(10);
+            });
+
+            if (!hideUntil || now >= hideUntil) {
+                setTimeout(openModal, 1100);
+            }
+        });
+    </script>
+
+    <div style="position:absolute; left:-9999px; top:-9999px;">
+        Compare homeopathic remedies like ABROTANUM, ACONITE, or BELLADONNA using trusted materia medica references.
+    </div>
+    <!-- Remedy of the Day Popup -->
+    {% if remedy_of_day %}
+    <div id="remedyModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeRemedyModal()">&times;</button>
+            
+            <div class="modal-header">
+                <div class="modal-badge">✨ Remedy of the Day</div>
+                <h2 class="modal-title">{{ remedy_of_day.medicine_name }}</h2>
+                <div class="modal-source">
+                    {% if remedy_of_day.source == 'boericke' %}
+                        from Boericke's Materia Medica
+                    {% else %}
+                        from Allen's Keynotes
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="modal-body">
+                {% if remedy_of_day.image %}
+                <div class="modal-image-container">
+                    <img src="{{ remedy_of_day.image.url }}" alt="{{ remedy_of_day.medicine_name }}" class="modal-img">
+                </div>
+                {% endif %}
+
+                <!-- Description Text (Hidden source for JS) -->
+                <div id="rawDescription" style="display: none;">{{ remedy_of_day.description }}</div>
+                
+                <!-- Cards Container -->
+                <div id="remedyContentGrid" class="content-grid">
+                    <!-- Cards injected by JS -->
+                </div>
+            </div>
+            
+            <div class="modal-footer" style="display: flex; gap: 10px; justify-content: center;">
+                <button class="modal-btn" onclick="closeRemedyModal()">Close</button>
+                <button class="modal-btn" style="background: transparent; border: 1px solid #6366f1; color: #6366f1;" onclick="location.href='{% url 'remedy_history' %}'">View All / History</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); z-index: 2000;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: 0.3s;
+            backdrop-filter: blur(8px);
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        
+        .modal-card {
+            background: #1e293b; 
+            width: 95%; max-width: 1000px; /* Wider */
+            max-height: 90vh; /* Prevent overflow */
+            border-radius: 20px; position: relative;
+            transform: translateY(20px); transition: 0.3s;
+            display: flex; flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+        .modal-overlay.active .modal-card { transform: translateY(0); }
+        
+        .modal-close {
+            position: absolute; top: 1.5rem; right: 1.5rem;
+            background: rgba(255,255,255,0.1); border: none; 
+            width: 32px; height: 32px; border-radius: 50%;
+            color: #fff; cursor: pointer; line-height: 1;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; transition: 0.2s; z-index: 10;
+        }
+        .modal-close:hover { background: rgba(255,255,255,0.2); transform: rotate(90deg); }
+
+        .modal-header {
+            padding: 2rem 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.02), transparent);
+        }
+        
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .modal-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white; padding: 6px 16px; border-radius: 50px;
+            font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 0.05em; display: inline-block; margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.4);
+        }
+        
+        .modal-title {
+            font-size: 2.5rem; color: #f8fafc; margin: 0 0 0.5rem;
+            font-weight: 800; letter-spacing: -0.02em;
+        }
+        
+        .modal-source {
+            font-size: 1rem; color: #94a3b8; font-style: italic;
+        }
+
+        .modal-image-container {
+            text-align: center; margin-bottom: 2rem;
+        }
+        .modal-img {
+            max-height: 250px; max-width: 100%; object-fit: contain;
+            border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Card Grid Layout */
+        .content-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .remedy-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.2s;
+        }
+        .remedy-card:hover {
+            background: rgba(255,255,255,0.05);
+            transform: translateY(-2px);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .card-header {
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;
+            color: #818cf8; font-weight: 700; margin-bottom: 0.75rem;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card-header::before {
+            content: ''; display: block; width: 6px; height: 6px; 
+            background: #818cf8; border-radius: 50%;
+        }
+
+        .card-text {
+            color: #cbd5e1; font-size: 1rem; line-height: 1.6;
+        }
+
+        .modal-footer {
+            padding: 1.5rem; text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            background: rgba(0,0,0,0.2);
+        }
+
+        .modal-btn {
+            background: #6366f1; color: white; border: none;
+            padding: 0.8rem 2.5rem; font-size: 1rem; border-radius: 50px;
+            cursor: pointer; transition: 0.2s; font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+        }
+        .modal-btn:hover { 
+            background: #4f46e5; transform: scale(1.02); 
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .modal-card { width: 100%; height: 100%; max-height: 100%; border-radius: 0; }
+            .content-grid { grid-template-columns: 1fr; }
+            .modal-title { font-size: 1.8rem; }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('remedyModal');
+            if (!modal) return;
+            
+            // Parse Content from hidden div
+            const rawText = document.getElementById('rawDescription').textContent;
+            const grid = document.getElementById('remedyContentGrid');
+            
+            // Regex to match [SECTION]: Content
+            // Matches anything between [ ] as header, and then content until next [ or end
+            const regex = /\[(.*?)\]:\s*([\s\S]*?)(?=\[|$)/g;
+            let match;
+            let hasMatches = false;
+
+            while ((match = regex.exec(rawText)) !== null) {
+                hasMatches = true;
+                const section = match[1].trim();
+                const content = match[2].trim();
+                
+                if (section && content) {
+                    const card = document.createElement('div');
+                    card.className = 'remedy-card';
+                    card.innerHTML = `
+                        <div class="card-header">${section.replace(/_/g, ' ')}</div>
+                        <div class="card-text">${content}</div>
+                    `;
+                    grid.appendChild(card);
+                }
+            }
+            
+            // Fallback for plain text (no sections)
+            if (!hasMatches && rawText.trim()) {
+                grid.style.display = 'block'; // Remove grid layout
+                grid.innerHTML = `
+                    <div class="remedy-card">
+                        <div class="card-text" style="font-size: 1.1rem;">${rawText.trim().replace(/\n/g, '<br>')}</div>
+                    </div>
+                `;
+            }
+
+            // --- Show Logic ---
+            const currentId = "{{ remedy_of_day.id }}";
+            const storedId = localStorage.getItem('rod_last_id');
+            const storedTime = localStorage.getItem('rod_timestamp');
+            const now = new Date().getTime();
+            const ONE_DAY = 24 * 60 * 60 * 1000;
+            
+            let shouldShow = false;
+            
+            if (currentId !== storedId) {
+                shouldShow = true;
+            } else if (!storedTime || (now - storedTime > ONE_DAY)) {
+                shouldShow = true;
+            }
+            // For testing: Uncomment to always show
+            // shouldShow = true; 
+            
+            if (shouldShow) {
+                setTimeout(() => {
+                    modal.classList.add('active');
+                }, 800);
+            }
+        });
+
+        function closeRemedyModal() {
+            const modal = document.getElementById('remedyModal');
+            modal.classList.remove('active');
+            
+            // Save state
+            const currentId = "{{ remedy_of_day.id }}";
+            localStorage.setItem('rod_last_id', currentId);
+            localStorage.setItem('rod_timestamp', new Date().getTime());
+        }
+    </script>
+    {% endif %}
+
+</body>
+
+</html>

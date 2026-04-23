@@ -1,0 +1,240 @@
+{% extends 'case_paper/base.html' %}
+
+{% block page_title_header %}Doctor_Desk{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    {% if messages %}
+    <div class="space-y-2">
+        {% for message in messages %}
+        <div class="border-2 border-ink p-3 font-mono text-xs uppercase font-bold {% if message.tags == 'success' %}bg-accent/10{% else %}bg-red-50 text-red-700{% endif %}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <section class="border-2 border-ink bg-gradient-to-r from-accent-light to-paper p-5">
+        <nav class="ui-breadcrumb" aria-label="Breadcrumb">
+            <a href="{% url 'clinic_dashboard' %}" class="ui-breadcrumb-chip">Clinic Home</a>
+            <span class="ui-breadcrumb-sep">▸</span>
+            <a href="{% url 'case_paper_doctor_desk' %}" class="ui-breadcrumb-chip">Doctor Desk</a>
+            <span class="ui-breadcrumb-sep">▸</span>
+            <span class="ui-breadcrumb-current">{{ section_title }}</span>
+        </nav>
+        <h2 class="font-serif text-3xl font-bold">Doctor Workspace</h2>
+        <p class="font-mono text-sm opacity-70 mt-2">{{ section_subtitle }}</p>
+    </section>
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="border-2 border-ink bg-paper p-4"><div class="font-mono text-[10px] uppercase opacity-60">Templates</div><div class="font-serif text-2xl font-bold">{{ templates|length }}</div></div>
+        <div class="border-2 border-ink bg-paper p-4"><div class="font-mono text-[10px] uppercase opacity-60">Virtual OPD</div><div class="font-serif text-2xl font-bold">{{ virtual_sessions|length }}</div></div>
+        <div class="border-2 border-ink bg-paper p-4"><div class="font-mono text-[10px] uppercase opacity-60">e-Prescriptions</div><div class="font-serif text-2xl font-bold">{{ eprescriptions|length }}</div></div>
+        <div class="border-2 border-ink bg-paper p-4"><div class="font-mono text-[10px] uppercase opacity-60">Lab Requisitions</div><div class="font-serif text-2xl font-bold">{{ lab_requisitions|length }}</div></div>
+    </section>
+
+    <section class="border-2 border-ink bg-paper">
+        <div class="p-3 border-b-2 border-ink flex flex-wrap gap-2">
+            <a href="{% url 'case_paper_doctor_desk_templates' %}" class="{% if active_section == 'documentation' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Smart Documentation</a>
+            <a href="{% url 'case_paper_doctor_desk_virtual' %}" class="{% if active_section == 'virtual' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Virtual OPD</a>
+            <a href="{% url 'case_paper_doctor_desk_eprescriptions' %}" class="{% if active_section == 'eprescription' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Quick ePrescription</a>
+            <a href="{% url 'case_paper_doctor_desk_lab' %}" class="{% if active_section == 'lab' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Lab Requisition</a>
+            <a href="{% url 'case_paper_doctor_desk_requests' %}" class="{% if active_section == 'requests' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Booking Requests</a>
+        </div>
+
+        <div id="tab-documentation" class="desk-panel p-4 {% if active_section != 'documentation' %}hidden{% endif %}">
+            {% if feature_flags.doctor_smart_documentation %}
+            <div class="grid lg:grid-cols-2 gap-4">
+                <form method="post" class="border-2 border-ink p-4 bg-white space-y-3">
+                    {% csrf_token %}
+                    <input type="hidden" name="doctor_action" value="save_template">
+                    <h3 class="font-serif text-xl font-bold">Create Template</h3>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase opacity-60">Template Name *</label>
+                        <input type="text" name="template_name" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                    </div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase opacity-60">Specialty</label>
+                        <input type="text" name="template_specialty" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="General / Pediatrics / ENT">
+                    </div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase opacity-60">Notes Template</label>
+                        <textarea name="notes_template" rows="3" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></textarea>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="font-mono text-[10px] uppercase opacity-60">Diagnosis Template</label>
+                            <textarea name="diagnosis_template" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></textarea>
+                        </div>
+                        <div>
+                            <label class="font-mono text-[10px] uppercase opacity-60">Plan Template</label>
+                            <textarea name="plan_template" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></textarea>
+                        </div>
+                    </div>
+                    <label class="inline-flex items-center gap-2 font-mono text-xs uppercase"><input type="checkbox" name="template_is_default">Set as default</label>
+                    <div class="flex justify-end"><button type="submit" class="px-4 py-2 border-2 border-ink bg-accent text-paper font-mono text-xs uppercase font-bold">Save Template</button></div>
+                </form>
+
+                <div class="border-2 border-ink p-4 bg-white">
+                    <h3 class="font-serif text-xl font-bold mb-3">Saved Templates</h3>
+                    <div class="space-y-2 max-h-80 overflow-y-auto">
+                        {% for t in templates %}
+                        <div class="border border-ink/20 p-3">
+                            <div class="font-serif font-bold">{{ t.name }}</div>
+                            <div class="font-mono text-[10px] uppercase opacity-60">{{ t.specialty }} {% if t.is_default %}· default{% endif %}</div>
+                        </div>
+                        {% empty %}
+                        <div class="font-mono text-xs uppercase opacity-50">No templates yet.</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="font-mono text-xs uppercase opacity-60">Smart Documentation is disabled by admin settings.</div>
+            {% endif %}
+        </div>
+
+        <div id="tab-virtual" class="desk-panel p-4 {% if active_section != 'virtual' %}hidden{% endif %}">
+            {% if feature_flags.doctor_virtual_opd %}
+            <div class="grid lg:grid-cols-2 gap-4">
+                <form method="post" class="border-2 border-ink p-4 bg-white space-y-3">
+                    {% csrf_token %}
+                    <input type="hidden" name="doctor_action" value="create_virtual_session">
+                    <h3 class="font-serif text-xl font-bold">Schedule Virtual OPD</h3>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase opacity-60">Patient *</label>
+                        <select name="virtual_patient_id" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm">
+                            <option value="">Select patient</option>
+                            {% for p in patients %}<option value="{{ p.id }}">{{ p.patient_code }} — {{ p.full_name }}</option>{% endfor %}
+                        </select>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div><label class="font-mono text-[10px] uppercase opacity-60">Date *</label><input type="date" name="virtual_date" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></div>
+                        <div><label class="font-mono text-[10px] uppercase opacity-60">Time</label><input type="time" name="virtual_time" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div><label class="font-mono text-[10px] uppercase opacity-60">Platform</label><input type="text" name="virtual_platform" value="Google Meet" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></div>
+                        <div><label class="font-mono text-[10px] uppercase opacity-60">Meeting Link</label><input type="url" name="meeting_link" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="https://"></div>
+                    </div>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Chief Concern</label><input type="text" name="chief_concern" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></div>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Clinical Notes</label><textarea name="virtual_notes" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></textarea></div>
+                    <div class="flex justify-end"><button type="submit" class="px-4 py-2 border-2 border-ink bg-accent text-paper font-mono text-xs uppercase font-bold">Schedule</button></div>
+                </form>
+
+                <div class="border-2 border-ink p-4 bg-white">
+                    <h3 class="font-serif text-xl font-bold mb-3">Virtual Queue</h3>
+                    <div class="space-y-2 max-h-80 overflow-y-auto">
+                        {% for s in virtual_sessions %}
+                        <div class="border border-ink/20 p-3">
+                            <div class="font-serif font-bold">{{ s.patient.full_name }}</div>
+                            <div class="font-mono text-[10px] uppercase opacity-60">{{ s.session_date }} {% if s.session_time %}· {{ s.session_time|time:'H:i' }}{% endif %}</div>
+                            <div class="font-mono text-[10px]">{{ s.platform }} · {{ s.get_status_display }}</div>
+                            <form method="post" class="mt-2 flex gap-2">
+                                {% csrf_token %}
+                                <input type="hidden" name="doctor_action" value="update_virtual_status">
+                                <input type="hidden" name="virtual_session_id" value="{{ s.id }}">
+                                <select name="virtual_status" class="border border-ink p-1 font-mono text-[10px]">
+                                    {% for value, label in virtual_status_choices %}<option value="{{ value }}" {% if s.status == value %}selected{% endif %}>{{ label }}</option>{% endfor %}
+                                </select>
+                                <button type="submit" class="px-2 py-1 border border-ink font-mono text-[10px] uppercase">Update</button>
+                            </form>
+                        </div>
+                        {% empty %}<div class="font-mono text-xs uppercase opacity-50">No virtual sessions.</div>{% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="font-mono text-xs uppercase opacity-60">Virtual OPD is disabled by admin settings.</div>
+            {% endif %}
+        </div>
+
+        <div id="tab-eprescription" class="desk-panel p-4 {% if active_section != 'eprescription' %}hidden{% endif %}">
+            {% if feature_flags.doctor_quick_eprescription %}
+            <div class="grid lg:grid-cols-2 gap-4">
+                <form method="post" class="border-2 border-ink p-4 bg-white space-y-3">
+                    {% csrf_token %}
+                    <input type="hidden" name="doctor_action" value="create_eprescription">
+                    <h3 class="font-serif text-xl font-bold">Create e-Prescription</h3>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Patient *</label><select name="rx_patient_id" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"><option value="">Select patient</option>{% for p in patients %}<option value="{{ p.id }}">{{ p.patient_code }} — {{ p.full_name }}</option>{% endfor %}</select></div>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Linked Appointment</label><select name="rx_appointment_id" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"><option value="">None</option>{% for a in appointments %}<option value="{{ a.id }}">{{ a.appointment_date }} · #{{ a.token_number }} · {{ a.patient.full_name }}</option>{% endfor %}</select></div>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Medicines *</label><textarea name="rx_medicines" rows="4" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm" placeholder="Medicine - dose - duration"></textarea></div>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Instructions</label><textarea name="rx_instructions" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></textarea></div>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Follow-up Date</label><input type="date" name="rx_followup_date" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></div>
+                    <div class="flex gap-4"><label class="inline-flex items-center gap-2 font-mono text-[10px] uppercase"><input type="checkbox" name="rx_share_email">Share via Email</label><label class="inline-flex items-center gap-2 font-mono text-[10px] uppercase"><input type="checkbox" name="rx_share_whatsapp">Share via WhatsApp</label></div>
+                    <div class="flex justify-end"><button type="submit" class="px-4 py-2 border-2 border-ink bg-accent text-paper font-mono text-xs uppercase font-bold">Save eRx</button></div>
+                </form>
+
+                <div class="border-2 border-ink p-4 bg-white">
+                    <h3 class="font-serif text-xl font-bold mb-3">Recent e-Prescriptions</h3>
+                    <div class="space-y-2 max-h-80 overflow-y-auto">
+                        {% for rx in eprescriptions %}
+                        <div class="border border-ink/20 p-3">
+                            <div class="font-serif font-bold">{{ rx.patient.full_name }}</div>
+                            <div class="font-mono text-[10px] uppercase opacity-60">{{ rx.created_at|date:'d M Y H:i' }}</div>
+                            <div class="font-mono text-[10px]">{{ rx.medicines|length }} medicines</div>
+                        </div>
+                        {% empty %}<div class="font-mono text-xs uppercase opacity-50">No e-prescriptions yet.</div>{% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% else %}<div class="font-mono text-xs uppercase opacity-60">Quick e-Prescription is disabled by admin settings.</div>{% endif %}
+        </div>
+
+        <div id="tab-lab" class="desk-panel p-4 {% if active_section != 'lab' %}hidden{% endif %}">
+            {% if feature_flags.doctor_easy_lab_requisition %}
+            <div class="grid lg:grid-cols-2 gap-4">
+                <form method="post" class="border-2 border-ink p-4 bg-white space-y-3">
+                    {% csrf_token %}
+                    <input type="hidden" name="doctor_action" value="create_lab_requisition">
+                    <h3 class="font-serif text-xl font-bold">Create Lab Requisition</h3>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Patient *</label><select name="lab_patient_id" required class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"><option value="">Select patient</option>{% for p in patients %}<option value="{{ p.id }}">{{ p.patient_code }} — {{ p.full_name }}</option>{% endfor %}</select></div>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Linked Appointment</label><select name="lab_appointment_id" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"><option value="">None</option>{% for a in appointments %}<option value="{{ a.id }}">{{ a.appointment_date }} · #{{ a.token_number }} · {{ a.patient.full_name }}</option>{% endfor %}</select></div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase opacity-60">Select Tests (30)</label>
+                        <div class="mt-1 grid grid-cols-2 gap-1 max-h-44 overflow-y-auto border border-ink/20 p-2">
+                            {% for test in lab_tests_catalog %}
+                            <label class="inline-flex items-center gap-2 font-mono text-[10px] uppercase"><input type="checkbox" name="lab_tests" value="{{ test }}">{{ test }}</label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div><label class="font-mono text-[10px] uppercase opacity-60">Notes</label><textarea name="lab_notes" rows="2" class="w-full mt-1 border-2 border-ink p-2 bg-paper font-mono text-sm"></textarea></div>
+                    <div class="flex justify-end"><button type="submit" class="px-4 py-2 border-2 border-ink bg-accent text-paper font-mono text-xs uppercase font-bold">Create Lab Request</button></div>
+                </form>
+
+                <div class="border-2 border-ink p-4 bg-white">
+                    <h3 class="font-serif text-xl font-bold mb-3">Recent Lab Requests</h3>
+                    <div class="space-y-2 max-h-80 overflow-y-auto">
+                        {% for lab in lab_requisitions %}
+                        <div class="border border-ink/20 p-3">
+                            <div class="font-serif font-bold">{{ lab.patient.full_name }}</div>
+                            <div class="font-mono text-[10px] uppercase opacity-60">{{ lab.created_at|date:'d M Y H:i' }}</div>
+                            <div class="font-mono text-[10px]">{{ lab.tests|length }} tests · {{ lab.get_status_display }}</div>
+                        </div>
+                        {% empty %}<div class="font-mono text-xs uppercase opacity-50">No lab requisitions yet.</div>{% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% else %}<div class="font-mono text-xs uppercase opacity-60">Lab requisition is disabled by admin settings.</div>{% endif %}
+        </div>
+
+        <div id="tab-requests" class="desk-panel p-4 {% if active_section != 'requests' %}hidden{% endif %}">
+            <div class="border-2 border-ink p-4 bg-white">
+                <h3 class="font-serif text-xl font-bold mb-3">Public Booking Requests</h3>
+                <div class="space-y-2 max-h-96 overflow-y-auto">
+                    {% for br in booking_requests %}
+                    <div class="border border-ink/20 p-3">
+                        <div class="flex items-start justify-between gap-2">
+                            <div>
+                                <div class="font-serif font-bold">{{ br.patient_name }}</div>
+                                <div class="font-mono text-[10px] uppercase opacity-60">{{ br.phone }} · {{ br.created_at|date:'d M Y H:i' }}</div>
+                            </div>
+                            <span class="font-mono text-[10px] uppercase border border-ink/30 px-2 py-1">{{ br.status }}</span>
+                        </div>
+                        {% if br.requested_date %}<div class="font-mono text-[10px] mt-2">Preferred Date: {{ br.requested_date }}</div>{% endif %}
+                        {% if br.concern %}<div class="font-mono text-[10px] opacity-80 mt-1">{{ br.concern }}</div>{% endif %}
+                    </div>
+                    {% empty %}<div class="font-mono text-xs uppercase opacity-50">No booking requests yet.</div>{% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

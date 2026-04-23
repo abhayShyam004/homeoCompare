@@ -452,29 +452,71 @@
         }
 
         .sidebar-footer {
-            padding: 1rem 1.25rem;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
             border-top: 1px solid var(--border);
+            margin-top: auto;
         }
 
+        /* Circular Theme Toggle */
         .theme-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.75rem 1rem;
-            background: var(--bg-input);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            font-weight: 500;
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
             cursor: pointer;
-            width: 100%;
-            transition: all 0.15s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(30, 41, 59, 0.85); /* dark mode default */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            margin: 0;
         }
 
         .theme-toggle:hover {
-            background: var(--bg-hover);
-            border-color: var(--border-light);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6);
+        }
+        
+        .theme-toggle i {
+            position: absolute;
+            font-size: 1.3rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Default Dark Mode Icons */
+        .theme-toggle .sun-icon {
+            transform: translateY(-30px) rotate(-90deg);
+            opacity: 0;
+            color: #f59e0b;
+        }
+        .theme-toggle .moon-icon {
+            transform: translateY(0) rotate(0);
+            opacity: 1;
+            color: #f1f5f9;
+        }
+
+        /* Light Mode Overrides */
+        [data-theme="light"] .theme-toggle {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="light"] .theme-toggle:hover {
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
+        }
+        [data-theme="light"] .theme-toggle .sun-icon {
+            transform: translateY(0) rotate(0);
+            opacity: 1;
+        }
+        [data-theme="light"] .theme-toggle .moon-icon {
+            transform: translateY(30px) rotate(90deg);
+            opacity: 0;
+            color: #3b82f6;
         }
 
         /* === MAIN CONTENT === */
@@ -1192,7 +1234,7 @@
                         My Saved Remedies
                         <span class="count-badge saved-count-badge" style="display:none">0</span>
                     </a>
-                    <a href="{% url 'allen_compare' %}" class="action-btn">
+                    <a href="{% url 'allen_comparison' %}" class="action-btn">
                         <i class="fas fa-exchange-alt"></i>
                         Switch to Allen's
                     </a>
@@ -1205,9 +1247,10 @@
         </div>
 
         <div class="sidebar-footer">
-            <button id="themeToggle" class="theme-toggle">
-                <span><i class="fas fa-moon"></i> Dark Mode</span>
-                <i class="fas fa-chevron-right"></i>
+            <!-- Circular Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
             </button>
         </div>
     </aside>
@@ -1243,7 +1286,7 @@
                     <p class="search-desc">Select remedies from the sidebar or type below. Choose a symptom category to compare.</p>
                 </div>
 
-                <form id="compareForm" method="POST" action="{% url 'remedy_compare' %}">
+                <form id="compareForm" method="POST" action="{% url 'boericke_comparison' %}">
                     {% csrf_token %}
                     <div class="search-grid">
                         <div class="input-group">
@@ -1343,21 +1386,26 @@
         // === THEME ===
         const themeToggle = document.getElementById('themeToggle');
         function initTheme() {
-const theme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', theme);
-            updateThemeBtn(theme);
+            const theme = localStorage.getItem('theme') || 'dark'; // Defaulting to dark
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
         }
-        function updateThemeBtn(theme) {
-            themeToggle.innerHTML = theme === 'dark'
-                ? '<span><i class="fas fa-sun"></i> Light Mode</span><i class="fas fa-chevron-right"></i>'
-                : '<span><i class="fas fa-moon"></i> Dark Mode</span><i class="fas fa-chevron-right"></i>';
+        
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+                const next = isLight ? 'dark' : 'light';
+                if (next === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                }
+                localStorage.setItem('theme', next);
+            });
         }
-        themeToggle.addEventListener('click', () => {
-            const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-            updateThemeBtn(next);
-        });
         initTheme();
 
         // === SIDEBAR SEARCH ===

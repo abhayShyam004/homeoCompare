@@ -1,11 +1,11 @@
 {% load static %}
 <aside
     class="sidebar-rail cp-shell-rail"
-    style="width:56px;min-width:56px;max-width:56px;background:var(--color-paper);border-right:0.5px solid var(--border-default);display:flex;flex-direction:column;align-items:center;padding:0;overflow:hidden;flex-shrink:0;"
+    style="width:56px;min-width:56px;max-width:56px;background:var(--color-paper);border-right:1px solid var(--border-default);display:flex;flex-direction:column;align-items:center;padding:0;overflow:hidden;flex-shrink:0;"
 >
     <div
         class="sidebar-logo cp-shell-rail-logo"
-        style="width:56px;height:56px;border-bottom:0.5px solid var(--border-default);display:flex;align-items:center;justify-content:center;background:var(--color-accent);"
+        style="width:56px;height:56px;border-bottom:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;background:var(--color-accent);"
     >
         <img
             src="{% static 'favicon_v4.ico' %}"
@@ -19,7 +19,7 @@
             href="{% url 'case_paper_dashboard' %}"
             class="nav-icon {% if page_title == 'Dashboard' %}active{% endif %}"
             title="Dashboard"
-            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:0.5px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Dashboard' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
+            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Dashboard' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
         >
             <i class="fas fa-th-large"></i>
         </a>
@@ -27,7 +27,7 @@
             href="{% url 'case_paper_cases' %}"
             class="nav-icon {% if page_title == 'Cases' %}active{% endif %}"
             title="Cases"
-            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:0.5px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Cases' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
+            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Cases' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
         >
             <i class="fas fa-file-alt"></i>
         </a>
@@ -35,7 +35,7 @@
             href="{% url 'case_paper_patients' %}"
             class="nav-icon {% if page_title == 'Patients' %}active{% endif %}"
             title="Patients"
-            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:0.5px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Patients' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
+            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Patients' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
         >
             <i class="fas fa-users"></i>
         </a>
@@ -43,20 +43,20 @@
             href="{% url 'case_paper_calendar' %}"
             class="nav-icon {% if page_title == 'Calendar' %}active{% endif %}"
             title="Calendar"
-            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:0.5px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Calendar' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
+            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Calendar' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
         >
             <i class="fas fa-calendar"></i>
         </a>
     </nav>
     <nav
         class="sidebar-nav sidebar-bottom cp-shell-rail-nav cp-shell-rail-nav-bottom"
-        style="display:flex;flex-direction:column;width:100%;margin-top:auto;border-top:0.5px solid var(--border-default);background:var(--color-paper);"
+        style="display:flex;flex-direction:column;width:100%;margin-top:auto;border-top:1px solid var(--border-default);background:var(--color-paper);"
     >
         <a
             href="{% url 'case_paper_settings' %}"
             class="nav-icon {% if page_title == 'Settings' %}active{% endif %}"
             title="Settings"
-            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:0.5px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Settings' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
+            style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border-default);text-decoration:none;font-size:18px;{% if page_title == 'Settings' %}background:var(--color-accent);color:var(--text-white);{% else %}background:transparent;color:var(--text-muted);{% endif %}"
         >
             <i class="fas fa-cog"></i>
         </a>

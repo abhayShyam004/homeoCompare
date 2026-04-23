@@ -2,86 +2,368 @@
 
 {% block page_title_header %}Calendar{% endblock %}
 
-{% block main_content %}
-{# Page Header & Controls #}
-<div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-6">
-    <div>
-        <h2 class="font-serif text-3xl font-bold">Clinical Calendar</h2>
-        <p class="font-mono text-sm text-ink/60 mt-1">Track consultation dates and scheduled follow-ups for {{ month_label }}.</p>
+{% block content %}
+<div class="space-y-6">
+    {% if messages %}
+    <div class="space-y-2">
+        {% for message in messages %}
+        <div class="p-3 border-2 border-ink {% if message.tags == 'success' %}bg-accent/10{% else %}bg-red-50{% endif %} font-mono text-xs uppercase font-bold">
+            {{ message }}
+        </div>
+        {% endfor %}
     </div>
-    <div class="flex items-center gap-3">
-        <a href="?month={{ prev_month }}&year={{ prev_year }}" class="px-4 py-2 border-2 border-ink bg-paper font-mono text-xs uppercase font-bold flex items-center gap-2 hover:bg-ink hover:text-paper transition-all">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-            Prev
-        </a>
-        <div class="font-mono text-sm font-bold text-center w-32">{{ month_label }}</div>
-        <a href="?month={{ next_month }}&year={{ next_year }}" class="px-4 py-2 border-2 border-ink bg-paper font-mono text-xs uppercase font-bold flex items-center gap-2 hover:bg-ink hover:text-paper transition-all">
-            Next
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-    </div>
-</div>
+    {% endif %}
 
-{# Calendar Grid #}
-<div class="border-2 border-ink bg-paper shadow-sm overflow-x-auto">
-    {# Weekday Headers #}
-    <div class="grid grid-cols-7 border-b-2 border-ink bg-ink text-paper min-w-[700px]">
-        <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Mon</div>
-        <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Tue</div>
-        <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Wed</div>
-        <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Thu</div>
-        <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Fri</div>
-        <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Sat</div>
-        <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold">Sun</div>
-    </div>
+    <section class="border-2 border-ink bg-gradient-to-r from-accent-light to-paper p-6">
+        <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-4">
+            <div>
+                <h2 class="font-serif text-4xl font-bold">Clinical Calendar</h2>
+                <p class="font-mono text-sm opacity-70 mt-2 max-w-3xl">
+                    Track consultations, follow-ups, and custom agenda tasks in one visual timeline for {{ month_label }}.
+                </p>
+            </div>
+            <div class="flex items-center gap-2 flex-wrap">
+                <button type="button" onclick="openCreateAgendaModal()" class="ui-btn-primary">
+                    + Add Agenda
+                </button>
+                <a href="?month={{ prev_month }}&year={{ prev_year }}" class="ui-btn-soft">Prev</a>
+                <div class="font-mono text-xs uppercase font-bold px-3 py-2 border-2 border-ink bg-white">{{ month_label }}</div>
+                <a href="?month={{ next_month }}&year={{ next_year }}" class="ui-btn-soft">Next</a>
+            </div>
+        </div>
+    </section>
 
-    {# Days Grid #}
-    <div class="grid grid-cols-7 min-w-[700px]">
-        {% for week in calendar_weeks %}
-            {% for day in week %}
-            <div class="relative min-h-[140px] p-2 border-b border-r border-ink
-                        {% if not day.is_current_month %}bg-ink/5 opacity-50{% endif %}
-                        {% if day.is_today %}border-2 border-accent{% endif %}">
-                <span class="font-mono text-xs font-bold {% if not day.is_current_month %}opacity-50{% endif %}">{{ day.day }}</span>
-                <div class="mt-1 space-y-1">
-                    {% for event in day.events %}
-                    <a href="{% url 'case_paper_view' event.case_id %}" class="block p-1.5 text-xs rounded-sm
-                                {% if event.type == 'followup' %}bg-blue-100 text-blue-800 border-l-2 border-blue-500
-                                {% else %}bg-accent/10 text-accent-800 border-l-2 border-accent{% endif %}">
-                        <div class="font-mono font-bold truncate">{{ event.title }}</div>
-                        <div class="font-mono text-[10px] opacity-70 truncate">{{ event.subtitle }}</div>
-                    </a>
+    <section class="flex flex-wrap gap-3">
+        <div class="border-2 border-ink bg-white px-4 py-2 min-w-[140px]">
+            <div class="font-mono text-[10px] uppercase opacity-60 mb-0.5">Current Period</div>
+            <div class="font-serif text-lg font-bold leading-none">{{ month_label }}</div>
+        </div>
+        <div class="border-2 border-ink bg-white px-4 py-2 min-w-[140px]">
+            <div class="font-mono text-[10px] uppercase opacity-60 mb-0.5">Upcoming Items</div>
+            <div class="font-serif text-lg font-bold leading-none">{{ upcoming_events|length }}</div>
+        </div>
+    </section>
+
+    <section class="border-2 border-ink bg-paper p-3">
+        <div class="flex flex-wrap items-center gap-2">
+            <span class="font-mono text-[10px] uppercase font-bold opacity-60 mr-2">Agenda Tags:</span>
+            <span class="px-2 py-1 text-[10px] font-mono uppercase font-bold border border-purple-600 bg-purple-100 text-purple-800">Meeting</span>
+            <span class="px-2 py-1 text-[10px] font-mono uppercase font-bold border border-blue-600 bg-blue-100 text-blue-800">Follow-up</span>
+            <span class="px-2 py-1 text-[10px] font-mono uppercase font-bold border border-amber-600 bg-amber-100 text-amber-800">Reminder</span>
+            <span class="px-2 py-1 text-[10px] font-mono uppercase font-bold border border-rose-600 bg-rose-100 text-rose-800">Procedure</span>
+        </div>
+    </section>
+
+    <section class="grid xl:grid-cols-3 gap-6">
+        <div class="xl:col-span-2 border-2 border-ink bg-white overflow-x-auto">
+            <div class="grid grid-cols-7 border-b-2 border-ink bg-ink text-paper min-w-[700px]">
+                <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Mon</div>
+                <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Tue</div>
+                <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Wed</div>
+                <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Thu</div>
+                <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Fri</div>
+                <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold border-r border-paper/10">Sat</div>
+                <div class="p-3 text-center font-mono text-[10px] uppercase tracking-widest font-bold">Sun</div>
+            </div>
+
+            <div class="grid grid-cols-7 min-w-[700px]">
+                {% for week in calendar_weeks %}
+                    {% for day in week %}
+                    <div class="relative min-h-[145px] p-2 border-b border-r border-ink {% if not day.is_current_month %}bg-ink/5 opacity-50{% endif %} {% if day.is_today %}ring-2 ring-accent ring-inset{% endif %}">
+                        <span class="font-mono text-xs font-bold {% if not day.is_current_month %}opacity-50{% endif %}">{{ day.day }}</span>
+                        <div class="mt-1 space-y-1">
+                            {% for event in day.events %}
+                                {% if event.case_id %}
+                                <a href="{% url 'case_paper_view' event.case_id %}" class="block p-1.5 text-xs rounded-sm {% if event.type == 'followup' %}bg-blue-100 text-blue-800 border-l-2 border-blue-500{% else %}bg-accent/10 text-ink border-l-2 border-accent{% endif %}">
+                                    <div class="font-mono font-bold truncate">{{ event.title }}</div>
+                                    <div class="font-mono text-[10px] opacity-70 truncate">{{ event.subtitle }}</div>
+                                </a>
+                                {% else %}
+                                <button type="button"
+                                        onclick="openAgendaDetails(this)"
+                                        data-agenda-id="{{ event.agenda_id }}"
+                                        data-title="{{ event.title|default:''|escapejs }}"
+                                        data-subtitle="{{ event.subtitle|default:''|escapejs }}"
+                                        data-description="{{ event.description|default:''|escapejs }}"
+                                        data-location="{{ event.location|default:''|escapejs }}"
+                                        data-category="{{ event.category|default:'reminder' }}"
+                                        data-category-label="{{ event.category_label|default:'Reminder'|escapejs }}"
+                                        data-date="{{ event.date_iso|default:'' }}"
+                                        data-time="{{ event.time|default:'' }}"
+                                        data-time-display="{{ event.time_display|default:''|escapejs }}"
+                                        class="block w-full text-left p-1.5 text-xs rounded-sm border-l-2
+                                        {% if event.category == 'meeting' %}bg-purple-100 text-purple-900 border-purple-600
+                                        {% elif event.category == 'followup' %}bg-blue-100 text-blue-900 border-blue-600
+                                        {% elif event.category == 'procedure' %}bg-rose-100 text-rose-900 border-rose-600
+                                        {% else %}bg-amber-100 text-amber-900 border-amber-600{% endif %}">
+                                    <div class="font-mono font-bold truncate">{{ event.title }}</div>
+                                    <div class="font-mono text-[10px] opacity-80 truncate">{{ event.subtitle }}</div>
+                                    {% if event.time_display %}<div class="font-mono text-[10px] opacity-70">{{ event.time_display }}</div>{% endif %}
+                                </button>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-2 border-ink bg-white p-4">
+                <h3 class="font-serif text-2xl font-bold mb-3">Upcoming Agenda</h3>
+                <div class="space-y-2 max-h-[620px] overflow-y-auto">
+                    {% for event in upcoming_events %}
+                    <div class="border border-ink/20 p-3 bg-paper/60">
+                        <div class="flex items-center justify-between gap-2">
+                            <div>
+                                <div class="font-serif font-semibold">{{ event.title }}</div>
+                                <div class="font-mono text-[10px] uppercase opacity-60">{{ event.date|date:'d M Y' }}{% if event.time_display %} · {{ event.time_display }}{% endif %}</div>
+                                <div class="font-mono text-[10px] opacity-70 mt-1">{{ event.subtitle }}</div>
+                            </div>
+                            {% if event.case_id %}
+                            <a href="{% url 'case_paper_view' event.case_id %}" class="px-3 py-1 border border-ink font-mono text-[10px] uppercase">Open</a>
+                            {% else %}
+                            <button type="button"
+                                    onclick="openAgendaDetails(this)"
+                                    data-agenda-id="{{ event.agenda_id }}"
+                                    data-title="{{ event.title|default:''|escapejs }}"
+                                    data-subtitle="{{ event.subtitle|default:''|escapejs }}"
+                                    data-description="{{ event.description|default:''|escapejs }}"
+                                    data-location="{{ event.location|default:''|escapejs }}"
+                                    data-category="{{ event.category|default:'reminder' }}"
+                                    data-category-label="{{ event.category_label|default:'Reminder'|escapejs }}"
+                                    data-date="{{ event.date_iso|default:'' }}"
+                                    data-time="{{ event.time|default:'' }}"
+                                    data-time-display="{{ event.time_display|default:''|escapejs }}"
+                                    class="px-3 py-1 border font-mono text-[10px] uppercase font-bold
+                                    {% if event.category == 'meeting' %}border-purple-700 bg-purple-50 text-purple-800
+                                    {% elif event.category == 'followup' %}border-blue-700 bg-blue-50 text-blue-800
+                                    {% elif event.category == 'procedure' %}border-rose-700 bg-rose-50 text-rose-800
+                                    {% else %}border-amber-700 bg-amber-50 text-amber-800{% endif %}">
+                                {{ event.category_label }}
+                            </button>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="text-center p-8">
+                        <p class="font-mono text-sm text-ink/60">No upcoming consultation or agenda events found.</p>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
-            {% endfor %}
-        {% endfor %}
+        </div>
+    </section>
+</div>
+
+<div id="agendaModal" class="fixed inset-0 bg-ink/50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-paper border-2 border-ink w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+        <div class="flex items-center justify-between p-4 border-b-2 border-ink">
+            <h3 class="font-serif text-2xl font-bold" id="agendaModalTitle">Add Agenda</h3>
+            <button type="button" onclick="closeAgendaModal()" class="ui-btn-soft">Close</button>
+        </div>
+        <form method="post" class="p-4 space-y-4" id="agendaForm">
+            {% csrf_token %}
+            <input type="hidden" name="month" value="{{ current_month }}">
+            <input type="hidden" name="year" value="{{ current_year }}">
+            <input type="hidden" name="agenda_action" id="agendaAction" value="create">
+            <input type="hidden" name="agenda_id" id="agendaId">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-1 md:col-span-2">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-70">Title *</label>
+                    <input type="text" id="agendaTitleInput" name="agenda_title" required class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5" placeholder="e.g. Team review with patient family">
+                </div>
+                <div class="space-y-1">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-70">Date *</label>
+                    <input type="date" id="agendaDateInput" name="agenda_date" required class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5">
+                </div>
+                <div class="space-y-1">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-70">Time</label>
+                    <input type="time" id="agendaTimeInput" name="agenda_time" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5">
+                </div>
+                <div class="space-y-1 md:col-span-2">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-70">Category</label>
+                    <select id="agendaCategoryInput" name="agenda_category" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5">
+                        {% for value, label in agenda_categories %}
+                        <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="space-y-1 md:col-span-2">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-70">Subtitle</label>
+                    <input type="text" id="agendaSubtitleInput" name="agenda_subtitle" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5" placeholder="e.g. Follow-up planning">
+                </div>
+                <div class="space-y-1 md:col-span-2">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-70">Location</label>
+                    <input type="text" id="agendaLocationInput" name="agenda_location" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5" placeholder="e.g. OPD Room 2 / Google Meet">
+                </div>
+                <div class="space-y-1 md:col-span-2">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-70">Description</label>
+                    <textarea id="agendaDescriptionInput" name="agenda_description" rows="4" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5" placeholder="Add notes for this agenda item..."></textarea>
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-2 pt-2">
+                <button type="button" onclick="closeAgendaModal()" class="ui-btn-soft">Cancel</button>
+                <button type="submit" class="ui-btn-primary" id="agendaSubmitButton">Save Agenda</button>
+            </div>
+        </form>
     </div>
 </div>
 
-{# Agenda View for smaller screens or as a summary #}
-<div class="mt-6">
-    <h3 class="font-serif text-2xl font-bold mb-4">Upcoming Agenda</h3>
-    <div class="border-2 border-ink bg-paper shadow-sm">
-        {% for event in upcoming_events %}
-        <div class="flex items-center gap-4 p-4 border-b-2 border-ink last:border-b-0">
-            <div class="text-center w-16">
-                <div class="font-serif text-2xl font-bold">{{ event.date|date:"d" }}</div>
-                <div class="font-mono text-xs uppercase tracking-widest">{{ event.date|date:"M" }}</div>
-            </div>
-            <div class="flex-1">
-                <div class="font-serif font-semibold">{{ event.title }}</div>
-                <div class="font-mono text-sm text-ink/60">{{ event.subtitle }}</div>
-            </div>
-            <a href="{% url 'case_paper_view' event.case_id %}" class="px-4 py-2 border-2 border-ink bg-paper font-mono text-xs uppercase font-bold flex items-center gap-2 hover:bg-ink hover:text-paper transition-all">
-                Open
-            </a>
+<div id="agendaDetailsModal" class="fixed inset-0 bg-ink/50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-paper border-2 border-ink w-full max-w-xl max-h-[90vh] overflow-y-auto">
+        <div class="flex items-center justify-between p-4 border-b-2 border-ink">
+            <h3 class="font-serif text-2xl font-bold">Agenda Details</h3>
+            <button type="button" onclick="closeAgendaDetails()" class="ui-btn-soft">Close</button>
         </div>
-        {% empty %}
-        <div class="text-center p-10">
-            <p class="font-mono text-sm text-ink/60">No upcoming consultation or follow-up dates were found.</p>
+        <div class="p-4 space-y-4">
+            <div>
+                <div class="font-serif text-2xl font-bold" id="detailTitle">-</div>
+                <div class="font-mono text-sm text-ink/60" id="detailSubtitle">-</div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2">
+                <span id="detailCategory" class="px-2 py-1 text-[10px] font-mono uppercase font-bold border">Reminder</span>
+                <span class="font-mono text-xs" id="detailDate">-</span>
+                <span class="font-mono text-xs" id="detailTime">-</span>
+            </div>
+
+            <div class="border-2 border-ink p-3 bg-ink/5">
+                <div class="font-mono text-[10px] uppercase font-bold opacity-60 mb-1">Location</div>
+                <div class="font-mono text-sm" id="detailLocation">-</div>
+            </div>
+
+            <div class="border-2 border-ink p-3 bg-paper">
+                <div class="font-mono text-[10px] uppercase font-bold opacity-60 mb-1">Description</div>
+                <div class="font-mono text-sm whitespace-pre-wrap" id="detailDescription">-</div>
+            </div>
+
+            <div class="flex justify-end gap-2 pt-2">
+                <button type="button" onclick="startEditFromDetails()" class="ui-btn-soft">Edit</button>
+                <form method="post" id="deleteAgendaForm" onsubmit="return confirm('Delete this agenda item?');">
+                    {% csrf_token %}
+                    <input type="hidden" name="month" value="{{ current_month }}">
+                    <input type="hidden" name="year" value="{{ current_year }}">
+                    <input type="hidden" name="agenda_action" value="delete">
+                    <input type="hidden" name="agenda_id" id="deleteAgendaId">
+                    <button type="submit" class="px-4 py-2 border-2 border-red-700 bg-red-700 text-paper font-mono text-xs uppercase font-bold hover:bg-red-800 transition-all">Delete</button>
+                </form>
+            </div>
         </div>
-        {% endfor %}
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let activeAgenda = null;
+
+    function categoryClass(category) {
+        if (category === 'meeting') return 'border-purple-700 bg-purple-50 text-purple-800';
+        if (category === 'followup') return 'border-blue-700 bg-blue-50 text-blue-800';
+        if (category === 'procedure') return 'border-rose-700 bg-rose-50 text-rose-800';
+        return 'border-amber-700 bg-amber-50 text-amber-800';
+    }
+
+    function openCreateAgendaModal() {
+        document.getElementById('agendaModalTitle').textContent = 'Add Agenda';
+        document.getElementById('agendaSubmitButton').textContent = 'Save Agenda';
+        document.getElementById('agendaAction').value = 'create';
+        document.getElementById('agendaId').value = '';
+        document.getElementById('agendaTitleInput').value = '';
+        document.getElementById('agendaSubtitleInput').value = '';
+        document.getElementById('agendaDescriptionInput').value = '';
+        document.getElementById('agendaLocationInput').value = '';
+        document.getElementById('agendaDateInput').value = '';
+        document.getElementById('agendaTimeInput').value = '';
+        document.getElementById('agendaCategoryInput').value = 'reminder';
+
+        const modal = document.getElementById('agendaModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeAgendaModal() {
+        const modal = document.getElementById('agendaModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+
+    function openAgendaDetails(element) {
+        activeAgenda = {
+            id: element.dataset.agendaId || '',
+            title: element.dataset.title || '',
+            subtitle: element.dataset.subtitle || '',
+            description: element.dataset.description || '',
+            location: element.dataset.location || '',
+            category: element.dataset.category || 'reminder',
+            categoryLabel: element.dataset.categoryLabel || 'Reminder',
+            date: element.dataset.date || '',
+            time: element.dataset.time || '',
+            timeDisplay: element.dataset.timeDisplay || '',
+        };
+
+        document.getElementById('detailTitle').textContent = activeAgenda.title || '-';
+        document.getElementById('detailSubtitle').textContent = activeAgenda.subtitle || '-';
+        document.getElementById('detailDate').textContent = activeAgenda.date || '-';
+        document.getElementById('detailTime').textContent = activeAgenda.timeDisplay || '-';
+        document.getElementById('detailLocation').textContent = activeAgenda.location || '-';
+        document.getElementById('detailDescription').textContent = activeAgenda.description || '-';
+
+        const categoryBadge = document.getElementById('detailCategory');
+        categoryBadge.textContent = activeAgenda.categoryLabel;
+        categoryBadge.className = 'px-2 py-1 text-[10px] font-mono uppercase font-bold border ' + categoryClass(activeAgenda.category);
+
+        document.getElementById('deleteAgendaId').value = activeAgenda.id;
+
+        const modal = document.getElementById('agendaDetailsModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeAgendaDetails() {
+        const modal = document.getElementById('agendaDetailsModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+
+    function startEditFromDetails() {
+        if (!activeAgenda) return;
+        closeAgendaDetails();
+
+        document.getElementById('agendaModalTitle').textContent = 'Edit Agenda';
+        document.getElementById('agendaSubmitButton').textContent = 'Update Agenda';
+        document.getElementById('agendaAction').value = 'update';
+        document.getElementById('agendaId').value = activeAgenda.id;
+        document.getElementById('agendaTitleInput').value = activeAgenda.title;
+        document.getElementById('agendaSubtitleInput').value = activeAgenda.subtitle;
+        document.getElementById('agendaDescriptionInput').value = activeAgenda.description;
+        document.getElementById('agendaLocationInput').value = activeAgenda.location;
+        document.getElementById('agendaDateInput').value = activeAgenda.date;
+        document.getElementById('agendaTimeInput').value = activeAgenda.time;
+        document.getElementById('agendaCategoryInput').value = activeAgenda.category || 'reminder';
+
+        const modal = document.getElementById('agendaModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeAgendaModal();
+            closeAgendaDetails();
+        }
+    });
+
+    document.getElementById('agendaModal').addEventListener('click', function(e) {
+        if (e.target.id === 'agendaModal') closeAgendaModal();
+    });
+
+    document.getElementById('agendaDetailsModal').addEventListener('click', function(e) {
+        if (e.target.id === 'agendaDetailsModal') closeAgendaDetails();
+    });
+</script>
 {% endblock %}

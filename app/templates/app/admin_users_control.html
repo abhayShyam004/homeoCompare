@@ -1,0 +1,332 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Access Section | Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+    <style>
+        :root {
+            --sidebar-width: 280px;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warn: #f59e0b;
+            --bg-dark: #0f172a;
+            --bg-sidebar: #1e293b;
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --bg-hover: #334155;
+            --text-white: #ffffff;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #334155;
+            --radius: 10px;
+            --radius-lg: 14px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            display: flex;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0; top: 0;
+        }
+
+        .sidebar-header { padding: 1.5rem; border-bottom: 1px solid var(--border); }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); border-radius: var(--radius-lg); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:1.1rem; }
+        .logo-text h1 { font-size: 1rem; font-weight: 700; color: var(--text-white); }
+        .logo-text span { font-size: 0.7rem; color: var(--text-muted); }
+
+        .sidebar-nav { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .nav-section { padding: 0 1rem; margin-bottom: 1.5rem; }
+        .nav-section-title { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 0 0.75rem; margin-bottom: 0.5rem; }
+        .nav-link { display: flex; align-items: center; gap: 12px; padding: 0.75rem 1rem; color: var(--text-secondary); text-decoration: none; border-radius: var(--radius); font-size: 0.9rem; font-weight: 500; transition: all 0.15s; margin-bottom: 4px; }
+        .nav-link:hover { background: var(--bg-hover); color: var(--text-primary); }
+        .nav-link.active { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; }
+
+        .main-wrapper { margin-left: var(--sidebar-width); flex: 1; min-height: 100vh; padding: 2rem; }
+        .header { display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:1.2rem; }
+        .title { font-size: 1.7rem; font-weight: 800; }
+        .subtitle { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
+
+        .stats { display:grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:14px; }
+        .stat { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:14px; }
+        .stat .label { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-secondary); }
+        .stat .value { font-size:1.5rem; font-weight:800; margin-top:5px; }
+
+        .alert { padding: 10px 12px; border-radius: var(--radius); margin-bottom: 10px; font-size: 0.85rem; font-weight: 600; }
+        .alert.success { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+        .alert.error { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); }
+
+        .grid-2 { display:grid; grid-template-columns:1.2fr 1fr; gap:12px; margin-bottom:14px; }
+        .card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; }
+        .card-header { padding:12px 14px; border-bottom:1px solid var(--border); display:flex; gap:10px; align-items:center; }
+        .card-title { font-size:1rem; font-weight:700; }
+        .card-body { padding:12px 14px; }
+
+        .feature-group { border:1px solid var(--border); border-radius:var(--radius); margin-bottom:10px; overflow:hidden; }
+        .feature-group h4 { padding:8px 10px; font-size:0.74rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-secondary); background:rgba(51,65,85,0.35); border-bottom:1px solid var(--border); }
+        .feature-list { padding:8px 10px; display:grid; gap:7px; }
+        .feature-check { display:flex; align-items:center; gap:8px; font-size:0.83rem; }
+
+        .input, .select {
+            width:100%;
+            background:var(--bg-input);
+            color:var(--text-primary);
+            border:1px solid var(--border);
+            border-radius:var(--radius);
+            padding:9px 10px;
+            font-size:0.84rem;
+            margin-top:4px;
+            margin-bottom:8px;
+        }
+        .label { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-secondary); }
+        .row2 { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+
+        .btn {
+            border:none;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color:#fff;
+            border-radius: var(--radius);
+            padding:9px 12px;
+            font-size:0.8rem;
+            font-weight:700;
+            text-transform:uppercase;
+            letter-spacing:0.05em;
+            cursor:pointer;
+        }
+
+        .table-wrap { overflow:auto; border:1px solid var(--border); border-radius:var(--radius); }
+        table { width:100%; border-collapse:collapse; min-width:1100px; }
+        th, td { padding:10px 12px; border-bottom:1px solid var(--border); text-align:left; font-size:0.82rem; }
+        th { background:rgba(51,65,85,0.35); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-secondary); }
+
+        .pill { display:inline-block; padding:3px 10px; border-radius:999px; font-size:0.68rem; font-weight:700; text-transform:uppercase; border:1px solid transparent; }
+        .pill.success { background:rgba(16,185,129,.15); border-color:rgba(16,185,129,.35); color:#34d399; }
+        .pill.warn { background:rgba(245,158,11,.15); border-color:rgba(245,158,11,.35); color:#fbbf24; }
+        .pill.danger { background:rgba(239,68,68,.15); border-color:rgba(239,68,68,.35); color:#fca5a5; }
+        .pill.info { background:rgba(59,130,246,.15); border-color:rgba(59,130,246,.35); color:#93c5fd; }
+
+        .toggle-btn { padding:6px 10px; border-radius:6px; border:1px solid var(--border); background: var(--bg-input); color: var(--text-primary); cursor: pointer; font-size: 0.76rem; }
+        .toggle-btn:hover { border-color: var(--primary); }
+
+        @media (max-width:1200px){
+            .grid-2 { grid-template-columns:1fr; }
+            .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="{% url 'home' %}" class="logo">
+                <div class="logo-icon">Hc</div>
+                <div class="logo-text"><h1>HomeoCompare</h1><span>Admin Panel</span></div>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Dashboard</div>
+                <a href="{% url 'admin_panel' %}" class="nav-link"><i class="fas fa-chart-line"></i><span>Analytics</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Access Control</div>
+                <a href="{% url 'admin_users_control' %}" class="nav-link active"><i class="fas fa-crown"></i><span>User Access</span></a>
+                <a href="{% url 'admin_feedback' %}" class="nav-link"><i class="fas fa-envelope-open-text"></i><span>User Feedback</span></a>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main-wrapper">
+        <div class="header">
+            <div>
+                <h1 class="title">User Access</h1>
+                <p class="subtitle">All feature controls, sender email settings, and user access management are centralized here.</p>
+            </div>
+            <a href="{% url 'admin_panel' %}" class="nav-link" style="border:1px solid var(--border);"><i class="fas fa-arrow-left"></i><span>Back to Analytics</span></a>
+        </div>
+
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert {% if message.tags == 'success' %}success{% else %}error{% endif %}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <div class="stats">
+            <div class="stat"><div class="label">Total Users</div><div class="value">{{ total_users }}</div></div>
+            <div class="stat"><div class="label">Access Users</div><div class="value">{{ access_count }}</div></div>
+            <div class="stat"><div class="label">SMTP Sender</div><div class="value" style="font-size:1rem; font-weight:700;">{{ platform_settings.sender_email|default:'Not Set' }}</div></div>
+            <div class="stat"><div class="label">App Password</div><div class="value" style="font-size:1rem; font-weight:700;">{% if smtp_password_set %}Configured{% else %}Missing{% endif %}</div></div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-header"><i class="fas fa-sliders-h"></i><div class="card-title">Feature Access Controls</div></div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="admin_action" value="save_feature_settings">
+                        {% for group in feature_groups %}
+                        <div class="feature-group">
+                            <h4>{{ group.title }}</h4>
+                            <div class="feature-list">
+                                {% for feature in group.features %}
+                                <label class="feature-check">
+                                    <input type="checkbox" name="{{ feature.key }}" {% if feature.enabled %}checked{% endif %}>
+                                    <span>{{ feature.label }}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <button type="submit" class="btn">Save Feature Settings</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header"><i class="fas fa-envelope"></i><div class="card-title">Email Sender Settings</div></div>
+                <div class="card-body">
+                    <form method="POST" autocomplete="off">
+                        {% csrf_token %}
+                        <input type="hidden" name="admin_action" value="save_email_settings">
+
+                        <label class="label">Sender Name</label>
+                        <input type="text" name="sender_name" class="input" value="{{ platform_settings.sender_name|default:'HomeoCompare' }}" placeholder="HomeoCompare Support">
+
+                        <label class="label">Sender Email *</label>
+                        <input type="email" name="sender_email" class="input" value="{{ platform_settings.sender_email }}" required placeholder="support@yourdomain.com">
+
+                        <label class="label">SMTP Host</label>
+                        <input type="text" name="smtp_host" class="input" value="{{ platform_settings.smtp_host|default:'smtp.gmail.com' }}" required>
+
+                        <div class="row2">
+                            <div>
+                                <label class="label">SMTP Port</label>
+                                <input type="number" name="smtp_port" class="input" value="{{ platform_settings.smtp_port|default:587 }}" min="1" required>
+                            </div>
+                            <div>
+                                <label class="label">Encryption</label>
+                                <select name="smtp_use_tls" class="select">
+                                    <option value="on" {% if platform_settings.smtp_use_tls %}selected{% endif %}>TLS Enabled</option>
+                                    <option value="off" {% if not platform_settings.smtp_use_tls %}selected{% endif %}>TLS Disabled</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label class="label">App Password (Hidden)</label>
+                        <input type="password" name="smtp_app_password" class="input" placeholder="Enter only if changing password">
+                        <div style="font-size:0.72rem; color:var(--text-muted); margin:-2px 0 8px;">{% if smtp_password_set %}Existing app password is saved. Leave blank to keep unchanged.{% else %}No app password saved yet. Add one for SMTP auth.{% endif %}</div>
+
+                        <button type="submit" class="btn">Save Email Settings</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header"><i class="fas fa-users-cog"></i><div class="card-title">User Access Directory</div></div>
+            <div class="card-body">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Email / Contact</th>
+                                <th>Auth</th>
+                                <th>Plan</th>
+                                <th>Access Until</th>
+                                <th>Registered</th>
+                                <th>Verified</th>
+                                <th>Active</th>
+                                <th>Cases</th>
+                                <th>Created</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users %}
+                            <tr>
+                                <td>
+                                    <div style="font-weight:700; color:var(--text-white);">{{ user.username|default:'-' }}</div>
+                                    <div style="font-size:0.74rem; color:var(--text-muted);">{{ user.physician_name|default:'No physician name' }}</div>
+                                </td>
+                                <td>
+                                    <div>{{ user.email|default:'-' }}</div>
+                                    <div style="font-size:0.74rem; color:var(--text-muted);">{{ user.contact_number|default:'No contact' }}</div>
+                                </td>
+                                <td><span class="pill info">{{ user.auth_method|default:'email' }}</span></td>
+                                <td>
+                                    {% if user.subscription_type and user.subscription_type != 'free' %}
+                                        <span class="pill success">{{ user.subscription_type }}</span>
+                                    {% else %}
+                                        <span class="pill warn">free</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ user.access_until|date:'Y-m-d H:i'|default:'-' }}</td>
+                                <td>{% if user.is_registered %}<span class="pill success">yes</span>{% else %}<span class="pill warn">no</span>{% endif %}</td>
+                                <td>{% if user.is_verified %}<span class="pill success">verified</span>{% else %}<span class="pill warn">pending</span>{% endif %}</td>
+                                <td>{% if user.is_active %}<span class="pill success" id="badge-{{ user.id }}">active</span>{% else %}<span class="pill danger" id="badge-{{ user.id }}">inactive</span>{% endif %}</td>
+                                <td>{{ user.case_count|default:0 }}</td>
+                                <td>{{ user.created_at|date:'Y-m-d' }}</td>
+                                <td>
+                                    <button class="toggle-btn" onclick="toggleUserAccess({{ user.id }})" id="btn-{{ user.id }}">{% if user.is_active %}Revoke{% else %}Activate{% endif %}</button>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr><td colspan="11" style="text-align:center; color:var(--text-muted);">No users found.</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleUserAccess(userId) {
+            fetch(`/admin-panel/toggle-user-access/${userId}/`, {
+                method: 'POST',
+                headers: { 'X-CSRFToken': '{{ csrf_token }}' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    const badge = document.getElementById(`badge-${userId}`);
+                    const btn = document.getElementById(`btn-${userId}`);
+                    if (data.is_active) {
+                        badge.className = 'pill success';
+                        badge.textContent = 'active';
+                        btn.textContent = 'Revoke';
+                    } else {
+                        badge.className = 'pill danger';
+                        badge.textContent = 'inactive';
+                        btn.textContent = 'Activate';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

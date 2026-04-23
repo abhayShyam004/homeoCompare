@@ -13,128 +13,123 @@
     <style>
         .register-form {
             display: grid;
-            gap: 16px;
+            gap: 14px;
         }
         .form-row {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
+            gap: 12px;
         }
         .form-row-full {
             grid-column: 1 / -1;
         }
         .form-hint {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--auth-text-soft);
-            margin-top: 6px;
+            margin-top: 4px;
         }
         .form-textarea {
             width: 100%;
-            min-height: 110px;
+            min-height: 80px;
             resize: vertical;
-            padding: 14px 16px;
+            padding: 12px 14px;
             border: 1px solid var(--auth-border);
-            background: var(--auth-card-strong);
-            border-radius: 14px;
+            background: var(--auth-bg-soft);
+            border-radius: 12px;
             font-size: 14px;
             color: var(--auth-text);
             font-family: inherit;
         }
         .form-textarea:focus {
             outline: none;
-            border-color: var(--auth-border-strong);
-            box-shadow: 0 0 0 4px rgba(45, 90, 39, 0.08);
+            border-color: var(--auth-accent-soft);
+            box-shadow: 0 0 0 3px rgba(30, 58, 26, 0.06);
         }
         .alert-info {
-            background: rgba(45, 90, 39, 0.08);
-            border: 1px solid rgba(45, 90, 39, 0.22);
-            color: #1f3f1b;
+            background: rgba(45, 90, 39, 0.06);
+            border: 1px solid rgba(45, 90, 39, 0.18);
+            color: var(--auth-text);
             display: block;
+            padding: 10px 12px;
+            font-size: 13px;
+        }
+        .alert-info i {
+            color: var(--auth-accent);
+            margin-right: 8px;
         }
         .privacy-notice {
-            padding: 13px 15px;
-            border-radius: 14px;
-            font-size: 13px;
-            line-height: 1.7;
-            background: #f7faf7;
-            border: 1px solid rgba(45, 90, 39, 0.18);
+            padding: 10px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            line-height: 1.6;
+            background: var(--auth-bg-soft);
+            border: 1px solid var(--auth-border);
             color: var(--auth-text-soft);
         }
         .privacy-notice a {
             color: var(--auth-accent);
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
         }
         .form-actions {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
         }
         .btn-secondary {
-            border: 1px solid var(--auth-border-strong);
-            background: rgba(255, 255, 255, 0.9);
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 14px;
+            border: 1px solid var(--auth-border);
+            background: var(--auth-bg-soft);
             color: var(--auth-text);
-            border-radius: 14px;
-            font-size: 15px;
-            font-weight: 700;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            padding: 14px 16px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            transition: all 0.2s ease;
         }
         .btn-secondary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
-            border-color: var(--auth-accent);
+            background: var(--auth-card);
+            border-color: var(--auth-border-strong);
         }
-        @media (max-width: 640px) {
+        @media (max-width: 560px) {
             .form-row, .form-actions {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
-<body class="auth-premium auth-preload">
-    <div class="auth-intro" id="authIntro" aria-hidden="true">
-        <div class="auth-intro-core">
-            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-intro-mark">
-            <div class="auth-intro-line mono">HOMEOCOMPARE PREMIUM CASE PAPER SUITE</div>
-            <h1 class="serif">Finalize Your Clinical Identity.</h1>
-        </div>
-    </div>
-
-    <div class="auth-container" style="min-height:min(820px, calc(100vh - 64px));">
-        <div class="auth-header">
+<body class="auth-portal">
+    <div class="auth-container" style="min-height:auto; padding: 24px;">
+        <div class="auth-header" style="padding: 24px 24px;">
             <div class="auth-brand">
                 <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-brand-mark">
                 <span>HomeoCompare</span>
             </div>
             <div class="auth-header-copy">
-                <h1 class="serif">Physician Profile Setup</h1>
-                <p>Complete your professional details so every case paper is generated with consistent clinical identity.</p>
+                <h1 class="serif" style="font-size: 28px; margin-bottom: 8px;">Physician Profile Setup</h1>
+                <p style="font-size: 13px; line-height: 1.5; color: rgba(248, 250, 252, 0.82);">Complete your professional details below.</p>
             </div>
-            <ul class="auth-feature-list">
-                <li><i class="fas fa-id-badge"></i> Structured practitioner profile for all records</li>
-                <li><i class="fas fa-hospital-user"></i> Clinic metadata attached to reports</li>
-                <li><i class="fas fa-lock"></i> Encrypted handling of sensitive information</li>
-            </ul>
         </div>
 
-        <div class="auth-body">
+        <div class="auth-body" style="padding: 24px 24px 30px;">
             <div class="auth-panel-top">
-                <div class="auth-kicker mono"><i class="fas fa-user-doctor"></i> Registration Final Step</div>
-                <h2 class="serif">Complete Registration</h2>
-                <p>This takes less than a minute and unlocks your full premium case-paper workspace.</p>
+                <h2 class="serif" style="font-size: 20px; margin-bottom: 6px;">Complete Registration</h2>
+                <p style="font-size: 13px; margin: 0; color: var(--auth-text-soft);">Fill in your professional details below.</p>
             </div>
 
             {% if error %}
-            <div class="alert alert-error">{{ error }}</div>
+            <div class="alert alert-error" style="display: block;">{{ error }}</div>
             {% endif %}
 
-            <div class="alert alert-info">
+            <div class="alert alert-info" style="margin-bottom: 14px;">
                 <i class="fas fa-circle-info"></i> Please fill in your professional details to get started.
             </div>
 
-            <form method="POST" class="register-form" onsubmit="handleFormSubmit(event)">
+            <form method="POST" class="register-form" onsubmit="handleFormSubmit(event)" enctype="multipart/form-data">
                 {% csrf_token %}
                 <input type="hidden" name="user_id" value="{{ user.id }}">
 
@@ -174,6 +169,14 @@
 
                 <div class="form-row form-row-full">
                     <div class="form-group">
+                        <label class="form-label">Profile Photo</label>
+                        <input type="file" name="profile_photo" class="form-input" accept="image/*">
+                        <span class="form-hint">Upload a professional photo for your clinic profile.</span>
+                    </div>
+                </div>
+
+                <div class="form-row form-row-full">
+                    <div class="form-group">
                         <label class="form-label">Clinic Address</label>
                         <textarea name="address" class="form-textarea" placeholder="Enter your clinic address..."></textarea>
                         <span class="form-hint">This will appear on generated case papers.</span>
@@ -197,15 +200,6 @@
     </div>
 
     <script>
-        function runAuthIntro() {
-            const intro = document.getElementById('authIntro');
-            if (!intro) return;
-            window.setTimeout(() => {
-                intro.classList.add('is-hidden');
-                document.body.classList.remove('auth-preload');
-            }, 1400);
-        }
-
         function handleFormSubmit(event) {
             event.preventDefault();
 
@@ -230,12 +224,40 @@
                 }
             });
         });
+    </script>
+    <!-- Floating Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
 
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', runAuthIntro);
-        } else {
-            runAuthIntro();
+    <script>
+        // === THEME INITIALIZATION ===
+        function initTheme() {
+            const theme = localStorage.getItem('theme') || 'light';
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
         }
+        initTheme();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    const next = isDark ? 'light' : 'dark';
+                    if (next === 'dark') {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                    }
+                    localStorage.setItem('theme', next);
+                });
+            }
+        });
     </script>
 </body>
 </html>

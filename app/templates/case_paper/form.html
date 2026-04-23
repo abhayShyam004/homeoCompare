@@ -1,124 +1,948 @@
 {% extends 'case_paper/base.html' %}
+{% load static %}
 
-{% block page_title_header %}{{ page_title|default:"New Case Paper" }}{% endblock %}
+{% block page_title_header %}{{ page_title|default:"Clinical Protocol" }}{% endblock %}
 
-{% block main_content %}
-<form id="casePaperForm" method="post" class="space-y-8" action="{% if case.case_id %}{% url 'case_paper_edit' case.case_id %}{% else %}{% url 'case_paper_new' %}{% endif %}">
-    {% csrf_token %}
+{% block extra_css %}
+<style>
+    .form-section { display: none; }
+    .form-section.active { display: block; }
+    
+    .sticky-actions {
+        position: sticky;
+        bottom: 0;
+        z-index: 50;
+        background-color: var(--color-paper);
+        border-top: 2px solid var(--color-ink);
+        margin: 0 -1.5rem -1.5rem -1.5rem;
+        padding: 1rem 1.5rem;
+    }
 
-    <!-- Section 1: Patient Profile -->
-    <div class="bg-paper border-2 border-ink p-6">
-        <div class="flex items-center justify-between border-b-2 border-ink pb-3 mb-6">
-            <h2 class="font-serif text-2xl font-bold">1. Patient Profile</h2>
+    /* Clinical Protocol Sidebar */
+    .clinical-sidebar {
+        width: 20rem;
+        background-color: var(--color-paper);
+        border: 2px solid var(--color-ink);
+        padding: 1rem;
+        box-shadow: 4px 4px 0 0 var(--color-ink);
+        position: sticky;
+        top: 1.5rem;
+        max-height: calc(100vh - 12rem);
+        overflow-y: auto;
+    }
+    .clinical-sidebar h3 {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-weight: 800;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--color-ink);
+    }
+    .sidebar-link {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 0.25rem;
+        border: 2px solid var(--color-ink);
+        background: var(--color-paper);
+        color: var(--color-ink);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
+    .sidebar-link:hover {
+        background: var(--color-accent);
+        color: var(--color-paper);
+    }
+    .sidebar-link.active {
+        background: var(--color-accent);
+        color: var(--color-paper);
+        border-left: 4px solid var(--color-ink);
+    }
+    .sidebar-link.completed {
+        position: relative;
+        padding-left: 2rem;
+    }
+    .sidebar-link.completed::before {
+        content: '✓';
+        position: absolute;
+        left: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-accent);
+        font-weight: 900;
+        font-size: 0.875rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        background: var(--color-accent);
+        color: var(--color-paper);
+        border-radius: 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sidebar-link .counter {
+        width: 1.5rem;
+        text-align: right;
+        margin-right: 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+    }
+    /* Enhanced Form Input Styling */
+    .form-section input[type="text"],
+    .form-section input[type="number"],
+    .form-section input[type="date"],
+    .form-section input[type="time"],
+    .form-section select,
+    .form-section textarea {
+        transition: all 0.2s ease;
+        border-radius: 0;
+    }
+    .form-section input:focus,
+    .form-section select:focus,
+    .form-section textarea:focus {
+        outline: none;
+        border-color: var(--color-secondary);
+        box-shadow: 2px 2px 0px 0px var(--color-secondary);
+        background-color: #FFFFFF !important;
+        transform: translateY(-1px);
+    }
+    
+    /* Section Header Styling */
+    .form-section h2 {
+        color: var(--color-ink);
+        font-family: var(--font-serif);
+        font-size: 3rem;
+        margin: 0 0 1rem 0;
+    }
+    .form-section h2::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: var(--color-accent);
+        margin-top: 0.5rem;
+    }
+    
+    /* Button Enhancement */
+    .form-section button[type="submit"],
+    .form-section button[type="button"] {
+        transition: all 0.15s ease;
+        border-radius: 0;
+    }
+    .form-section button:hover {
+        transform: translateY(-2px);
+        box-shadow: 4px 4px 0px 0px var(--color-ink);
+    }
+    .form-section button:active {
+        transform: translateY(0);
+        box-shadow: 2px 2px 0px 0px var(--color-ink);
+    }
+    
+    .save-status {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.6;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .save-status.saving::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #eab308;
+        display: inline-block;
+        animation: pulse 1s infinite;
+    }
+    
+    .save-status.saved::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #22c55e;
+        display: inline-block;
+    }
+
+    @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.4; }
+        100% { opacity: 1; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+{# Main Form Content #}
+    <div class="flex flex-col lg:flex-row gap-6">
+        <div class="flex-1">
+            <form id="casePaperForm" method="post" class="space-y-8 pb-20" onsubmit="isDirty = false;" novalidate>
+        {% csrf_token %}
+ {# Progress Tracking Header #}
+ <div class="progress-header bg-card border-2 border-ink shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-4 mb-6 transition-all hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-[2px]">
+ <div class="flex justify-between items-center mb-2">
+ <h3 class="font-serif text-2xl italic font-bold">Case Paper Progress</h3>
+ <div class="flex items-center space-x-2 text-sm font-mono">
+ <span id="progress-percent">0%</span>
+ <span>/</span>
+ <span id="section-counter">Section 0 of 20</span>
+ </div>
+ </div>
+ <div class="w-full bg-input border-2 border-ink h-4">
+ <div id="progress-bar" class="bg-accent h-4 transition-all duration-300" style="width: 0%"></div>
+ </div>
+</div>
+{# 1. Preliminary Data #}
+        <section id="section-preliminary" class="form-section active space-y-6 animate-in fade-in duration-300 bg-paper border-2 border-ink p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <div class="border-b-2 border-ink pb-2 mb-6">
+                <h2 class="font-serif text-4xl italic font-bold text-ink leading-tight tracking-tight">Preliminary Data</h2>
+                <p class="font-mono text-[10px] uppercase opacity-50 tracking-tighter">Essential Patient Identification</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Case ID</label><input type="text" value="{{ case.case_id|default:'AUTO_GENERATED' }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm opacity-50 cursor-not-allowed transition-all focus:ring-2 focus:ring-accent/50"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Consultation Date *</label><input type="date" name="consultation_date" id="id_consultation_date" value="{{ case.preliminary.consultation_date }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5" required></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Consultation Time</label><input type="time" name="consultation_time" id="id_consultation_time" value="{{ case.preliminary.consultation_time }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5"></div>
+                <div class="space-y-1 md:col-span-2"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Physician Name *</label><input type="text" name="physician_name" value="{{ case.preliminary.physician_name|default:user.physician_name }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5" required></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Patient Name *</label><input type="text" name="patient_name" value="{{ case.preliminary.patient_name }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5" required></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Age</label><input type="number" name="age" value="{{ case.preliminary.age }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm focus:outline-none focus:bg-accent/5"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Sex</label><select name="sex" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm">
+                    <option value="">SELECT</option>
+                    <option value="M" {% if case.preliminary.sex == 'M' %}selected{% endif %}>MALE</option>
+                    <option value="F" {% if case.preliminary.sex == 'F' %}selected{% endif %}>FEMALE</option>
+                </select></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Occupation</label><input type="text" name="occupation" value="{{ case.preliminary.occupation }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Marital Status</label><input type="text" name="marital_status" value="{{ case.preliminary.marital_status }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Religion</label><input type="text" name="religion" value="{{ case.preliminary.religion }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm"></div>
+                <div class="space-y-1 md:col-span-3"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Address / Contact</label><textarea name="address" rows="2" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm">{{ case.preliminary.address }}</textarea></div>
+                <div class="space-y-1 md:col-span-3"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Socioeconomic Status</label><input type="text" name="socioeconomic_status" value="{{ case.preliminary.socioeconomic_status }}" class="w-full bg-paper border-2 border-ink p-3 font-mono text-sm"></div>
+            </div>
+            <div class="flex justify-end pt-4"><button type="button" onclick="showSection('chief-complaints')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold hover:bg-ink/90 transition-all">Next Section -></button></div>
+        </section>
+
+        {# 2. Chief Complaints #}
+        <section id="section-chief-complaints" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Chief Complaints</h2></div>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center bg-ink/5 p-3 border-2 border-ink border-b-0"><h3 class="font-mono text-xs uppercase font-bold">Complaints Table</h3><button type="button" onclick="addRow('cc-container')" class="px-3 py-1 bg-ink text-paper font-mono text-[9px] uppercase font-bold">+ Add Row</button></div>
+                <div class="border-2 border-ink overflow-x-auto"><table class="w-full border-collapse"><thead class="bg-ink/10 border-b-2 border-ink font-mono text-[9px] uppercase font-bold"><tr><th class="p-2 border-r border-ink text-left">Complaint</th><th class="p-2 border-r border-ink text-left">Duration</th><th class="p-2 border-r border-ink text-left">Location</th><th class="p-2 border-r border-ink text-left">Sensation</th><th class="p-2 border-r border-ink text-left">Modalities</th><th class="p-2 border-r border-ink text-left">Concomitants</th><th class="p-2 border-r border-ink text-left">Intensity</th><th class="p-2"></th></tr></thead><tbody id="cc-container">
+                    {% for cc in case.chief_complaints %}<tr class="border-b border-ink/10">
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_name[]" value="{{ cc.name }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_duration[]" value="{{ cc.duration }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_location[]" value="{{ cc.location }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_sensation[]" value="{{ cc.sensation }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_modality[]" value="{{ cc.modality }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_concomitant[]" value="{{ cc.concomitant }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_intensity[]" value="{{ cc.intensity }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 text-center"><button type="button" onclick="removeRow(this)" class="text-red-700">×</button></td>
+                    </tr>{% empty %}<tr class="border-b border-ink/10">
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_name[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_duration[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_location[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_sensation[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_modality[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_concomitant[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="cc_intensity[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 text-center"></td>
+                    </tr>{% endfor %}
+                </tbody></table></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('preliminary')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold hover:bg-ink hover:text-paper transition-all"><- Back</button><button type="button" onclick="showSection('associated-complaints')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold hover:bg-ink/90 transition-all">Next Section -></button></div>
+        </section>
+
+        {# 3. Associated Complaints #}
+        <section id="section-associated-complaints" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Associated Complaints</h2></div>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center bg-ink/5 p-3 border-2 border-ink border-b-0"><h3 class="font-mono text-xs uppercase font-bold">Minor Records</h3><button type="button" onclick="addRow('ac-container')" class="px-3 py-1 bg-ink text-paper font-mono text-[9px] uppercase font-bold">+ Add Row</button></div>
+                <div class="border-2 border-ink"><table class="w-full border-collapse"><thead class="bg-ink/10 border-b-2 border-ink font-mono text-[9px] uppercase font-bold"><tr><th class="p-2 border-r border-ink text-left">Complaint Name</th><th class="p-2 border-r border-ink text-left">Characteristics / Duration</th><th class="p-2 w-12"></th></tr></thead><tbody id="ac-container">
+                    {% for ac in case.associated_complaints %}<tr class="border-b border-ink/10">
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="ac_name[]" value="{{ ac.name }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="ac_char[]" value="{{ ac.characteristics }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 text-center"><button type="button" onclick="removeRow(this)" class="text-red-700">×</button></td>
+                    </tr>{% empty %}<tr class="border-b border-ink/10">
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="ac_name[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="ac_char[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 text-center"></td>
+                    </tr>{% endfor %}
+                </tbody></table></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('chief-complaints')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('hpi')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 4. HPI #}
+        <section id="section-hpi" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">History of Presenting Illness (HPI)</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Onset</label><input type="text" name="hpi_onset" value="{{ case.history.hpi.onset }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Duration</label><input type="text" name="hpi_duration" value="{{ case.history.hpi.duration }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1 md:col-span-2"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Progress</label><textarea name="hpi_progress" rows="2" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.history.hpi.progress }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Causative Factors</label><input type="text" name="hpi_causative" value="{{ case.history.hpi.causative_factors }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Sequence of symptoms</label><input type="text" name="hpi_sequence" value="{{ case.history.hpi.sequence }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1 md:col-span-2"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Previous treatments</label><input type="text" name="hpi_treatments" value="{{ case.history.hpi.previous_treatments }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('associated-complaints')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('past-history')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 5. Past History #}
+        <section id="section-past-history" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Past History</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1 md:col-span-2"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Previous illnesses</label><textarea name="past_illnesses" rows="2" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.history.past_history.illnesses }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Hospitalizations</label><input type="text" name="past_hospitalizations" value="{{ case.history.past_history.hospitalizations }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Surgeries</label><input type="text" name="past_surgeries" value="{{ case.history.past_history.surgeries }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Trauma</label><input type="text" name="past_trauma" value="{{ case.history.past_history.trauma }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Drug history</label><input type="text" name="past_drugs" value="{{ case.history.past_history.drug_history }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('hpi')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('family-history')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 6. Family History #}
+        <section id="section-family-history" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Family History</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Diabetes</label><input type="text" name="fam_diabetes" value="{{ case.history.family_history.diabetes }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Hypertension</label><input type="text" name="fam_hypertension" value="{{ case.history.family_history.hypertension }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Tuberculosis</label><input type="text" name="fam_tb" value="{{ case.history.family_history.tuberculosis }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Cancer</label><input type="text" name="fam_cancer" value="{{ case.history.family_history.cancer }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Mental illness</label><input type="text" name="fam_mental" value="{{ case.history.family_history.mental_illness }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Hereditary tendencies</label><input type="text" name="fam_hereditary" value="{{ case.history.family_history.hereditary }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('past-history')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('personal-history')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 7. Personal History #}
+        <section id="section-personal-history" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Personal History</h2></div>
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Appetite</label><input type="text" name="pers_appetite" value="{{ case.generals.personal.appetite }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Thirst</label><input type="text" name="pers_thirst" value="{{ case.generals.personal.thirst }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Cravings / Aversions</label><input type="text" name="pers_cravings" value="{{ case.generals.personal.cravings }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Bowel</label><input type="text" name="pers_bowel" value="{{ case.generals.personal.bowel }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Urine</label><input type="text" name="pers_urine" value="{{ case.generals.personal.urine }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Perspiration</label><input type="text" name="pers_perspiration" value="{{ case.generals.personal.perspiration }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Sleep</label><input type="text" name="pers_sleep" value="{{ case.generals.personal.sleep }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Thermals</label><input type="text" name="pers_thermals" value="{{ case.generals.personal.thermals }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Addictions</label><input type="text" name="pers_addictions" value="{{ case.generals.personal.addictions }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('family-history')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('mental-generals')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 8. Mental Generals #}
+        <section id="section-mental-generals" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Mental Generals</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Nature</label><input type="text" name="ment_nature" value="{{ case.generals.mental.nature }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Fears</label><input type="text" name="ment_fears" value="{{ case.generals.mental.fears }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Anxiety</label><input type="text" name="ment_anxiety" value="{{ case.generals.mental.anxiety }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Anger</label><input type="text" name="ment_anger" value="{{ case.generals.mental.anger }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Memory</label><input type="text" name="ment_memory" value="{{ case.generals.mental.memory }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Emotional triggers</label><input type="text" name="ment_triggers" value="{{ case.generals.mental.triggers }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1 md:col-span-2"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Social behavior</label><input type="text" name="ment_social" value="{{ case.generals.mental.social }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('personal-history')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('physical-generals')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 9. Physical Generals #}
+        <section id="section-physical-generals" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Physical Generals</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Thermal reaction</label><input type="text" name="phys_thermal" value="{{ case.generals.physical.thermal_reaction }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Food desires</label><input type="text" name="phys_food" value="{{ case.generals.physical.food_desires }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">General modalities</label><input type="text" name="phys_modalities" value="{{ case.generals.physical.modalities }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Energy levels</label><input type="text" name="phys_energy" value="{{ case.generals.physical.energy }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('mental-generals')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('examination')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 10. Examination Findings #}
+        <section id="section-examination" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Examination Findings</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">General</label><textarea name="exam_general" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.clinical.examination.general }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Systemic</label><textarea name="exam_systemic" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.clinical.examination.systemic }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Local examination</label><textarea name="exam_local" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.clinical.examination.local }}</textarea></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('physical-generals')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('investigations')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 11. Investigations #}
+        <section id="section-investigations" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Investigations</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Blood reports</label><textarea name="inv_blood" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.clinical.investigations.blood }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Imaging</label><textarea name="inv_imaging" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.clinical.investigations.imaging }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Other tests</label><textarea name="inv_other" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.clinical.investigations.other }}</textarea></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('examination')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('diagnosis')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 12. Diagnosis #}
+        <section id="section-diagnosis" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Diagnosis</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Probable Diagnosis</label><input type="text" name="diag_probable" value="{{ case.analysis.diagnosis.probable }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Final Diagnosis</label><input type="text" name="diag_final" value="{{ case.analysis.diagnosis.final }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('investigations')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('totality')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 13. Totality #}
+        <section id="section-totality" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Totality of Symptoms</h2></div>
+            <div class="bg-ink/5 p-6 border-2 border-ink">
+                <label class="font-mono text-[10px] uppercase font-bold opacity-70">Key symptoms selected</label>
+                <textarea name="anal_totality" rows="6" class="w-full bg-paper border border-ink p-3 text-xs mt-2">{{ case.analysis.totality }}</textarea>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('diagnosis')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('rubrics')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 14. Rubrics #}
+        <section id="section-rubrics" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Rubrics for Repertorization</h2></div>
+            <div class="bg-ink/5 p-6 border-2 border-ink">
+                <label class="font-mono text-[10px] uppercase font-bold opacity-70">Rubric list</label>
+                <textarea name="anal_rubrics" rows="6" class="w-full bg-paper border border-ink p-3 text-xs mt-2">{{ case.analysis.rubrics }}</textarea>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('totality')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('repertorial')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 15. Repertorial Result #}
+        <section id="section-repertorial" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Repertorial Result</h2></div>
+            <div class="bg-ink/5 p-6 border-2 border-ink">
+                <label class="font-mono text-[10px] uppercase font-bold opacity-70">Top remedies with scores</label>
+                <textarea name="anal_repertorial" rows="6" class="w-full bg-paper border border-ink p-3 text-xs mt-2">{{ case.analysis.repertorial_result }}</textarea>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('rubrics')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('analysis')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 16. Analysis #}
+        <section id="section-analysis" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Analysis & Evaluation</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Miasmatic analysis</label><input type="text" name="anal_miasmatic" value="{{ case.analysis.miasmatic }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Remedy differentiation</label><input type="text" name="anal_differentiation" value="{{ case.analysis.differentiation }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Keynotes</label><input type="text" name="anal_keynotes" value="{{ case.analysis.keynotes }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('repertorial')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('prescription')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 17. Prescription #}
+        <section id="section-prescription" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Prescription</h2></div>
+            <div class="grid grid-cols-2 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1 relative">
+                    <label class="font-mono text-[10px] uppercase font-bold opacity-70">Final Remedy</label>
+                    <input type="text" name="presc_remedy" id="presc_remedy" value="{{ case.prescription.final_remedy }}" class="w-full bg-paper border border-ink p-2 text-xs" autocomplete="off">
+                    <div id="remedy-suggestions" class="hidden absolute z-50 left-0 right-0 top-full bg-paper border-2 border-ink shadow-lg max-h-60 overflow-y-auto"></div>
+                </div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Potency</label><input type="text" name="presc_potency" value="{{ case.prescription.potency }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Dose</label><input type="text" name="presc_dose" value="{{ case.prescription.dose }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Repetition</label><input type="text" name="presc_repetition" value="{{ case.prescription.repetition }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+                <div class="space-y-1 md:col-span-2"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Mode of administration</label><input type="text" name="presc_mode" value="{{ case.prescription.mode }}" class="w-full bg-paper border border-ink p-2 text-xs"></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('analysis')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('advice')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 18. Advice #}
+        <section id="section-advice" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Advice</h2></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-ink/5 p-6 border-2 border-ink">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Diet & lifestyle</label><textarea name="adv_diet" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.prescription.advice.diet }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Restrictions</label><textarea name="adv_restrictions" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.prescription.advice.restrictions }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Instructions</label><textarea name="adv_instructions" rows="3" class="w-full bg-paper border border-ink p-2 text-xs">{{ case.prescription.advice.instructions }}</textarea></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('prescription')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('followup')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 19. Follow-Up #}
+        <section id="section-followup" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Follow-Up Section</h2></div>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center bg-ink/5 p-3 border-2 border-ink border-b-0"><h3 class="font-mono text-xs uppercase font-bold">Timeline</h3><button type="button" onclick="addRow('fu-container')" class="px-3 py-1 bg-ink text-paper font-mono text-[9px] uppercase font-bold">+ Add Row</button></div>
+                <div class="border-2 border-ink overflow-x-auto"><table class="w-full border-collapse"><thead class="bg-ink/10 border-b-2 border-ink font-mono text-[9px] uppercase font-bold"><tr><th class="p-2 border-r border-ink text-left">Date</th><th class="p-2 border-r border-ink text-left">Changes</th><th class="p-2 border-r border-ink text-left">Generals</th><th class="p-2 border-r border-ink text-left">Assessment</th><th class="p-2"></th></tr></thead><tbody id="fu-container">
+                    {% for fu in case.followup %}<tr class="border-b border-ink/10">
+                        <td class="p-1 border-r border-ink/10"><input type="date" name="fu_date[]" value="{{ fu.date }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="fu_changes[]" value="{{ fu.changes }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="fu_generals[]" value="{{ fu.generals }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 border-r border-ink/10"><input type="text" name="fu_assessment[]" value="{{ fu.assessment }}" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td class="p-1 text-center"><button type="button" onclick="removeRow(this)" class="text-red-700">×</button></td>
+                    </tr>{% empty %}<tr class="border-b border-ink/10">
+                        <td class="p-1 border-r border-ink/10"><input type="date" name="fu_date[]" class="w-full p-1 text-xs border-none bg-transparent"></td>
+                        <td colspan="3" class="p-1"></td>
+                        <td class="p-1 text-center"></td>
+                    </tr>{% endfor %}
+                </tbody></table></div>
+            </div>
+            <div class="flex justify-between pt-4"><button type="button" onclick="showSection('advice')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button><button type="button" onclick="showSection('summary')" class="px-6 py-2 bg-ink text-paper font-mono text-[11px] uppercase font-bold">Next Section -></button></div>
+        </section>
+
+        {# 20. Case Summary #}
+        <section id="section-summary" class="form-section space-y-6">
+            <div class="border-b-2 border-ink pb-2"><h2 class="font-serif text-3xl italic font-bold">Case Summary</h2></div>
+            <div class="space-y-4">
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Summary</label><textarea name="sum_summary" rows="4" class="w-full bg-paper border-2 border-ink p-3 text-xs">{{ case.notes.summary }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Remedy logic</label><textarea name="sum_logic" rows="3" class="w-full bg-paper border-2 border-ink p-3 text-xs">{{ case.notes.logic }}</textarea></div>
+                <div class="space-y-1"><label class="font-mono text-[10px] uppercase font-bold opacity-70">Learning points</label><textarea name="sum_learning" rows="2" class="w-full bg-paper border-2 border-ink p-3 text-xs">{{ case.notes.learning }}</textarea></div>
+            </div>
+            <div class="flex justify-start pt-4"><button type="button" onclick="showSection('followup')" class="px-6 py-2 border-2 border-ink font-mono text-[11px] uppercase font-bold"><- Back</button></div>
+        </section>
+
+        {# Sticky Actions #}
+        <div class="sticky-actions flex justify-between items-center gap-4">
+            <div class="flex items-center gap-6">
+                <div class="flex gap-4">
+                    <input type="hidden" id="formAction" name="action" value="save_draft">
+                    <button type="submit" onclick="document.getElementById('formAction').value='save_draft';" class="px-6 py-3 border-2 border-ink bg-paper font-mono text-xs uppercase font-bold hover:bg-ink hover:text-paper transition-all shadow-[4px_4px_0px_0px_var(--color-ink)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">Save Draft</button>
+                    <button type="submit" onclick="document.getElementById('formAction').value='mark_complete';" class="px-6 py-3 bg-accent text-paper font-mono text-xs uppercase font-bold hover:bg-accent/90 transition-all border-2 border-ink shadow-[4px_4px_0px_0px_var(--color-ink)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">Finalize</button>
+                </div>
+                <div id="saveStatus" class="save-status">
+                    <span id="saveStatusText"></span>
+                </div>
+            </div>
+            {% if case_id %}<button type="button" onclick="if(confirm('Permanent Deletion?')) document.getElementById('deleteForm').submit();" class="text-red-700 font-mono text-[10px] uppercase font-bold border border-red-700 px-3 py-1">Delete Record</button>{% endif %}
         </div>
-        <div class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div>
-                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_physician_name">Physician Name *</label>
-                    <input type="text" name="physician_name" id="id_physician_name" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{% if case.preliminary.physician_name %}{{ case.preliminary.physician_name }}{% else %}{{ user.physician_name }}{% endif %}" required>
-                </div>
-                <div>
-                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_consultation_date">Consultation Date *</label>
-                    <input type="date" name="consultation_date" id="id_consultation_date" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{{ case.preliminary.consultation_date|date:'Y-m-d' }}" required>
-                </div>
-                <div>
-                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_consultation_time">Consultation Time</label>
-                    <input type="time" name="consultation_time" id="id_consultation_time" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{{ case.preliminary.consultation_time|time:'H:i' }}">
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div>
-                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_patient_name">Patient Name *</label>
-                    <input type="text" name="patient_name" id="id_patient_name" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{{ case.preliminary.patient_name }}" required>
-                </div>
-                <div>
-                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_age">Age</label>
-                    <input type="number" name="age" id="id_age" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" value="{{ case.preliminary.age }}">
-                </div>
-                <div>
-                    <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_sex">Sex</label>
-                    <select name="sex" id="id_sex" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all">
-                        <option value="">Select</option>
-                        <option value="M" {% if case.preliminary.sex == 'M' %}selected{% endif %}>Male</option>
-                        <option value="F" {% if case.preliminary.sex == 'F' %}selected{% endif %}>Female</option>
-                        <option value="O" {% if case.preliminary.sex == 'O' %}selected{% endif %}>Other</option>
-                    </select>
-                </div>
-            </div>
-            <div>
-                <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_address">Address</label>
-                <textarea name="address" id="id_address" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" rows="2">{{ case.preliminary.address }}</textarea>
-            </div>
+    </form>
         </div>
+        <aside class="clinical-sidebar hidden lg:block">
+            <h3 class="font-serif text-xl italic font-bold mb-4 pb-2 border-b-2 border-ink">Clinical Protocol</h3>
+            <nav class="space-y-1">
+                <a href="#" onclick="showSection('preliminary'); return false;" class="sidebar-link" id="nav-preliminary" data-section="preliminary">
+                    <span class="counter">1.</span>
+                    <span class="title">Preliminary Data</span>
+                </a>
+                <a href="#" onclick="showSection('chief-complaints'); return false;" class="sidebar-link" id="nav-chief-complaints" data-section="chief-complaints">
+                    <span class="counter">2.</span>
+                    <span class="title">Chief Complaints</span>
+                </a>
+                <a href="#" onclick="showSection('associated-complaints'); return false;" class="sidebar-link" id="nav-associated-complaints" data-section="associated-complaints">
+                    <span class="counter">3.</span>
+                    <span class="title">Associated Complaints</span>
+                </a>
+                <a href="#" onclick="showSection('hpi'); return false;" class="sidebar-link" id="nav-hpi" data-section="hpi">
+                    <span class="counter">4.</span>
+                    <span class="title">History of Presenting Illness</span>
+                </a>
+                <a href="#" onclick="showSection('past-history'); return false;" class="sidebar-link" id="nav-past-history" data-section="past-history">
+                    <span class="counter">5.</span>
+                    <span class="title">Past History</span>
+                </a>
+                <a href="#" onclick="showSection('family-history'); return false;" class="sidebar-link" id="nav-family-history" data-section="family-history">
+                    <span class="counter">6.</span>
+                    <span class="title">Family History</span>
+                </a>
+                <a href="#" onclick="showSection('personal-history'); return false;" class="sidebar-link" id="nav-personal-history" data-section="personal-history">
+                    <span class="counter">7.</span>
+                    <span class="title">Personal History</span>
+                </a>
+                <a href="#" onclick="showSection('mental-generals'); return false;" class="sidebar-link" id="nav-mental-generals" data-section="mental-generals">
+                    <span class="counter">8.</span>
+                    <span class="title">Mental Generals</span>
+                </a>
+                <a href="#" onclick="showSection('physical-generals'); return false;" class="sidebar-link" id="nav-physical-generals" data-section="physical-generals">
+                    <span class="counter">9.</span>
+                    <span class="title">Physical Generals</span>
+                </a>
+                <a href="#" onclick="showSection('examination'); return false;" class="sidebar-link" id="nav-examination" data-section="examination">
+                    <span class="counter">10.</span>
+                    <span class="title">Examination Findings</span>
+                </a>
+                <a href="#" onclick="showSection('investigations'); return false;" class="sidebar-link" id="nav-investigations" data-section="investigations">
+                    <span class="counter">11.</span>
+                    <span class="title">Investigations</span>
+                </a>
+                <a href="#" onclick="showSection('diagnosis'); return false;" class="sidebar-link" id="nav-diagnosis" data-section="diagnosis">
+                    <span class="counter">12.</span>
+                    <span class="title">Diagnosis</span>
+                </a>
+                <a href="#" onclick="showSection('totality'); return false;" class="sidebar-link" id="nav-totality" data-section="totality">
+                    <span class="counter">13.</span>
+                    <span class="title">Totality of Symptoms</span>
+                </a>
+                <a href="#" onclick="showSection('rubrics'); return false;" class="sidebar-link" id="nav-rubrics" data-section="rubrics">
+                    <span class="counter">14.</span>
+                    <span class="title">Rubrics</span>
+                </a>
+                <a href="#" onclick="showSection('repertorial'); return false;" class="sidebar-link" id="nav-repertorial" data-section="repertorial">
+                    <span class="counter">15.</span>
+                    <span class="title">Repertorial Result</span>
+                </a>
+                <a href="#" onclick="showSection('analysis'); return false;" class="sidebar-link" id="nav-analysis" data-section="analysis">
+                    <span class="counter">16.</span>
+                    <span class="title">Analysis & Evaluation</span>
+                </a>
+                <a href="#" onclick="showSection('prescription'); return false;" class="sidebar-link" id="nav-prescription" data-section="prescription">
+                    <span class="counter">17.</span>
+                    <span class="title">Prescription</span>
+                </a>
+                <a href="#" onclick="showSection('advice'); return false;" class="sidebar-link" id="nav-advice" data-section="advice">
+                    <span class="counter">18.</span>
+                    <span class="title">Advice</span>
+                </a>
+                <a href="#" onclick="showSection('followup'); return false;" class="sidebar-link" id="nav-followup" data-section="followup">
+                    <span class="counter">19.</span>
+                    <span class="title">Follow-Up Section</span>
+                </a>
+                <a href="#" onclick="showSection('summary'); return false;" class="sidebar-link" id="nav-summary" data-section="summary">
+                    <span class="counter">20.</span>
+                    <span class="title">Case Summary</span>
+                </a>
+            </nav>
+        </aside>
     </div>
 
-    <!-- Section 4: Case History -->
-    <div class="bg-paper border-2 border-ink p-6">
-        <div class="flex items-center justify-between border-b-2 border-ink pb-3 mb-6">
-            <h2 class="font-serif text-2xl font-bold">4. Case History</h2>
-        </div>
-        <div class="space-y-4">
-            <div>
-                <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_hpi">History of Present Illness</label>
-                <textarea name="hpi" id="id_hpi" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" rows="3">{{ case.history.hpi }}</textarea>
-            </div>
-            <div>
-                <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_past_medical_history">Past Medical History</label>
-                <textarea name="past_medical_history" id="id_past_medical_history" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" rows="3">{{ case.history.past_medical_history }}</textarea>
-            </div>
-            <div>
-                <label class="font-mono text-xs font-bold uppercase tracking-wider text-ink/70 mb-1 block" for="id_family_history">Family History</label>
-                <textarea name="family_history" id="id_family_history" class="w-full bg-paper border-2 border-ink py-2 px-3 font-mono text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all" rows="3">{{ case.history.family_history }}</textarea>
-            </div>
-        </div>
-    </div>
-
-    <!-- ... other sections would follow the same pattern ... -->
-
-    <!-- Form Actions -->
-    <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 pt-6 mt-6 border-t-2 border-ink">
-        <div>
-            {% if case.case_id %}
-            <a href="{% url 'case_paper_delete' case.case_id %}" onclick="return confirm('Are you sure you want to delete this case paper? This action cannot be undone.');" class="w-full md:w-auto px-6 py-3 border-2 border-red-700 bg-red-700 text-paper font-mono text-xs uppercase font-bold flex items-center justify-center gap-2 hover:bg-red-800 transition-all">
-                Delete
-            </a>
-            {% endif %}
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-            <input type="hidden" id="formAction" name="action" value="save_draft">
-            <button type="submit" onclick="document.getElementById('formAction').value='save_draft';" class="w-full md:w-auto px-6 py-3 border-2 border-ink bg-paper font-mono text-xs uppercase font-bold flex items-center justify-center gap-2 hover:bg-ink hover:text-paper transition-all">
-                Save Draft
-            </button>
-            <button type="submit" onclick="document.getElementById('formAction').value='mark_complete';" class="w-full md:w-auto px-6 py-3 border-2 border-accent bg-accent text-paper font-mono text-xs uppercase font-bold flex items-center justify-center gap-2 hover:bg-accent/90 transition-all">
-                Mark as Complete
-            </button>
-        </div>
-    </div>
-</form>
+{# Delete Form #}
+{% if case_id %}<form id="deleteForm" action="{% url 'case_paper_delete' %}" method="post" style="display:none;">{% csrf_token %}<input type="hidden" name="case_id" value="{{ case_id }}"></form>{% endif %}
 {% endblock %}
 
 {% block extra_js %}
 <script>
+// Section completion tracking
+const sectionRequirements = {
+    'preliminary': ['patient_name', 'consultation_date', 'physician_name'],
+    'chief-complaints': [], // At least one complaint row
+    'associated-complaints': [], // At least one associated complaint
+    'hpi': [], // No specific requirements
+    'past-history': [], // No specific requirements
+    'family-history': [], // No specific requirements
+    'personal-history': [], // No specific requirements
+    'mental-generals': [], // No specific requirements
+    'physical-generals': [], // No specific requirements
+    'examination': [], // No specific requirements
+    'investigations': [], // No specific requirements
+    'diagnosis': [], // No specific requirements
+    'totality': [], // No specific requirements
+    'rubrics': [], // No specific requirements
+    'repertorial': [], // No specific requirements
+    'analysis': [], // No specific requirements
+    'prescription': ['presc_remedy'], // Final remedy required
+    'advice': [], // No specific requirements
+    'followup': [], // At least one follow-up entry
+    'summary': [] // No specific requirements
+};
+
+function updateProgress() {
+    let completedSections = 0;
+    const totalSections = Object.keys(sectionRequirements).length;
+
+    // Check each section for completion
+    for (const [sectionId, requirements] of Object.entries(sectionRequirements)) {
+        if (isSectionComplete(sectionId, requirements)) {
+            completedSections++;
+            markSectionAsComplete(sectionId);
+        } else {
+            markSectionAsIncomplete(sectionId);
+        }
+    }
+
+    // Update progress display
+    const progressPercent = Math.round((completedSections / totalSections) * 100);
+    document.getElementById('progress-percent').textContent = progressPercent + '%';
+    document.getElementById('progress-bar').style.width = progressPercent + '%';
+    document.getElementById('section-counter').textContent = `Section ${getCurrentSectionNumber()} of ${totalSections}`;
+}
+
+function isSectionComplete(sectionId, requirements) {
+    // For sections with specific field requirements
+    if (requirements.length > 0) {
+        return requirements.every(field => {
+            const value = document.querySelector(`[name="${field}"]`)?.value?.trim();
+            return value !== '' && value !== null;
+        });
+    }
+
+    // For table-based sections, check if at least one row exists
+    switch (sectionId) {
+        case 'chief-complaints':
+            return document.querySelectorAll('#cc-container tr').length > 0 &&
+                   document.querySelector('#cc-container input[name="cc_name[]"]')?.value?.trim() !== '';
+        case 'associated-complaints':
+            return document.querySelectorAll('#ac-container tr').length > 0 &&
+                   document.querySelector('#ac-container input[name="ac_name[]"]')?.value?.trim() !== '';
+        case 'followup':
+            return document.querySelectorAll('#fu-container tr').length > 0 &&
+                   document.querySelector('#fu-container input[name="fu_date[]"]')?.value !== '';
+        default:
+            // For other sections, consider complete if user has interacted with them
+            return sectionHasBeenVisited(sectionId);
+    }
+}
+
+function sectionHasBeenVisited(sectionId) {
+    // Simple heuristic: if the section has been made active at least once
+    const sectionElement = document.getElementById(`section-${sectionId}`);
+    return sectionElement && sectionElement.dataset.visited === 'true';
+}
+
+function markSectionAsComplete(sectionId) {
+    const navItem = document.getElementById(`nav-${sectionId}`);
+    if (navItem) {
+        navItem.classList.add('completed');
+        navItem.classList.remove('locked');
+        navItem.title = '';
+    }
+}
+
+function markSectionAsIncomplete(sectionId) {
+    const navItem = document.getElementById(`nav-${sectionId}`);
+    if (navItem) {
+        navItem.classList.remove('completed');
+        // Don't remove locked class here - it's handled by lockFutureSections
+    }
+}
+
+function lockFutureSections() {
+    const currentSectionId = getCurrentSectionFromUrl();
+    const sectionIds = Object.keys(sectionRequirements);
+    let foundCurrent = false;
+
+    sectionIds.forEach(sectionId => {
+        const navItem = document.getElementById(`nav-${sectionId}`);
+        if (!navItem) return;
+
+        if (sectionId === currentSectionId) {
+            foundCurrent = true;
+            navItem.classList.remove('locked');
+        } else if (foundCurrent) {
+            // Lock sections after current
+            navItem.classList.add('locked');
+            navItem.title = 'Complete previous sections first';
+        } else {
+            // Unlock sections before or at current
+            navItem.classList.remove('locked');
+            navItem.title = '';
+        }
+    });
+}
+
+function getCurrentSectionFromUrl() {
+    // Extract section ID from URL hash or form state
+    // For now, we'll determine from active form section
+    const activeSection = document.querySelector('.form-section.active');
+    if (activeSection) {
+        const id = activeSection.id;
+        if (id.startsWith('section-')) {
+            return id.substring(8); // Remove 'section-' prefix
+        }
+    }
+    return 'preliminary'; // Default
+}
+
+function getCurrentSectionNumber() {
+    const currentSection = getCurrentSectionFromUrl();
+    const sectionIds = Object.keys(sectionRequirements);
+    const index = sectionIds.indexOf(currentSection);
+    return index !== -1 ? index + 1 : 1;
+}
+
+function showSection(sectionId) {
+    // Mark current section as visited when leaving it
+    const currentSection = getCurrentSectionFromUrl();
+    if (currentSection) {
+        const currentSectionElement = document.getElementById(`section-${currentSection}`);
+        if (currentSectionElement) {
+            currentSectionElement.dataset.visited = 'true';
+        }
+    }
+
+    const activeBtn = document.getElementById('nav-' + sectionId);
+    if (activeBtn) activeBtn.classList.add('active');
+    document.querySelectorAll('.form-section').forEach(section => section.classList.remove('active'));
+    const target = document.getElementById('section-' + sectionId);
+    if (target) target.classList.add('active');
+
+    // Smooth scroll to top of form
+    document.querySelector('main').scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Update progress and lock sections
+    updateProgress();
+    lockFutureSections();
+
+    // Optional: Auto-advance if current section is complete
+    // if (isSectionComplete(sectionId, sectionRequirements[sectionId])) {
+    //     setTimeout(() => {
+    //         const nextSectionId = getNextSectionId(sectionId);
+    //         if (nextSectionId) {
+    //             showSection(nextSectionId);
+    //         }
+    //     }, 500);
+    // }
+}
+
+function addRow(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const firstRow = container.querySelector('tr');
+    if (!firstRow) return;
+    const newRow = firstRow.cloneNode(true);
+    newRow.querySelectorAll('input').forEach(input => input.value = '');
+    container.appendChild(newRow);
+
+    // Update progress after adding row
+    updateProgress();
+}
+
+function removeRow(btn) {
+    const row = btn.closest('tr');
+    if (row.parentElement.children.length > 1) row.remove();
+
+    // Update progress after removing row
+    updateProgress();
+}
+
+let isDirty = false;
+let autoSaveTimer = null;
+
+function setSaveStatus(status) {
+    const el = document.getElementById('saveStatus');
+    if (!el) return;
+    
+    el.classList.remove('saving', 'saved');
+    if (status === 'saving') {
+        el.classList.add('saving');
+        document.getElementById('saveStatusText').textContent = 'Saving...';
+    } else if (status === 'saved') {
+        el.classList.add('saved');
+        document.getElementById('saveStatusText').textContent = 'Saved';
+    } else {
+        el.textContent = '';
+    }
+}
+
+async function performAutoSave() {
+    if (!isDirty) return;
+    
+    setSaveStatus('saving');
+    const form = document.getElementById('casePaperForm');
+    const formData = new FormData(form);
+    
+    try {
+        const response = await fetch(window.location.href, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+            }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            if (data.status === 'success' && data.case_id) {
+                // If this is a new case paper, update the URL and form action
+                if (window.location.href.includes('/new/')) {
+                    const newUrl = '/case_paper/' + data.case_id + '/edit/';
+                    window.history.replaceState({}, '', newUrl);
+                    form.action = newUrl;
+                }
+            }
+            isDirty = false;
+            setSaveStatus('saved');
+            setTimeout(() => document.getElementById('saveStatusText').textContent = '', 3000);
+        }
+    } catch (error) {
+        console.error('Auto-save failed:', error);
+        document.getElementById('saveStatusText').textContent = '';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const consultationDateInput = document.getElementById('id_consultation_date');
     const consultationTimeInput = document.getElementById('id_consultation_time');
-
-    // Set today's date if creating a new record and date is empty
     if (consultationDateInput && !consultationDateInput.value) {
         const today = new Date();
-        const year = today.getFullYear();
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const day = String(today.getDate()).padStart(2, '0');
-        consultationDateInput.value = `${year}-${month}-${day}`;
+        consultationDateInput.value = today.toISOString().split('T')[0];
     }
-
-    // Set current time if creating a new record and time is empty
     if (consultationTimeInput && !consultationTimeInput.value) {
         const today = new Date();
-        const hours = String(today.getHours()).padStart(2, '0');
-        const minutes = String(today.getMinutes()).padStart(2, '0');
-        consultationTimeInput.value = `${hours}:${minutes}`;
+        consultationTimeInput.value = today.getHours().toString().padStart(2, '0') + ':' + today.getMinutes().toString().padStart(2, '0');
+    }
+
+    // Initial progress update
+    updateProgress();
+    lockFutureSections();
+
+    // Auto-save every 30 seconds if dirty
+    setInterval(performAutoSave, 30000);
+    
+    // Warn before leave if dirty
+    window.addEventListener('beforeunload', function(e) {
+        if (isDirty) {
+            e.preventDefault();
+            e.returnValue = '';
+        }
+    });
+    
+    document.getElementById('casePaperForm').addEventListener('input', () => {
+        isDirty = true;
+        updateProgress();
+    });
+    
+    document.getElementById('casePaperForm').addEventListener('change', () => {
+        isDirty = true;
+        updateProgress();
+    });
+
+    // Remedy Autocomplete
+    const remedyInput = document.getElementById('presc_remedy');
+    const suggestionBox = document.getElementById('remedy-suggestions');
+    let debounceTimer;
+
+    if (remedyInput) {
+        remedyInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const query = remedyInput.value.trim();
+            
+            if (query.length < 2) {
+                suggestionBox.innerHTML = '';
+                suggestionBox.classList.add('hidden');
+                return;
+            }
+
+            debounceTimer = setTimeout(async () => {
+                try {
+                    const response = await fetch(`/api/remedy/search/?q=${encodeURIComponent(query)}`);
+                    const data = await response.json();
+                    
+                    if (data.length > 0) {
+                        suggestionBox.innerHTML = data.map(item => `
+                            <div class="p-3 border-b border-ink/10 hover:bg-accent/10 cursor-pointer transition-colors" onclick="selectRemedy('${item.name}')">
+                                <div class="font-bold text-xs uppercase">${item.name}</div>
+                                <div class="text-[10px] opacity-60 truncate">${item.summary}</div>
+                            </div>
+                        `).join('');
+                        suggestionBox.classList.remove('hidden');
+                    } else {
+                        suggestionBox.classList.add('hidden');
+                    }
+                } catch (e) {
+                    console.error('Remedy search failed', e);
+                }
+            }, 300);
+        });
+
+        // Close suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!remedyInput.contains(e.target) && !suggestionBox.contains(e.target)) {
+                suggestionBox.classList.add('hidden');
+            }
+        });
     }
 });
+
+function selectRemedy(name) {
+    const input = document.getElementById('presc_remedy');
+    input.value = name;
+    document.getElementById('remedy-suggestions').classList.add('hidden');
+    isDirty = true;
+}
 </script>
 {% endblock %}

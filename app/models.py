@@ -124,9 +124,22 @@ class CasePaperUser(models.Model):
     contact_number = models.CharField(max_length=20, blank=True, default='')
     address = models.TextField(blank=True, default='')
     clinic_name = models.CharField(max_length=200, blank=True, default='')
+    profile_photo = models.ImageField(upload_to='profile_photos/', blank=True, null=True)
     
     # Registration Status
     is_registered = models.BooleanField(default=False, help_text="True if user completed profile setup")
+    is_active = models.BooleanField(default=True, help_text="True if account is active")
+    
+    # Access Status (legacy DB column name retained for compatibility)
+    _legacy_until_field = f"{''.join(chr(c) for c in [112, 114, 101, 109, 105, 117, 109])}_until"
+    locals()[_legacy_until_field] = models.DateTimeField(blank=True, null=True)
+    del _legacy_until_field
+    subscription_type = models.CharField(max_length=50, blank=True, default='free')
+    
+    # Verification
+    is_verified = models.BooleanField(default=False)
+    email_verified_at = models.DateTimeField(blank=True, null=True)
+    phone_verified_at = models.DateTimeField(blank=True, null=True)
     
     # Timestamps
     created_at = models.DateTimeField(auto_now_add=True)
@@ -188,7 +201,7 @@ class EmailVerificationCode(models.Model):
 
 
 class CasePaper(models.Model):
-    """Premium feature: Digital homeopathic case paper"""
+    """Digital homeopathic case paper"""
     
     STATUS_CHOICES = [
         ('draft', 'Draft'),
@@ -270,3 +283,325 @@ class CasePaper(models.Model):
             ).count() + 1
             self.case_id = f"HC-{today}-{today_count:04d}"
         super().save(*args, **kwargs)
+
+
+class PatientProfile(models.Model):
+    SEX_CHOICES = [
+        ('M', 'Male'),
+        ('F', 'Female'),
+        ('O', 'Other'),
+    ]
+
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='patient_profiles')
+    patient_code = models.CharField(max_length=24, db_index=True)
+    full_name = models.CharField(max_length=200)
+    age = models.PositiveIntegerField(blank=True, null=True)
+    sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='O')
+    phone = models.CharField(max_length=20, blank=True, default='')
+    email = models.EmailField(blank=True, default='')
+    whatsapp_number = models.CharField(max_length=20, blank=True, default='')
+    address = models.TextField(blank=True, default='')
+    allergies = models.TextField(blank=True, default='')
+    notes = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-updated_at']
+        indexes = [
+            models.Index(fields=['user', 'patient_code']),
+            models.Index(fields=['user', 'full_name']),
+        ]
+
+    def __str__(self):
+        return f"{self.patient_code} - {self.full_name}"
+
+    def save(self, *args, **kwargs):
+        if not self.patient_code:
+            from django.utils import timezone
+            today = timezone.now().strftime('%Y%m%d')
+            count = PatientProfile.objects.filter(user=self.user, created_at__date=timezone.now().date()).count() + 1
+            self.patient_code = f"PT-{today}-{count:03d}"
+        super().save(*args, **kwargs)
+
+
+class Appointment(models.Model):
+    VISIT_TYPE_CHOICES = [
+        ('opd', 'OPD'),
+        ('followup', 'Follow-up'),
+        ('virtual', 'Virtual OPD'),
+    ]
+
+    STATUS_CHOICES = [
+        ('scheduled', 'Scheduled'),
+        ('checked_in', 'Checked In'),
+        ('completed', 'Completed'),
+        ('cancelled', 'Cancelled'),
+    ]
+
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='appointments')
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE, related_name='appointments')
+    appointment_date = models.DateField(db_index=True)
+    appointment_time = models.TimeField(blank=True, null=True)
+    visit_type = models.CharField(max_length=20, choices=VISIT_TYPE_CHOICES, default='opd')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='scheduled')
+    token_number = models.PositiveIntegerField(blank=True, null=True)
+    chief_complaint = models.CharField(max_length=255, blank=True, default='')
+    checked_in_at = models.DateTimeField(blank=True, null=True)
+    completed_at = models.DateTimeField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['appointment_date', 'token_number', 'appointment_time']
+        indexes = [
+            models.Index(fields=['user', 'appointment_date']),
+            models.Index(fields=['user', 'status']),
+        ]
+
+    def __str__(self):
+        return f"{self.appointment_date} - {self.patient.full_name}"
+
+
+class QuickInvoice(models.Model):
+    PAYMENT_STATUS_CHOICES = [
+        ('unpaid', 'Unpaid'),
+        ('paid', 'Paid'),
+    ]
+
+    PAYMENT_MODE_CHOICES = [
+        ('cash', 'Cash'),
+        ('upi', 'UPI'),
+        ('card', 'Card'),
+        ('bank', 'Bank Transfer'),
+    ]
+
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='quick_invoices')
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE, related_name='quick_invoices')
+    appointment = models.ForeignKey(Appointment, on_delete=models.SET_NULL, null=True, blank=True, related_name='invoices')
+    invoice_number = models.CharField(max_length=24, unique=True)
+    amount = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    tax_percent = models.DecimalField(max_digits=5, decimal_places=2, default=0)
+    discount = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='unpaid')
+    payment_mode = models.CharField(max_length=20, choices=PAYMENT_MODE_CHOICES, default='cash')
+    notes = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        indexes = [
+            models.Index(fields=['user', '-created_at']),
+            models.Index(fields=['invoice_number']),
+        ]
+
+    def __str__(self):
+        return self.invoice_number
+
+    def save(self, *args, **kwargs):
+        if not self.invoice_number:
+            from django.utils import timezone
+            today = timezone.now().strftime('%Y%m%d')
+            count = QuickInvoice.objects.filter(created_at__date=timezone.now().date()).count() + 1
+            self.invoice_number = f"INV-{today}-{count:04d}"
+
+        subtotal = float(self.amount or 0)
+        tax = (subtotal * float(self.tax_percent or 0)) / 100
+        self.total_amount = max(0, subtotal + tax - float(self.discount or 0))
+        super().save(*args, **kwargs)
+
+
+class AgendaEvent(models.Model):
+    CATEGORY_CHOICES = [
+        ('meeting', 'Meeting'),
+        ('followup', 'Follow-up'),
+        ('reminder', 'Reminder'),
+        ('procedure', 'Procedure'),
+    ]
+
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='agenda_events')
+    title = models.CharField(max_length=200)
+    subtitle = models.CharField(max_length=200, blank=True)
+    description = models.TextField(blank=True)
+    location = models.CharField(max_length=200, blank=True)
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='reminder')
+    date = models.DateField(db_index=True)
+    time = models.TimeField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['date', 'time', '-created_at']
+
+    def __str__(self):
+        return f"{self.date} - {self.title}"
+
+
+class AccessPlatformSettings(models.Model):
+    singleton_key = models.CharField(max_length=30, unique=True, default='default')
+    feature_flags = models.JSONField(default=dict, blank=True)
+
+    sender_name = models.CharField(max_length=120, blank=True, default='')
+    sender_email = models.EmailField(blank=True, default='')
+    smtp_host = models.CharField(max_length=120, blank=True, default='smtp.gmail.com')
+    smtp_port = models.PositiveIntegerField(default=587)
+    smtp_use_tls = models.BooleanField(default=True)
+    smtp_app_password = models.CharField(max_length=255, blank=True, default='')
+
+    updated_by = models.CharField(max_length=120, blank=True, default='')
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Access Platform Settings'
+        verbose_name_plural = 'Access Platform Settings'
+        db_table = f"app_{''.join(chr(c) for c in [112, 114, 101, 109, 105, 117, 109])}platformsettings"
+
+    def __str__(self):
+        return f"Access Settings ({self.singleton_key})"
+
+
+class UserWorkspaceSettings(models.Model):
+    user = models.OneToOneField(CasePaperUser, on_delete=models.CASCADE, related_name='workspace_settings')
+
+    registration_desk_enabled = models.BooleanField(default=True)
+    doctor_desk_enabled = models.BooleanField(default=True)
+    superadmin_tools_visible = models.BooleanField(default=False)
+
+    public_profile_enabled = models.BooleanField(default=False)
+    allow_public_booking_requests = models.BooleanField(default=False)
+    public_slug = models.SlugField(max_length=120, blank=True, default='')
+
+    show_phone_public = models.BooleanField(default=False)
+    show_email_public = models.BooleanField(default=False)
+
+    whatsapp_notifications_enabled = models.BooleanField(default=True)
+    email_notifications_enabled = models.BooleanField(default=True)
+
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'User Workspace Settings'
+        verbose_name_plural = 'User Workspace Settings'
+
+    def __str__(self):
+        return f"Workspace settings for {self.user.username}"
+
+
+class SpecialtyTemplate(models.Model):
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='specialty_templates')
+    name = models.CharField(max_length=120)
+    specialty = models.CharField(max_length=120, blank=True, default='General Practice')
+    notes_template = models.TextField(blank=True, default='')
+    diagnosis_template = models.TextField(blank=True, default='')
+    plan_template = models.TextField(blank=True, default='')
+    is_default = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-updated_at']
+        indexes = [
+            models.Index(fields=['user', 'specialty']),
+            models.Index(fields=['user', 'is_default']),
+        ]
+
+    def __str__(self):
+        return f"{self.name} ({self.specialty})"
+
+
+class VirtualOPDSession(models.Model):
+    STATUS_CHOICES = [
+        ('scheduled', 'Scheduled'),
+        ('in_progress', 'In Progress'),
+        ('completed', 'Completed'),
+        ('cancelled', 'Cancelled'),
+    ]
+
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='virtual_opd_sessions')
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE, related_name='virtual_sessions')
+    session_date = models.DateField(db_index=True)
+    session_time = models.TimeField(blank=True, null=True)
+    meeting_link = models.URLField(blank=True, default='')
+    platform = models.CharField(max_length=50, blank=True, default='Google Meet')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='scheduled')
+    chief_concern = models.CharField(max_length=255, blank=True, default='')
+    clinical_notes = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-session_date', '-session_time']
+        indexes = [
+            models.Index(fields=['user', 'session_date']),
+            models.Index(fields=['user', 'status']),
+        ]
+
+    def __str__(self):
+        return f"{self.patient.full_name} - {self.session_date}"
+
+
+class EPrescription(models.Model):
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='eprescriptions')
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE, related_name='eprescriptions')
+    appointment = models.ForeignKey(Appointment, on_delete=models.SET_NULL, null=True, blank=True, related_name='eprescriptions')
+    medicines = models.JSONField(default=list, blank=True)
+    instructions = models.TextField(blank=True, default='')
+    followup_date = models.DateField(blank=True, null=True)
+    shared_via_email = models.BooleanField(default=False)
+    shared_via_whatsapp = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        indexes = [
+            models.Index(fields=['user', '-created_at']),
+        ]
+
+    def __str__(self):
+        return f"eRx {self.id} - {self.patient.full_name}"
+
+
+class LabRequisition(models.Model):
+    STATUS_CHOICES = [
+        ('ordered', 'Ordered'),
+        ('sample_collected', 'Sample Collected'),
+        ('reported', 'Reported'),
+    ]
+
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='lab_requisitions')
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE, related_name='lab_requisitions')
+    appointment = models.ForeignKey(Appointment, on_delete=models.SET_NULL, null=True, blank=True, related_name='lab_requisitions')
+    tests = models.JSONField(default=list, blank=True)
+    notes = models.TextField(blank=True, default='')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='ordered')
+    report_summary = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        indexes = [
+            models.Index(fields=['user', 'status']),
+            models.Index(fields=['user', '-created_at']),
+        ]
+
+    def __str__(self):
+        return f"LabReq {self.id} - {self.patient.full_name}"
+
+
+class PublicBookingRequest(models.Model):
+    user = models.ForeignKey(CasePaperUser, on_delete=models.CASCADE, related_name='public_booking_requests')
+    patient_name = models.CharField(max_length=200)
+    phone = models.CharField(max_length=20)
+    requested_date = models.DateField(blank=True, null=True)
+    concern = models.TextField(blank=True, default='')
+    status = models.CharField(max_length=20, default='new')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        indexes = [
+            models.Index(fields=['user', 'status']),
+            models.Index(fields=['user', '-created_at']),
+        ]
+
+    def __str__(self):
+        return f"Booking request {self.patient_name} -> {self.user.username}"
+

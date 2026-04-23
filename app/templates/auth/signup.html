@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     {% include 'auth/_auth_styles.html' %}
 </head>
-<body class="auth-premium auth-preload">
+<body class="auth-portal auth-preload">
     <div class="auth-intro" id="authIntro" aria-hidden="true">
         <div class="auth-intro-core">
             <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-intro-mark">
-            <div class="auth-intro-line mono">HOMEOCOMPARE PREMIUM CASE PAPER SUITE</div>
+            <div class="auth-intro-line mono">HOMEOCOMPARE CASE PAPER SUITE</div>
             <h1 class="serif">Build Your Clinical Command Center.</h1>
         </div>
     </div>
@@ -27,7 +27,7 @@
                 <span>HomeoCompare</span>
             </div>
             <div class="auth-header-copy">
-                <h1 class="serif">Activate Premium Access</h1>
+                <h1 class="serif">Activate Access</h1>
                 <p>Register your account to enter a curated case-paper platform built for high-trust clinical operations.</p>
             </div>
             <ul class="auth-feature-list">
@@ -39,43 +39,73 @@
 
         <div class="auth-body">
             <div class="auth-panel-top">
-                <div class="auth-kicker mono"><i class="fas fa-crown"></i> Premium Onboarding</div>
                 <h2 class="serif">Create Your Account</h2>
                 <p>Use your professional email to start. We will send a secure verification step before access is granted.</p>
             </div>
 
-            <!-- <div class="alert alert-error" id="errorAlert"></div>
-            <div class="alert alert-success" id="successAlert"></div> -->
+            <div class="alert alert-error" id="errorAlert"></div>
+            <div class="alert alert-success" id="successAlert"></div>
 
-            <form id="signupForm" onsubmit="handleSignupSubmit(event)">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label class="form-label">Email Address</label>
-                    <input
-                        type="email"
-                        class="form-input"
-                        id="emailInput"
-                        placeholder="doctor@clinic.com"
-                        required
-                        autocomplete="email"
-                    >
+            <div id="signupStep" class="login-step active">
+                <form id="signupForm" onsubmit="handleSignupSubmit(event)">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input
+                            type="email"
+                            class="form-input"
+                            id="emailInput"
+                            placeholder="doctor@clinic.com"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="signupBtn">
+                        <span>Create Account</span>
+                    </button>
+                </form>
+
+                <div class="login-link">
+                    Already registered? <a href="{% url 'login' %}">Sign in to your workspace</a>
                 </div>
 
-                <button type="submit" class="btn-primary" id="signupBtn">
-                    <span>Create Premium Account</span>
-                </button>
-            </form>
+                <div class="divider"><span>OR</span></div>
 
-            <div class="login-link">
-                Already registered? <a href="{% url 'login' %}">Sign in to your workspace</a>
+                <div class="oauth-buttons">
+                    <a href="{% url 'google_login' %}" class="btn-oauth btn-google">
+                        <i class="fab fa-google"></i> Sign up with Google
+                    </a>
+                </div>
             </div>
 
-            <div class="divider"><span>OR</span></div>
+            <div id="verificationStep" class="verification-step">
+                <p class="code-timer" style="margin-bottom: 14px;">
+                    Verification code sent to <strong id="displayEmail"></strong>
+                </p>
 
-            <div class="oauth-buttons">
-                <a href="{% url 'google_login' %}" class="btn-oauth btn-google">
-                    <i class="fab fa-google"></i> Sign up with Google
-                </a>
+                <form id="verificationForm" onsubmit="handleVerificationSubmit(event)">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="form-label">Enter 6-digit Code</label>
+                        <div class="code-input-wrapper" id="codeInputWrapper">
+                            <input type="text" class="code-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="code-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="code-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="code-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="code-input" maxlength="1" autocomplete="off">
+                            <input type="text" class="code-input" maxlength="1" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="code-timer" id="codeTimer"></div>
+                    <button type="submit" class="btn-primary" id="verifyBtn">
+                        <span>Verify and Continue</span>
+                    </button>
+                </form>
+
+                <div class="back-link">
+                    <a onclick="handleBackToLogin()">Back to signup</a>
+                </div>
             </div>
 
             <div class="auth-footer">
@@ -85,6 +115,9 @@
     </div>
 
     <script>
+        let currentUserId = null;
+        let codeTimer = null;
+
         function runAuthIntro() {
             const intro = document.getElementById('authIntro');
             if (!intro) return;
@@ -95,16 +128,58 @@
             }, 1400);
         }
 
+        function distributeCodeAcrossInputs(rawValue) {
+            const digits = (rawValue || '').replace(/\D/g, '').slice(0, 6).split('');
+            const inputs = Array.from(document.querySelectorAll('.code-input'));
+            inputs.forEach((input, idx) => {
+                input.value = digits[idx] || '';
+            });
+            const nextIndex = Math.min(digits.length, inputs.length - 1);
+            if (inputs[nextIndex]) {
+                inputs[nextIndex].focus();
+            }
+        }
+
+        // Code Input Handler - Auto-focus next input + OTP paste/autofill support
+        document.querySelectorAll('.code-input').forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                const value = e.target.value || '';
+                if (value.length > 1) {
+                    distributeCodeAcrossInputs(value);
+                    return;
+                }
+                if (value && index < 5) {
+                    document.querySelectorAll('.code-input')[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    document.querySelectorAll('.code-input')[index - 1].focus();
+                }
+            });
+        });
+
+        const codeInputWrapper = document.getElementById('codeInputWrapper');
+        if (codeInputWrapper) {
+            codeInputWrapper.addEventListener('paste', function(e) {
+                const clipboard = e.clipboardData || window.clipboardData;
+                const pasted = clipboard ? clipboard.getData('text') : '';
+                if (/\d{4,6}/.test(pasted)) {
+                    e.preventDefault();
+                    distributeCodeAcrossInputs(pasted);
+                }
+            });
+        }
+
         function showAlert(message, type = 'error') {
             const alertEl = document.getElementById(`${type}Alert`);
             alertEl.textContent = message;
             alertEl.style.display = 'block';
 
-            if (type === 'success') {
-                setTimeout(() => {
-                    alertEl.style.display = 'none';
-                }, 3000);
-            }
+            setTimeout(() => {
+                alertEl.style.display = 'none';
+            }, 3000);
         }
 
         function handleSignupSubmit(event) {
@@ -131,10 +206,12 @@
             .then(response => response.json())
             .then(data => {
                 if (data.status === 'success') {
-                    showAlert('Account created! Check your email for the verification code.', 'success');
-                    setTimeout(() => {
-                        window.location.href = data.redirect_url || '/auth/verify-code/';
-                    }, 500);
+                    currentUserId = data.user_id;
+                    document.getElementById('displayEmail').textContent = data.email;
+                    document.getElementById('signupStep').classList.remove('active');
+                    document.getElementById('verificationStep').classList.add('active');
+                    showAlert('Account created! Code sent to your email.', 'success');
+                    startCodeTimer();
                 } else {
                     showAlert(data.message || 'Signup failed. Please try again.', 'error');
                 }
@@ -145,8 +222,88 @@
             })
             .finally(() => {
                 btn.disabled = false;
-                btn.innerHTML = '<span>Create Premium Account</span>';
+                btn.innerHTML = '<span>Create Account</span>';
             });
+        }
+
+        function handleVerificationSubmit(event) {
+            event.preventDefault();
+            if (event && typeof event.stopPropagation === 'function') {
+                event.stopPropagation();
+            }
+            const codeInputs = document.querySelectorAll('.code-input');
+            const code = Array.from(codeInputs).map(input => input.value).join('');
+            const btn = document.getElementById('verifyBtn');
+
+            if (!currentUserId) {
+                showAlert('Session expired. Please request a new code.', 'error');
+                return;
+            }
+
+            if (code.length !== 6) {
+                showAlert('Please enter all 6 digits', 'error');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> Verifying...';
+
+            fetch('{% url "verify_code" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ user_id: currentUserId, code: code })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showAlert('Verified! Redirecting...', 'success');
+
+                    setTimeout(() => {
+                        window.location.href = data.redirect_url || '/case_paper/';
+                    }, 500);
+                } else {
+                    showAlert(data.message || 'Verification failed. Please try again.', 'error');
+                }
+            })
+            .catch(error => {
+                showAlert('An error occurred. Please try again.', 'error');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Verify and Continue</span>';
+            });
+        }
+
+        function handleBackToLogin() {
+            document.getElementById('verificationStep').classList.remove('active');
+            document.getElementById('signupStep').classList.add('active');
+            document.querySelectorAll('.code-input').forEach(input => input.value = '');
+            if (codeTimer) clearInterval(codeTimer);
+            // Optionally reset user ID if you want to force a full re-auth
+            // currentUserId = null;
+        }
+
+        function startCodeTimer() {
+            let timeLeft = 600;
+            const timerEl = document.getElementById('codeTimer');
+
+            if (codeTimer) clearInterval(codeTimer);
+
+            codeTimer = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerEl.textContent = `Code expires in ${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(codeTimer);
+                    timerEl.textContent = 'Code expired. Go back and request a new code.';
+                }
+            }, 1000);
         }
 
         function getCookie(name) {
@@ -169,6 +326,40 @@
         } else {
             runAuthIntro();
         }
+    </script>
+    <!-- Floating Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+
+    <script>
+        // === THEME INITIALIZATION ===
+        function initTheme() {
+            const theme = localStorage.getItem('theme') || 'light'; // default to light for auth pages
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        }
+        initTheme();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    const next = isDark ? 'light' : 'dark';
+                    if (next === 'dark') {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                    }
+                    localStorage.setItem('theme', next);
+                });
+            }
+        });
     </script>
 </body>
 </html>

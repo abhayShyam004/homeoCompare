@@ -11,7 +11,7 @@ import time
 import logging
 from smtplib import SMTPException
 
-from django.core.mail import send_mail
+from django.core.mail import send_mail, get_connection
 from django.conf import settings
 
 logger = logging.getLogger(__name__)
@@ -19,19 +19,60 @@ logger = logging.getLogger(__name__)
 _email_threads = []
 
 
+def _get_runtime_email_config():
+    """Return effective email config, allowing admin overrides from AccessPlatformSettings."""
+    cfg = {
+        'backend': getattr(settings, 'EMAIL_BACKEND', ''),
+        'host': getattr(settings, 'EMAIL_HOST', ''),
+        'port': getattr(settings, 'EMAIL_PORT', None),
+        'use_tls': getattr(settings, 'EMAIL_USE_TLS', True),
+        'user': getattr(settings, 'EMAIL_HOST_USER', ''),
+        'password': getattr(settings, 'EMAIL_HOST_PASSWORD', ''),
+        'from_email': getattr(settings, 'DEFAULT_FROM_EMAIL', '') or getattr(settings, 'EMAIL_HOST_USER', ''),
+        'timeout': getattr(settings, 'EMAIL_TIMEOUT', 30),
+    }
+
+    try:
+        from .models import AccessPlatformSettings
+
+        runtime = AccessPlatformSettings.objects.filter(singleton_key='default').first()
+        if runtime:
+            if runtime.sender_email:
+                cfg['user'] = runtime.sender_email
+                cfg['from_email'] = runtime.sender_email
+            if runtime.smtp_host:
+                cfg['host'] = runtime.smtp_host
+            if runtime.smtp_port:
+                cfg['port'] = runtime.smtp_port
+            cfg['use_tls'] = runtime.smtp_use_tls
+            if runtime.smtp_app_password:
+                cfg['password'] = runtime.smtp_app_password
+    except Exception as exc:
+        logger.warning("Failed to load runtime email overrides: %s", exc)
+
+    return cfg
+
+
 def is_email_service_configured():
-    """
-    Return True when required email settings are present.
-    """
-    backend = getattr(settings, 'EMAIL_BACKEND', '')
-    if backend == 'django.core.mail.backends.console.EmailBackend':
+    """Return True when required email settings are present."""
+    cfg = _get_runtime_email_config()
+
+    if cfg['backend'] == 'django.core.mail.backends.console.EmailBackend':
         return True
 
-    host = getattr(settings, 'EMAIL_HOST', '')
-    user = getattr(settings, 'EMAIL_HOST_USER', '')
-    password = getattr(settings, 'EMAIL_HOST_PASSWORD', '')
-    port = getattr(settings, 'EMAIL_PORT', None)
-    return bool(host and user and password and port)
+    required_values = {
+        'EMAIL_HOST': cfg['host'],
+        'EMAIL_HOST_USER': cfg['user'],
+        'EMAIL_HOST_PASSWORD': cfg['password'],
+        'EMAIL_PORT': cfg['port'],
+    }
+
+    missing = [key for key, value in required_values.items() if not value]
+    if missing:
+        logger.error("Email configuration incomplete. Missing: %s", ", ".join(missing))
+        return False
+
+    return True
 
 
 def send_email_with_retry(subject, plain_message, recipient_email, html_message=None, max_retries=3, retry_delay_seconds=1.5):
@@ -44,10 +85,24 @@ def send_email_with_retry(subject, plain_message, recipient_email, html_message=
         logger.error("Email service is not configured correctly")
         return False
 
-    from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', '') or getattr(settings, 'EMAIL_HOST_USER', '')
+    cfg = _get_runtime_email_config()
+    from_email = cfg.get('from_email', '')
     if not from_email:
         logger.error("No DEFAULT_FROM_EMAIL or EMAIL_HOST_USER configured")
         return False
+
+    connection = None
+    if cfg['backend'] != 'django.core.mail.backends.console.EmailBackend':
+        connection = get_connection(
+            backend=cfg['backend'],
+            host=cfg['host'],
+            port=cfg['port'],
+            username=cfg['user'],
+            password=cfg['password'],
+            use_tls=cfg['use_tls'],
+            timeout=cfg.get('timeout', 30),
+            fail_silently=False,
+        )
 
     last_error = None
     for attempt in range(1, max_retries + 1):
@@ -59,6 +114,7 @@ def send_email_with_retry(subject, plain_message, recipient_email, html_message=
                 recipient_list=[recipient_email],
                 html_message=html_message,
                 fail_silently=False,
+                connection=connection,
             )
             if result == 1:
                 logger.info("Verification email sent to %s on attempt %s", recipient_email, attempt)
@@ -79,22 +135,17 @@ def send_email_with_retry(subject, plain_message, recipient_email, html_message=
 
 def send_email_async(subject, message, recipient_email, html_message=None):
     """
-    Send email asynchronously in a background thread.
+    Send email asynchronously in a background thread with retry logic.
     
     Returns immediately without waiting for email to send.
     Email is sent in background - request completes before SMTP handshake.
-    
-    Args:
-        subject: Email subject
-        message: Plain text message
-        recipient_email: Recipient email address
-        html_message: HTML version of message (optional)
-    
-    Returns:
-        True if thread started successfully, False if failed to start
     """
+    if not is_email_service_configured():
+        logger.error("Email service not configured. Async thread will not start for %s", recipient_email)
+        return False
     
     def send_email_thread():
+        logger.info("Background thread starting email delivery to %s", recipient_email)
         send_email_with_retry(
             subject=subject,
             plain_message=message,
@@ -103,11 +154,10 @@ def send_email_async(subject, message, recipient_email, html_message=None):
         )
 
     try:
-        thread = threading.Thread(target=send_email_thread, daemon=False, name=f"email-{recipient_email}")
+        thread = threading.Thread(target=send_email_thread, daemon=True, name=f"email-{recipient_email}")
         thread.start()
-        _email_threads.append(thread)
-        _email_threads[:] = [t for t in _email_threads if t.is_alive()]
+        logger.info("Async email thread dispatched for %s", recipient_email)
         return True
     except Exception as exc:
-        logger.error("Error starting email thread: %s", exc)
+        logger.error("Error starting email thread for %s: %s", recipient_email, exc)
         return False

@@ -86,34 +86,47 @@
         }
 
         .theme-toggle {
-            position: absolute;
-            right: 3rem;
-            top: 20%;
-            transform: translateY(-50%);
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
             cursor: pointer;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        @media (max-width: 600px) {
-            .theme-toggle {
-                right: 1rem;
-                top: 0.4rem;
-                transform: none;
-                padding: 0.4rem 0.8rem;
-                font-size: 0.9rem;
-            }
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
         }
 
         .theme-toggle:hover {
-            background: var(--accent-color);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .theme-toggle i {
+            position: absolute;
+            font-size: 1.3rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .theme-toggle .sun-icon {
+            color: #f59e0b; /* Amber */
+            transform: translateY(0) rotate(0);
+            opacity: 1;
+        }
+
+        .theme-toggle .moon-icon {
+            color: #3b82f6; /* Blue */
+            transform: translateY(30px) rotate(90deg);
+            opacity: 0;
         }
 
         .subtitle {
@@ -280,11 +293,6 @@
                 justify-content: center;
             }
 
-            .theme-toggle {
-                position: static;
-                transform: none;
-            }
-
             .card {
                 padding: 1.5rem;
             }
@@ -302,6 +310,23 @@
             --border-color: #2d3e50;
             --header-bg: #0d1520;
             --input-bg: #1a2634;
+        }
+
+        [data-theme="dark"] .theme-toggle {
+            background: rgba(30, 41, 59, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        [data-theme="dark"] .theme-toggle .sun-icon {
+            transform: translateY(-30px) rotate(-90deg);
+            opacity: 0;
+        }
+
+        [data-theme="dark"] .theme-toggle .moon-icon {
+            transform: translateY(0) rotate(0);
+            opacity: 1;
+            color: #f1f5f9;
         }
 
         [data-theme="dark"] header {
@@ -434,16 +459,6 @@
             .brand-title img {
                 width: 28px;
                 height: 28px;
-            }
-
-            .toggle-text {
-                display: none;
-            }
-
-            .theme-toggle {
-                width: 2.5rem;
-                justify-content: center;
-                padding: 0.55rem;
             }
         }
 
@@ -614,6 +629,77 @@
             font-weight: 500;
         }
 
+        .clients-link {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 226, 142, 0.4);
+            background: linear-gradient(120deg, rgba(234, 179, 8, 0.22), rgba(250, 204, 21, 0.16), rgba(14, 165, 233, 0.2)) !important;
+            box-shadow: 0 0 0 rgba(250, 204, 21, 0.45);
+            animation: clientsGlowPulse 2.6s ease-in-out infinite;
+        }
+
+        .clients-link::before {
+            content: "";
+            position: absolute;
+            top: -30%;
+            left: -120%;
+            width: 70%;
+            height: 160%;
+            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.35), rgba(255,255,255,0));
+            transform: rotate(18deg);
+            animation: clientsShimmer 2.8s linear infinite;
+            pointer-events: none;
+        }
+
+        .clients-link::after {
+            content: "✦";
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+            color: #fef08a;
+            text-shadow: 0 0 10px rgba(250, 204, 21, 0.95);
+            animation: clientsSparkle 1.5s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .clients-link i {
+            color: #fde68a;
+            animation: clientsIconTwinkle 1.8s ease-in-out infinite;
+        }
+
+        .clients-link span {
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .clients-link:hover {
+            background: linear-gradient(120deg, rgba(250, 204, 21, 0.33), rgba(253, 224, 71, 0.24), rgba(56, 189, 248, 0.26)) !important;
+            transform: translateX(12px) scale(1.02);
+            margin-left: 5px;
+        }
+
+        @keyframes clientsGlowPulse {
+            0%, 100% { box-shadow: 0 0 0 rgba(250, 204, 21, 0.2); }
+            50% { box-shadow: 0 0 18px rgba(250, 204, 21, 0.45); }
+        }
+
+        @keyframes clientsShimmer {
+            0% { left: -120%; }
+            100% { left: 150%; }
+        }
+
+        @keyframes clientsSparkle {
+            0%, 100% { opacity: 0.55; transform: translateY(-50%) scale(0.9) rotate(0deg); }
+            50% { opacity: 1; transform: translateY(-50%) scale(1.25) rotate(18deg); }
+        }
+
+        @keyframes clientsIconTwinkle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.16); }
+        }
+
         /* Coffee Link Special Styling */
         #coffeeLink {
             background: rgba(198, 124, 78, 0.2) !important;
@@ -659,6 +745,131 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             margin: 1rem 0;
         }
+
+        .trial-peek {
+            position: fixed;
+            right: -130px;
+            bottom: 80px; /* moved slightly higher */
+            width: 250px;
+            background: #ffffff;
+            border: 1px solid rgba(44, 62, 80, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+            z-index: 1400;
+            padding: 12px 12px 12px 14px;
+            cursor: pointer;
+            transition: right 0.25s ease;
+        }
+
+        .trial-peek:hover { right: 10px; }
+
+        .trial-peek-title {
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .trial-peek-text {
+            font-size: 0.76rem;
+            color: #64748b;
+        }
+
+        .trial-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.58);
+            z-index: 1500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.22s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .trial-modal-overlay.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .trial-modal-card {
+            width: min(520px, 100%);
+            background: #ffffff;
+            border: 1px solid rgba(44, 62, 80, 0.16);
+            border-radius: 14px;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.24);
+            padding: 20px;
+            transform: translateY(16px) scale(0.98);
+            transition: transform 0.22s ease;
+        }
+
+        .trial-modal-overlay.show .trial-modal-card {
+            transform: translateY(0) scale(1);
+        }
+
+        .trial-modal-note {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #0f766e;
+            background: #ecfeff;
+            border: 1px solid #a5f3fc;
+            border-radius: 999px;
+            padding: 4px 10px;
+            margin-bottom: 10px;
+        }
+
+        .trial-modal-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 6px;
+        }
+
+        .trial-modal-text {
+            font-size: 0.98rem;
+            color: #475569;
+            line-height: 1.55;
+            margin-bottom: 14px;
+        }
+
+        .trial-modal-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .trial-btn {
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 13px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .trial-btn.primary { background: #2563eb; color: #fff; }
+        .trial-btn.secondary { background: #e2e8f0; color: #334155; }
+
+        [data-theme="dark"] .trial-peek,
+        [data-theme="dark"] .trial-modal-card {
+            background: #0f172a;
+            border-color: #334155;
+        }
+
+        [data-theme="dark"] .trial-peek-title,
+        [data-theme="dark"] .trial-modal-title { color: #f8fafc; }
+
+        [data-theme="dark"] .trial-peek-text,
+        [data-theme="dark"] .trial-modal-text { color: #cbd5e1; }
+
+        [data-theme="dark"] .trial-btn.secondary { background: #1e293b; color: #cbd5e1; }
     </style>
     
 </head>
@@ -685,6 +896,11 @@
                 <a href="allen/" class="sidebar-link">
                     <i class="fas fa-book-medical"></i>
                     <span>Allen's</span>
+                </a>
+
+                <a href="{% url 'clinic_dashboard' %}" class="sidebar-link clients-link">
+                    <i class="fas fa-users"></i>
+                    <span>Clients</span>
                 </a>
 
                 <a href="{% url 'relationships' %}" class="sidebar-link">
@@ -734,15 +950,14 @@
             </nav>
             <!-- Contact Me Section at Bottom -->
             <div class="sidebar-footer">
-                <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhay31204@gmail.com&subject=MediCompare&body=Write%20your%20mail%20here"
-                    class="contact-link" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact Me</span>
-                </a> -->
             </div>
         </div>
     </aside>
 
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
 
     <header>
         <div class="header-content">
@@ -754,18 +969,6 @@
                 <p class="subtitle">Compare. Cure. Trust.</p>
             </div>
             <div class="nav-links">
-                <button class="theme-toggle" id="themeToggle">
-                    <span class="toggle-text">Light Mode</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-                    </svg>
-                </button>
-
-
-
-
             </div>
         </div>
     </header>
@@ -788,7 +991,7 @@
                 <h3 class="resource-title">Boericke's Materia Medica</h3>
                 <p class="resource-description">William Boericke’s Homeopathy Materia Medica – Compare Remedies by Key
                     Symptoms, Remedy Profiles, and Clinical Use for Study and Learning</p>
-                <button class="resource-btn" onclick="location.href='{% url 'remedy_compare' %}'">Explore
+                <button class="resource-btn" onclick="location.href='{% url 'boericke_comparison' %}'">Explore
                     Boericke</button>
             </div>
 
@@ -807,7 +1010,7 @@
                 <h3 class="resource-title">Allen's Keynotes</h3>
                 <p class="resource-description">Study H.C. Allen’s Homeopathy Materia Medica – Quick Access to Key
                     Symptoms, Remedy Profiles, and Essential Characteristics for Fast Learning and Clinical Use.</p>
-                <button class="resource-btn" onclick="location.href='{% url 'allen_compare' %}'">Explore
+                <button class="resource-btn" onclick="location.href='{% url 'allen_comparison' %}'">Explore
                     Allen's</button>
             </div>
         </div>
@@ -817,25 +1020,49 @@
         <p>© 2026 HomeoCompare. All rights reserved.</p>
     </footer>
 
+    <div id="trialPeek" class="trial-peek" role="button" tabindex="0" aria-label="Open free offer">
+        <div class="trial-peek-title">Try it free</div>
+        <div class="trial-peek-text">Limited-time. No cards needed.</div>
+    </div>
+
+    <div id="trialModal" class="trial-modal-overlay" role="dialog" aria-label="Try service offer" aria-live="polite">
+        <div class="trial-modal-card">
+            <div class="trial-modal-note">Limited-time offer</div>
+            <div class="trial-modal-title">Try our CLINIC service</div>
+            <div class="trial-modal-text">For a limited period, you can use it free - no cards needed.</div>
+            <div class="trial-modal-actions">
+                <a href="{% url 'signup' %}" class="trial-btn primary" id="trialModalTry">Try it free</a>
+                <button type="button" class="trial-btn secondary" id="trialModalLater">Later</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const themeToggle = document.getElementById('themeToggle');
-            const toggleText = document.querySelector('.toggle-text');
             const body = document.body;
 
             // Set dark mode as default
             body.setAttribute('data-theme', 'dark');
-            toggleText.textContent = 'Light Mode';
 
             themeToggle.addEventListener('click', function () {
                 if (body.getAttribute('data-theme') === 'dark') {
                     body.removeAttribute('data-theme');
-                    toggleText.textContent = 'Dark Mode';
                 } else {
                     body.setAttribute('data-theme', 'dark');
-                    toggleText.textContent = 'Light Mode';
                 }
+                
+                // Persist theme choice globally if needed
+                localStorage.setItem('theme', body.getAttribute('data-theme') || 'light');
             });
+            
+            // Sync with global theme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+            }
         });
 
 
@@ -882,6 +1109,53 @@
         }
 
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const peek = document.getElementById('trialPeek');
+            const modal = document.getElementById('trialModal');
+            const laterBtn = document.getElementById('trialModalLater');
+            const tryBtn = document.getElementById('trialModalTry');
+            if (!peek || !modal || !laterBtn || !tryBtn) return;
+
+            const key = 'trial_offer_hide_until';
+            const hideUntil = parseInt(localStorage.getItem(key) || '0', 10);
+            const now = Date.now();
+
+            const openModal = () => modal.classList.add('show');
+            const closeModal = () => modal.classList.remove('show');
+            const setHideForDays = (days) => {
+                const ttl = Date.now() + (days * 24 * 60 * 60 * 1000);
+                localStorage.setItem(key, String(ttl));
+            };
+
+            peek.addEventListener('click', openModal);
+            peek.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal();
+                }
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            laterBtn.addEventListener('click', () => {
+                closeModal();
+                setHideForDays(3);
+            });
+
+            tryBtn.addEventListener('click', () => {
+                setHideForDays(10);
+            });
+
+            if (!hideUntil || now >= hideUntil) {
+                setTimeout(openModal, 1100);
+            }
+        });
+    </script>
+
     <div style="position:absolute; left:-9999px; top:-9999px;">
         Compare homeopathic remedies like ABROTANUM, ACONITE, or BELLADONNA using trusted materia medica references.
     </div>

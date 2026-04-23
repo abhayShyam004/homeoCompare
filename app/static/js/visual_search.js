@@ -47,7 +47,7 @@ const BodyMapManager = {
         `;
         document.body.insertAdjacentHTML('beforeend', modalHtml);
 
-        // Add Premium Medical CSS
+        // Add Advanced Medical CSS
         const style = document.createElement('style');
         style.textContent = `
             :root {

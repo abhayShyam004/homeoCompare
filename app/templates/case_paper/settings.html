@@ -1,178 +1,233 @@
 {% extends 'case_paper/base.html' %}
 
-{% block main_content %}
-    <style>
-        .settings-shell { max-width: 1180px; margin: 0 auto; display: grid; gap: 20px; }
-        .settings-hero { display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; }
-        .settings-subtitle { color: var(--text-secondary); font-size: 13px; max-width: 720px; }
-        .settings-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr); gap: 20px; align-items: start; }
-        .settings-card { background: var(--color-paper); border: 0.5px solid var(--border-color); padding: 24px; box-shadow: var(--shadow-sm, 0 4px 10px rgba(0,0,0,0.08)); }
-        .settings-card h3 { font-size: 20px; margin-bottom: 6px; }
-        .settings-card p { color: var(--text-secondary); }
-        .settings-form { display: grid; gap: 18px; }
-        .settings-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-        .settings-field { display: grid; gap: 8px; }
-        .settings-field.full { grid-column: 1 / -1; }
-        .settings-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
-        .settings-input, .settings-textarea { width: 100%; border: 0.5px solid var(--border-color); background: var(--surface-raised, var(--text-white)); color: var(--text-primary); padding: 12px 14px; font: inherit; }
-        .settings-textarea { min-height: 120px; resize: vertical; }
-        .settings-input:focus, .settings-textarea:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 2px rgba(45, 90, 39, 0.12); }
-        .settings-actions { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
-        .settings-note { color: var(--text-muted); font-size: 12px; }
-        .settings-save { border: 0.5px solid var(--color-accent); background: var(--color-accent); color: var(--text-white); padding: 12px 18px; cursor: pointer; font: inherit; font-weight: 600; }
-        .settings-save:hover { opacity: 0.92; }
-        .settings-stack { display: grid; gap: 20px; }
-        .settings-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-        .metric { border: 0.5px solid var(--border-color); padding: 16px; background: var(--surface-raised, var(--text-white)); }
-        .metric-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 10px; }
-        .metric-value { font-size: 32px; line-height: 1; }
-        .metric-subtext { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
-        .alert-success { border: 0.5px solid rgba(45, 90, 39, 0.3); background: rgba(45, 90, 39, 0.08); color: var(--text-primary); padding: 14px 16px; }
-        .profile-list { display: grid; gap: 12px; }
-        .profile-item { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 0.5px solid var(--border-color); }
-        .profile-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .profile-key { color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
-        .profile-value { text-align: right; }
-        .recent-list { display: grid; gap: 12px; }
-        .recent-item { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 0.5px solid var(--border-color); }
-        .recent-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .recent-item a { color: var(--text-primary); text-decoration: none; }
-        .recent-item a:hover { color: var(--color-accent); }
-        .recent-meta { color: var(--text-muted); font-size: 12px; }
-        .quick-actions { display: grid; gap: 10px; }
-        .quick-actions a { display: inline-flex; align-items: center; gap: 10px; padding: 12px 14px; text-decoration: none; border: 0.5px solid var(--border-color); color: var(--text-primary); background: var(--surface-raised, var(--text-white)); }
-        .quick-actions a:hover { border-color: var(--color-accent); color: var(--color-accent); }
-        @media (max-width: 980px) {
-            .settings-grid, .settings-fields, .settings-metrics { grid-template-columns: 1fr; }
-            .settings-hero, .settings-actions { flex-direction: column; align-items: stretch; }
-        }
-    </style>
+{% block page_title_header %}Settings{% endblock %}
 
-    <div class="settings-shell">
-        <div class="settings-hero">
+{% block content %}
+<div class="space-y-6">
+    <section class="border-2 border-ink bg-gradient-to-r from-accent-light to-paper p-6">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <div>
-                <h2 class="page-title serif">Practice Settings</h2>
-                <p class="settings-subtitle mono">Update your practitioner profile, clinic identity, and case-paper workspace details from one place.</p>
+                <nav class="ui-breadcrumb" aria-label="Breadcrumb">
+                    <a href="{% url 'clinic_dashboard' %}" class="ui-breadcrumb-chip">Clinic Home</a>
+                    <span class="ui-breadcrumb-sep">▸</span>
+                    <a href="{% url 'case_paper_settings' %}" class="ui-breadcrumb-chip">Settings</a>
+                    <span class="ui-breadcrumb-sep">▸</span>
+                    <span class="ui-breadcrumb-current">{{ section_title }}</span>
+                </nav>
+                <h2 class="font-serif text-4xl font-bold">Practice Settings</h2>
+                <p class="font-mono text-sm opacity-70 mt-2 max-w-3xl">{{ section_subtitle }}</p>
             </div>
-            <div class="mono settings-note">Account created {{ user.created_at|date:"Y-m-d" }}</div>
+            <div class="font-mono text-[10px] uppercase opacity-70">Last Sync: {{ last_sync }}</div>
+        </div>
+    </section>
+
+    {% if settings_saved %}
+    <div class="border-2 border-accent bg-accent/10 text-accent p-4" role="alert">
+        <p class="font-bold font-mono text-xs uppercase">Success</p>
+        <p class="font-mono text-sm">Settings saved successfully.</p>
+    </div>
+    {% endif %}
+
+    {% if settings_error %}
+    <div class="border-2 border-red-700 bg-red-50 text-red-700 p-4" role="alert">
+        <p class="font-bold font-mono text-xs uppercase">Error</p>
+        <p class="font-mono text-sm">{{ settings_error }}</p>
+    </div>
+    {% endif %}
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="border-2 border-ink bg-white p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Total Cases</div>
+            <div class="font-serif text-3xl font-bold">{{ total_cases|default:'0' }}</div>
+        </div>
+        <div class="border-2 border-ink bg-white p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Completed</div>
+            <div class="font-serif text-3xl font-bold">{{ completed_cases|default:'0' }}</div>
+        </div>
+        <div class="border-2 border-ink bg-white p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Draft Cases</div>
+            <div class="font-serif text-3xl font-bold">{{ draft_cases|default:'0' }}</div>
+        </div>
+        <div class="border-2 border-ink bg-white p-4">
+            <div class="font-mono text-[10px] uppercase opacity-60">Public URL</div>
+            <a href="{{ public_url }}" target="_blank" class="font-mono text-xs underline break-all">{{ public_url }}</a>
+        </div>
+    </section>
+
+    <section class="border-2 border-ink bg-paper p-3">
+        <div class="flex flex-wrap gap-2">
+            <a href="{% url 'case_paper_settings_profile' %}" class="{% if active_section == 'profile' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Profile</a>
+            <a href="{% url 'case_paper_settings_workspace' %}" class="{% if active_section == 'workspace' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Workspace</a>
+            <a href="{% url 'case_paper_settings_account' %}" class="{% if active_section == 'account' %}ui-btn-primary{% else %}ui-btn-soft{% endif %}">Account & Access</a>
+        </div>
+    </section>
+
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+        <div class="xl:col-span-2 space-y-6">
+            {% if active_section == 'profile' %}
+            <form method="post" class="bg-white border-2 border-ink p-6 space-y-6">
+                {% csrf_token %}
+                <input type="hidden" name="settings_action" value="profile">
+
+                <div class="flex items-center justify-between border-b-2 border-ink pb-3">
+                    <h3 class="font-serif text-2xl font-semibold">Profile & Clinic Details</h3>
+                    <span class="font-mono text-[10px] uppercase opacity-60">Identity + Branding</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="physician_name">Physician Name</label>
+                        <input type="text" id="physician_name" name="physician_name" value="{{ user.physician_name|default:'' }}" class="mt-2 w-full bg-paper border-2 border-ink p-3 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent">
+                    </div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="specialization">Specialization</label>
+                        <input type="text" id="specialization" name="specialization" value="{{ user.specialization|default:'' }}" class="mt-2 w-full bg-paper border-2 border-ink p-3 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent">
+                    </div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="clinic_name">Clinic Name</label>
+                        <input type="text" id="clinic_name" name="clinic_name" value="{{ user.clinic_name|default:'' }}" class="mt-2 w-full bg-paper border-2 border-ink p-3 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent">
+                    </div>
+                    <div>
+                        <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="contact_number">Contact Number</label>
+                        <input type="text" id="contact_number" name="contact_number" value="{{ user.contact_number|default:'' }}" class="mt-2 w-full bg-paper border-2 border-ink p-3 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="email">Email Address</label>
+                        <input type="email" id="email" name="email" value="{{ user.email|default:'' }}" class="mt-2 w-full bg-paper border-2 border-ink p-3 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="address">Clinic Address</label>
+                        <textarea id="address" name="address" rows="3" class="mt-2 w-full bg-paper border-2 border-ink p-3 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent">{{ user.address|default:'' }}</textarea>
+                    </div>
+                </div>
+
+                <div class="flex justify-end pt-4 border-t-2 border-ink">
+                    <button type="submit" class="ui-btn-primary">Save Profile</button>
+                </div>
+            </form>
+            {% endif %}
+
+            {% if active_section == 'workspace' %}
+            <form method="post" class="bg-white border-2 border-ink p-6 space-y-6">
+                {% csrf_token %}
+                <input type="hidden" name="settings_action" value="workspace">
+
+                <div class="flex items-center justify-between border-b-2 border-ink pb-3">
+                    <h3 class="font-serif text-2xl font-semibold">Workspace Controls</h3>
+                    <span class="font-mono text-[10px] uppercase opacity-60">Modules + Public Profile</span>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-serif text-xl font-semibold">Internal Module Access</h4>
+                    <div class="grid md:grid-cols-2 gap-3 text-sm font-mono">
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Enable Registration Desk</span>
+                            <input type="checkbox" name="registration_desk_enabled" {% if workspace.registration_desk_enabled %}checked{% endif %}>
+                        </label>
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Enable Doctor Desk</span>
+                            <input type="checkbox" name="doctor_desk_enabled" {% if workspace.doctor_desk_enabled %}checked{% endif %}>
+                        </label>
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Show Superadmin Widgets</span>
+                            <input type="checkbox" name="superadmin_tools_visible" {% if workspace.superadmin_tools_visible %}checked{% endif %}>
+                        </label>
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Email Notifications</span>
+                            <input type="checkbox" name="email_notifications_enabled" {% if workspace.email_notifications_enabled %}checked{% endif %}>
+                        </label>
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>WhatsApp Notifications</span>
+                            <input type="checkbox" name="whatsapp_notifications_enabled" {% if workspace.whatsapp_notifications_enabled %}checked{% endif %}>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="space-y-4 border-t border-ink/20 pt-4">
+                    <h4 class="font-serif text-xl font-semibold">Public Clinic Profile</h4>
+                    <div class="grid md:grid-cols-2 gap-3 text-sm font-mono">
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Enable Public Profile</span>
+                            <input type="checkbox" name="public_profile_enabled" {% if workspace.public_profile_enabled %}checked{% endif %}>
+                        </label>
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Allow Public Booking Requests</span>
+                            <input type="checkbox" name="allow_public_booking_requests" {% if workspace.allow_public_booking_requests %}checked{% endif %}>
+                        </label>
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Show Phone Publicly</span>
+                            <input type="checkbox" name="show_phone_public" {% if workspace.show_phone_public %}checked{% endif %}>
+                        </label>
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Show Email Publicly</span>
+                            <input type="checkbox" name="show_email_public" {% if workspace.show_email_public %}checked{% endif %}>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="public_slug">Public Slug</label>
+                        <input type="text" id="public_slug" name="public_slug" value="{{ workspace.public_slug|default:'' }}" class="mt-2 w-full bg-paper border-2 border-ink p-3 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent" placeholder="your-clinic-name">
+                        <p class="mt-2 text-xs font-mono opacity-60">Public URL: <a class="underline" href="{{ public_url }}" target="_blank">{{ public_url }}</a></p>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t-2 border-ink flex justify-between items-center gap-2 flex-wrap">
+                    <span class="font-mono text-xs opacity-60 uppercase">Admin feature controls still apply globally.</span>
+                    <button type="submit" class="ui-btn-primary">Save Workspace</button>
+                </div>
+            </form>
+            {% endif %}
+
+            {% if active_section == 'account' %}
+            <div class="bg-white border-2 border-ink p-6 space-y-4">
+                <h3 class="font-serif text-2xl font-semibold">Account & Access Overview</h3>
+                <p class="font-mono text-xs opacity-70">
+                    This section shows identity, module access, and public profile readiness. Edit profile/workspace from their dedicated sub-routes.
+                </p>
+                <div class="grid sm:grid-cols-2 gap-3 text-sm font-mono">
+                    <div class="border border-ink/20 p-3 bg-paper"><span class="opacity-60">Username</span><div class="font-bold mt-1">{{ user.username }}</div></div>
+                    <div class="border border-ink/20 p-3 bg-paper"><span class="opacity-60">Auth Method</span><div class="font-bold mt-1">{{ user.get_auth_method_display }}</div></div>
+                    <div class="border border-ink/20 p-3 bg-paper"><span class="opacity-60">Public Profile</span><div class="font-bold mt-1">{% if workspace.public_profile_enabled %}Enabled{% else %}Disabled{% endif %}</div></div>
+                    <div class="border border-ink/20 p-3 bg-paper"><span class="opacity-60">Booking Requests</span><div class="font-bold mt-1">{% if workspace.allow_public_booking_requests %}Enabled{% else %}Disabled{% endif %}</div></div>
+                </div>
+            </div>
+            {% endif %}
         </div>
 
-        {% if settings_saved %}
-            <div class="alert-success mono">Settings saved successfully. Your case paper workspace now reflects the updated profile details.</div>
-        {% endif %}
-        {% if settings_error %}
-            <div class="alert-success mono" style="border-color: rgba(220, 38, 38, 0.3); background: rgba(220, 38, 38, 0.08);">{{ settings_error }}</div>
-        {% endif %}
+        <div class="space-y-6">
+            <div class="bg-white border-2 border-ink p-6">
+                <h3 class="font-serif text-xl font-semibold mb-4">Module Availability (Admin-Controlled)</h3>
+                <div class="space-y-3 font-mono text-xs">
+                    <div class="flex justify-between"><span>Registration Desk</span><span>{% if feature_flags.registration_smart_registration %}ON{% else %}OFF{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Token Queue</span><span>{% if feature_flags.registration_token_queue %}ON{% else %}OFF{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Fast Invoicing</span><span>{% if feature_flags.registration_fast_invoicing %}ON{% else %}OFF{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Doctor Desk</span><span>{% if feature_flags.doctor_smart_documentation %}ON{% else %}OFF{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Virtual OPD</span><span>{% if feature_flags.doctor_virtual_opd %}ON{% else %}OFF{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Quick eRx</span><span>{% if feature_flags.doctor_quick_eprescription %}ON{% else %}OFF{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Lab Requisition</span><span>{% if feature_flags.doctor_easy_lab_requisition %}ON{% else %}OFF{% endif %}</span></div>
+                </div>
+            </div>
 
-        <div class="settings-grid">
-            <section class="settings-card">
-                <h3 class="serif">Profile & Clinic</h3>
-                <p class="mono" style="margin-bottom: 20px;">These details are reused across new case papers and the dashboard identity panel.</p>
-                <form method="post" class="settings-form">
-                    {% csrf_token %}
-                    <div class="settings-fields">
-                        <div class="settings-field">
-                            <label class="settings-label mono" for="physician_name">Physician Name</label>
-                            <input class="settings-input" id="physician_name" name="physician_name" value="{{ user.physician_name }}">
-                        </div>
-                        <div class="settings-field">
-                            <label class="settings-label mono" for="specialization">Specialization</label>
-                            <input class="settings-input" id="specialization" name="specialization" value="{{ user.specialization }}">
-                        </div>
-                        <div class="settings-field">
-                            <label class="settings-label mono" for="clinic_name">Clinic Name</label>
-                            <input class="settings-input" id="clinic_name" name="clinic_name" value="{{ user.clinic_name }}">
-                        </div>
-                        <div class="settings-field">
-                            <label class="settings-label mono" for="contact_number">Contact Number</label>
-                            <input class="settings-input" id="contact_number" name="contact_number" value="{{ user.contact_number }}">
-                        </div>
-                        <div class="settings-field full">
-                            <label class="settings-label mono" for="email">Email Address</label>
-                            <input class="settings-input" id="email" name="email" type="email" value="{{ user.email|default:'' }}">
-                        </div>
-                        <div class="settings-field full">
-                            <label class="settings-label mono" for="address">Clinic Address</label>
-                            <textarea class="settings-textarea" id="address" name="address">{{ user.address }}</textarea>
-                        </div>
-                    </div>
-                    <div class="settings-actions">
-                        <div class="settings-note mono">Changes save directly to your case-paper account profile.</div>
-                        <button type="submit" class="settings-save mono">Save Settings</button>
-                    </div>
-                </form>
-            </section>
+            <div class="bg-white border-2 border-ink p-6">
+                <h3 class="font-serif text-xl font-semibold mb-4">Public Profile Status</h3>
+                <div class="space-y-2 font-mono text-xs">
+                    <div class="flex justify-between"><span>Public Profile</span><span>{% if workspace.public_profile_enabled %}ENABLED{% else %}DISABLED{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Booking Requests</span><span>{% if workspace.allow_public_booking_requests %}ENABLED{% else %}DISABLED{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Show Phone</span><span>{% if workspace.show_phone_public %}YES{% else %}NO{% endif %}</span></div>
+                    <div class="flex justify-between"><span>Show Email</span><span>{% if workspace.show_email_public %}YES{% else %}NO{% endif %}</span></div>
+                </div>
+            </div>
 
-            <div class="settings-stack">
-                <section class="settings-card">
-                    <h3 class="serif">Workspace Snapshot</h3>
-                    <div class="settings-metrics">
-                        <div class="metric">
-                            <div class="metric-label mono">Total Cases</div>
-                            <div class="metric-value serif">{{ total_cases }}</div>
-                            <div class="metric-subtext mono">Across your account</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-label mono">Completed</div>
-                            <div class="metric-value serif">{{ completed_cases }}</div>
-                            <div class="metric-subtext mono">Closed records</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-label mono">Drafts</div>
-                            <div class="metric-value serif">{{ draft_cases }}</div>
-                            <div class="metric-subtext mono">Need follow-up</div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="settings-card">
-                    <h3 class="serif">Account Details</h3>
-                    <div class="profile-list">
-                        <div class="profile-item">
-                            <div class="profile-key mono">Username</div>
-                            <div class="profile-value mono">{{ user.username }}</div>
-                        </div>
-                        <div class="profile-item">
-                            <div class="profile-key mono">Auth Method</div>
-                            <div class="profile-value mono">{{ user.get_auth_method_display }}</div>
-                        </div>
-                        <div class="profile-item">
-                            <div class="profile-key mono">Last Login</div>
-                            <div class="profile-value mono">{{ user.last_login|date:"Y-m-d H:i"|default:"No login recorded" }}</div>
-                        </div>
-                        <div class="profile-item">
-                            <div class="profile-key mono">Updated</div>
-                            <div class="profile-value mono">{{ user.updated_at|date:"Y-m-d H:i" }}</div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="settings-card">
-                    <h3 class="serif">Recent Cases</h3>
-                    <div class="recent-list">
-                        {% for case in recent_cases %}
-                            <div class="recent-item">
-                                <div>
-                                    <a class="serif" href="{% url 'case_paper_view' case.case_id %}">{{ case.preliminary.patient_name|default:"Unknown Patient" }}</a>
-                                    <div class="recent-meta mono">{{ case.case_id }} · {{ case.status|upper }}</div>
-                                </div>
-                                <div class="recent-meta mono">{{ case.updated_at|date:"Y-m-d" }}</div>
-                            </div>
-                        {% empty %}
-                            <div class="recent-meta mono">No cases available yet.</div>
-                        {% endfor %}
-                    </div>
-                </section>
-
-                <section class="settings-card">
-                    <h3 class="serif">Quick Actions</h3>
-                    <div class="quick-actions">
-                        <a href="{% url 'case_paper_new' %}" class="mono"><i class="fas fa-file-medical"></i> Create a new case paper</a>
-                        <a href="{% url 'case_paper_calendar' %}" class="mono"><i class="fas fa-calendar-alt"></i> Review consultation calendar</a>
-                        <a href="{% url 'case_paper_cases' %}" class="mono"><i class="fas fa-folder-open"></i> Open all case records</a>
-                    </div>
-                </section>
+            <div class="bg-white border-2 border-ink p-6">
+                <h3 class="font-serif text-xl font-semibold mb-4">Account Details</h3>
+                <div class="space-y-3 font-mono text-sm">
+                    <div class="flex justify-between"><span class="opacity-60">Username</span> <span>{{ user.username }}</span></div>
+                    <div class="flex justify-between"><span class="opacity-60">Auth Method</span> <span>{{ user.get_auth_method_display }}</span></div>
+                    <div class="flex justify-between"><span class="opacity-60">Last Login</span> <span>{{ user.last_login|date:"Y-m-d H:i" }}</span></div>
+                    <div class="flex justify-between"><span class="opacity-60">Joined</span> <span>{{ user.created_at|date:"Y-m-d" }}</span></div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

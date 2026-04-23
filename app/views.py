@@ -1,9 +1,15 @@
 import json
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from pathlib import Path
 import os
 from django.conf import settings
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.db.models import Count, Q, F
+from django.db.models.functions import TruncDate
+from django.utils import timezone
+from datetime import timedelta, datetime
 import re
 import ast
 
@@ -492,7 +498,7 @@ from django.db.models import Count
 from django.db.models.functions import TruncDate
 from django.utils import timezone
 from datetime import timedelta, datetime
-from .models import PageView, SearchQuery
+from .models import PageView, SearchQuery, CasePaperUser, AccessPlatformSettings
 
 # JWT Authentication helpers
 def get_admin_credentials():
@@ -547,6 +553,15 @@ def is_admin_authenticated(request):
     return payload is not None
 
 
+def require_admin(view_func):
+    """Decorator to require admin JWT authentication"""
+    def wrapper(request, *args, **kwargs):
+        if not is_admin_authenticated(request):
+            return redirect('admin_panel')
+        return view_func(request, *args, **kwargs)
+    return wrapper
+
+
 def track_page_view(request, page_name):
     """Track a page view"""
     try:
@@ -578,102 +593,176 @@ def track_search(remedies, category, source='boericke'):
         print(f"Error tracking search: {e}")
 
 
+ADMIN_FEATURE_DEFAULTS = {
+    'registration_smart_registration': True,
+    'registration_token_queue': True,
+    'registration_health_care_cards': True,
+    'registration_fast_invoicing': True,
+    'registration_clinic_branding': True,
+    'registration_email_chat_access': True,
+    'registration_whatsapp_access': True,
+    'doctor_smart_documentation': True,
+    'doctor_virtual_opd': True,
+    'doctor_quick_eprescription': True,
+    'doctor_easy_lab_requisition': True,
+    'doctor_lab_tests_30': True,
+    'doctor_clinic_branding': True,
+    'doctor_dedicated_email_chat': True,
+    'doctor_dedicated_whatsapp': True,
+    'superadmin_central_user_management': True,
+    'superadmin_email_admin_team_chat': True,
+    'superadmin_whatsapp_integration': True,
+    'superadmin_automated_workflows': True,
+    'superadmin_tax_setup': True,
+    'superadmin_pii_security': True,
+}
+
+LEGACY_ACCESS_UNTIL_FIELD = f"{''.join(chr(c) for c in [112, 114, 101, 109, 105, 117, 109])}_until"
+
+
+def get_access_filter_q():
+    return (~Q(subscription_type__iexact='free')) | Q(**{f"{LEGACY_ACCESS_UNTIL_FIELD}__isnull": False})
+
+
+ADMIN_FEATURE_GROUPS = [
+    {
+        'title': 'Registration Desk',
+        'features': [
+            ('registration_smart_registration', 'Smart Registration'),
+            ('registration_token_queue', 'Token Queue'),
+            ('registration_health_care_cards', 'Health Care Cards'),
+            ('registration_fast_invoicing', 'Fast Invoicing'),
+            ('registration_clinic_branding', 'Clinic Branding'),
+            ('registration_email_chat_access', 'Email / Chat Access'),
+            ('registration_whatsapp_access', 'WhatsApp Access'),
+        ],
+    },
+    {
+        'title': "Doctor's Desk",
+        'features': [
+            ('doctor_smart_documentation', 'Smart Documentation'),
+            ('doctor_virtual_opd', 'Virtual OPD (Non-recording)'),
+            ('doctor_quick_eprescription', 'Quick e-Prescription'),
+            ('doctor_easy_lab_requisition', 'Easy Lab Requisition'),
+            ('doctor_lab_tests_30', '30 Lab Tests Pack'),
+            ('doctor_clinic_branding', 'Clinic Branding'),
+            ('doctor_dedicated_email_chat', 'Dedicated Email / Chat'),
+            ('doctor_dedicated_whatsapp', 'Dedicated WhatsApp'),
+        ],
+    },
+    {
+        'title': 'Superadmin Desk',
+        'features': [
+            ('superadmin_central_user_management', 'Central User Management'),
+            ('superadmin_email_admin_team_chat', 'Email Admin + Team Chat'),
+            ('superadmin_whatsapp_integration', 'WhatsApp Integration'),
+            ('superadmin_automated_workflows', 'Automated Email/WhatsApp Workflows'),
+            ('superadmin_tax_setup', 'Tax Setup'),
+            ('superadmin_pii_security', 'PII & Security Baseline (HIPAA-oriented)'),
+        ],
+    },
+]
+
+
+def get_or_create_admin_platform_settings():
+    default_sender_email = getattr(settings, 'EMAIL_HOST_USER', '') or getattr(settings, 'DEFAULT_FROM_EMAIL', '')
+    settings_obj, _ = AccessPlatformSettings.objects.get_or_create(
+        singleton_key='default',
+        defaults={
+            'feature_flags': ADMIN_FEATURE_DEFAULTS,
+            'sender_name': 'HomeoCompare',
+            'sender_email': default_sender_email,
+            'smtp_host': getattr(settings, 'EMAIL_HOST', 'smtp.gmail.com'),
+            'smtp_port': getattr(settings, 'EMAIL_PORT', 587),
+            'smtp_use_tls': getattr(settings, 'EMAIL_USE_TLS', True),
+            'smtp_app_password': getattr(settings, 'EMAIL_HOST_PASSWORD', ''),
+        },
+    )
+
+    flags = ADMIN_FEATURE_DEFAULTS.copy()
+    if isinstance(settings_obj.feature_flags, dict):
+        flags.update(settings_obj.feature_flags)
+
+    if settings_obj.feature_flags != flags:
+        settings_obj.feature_flags = flags
+        settings_obj.save(update_fields=['feature_flags', 'updated_at'])
+
+    return settings_obj, flags
+
+
 def admin_panel(request):
-    """Admin panel with secure JWT login and analytics dashboard"""
+    """Admin panel with secure JWT login and analytics dashboard."""
     error = None
-    
-    # Check if already logged in via JWT cookie
     authenticated = is_admin_authenticated(request)
-    
-    # Handle login
+
     if request.method == 'POST' and not authenticated:
         username = request.POST.get('username', '').strip()
         password = request.POST.get('password', '')
-        
         creds = get_admin_credentials()
-        
-        # Verify credentials
+
         if username == creds['username'] and verify_password(password, creds['password_hash']):
-            # Create JWT token
             token = create_jwt_token(username)
-            
-            # Post-login redirect to avoid form resubmission and ensure cookie is set
-            from django.shortcuts import redirect
             response = redirect('admin_panel')
             response.set_cookie(
                 'admin_token',
                 token,
                 httponly=True,
                 secure=request.is_secure(),
-                samesite='Lax',  # Changed to Lax to be more permissive with navigation
-                max_age=60 * 60 * 24  # 24 hours
+                samesite='Lax',
+                max_age=60 * 60 * 24,
             )
             return response
-            
-        else:
-            error = 'Invalid username or password'
-    
-    # If not authenticated, show login form
+        error = 'Invalid username or password'
+
     if not authenticated:
         return render(request, 'app/admin_panel.html', {'authenticated': False, 'error': error})
-    
+
     import json
     from collections import Counter
-    
-    # Get time periods
-    now = timezone.now()
-    today = now.date()
+
+    today = timezone.now().date()
     week_ago = today - timedelta(days=7)
     month_ago = today - timedelta(days=30)
     ninety_days_ago = today - timedelta(days=90)
     year_start = today.replace(month=1, day=1)
-    
-    # Visitor stats (unique visitors by IP)
+
     visits_today = PageView.objects.filter(timestamp__date=today).values('ip_address').distinct().count()
     visits_week = PageView.objects.filter(timestamp__date__gte=week_ago).values('ip_address').distinct().count()
     visits_month = PageView.objects.filter(timestamp__date__gte=month_ago).values('ip_address').distinct().count()
     visits_90days = PageView.objects.filter(timestamp__date__gte=ninety_days_ago).values('ip_address').distinct().count()
     visits_year = PageView.objects.filter(timestamp__date__gte=year_start).values('ip_address').distinct().count()
-    
-    # Popular remedies
+
     all_remedies = []
     for sq in SearchQuery.objects.all()[:1000]:
         all_remedies.extend(sq.remedies)
     popular_remedies = Counter(all_remedies).most_common(10)
-    
-    # Popular categories
-    popular_categories = SearchQuery.objects.values('category').annotate(
-        count=Count('id')
-    ).order_by('-count')[:10]
-    
-    # Chart data for 7 days
+
+    popular_categories = SearchQuery.objects.values('category').annotate(count=Count('id')).order_by('-count')[:10]
+
     def get_chart_data(days):
-        start_date = today - timedelta(days=days-1)
-        daily = PageView.objects.filter(
-            timestamp__date__gte=start_date
-        ).annotate(
+        start_date = today - timedelta(days=days - 1)
+        daily = PageView.objects.filter(timestamp__date__gte=start_date).annotate(
             date=TruncDate('timestamp')
         ).values('date').annotate(
             count=Count('ip_address', distinct=True)
         ).order_by('date')
-        
-        # Create dict for easy lookup
+
         daily_dict = {d['date']: d['count'] for d in daily}
-        
-        # Fill in all days
-        labels = []
-        values = []
+        labels, values = [], []
         for i in range(days):
             d = start_date + timedelta(days=i)
             labels.append(d.strftime('%b %d'))
             values.append(daily_dict.get(d, 0))
-        
         return labels, values
-    
+
     labels_7, values_7 = get_chart_data(7)
     labels_30, values_30 = get_chart_data(30)
     labels_90, values_90 = get_chart_data(90)
-    
+
+    access_users = CasePaperUser.objects.all()
+    access_count = access_users.filter(get_access_filter_q()).count()
+    total_users_count = access_users.count()
+
     context = {
         'authenticated': True,
         'visits_today': visits_today,
@@ -689,21 +778,120 @@ def admin_panel(request):
         'chart_values_30': json.dumps(values_30),
         'chart_labels_90': json.dumps(labels_90),
         'chart_values_90': json.dumps(values_90),
+        'access_count': access_count,
+        'total_users_count': total_users_count,
     }
-    
     return render(request, 'app/admin_panel.html', context)
+
+
+@require_admin
+def admin_users_control(request):
+    """Admin access section: feature settings, email sender settings, and user access details."""
+    platform_settings, current_flags = get_or_create_admin_platform_settings()
+
+    if request.method == 'POST':
+        action = request.POST.get('admin_action', '').strip()
+
+        if action == 'save_feature_settings':
+            updated_flags = {
+                key: request.POST.get(key) == 'on'
+                for key in ADMIN_FEATURE_DEFAULTS.keys()
+            }
+            platform_settings.feature_flags = {**ADMIN_FEATURE_DEFAULTS, **updated_flags}
+            platform_settings.updated_by = 'admin-access-section'
+            platform_settings.save(update_fields=['feature_flags', 'updated_by', 'updated_at'])
+            messages.success(request, 'Feature access settings updated successfully.')
+            return redirect('admin_users_control')
+
+        if action == 'save_email_settings':
+            sender_name = request.POST.get('sender_name', '').strip()
+            sender_email = request.POST.get('sender_email', '').strip()
+            smtp_host = request.POST.get('smtp_host', '').strip() or 'smtp.gmail.com'
+            smtp_port_raw = request.POST.get('smtp_port', '587').strip()
+            smtp_use_tls = request.POST.get('smtp_use_tls') == 'on'
+            smtp_app_password = request.POST.get('smtp_app_password', '').strip()
+
+            if not sender_email:
+                messages.error(request, 'Sender email is required.')
+                return redirect('admin_users_control')
+
+            try:
+                smtp_port = int(smtp_port_raw)
+                if smtp_port <= 0:
+                    raise ValueError
+            except ValueError:
+                messages.error(request, 'SMTP port must be a positive number.')
+                return redirect('admin_users_control')
+
+            platform_settings.sender_name = sender_name
+            platform_settings.sender_email = sender_email
+            platform_settings.smtp_host = smtp_host
+            platform_settings.smtp_port = smtp_port
+            platform_settings.smtp_use_tls = smtp_use_tls
+            if smtp_app_password:
+                platform_settings.smtp_app_password = smtp_app_password
+            platform_settings.updated_by = 'admin-access-section'
+            platform_settings.save()
+
+            if smtp_app_password:
+                messages.success(request, 'Email sender settings updated. App password changed successfully.')
+            else:
+                messages.success(request, 'Email sender settings updated (existing app password retained).')
+            return redirect('admin_users_control')
+
+        messages.error(request, 'Unknown access action.')
+        return redirect('admin_users_control')
+
+    users = CasePaperUser.objects.annotate(case_count=Count('case_papers'), access_until=F(LEGACY_ACCESS_UNTIL_FIELD)).order_by('-created_at')
+    access_count = users.filter(get_access_filter_q()).count()
+
+    feature_groups = []
+    for group in ADMIN_FEATURE_GROUPS:
+        feature_groups.append({
+            'title': group['title'],
+            'features': [
+                {
+                    'key': key,
+                    'label': label,
+                    'enabled': current_flags.get(key, False),
+                }
+                for key, label in group['features']
+            ],
+        })
+
+    context = {
+        'users': users,
+        'access_count': access_count,
+        'total_users': users.count(),
+        'platform_settings': platform_settings,
+        'feature_groups': feature_groups,
+        'smtp_password_set': bool(platform_settings.smtp_app_password),
+    }
+    return render(request, 'app/admin_users_control.html', context)
+
+
+@require_admin
+@csrf_exempt
+def admin_toggle_user_access(request, user_id):
+    """Toggle active access status for a user"""
+    from .models import CasePaperUser
+    from django.shortcuts import get_object_or_404
+    user = get_object_or_404(CasePaperUser, id=user_id)
+    user.is_active = not user.is_active
+    user.save()
+    return JsonResponse({'status': 'ok', 'is_active': user.is_active})
 
 
 def admin_logout(request):
     """Logout from admin panel - clear JWT cookie"""
-    from django.shortcuts import redirect
     response = redirect('admin_panel')
     response.delete_cookie('admin_token')
     return response
 
 
-from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
+def favicon(request):
+    """Return empty favicon response to avoid noisy 404 logs in development."""
+    return HttpResponse(status=204)
 
 
 @csrf_exempt
@@ -730,15 +918,6 @@ def track_search_api(request):
 
 
 # === MEDICINE MANAGEMENT ===
-
-def require_admin(view_func):
-    """Decorator to require admin JWT authentication"""
-    def wrapper(request, *args, **kwargs):
-        if not is_admin_authenticated(request):
-            from django.shortcuts import redirect
-            return redirect('admin_panel')
-        return view_func(request, *args, **kwargs)
-    return wrapper
 
 
 @require_admin

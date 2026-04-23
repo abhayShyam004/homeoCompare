@@ -57,11 +57,11 @@
         }
     </style>
 </head>
-<body class="auth-premium auth-preload">
+<body class="auth-portal auth-preload">
     <div class="auth-intro" id="authIntro" aria-hidden="true">
         <div class="auth-intro-core">
             <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" class="auth-intro-mark">
-            <div class="auth-intro-line mono">HOMEOCOMPARE PREMIUM CASE PAPER SUITE</div>
+            <div class="auth-intro-line mono">HOMEOCOMPARE CASE PAPER SUITE</div>
             <h1 class="serif">Secure Access Verification.</h1>
         </div>
     </div>
@@ -74,7 +74,7 @@
             </div>
             <div class="auth-header-copy">
                 <h1 class="serif">Identity Confirmation</h1>
-                <p>Complete email verification to unlock your premium clinical workspace and secure physician session.</p>
+                <p>Complete email verification to unlock your clinical workspace and secure physician session.</p>
             </div>
             <ul class="auth-feature-list">
                 <li><i class="fas fa-envelope-open-text"></i> One-time passcode delivered to your email</li>
@@ -85,7 +85,6 @@
 
         <div class="auth-body">
             <div class="auth-panel-top">
-                <div class="auth-kicker mono"><i class="fas fa-fingerprint"></i> Verify Access</div>
                 <h2 class="serif">Enter Verification Code</h2>
                 <p>We sent a 6-digit security code to <strong>{{ email }}</strong>. Enter it below to continue.</p>
             </div>
@@ -144,9 +143,27 @@
             }, 1400);
         }
 
+        function distributeCodeAcrossInputs(rawValue) {
+            const digits = (rawValue || '').replace(/\D/g, '').slice(0, 6).split('');
+            const inputs = Array.from(codeInputs);
+            inputs.forEach((input, idx) => {
+                input.value = digits[idx] || '';
+                input.classList.toggle('filled', Boolean(input.value));
+            });
+            const nextIndex = Math.min(digits.length, inputs.length - 1);
+            if (inputs[nextIndex]) {
+                inputs[nextIndex].focus();
+            }
+        }
+
         codeInputs.forEach((input, index) => {
             input.addEventListener('input', (e) => {
-                if (e.target.value.length === 1 && index < codeInputs.length - 1) {
+                const value = e.target.value || '';
+                if (value.length > 1) {
+                    distributeCodeAcrossInputs(value);
+                    return;
+                }
+                if (value.length === 1 && index < codeInputs.length - 1) {
                     codeInputs[index + 1].focus();
                 }
                 e.target.classList.toggle('filled', e.target.value !== '');
@@ -164,6 +181,18 @@
                 }
             });
         });
+
+        const codeWrapper = document.querySelector('.code-input-wrapper');
+        if (codeWrapper) {
+            codeWrapper.addEventListener('paste', function(e) {
+                const clipboard = e.clipboardData || window.clipboardData;
+                const pasted = clipboard ? clipboard.getData('text') : '';
+                if (/\d{4,6}/.test(pasted)) {
+                    e.preventDefault();
+                    distributeCodeAcrossInputs(pasted);
+                }
+            });
+        }
 
         function startTimer() {
             let timeLeft = 600;
@@ -244,10 +273,11 @@
 
         function showMessage(text, type) {
             messageEl.textContent = text;
-            messageEl.className = `message alert alert-${type === 'error' ? 'error' : 'success'} show`;
+            messageEl.className = `message alert alert-${type === 'error' ? 'error' : 'success'}`;
+            messageEl.style.display = 'block';
             setTimeout(() => {
                 if (type === 'error') {
-                    messageEl.classList.remove('show');
+                    messageEl.style.display = 'none';
                 }
             }, 5000);
         }
@@ -274,6 +304,40 @@
         } else {
             runAuthIntro();
         }
+    </script>
+    <!-- Floating Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+
+    <script>
+        // === THEME INITIALIZATION ===
+        function initTheme() {
+            const theme = localStorage.getItem('theme') || 'light'; // default to light for auth pages
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        }
+        initTheme();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    const next = isDark ? 'light' : 'dark';
+                    if (next === 'dark') {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                    }
+                    localStorage.setItem('theme', next);
+                });
+            }
+        });
     </script>
 </body>
 </html>
