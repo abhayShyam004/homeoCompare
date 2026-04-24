@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,30 +84,36 @@ WSGI_APPLICATION = 'medicomp.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 import dj_database_url
-import os
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+database_url = config('DATABASE_URL', default='').strip()
 
-# Override with PostgreSQL if DATABASE_URL is present and valid
-# Use decouple's config() to read from .env file
-database_url = config('DATABASE_URL', default='')
-if database_url and database_url.startswith(('postgres://', 'postgresql://')):
-    # Use conn_max_age=0 for Neon serverless (connections are closed after each request)
-    # This prevents "server closed the connection unexpectedly" errors
-    DATABASES['default'] = dj_database_url.config(
-        default=database_url, 
-        conn_max_age=0,  # Don't persist connections (Neon closes idle connections)
-        conn_health_checks=True,  # Check connection health before reuse
-        ssl_require=True
-    )
+if database_url:
+    if not database_url.startswith(('postgres://', 'postgresql://')):
+        raise ImproperlyConfigured('DATABASE_URL must use a PostgreSQL URL (postgresql://...)')
+
+    # Neon serverless works best without long-lived connections.
+    DATABASES = {
+        'default': dj_database_url.parse(
+            database_url,
+            conn_max_age=0,
+            conn_health_checks=True,
+            ssl_require=True,
+        )
+    }
+else:
+    if not DEBUG:
+        raise ImproperlyConfigured('DATABASE_URL is required when DEBUG=False. Configure your Neon PostgreSQL URL.')
+
+    # Local fallback only for explicit development mode.
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
