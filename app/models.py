@@ -468,7 +468,7 @@ class UserWorkspaceSettings(models.Model):
 
     public_profile_enabled = models.BooleanField(default=False)
     allow_public_booking_requests = models.BooleanField(default=False)
-    public_slug = models.SlugField(max_length=120, blank=True, default='')
+    public_slug = models.SlugField(max_length=120, unique=True, db_index=True, blank=True, default='')
 
     show_phone_public = models.BooleanField(default=False)
     show_email_public = models.BooleanField(default=False)

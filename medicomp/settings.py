@@ -226,6 +226,10 @@ GOOGLE_CLIENT_ID = config('GOOGLE_CLIENT_ID', default='')
 GOOGLE_CLIENT_SECRET = config('GOOGLE_CLIENT_SECRET', default='')
 GOOGLE_CALLBACK_URL = config('GOOGLE_CALLBACK_URL', default='http://localhost:8000/auth/google/callback/')
 
+# ============= PUBLIC CLINIC URL CONFIGURATION =============
+# Example: https://clinic.homeocompare.life
+PUBLIC_CLINIC_BASE_URL = config('PUBLIC_CLINIC_BASE_URL', default='').strip()
+
 # ============= WHATSAPP (META CLOUD API) CONFIGURATION =============
 WHATSAPP_META_ACCESS_TOKEN = config('WHATSAPP_META_ACCESS_TOKEN', default='')
 WHATSAPP_META_API_VERSION = config('WHATSAPP_META_API_VERSION', default='v20.0')

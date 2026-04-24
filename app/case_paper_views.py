@@ -82,16 +82,31 @@ def get_effective_feature_flags():
     return defaults
 
 
+def _build_unique_public_slug(seed, exclude_user_id=None):
+    base = slugify((seed or '').strip())[:90].strip('-')
+    if not base:
+        base = 'clinic'
+
+    candidate = base
+    counter = 2
+
+    while UserWorkspaceSettings.objects.filter(public_slug=candidate).exclude(user_id=exclude_user_id).exists():
+        suffix = f"-{counter}"
+        candidate = f"{base[:max(1, 120 - len(suffix))]}{suffix}"
+        counter += 1
+
+    return candidate
+
+
 def get_or_create_workspace_settings(user):
-    slug_seed = (user.clinic_name or user.physician_name or user.username or '').strip().lower().replace(' ', '-')
-    slug_seed = ''.join(ch for ch in slug_seed if ch.isalnum() or ch == '-')[:90].strip('-')
+    slug_seed = (user.clinic_name or user.physician_name or user.username or '').strip()
     if not slug_seed:
         slug_seed = user.username
 
     workspace, _ = UserWorkspaceSettings.objects.get_or_create(
         user=user,
         defaults={
-            'public_slug': slug_seed,
+            'public_slug': _build_unique_public_slug(slug_seed),
             'registration_desk_enabled': True,
             'doctor_desk_enabled': True,
             'superadmin_tools_visible': False,
@@ -108,7 +123,7 @@ def get_or_create_workspace_settings(user):
     )
 
     if not workspace.public_slug:
-        workspace.public_slug = slug_seed
+        workspace.public_slug = _build_unique_public_slug(slug_seed, exclude_user_id=user.id)
         workspace.save(update_fields=['public_slug', 'updated_at'])
 
     return workspace
@@ -1363,10 +1378,14 @@ def case_paper_settings(request, section='profile'):
     completed_cases = CasePaper.objects.filter(user=user, status='complete').count()
     draft_cases = CasePaper.objects.filter(user=user, status='draft').count()
 
-    try:
-        public_url = request.build_absolute_uri(f"/clinic/{workspace.public_slug}/")
-    except Exception:
-        public_url = f"/clinic/{workspace.public_slug}/"
+    clinic_base_url = (getattr(settings, 'PUBLIC_CLINIC_BASE_URL', '') or '').strip().rstrip('/')
+    if clinic_base_url:
+        public_url = f"{clinic_base_url}/{workspace.public_slug}/"
+    else:
+        try:
+            public_url = request.build_absolute_uri(f"/clinic/{workspace.public_slug}/")
+        except Exception:
+            public_url = f"/clinic/{workspace.public_slug}/"
 
     section_meta = {
         'profile': ('Profile Settings', 'Manage clinic identity, practitioner details, and contact information.'),
