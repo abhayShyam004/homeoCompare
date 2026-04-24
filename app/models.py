@@ -476,6 +476,11 @@ class UserWorkspaceSettings(models.Model):
     whatsapp_notifications_enabled = models.BooleanField(default=True)
     email_notifications_enabled = models.BooleanField(default=True)
 
+    # Doctor-managed WhatsApp sender configuration (Meta Cloud API)
+    whatsapp_doctor_consent = models.BooleanField(default=False)
+    whatsapp_sender_number = models.CharField(max_length=20, blank=True, default='')
+    whatsapp_business_phone_number_id = models.CharField(max_length=64, blank=True, default='')
+
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:

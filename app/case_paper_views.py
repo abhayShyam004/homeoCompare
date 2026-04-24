@@ -25,6 +25,7 @@ from .models import (
     LabRequisition,
     PublicBookingRequest,
 )
+from .whatsapp_utils import send_booking_confirmation_message
 
 try:
     from zoneinfo import ZoneInfo
@@ -100,6 +101,9 @@ def get_or_create_workspace_settings(user):
             'show_email_public': False,
             'whatsapp_notifications_enabled': True,
             'email_notifications_enabled': True,
+            'whatsapp_doctor_consent': False,
+            'whatsapp_sender_number': '',
+            'whatsapp_business_phone_number_id': '',
         },
     )
 
@@ -1321,6 +1325,9 @@ def case_paper_settings(request, section='profile'):
                 workspace.show_email_public = request.POST.get('show_email_public') == 'on'
                 workspace.whatsapp_notifications_enabled = request.POST.get('whatsapp_notifications_enabled') == 'on'
                 workspace.email_notifications_enabled = request.POST.get('email_notifications_enabled') == 'on'
+                workspace.whatsapp_doctor_consent = request.POST.get('whatsapp_doctor_consent') == 'on'
+                workspace.whatsapp_sender_number = request.POST.get('whatsapp_sender_number', '').strip()
+                workspace.whatsapp_business_phone_number_id = request.POST.get('whatsapp_business_phone_number_id', '').strip()
 
                 slug_input = request.POST.get('public_slug', '').strip().lower()
                 if slug_input:
@@ -1417,14 +1424,28 @@ def public_clinic_page(request, public_slug):
                 messages.error(request, 'Please provide a valid preferred date.')
                 return redirect('public_clinic_profile', public_slug=public_slug)
 
-        PublicBookingRequest.objects.create(
+        booking_request = PublicBookingRequest.objects.create(
             user=clinic_user,
             patient_name=patient_name,
             phone=phone,
             requested_date=requested_date,
             concern=concern,
         )
-        messages.success(request, 'Booking request sent to clinic successfully.')
+
+        whatsapp_sent, whatsapp_note = send_booking_confirmation_message(
+            workspace=workspace,
+            booking_request=booking_request,
+            doctor=clinic_user,
+        )
+
+        if whatsapp_sent:
+            messages.success(request, 'Booking request sent and WhatsApp confirmation delivered successfully.')
+        else:
+            if workspace.whatsapp_notifications_enabled and workspace.whatsapp_doctor_consent:
+                messages.warning(request, f'Booking request sent. WhatsApp delivery skipped: {whatsapp_note}')
+            else:
+                messages.success(request, 'Booking request sent to clinic successfully.')
+
         return redirect('public_clinic_profile', public_slug=public_slug)
 
     recent_templates = SpecialtyTemplate.objects.filter(user=clinic_user).order_by('-is_default', '-updated_at')[:6]

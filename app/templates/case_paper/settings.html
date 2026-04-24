@@ -140,7 +140,25 @@
                             <span>WhatsApp Notifications</span>
                             <input type="checkbox" name="whatsapp_notifications_enabled" {% if workspace.whatsapp_notifications_enabled %}checked{% endif %}>
                         </label>
+                        <label class="flex items-center justify-between border border-ink/20 bg-paper p-3">
+                            <span>Doctor Consent for Auto WhatsApp</span>
+                            <input type="checkbox" name="whatsapp_doctor_consent" {% if workspace.whatsapp_doctor_consent %}checked{% endif %}>
+                        </label>
                     </div>
+
+                    <div class="grid md:grid-cols-2 gap-3 text-sm font-mono">
+                        <div class="border border-ink/20 bg-paper p-3">
+                            <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="whatsapp_sender_number">Doctor WhatsApp Number</label>
+                            <input type="text" id="whatsapp_sender_number" name="whatsapp_sender_number" value="{{ workspace.whatsapp_sender_number|default:'' }}" class="mt-2 w-full bg-white border-2 border-ink p-2 text-xs font-mono" placeholder="+91XXXXXXXXXX">
+                            <p class="mt-1 text-[10px] opacity-60">Display/reference number used by the doctor.</p>
+                        </div>
+                        <div class="border border-ink/20 bg-paper p-3">
+                            <label class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-70" for="whatsapp_business_phone_number_id">WhatsApp Phone Number ID</label>
+                            <input type="text" id="whatsapp_business_phone_number_id" name="whatsapp_business_phone_number_id" value="{{ workspace.whatsapp_business_phone_number_id|default:'' }}" class="mt-2 w-full bg-white border-2 border-ink p-2 text-xs font-mono" placeholder="Meta Phone Number ID">
+                            <p class="mt-1 text-[10px] opacity-60">Required for per-doctor WhatsApp API sender routing.</p>
+                        </div>
+                    </div>
+                    <p class="text-[10px] font-mono opacity-60">Auto-booking WhatsApp works only when all are enabled: WhatsApp Notifications + Doctor Consent + Phone Number ID + server API token.</p>
                 </div>
 
                 <div class="space-y-4 border-t border-ink/20 pt-4">
@@ -215,6 +233,7 @@
                     <div class="flex justify-between"><span>Booking Requests</span><span>{% if workspace.allow_public_booking_requests %}ENABLED{% else %}DISABLED{% endif %}</span></div>
                     <div class="flex justify-between"><span>Show Phone</span><span>{% if workspace.show_phone_public %}YES{% else %}NO{% endif %}</span></div>
                     <div class="flex justify-between"><span>Show Email</span><span>{% if workspace.show_email_public %}YES{% else %}NO{% endif %}</span></div>
+                    <div class="flex justify-between"><span>WhatsApp Auto</span><span>{% if workspace.whatsapp_notifications_enabled and workspace.whatsapp_doctor_consent and workspace.whatsapp_business_phone_number_id %}READY{% else %}INCOMPLETE{% endif %}</span></div>
                 </div>
             </div>
 
