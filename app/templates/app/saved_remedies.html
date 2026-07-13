@@ -4,288 +4,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Saved Remedies | HomeoCompare</title>
+    <title>Saved Remedies & Differentials | HomeoCompare</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
-    
-    <!-- Reuse existing styles -->
-    <style>
-        /* reusing variables from base.html */
-        :root {
-            --sidebar-width: 300px;
-            --header-height: 85px;
-            
-            --primary: #059669;
-            --primary-dark: #047857;
-            --primary-light: #10b981;
-            --secondary: #0891b2;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            
-            --bg-dark: #0f172a;
-            --bg-sidebar: #1e293b;
-            --bg-main: #0f172a;
-            --bg-card: #1e293b;
-            --bg-input: #334155;
-            --bg-hover: #334155;
-            
-            --text-white: #ffffff;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            
-            --border: #334155;
-            --border-light: #475569;
-            
-            --radius: 8px;
-            --radius-lg: 12px;
-            --radius-xl: 16px;
-            
-            --shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4);
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-        [data-theme="light"] {
-            --bg-dark: #f1f5f9;
-            --bg-sidebar: #ffffff;
-            --bg-main: #f8fafc;
-            --bg-card: #ffffff;
-            --bg-input: #f1f5f9;
-            --bg-hover: #e2e8f0;
+    <style>
+        :root {
+            --bg-page: #F6F4F0;
+            --bg-nav: #FFFFFF;
+            --bg-card: #FFFFFF;
+            --bg-yellow: #FCE181;
+            --bg-pill-gray: #EAE8E3;
             
-            --text-white: #0f172a;
-            --text-primary: #1e293b;
-            --text-secondary: #475569;
-            --text-muted: #94a3b8;
+            --text-main: #131313;
+            --text-secondary: #6B6965;
+            --text-muted: #9C9A95;
             
-            --border: #e2e8f0;
-            --border-light: #cbd5e1;
+            --tag-green-bg: #E1FBEA;
+            --tag-blue-bg: #E0F2FE;
+            --tag-yellow-bg: #FEF3C7;
             
-            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.15);
+            --radius-pill: 9999px;
+            --radius-card: 26px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { height: 100%; }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-main);
-            color: var(--text-primary);
-            display: flex;
-            overflow: hidden;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 1.25rem 2rem 3rem;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Sidebar - Same as base.html */
-        .sidebar {
-            width: var(--sidebar-width);
-            height: 100vh;
-            background: var(--bg-sidebar);
-            border-right: 1px solid var(--border);
+        .top-navbar {
+            background: var(--bg-nav);
+            border-radius: var(--radius-pill);
+            padding: 0.65rem 1.5rem;
             display: flex;
-            flex-direction: column;
-            position: fixed;
-            left: 0; top: 0; z-index: 100;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.035);
+            margin-bottom: 2.25rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .sidebar-header { padding: 1.25rem; border-bottom: 1px solid var(--border); }
-        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-icon { width: 44px; height: 44px; background: var(--primary); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; }
-        .logo-text h1 { font-size: 1rem; font-weight: 700; color: var(--text-white); }
-        .logo-text span { font-size: 0.7rem; color: var(--text-muted); font-weight: 500; }
-        .sidebar-content { flex: 1; overflow-y: auto; padding: 0.5rem 0; }
-        .sidebar-section { padding: 0.75rem 1.25rem; }
-        .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
-        .section-title { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
-        .action-btn { display: flex; align-items: center; gap: 10px; padding: 0.7rem 0.75rem; background: transparent; border: 1px solid var(--border); border-radius: var(--radius); font-size: 0.85rem; color: var(--text-secondary); cursor: pointer; text-decoration: none; margin-bottom: 6px; }
-        .action-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
-        .action-btn i { width: 18px; text-align: center; color: var(--text-muted); }
-        .action-btn:hover i { color: var(--primary-light); }
-        .sidebar-footer { padding: 1rem 1.25rem; border-top: 1px solid var(--border); }
-        .theme-toggle { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: var(--bg-input); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-secondary); cursor: pointer; width: 100%; }
 
-        /* Main Content */
-        .main-wrapper { margin-left: var(--sidebar-width); flex: 1; height: 100vh; overflow-y: auto; display: flex; flex-direction: column; }
-        .topbar { height: 85px; min-height: 85px; background: var(--bg-card); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; position: sticky; top: 0; z-index: 50; }
-        .topbar-title { font-size: 1.35rem; font-weight: 700; color: var(--text-white); }
-        .main-content { flex: 1; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            text-decoration: none;
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
 
-        /* Saved Cards */
-        .saved-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
-        .saved-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.2s; }
-        .saved-card:hover { border-color: var(--border-light); box-shadow: var(--shadow); }
-        .saved-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; }
-        .saved-title h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-white); margin-bottom: 4px; }
-        .saved-source { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-        .delete-btn { background: transparent; border: none; color: var(--text-muted); cursor: pointer; padding: 4px; transition: color 0.2s; }
-        .delete-btn:hover { color: var(--danger); }
-        
-        .saved-body { padding: 1.25rem; }
-        .note-area { width: 100%; min-height: 100px; background: var(--bg-input); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem; color: var(--text-primary); font-family: inherit; font-size: 0.9rem; resize: vertical; margin-top: 0.5rem; transition: border-color 0.2s; }
-        .note-area:focus { outline: none; border-color: var(--primary); }
-        .note-label { font-size: 0.8rem; color: var(--text-secondary); font-weight: 500; display: block; margin-bottom: 4px; }
-        
-        .empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-muted); }
-        .empty-icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.5; }
+        .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.92rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text-main); font-weight: 600; }
 
-        .saved-count-badge { background: var(--primary); color: white; font-size: 0.65rem; padding: 2px 6px; border-radius: 100px; font-weight: 600; vertical-align: middle; margin-left: 6px;}
+        .nav-right { display: flex; align-items: center; gap: 0.85rem; }
+        .seg-toggle { background: var(--bg-pill-gray); border-radius: var(--radius-pill); padding: 0.25rem; display: flex; gap: 0.25rem; }
+        .seg-btn { padding: 0.45rem 1.15rem; border-radius: var(--radius-pill); font-size: 0.84rem; font-weight: 600; text-decoration: none; color: var(--text-secondary); }
+        .seg-btn.active { background: #000000; color: #FFFFFF; }
+        .notif-btn { width: 40px; height: 40px; border-radius: 50%; background: #000000; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+
+        .greeting-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.25rem; flex-wrap: wrap; gap: 1rem; }
+        .greeting-title { font-family: 'Outfit', sans-serif; font-size: 2.1rem; font-weight: 700; color: var(--text-main); }
+        .greeting-sub { color: var(--text-secondary); font-size: 0.94rem; margin-top: 0.2rem; }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 2.25rem;
+            align-items: start;
+        }
+
+        .col-left { display: flex; flex-direction: column; gap: 1.75rem; }
+
+        .big-percent { font-family: 'Outfit', sans-serif; font-size: 5.2rem; font-weight: 800; line-height: 0.92; color: var(--text-main); margin-bottom: 0.4rem; }
+        .big-subtitle { font-size: 0.94rem; color: var(--text-secondary); font-weight: 500; }
+
+        .yellow-stat-card {
+            background: var(--bg-yellow);
+            border-radius: var(--radius-card);
+            padding: 1.6rem;
+            box-shadow: 0 10px 25px rgba(252, 225, 129, 0.3);
+        }
+
+        .filter-tab {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-pill);
+            padding: 0.5rem 1rem;
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: #131313;
+            cursor: pointer;
+            margin-right: 0.4rem;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .filter-tab.active { background: #131313; color: #FFFFFF; }
+
+        .col-center { display: flex; flex-direction: column; gap: 1.75rem; min-width: 0; }
+        .ui-card { background: var(--bg-card); border-radius: var(--radius-card); padding: 2.2rem; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04); }
+        .card-header-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.6rem; flex-wrap: wrap; gap: 0.5rem; }
+        .card-title { font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 700; color: var(--text-main); }
+        .badge-pill { padding: 0.3rem 0.85rem; border-radius: var(--radius-pill); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; }
+        .badge-green { background: var(--tag-green-bg); color: #047857; }
+
+        .remedy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+        .bookmark-card {
+            background: #F8F7F4; border-radius: 20px; padding: 1.4rem; border: 1px solid #EAE8E3;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+
+        .bm-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+        .bm-name { font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--text-main); }
+        .bm-source { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: var(--radius-pill); background: #E0F2FE; color: #0284C7; }
+
+        .bm-actions { display: flex; gap: 0.5rem; margin-top: 1.25rem; }
+        .btn-action {
+            flex: 1; padding: 0.6rem; border-radius: var(--radius-pill);
+            background: #131313; color: #FFF; text-decoration: none; text-align: center;
+            font-size: 0.84rem; font-weight: 600;
+        }
+        .btn-remove {
+            width: 40px; height: 38px; border-radius: var(--radius-pill);
+            background: #FEE2E2; color: #B91C1C; border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
 
         @media (max-width: 1024px) {
-            .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
-            .sidebar.active { transform: translateX(0); }
-            .main-wrapper { margin-left: 0; }
-            .sidebar-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 90; display: none; }
-            .sidebar-overlay.active { display: block; }
-            .mobile-menu-btn { display: block; background: transparent; border: 1px solid var(--border); color: var(--text-primary); width: 40px; height: 40px; border-radius: var(--radius); cursor: pointer; }
+            .dashboard-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .col-left { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+            .yellow-stat-card { grid-column: 1 / -1; }
         }
-        @media (min-width: 1025px) { .mobile-menu-btn { display: none; } }
+
+        @media (max-width: 768px) {
+            body { padding: 0.75rem 1rem 2.5rem; }
+            .top-navbar { flex-direction: column; align-items: stretch; padding: 1rem; border-radius: 22px; gap: 1rem; }
+            .nav-brand { justify-content: center; }
+            .nav-links { justify-content: center; gap: 1rem 1.4rem; }
+            .nav-right { justify-content: space-between; width: 100%; }
+            .greeting-bar { flex-direction: column; align-items: flex-start; gap: 0.8rem; margin-bottom: 1.5rem; }
+            .greeting-title { font-size: 1.6rem; }
+            .col-left { grid-template-columns: 1fr; }
+            .big-percent { font-size: 4rem; }
+            .ui-card, .yellow-stat-card { padding: 1.35rem; border-radius: 20px; }
+            .remedy-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <a href="{% url 'home' %}" class="logo">
-                <div class="logo-icon">Hc</div>
-                <div class="logo-text">
-                    <h1>HomeoCompare</h1>
-                    <span>My Saved</span>
-                </div>
-            </a>
+    <nav class="top-navbar">
+        <a href="{% url 'home' %}" class="nav-brand">
+            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
+            <span>HomeoCompare</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'boericke_comparison' %}">Boericke Materia</a></li>
+            <li><a href="{% url 'allen_comparison' %}">Allen's Suite</a></li>
+            <li><a href="{% url 'relationships' %}">Relationships</a></li>
+            <li><a href="{% url 'durations' %}">Durations</a></li>
+            <li><a href="{% url 'remedy_history' %}">Archive</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="seg-toggle">
+                <a href="{% url 'boericke_comparison' %}" class="seg-btn active">Materia</a>
+                <a href="{% url 'clinic_dashboard' %}" class="seg-btn">Clinic</a>
+            </div>
+            <a href="{% url 'saved_remedies' %}" class="notif-btn" title="Saved Collection"><i class="fas fa-bookmark"></i></a>
         </div>
+    </nav>
+
+    <header class="greeting-bar">
+        <div>
+            <h1 class="greeting-title">My Saved Remedies Collection</h1>
+            <p class="greeting-sub">Personalized workspace of pinned remedies & comparisons</p>
+        </div>
+
+        <a href="{% url 'boericke_comparison' %}" style="text-decoration: none; background: #131313; color: #FFFFFF; padding: 0.65rem 1.4rem; border-radius: var(--radius-pill); font-weight: 600; font-size: 0.88rem;">
+            ← Back to Boericke
+        </a>
+    </header>
+
+    <main class="dashboard-grid">
         
-        <div class="sidebar-content">
-            <div class="sidebar-section">
-                <div class="section-header"><span class="section-title">Navigation</span></div>
-                <div class="quick-actions">
-                     <a href="{% url 'home' %}" class="action-btn">
-                        <i class="fas fa-home"></i> Back to Home
-                    </a>
-                    <a href="{% url 'boericke_comparison' %}" class="action-btn">
-                        <i class="fas fa-balance-scale"></i> Boericke Search
-                    </a>
-                    <a href="{% url 'allen_comparison' %}" class="action-btn">
-                         <i class="fas fa-book-medical"></i> Allen's Keynotes
-                    </a>
+        <aside class="col-left">
+            <div>
+                <div class="big-percent" id="savedCount">0</div>
+                <div class="big-subtitle">Bookmarked Classical & Keynote Remedies</div>
+            </div>
+
+            <div class="yellow-stat-card">
+                <span style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700;">Filter Collection</span>
+                <div style="margin-top: 0.75rem;">
+                    <span class="filter-tab active" data-filter="all">All Saved</span>
+                    <span class="filter-tab" data-filter="boericke">Boericke</span>
+                    <span class="filter-tab" data-filter="allen">Allen's</span>
                 </div>
             </div>
-            
-            <div class="sidebar-section">
-                <div class="section-header"><span class="section-title">My Collection</span></div>
-                <div class="quick-actions">
-                    <a href="#" class="action-btn" style="background: var(--bg-hover); color: var(--text-primary); border-color: var(--primary);">
-                        <i class="fas fa-star" style="color: var(--warning);"></i>
-                        Saved Remedies
-                        <span class="count-badge saved-count-badge" style="display:none">0</span>
-                    </a>
+        </aside>
+
+        <section class="col-center">
+            <div class="ui-card">
+                <div class="card-header-row">
+                    <h2 class="card-title">Bookmarked Remedies</h2>
+                    <span class="badge-pill badge-green">Collection</span>
+                </div>
+
+                <div id="savedGrid" class="remedy-grid">
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+                        <i class="far fa-star" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.4;"></i>
+                        <p>No saved remedies yet. Star remedies while searching to save them here.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="sidebar-footer">
-            <button id="themeToggle" class="theme-toggle">
-                <span><i class="fas fa-moon"></i> Dark Mode</span>
-            </button>
-        </div>
-    </aside>
+        </section>
 
-    <div class="main-wrapper">
-        <header class="topbar">
-            <h2 class="topbar-title">My Saved Remedies</h2>
-            <button class="mobile-menu-btn" id="sidebarToggle"><i class="fas fa-bars"></i></button>
-        </header>
-
-        <main class="main-content">
-            <div id="savedContainer" class="saved-grid">
-                <!-- Content injected by JS -->
-            </div>
-        </main>
-    </div>
+    </main>
 
     <script src="{% static 'js/bookmarks.js' %}"></script>
     <script>
-        // Init logic
-        document.addEventListener('DOMContentLoaded', () => {
-            renderSavedPage();
-            
-            // Theme toggle logic duplication (simplification)
-const theme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', theme);
-            document.getElementById('themeToggle').onclick = () => {
-                const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-            };
-            
-            // Mobile sidebar
-            const toggle = document.getElementById('sidebarToggle');
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebarOverlay');
-            if(toggle) {
-                toggle.onclick = () => {
-                    sidebar.classList.toggle('active');
-                    overlay.classList.toggle('active');
-                };
-                overlay.onclick = () => {
-                    sidebar.classList.remove('active');
-                    overlay.classList.remove('active');
-                };
-            }
-        });
+        function renderSavedCollection(filter = 'all') {
+            const list = JSON.parse(localStorage.getItem('savedRemediesCollection') || '[]');
+            const grid = document.getElementById('savedGrid');
+            const countEl = document.getElementById('savedCount');
+            if (countEl) countEl.textContent = list.length;
 
-        function renderSavedPage() {
-            const container = document.getElementById('savedContainer');
-            const data = BookmarksManager.getAll();
-            const items = Object.values(data).sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-            
-            if (items.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state" style="grid-column: 1/-1;">
-                        <div class="empty-icon"><i class="far fa-star"></i></div>
-                        <h3>No saved remedies yet</h3>
-                        <p>Star remedies while comparing to save them here.</p>
-                        <br>
-                        <a href="{% url 'boericke_comparison' %}" class="action-btn" style="display:inline-flex;">Start Exploring</a>
+            const filtered = filter === 'all' ? list : list.filter(item => item.source === filter);
+
+            if (!filtered.length) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+                        <i class="far fa-star" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.4;"></i>
+                        <p>No saved remedies matching "${filter}".</p>
                     </div>
                 `;
                 return;
             }
-            
-            container.innerHTML = items.map(item => `
-                <div class="saved-card">
-                    <div class="saved-header">
-                        <div class="saved-title">
-                            <h3>${item.displayName || item.name}</h3>
-                            <span class="saved-source">${item.source === 'allen' ? "Allen's Keynotes" : "Boericke's Materia Medica"}</span>
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="bookmark-card">
+                    <div>
+                        <div class="bm-header">
+                            <span class="bm-name">${item.name}</span>
+                            <span class="bm-source">${item.source}</span>
                         </div>
-                        <button class="delete-btn" title="Remove" onclick="removeSaved('${item.name}', '${item.source}')">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
                     </div>
-                    <div class="saved-body">
-                        <label class="note-label">My Notes</label>
-                        <textarea class="note-area" placeholder="Add a personal note..." 
-                            onblur="saveNote(this, '${item.name}', '${item.source}')">${item.note || ''}</textarea>
+                    <div class="bm-actions">
+                        <a href="/${item.source === 'allen' ? 'allen' : 'boericke'}/?remedy=${encodeURIComponent(item.name)}" class="btn-action">Compare</a>
+                        <button class="btn-remove" onclick="removeSavedItem('${item.name}')"><i class="fas fa-trash-alt"></i></button>
                     </div>
                 </div>
             `).join('');
-            
-            BookmarksManager.updateUI();
         }
 
-        function removeSaved(name, source) {
-            if(confirm('Remove this remedy from your saved list?')) {
-                BookmarksManager.toggle(name, source, name);
-                renderSavedPage();
-            }
+        function removeSavedItem(name) {
+            let list = JSON.parse(localStorage.getItem('savedRemediesCollection') || '[]');
+            list = list.filter(i => i.name !== name);
+            localStorage.setItem('savedRemediesCollection', JSON.stringify(list));
+            renderSavedCollection();
         }
 
-        function saveNote(textarea, name, source) {
-            BookmarksManager.saveNote(name, source, textarea.value);
-        }
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                renderSavedCollection(tab.dataset.filter);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSavedCollection('all');
+            gsap.from(".ui-card, .yellow-stat-card", {
+                y: 18, opacity: 0, duration: 0.6, stagger: 0.08, ease: "power2.out"
+            });
+        });
     </script>
 </body>
 </html>

@@ -3,7 +3,7 @@ from . import views
 from . import case_paper_views
 from . import auth_views
 from . import test_views
-
+from . import admin_views
 urlpatterns = [
     path('', views.home, name='home'),
     path('boericke/', views.remedy_compare, name='boericke_comparison'),
@@ -12,9 +12,11 @@ urlpatterns = [
     path('saved/', views.saved_remedies, name='saved_remedies'),
     path('relationships/', views.relationships_view, name='relationships'),
     path('suggestion/', views.suggestion, name='suggestion'),
+    path('submit-feedback/', admin_views.submit_feedback, name='submit_feedback'),
     path('thanks/', views.thanks, name='thanks'),
     path('privacy/', views.privacy, name='privacy'),
     path('history/', views.remedy_history, name='remedy_history'),
+    path('history/<int:remedy_id>/', views.remedy_history, name='remedy_history_detail'),
     path('durations/', views.durations_view, name='durations'),
 
     # Case Paper Routes

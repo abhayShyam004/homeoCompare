@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ source_title }} | Admin Panel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
     <style>
-        :root {
+                :root {
             --sidebar-width: 280px;
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --primary-light: #818cf8;
-            --success: #10b981;
-            --danger: #ef4444;
-            --bg-dark: #0f172a;
-            --bg-sidebar: #1e293b;
-            --bg-card: #1e293b;
-            --bg-input: #334155;
-            --bg-hover: #334155;
-            --text-white: #ffffff;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --border: #334155;
+            --header-height: 85px;
+            
+            --primary: #111827;
+            --primary-dark: #000000;
+            --primary-light: #4B5563;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --info: #3B82F6;
+            
+            --bg-dark: #F6F4F0;
+            --bg-sidebar: #FFFFFF;
+            --bg-main: #F6F4F0;
+            --bg-card: #FFFFFF;
+            --bg-input: #FFFFFF;
+            --bg-hover: #F3F4F6;
+            
+            --text-white: #FFFFFF;
+            --text-primary: #111827;
+            --text-secondary: #4B5563;
+            --text-muted: #9CA3AF;
+            
+            --border: #E5E7EB;
             --radius: 8px;
             --radius-lg: 12px;
         }
@@ -65,7 +73,7 @@
         .nav-section-title { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 0 0.75rem; margin-bottom: 0.5rem; }
         .nav-link { display: flex; align-items: center; gap: 12px; padding: 0.75rem 1rem; color: var(--text-secondary); text-decoration: none; border-radius: var(--radius); font-size: 0.9rem; font-weight: 500; transition: all 0.15s; margin-bottom: 4px; }
         .nav-link:hover { background: var(--bg-hover); color: var(--text-primary); }
-        .nav-link.active { background: rgba(99, 102, 241, 0.15); color: var(--primary-light); }
+        .nav-link.active { background: #F3F4F6; color: var(--text-primary); }
         .nav-link i { width: 20px; text-align: center; }
         
         .sidebar-overlay {
@@ -164,7 +172,7 @@
         }
         .data-table tr:hover { background: var(--bg-hover); }
         
-        .cell-remedy { font-weight: 600; color: var(--primary-light); }
+        .cell-remedy { font-weight: 600; color: var(--text-primary); }
         .cell-duration { color: var(--text-secondary); }
         .cell-actions { white-space: nowrap; width: 100px; text-align: right; }
 
@@ -172,7 +180,7 @@
             background: none; border: none; padding: 6px; cursor: pointer;
             color: var(--text-muted); transition: 0.2s;
         }
-        .action-btn:hover { color: var(--primary-light); }
+        .action-btn:hover { color: var(--text-primary); }
         .action-btn.delete:hover { color: var(--danger); }
 
         /* Modal */
@@ -298,7 +306,7 @@
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="{% url 'home' %}" class="logo">
-                <div class="logo-icon">Hc</div>
+                <div class="logo-icon" style="background: transparent; box-shadow: none;">\n                    <img src="{% static 'favicon_v4.ico' %}" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">\n                </div>
                 <div class="logo-text"><h1>HomeoCompare</h1><span>Admin Panel</span></div>
             </a>
         </div>

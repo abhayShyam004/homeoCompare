@@ -3,6 +3,7 @@ Authentication Views for Case Paper
 Handles: Email/Password, Google OAuth, Registration, Logout
 """
 import random
+import secrets
 import json
 import logging
 from datetime import datetime, timedelta
@@ -39,8 +40,8 @@ def verify_password(password, hashed):
 # ============= EMAIL VERIFICATION HELPERS =============
 
 def generate_verification_code():
-    """Generate a random 6-digit verification code"""
-    return ''.join([str(random.randint(0, 9)) for _ in range(6)])
+    """Generate a cryptographically secure 6-digit verification code"""
+    return ''.join(secrets.choice("0123456789") for _ in range(6))
 
 
 def send_verification_email(email, code):
@@ -505,47 +506,37 @@ def google_callback(request):
 
 @require_http_methods(["GET", "POST"])
 def register(request):
-    """User registration form (first-time setup)"""
+    """User registration form (first-time setup) securely bound to session user"""
+    session_user_id = request.session.get('user_id')
+    if not session_user_id:
+        return redirect('/auth/login/')
+
+    try:
+        user = CasePaperUser.objects.get(id=session_user_id)
+    except CasePaperUser.DoesNotExist:
+        return redirect('/auth/login/')
+
     if request.method == 'GET':
-        user_id = request.GET.get('user_id')
-        if not user_id:
-            return redirect('/auth/login/')
-        
-        try:
-            user = CasePaperUser.objects.get(id=user_id)
-            return render(request, 'auth/register.html', {'user': user})
-        except CasePaperUser.DoesNotExist:
-            return redirect('/auth/login/')
-    
+        return render(request, 'auth/register.html', {'user': user})
+
     if request.method == 'POST':
-        user_id = request.POST.get('user_id')
-        
-        try:
-            user = CasePaperUser.objects.get(id=user_id)
-            
-            # Update user profile
-            user.physician_name = request.POST.get('physician_name', '').strip()
-            user.specialization = request.POST.get('specialization', '').strip()
-            user.contact_number = request.POST.get('contact_number', '').strip()
-            user.clinic_name = request.POST.get('clinic_name', '').strip()
-            user.address = request.POST.get('address', '').strip()
-            
-            if 'profile_photo' in request.FILES:
-                user.profile_photo = request.FILES['profile_photo']
-                
-            user.is_registered = True
-            user.save()
-            
-            # Set session
-            request.session['user_id'] = user.id
-            request.session['user_email'] = user.email
-            
-            return redirect('/case_paper/')
-        
-        except CasePaperUser.DoesNotExist:
-            return render(request, 'auth/register.html', {
-                'error': 'User not found. Please log in again.'
-            })
+        user.physician_name = request.POST.get('physician_name', '').strip()
+        user.specialization = request.POST.get('specialization', '').strip()
+        user.contact_number = request.POST.get('contact_number', '').strip()
+        user.clinic_name = request.POST.get('clinic_name', '').strip()
+        user.address = request.POST.get('address', '').strip()
+
+        if 'profile_photo' in request.FILES:
+            user.profile_photo = request.FILES['profile_photo']
+
+        user.is_registered = True
+        user.save()
+
+        request.session['user_id'] = user.id
+        request.session['user_email'] = user.email
+        request.session.modified = True
+
+        return redirect('/case_paper/')
 
 
 # ============= LOGOUT VIEW =============

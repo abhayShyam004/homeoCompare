@@ -32,4 +32,4 @@ whitenoise==6.6.0
 cloudinary==1.36.0
 django-cloudinary-storage==0.3.0
 PyJWT==2.8.0
-xhtml2pdf==0.2.11
+xhtml2pdf>=0.2.15

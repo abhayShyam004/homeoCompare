@@ -826,11 +826,13 @@ async function performAutoSave() {
     const formData = new FormData(form);
     
     try {
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]')?.value || '';
         const response = await fetch(window.location.href, {
             method: 'POST',
             body: formData,
             headers: {
                 'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': csrfToken
             }
         });
         

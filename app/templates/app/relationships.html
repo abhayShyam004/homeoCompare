@@ -4,376 +4,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remedy Relationships - Dr. Gibson Miller | HomeoCompare</title>
+    <title>Remedy Relationships | HomeoCompare</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+
+    <!-- Fonts: Outfit + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
     <style>
-        /* Reuse core variables */
         :root {
-            --sidebar-width: 300px;
-            --primary: #059669;
-            --bg-main: #0f172a;
-            --bg-sidebar: #1e293b;
-            --bg-card: #1e293b;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --radius: 8px;
+            --bg-page: #F6F4F0;
+            --bg-nav: #FFFFFF;
+            --bg-card: #FFFFFF;
+            --bg-yellow: #FCE181;
+            --bg-pill-gray: #EAE8E3;
+            
+            --text-main: #131313;
+            --text-secondary: #6B6965;
+            --text-muted: #9C9A95;
+            
+            --tag-green-bg: #E1FBEA;
+            --tag-red-bg: #FEE2E2;
+            --tag-blue-bg: #E0F2FE;
+            
+            --radius-pill: 9999px;
+            --radius-card: 26px;
         }
 
-        [data-theme="light"] {
-            --bg-main: #f8fafc;
-            --bg-sidebar: #ffffff;
-            --bg-card: #ffffff;
-            --text-primary: #1e293b;
-            --text-secondary: #475569;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-main);
-            color: var(--text-primary);
-            margin: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 1.25rem 2rem 3rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .top-navbar {
+            background: var(--bg-nav);
+            border-radius: var(--radius-pill);
+            padding: 0.65rem 1.5rem;
             display: flex;
-            height: 100vh;
-            overflow: hidden;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.035);
+            margin-bottom: 2.25rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        * {
-            box-sizing: border-box;
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            text-decoration: none;
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
         }
 
-        /* Essential Layout */
-        .sidebar { width: var(--sidebar-width); background: var(--bg-sidebar); border-right: 1px solid #334155; height: 100%; display: flex; flex-direction: column; overflow-y:auto; flex-shrink: 0;}
-        .main-wrapper { flex: 1; display: flex; flex-direction: column; height: 100%; overflow: hidden; }
-        .topbar { height: 70px; border-bottom: 1px solid #334155; background: var(--bg-card); display: flex; align-items: center; padding: 0 2rem; flex-shrink: 0;}
-        .content-area { flex: 1; overflow-y: auto; padding: 2rem; padding-top: 0; }
+        .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.92rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text-main); font-weight: 600; }
 
-        /* Table Styles */
-        .rel-table-container {
+        .nav-right { display: flex; align-items: center; gap: 0.85rem; }
+        .seg-toggle { background: var(--bg-pill-gray); border-radius: var(--radius-pill); padding: 0.25rem; display: flex; gap: 0.25rem; }
+        .seg-btn { padding: 0.45rem 1.15rem; border-radius: var(--radius-pill); font-size: 0.84rem; font-weight: 600; text-decoration: none; color: var(--text-secondary); }
+        .seg-btn.active { background: #000000; color: #FFFFFF; }
+        .notif-btn { width: 40px; height: 40px; border-radius: 50%; background: #000000; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+
+        .greeting-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.25rem; flex-wrap: wrap; gap: 1rem; }
+        .greeting-title { font-family: 'Outfit', sans-serif; font-size: 2.1rem; font-weight: 700; color: var(--text-main); }
+        .greeting-sub { color: var(--text-secondary); font-size: 0.94rem; margin-top: 0.2rem; }
+
+        /* Functional 2-column layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 2.25rem;
+            align-items: start;
+        }
+
+        .col-left { display: flex; flex-direction: column; gap: 1.75rem; }
+
+        .project-dropdown {
             background: var(--bg-card);
-            border-radius: var(--radius);
-            border: 1px solid #334155;
-            overflow-x: auto;
-            overflow-y: auto;
-            max-height: 80vh;
-            width: 100%;
-            position: relative;
-        }
-        .rel-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .rel-table th, .rel-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #334155;
-        }
-        .rel-table th {
-            background: #0f172a;
-            color: #10b981;
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            border-bottom: 2px solid #10b981;
-            border-top: none;
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
-            padding: 2rem 1rem;
-            min-height: 60px;
-        }
-        
-        [data-theme="light"] .rel-table th {
-            background: #1e293b;
-            color: #ffffff;
-        }
-        
-        /* Ensure the content area allows sticky to work */
-        .content-area {
-            overflow-y: auto;
-            position: relative;
-        }
-        .rel-table tr:hover {
-            background: rgba(255,255,255,0.02);
-        }
-        
-        .badge {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            background: #334155;
-            margin: 2px;
-        }
-        .search-box {
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-            width: 100%;
-            padding: 1rem;
-            background: var(--bg-card);
-            border: 1px solid #334155;
-            color: var(--text-primary);
-            border-radius: var(--radius);
-            max-width: 100%;
+            border-radius: var(--radius-pill);
+            padding: 0.65rem 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+            text-decoration: none;
+            color: inherit;
         }
 
-        /* Sidebar simple reuse */
-        .sidebar-header { padding: 1.5rem; border-bottom: 1px solid #334155; }
-        .sidebar-menu { padding: 1rem; }
-        .menu-item { display: block; padding: 0.75rem 1rem; color: var(--text-secondary); text-decoration: none; border-radius: 6px; margin-bottom: 5px; }
-        .menu-item:hover { background: #334155; color: var(--text-primary); }
-        .menu-item i { width: 24px; }
-        /* Mobile Responsive Styles */
+        .proj-icon { width: 36px; height: 36px; border-radius: 50%; background: #FEF3C7; color: #D97706; display: flex; align-items: center; justify-content: center; }
+
+        .big-percent { font-family: 'Outfit', sans-serif; font-size: 5.2rem; font-weight: 800; line-height: 0.92; color: var(--text-main); margin-bottom: 0.4rem; }
+        .big-subtitle { font-size: 0.94rem; color: var(--text-secondary); font-weight: 500; }
+
+        .yellow-stat-card {
+            background: var(--bg-yellow);
+            border-radius: var(--radius-card);
+            padding: 1.6rem;
+            box-shadow: 0 10px 25px rgba(252, 225, 129, 0.3);
+        }
+
+        .search-pill {
+            background: #FFFFFF;
+            border-radius: var(--radius-pill);
+            padding: 0.65rem 1.3rem;
+            border: 1px solid #EAE8E3;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .search-pill input { border: none; outline: none; background: transparent; font-size: 0.92rem; width: 100%; }
+
+        .col-center { display: flex; flex-direction: column; gap: 1.75rem; min-width: 0; }
+
+        .ui-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 2.2rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-header-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.6rem; flex-wrap: wrap; gap: 0.5rem; }
+        .card-title { font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 700; color: var(--text-main); }
+
+        .badge-pill { padding: 0.3rem 0.85rem; border-radius: var(--radius-pill); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; }
+        .badge-green { background: var(--tag-green-bg); color: #047857; }
+        .badge-blue { background: var(--tag-blue-bg); color: #0369A1; }
+
+        .table-container { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .rel-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 600px; }
+        .rel-table th { text-align: left; padding: 0.85rem 1rem; background: #F8F7F4; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.74rem; }
+        .rel-table td { padding: 1.1rem 1rem; border-bottom: 1px solid #F1F0EC; color: var(--text-secondary); vertical-align: top; line-height: 1.5; }
+        .remedy-name { font-weight: 700; color: var(--text-main); font-size: 0.98rem; }
+
+        /* Responsive Mobile & Tablet */
+        @media (max-width: 1024px) {
+            .dashboard-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .col-left { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+            .yellow-stat-card { grid-column: 1 / -1; }
+        }
+
         @media (max-width: 768px) {
-            .sidebar {
-                position: fixed;
-                left: -100%;
-                z-index: 1000;
-                transition: left 0.3s ease;
-                width: 250px; /* Smaller sidebar on mobile */
-            }
-            .content-area {
-                padding: 1rem;
-                /* Let the whole page (body) scroll on mobile so sticky headers use the viewport */
-                overflow-y: visible;
-            }
-            .sidebar.active {
-                left: 0;
-            }
-            .main-wrapper {
-                margin-left: 0;
-            }
-            .topbar {
-                padding: 0 1rem;
-                justify-content: space-between;
-            }
-            
-            /* Hamburger Button */
-            .mobile-toggle {
-                display: block !important;
-                margin-right: 1rem;
-                font-size: 1.5rem;
-                background: none;
-                border: none;
-                color: var(--text-primary);
-                cursor: pointer;
-            }
-
-            /* Table - Keep tabular format but allow text wrapping */
-            .rel-table-container {
-                overflow-x: auto;
-                overflow-y: visible;
-                -webkit-overflow-scrolling: touch;
-                position: relative;
-            }
-            
-            .rel-table th, .rel-table td {
-                white-space: normal; /* Allow text wrapping */
-                word-wrap: break-word;
-                min-width: 150px; /* Wider cells to fit ~5 remedies before wrap */
-                padding: 0.75rem 0.5rem;
-                font-size: 0.85rem;
-                line-height: 1.5;
-            }
-            
-            .rel-table th {
-                font-size: 0.7rem;
-                min-width: 100px;
-                min-height: 50px;
-                padding: 1.5rem 0.5rem;
-                position: sticky;
-                /* Sticky within the table container, not the viewport */
-                top: 0;
-                z-index: 100;
-                background: #0f172a !important;
-                box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
-            }
-            
-            [data-theme="light"] .rel-table th {
-                background: #1e293b !important;
-            }
-            
-            /* First column (Remedy name) can be narrower */
-            .rel-table td:first-child,
-            .rel-table th:first-child {
-                min-width: 90px;
-            }
-            
-            /* Restore container scrolling on mobile for sticky to work */
-            .rel-table-container {
-                overflow-x: auto;
-                overflow-y: auto;
-                max-height: 70vh;
-                -webkit-overflow-scrolling: touch;
-                position: relative;
-            }
-        }
-
-        .mobile-toggle {
-            display: none;
-        }
-        
-        /* Overlay for mobile sidebar */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5);
-            z-index: 999;
-        }
-        .overlay.active {
-            display: block;
+            body { padding: 0.75rem 1rem 2.5rem; }
+            .top-navbar { flex-direction: column; align-items: stretch; padding: 1rem; border-radius: 22px; gap: 1rem; }
+            .nav-brand { justify-content: center; }
+            .nav-links { justify-content: center; gap: 1rem 1.4rem; }
+            .nav-right { justify-content: space-between; width: 100%; }
+            .greeting-bar { flex-direction: column; align-items: flex-start; gap: 0.8rem; margin-bottom: 1.5rem; }
+            .greeting-title { font-size: 1.6rem; }
+            .col-left { grid-template-columns: 1fr; }
+            .big-percent { font-size: 4rem; }
+            .ui-card, .yellow-stat-card { padding: 1.35rem; border-radius: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="overlay" id="overlay"></div>
 
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h3>HomeoCompare</h3>
-            <small>Relationship Tables</small>
+    <nav class="top-navbar">
+        <a href="{% url 'home' %}" class="nav-brand">
+            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
+            <span>HomeoCompare</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'boericke_comparison' %}">Boericke Materia</a></li>
+            <li><a href="{% url 'allen_comparison' %}">Allen's Suite</a></li>
+            <li><a href="{% url 'relationships' %}" class="active">Relationships</a></li>
+            <li><a href="{% url 'durations' %}">Durations</a></li>
+            <li><a href="{% url 'remedy_history' %}">Archive</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="seg-toggle">
+                <a href="{% url 'boericke_comparison' %}" class="seg-btn active">Materia</a>
+                <a href="{% url 'clinic_dashboard' %}" class="seg-btn">Clinic</a>
+            </div>
+            <a href="{% url 'saved_remedies' %}" class="notif-btn" title="Saved Collection"><i class="fas fa-bookmark"></i></a>
         </div>
-        <nav class="sidebar-menu">
-            <a href="{% url 'home' %}" class="menu-item"><i class="fas fa-arrow-left"></i> Home</a>
-            <hr style="border-top:1px solid #334155; margin:10px 0;">
-            
-            {% for group_name, items in grouped_relationships.items %}
-            <a href="#table-{{ group_name }}" class="menu-item table-link">
-                <i class="fas fa-table"></i> Remedies {{ group_name }}
-            </a>
-            {% endfor %}
-        </nav>
-    </aside>
+    </nav>
 
-    <div class="main-wrapper">
-        <header class="topbar">
-            <button class="mobile-toggle" id="toggleBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <h2 style="font-size: 1.1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; text-align: center;">Relationship of Remedies</h2>
-        </header>
+    <header class="greeting-bar">
+        <div>
+            <h1 class="greeting-title">Remedy Relationships</h1>
+            <p class="greeting-sub">Complements, Remedies that Follow Well, Antidotes, and Inimicals</p>
+        </div>
+
+        <a href="{% url 'boericke_comparison' %}" style="text-decoration: none; background: #131313; color: #FFFFFF; padding: 0.65rem 1.4rem; border-radius: var(--radius-pill); font-weight: 600; font-size: 0.88rem;">
+            ← Back to Boericke
+        </a>
+    </header>
+
+    <main class="dashboard-grid">
         
-        <div class="content-area">
-            <input type="text" id="tableSearch" class="search-box" placeholder="Search for a remedy...">
-            
+        <aside class="col-left">
+            <div class="project-dropdown">
+                <div style="display: flex; align-items: center; gap: 0.85rem;">
+                    <div class="proj-icon"><i class="fas fa-link"></i></div>
+                    <div>
+                        <div style="font-weight: 700; font-size: 0.95rem;">Remedy Relationships</div>
+                        <div style="font-size: 0.78rem; color: var(--text-muted);">Posology & Concordance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="big-percent">450+</div>
+                <div class="big-subtitle">Classical Remedy Relationships & Clinical Concordance</div>
+            </div>
+
+            <div class="yellow-stat-card">
+                <span style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700;">Filter Table</span>
+                <div class="search-pill">
+                    <i class="fas fa-search" style="color: var(--text-muted);"></i>
+                    <input type="text" id="tableSearch" placeholder="Type remedy name...">
+                </div>
+            </div>
+        </aside>
+
+        <section class="col-center">
             {% for group_name, items in grouped_relationships.items %}
-            <div id="table-{{ group_name }}" class="group-section" style="margin-bottom: 3rem;">
-                <h3 style="color:var(--primary); border-bottom:1px solid #334155; padding-bottom:0.5rem; margin-bottom:1rem;">
-                    Remedies {{ group_name }}
-                </h3>
-                <div class="rel-table-container">
+            <div class="ui-card">
+                <div class="card-header-row">
+                    <h2 class="card-title">Remedies {{ group_name }}</h2>
+                    <span class="badge-pill badge-green">Concordance</span>
+                </div>
+
+                <div class="table-container">
                     <table class="rel-table">
                         <thead>
                             <tr>
-                                <th width="15%">Remedy</th>
+                                <th width="16%">Remedy</th>
                                 <th width="22%">Complements</th>
-                                <th width="23%">Remedies that Follow</th>
+                                <th width="24%">Remedies that Follow</th>
                                 <th width="22%">Antidotes</th>
-                                <th width="18%">Inimical</th>
+                                <th width="16%">Inimical</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="remedy-rows">
                             {% for item in items %}
-                            <tr class="searchable-row">
-                                <td data-label="Remedy" style="font-weight:600; color:var(--primary);">{{ item.remedy }}</td>
-                                <td data-label="Complements">{{ item.complements }}</td>
-                                <td data-label="Follows Well">{{ item.follows }}</td>
-                                <td data-label="Antidotes">{{ item.antidotes }}</td>
-                                <td data-label="Inimical" style="color:#ef4444;">{{ item.inimical }}</td>
+                            <tr>
+                                <td class="remedy-name">{{ item.medicine_name }}</td>
+                                <td>{{ item.complements|default:"—" }}</td>
+                                <td>{{ item.remedies_that_follow_well|default:"—" }}</td>
+                                <td>{{ item.antidotes|default:"—" }}</td>
+                                <td><span style="color: #EF4444; font-weight: 600;">{{ item.inimical|default:"—" }}</span></td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
                 </div>
             </div>
-            {% empty %}
-            <div style="text-align:center; padding:3rem;">No relationship data available.</div>
             {% endfor %}
-        </div>
-    </div>
+        </section>
+
+    </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Start mobile toggle logic
-            const toggleBtn = document.getElementById('toggleBtn');
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('overlay');
-
-            function toggleSidebar() {
-                if(sidebar) sidebar.classList.toggle('active');
-                if(overlay) overlay.classList.toggle('active');
-            }
-
-            if(toggleBtn) {
-                toggleBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    toggleSidebar();
-                });
-            }
-            
-            if(overlay) {
-                overlay.addEventListener('click', toggleSidebar);
-            }
-
-            // Close sidebar when link is clicked on mobile
-            document.querySelectorAll('.menu-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    if(window.innerWidth <= 768) {
-                        try { toggleSidebar(); } catch(e){}
-                    }
-                });
+        document.getElementById('tableSearch').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.remedy-rows tr').forEach(row => {
+                row.style.display = row.textContent.toLowerCase().includes(query) ? '' : 'none';
             });
+        });
 
-            // Search Functionality
-            const searchInput = document.getElementById('tableSearch');
-            if (searchInput) {
-                searchInput.addEventListener('input', function(e) {
-                    const term = e.target.value.toLowerCase();
-                    const rows = document.querySelectorAll('.searchable-row');
-                    
-                    rows.forEach(row => {
-                        const text = row.textContent.toLowerCase();
-                        if(text.includes(term)) {
-                            row.style.display = '';
-                            // Find parent div.group-section and show it
-                            const section = row.closest('.group-section');
-                            if(section) section.style.display = 'block';
-                        } else {
-                            row.style.display = 'none';
-                        }
-                    });
-
-                    // Hide empty sections
-                    document.querySelectorAll('.group-section').forEach(section => {
-                        // Check if any row is visible
-                        const visibleRows = Array.from(section.querySelectorAll('.searchable-row')).some(r => r.style.display !== 'none');
-                        section.style.display = visibleRows ? 'block' : 'none';
-                    });
-                });
-            }
-
-            // Smooth Scroll for Sidebar Links
-            document.querySelectorAll('.table-link').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    try {
-                        const target = document.querySelector(targetId);
-                        if (target) {
-                            target.scrollIntoView({
-                                behavior: 'smooth'
-                            });
-                        }
-                    } catch(err) { console.error(err); }
-                });
-            });
+        gsap.from(".ui-card, .yellow-stat-card", {
+            y: 18, opacity: 0, duration: 0.6, stagger: 0.08, ease: "power2.out"
         });
     </script>
 </body>

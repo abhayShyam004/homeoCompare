@@ -4,275 +4,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remedy Durations | HomeoCompare</title>
+    <title>Durations - Clinical Posology | HomeoCompare</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+
+    <!-- Fonts: Outfit + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
     <style>
         :root {
-            --sidebar-width: 280px;
-            --primary: #059669;
-            --bg-main: #0f172a;
-            --bg-sidebar: #1e293b;
-            --bg-card: #1e293b;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --radius: 8px;
+            --bg-page: #F6F4F0;
+            --bg-nav: #FFFFFF;
+            --bg-card: #FFFFFF;
+            --bg-yellow: #FCE181;
+            --bg-pill-gray: #EAE8E3;
+            
+            --text-main: #131313;
+            --text-secondary: #6B6965;
+            --text-muted: #9C9A95;
+            
+            --tag-green-bg: #E1FBEA;
+            --tag-blue-bg: #E0F2FE;
+            
+            --radius-pill: 9999px;
+            --radius-card: 26px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-main);
-            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 1.25rem 2rem 3rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .top-navbar {
+            background: var(--bg-nav);
+            border-radius: var(--radius-pill);
+            padding: 0.65rem 1.5rem;
             display: flex;
-            height: 100vh;
-            overflow: hidden;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.035);
+            margin-bottom: 2.25rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        /* Sidebar */
-        .sidebar {
-            width: var(--sidebar-width);
-            background: var(--bg-sidebar);
-            border-right: 1px solid #334155;
-            height: 100%;
+        .nav-brand {
             display: flex;
-            flex-direction: column;
-            overflow-y: auto;
-            flex-shrink: 0;
-        }
-        .sidebar-header { padding: 1.5rem; border-bottom: 1px solid #334155; }
-        .sidebar-menu { padding: 1rem; }
-        .menu-item { display: block; padding: 0.75rem 1rem; color: var(--text-secondary); text-decoration: none; border-radius: 6px; margin-bottom: 5px; }
-        .menu-item:hover { background: #334155; color: var(--text-primary); }
-        .menu-item i { width: 24px; }
-
-        /* Main */
-        .main-wrapper { flex: 1; display: flex; flex-direction: column; height: 100%; overflow: hidden; }
-        .topbar { 
-            height: 70px; 
-            border-bottom: 1px solid #334155; 
-            background: var(--bg-card); 
-            display: flex; 
-            align-items: center; 
-            padding: 0 2rem; 
-            flex-shrink: 0;
-        }
-        .content-area { flex: 1; overflow-y: auto; padding: 2rem; }
-
-        /* Table */
-        .duration-table-container {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            border: 1px solid #334155;
-            overflow: hidden;
-            margin-bottom: 2rem;
-            /* Scrollable container for sticky header */
-            overflow-y: auto;
-            max-height: 70vh;
-        }
-        .duration-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .duration-table th, .duration-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #334155;
-        }
-        .duration-table th {
-            background: rgba(5, 150, 105, 0.1);
-            color: var(--primary);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            /* Sticky header */
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        .duration-table tr:hover { background: rgba(255,255,255,0.02); }
-        .remedy-name { font-weight: 600; color: var(--primary); }
-
-        /* Search */
-        .search-box {
-            margin-bottom: 1.5rem;
-            width: 100%;
-            padding: 1rem;
-            background: var(--bg-card);
-            border: 1px solid #334155;
-            color: var(--text-primary);
-            border-radius: var(--radius);
+            align-items: center;
+            gap: 0.65rem;
+            text-decoration: none;
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
         }
 
-        /* Alphabet Bar */
-        .alpha-bar {
-            display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 1.5rem;
-            padding: 1rem; background: var(--bg-card); border-radius: var(--radius); border: 1px solid #334155;
+        .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.92rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text-main); font-weight: 600; }
+
+        .nav-right { display: flex; align-items: center; gap: 0.85rem; }
+        .seg-toggle { background: var(--bg-pill-gray); border-radius: var(--radius-pill); padding: 0.25rem; display: flex; gap: 0.25rem; }
+        .seg-btn { padding: 0.45rem 1.15rem; border-radius: var(--radius-pill); font-size: 0.84rem; font-weight: 600; text-decoration: none; color: var(--text-secondary); }
+        .seg-btn.active { background: #000000; color: #FFFFFF; }
+        .notif-btn { width: 40px; height: 40px; border-radius: 50%; background: #000000; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+
+        .greeting-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.25rem; flex-wrap: wrap; gap: 1rem; }
+        .greeting-title { font-family: 'Outfit', sans-serif; font-size: 2.1rem; font-weight: 700; color: var(--text-main); }
+        .greeting-sub { color: var(--text-secondary); font-size: 0.94rem; margin-top: 0.2rem; }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 2.25rem;
+            align-items: start;
         }
+
+        .col-left { display: flex; flex-direction: column; gap: 1.75rem; }
+
+        .big-percent { font-family: 'Outfit', sans-serif; font-size: 5.2rem; font-weight: 800; line-height: 0.92; color: var(--text-main); margin-bottom: 0.4rem; }
+        .big-subtitle { font-size: 0.94rem; color: var(--text-secondary); font-weight: 500; }
+
+        .yellow-stat-card {
+            background: var(--bg-yellow);
+            border-radius: var(--radius-card);
+            padding: 1.6rem;
+            box-shadow: 0 10px 25px rgba(252, 225, 129, 0.3);
+        }
+
+        .alpha-bar { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
         .alpha-btn {
-            width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
-            background: #334155; border-radius: 4px; border: none;
-            color: var(--text-secondary); cursor: pointer; font-weight: 600; font-size: 0.85rem;
+            background: #FFFFFF; border: 1px solid #EAE8E3; border-radius: var(--radius-pill);
+            padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 600; cursor: pointer;
         }
-        .alpha-btn:hover, .alpha-btn.active { background: var(--primary); color: white; }
+        .alpha-btn.active { background: #131313; color: #FFF; }
 
-        /* Mobile */
-        .mobile-toggle { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
-        .overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 999; }
-        .overlay.active { display: block; }
+        .col-center { display: flex; flex-direction: column; gap: 1.75rem; min-width: 0; }
+
+        .ui-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 2.2rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-header-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.6rem; flex-wrap: wrap; gap: 0.5rem; }
+        .card-title { font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 700; color: var(--text-main); }
+
+        .badge-pill { padding: 0.3rem 0.85rem; border-radius: var(--radius-pill); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; }
+        .badge-green { background: var(--tag-green-bg); color: #047857; }
+
+        .table-container { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .duration-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 420px; }
+        .duration-table th { text-align: left; padding: 0.85rem 1rem; background: #F8F7F4; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.74rem; }
+        .duration-table td { padding: 1.1rem 1rem; border-bottom: 1px solid #F1F0EC; color: var(--text-secondary); }
+        .remedy-name { font-weight: 700; color: var(--text-main); font-size: 0.98rem; }
+        .duration-badge { display: inline-block; background: #FEF3C7; color: #92400E; padding: 0.25rem 0.85rem; border-radius: var(--radius-pill); font-weight: 600; font-size: 0.84rem; }
+
+        @media (max-width: 1024px) {
+            .dashboard-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .col-left { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+            .yellow-stat-card { grid-column: 1 / -1; }
+        }
 
         @media (max-width: 768px) {
-            .sidebar {
-                position: fixed; left: -100%; z-index: 1000;
-                transition: left 0.3s ease; width: 250px;
-            }
-            .sidebar.active { left: 0; }
-            .main-wrapper { margin-left: 0; }
-            .topbar { padding: 0 1rem; justify-content: space-between; }
-            .mobile-toggle { display: block !important; margin-right: 1rem; }
-            .content-area { padding: 1rem; }
-            
-            .duration-table th, .duration-table td {
-                padding: 0.75rem 0.5rem;
-                font-size: 0.9rem;
-            }
+            body { padding: 0.75rem 1rem 2.5rem; }
+            .top-navbar { flex-direction: column; align-items: stretch; padding: 1rem; border-radius: 22px; gap: 1rem; }
+            .nav-brand { justify-content: center; }
+            .nav-links { justify-content: center; gap: 1rem 1.4rem; }
+            .nav-right { justify-content: space-between; width: 100%; }
+            .greeting-bar { flex-direction: column; align-items: flex-start; gap: 0.8rem; margin-bottom: 1.5rem; }
+            .greeting-title { font-size: 1.6rem; }
+            .col-left { grid-template-columns: 1fr; }
+            .big-percent { font-size: 4rem; }
+            .ui-card, .yellow-stat-card { padding: 1.35rem; border-radius: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="overlay" id="overlay"></div>
 
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h3>HomeoCompare</h3>
-            <small>Remedy Durations</small>
-        </div>
-        <nav class="sidebar-menu">
-            <a href="{% url 'home' %}" class="menu-item"><i class="fas fa-arrow-left"></i> Home</a>
-            <hr style="border-top:1px solid #334155; margin:10px 0;">
-            
-            {% for letter, items in by_letter.items %}
-            <a href="#section-{{ letter }}" class="menu-item letter-link">
-                <i class="fas fa-clock"></i> Remedies {{ letter }}
-            </a>
-            {% endfor %}
-        </nav>
-    </aside>
+    <nav class="top-navbar">
+        <a href="{% url 'home' %}" class="nav-brand">
+            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
+            <span>HomeoCompare</span>
+        </a>
 
-    <div class="main-wrapper">
-        <header class="topbar">
-            <button class="mobile-toggle" id="toggleBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <h2 style="font-size: 1.1rem; flex: 1; text-align: center;">Remedy Durations</h2>
-        </header>
-        
-        <div class="content-area">
-            <input type="text" id="searchInput" class="search-box" placeholder="Search for a remedy...">
-            
-            <div class="alpha-bar">
-                <button class="alpha-btn active" data-letter="all" onclick="filterLetter('all', this)">All</button>
-                {% for letter in by_letter.keys %}
-                <button class="alpha-btn" data-letter="{{ letter }}" onclick="filterLetter('{{ letter }}', this)">{{ letter }}</button>
-                {% endfor %}
+        <ul class="nav-links">
+            <li><a href="{% url 'boericke_comparison' %}">Boericke Materia</a></li>
+            <li><a href="{% url 'allen_comparison' %}">Allen's Suite</a></li>
+            <li><a href="{% url 'relationships' %}">Relationships</a></li>
+            <li><a href="{% url 'durations' %}" class="active">Durations</a></li>
+            <li><a href="{% url 'remedy_history' %}">Archive</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="seg-toggle">
+                <a href="{% url 'boericke_comparison' %}" class="seg-btn active">Materia</a>
+                <a href="{% url 'clinic_dashboard' %}" class="seg-btn">Clinic</a>
             </div>
-            
+            <a href="{% url 'saved_remedies' %}" class="notif-btn" title="Saved Collection"><i class="fas fa-bookmark"></i></a>
+        </div>
+    </nav>
+
+    <header class="greeting-bar">
+        <div>
+            <h1 class="greeting-title">Durations</h1>
+            <p class="greeting-sub">Verified duration of action index to guide remedy repetition & posology</p>
+        </div>
+
+        <a href="{% url 'boericke_comparison' %}" style="text-decoration: none; background: #131313; color: #FFFFFF; padding: 0.65rem 1.4rem; border-radius: var(--radius-pill); font-weight: 600; font-size: 0.88rem;">
+            ← Back to Boericke
+        </a>
+    </header>
+
+    <main class="dashboard-grid">
+        
+        <aside class="col-left">
+            <div>
+                <div class="big-percent">380+</div>
+                <div class="big-subtitle">Verified Remedy Posology Durations</div>
+            </div>
+
+            <div class="yellow-stat-card">
+                <span style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700;">Filter Alphabet</span>
+                <div class="alpha-bar">
+                    <button class="alpha-btn active" onclick="filterLetter('ALL', this)">ALL</button>
+                    {% for letter in by_letter.keys %}
+                    <button class="alpha-btn" onclick="filterLetter('{{ letter }}', this)">{{ letter }}</button>
+                    {% endfor %}
+                </div>
+            </div>
+        </aside>
+
+        <section class="col-center">
             {% for letter, items in by_letter.items %}
-            <div id="section-{{ letter }}" class="letter-section" data-letter="{{ letter }}">
-                <h3 style="color:var(--primary); border-bottom:1px solid #334155; padding-bottom:0.5rem; margin-bottom:1rem;">
-                    Remedies {{ letter }}
-                </h3>
-                <div class="duration-table-container">
+            <div class="ui-card letter-section" data-letter="{{ letter }}">
+                <div class="card-header-row">
+                    <h2 class="card-title">Remedies starting with {{ letter }}</h2>
+                    <span class="badge-pill badge-green">Posology</span>
+                </div>
+
+                <div class="table-container">
                     <table class="duration-table">
                         <thead>
                             <tr>
-                                <th width="50%">Remedy</th>
-                                <th width="50%">Duration of Action</th>
+                                <th width="45%">Remedy Name</th>
+                                <th width="55%">Duration of Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for d in items %}
                             <tr class="searchable-row" data-name="{{ d.remedy|lower }}">
                                 <td class="remedy-name">{{ d.remedy }}</td>
-                                <td>{{ d.duration }}</td>
+                                <td><span class="duration-badge">{{ d.duration }}</span></td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
                 </div>
             </div>
-            {% empty %}
-            <div style="text-align:center; padding:3rem; color: var(--text-secondary);">
-                <i class="fas fa-clock" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                <p>No duration data available yet.</p>
-            </div>
             {% endfor %}
-        </div>
-    </div>
+        </section>
+
+    </main>
 
     <script>
-        // Sidebar toggle
-        const toggleBtn = document.getElementById('toggleBtn');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('overlay');
-
-        function toggleSidebar() {
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
-
-        if(toggleBtn) toggleBtn.addEventListener('click', toggleSidebar);
-        if(overlay) overlay.addEventListener('click', toggleSidebar);
-
-        // Close sidebar on link click (mobile)
-        document.querySelectorAll('.menu-item').forEach(item => {
-            item.addEventListener('click', () => {
-                if(window.innerWidth <= 768) toggleSidebar();
-            });
-        });
-
-        // Search
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            const term = e.target.value.toLowerCase();
-            document.querySelectorAll('.searchable-row').forEach(row => {
-                row.style.display = row.dataset.name.includes(term) ? '' : 'none';
-            });
-            // Show/hide sections
-            document.querySelectorAll('.letter-section').forEach(section => {
-                const visible = Array.from(section.querySelectorAll('.searchable-row')).some(r => r.style.display !== 'none');
-                section.style.display = visible ? 'block' : 'none';
-            });
-        });
-
-        // Filter by letter
         function filterLetter(letter, btn) {
             document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
-            document.querySelectorAll('.letter-section').forEach(section => {
-                if (letter === 'all' || section.dataset.letter === letter) {
-                    section.style.display = 'block';
-                } else {
-                    section.style.display = 'none';
-                }
+            document.querySelectorAll('.letter-section').forEach(sec => {
+                sec.style.display = (letter === 'ALL' || sec.getAttribute('data-letter') === letter) ? 'block' : 'none';
             });
         }
 
-        // Smooth scroll for sidebar links
-        document.querySelectorAll('.letter-link').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+        gsap.from(".ui-card, .yellow-stat-card", {
+            y: 18, opacity: 0, duration: 0.6, stagger: 0.08, ease: "power2.out"
         });
     </script>
 </body>
