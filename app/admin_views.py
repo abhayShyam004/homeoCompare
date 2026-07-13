@@ -14,8 +14,8 @@ from django.utils import timezone
 from django.contrib import messages
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
-from django.db.models import Q
-
+from django.db.models import Q, Count, F
+from django.db.models.functions import TruncDate
 from .models import (
     PageView, SearchQuery, Feedback, RemedyOfTheDay,
     RemedyRelationship, RemedyDuration, CasePaperUser, AccessPlatformSettings
