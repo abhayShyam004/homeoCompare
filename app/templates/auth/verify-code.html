@@ -225,6 +225,8 @@
 
         verificationForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const btn = document.getElementById('verifyBtn');
+            if (btn.disabled) return;
 
             const code = Array.from(codeInputs).map(input => input.value).join('');
 
@@ -234,7 +236,7 @@
             }
 
             loadingEl.classList.add('show');
-            document.getElementById('verifyBtn').disabled = true;
+            btn.disabled = true;
 
             try {
                 const response = await fetch('{% url "verify_code" %}', {

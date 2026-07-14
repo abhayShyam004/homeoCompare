@@ -31,7 +31,7 @@
                 <p>Securely access your private case paper environment with enterprise-grade continuity and precision tooling.</p>
             </div>
             <ul class="auth-feature-list">
-                <li><i class="fas fa-shield-check"></i> Protected physician-grade authentication</li>
+                <li><i class="fas fa-user-shield"></i> Protected physician-grade authentication</li>
                 <li><i class="fas fa-file-waveform"></i> Unified record intelligence and chronology</li>
                 <li><i class="fas fa-clock-rotate-left"></i> Real-time sync with audit-ready data trace</li>
             </ul>
@@ -233,9 +233,11 @@
             if (event && typeof event.stopPropagation === 'function') {
                 event.stopPropagation();
             }
+            const btn = document.getElementById('verifyBtn');
+            if (btn.disabled) return;
+            
             const codeInputs = document.querySelectorAll('.code-input');
             const code = Array.from(codeInputs).map(input => input.value).join('');
-            const btn = document.getElementById('verifyBtn');
 
             if (!currentUserId) {
                 showAlert('Session expired. Please request a new code.', 'error');

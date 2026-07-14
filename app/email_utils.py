@@ -135,29 +135,18 @@ def send_email_with_retry(subject, plain_message, recipient_email, html_message=
 
 def send_email_async(subject, message, recipient_email, html_message=None):
     """
-    Send email asynchronously in a background thread with retry logic.
-    
-    Returns immediately without waiting for email to send.
-    Email is sent in background - request completes before SMTP handshake.
+    Send email synchronously with retry logic.
+    (Kept the function name `send_email_async` for compatibility but removed threading
+    to prevent daemon thread death in production WSGI environments like Gunicorn).
     """
     if not is_email_service_configured():
-        logger.error("Email service not configured. Async thread will not start for %s", recipient_email)
+        logger.error("Email service not configured. Will not send to %s", recipient_email)
         return False
     
-    def send_email_thread():
-        logger.info("Background thread starting email delivery to %s", recipient_email)
-        send_email_with_retry(
-            subject=subject,
-            plain_message=message,
-            recipient_email=recipient_email,
-            html_message=html_message,
-        )
-
-    try:
-        thread = threading.Thread(target=send_email_thread, daemon=True, name=f"email-{recipient_email}")
-        thread.start()
-        logger.info("Async email thread dispatched for %s", recipient_email)
-        return True
-    except Exception as exc:
-        logger.error("Error starting email thread for %s: %s", recipient_email, exc)
-        return False
+    logger.info("Starting synchronous email delivery to %s", recipient_email)
+    return send_email_with_retry(
+        subject=subject,
+        plain_message=message,
+        recipient_email=recipient_email,
+        html_message=html_message,
+    )
