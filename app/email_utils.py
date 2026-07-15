@@ -141,7 +141,8 @@ def _send_via_resend_api(subject, plain_message, recipient_email, html_message, 
     url = "https://api.resend.com/emails"
     headers = {
         "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "User-Agent": "Medicomp-App/1.0"
     }
     
     data = {
@@ -177,8 +178,13 @@ def send_email_async(subject, message, recipient_email, html_message=None):
     
     if resend_key:
         cfg = _get_runtime_email_config()
-        # Resend requires a verified domain, or defaults to onboarding@resend.dev for testing to your own email
-        from_email = cfg.get('from_email', '') or 'onboarding@resend.dev'
+        from_email = cfg.get('from_email', '')
+        
+        # Resend rejects any attempts to send FROM a @gmail.com address (403 Forbidden).
+        # You can only send from a domain you own, or from their test email (onboarding@resend.dev).
+        if not from_email or from_email.endswith('@gmail.com'):
+            from_email = 'onboarding@resend.dev'
+            logger.info("Overriding from_email to onboarding@resend.dev because Resend blocks @gmail.com senders")
         
         logger.info("Starting email delivery via Resend HTTPS API to %s", recipient_email)
         return _send_via_resend_api(
