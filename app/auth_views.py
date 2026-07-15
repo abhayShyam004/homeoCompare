@@ -454,25 +454,42 @@ def google_callback(request):
             raise Exception('Incomplete user information from Google')
         
         # Get or create user
-        user, created = CasePaperUser.objects.get_or_create(
-            google_id=google_id,
-            defaults={
-                'username': google_email.split('@')[0] + str(random.randint(1000, 9999)),
-                'email': google_email,
-                'physician_name': google_name or '',
-                'auth_method': 'google',
-                'last_login': timezone.now()
-            }
-        )
+        # 1. Try to find by email first (to link accounts if they already signed up via email)
+        user = CasePaperUser.objects.filter(email=google_email).first()
+        created = False
         
-        # Update user if it already existed
-        if not created:
-            user.email = google_email
+        if user:
+            # Link Google ID if missing
+            if not user.google_id:
+                user.google_id = google_id
+                # Only update auth_method if it was just email before
+                if not user.auth_method:
+                    user.auth_method = 'google'
+            
+            # Update missing info
+            if not user.physician_name and google_name:
+                user.physician_name = google_name
+                
             user.last_login = timezone.now()
             user.save()
         else:
-            user.last_login = timezone.now()
-            user.save()
+            # 2. Try to find by google_id (in case they changed their email on Google)
+            user = CasePaperUser.objects.filter(google_id=google_id).first()
+            if user:
+                user.email = google_email
+                user.last_login = timezone.now()
+                user.save()
+            else:
+                # 3. Create completely new user
+                user = CasePaperUser.objects.create(
+                    google_id=google_id,
+                    username=google_email.split('@')[0] + str(random.randint(1000, 9999)),
+                    email=google_email,
+                    physician_name=google_name or '',
+                    auth_method='google',
+                    last_login=timezone.now()
+                )
+                created = True
         
         # Store OAuth token
         GoogleOAuthToken.objects.update_or_create(
