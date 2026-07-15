@@ -531,34 +531,38 @@
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 0.75rem 1rem 2.5rem;
-            }
+            body { padding: 0.75rem 1rem 2.5rem; }
             .top-navbar {
                 flex-direction: column;
                 align-items: stretch;
                 padding: 1rem;
-                border-radius: 22px;
+                border-radius: 20px;
                 gap: 1rem;
             }
-            .nav-brand {
-                justify-content: center;
+            .nav-mobile-header { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+            .mobile-hamburger {
+                display: block; background: none; border: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer;
             }
             .nav-links {
-                display: none !important;
-            }
-            .nav-right {
-                justify-content: space-between;
+                display: none;
+                flex-direction: column;
                 width: 100%;
-                flex-wrap: wrap;
                 gap: 0.5rem;
+                position: static; padding: 0; box-shadow: none; background: transparent;
             }
-            .nav-right .project-dropdown {
-                display: flex !important;
+            .nav-links.show { display: flex !important; }
+            .nav-links li { width: 100%; text-align: left; }
+            .nav-links a {
+                display: block; width: 100%; padding: 0.8rem 1rem; background: #F8F7F4; border-radius: 12px;
+                font-size: 1rem; color: var(--text-secondary); text-decoration: none; font-weight: 600; text-align: left;
             }
-            .col-left .project-dropdown {
-                display: none !important;
+            .nav-links a.active, .nav-links a:hover { background: #131313; color: #FFFFFF; }
+            .nav-links a::before { display: none; }
+            .nav-right {
+                display: none; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+                margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid #EAE8E3;
             }
+            .nav-right.show { display: flex !important; }
             .greeting-bar {
                 flex-direction: column;
                 align-items: flex-start;
@@ -572,7 +576,7 @@
                 grid-template-columns: 1fr;
             }
             .big-percent {
-                font-size: 4rem;
+                font-size: 2.25rem;
             }
             .compare-form-grid {
                 grid-template-columns: 1fr;
@@ -587,36 +591,39 @@
                 border-radius: 20px;
             }
         }
+
+        .mobile-switcher-btn { display: none; }
+        @media (max-width: 1024px) {
+            .mobile-switcher-btn { display: flex !important; margin-bottom: 1rem; }
+            .col-left .project-dropdown { display: none !important; }
+        }
     </style>
 </head>
 <body>
 
     <!-- TOP FLOATING PILL NAVBAR -->
+    <style>@media (min-width: 769px) { .mobile-hamburger { display: none; } .nav-mobile-header { width: auto; display: flex; align-items: center; } }</style>
     <nav class="top-navbar">
-        <a href="{% url 'home' %}" class="nav-brand">
-            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
-            <span>HomeoCompare</span>
-        </a>
+        <div class="nav-mobile-header">
+            <a href="{% url 'home' %}" class="nav-brand">
+                <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
+                <span>HomeoCompare</span>
+            </a>
+            <button class="mobile-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show'); document.querySelector('.nav-right').classList.toggle('show');">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
         <ul class="nav-links">
             <li><a href="{% url 'boericke_comparison' %}" class="active">Boericke Materia</a></li>
-            <li><a href="{% url 'allen_comparison' %}">Allen's Suite</a></li>
+            <li><a href="{% url 'allen_comparison' %}">Allen's Keynotes</a></li>
             <li><a href="{% url 'relationships' %}">Relationships</a></li>
             <li><a href="{% url 'durations' %}">Durations</a></li>
             <li><a href="{% url 'remedy_history' %}">Archive</a></li>
         </ul>
 
         <div class="nav-right">
-            <!-- Mobile Only Switch Button -->
-            <a href="{% url 'allen_comparison' %}" class="project-dropdown" style="display: none; padding: 0.75rem 1rem; margin: 0 0 0.75rem 0; background: #f3f4f6; border-radius: 12px; width: 100%;">
-                <div class="project-dropdown-left">
-                    <div class="proj-icon" style="width: 32px; height: 32px;"><i class="fas fa-exchange-alt"></i></div>
-                    <div>
-                        <div class="proj-name">Switch to Allen's Keynotes</div>
-                        <div class="proj-sub">Constitutional symptoms</div>
-                    </div>
-                </div>
-            </a>
+            
             <div class="seg-toggle">
                 <a href="{% url 'boericke_comparison' %}" class="seg-btn active">Materia</a>
                 <a href="{% url 'clinic_dashboard' %}" class="seg-btn">Clinic</a>
@@ -716,6 +723,17 @@
 
         <!-- CENTER COLUMN: COMPARATOR SUITE -->
         <section class="col-center">
+            <!-- Mobile Only Switch Button -->
+            <a href="{% url 'allen_comparison' %}" class="project-dropdown mobile-switcher-btn">
+                <div class="project-dropdown-left">
+                    <div class="proj-icon" style="width: 32px; height: 32px; background: #E0F2FE; color: #0284C7;"><i class="fas fa-exchange-alt"></i></div>
+                    <div>
+                        <div class="proj-name">Switch to Allen's Keynotes</div>
+                        <div class="proj-sub">Constitutional symptoms</div>
+                    </div>
+                </div>
+                <i class="fas fa-exchange-alt" style="color: var(--text-muted);"></i>
+            </a>
             
             <div class="ui-card">
                 <div class="card-header-row">

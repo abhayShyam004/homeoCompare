@@ -858,6 +858,7 @@
             }
             .col-center {
                 flex-direction: column;
+                order: -1;
             }
             .col-center .ui-card {
                 min-height: 280px !important;
@@ -872,31 +873,43 @@
                 margin-bottom: 2rem;
             }
             .big-percent {
-                font-size: 3.5rem;
+                font-size: 2.25rem;
             }
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 0.75rem 1rem 2.5rem;
-            }
+            body { padding: 0.75rem 1rem 2.5rem; }
             .top-navbar {
                 flex-direction: column;
                 align-items: stretch;
                 padding: 1rem;
-                border-radius: 22px;
+                border-radius: 20px;
                 gap: 1rem;
             }
-            .nav-brand {
-                justify-content: center;
+            .nav-mobile-header { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+            .mobile-hamburger {
+                display: block; background: none; border: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer;
             }
             .nav-links {
                 display: none;
-            }
-            .nav-right {
-                justify-content: space-between;
+                flex-direction: column;
                 width: 100%;
+                gap: 0.5rem;
+                position: static; padding: 0; box-shadow: none; background: transparent;
             }
+            .nav-links.show { display: flex !important; }
+            .nav-links li { width: 100%; text-align: left; }
+            .nav-links a {
+                display: block; width: 100%; padding: 0.8rem 1rem; background: #F8F7F4; border-radius: 12px;
+                font-size: 1rem; color: var(--text-secondary); text-decoration: none; font-weight: 600; text-align: left;
+            }
+            .nav-links a.active, .nav-links a:hover { background: #131313; color: #FFFFFF; }
+            .nav-links a::before { display: none; }
+            .nav-right {
+                display: none; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+                margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid #EAE8E3;
+            }
+            .nav-right.show { display: flex !important; }
             .greeting-bar {
                 flex-direction: column;
                 align-items: flex-start;
@@ -906,11 +919,32 @@
             .greeting-title {
                 font-size: 1.6rem;
             }
+            .big-metric-container {
+                flex-direction: row !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start !important;
+                gap: 1rem !important;
+                margin-bottom: 1rem;
+            }
+            .big-metric-container > div {
+                flex: 1 1 25%;
+                min-width: 90px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .big-subtitle {
+                font-size: 0.75rem;
+                line-height: 1.2;
+                margin-top: 0.25rem;
+            }
             .subheader-row {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1rem;
+                margin-bottom: 0.25rem;
             }
             .card-meta-grid {
                 grid-template-columns: 1fr;
@@ -921,15 +955,47 @@
 </head>
 <body>
 
+    <!-- SPLASH SCREEN -->
+    <style>
+        @keyframes splashPulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+    </style>
+    <div id="splash-screen" style="position: fixed; inset: 0; background: #F8F7F4; z-index: 999999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.6s ease, visibility 0.6s ease;">
+        <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare Logo" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem; animation: splashPulse 2s infinite ease-in-out;">
+        <h1 style="font-family: 'Outfit', sans-serif; font-size: 2.25rem; color: #111827; font-weight: 800; margin: 0; letter-spacing: -0.03em;">HomeoCompare</h1>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const splash = document.getElementById('splash-screen');
+            if(splash) {
+                setTimeout(() => {
+                    splash.style.opacity = '0';
+                    splash.style.visibility = 'hidden';
+                    setTimeout(() => splash.remove(), 600);
+                }, 1000); // 1 second splash
+            }
+        });
+    </script>
+
+
     <!-- TOP PILL NAVBAR -->
+    <style>@media (min-width: 769px) { .mobile-hamburger { display: none; } .nav-mobile-header { width: auto; display: flex; align-items: center; } }</style>
     <nav class="top-navbar">
-        <a href="{% url 'home' %}" class="nav-brand">
-            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
-            <span>HomeoCompare</span>
-        </a>
+        <div class="nav-mobile-header">
+            <a href="{% url 'home' %}" class="nav-brand">
+                <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
+                <span>HomeoCompare</span>
+            </a>
+            <button class="mobile-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show'); document.querySelector('.nav-right').classList.toggle('show');">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
         <ul class="nav-links">
-            <li><a href="{% url 'boericke_comparison' %}">Boericke Comparator</a></li>
+            <li><a href="{% url 'boericke_comparison' %}">Boericke Materia Medica</a></li>
             <li><a href="{% url 'allen_comparison' %}">Allen's Keynotes</a></li>
             <li><a href="{% url 'relationships' %}">Remedy Relationships</a></li>
             <li><a href="{% url 'durations' %}">Durations</a></li>

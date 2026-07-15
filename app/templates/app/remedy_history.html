@@ -128,15 +128,21 @@
 </head>
 <body>
 
+    <style>@media (min-width: 769px) { .mobile-hamburger { display: none; } .nav-mobile-header { width: auto; display: flex; align-items: center; } }</style>
     <nav class="top-navbar">
-        <a href="{% url 'home' %}" class="nav-brand">
-            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
-            <span>HomeoCompare</span>
-        </a>
+        <div class="nav-mobile-header">
+            <a href="{% url 'home' %}" class="nav-brand">
+                <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
+                <span>HomeoCompare</span>
+            </a>
+            <button class="mobile-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show'); document.querySelector('.nav-right').classList.toggle('show');">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
         <ul class="nav-links">
             <li><a href="{% url 'boericke_comparison' %}">Boericke Materia</a></li>
-            <li><a href="{% url 'allen_comparison' %}">Allen's Suite</a></li>
+            <li><a href="{% url 'allen_comparison' %}">Allen's Keynotes</a></li>
             <li><a href="{% url 'relationships' %}">Relationships</a></li>
             <li><a href="{% url 'durations' %}">Durations</a></li>
             <li><a href="{% url 'remedy_history' %}" class="active">Archive</a></li>

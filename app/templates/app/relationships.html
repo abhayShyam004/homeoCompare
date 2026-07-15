@@ -161,29 +161,62 @@
 
         @media (max-width: 768px) {
             body { padding: 0.75rem 1rem 2.5rem; }
-            .top-navbar { flex-direction: column; align-items: stretch; padding: 1rem; border-radius: 22px; gap: 1rem; }
-            .nav-brand { justify-content: center; }
-            .nav-links { justify-content: center; gap: 1rem 1.4rem; }
-            .nav-right { justify-content: space-between; width: 100%; }
+            .top-navbar {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1rem;
+                border-radius: 20px;
+                gap: 1rem;
+            }
+            .nav-mobile-header { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+            .mobile-hamburger {
+                display: block; background: none; border: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+                position: static; padding: 0; box-shadow: none; background: transparent;
+            }
+            .nav-links.show { display: flex !important; }
+            .nav-links li { width: 100%; text-align: left; }
+            .nav-links a {
+                display: block; width: 100%; padding: 0.8rem 1rem; background: #F8F7F4; border-radius: 12px;
+                font-size: 1rem; color: var(--text-secondary); text-decoration: none; font-weight: 600; text-align: left;
+            }
+            .nav-links a.active, .nav-links a:hover { background: #131313; color: #FFFFFF; }
+            .nav-links a::before { display: none; }
+            .nav-right {
+                display: none; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+                margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid #EAE8E3;
+            }
+            .nav-right.show { display: flex !important; }
             .greeting-bar { flex-direction: column; align-items: flex-start; gap: 0.8rem; margin-bottom: 1.5rem; }
             .greeting-title { font-size: 1.6rem; }
             .col-left { grid-template-columns: 1fr; }
-            .big-percent { font-size: 4rem; }
+            .big-percent { font-size: 2.25rem; }
             .ui-card, .yellow-stat-card { padding: 1.35rem; border-radius: 20px; }
         }
     </style>
 </head>
 <body>
 
+    <style>@media (min-width: 769px) { .mobile-hamburger { display: none; } .nav-mobile-header { width: auto; display: flex; align-items: center; } }</style>
     <nav class="top-navbar">
-        <a href="{% url 'home' %}" class="nav-brand">
-            <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
-            <span>HomeoCompare</span>
-        </a>
+        <div class="nav-mobile-header">
+            <a href="{% url 'home' %}" class="nav-brand">
+                <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
+                <span>HomeoCompare</span>
+            </a>
+            <button class="mobile-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show'); document.querySelector('.nav-right').classList.toggle('show');">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
         <ul class="nav-links">
             <li><a href="{% url 'boericke_comparison' %}">Boericke Materia</a></li>
-            <li><a href="{% url 'allen_comparison' %}">Allen's Suite</a></li>
+            <li><a href="{% url 'allen_comparison' %}">Allen's Keynotes</a></li>
             <li><a href="{% url 'relationships' %}" class="active">Relationships</a></li>
             <li><a href="{% url 'durations' %}">Durations</a></li>
             <li><a href="{% url 'remedy_history' %}">Archive</a></li>
@@ -258,9 +291,9 @@
                         <tbody class="remedy-rows">
                             {% for item in items %}
                             <tr>
-                                <td class="remedy-name">{{ item.medicine_name }}</td>
+                                <td class="remedy-name">{{ item.remedy }}</td>
                                 <td>{{ item.complements|default:"—" }}</td>
-                                <td>{{ item.remedies_that_follow_well|default:"—" }}</td>
+                                <td>{{ item.follows|default:"—" }}</td>
                                 <td>{{ item.antidotes|default:"—" }}</td>
                                 <td><span style="color: #EF4444; font-weight: 600;">{{ item.inimical|default:"—" }}</span></td>
                             </tr>
