@@ -183,8 +183,15 @@ def send_email_async(subject, message, recipient_email, html_message=None):
         # Resend rejects any attempts to send FROM a @gmail.com address (403 Forbidden).
         # You can only send from a domain you own, or from their test email (onboarding@resend.dev).
         if not from_email or from_email.endswith('@gmail.com'):
-            from_email = 'onboarding@resend.dev'
-            logger.info("Overriding from_email to onboarding@resend.dev because Resend blocks @gmail.com senders")
+            from django.conf import settings
+            env_from = getattr(settings, 'DEFAULT_FROM_EMAIL', '')
+            
+            if env_from and not env_from.endswith('@gmail.com'):
+                from_email = env_from
+                logger.info("Overriding DB from_email with %s from settings", from_email)
+            else:
+                from_email = 'onboarding@resend.dev'
+                logger.info("Overriding from_email to onboarding@resend.dev because Resend blocks @gmail.com senders")
         
         logger.info("Starting email delivery via Resend HTTPS API to %s", recipient_email)
         return _send_via_resend_api(
