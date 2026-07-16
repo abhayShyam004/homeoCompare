@@ -963,19 +963,48 @@
             100% { transform: scale(0.95); opacity: 0.8; }
         }
     </style>
-    <div id="splash-screen" style="position: fixed; inset: 0; background: #F8F7F4; z-index: 999999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.6s ease, visibility 0.6s ease;">
-        <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare Logo" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem; animation: splashPulse 2s infinite ease-in-out;">
-        <h1 style="font-family: 'Outfit', sans-serif; font-size: 2.25rem; color: #111827; font-weight: 800; margin: 0; letter-spacing: -0.03em;">HomeoCompare</h1>
+    <div id="splash-screen" style="position: fixed; inset: 0; background: #F8F7F4; z-index: 999999; display: flex; flex-direction: row; align-items: center; justify-content: center; transition: opacity 0.6s ease, visibility 0.6s ease;">
+        <img id="splash-logo" src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare Logo" style="width: 80px; height: 80px; object-fit: contain; margin-right: 1.5rem; animation: splashPulse 2s infinite ease-in-out;">
+        <h1 id="splash-text" style="font-family: 'Outfit', sans-serif; font-size: 2.25rem; color: #111827; font-weight: 800; margin: 0; letter-spacing: -0.03em;">HomeoCompare</h1>
     </div>
     <script>
         window.addEventListener('load', () => {
             const splash = document.getElementById('splash-screen');
-            if(splash) {
+            const sLogo = document.getElementById('splash-logo');
+            const sText = document.getElementById('splash-text');
+            const nLogo = document.getElementById('nav-target-logo');
+            const nText = document.getElementById('nav-target-text');
+
+            if(splash && sLogo && nLogo) {
+                gsap.set([nLogo, nText], { opacity: 0 });
+
                 setTimeout(() => {
-                    splash.style.opacity = '0';
-                    splash.style.visibility = 'hidden';
-                    setTimeout(() => splash.remove(), 600);
-                }, 1000); // 1 second splash
+                    const sr = sLogo.getBoundingClientRect();
+                    const nr = nLogo.getBoundingClientRect();
+                    const stR = sText.getBoundingClientRect();
+                    const ntR = nText.getBoundingClientRect();
+
+                    const scaleLogo = nr.width / sr.width;
+                    const scaleText = ntR.height / stR.height;
+
+                    const dx = nr.left - sr.left;
+                    const dy = nr.top - sr.top;
+                    const dtx = ntR.left - stR.left;
+                    const dty = ntR.top - stR.top;
+
+                    sLogo.style.animation = 'none';
+
+                    let tl = gsap.timeline({
+                        onComplete: () => {
+                            splash.remove();
+                            gsap.set([nLogo, nText], { opacity: 1 });
+                        }
+                    });
+
+                    tl.to(splash, { backgroundColor: "rgba(248,247,244,0)", duration: 0.3, ease: "power2.inOut" }, 0)
+                      .to(sLogo, { x: dx, y: dy, scale: scaleLogo, transformOrigin: "top left", duration: 0.8, ease: "power3.inOut" }, 0)
+                      .to(sText, { x: dtx, y: dty, scale: scaleText, transformOrigin: "top left", duration: 0.8, ease: "power3.inOut" }, 0);
+                }, 1000); 
             }
         });
     </script>
@@ -986,8 +1015,8 @@
     <nav class="top-navbar">
         <div class="nav-mobile-header">
             <a href="{% url 'home' %}" class="nav-brand">
-                <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
-                <span>HomeoCompare</span>
+                <img id="nav-target-logo" src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare logo" style="width: 30px; height: 30px; object-fit: contain;">
+                <span id="nav-target-text">HomeoCompare</span>
             </a>
             <button class="mobile-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show'); document.querySelector('.nav-right').classList.toggle('show');">
                 <i class="fas fa-bars"></i>
@@ -1252,35 +1281,40 @@
         </div>
     </footer>
 
-    <!-- REMEDY OF THE DAY MODAL -->
+    <!-- REMEDY OF THE DAY / IMAGE MODAL -->
     <div class="rotd-modal-overlay" id="rotdModal" onclick="closeRotdModal(event)">
-        <div class="rotd-modal-content" onclick="event.stopPropagation()">
-            <button class="rotd-modal-close" onclick="closeRotdModal(event)"><i class="fas fa-times"></i></button>
-            <div class="card-top-row" style="margin-bottom: 1.5rem;">
-                <div class="card-title-item">
-                    <i class="fas fa-sparkles" style="font-size: 1.15rem; color: #EA580C;"></i>
-                    <span style="font-size: 1.25rem;">Remedy of the Day: {% if remedy_of_day %}{{ remedy_of_day.medicine_name }}{% else %}Arnica Montana{% endif %}</span>
+        <div class="rotd-modal-content" onclick="event.stopPropagation()" {% if remedy_of_day and not remedy_of_day.medicine_name and remedy_of_day.image %}style="padding:0; background:transparent; border:none; box-shadow:none; max-width: 500px;"{% endif %}>
+            <button class="rotd-modal-close" onclick="closeRotdModal(event)" {% if remedy_of_day and not remedy_of_day.medicine_name and remedy_of_day.image %}style="background: white; color: black; right: -10px; top: -10px;"{% endif %}><i class="fas fa-times"></i></button>
+            
+            {% if remedy_of_day and not remedy_of_day.medicine_name and remedy_of_day.image %}
+                <img src="{{ remedy_of_day.image.url }}" alt="Daily Image" style="width:100%; border-radius:16px; display:block; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+            {% else %}
+                <div class="card-top-row" style="margin-bottom: 1.5rem;">
+                    <div class="card-title-item">
+                        <i class="fas fa-sparkles" style="font-size: 1.15rem; color: #EA580C;"></i>
+                        <span style="font-size: 1.25rem;">Remedy of the Day: {% if remedy_of_day %}{{ remedy_of_day.medicine_name }}{% else %}Arnica Montana{% endif %}</span>
+                    </div>
+                    <span class="badge-green">Daily Remedy</span>
                 </div>
-                <span class="badge-green">Daily Remedy</span>
-            </div>
 
-            <div class="card-meta-grid" style="margin-bottom: 2rem;">
-                <div>
-                    <div class="meta-label">Source:</div>
-                    <div class="meta-val">{% if remedy_of_day %}{{ remedy_of_day.source|title }}{% else %}Boericke{% endif %} Materia Medica</div>
+                <div class="card-meta-grid" style="margin-bottom: 2rem;">
+                    <div>
+                        <div class="meta-label">Source:</div>
+                        <div class="meta-val">{% if remedy_of_day %}{{ remedy_of_day.source|title }}{% else %}Boericke{% endif %} Materia Medica</div>
+                    </div>
+                    <div>
+                        <div class="meta-label">Clinical Indications:</div>
+                        <div class="meta-val">{% if remedy_of_day %}{{ remedy_of_day.description }}{% else %}Acts on muscular tissue & blood circulation. Trauma in all its varieties...{% endif %}</div>
+                    </div>
                 </div>
-                <div>
-                    <div class="meta-label">Clinical Indications:</div>
-                    <div class="meta-val">{% if remedy_of_day %}{{ remedy_of_day.description }}{% else %}Acts on muscular tissue & blood circulation. Trauma in all its varieties...{% endif %}</div>
-                </div>
-            </div>
 
-            <div class="card-footer-row" style="background: none; border-top: 1px solid rgba(0,0,0,0.05); padding: 1.5rem 0 0 0;">
-                <span style="font-size: 0.88rem; color: var(--text-secondary); font-weight: 500;">Featured remedy profile</span>
-                <a href="{% url 'boericke_comparison' %}" class="btn-pill-light" style="background: #111; color: white;">
-                    Open Materia
-                </a>
-            </div>
+                <div class="card-footer-row" style="background: none; border-top: 1px solid rgba(0,0,0,0.05); padding: 1.5rem 0 0 0;">
+                    <span style="font-size: 0.88rem; color: var(--text-secondary); font-weight: 500;">Featured remedy profile</span>
+                    <a href="{% url 'boericke_comparison' %}" class="btn-pill-light" style="background: #111; color: white;">
+                        Open Materia
+                    </a>
+                </div>
+            {% endif %}
         </div>
     </div>
 
@@ -1295,6 +1329,14 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
+            {% if remedy_of_day and not remedy_of_day.medicine_name and remedy_of_day.image %}
+            if (!sessionStorage.getItem('image_seen_{{ remedy_of_day.id }}')) {
+                setTimeout(() => {
+                    openRotdModal();
+                    sessionStorage.setItem('image_seen_{{ remedy_of_day.id }}', 'true');
+                }, 2000);
+            }
+            {% endif %}
             gsap.from(".top-navbar, .subheader-row", {
                 y: -14,
                 opacity: 0,

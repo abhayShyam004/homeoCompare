@@ -47,9 +47,9 @@ class Feedback(models.Model):
 
 class RemedyOfTheDay(models.Model):
     """Store the curated remedy of the day"""
-    medicine_name = models.CharField(max_length=200)
-    source = models.CharField(max_length=20, default='boericke')
-    description = models.TextField(help_text="Short daily insight or keynotes about this remedy.")
+    medicine_name = models.CharField(max_length=200, null=True, blank=True)
+    source = models.CharField(max_length=20, default='boericke', null=True, blank=True)
+    description = models.TextField(help_text="Short daily insight or keynotes about this remedy.", null=True, blank=True)
     image = models.ImageField(upload_to='remedies/', null=True, blank=True)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)

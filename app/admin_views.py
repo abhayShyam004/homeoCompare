@@ -760,7 +760,7 @@ def admin_remedy_day(request):
             source = request.POST.get('source', 'boericke')
             image = request.FILES.get('image')
             
-            if name and desc:
+            if (name and desc) or image:
                 RemedyOfTheDay.objects.create(
                     medicine_name=name,
                     description=desc,

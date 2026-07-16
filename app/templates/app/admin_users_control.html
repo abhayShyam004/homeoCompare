@@ -62,7 +62,7 @@
         .sidebar-header { padding: 1.5rem; border-bottom: 1px solid var(--border); }
         .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
         .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); border-radius: var(--radius-lg); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:1.1rem; }
-        .logo-text h1 { font-size: 1rem; font-weight: 700; color: var(--text-white); }
+        .logo-text h1 { font-size: 1rem; font-weight: 700; color: var(--text-primary); }
         .logo-text span { font-size: 0.7rem; color: var(--text-muted); }
 
         .sidebar-nav { flex: 1; padding: 1rem 0; overflow-y: auto; }
@@ -276,7 +276,7 @@
                             {% for user in users %}
                             <tr>
                                 <td>
-                                    <div style="font-weight:700; color:var(--text-white);">{{ user.username|default:'-' }}</div>
+                                    <div style="font-weight:700; color:var(--text-primary);">{{ user.username|default:'-' }}</div>
                                     <div style="font-size:0.74rem; color:var(--text-muted);">{{ user.physician_name|default:'No physician name' }}</div>
                                 </td>
                                 <td>

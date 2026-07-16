@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title|default:"Dashboard" }} - HomeoCase</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_v4.ico' %}">
+
+    <!-- Using Tailwind CSS via CDN for rapid prototyping based on App.tsx -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#F3F7FF',
+                        ink: '#24324A',
+                        accent: '#3B82F6',
+                        'accent-light': '#DDEBFF',
+                        muted: '#E6EEF9',
+                        card: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+  :root {
+    --color-paper: #F3F7FF;
+    --color-ink: #24324A;
+    --color-accent: #3B82F6;
+    --color-accent-light: #DDEBFF;
+    --color-muted: #E6EEF9;
+    --color-card: #FFFFFF;
+    --color-border-soft: #C8D8F0;
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+        body {
+            background-color: #f3f7ff;
+            background-image: radial-gradient(circle at top, rgba(238,244,255,0.9) 0%, rgba(248,251,255,0.9) 45%, rgba(243,247,255,0.9) 100%), radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+            background-size: 100% 100%, 20px 20px;
+            font-family: var(--font-sans);
+            color: var(--color-ink);
+        }
+
+        .selection\:bg-accent::selection { background-color: var(--color-accent); }
+        .selection\:text-paper::selection { color: var(--color-paper); }
+        .border-ink { border-color: var(--color-border-soft) !important; }
+        .bg-paper { background-color: var(--color-paper); font-family: var(--font-sans); }
+        .bg-accent { background-color: var(--color-accent); }
+        .text-paper { color: #ffffff; }
+        .text-ink { color: var(--color-ink); }
+
+        main .border-2.border-ink {
+            border-width: 1px !important;
+            border-radius: 14px;
+            box-shadow: 0 1px 2px rgba(36, 50, 74, 0.08);
+        }
+
+        main .border.border-ink {
+            border-color: #d4e2f6 !important;
+        }
+
+        main .bg-white,
+        main .bg-paper {
+            background-image: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+        }
+
+        aside {
+            background: linear-gradient(180deg, #ffffff 0%, #edf3ff 100%) !important;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.78) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .ui-hero {
+            border: 1px solid var(--color-border-soft);
+            border-radius: 16px;
+            background: linear-gradient(90deg, #e7f0ff 0%, #f7fbff 100%);
+            padding: 1.5rem;
+        }
+
+        .ui-card {
+            border: 1px solid var(--color-border-soft);
+            border-radius: 14px;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+            box-shadow: 0 1px 2px rgba(36, 50, 74, 0.07);
+        }
+
+        .ui-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .35rem;
+            padding: .62rem 1rem;
+            border: 1px solid #2872e1;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #fff;
+            font-family: var(--font-mono);
+            font-size: .70rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            transition: all .2s ease;
+        }
+        .ui-btn-primary:hover { filter: brightness(1.04); transform: translateY(-1px); }
+
+        .ui-btn-soft {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .35rem;
+            padding: .55rem .9rem;
+            border: 1px solid var(--color-border-soft);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--color-ink);
+            font-family: var(--font-mono);
+            font-size: .68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            transition: all .2s ease;
+        }
+        .ui-btn-soft:hover { background: #eef5ff; border-color: #b7cff3; }
+
+        .ui-input {
+            width: 100%;
+            border: 1px solid #c8d8f0;
+            border-radius: 10px;
+            background: #fff;
+            padding: .62rem .75rem;
+            font-family: var(--font-mono);
+            font-size: .82rem;
+            color: var(--color-ink);
+            outline: none;
+        }
+        .ui-input:focus { border-color: #60a5fa; box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.13); }
+
+        .ui-kpi-label {
+            font-family: var(--font-mono);
+            font-size: .62rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            opacity: .62;
+        }
+
+        .ui-table-head {
+            background: #e8f1ff;
+            color: #334155;
+            border-bottom: 1px solid #c8d8f0;
+        }
+
+        .ui-breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: .35rem;
+            margin-bottom: .45rem;
+            font-family: var(--font-mono);
+            font-size: .60rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: #607390;
+        }
+
+        .ui-breadcrumb-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: .3rem;
+            padding: .22rem .52rem;
+            border: 1px solid #c6d8f4;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.88);
+            text-decoration: none;
+            color: #526784;
+            transition: all .18s ease;
+        }
+        .ui-breadcrumb-chip:hover { border-color: #9ec0ef; color: #315b93; background: #f5f9ff; }
+
+        .ui-breadcrumb-current {
+            display: inline-flex;
+            align-items: center;
+            padding: .22rem .52rem;
+            border-radius: 999px;
+            background: rgba(59, 130, 246, 0.12);
+            color: #255db2;
+            font-weight: 700;
+        }
+
+        .ui-breadcrumb-sep {
+            color: #94a7c1;
+            font-size: .62rem;
+            line-height: 1;
+        }
+
+        /* Micro-interactions */
+        .hover-lift { transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .hover-lift:hover { transform: translateY(-2px); }
+        
+        .fade-enter { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        @media print {
+            aside, header, footer, .print-hidden, .no-print, button, .sticky-actions, .progress-header {
+                display: none !important;
+            }
+            body, .flex, main, .overflow-y-auto {
+                display: block !important;
+                height: auto !important;
+                overflow: visible !important;
+                background-color: white !important;
+            }
+            .bg-paper, .bg-ink, .bg-accent, .bg-accent\/10, .bg-ink\/5, .bg-\[\#F0F0EF\] {
+                background-color: white !important;
+                color: black !important;
+            }
+            .border-ink, .border-paper\/10 {
+                border-color: #000 !important;
+            }
+            .text-paper, .text-accent {
+                color: black !important;
+            }
+            .p-6, .p-8 {
+                padding: 0 !important;
+                margin-bottom: 2rem !important;
+            }
+            .shadow-sm, .shadow-md, .shadow-\[8px_8px_0px_0px_rgba\(10,10,10,1\)\] {
+                box-shadow: none !important;
+            }
+            .grid {
+                display: block !important;
+            }
+            .grid > * {
+                margin-bottom: 1.5rem !important;
+                page-break-inside: avoid;
+            }
+            table {
+                width: 100% !important;
+                border-collapse: collapse !important;
+            }
+            th, td {
+                border: 1px solid #000 !important;
+            }
+            h1, h2, h3 {
+                color: black !important;
+                page-break-after: avoid;
+            }
+            .serif {
+                font-family: serif !important;
+            }
+            .mono {
+                font-family: monospace !important;
+            }
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="selection:bg-accent selection:text-paper">
+    <div class="flex h-screen w-full bg-paper text-ink">
+        <!-- Sidebar -->
+        <aside class="w-14 flex flex-col border-r border-ink bg-paper z-50">
+            <!-- HomeoCompare Logo - Top of Sidebar -->
+            <div class="w-14 h-14 flex items-center justify-center border-b-2 border-ink bg-accent">
+                <a href="{% url 'clinic_dashboard' %}" title="Dashboard">
+                    <img src="{% static 'favicon_v4.ico' %}" alt="HomeoCompare" class="w-8 h-8">
+                </a>
+            </div>
+            <div class="flex-grow">
+                <a href="{% url 'case_paper_cases' %}" title="Cases" class="w-14 h-14 flex items-center justify-center cursor-pointer transition-all border-l-2 {% if page_title == 'Cases' %}border-accent bg-accent/10{% else %}border-transparent hover:bg-accent/10 hover:text-ink{% endif %}">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                </a>
+                <a href="{% url 'case_paper_patients' %}" title="Patients" class="w-14 h-14 flex items-center justify-center cursor-pointer transition-all border-l-2 {% if page_title == 'Patients' %}border-accent bg-accent/10{% else %}border-transparent hover:bg-accent/10 hover:text-ink{% endif %}">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </a>
+                <a href="{% url 'case_paper_doctor_desk' %}" title="Doctor Desk" class="w-14 h-14 flex items-center justify-center cursor-pointer transition-all border-l-2 {% if page_title == 'Doctor Desk' %}border-accent bg-accent/10{% else %}border-transparent hover:bg-accent/10 hover:text-ink{% endif %}">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-3-3v6m8 2a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h3l1-1h4l1 1h3a2 2 0 012 2v10z"></path></svg>
+                </a>
+                <a href="{% url 'case_paper_calendar' %}" title="Calendar" class="w-14 h-14 flex items-center justify-center cursor-pointer transition-all border-l-2 {% if page_title == 'Calendar' %}border-accent bg-accent/10{% else %}border-transparent hover:bg-accent/10 hover:text-ink{% endif %}">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </a>
+            </div>
+            <div class="flex-none">
+                <a href="{% url 'case_paper_settings' %}" title="Settings" class="w-14 h-14 flex items-center justify-center cursor-pointer transition-all border-l-2 {% if page_title == 'Settings' %}border-accent bg-accent/10{% else %}border-transparent hover:bg-accent/10 hover:text-ink{% endif %}">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </a>
+                <a href="{% url 'logout' %}" title="Logout" class="w-14 h-14 flex items-center justify-center cursor-pointer transition-all border-l-2 border-transparent hover:bg-accent/10 hover:text-ink">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header Bar -->
+            <header class="min-h-16 md:h-20 border-b border-ink flex items-center justify-between px-4 md:px-6 bg-paper py-2 md:py-0">
+                <div class="flex items-center gap-2">
+                    <div>
+                        <h1 class="serif text-2xl font-bold tracking-tight leading-none">
+                            {% block page_title_header %}{{ page_title|default:"Dashboard" }}{% endblock %}
+                        </h1>
+                        <span class="mono text-[9px] opacity-40 uppercase tracking-[0.2em]">Medical_Records_Management_System</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex items-center gap-4 border-r border-ink pr-6 mr-6">
+                        <div class="text-right">
+                            <div class="mono text-xs opacity-50 uppercase">Last Sync</div>
+                            <div class="mono text-sm font-bold" id="currentTime">--:--:-- IST</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="mono text-xs opacity-50 uppercase">Database</div>
+                            <div class="mono text-sm font-bold text-accent">CONNECTED</div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-3">
+                        <div class="flex flex-col items-end">
+                            <span class="mono text-sm font-bold">{{ user.physician_name|upper|default:"DR. ABHAY" }}</span>
+                            <span class="mono text-[9px] opacity-50 uppercase">Chief Practitioner</span>
+                        </div>
+                        <div class="w-12 h-12 border-2 border-ink flex items-center justify-center serif text-xl font-bold bg-ink text-paper">
+                           {{ user.physician_name|first|upper|default:"A" }}{{ user.username|first|upper|default:"B" }}
+                        </div>
+                    </div>
+                    {% block header_actions %}{% endblock %}
+                </div>
+            </header>
+            <!-- Main Content Area -->
+            <div class="flex-1 overflow-y-auto p-6">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+</div>
+<script>
+    function updateSyncTime() {
+        const timeEl = document.getElementById('currentTime');
+        if (timeEl) {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour12: false, 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit',
+                timeZone: 'Asia/Kolkata' 
+            });
+            timeEl.textContent = timeString + ' IST';
+        }
+    }
+    updateSyncTime();
+    setInterval(updateSyncTime, 1000);
+</script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>
+

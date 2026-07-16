@@ -353,6 +353,24 @@
 
         <div class="content">
             
+            <div class="form-card" style="margin-bottom: 2rem; border-left: 4px solid var(--primary);">
+                <h2 style="margin-bottom: 1rem;">Direct Image Upload</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Upload an image. This will be shown directly as a popup alert on the landing page without any text.</p>
+                
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="create">
+                    
+                    <div class="form-group">
+                        <label class="form-label">Image (Required)</label>
+                        <input type="file" name="image" class="form-input" accept="image/*" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="background: var(--primary); color: white;">
+                        <i class="fas fa-upload"></i> Publish Image
+                    </button>
+                </form>
+            </div>
             <div class="form-card">
                 <h2 style="margin-bottom: 1.5rem;">Select & Publish</h2>
                 
